@@ -6,7 +6,7 @@ let width = null;
 
 setTimeout(() => {
   width = window.innerWidth;
-  
+
 }, 1000)
 
 const durationTiming = 0.8;
@@ -94,7 +94,7 @@ $("#btn_read_more_1").on('click', () => {
               }
               setBtnText()
           }, 500)
-          
+
       } else {
           if(!open){
                 featuredElem1.style.display = "flex"
@@ -215,42 +215,22 @@ function adjustViews() {
   }
 }
 
-// let opens = [false, false, false];
 
-// $("#btn_read_more_1").on('click', () => {
-//     if(!opens[0]){
-//         gsap.to("#sc_services_item_content_1", {duration: durationTiming, maxHeight: "500px"});
-//         opens[0] = true;
-//         $("#btn_read_more_1").text("-")
-//     } else {
-//         gsap.to("#sc_services_item_content_1", {duration: durationTiming, maxHeight: "120px"});
-//         opens[0] = false;
-//         $("#btn_read_more_1").text("+")
-//     }
+// Accordian Jquery UI
+$( function() {
+  $( "#accordion" ).accordion({
+    collapsible: false,
+    heightStyle: "fill"
+  });
+} );
 
-// });
 
-// $("#btn_read_more_2").on('click', () => {
-//     if(!opens[1]){
-//         gsap.to("#sc_services_item_content_2", {duration: durationTiming, maxHeight: "500px"});
-//         opens[1] = true;
-//         $("#btn_read_more_2").text("-")
-//     } else {
-//         gsap.to("#sc_services_item_content_2", {duration: durationTiming, maxHeight: "120px"});
-//         opens[1] = false;
-//         $("#btn_read_more_2").text("+")
-//     }
-// });
+// Navbar Image
 
-// $("#btn_read_more_3").on('click', () => {
-//     if(!opens[2]){
-//         gsap.to("#sc_services_item_content_3", {duration: durationTiming, maxHeight: "500px"});
-//         opens[2] = true;
-//         $("#btn_read_more_3").text("-")
-//     } else {
-//         gsap.to("#sc_services_item_content_3", {duration: durationTiming, maxHeight: "120px"});
-//         opens[2] = false;
-//         $("#btn_read_more_3").text("+")
-//     }
-// });
-
+window.addEventListener('scroll',() => {
+  if(window.scrollY !== 0) {
+    $("#navbar-icon").width(160)
+  } else {
+    $("#navbar-icon").width(250)
+  }
+})
