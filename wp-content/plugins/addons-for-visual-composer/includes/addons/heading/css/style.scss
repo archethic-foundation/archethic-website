@@ -1,0 +1,125 @@
+
+@import "../../../../assets/css/lvca-lib";
+
+.lvca-heading {
+  text-align: center;
+  margin: 0 auto 60px;
+  max-width: 640px;
+  @include respond-to-max(767) {
+    margin-bottom: 40px;
+    }
+  .lvca-text {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 auto;
+    @include respond-to-max(767) {
+      font-size: 15px;
+      line-height: 26px;
+      }
+    }
+  &.lvca-alignleft, &.lvca-alignright {
+    margin: 0;
+    .lvca-text {
+      margin: 0;
+      }
+    }
+  &.lvca-alignleft {
+    text-align: left;
+    }
+  &.lvca-alignright {
+    text-align: right;
+    }
+  }
+
+.lvca-heading {
+  .lvca-title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+    margin: 0 auto 20px;
+    color: #333;
+    font-weight: bold;
+    @include respond-to-max(767) {
+      font-size: 24px;
+      line-height: 32px;
+      }
+    }
+  .lvca-dark-bg  & {
+    .lvca-title {
+      color: #e5e5e5;
+      }
+    .lvca-subtitle {
+      color: #B0B0B0;
+      }
+    .lvca-text {
+      color: #909090;
+      }
+    }
+
+  &.lvca-alignleft, &.lvca-alignright {
+    .lvca-title {
+      margin: 0 0 20px;
+      }
+    }
+  }
+
+
+
+.lvca-heading {
+
+  .lvca-subtitle {
+    margin: 0 auto 5px;
+    color: #888;
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+    @include respond-to-max(767) {
+      font-size: 11px;
+      line-height: 18px;
+      }
+    }
+  &.lvca-alignleft, &.lvca-alignright {
+    .lvca-subtitle {
+      margin: 0 0 5px;
+      padding: 0;
+      &:before, &:after {
+        display: none;
+        }
+      }
+    }
+  }
+
+
+.lvca-heading.lvca-style3 {
+  margin: 0 auto 30px;
+  .lvca-title {
+    font-size: 22px;
+    line-height: 32px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    @include bottom-line(35, 1, #aaa);
+    &:after {
+      margin: 10px auto 20px;
+      .lvca-dark-bg & {
+        background: #909090;
+        }
+      }
+    @include respond-to-max(767) {
+      font-size: 16px;
+      line-height: 24px;
+      }
+    }
+
+  &.lvca-alignleft, &.lvca-alignright {
+    margin: 0 0 30px;
+    .lvca-title:after {
+      margin: 10px 0 20px;
+      }
+    }
+  }
+

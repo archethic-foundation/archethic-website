@@ -1,0 +1,418 @@
+@import "bourbon";
+@import "neat";
+
+
+@import "../../../assets/css/lvca-lib";
+
+
+/* ================= Wrapper DIVs ============================== */
+
+#wpbody-content .lvca-wrap {
+  position: relative;
+  display: block;
+  padding-right: 20px;
+  }
+
+#lvca-buttons-wrap {
+  float: right;
+  }
+#lvca-buttons-wrap .lvca-button .dashicons {
+  line-height: 27px;
+  }
+#lvca-buttons-wrap a:last-child {
+  margin-right: 22px;
+  }
+
+/* =============== Banner ======================= */
+
+#lvca-banner-wrap {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 18px 1px 1px 1px;
+  min-height: 80px;
+  line-height: 80px;
+  box-sizing: content-box;
+  }
+#lvca-banner {
+  position: absolute;
+  display: block;
+  top: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  min-height: 80px;
+  line-height: 80px;
+  white-space: nowrap;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+  }
+#lvca-banner h2 {
+  min-height: 80px;
+  margin: 0;
+  padding: 0;
+  line-height: 80px;
+  white-space: nowrap;
+  float: left;
+  color: #34495e;
+  font-weight: 500;
+  font-size: 20px;
+  }
+#lvca-banner h2 span {
+  position: relative;
+  display: inline-block;
+  width: 110px;
+  padding: 0 20px;
+  margin: 0 20px 0 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  height: 80px;
+  background: #333743;
+  color: #fff;
+  text-align: center;
+  background-image: url('../images/logo-dark.png');
+  background-size: 93%;
+  background-position: 6px 48%;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  }
+#lvca-banner.lvca-fixed {
+  position: fixed;
+  top: 32px;
+  z-index: 999;
+  }
+
+/* ========================= Buttons ============================= */
+
+.lvca-button {
+  position: relative;
+  overflow: hidden;
+  padding: 4px 15px !important;
+  margin: 2px 5px 2px 0 !important;
+  color: #ffffff !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  outline: none !important;
+  opacity: 0.9;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-out !important;
+  -moz-transition: all 0.3s ease-out !important;
+  -ms-transition: all 0.3s ease-out !important;
+  -o-transition: all 0.3s ease-out !important;
+  transition: all 0.3s ease-out !important;
+  }
+#lvca-banner-wrap .lvca-button {
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 1;
+  }
+.lvca-button:hover {
+  opacity: 1;
+  }
+
+.lvca-close-infobox,
+#lvca_settings_save {
+  background: #4ECDC4;
+  }
+.lvca-close-infobox {
+  display: inline-block;
+  margin: 20px 0 11px 0;
+  padding: 4px 15px;
+  }
+#lvca_clear_cache {
+  margin: 0 0 0 18px !important;
+  }
+
+#lvca_settings_reset,
+#lvca_clear_cache {
+  background: #e74c3c;
+  }
+.lvca-button .dashicons {
+  position: relative;
+  font-size: 15px;
+  line-height: 26px;
+  margin: 0 2px 0 -4px;
+  }
+.lvca-button:hover .dashicons {
+  -webkit-animation: toTopFromBottom 0.3s forwards;
+  -moz-animation: toTopFromBottom 0.3s forwards;
+  animation: toTopFromBottom 0.3s forwards;
+  }
+@-webkit-keyframes toTopFromBottom {
+  49% {-webkit-transform: translate3d(0,-100%,0);}
+  50% {opacity: 0;-webkit-transform: translate3d(0,100%,0);}
+  51% {opacity: 1;}
+  }
+@-moz-keyframes toTopFromBottom {
+  49% {-moz-transform: translate3d(0,-100%,0);}
+  50% {opacity: 0;-moz-transform: translate3d(0,100%,0);}
+  51% {opacity: 1;}
+  }
+@keyframes toTopFromBottom {
+  49% {transform: translate3d(0,-100%,0);}
+  50% {opacity: 0;transform: translate3d(0,100%,0);}
+  51% {opacity: 1;}
+  }
+
+/* ============== INFO BOX ============================= */
+
+#lvca-infobox {
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  }
+#lvca-infobox.lvca-infobox-loading{
+  opacity: 1;
+  visibility: visible;
+  }
+.lvca-info-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  opacity: 0.86;
+  }
+.lvca-info-inner {
+  position: absolute;
+  display: block;
+  top: 50%;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  line-height: 0;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  }
+.lvca-infobox-msg {
+  position: relative;
+  display: inline-block;
+  min-width: 245px;
+  padding: 20px 50px;
+  background: #34495e;
+  text-align: center;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 0 35px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 0 35px rgba(0,0,0,0.3);
+  box-shadow: 0 0 35px rgba(0,0,0,0.3);
+  -webkit-transform: translateY(-60px);
+  -moz-transform: translateY(-60px);
+  -ms-transform: translateY(-60px);
+  -o-transform: translateY(-60px);
+  transform: translateY(-60px);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  }
+.lvca-infobox-loading .lvca-infobox-msg {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  }
+.lvca-infobox-msg strong {
+  position: relative;
+  display: inline-block;
+  padding: 20px 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  }
+#lvca-infobox-confirm {
+  display: none !important;
+  }
+.lvca-infobox-icon {
+  font-size: 24px;
+  margin: 0 10px 0 0;
+  }
+.lvca-infobox-msg .dashicons-yes {
+  color: #4ECDC4;
+  }
+.lvca-infobox-msg .dashicons-no-alt {
+  color: #e74c3c;
+  }
+.lvca-infobox-msg .lvca-infobox-alt {
+  color: #e74c3c;
+  }
+.lvca-close-infobox .dashicons {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 900;
+  }
+
+.lvca-infobox-msg .dashicons-admin-generic {
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 1500ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 1500ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 1500ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  animation-name: spin;
+  animation-duration: 1500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  }
+.lvca-infobox-msg .dashicons-admin-generic:before {
+  content: "\f111";
+  text-align: center;
+  display: block;
+  position: relative;
+  height: 22px;
+  width: 22px;
+  top: -3px;
+  left: -1px;
+  }
+@-ms-keyframes spin {
+  from { -ms-transform: rotate(0deg); }
+  to { -ms-transform: rotate(360deg); }
+  }
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+  }
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+  }
+@keyframes spin {
+  from {
+    transform:rotate(0deg);
+    }
+  to {
+    transform:rotate(360deg);
+    }
+  }
+
+
+/* ===================== BOX WRAPPER ====================== */
+
+
+.settings-options .lvca-inner {
+  margin: 1px 0 0 0;
+  }
+.lvca-settings .lvca-tabs-wrap {
+  margin: 0;
+  }
+.lvca-settings .lvca-box-side {
+  background: #333743;
+  }
+.lvca-settings .lvca-box-side * {
+  color: #e8e9ef;
+  }
+.lvca-box-side {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 150px;
+  background: #e1e1e1;
+  }
+.lvca-settings .lvca-box-side {
+  border-bottom: 1px solid #bcbfc7;
+  }
+.lvca-box-side h3 {
+  margin: 0;
+  padding: 15px 12px 15px 12px !important;
+  font-size: 13px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background: #404554;
+  }
+.lvca-box-side .lvca-infobox-icon {
+  padding: 15px 12px 15px 12px !important;
+  font-size: 32px;
+  }
+.lvca-box-inner {
+  display: table-cell;
+  margin: 0px !important;
+  padding: 8px 20px 40px 20px !important;
+  vertical-align: top;
+  width: 100%;
+  background: #fff;
+  }
+.lvca-settings .lvca-box-inner {
+  border-top: 1px solid #e1e1e1;
+  }
+.lvca-settings .lvca-box-inner {
+  padding: 0 0 40px 0 !important;
+  }
+.lvca-box-inner p {
+  color: #888;
+  font-style: normal;
+  max-width: 650px;
+  }
+.lvca-box-inner h3 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  font-size: 13px;
+  line-height: 20px;
+  }
+.lvca-label-outside {
+  padding: 0 0 0 18px;
+  }
+.lvca-settings .lvca-toggle {
+  position: relative;
+  display: inline-block;
+  top: 5px;
+  box-sizing: content-box;
+  }
+.lvca-settings .lvca-type-checkbox .lvca-number-label {
+  top: 5px;
+  }
+.lvca-settings .lvca-desc {
+  font-size: 13px;
+  line-height: 20px;
+  max-width: 650px;
+  }
+
+.lvca-box-inner {
+  ul {
+    list-style: inherit;
+    list-style-type: square;
+    }
+  li {
+    margin: 0 0 10px 20px;
+    color: #888;
+    max-width: 600px;
+    line-height: 1.4em;
+    }
+
+  li strong {
+    color: #444;
+    }
+
+  .lvca-button.purchase, .lvca-button.know-more {
+    background: #46a5d5;
+    padding: 12px 30px !important;
+    }
+
+  }

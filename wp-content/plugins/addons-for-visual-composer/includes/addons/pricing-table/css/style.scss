@@ -1,0 +1,180 @@
+@import "../../../../assets/css/lvca-lib";
+
+
+/* ---------- Pricing table --------- */
+
+.lvca-pricing-table .lvca-pricing-plan {
+  float: left;
+  padding: 10px;
+  }
+
+.lvca-center {
+  text-align: center;
+  }
+
+.lvca-pricing-table {
+  padding: 0;
+  .lvca-top-header {
+    padding: 15px 0;
+    background-color: #494949;
+    border-bottom: 1px solid #2c2b2b;
+    h3 {
+      @include lvca-heading-style();
+      font-size: 20px;
+      line-height: 32px;
+      color: #fefefe;
+      margin: 0;
+      }
+    img {
+      margin-top: 15px;
+      }
+    .lvca-tagline {
+      display: block;
+      font-size: 15px;
+      line-height: 24px;
+      color: #EDEDED;
+      text-transform: none;
+      text-align: center;
+      margin-bottom: 5px;
+      }
+    }
+  .lvca-pricing-plan {
+    background: #fff;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.1s ease-in-out 0s;
+    -moz-transition: all 0.1s ease-in-out 0s;
+    -ms-transition: all 0.1s ease-in-out 0s;
+    transition: all 0.1s ease-in-out 0s;
+    margin-bottom: 30px;
+    &:hover {
+      .lvca-purchase {
+        background: #e5e5e5;
+        }
+      }
+    .lvca-plan-price {
+      color: #fff;
+      font-size: 22px;
+      line-height: 28px;
+      font-weight: 700;
+      margin: 0;
+      span {
+        font-size: 22px;
+        line-height: 32px;
+        }
+      }
+    }
+  .lvca-plan-header {
+    padding: 30px 0 30px;
+    background-color: #494949;
+    }
+  .lvca-plan-price {
+    .lvca-text {
+      display: inline-block;
+      padding: 6px 25px;
+      border-radius: 25px;
+      background: #2C2B2B;
+      }
+    sup {
+      font-size: 18px;
+      line-height: 32px;
+      vertical-align: top;
+      margin-right: 2px;
+      position: static;
+      }
+    }
+  .lvca-plan-details {
+    padding: 15px 0;
+    margin: 0;
+    border: 1px solid #eee;
+    .lvca-pricing-item {
+      list-style: none;
+      display: block;
+      padding: 6px;
+      margin: 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
+      text-align: center;
+      i {
+        color: #777;
+        font-size: 18px;
+        display: inline;
+        margin-right: 8px;
+        }
+      .lvca-title {
+        color: #838383;
+        margin-bottom: 10px;
+        }
+      .lvca-value-wrap {
+        display: block;
+        &:after {
+          position: relative;
+          content: "";
+          background: #ddd;
+          width: 120px;
+          height: 1px;
+          display: block;
+          margin: 12px auto 0;
+          }
+        }
+      .lvca-value {
+        color: #444;
+        font-size: 24px;
+        line-height: 32px;
+        display: inline;
+        }
+      s {
+        color: #b4c9d3;
+        }
+      &:last-child .lvca-value-wrap:after {
+        display: none;
+        }
+      }
+    }
+  .lvca-purchase {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 15px 0;
+    margin: 0 auto;
+    background: #f1f1f1;
+    -webkit-transition: all 0.1s ease-in-out 0s;
+    -moz-transition: all 0.1s ease-in-out 0s;
+    -ms-transition: all 0.1s ease-in-out 0s;
+    transition: all 0.1s ease-in-out 0s;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    a {
+      padding: 12px 25px;
+      border-radius: 5px;
+      letter-spacing: 0;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 6px;
+      font-weight: bold;
+      }
+    }
+  .lvca-pricing-plan.lvca-highlight {
+    background: #f5f5f5;
+    margin-top: -10px;
+    .lvca-plan-details {
+      border-color: #e5e5e5;
+    }
+    .lvca-top-header {
+      padding: 20px 0;
+      }
+    .lvca-pricing-table .lvca-top-header h3 {
+      color: #28c2ba !important;
+      }
+    .lvca-purchase {
+      padding: 20px 0;
+      background-color: #e5e5e5;
+      border-color: #ddd;
+      }
+    }
+  }

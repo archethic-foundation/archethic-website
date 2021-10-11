@@ -1,0 +1,26 @@
+# general
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+__MACOSX
+
+# environment
+.vscode
+.idea
+.vscode
+sftp-config.json
+node_modules
+.classpath
+.project
+.settings
+.metadata
+*.iml
+*.ipr
+prepros-6.config
+
+# project
+*.map

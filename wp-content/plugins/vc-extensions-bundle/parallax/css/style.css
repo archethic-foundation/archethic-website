@@ -1,0 +1,21 @@
+.cq-parallaxcontainer{
+	display: block;
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.cq-parallaxcontainer .img-holder-img{
+	overflow: hidden;
+	max-width: 100%;
+}
+.cq-parallaxcontainer section.cq-parallaxsection h4{
+	padding: 0;
+	margin: 0 0 8px 0;
+}
+section.cq-parallaxsection {
+  position: relative;
+  height: auto;
+	margin: 0 auto;
+}

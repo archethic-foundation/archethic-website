@@ -1,0 +1,108 @@
+@mixin layouts--desktop() {
+    /* Layouts */
+	.hide_on_desktop,
+	.sc_layouts_hide_on_desktop {	display: none !important; }
+}
+
+@mixin layouts--notebook() {
+    /* Layouts */
+	.hide_on_notebook,
+	.sc_layouts_hide_on_notebook {	display: none !important; }
+}
+
+@mixin layouts--tablet() {
+    /* Layouts */
+	.hide_on_tablet,
+	.sc_layouts_hide_on_tablet {	display: none !important; }
+}
+
+@mixin layouts--mobile() {
+    /* Layouts */
+	.hide_on_mobile,
+	.sc_layouts_hide_on_mobile {	display: none !important; }
+}
+
+
+@mixin layouts--xl() {
+    /* Layouts */
+	.sc_layouts_row:not(.sc_layouts_row_type_narrow),
+	.sc_layouts_row:not(.sc_layouts_row_type_narrow) input[type="text"],
+	.sc_layouts_row:not(.sc_layouts_row_type_narrow) .sc_layouts_item_details_line2 {
+		font-size: 14px;
+	}
+	.sc_layouts_row .sc_button {
+		font-size: 12px;
+		padding: 1.5em;
+	}
+}
+
+@mixin layouts--lg() {
+    /* Layouts */
+	.sc_layouts_row:not(.sc_layouts_row_type_narrow),
+	.sc_layouts_row:not(.sc_layouts_row_type_narrow) input[type="text"],
+	.sc_layouts_row:not(.sc_layouts_row_type_narrow) .sc_layouts_item_details_line2 {
+		@include font(13px, 21px);
+	}
+}
+
+@mixin layouts--md() {
+    /* Layouts */
+	.sc_layouts_column .sc_layouts_item {
+		margin-right: 1.15em;
+	}
+	.sc_layouts_column_align_right .sc_layouts_item {
+		margin-left: 1.15em;
+		margin-right:0;
+	}
+	.sc_layouts_row_type_narrow,
+	.sc_layouts_row_type_narrow input[type="text"],
+	.sc_layouts_row_type_narrow .sc_layouts_item_details_line2 {
+		@include font(12px, 16px);
+	}
+	.sc_layouts_title_title {
+		font-size: 0.8em;
+	}
+}
+
+@mixin layouts--sm() {
+    /* Layouts */
+    /* -- Temporary commented, because rules below have conflicts with Elementor's responsive columns --
+	.sc_layouts_column:not([class*="sc_layouts_column_fluid"]):not([class*="vc_col-xs-"]):not([class*="elementor-xs-"]) {
+		width: 100% !important;
+	}
+	.sc_layouts_column_align_left:not([class*="sc_layouts_column_fluid"]):not([class*="vc_col-xs-"]):not([class*="elementor-xs-"]),
+	.sc_layouts_column_align_right:not([class*="sc_layouts_column_fluid"]):not([class*="vc_col-xs-"]):not([class*="elementor-xs-"]) {
+		text-align:center;
+	}
+	.sc_layouts_row .sc_layouts_item {
+		margin-top: 0.25em !important;
+		margin-bottom: 0.25em !important;
+	}
+	*/
+	.sc_layouts_row_type_compact .sc_layouts_item_details,
+	.sc_layouts_row_type_normal .sc_layouts_item_details {
+		display: none;
+	}
+	.sc_layouts_row_fixed_on:not(.sc_layouts_row_fixed_always) {
+		position:absolute;
+	}
+	.sc_layouts_row .wpb_text_column p {
+		text-align:center !important;
+	}
+}
+
+@mixin layouts--xs() {
+    /* Layouts */
+	.sc_layouts_row:not(.sc_layouts_row_type_narrow),
+	.sc_layouts_row:not(.sc_layouts_row_type_narrow) input[type="text"],
+	.sc_layouts_row:not(.sc_layouts_row_type_narrow) .sc_layouts_item_details_line2 {
+		font-size: 13px;
+		line-height: 19px;
+	}
+	.sc_layouts_title_title {
+		font-size: 0.7em;
+	}
+	.sc_layouts_title_meta + .sc_layouts_title_title > .sc_layouts_title_caption {
+		margin:0.2em 0 0;
+	}
+}

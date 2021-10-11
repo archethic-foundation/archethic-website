@@ -1,0 +1,210 @@
+@import "../../../../assets/css/lvca-lib";
+
+/* Style 1 */
+.lvca-services.lvca-style1 {
+  .lvca-service {
+    .lvca-icon-wrapper span {
+      display: block;
+      text-align: center;
+      font-size: 96px;
+      line-height: 1;
+      margin-bottom: 20px;
+      transition: color .4s ease-in-out 0s;
+      }
+    .lvca-image-wrapper img {
+      display: block;
+      max-width: 100%;
+      text-align: center;
+      margin: 0 auto 25px;
+      transition: all .4s ease-in-out 0s;
+      }
+    .lvca-service-text {
+      text-align: center;
+      max-width: 300px;
+      margin: 0 auto;
+      .lvca-title {
+        @include lvca-heading-style();
+        margin-bottom: 20px;
+        }
+      }
+    &:hover {
+      .lvca-image-wrapper img {
+        transform: scale(0.9, 0.9);
+        }
+      }
+    }
+  }
+/* Style 2 */
+
+.lvca-services.lvca-style2 {
+  .lvca-service {
+    .lvca-image-wrapper img, .lvca-icon-wrapper span {
+      float: left;
+      margin-right: 18px;
+      }
+    .lvca-icon-wrapper span {
+      font-size: 24px;
+      line-height: 32px;
+      }
+    .lvca-service-text .lvca-title {
+      @include lvca-heading-style();
+      margin-bottom: 20px;
+      }
+    }
+  }
+/* Style 3 */
+
+.lvca-services.lvca-style3 {
+  .lvca-service {
+    .lvca-icon-wrapper span {
+      display: block;
+      text-align: left;
+      font-size: 80px;
+      line-height: 1;
+      margin-bottom: 25px;
+      color: #555;
+      .lvca-dark-bg & {
+        color: #c5c5c5;
+        }
+      }
+    .lvca-image-wrapper img {
+      display: block;
+      max-width: 100%;
+      text-align: left;
+      margin-bottom: 25px;
+      }
+    .lvca-service-text {
+      text-align: left;
+      max-width: 300px;
+      margin: 0;
+      font-size: 14px;
+      line-height: 32px;
+      color: #888;
+      ul.lvca-services-list {
+        padding: 0;
+        margin: 0;
+        border: none;
+        }
+      ul.lvca-services-list li {
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        line-height: 42px;
+        &:hover {
+          padding: 0;
+          }
+        .lvca-dark-bg & {
+          border-color: #333;
+          }
+        }
+      ul.lvca-services-list li:before {
+        @include lvca-icon-font();
+        position: relative;
+        display: inline-block;
+        height: auto;
+        width: auto;
+        background: none;
+        float: none;
+        vertical-align: middle;
+        margin: 0 15px 0 0;
+        content: "\e913";
+        color: #BBBBBB;
+        font-size: 12px;
+        line-height: 1;
+        .lvca-dark-bg & {
+          color: #606060;
+          }
+        }
+      .lvca-title {
+        @include lvca-heading-style();
+        margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+/* Style 4 */
+
+.lvca-services.lvca-style4 {
+  .lvca-service {
+    margin-bottom: 60px;
+    .lvca-image-wrapper img, .lvca-icon-wrapper span {
+      display: block;
+      margin-bottom: 20px;
+      text-align: left;
+      }
+    .lvca-icon-wrapper span {
+      font-size: 36px;
+      line-height: 1;
+      color: #888;
+      }
+    .lvca-service-text .lvca-title {
+      @include lvca-heading-style();
+      }
+    }
+  }
+
+/* Style 5 */
+.lvca-services.lvca-style5 {
+  .lvca-service {
+    margin-bottom: 80px;
+    @include respond-to-max(767) {
+      margin-bottom: 50px;
+      }
+    .lvca-icon-wrapper span {
+      display: block;
+      text-align: center;
+      font-size: 48px;
+      line-height: 1;
+      margin-bottom: 15px;
+      color: #999;
+      transition: color .4s ease-in-out 0s;
+      }
+    .lvca-image-wrapper img {
+      display: block;
+      max-width: 100%;
+      text-align: center;
+      margin: 0 auto 25px;
+      transition: all .4s ease-in-out 0s;
+      }
+    .lvca-service-text {
+      text-align: center;
+      max-width: 300px;
+      margin: 0 auto;
+      .lvca-title {
+        @include lvca-heading-style();
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 10px;
+        }
+      }
+    &:hover {
+      .lvca-image-wrapper img {
+        transform: scale(0.9, 0.9);
+        }
+      }
+    }
+  }
+
+/* -------- General services -------- */
+
+.lvca-services {
+  .lvca-service {
+    margin-bottom: 50px;
+    .lvca-icon-wrapper span {
+      transition: color .4s ease-in-out 0s;
+      }
+    .lvca-service-text {
+      font-size: 15px;
+      line-height: 24px;
+      .lvca-dark-bg & {
+        color: #909090;
+        .lvca-title {
+          color: #e5e5e5;
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,163 @@
+/* ATTENTION! This file was generated automatically! Don't change it!!!
+----------------------------------------------------------------------- */
+@import "../../../../css/_mixins.scss";
+@import "../../../../css/_trx_addons.vars.scss";
+
+// @required
+
+
+// General settings
+//------------------------------------------
+
+// Font with icons
+$theme_icons: "fontello";				// font-family for the font with theme-specific icons
+
+// Grid
+$content: 842px;			// Content width
+$sidebar: 368px;			// Sidebar width
+$gap: 68px;					// Gap between content and sidebar
+$page: $content + $gap + $sidebar;										// Width of the whole page
+
+$page_boxed: $page + 120px;	// Width of the whole page (boxed)
+
+$page_fullwide: 1920px;		// Max-width of the whole page (fullwidth)
+$paddings_fullwide: 130px;	// Horizontal paddings of the fullwidth page
+
+$menu_side: 70px;			// Sidemenu width
+$page_menu_side: $page - $menu_side;									// Width of page with side menu
+
+$grid_gap: 30px;			// Gap between columns in the grid
+
+
+
+
+// Responsive
+//------------------------------------------
+
+// --xl
+$xl_content: 760px;			// Content width
+$xl_sidebar: 310px;			// Sidebar width
+$xl_gap: 30px;				// Gap between content and sidebar
+$xl_page: $xl_content + $xl_gap + $xl_sidebar;							// Width of the whole page
+
+$xl_content_boxed: 660px;	// Content width on the boxed pages
+$xl_sidebar_boxed: 310px;	// Sidebar width on the boxed pages
+$xl_gap_boxed: 30px;		// Gap between content and sidebar
+$xl_page_boxed: $xl_content_boxed + $xl_gap_boxed + $xl_sidebar_boxed;	// Width of the whole page (boxed)
+
+$xl_menu_side: 70px;		// Sidemenu width
+$xl_page_menu_side: $xl_page - $xl_menu_side;							// Width of page with side menu
+
+$xl_grid_gap: 30px;			// Gap between columns in the grid
+
+
+// --lg
+$lg_content: 664px;			// Content width
+$lg_sidebar: 270px;			// Sidebar width
+$lg_gap: 30px;				// Gap between content and sidebar
+$lg_page: $lg_content + $lg_gap + $lg_sidebar;							// Width of the whole page
+
+$lg_menu_side: 60px;		// Sidemenu width
+$lg_page_menu_side: $lg_page - $lg_menu_side;							// Width of page with side menu
+
+$lg_grid_gap: 30px;			// Gap between columns in the grid
+
+
+// --md
+$md_content: 708px;			// Content width
+$md_page: $md_content;		// Width of the whole page
+
+$md_menu_side: 60px;		// Sidemenu width
+$md_page_menu_side: $md_content - $md_menu_side;						// Width of page with side menu
+
+$md_grid_gap: 30px;			// Gap between columns in the grid
+
+
+// --sm
+$sm_content: 440px;			// Content width
+$sm_page: $sm_content;		// Width of the whole page
+
+$sm_menu_side: 60px;		// Sidemenu width
+
+$sm_grid_gap: 20px;			// Gap between columns in the grid
+$sm_grid_max_columns: 1;	// Max columns in the row of the grid
+
+
+// --xs
+$xs_content: 280px;			// Content width
+$xs_page: $xs_content;		// Width of the whole page
+
+$xs_menu_side: 60px;		// Sidemenu width
+
+$xs_grid_gap: 20px;			// Gap between columns in the grid
+$xs_grid_max_columns: 1;	// Max columns in the row of the grid
+
+@import "../../../../components/cpt/layouts/_layouts.responsive.scss";
+@import "../../../../components/cpt/layouts/shortcodes/cart/_cart.responsive.scss";
+@import "../../../../components/cpt/layouts/shortcodes/logo/_logo.responsive.scss";
+@import "../../../../components/cpt/layouts/shortcodes/menu/_menu.responsive.scss";
+
+
+/* SASS Suffix: --desktop */
+@media (min-width: 1680px) {
+	@include layouts--desktop();
+}
+
+
+/* SASS Suffix: --notebook */
+@media (min-width: 1280px) and (max-width: 1679px) {
+	@include layouts--notebook();
+}
+
+
+/* SASS Suffix: --tablet */
+@media (min-width: 768px) and (max-width: 1279px) {
+	@include layouts--tablet();
+}
+
+
+/* SASS Suffix: --mobile */
+@media (max-width: 767px) {
+	@include layouts--mobile();
+}
+
+
+/* SASS Suffix: --xl */
+@media (max-width: 1439px) {
+	@include layouts--xl();
+	@include layouts_logo--xl();
+}
+
+
+/* SASS Suffix: --lg */
+@media (max-width: 1279px) {
+	@include layouts--lg();
+	@include layouts_menu--lg();
+}
+
+
+/* SASS Suffix: --md */
+@media (max-width: 1023px) {
+	@include layouts--md();
+	@include layouts_menu--md();
+}
+
+
+/* SASS Suffix: --sm */
+@media (max-width: 767px) {
+	@include layouts--sm();
+	@include layouts_cart--sm();
+	@include layouts_menu--sm();
+}
+
+
+/* SASS Suffix: --sm_wp */
+@media (max-width: 600px) {
+	@include layouts_cart--sm_wp();
+}
+
+
+/* SASS Suffix: --xs */
+@media (max-width: 479px) {
+	@include layouts--xs();
+}

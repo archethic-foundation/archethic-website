@@ -1,0 +1,211 @@
+.cq-imgwitharrow-container{
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+.cq-imgwitharrow-photo {
+  position: absolute;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  top: 0;
+  left: 0;
+}
+
+.cq-imgwitharrow-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+}
+.cq-imgwitharrow-content {
+  color: #fff;
+  position: absolute;
+  padding: 16px 28px;
+  font-size: 1.1em;
+  line-height: 160%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+}
+.cq-imgwitharrow-container.cq-imagewitharrow-smallround, .cq-imgwitharrow-container.cq-imagewitharrow-smallround .cq-imgwitharrow-content, .cq-imgwitharrow-container.cq-imagewitharrow-smallround .cq-imgwitharrow-photo{
+  border-radius: 8px;
+}
+.cq-imgwitharrow-container.bottom.cq-imagewitharrow-smallround .cq-imgwitharrow-box{
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.cq-imgwitharrow-container.cq-imagewitharrow-largeround, .cq-imgwitharrow-container.cq-imagewitharrow-largeround .cq-imgwitharrow-content, .cq-imgwitharrow-container.cq-imagewitharrow-largeround .cq-imgwitharrow-photo{
+  border-radius: 16px;
+}
+.cq-imgwitharrow-container.bottom.cq-imagewitharrow-largeround .cq-imgwitharrow-box{
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+.cq-imgwitharrow-container.right .cq-imgwitharrow-content {
+  padding: 4px 16px 4px 22px;
+}
+
+.cq-imgwitharrow-content .cq-content{
+}
+.cq-imgwitharrow-content h2, .cq-imgwitharrow-content h3, .cq-imgwitharrow-content h4, .cq-imgwitharrow-content h5 {
+  margin: 8px 0 4px 0;
+}
+
+.cq-imgwitharrow-container.top .cq-imgwitharrow-content h2, .cq-imgwitharrow-container.top .cq-imgwitharrow-content h3, .cq-imgwitharrow-container.top .cq-imgwitharrow-content h4, .cq-imgwitharrow-container.top .cq-imgwitharrow-content h5, .cq-imgwitharrow-container.bottom .cq-imgwitharrow-content h2, .cq-imgwitharrow-container.bottom .cq-imgwitharrow-content h3, .cq-imgwitharrow-container.bottom .cq-imgwitharrow-content h4, .cq-imgwitharrow-container.bottom .cq-imgwitharrow-content h5{
+  margin: 0px 0 4px 0;
+}
+.cq-imgwitharrow-container.bottom .cq-imgwitharrow-content h4 {
+}
+
+.cq-imgwitharrow-content p {
+  margin: 0;
+}
+.cq-imgwitharrow-box .cq-arrowborder-container{
+  height: 100%;
+  overflow: hidden;
+}
+.cq-arrowborder-container .cq-arrowborder1 {
+  height: 125px;
+  background: #AAB2BD;
+}
+.cq-arrowborder-container.left .cq-arrowborder1 {
+  height: 185px;
+}
+.cq-arrowborder-container .cq-arrowborder2 {
+  border-top: 10px solid #AAB2BD;
+  border-left: 10px solid #AAB2BD;
+  border-bottom: 10px solid #AAB2BD;
+  border-right: 10px solid transparent;
+}
+.cq-arrowborder-container .cq-arrowborder3 {
+  height: 100%;
+  background: #AAB2BD;
+}
+
+.cq-imgwitharrow-container.right .cq-arrowborder2{
+  border-top: 10px solid #AAB2BD;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #AAB2BD;
+  border-right: 10px solid #AAB2BD;
+}
+
+.cq-imgwitharrow-container.left .cq-imgwitharrow-photo{
+}
+.cq-imgwitharrow-container.right .cq-imgwitharrow-photo{
+  left: 0;
+}
+.cq-imgwitharrow-container.right .cq-imgwitharrow-box{
+  left: 60%;
+}
+
+.cq-imgwitharrow-container.top, .cq-imgwitharrow-container.bottom{
+  height: 360px;
+}
+.cq-imgwitharrow-container.top .cq-imgwitharrow-photo, .cq-imgwitharrow-container.top .cq-imgwitharrow-box, .cq-imgwitharrow-container.top .cq-imgwitharrow-content, .cq-imgwitharrow-container.bottom .cq-imgwitharrow-photo, .cq-imgwitharrow-container.bottom .cq-imgwitharrow-box, .cq-imgwitharrow-container.bottom .cq-imgwitharrow-content{
+  width: 100%;
+}
+.cq-imgwitharrow-container.top .cq-imgwitharrow-photo{
+  left: 0;
+  top: 25%;
+  height: 62%;
+}
+
+.cq-imgwitharrow-container.bottom .cq-imgwitharrow-photo{
+  left: 0;
+  top: 0;
+  height: 62%;
+}
+
+.cq-imgwitharrow-container.top .cq-imgwitharrow-box{
+  left: 0;
+  height: 38%;
+}
+
+.cq-imgwitharrow-container.bottom .cq-imgwitharrow-box{
+  left: 0;
+  top: 58%;
+  height: 38%;
+}
+
+.cq-imgwitharrow-container.left .cq-imgwitharrow-content, .cq-imgwitharrow-container.right .cq-imgwitharrow-content{
+}
+.cq-imgwitharrow-container.top .cq-imgwitharrow-content, .cq-imgwitharrow-container.bottom .cq-imgwitharrow-content{
+  width: 100%;
+  font-size: 1.2em;
+  display: block;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.cq-imgwitharrow-container.top, .cq-imgwitharrow-container.bottom{
+  display: inline-block;
+}
+.cq-imgwitharrow-container.top .cq-arrowborder-container .cq-imgwitharrow-container.bottom .cq-arrowborder-container{
+  width: 100%;
+  overflow: hidden;
+}
+.cq-imgwitharrow-container.top .cq-arrowborder-container, .cq-imgwitharrow-container.bottom .cq-arrowborder-container{
+  display: inline;
+  width: 100%;
+  overflow: hidden;
+}
+.cq-imgwitharrow-container.top .cq-arrowborder1 {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  height: 100%;
+  background: #AAB2BD;
+}
+.cq-imgwitharrow-container.top .cq-arrowborder2 {
+  display: inline-block;
+  float: left;
+  height: 100%;
+  border-top: 10px solid #AAB2BD;
+  border-left: 10px solid #AAB2BD;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #AAB2BD;
+}
+.cq-imgwitharrow-container.top .cq-arrowborder3 {
+  display: inline-block;
+  float: left;
+  width: calc(50% - 20px);
+  height: 100%;
+  background: #AAB2BD;
+}
+
+.cq-imgwitharrow-container.bottom .cq-arrowborder1 {
+  display: inline-block;
+  float: left;
+  width: 10%;
+  height: 100%;
+  background: #AAB2BD;
+}
+.cq-imgwitharrow-container.bottom .cq-arrowborder2 {
+  display: inline-block;
+  float: left;
+  height: 100%;
+  border-top: 10px solid transparent;
+  border-left: 10px solid #AAB2BD;
+  border-bottom: 10px solid #AAB2BD;
+  border-right: 10px solid #AAB2BD;
+}
+.cq-imgwitharrow-container.bottom .cq-arrowborder3 {
+  display: inline-block;
+  float: left;
+  width: calc(90% - 20px);
+  height: 100%;
+  background: #AAB2BD;
+}

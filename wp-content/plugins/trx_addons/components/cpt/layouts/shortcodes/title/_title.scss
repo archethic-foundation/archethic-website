@@ -1,0 +1,60 @@
+.sc_layouts_title_caption {
+	margin: 0 auto;
+}
+.sc_layouts_row_type_compact .sc_layouts_title_caption {
+	font-size: 2em;
+}
+.sc_layouts_title_title > .sc_layouts_title_caption {
+//	@include font(3em, 1.2em);
+//	margin: 0.2em 0 0.2em;
+	float: none;
+}
+.sc_layouts_title_caption img {
+	display:inline-block;
+	max-height:1.25em;
+	vertical-align:middle;
+	width:auto;
+	margin: -0.1em 0.2em 0 0;
+}
+.sc_layouts_title_link {
+	display:inline-block;
+	margin:0.5em 0 2em;
+}
+.sc_layouts_title_meta .post_edit:before {
+	margin-right: 0.5em;
+}
+.sc_layouts_title_description {
+	@include font(13px, 19px);
+	margin: 4px auto 1em;
+	max-width:75%;
+}
+.sc_layouts_title_description p {
+	margin:0;
+}
+
+.sc_layouts_title_breadcrumbs {
+	margin-top: 0.5em;
+}
+
+.sc_layouts_title.with_content {
+	position:relative;
+	min-height: 0em;
+}
+.sc_layouts_title.with_image {
+	@include bg-cover;
+}
+.sc_layouts_title.fixed_height {
+	min-height: 20rem;
+}
+
+.sc_layouts_title.with_tint.with_content:before {
+	content:' ';
+	@include bg-mask(#000, 0.5, 0);	// Important! z-index: 1+ place this block over cart and over popups!
+}
+
+.sc_layouts_title .sc_layouts_title_content {
+	position:static;
+}
+.sc_layouts_title.fixed_height .sc_layouts_title_content {
+	@include abs-cc;
+}

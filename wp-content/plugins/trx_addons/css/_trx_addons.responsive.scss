@@ -1,0 +1,193 @@
+@mixin trx_addons--xl() {
+    /* ThemeREX Addons - Common styles */
+	.trx_addons_audio_player {
+		padding: 2em;
+	}
+}
+
+@mixin trx_addons--lg() {
+    /* ThemeREX Addons - Common styles */
+	.trx_addons_audio_player {
+		padding: 2em 1.6em;
+	}
+}
+
+@mixin trx_addons--md() {
+    /* ThemeREX Addons - Common styles */
+	.trx_addons_scroll_to_top {
+		right: 1em;
+	}
+	.trx_addons_scroll_to_top.show {
+		bottom: 1em;
+	}
+	.trx_addons_stretch_height {
+		min-height: 0 !important;
+	}
+}
+
+@mixin trx_addons--sm() {
+    /* ThemeREX Addons - Common styles */
+
+	/* Grid */
+	.trx_addons_container, .trx_addons_container-fluid {
+		padding-left:  $sm_grid_gap / 2;
+		padding-right: $sm_grid_gap / 2;
+	}
+	.trx_addons_columns_wrap {
+		margin-right: -$sm_grid_gap;
+	}
+	.trx_addons_columns_wrap > [class*="trx_addons_column-"] {
+		padding-right: $sm_grid_gap;
+	}
+	.trx_addons_columns_wrap.columns_padding_left {
+		margin-left: -$sm_grid_gap;
+	}
+	.trx_addons_columns_wrap.columns_padding_left > [class*="trx_addons_column-"],
+	.trx_addons_columns_wrap > [class*="trx_addons_column-"].columns_padding_left {
+		padding-left:$sm_grid_gap;
+	}
+	.trx_addons_columns_wrap.columns_padding_right {
+		margin-right: -$sm_grid_gap;
+	}
+	.trx_addons_columns_wrap.columns_padding_right > [class*="trx_addons_column-"],
+	.trx_addons_columns_wrap > [class*="trx_addons_column-"].columns_padding_right {
+		padding-right: $sm_grid_gap;
+	}
+	.trx_addons_columns_wrap.columns_padding_center {
+		margin-left: -$sm_grid_gap / 2;
+		margin-right: -$sm_grid_gap / 2;
+	}
+	.trx_addons_columns_wrap.columns_padding_center > [class*="trx_addons_column-"],
+	.trx_addons_columns_wrap > [class*="trx_addons_column-"].columns_padding_center {
+		padding-left: $sm_grid_gap / 2;
+		padding-right: $sm_grid_gap / 2;
+	}
+	.trx_addons_columns_wrap.columns_padding_bottom > [class*="trx_addons_column-"],
+	.trx_addons_columns_wrap > [class*="trx_addons_column-"].columns_padding_bottom {
+		padding-bottom: $sm_grid_gap;
+	}
+
+	/* Columns relayout (max 2 columns in the row) */
+	.trx_addons_columns_wrap:not(.columns_fluid) > [class*="trx_addons_column-"] {
+		width:50%;
+	}
+	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-1_1,
+	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-2_2, 
+	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-3_3,
+	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-4_4, 
+	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-5_5, 
+	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-6_6,
+	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-7_7, 
+	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-8_8, 
+	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-9_9,
+	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-10_10, 
+	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-11_11, 
+	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-12_12,
+/*	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-1_3:nth-child(3n),*/
+	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-2_3,
+/*	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-1_3.after_span_2,*/
+	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-3_4,
+/*	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-1_4.after_span_3,*/
+/*	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-1_5:nth-child(5n),*/
+	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-2_5,
+	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-3_5,
+	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-4_5,
+	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-2_6,
+	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-3_6,
+	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-4_6,
+	.trx_addons_columns_wrap:not(.columns_fluid) > .trx_addons_column-5_6	{
+		width:100%;
+	}
+}
+
+@mixin trx_addons--xs() {
+    /* ThemeREX Addons - Common styles */
+
+	/* Grid */
+	.trx_addons_container, .trx_addons_container-fluid {
+		padding-left:  $xs_grid_gap / 2;
+		padding-right: $xs_grid_gap / 2;
+	}
+	.trx_addons_columns_wrap {
+		margin-right: -$xs_grid_gap;
+	}
+	.trx_addons_columns_wrap > [class*="trx_addons_column-"] {
+		padding-right: $xs_grid_gap;
+	}
+	.trx_addons_columns_wrap.columns_padding_left {
+		margin-left: -$xs_grid_gap;
+	}
+	.trx_addons_columns_wrap.columns_padding_left > [class*="trx_addons_column-"],
+	.trx_addons_columns_wrap > [class*="trx_addons_column-"].columns_padding_left {
+		padding-left: $xs_grid_gap;
+	}
+	.trx_addons_columns_wrap.columns_padding_right {
+		margin-right: -$xs_grid_gap;
+	}
+	.trx_addons_columns_wrap.columns_padding_right > [class*="trx_addons_column-"],
+	.trx_addons_columns_wrap > [class*="trx_addons_column-"].columns_padding_right {
+		padding-right: $xs_grid_gap;
+	}
+	.trx_addons_columns_wrap.columns_padding_center {
+		margin-left: -$xs_grid_gap / 2;
+		margin-right: -$xs_grid_gap / 2;
+	}
+	.trx_addons_columns_wrap.columns_padding_center > [class*="trx_addons_column-"],
+	.trx_addons_columns_wrap > [class*="trx_addons_column-"].columns_padding_center {
+		padding-left: $xs_grid_gap / 2;
+		padding-right: $xs_grid_gap / 2;
+	}
+	.trx_addons_columns_wrap.columns_padding_bottom > [class*="trx_addons_column-"],
+	.trx_addons_columns_wrap > [class*="trx_addons_column-"].columns_padding_bottom {
+		padding-bottom: $xs_grid_gap;
+	}
+
+	/* trx_addons_columns relayout (no trx_addons_columns) */
+	.trx_addons_columns_wrap:not(.columns_fluid) > [class*="trx_addons_column-"] {
+		width:100%;
+	}
+	.trx_addons_columns_wrap.columns_fluid > [class*="trx_addons_column-"] {
+		width:50%;
+	}
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-1_1, 
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-2_2, 
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-3_3,
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-4_4, 
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-5_5, 
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-6_6,
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-7_7, 
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-8_8, 
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-9_9,
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-10_10, 
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-11_11, 
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-12_12,
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-1_3:nth-child(3n),
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-2_3,
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-1_3.after_span_2,
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-3_4,
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-1_4.after_span_3,
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-1_5:nth-child(5n),
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-2_5,
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-3_5,
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-4_5,
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-2_6,
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-3_6,
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-4_6,
+	.trx_addons_columns_wrap.columns_fluid > .trx_addons_column-5_6	{
+		width:100%;
+	}
+
+	.trx_addons_popup {
+		@include box(300px, auto);
+	}
+	.trx_addons_left_side,
+	.trx_addons_right_side {
+		display: block;
+		float:none;
+		width: 100%;
+		padding:0;
+	}
+	.trx_addons_right_side {
+		padding-top: 2em;
+	}
+}

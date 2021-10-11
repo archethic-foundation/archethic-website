@@ -1,0 +1,117 @@
+.addons-admin-wrap {
+    position: relative;
+    margin: 35px 15px 15px 15px;
+}
+.addons-admin-wrap .form-table {
+    width: 80%;
+}
+.mega-addons-version {
+    position: absolute;
+    background: #fff;
+    top: 0px;
+    right: 15px;
+    width: 130px;
+    height: 120px;
+    text-align: center;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.mega-addons-version p {
+    text-align: center;
+    background: #107FC9;
+    color: #fff;
+    margin: 0;
+    padding: 2px;
+    font-size: 15px;
+}
+.mega-addons-version .dashicons-shield {
+    width: 130px;
+    height: 120px;
+}
+.mega-addons-version .dashicons-shield:before{
+    font-size: 90px;
+    width: inherit;
+    padding: 0;
+    margin: 0;
+    line-height: 120px;
+    color: #107FC9;
+}
+.addons-admin-wrap h1{
+	color: #32373C;
+	font-size: 37px;
+    font-weight: 400;
+    color: #32373C;
+    padding-bottom: 5px;
+}
+.addons-admin-wrap h3{
+	margin: 0 0px 0px 0;
+    padding: 0;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 1.45em;
+    letter-spacing: 0;
+    color: #777777;
+}
+
+.addons-admin-wrap th {
+    vertical-align: top;
+    text-align: left;
+    padding: 24px 10px 24px 0;
+    width: 200px;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+/* Switch Button
+================================= */
+
+#addonsdata .form-table td {
+    padding: 5px 10px !important;
+}
+
+#addonsdata .onoffswitch {
+    position: relative; width: 80px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.addons-admin-wrap .onoffswitch-checkbox {
+    display: none;
+}
+#addonsdata .onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #FFFFFF; border-radius: 20px;
+}
+#addonsdata .onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+#addonsdata .onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+#addonsdata .onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 10px;
+    background-color: #34A7C1; color: #FFFFFF;
+}
+#addonsdata .onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: #B33D62; color: #FFFFFF;
+    text-align: right;
+}
+#addonsdata .onoffswitch-switch {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 46px;
+    border: 2px solid #FFFFFF; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+#addonsdata .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+#addonsdata .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}

@@ -1,0 +1,49 @@
+/* Styles for controls in the Elementor Editor
+------------------------------------------------ */
+
+/* Make each panel category as accordion */
+#elementor-panel-categories .panel-elements-category-title {
+	cursor: pointer;
+	border-top: 1px solid #d7dadd;
+	-webkit-transition: background-color 0.3s ease-out;
+	    -ms-transition: background-color 0.3s ease-out;
+	        transition: background-color 0.3s ease-out;
+}
+#elementor-panel-categories .panel-elements-category-title:hover {
+	color: #000;
+	background-color: #abbccc;
+}
+#elementor-panel-categories .panel-elements-category-title-basic {
+	display: block;
+}
+#elementor-panel-categories:not(.elementor-panel-categories-has-active) .panel-elements-category-title-basic,
+#elementor-panel-categories .panel-elements-category-title.panel-elements-category-title-active {
+	background-color: #ddbbbb;
+	color: #b7084e;
+}
+#elementor-panel-categories .panel-elements-category-title + .panel-elements-category-items {
+	height: 0;
+	opacity: 0;
+	-webkit-transition: height 0.5s ease-out, opacity 0.5s ease-out;
+	    -ms-transition: height 0.5s ease-out, opacity 0.5s ease-out;
+	        transition: height 0.5s ease-out, opacity 0.5s ease-out;
+}
+#elementor-panel-categories:not(.elementor-panel-categories-has-active) .panel-elements-category-title-basic + .panel-elements-category-items,
+#elementor-panel-categories .panel-elements-category-title.panel-elements-category-title-active + .panel-elements-category-items {
+	height:auto;
+	opacity:1;
+}
+
+/* Icons selector */
+.elementor-control .trx_addons_icon_selector + .trx_addons_list_icons {
+	left: 0 !important;
+}
+.elementor-control .trx_addons_icon_selector + .trx_addons_list_icons span {
+	width: 2.2em;
+}
+
+
+/* Date_Time Control */
+.datepicker_header a.icon-home:before {
+	display: none;
+}

@@ -1,0 +1,24 @@
+@mixin sc_price--md() {
+    /* Price */
+	.sc_price_item_title {
+		letter-spacing:0;
+		font-size:2em;
+	}
+	.sc_price_item_info {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.sc_price_item_price {
+		font-size: 1.5em;
+	}
+}
+
+@mixin sc_price--xs() {
+    /* Price */
+	.sc_price_item_link {
+		margin-top:2em;
+	}
+	.sc_price_item_details {
+		display: none;
+	}
+}

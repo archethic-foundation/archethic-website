@@ -1,0 +1,124 @@
+.cq-cards-container {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.1);
+	-ms-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.1);
+	-o-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.1);
+
+}
+.cq-cards-container h3{
+	font-size: 1.2em;
+}
+
+.cq-cards-container .card-image-container{
+	position: relative;
+	width: 50%;
+	height: 160px;
+	overflow: hidden;
+	float: left;
+}
+
+.cq-cards-container .card-caption-container{
+	width: 50%;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+
+.cq-cards-container .card-image img{
+	width: 100%;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.card-caption-container .caption-content{
+	font-size: 0.9em;
+	padding: 12px 24px 12px 24px;
+	text-align: center;
+	line-height: 160%;
+}
+.cq-cards-container .card-caption-container h2, .cq-cards-container .card-caption-container h3, .cq-cards-container .card-caption-container h4, .cq-cards-container .card-caption-container h5, .cq-cards-container .card-caption-container h6, .cq-cards-container .card-caption-container p{
+	margin: 0;
+	padding: 0;
+}
+.cq-cards-container .card-caption-container .caption{
+	margin-top: 0.8em;
+}
+
+
+.cq-cards-container.top .card-image-container, .cq-cards-container.bottom .card-image-container{
+	position: relative;
+	float: left;
+	width: 100%;
+	overflow: hidden;
+}
+.cq-cards-container.top .card-image-container img{
+	overflow: hidden;
+}
+
+.cq-cards-container.top .card-caption-container, .cq-cards-container.bottom .card-caption-container{
+	position: relative;
+	width: 100%;
+}
+
+
+.card-caption-container .caption-content .cq-button {
+  border: 0 none;
+  border-radius: 2px 2px 2px 2px;
+  background-color: #3BAFDA;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  padding: 4px 6px;
+  text-transform: none;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  text-align: center;
+}
+.card-caption-container .caption-content .cq-button:hover{
+	background-color: #4A89DC;
+}
+
+@media screen and (min-width: 479px) and (max-width: 767px) {
+	.cq-cards-container{
+		margin-top: 12px;
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+	.cq-cards-container{
+		margin-top: 12px;
+	}
+
+	.cq-cards-container .card-image-container{
+		display: block;
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		clear: left;
+	}
+	.cq-cards-container .card-caption-container{
+		width: 100%;
+		clear: left;
+		overflow: hidden;
+		display: block;
+		position: relative;
+	}
+	.card-caption-container .caption-content .cq-button {
+		margin-top: 22px;
+	}
+
+}
+
+

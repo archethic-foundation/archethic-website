@@ -1,0 +1,878 @@
+@import "bourbon";
+@import "neat";
+@import "grid-settings";
+@import "lvca-lib";
+
+/* --------------- Reset styles --------- */
+
+.lvca-container, .lvca-grid-container {
+  box-sizing: border-box;
+  *, *::after, *::before {
+    box-sizing: inherit;
+    }
+  ol, ul, ol > li, ul > li, ol:hover, ul:hover, ul > li:hover, ol > li:hover, ol > li > a, ul > li > a, ol > li > a:hover, ul > li > a:hover, img {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    list-style: none;
+    background: none;
+    &:before, &:after {
+      display: none;
+      }
+    }
+  a {
+    text-decoration: initial;
+    }
+  img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    }
+  }
+/* ------- General styles ------------ */
+
+.lvca-container {
+  @include lvca-container;
+  margin-left: auto;
+  margin-right: auto;
+  }
+.panel-grid .widget {
+  border: 0;
+  }
+.lvca-center {
+  text-align: center;
+  }
+.lvca-grid-container {
+  @include grid-container;
+  @include grid-collapse();
+
+  .lvca-grid-item {
+    min-height: 1px; /* Prevents columns from collapsing when housing absolute elements or when lazy loading content */
+    }
+
+  @include grid-media($lvca-mobile-only-grid) {
+    &.lvca-grid-mobile-2 {
+      .lvca-grid-item {
+        @include omega(2n);
+        }
+      }
+
+    &.lvca-grid-mobile-3 {
+      .lvca-grid-item {
+        @include omega(3n);
+        }
+      }
+
+    &.lvca-grid-mobile-4 {
+      .lvca-grid-item {
+        @include omega(4n);
+        }
+      }
+
+    &.lvca-grid-mobile-5 {
+      .lvca-grid-item {
+        @include omega(5n);
+        }
+      }
+
+    &.lvca-grid-mobile-6 {
+      .lvca-grid-item {
+        @include omega(6n);
+        }
+      }
+    }
+
+  @include grid-media($lvca-tablet-only-grid) {
+    &.lvca-grid-tablet-2 {
+      .lvca-grid-item {
+        @include omega(2n);
+        }
+      }
+
+    &.lvca-grid-tablet-3 {
+      .lvca-grid-item {
+        @include omega(3n);
+        }
+      }
+
+    &.lvca-grid-tablet-4 {
+      .lvca-grid-item {
+        @include omega(4n);
+        }
+      }
+
+    &.lvca-grid-tablet-5 {
+      .lvca-grid-item {
+        @include omega(5n);
+        }
+      }
+
+    &.lvca-grid-tablet-6 {
+      .lvca-grid-item {
+        @include omega(6n);
+        }
+      }
+    }
+  @include grid-media($lvca-desktop-grid) {
+    &.lvca-grid-desktop-2 {
+      .lvca-grid-item {
+        @include omega(2n);
+        }
+      }
+
+    &.lvca-grid-desktop-3 {
+      .lvca-grid-item {
+        @include omega(3n);
+        }
+      }
+
+    &.lvca-grid-desktop-4 {
+      .lvca-grid-item {
+        @include omega(4n);
+        }
+      }
+
+    &.lvca-grid-desktop-5 {
+      .lvca-grid-item {
+        @include omega(5n);
+        }
+      }
+
+    &.lvca-grid-desktop-6 {
+      .lvca-grid-item {
+        @include omega(6n);
+        }
+      }
+    }
+
+
+
+  &.lvca-grid-mobile-1 {
+
+    .lvca-grid-item {
+      @include grid-column(12);
+      }
+    }
+  &.lvca-grid-mobile-2 {
+
+    .lvca-grid-item {
+      @include grid-column(6);
+      }
+    }
+
+  &.lvca-grid-mobile-3 {
+
+    .lvca-grid-item {
+      @include grid-column(4);
+      }
+    }
+
+  &.lvca-grid-mobile-4 {
+
+    .lvca-grid-item {
+      @include grid-column(3);
+      }
+    }
+
+  &.lvca-grid-mobile-5 {
+
+    .lvca-grid-item {
+      @include grid-column(1, $lvca-five-col-grid);
+      }
+    }
+
+  &.lvca-grid-mobile-6 {
+
+    .lvca-grid-item {
+      @include grid-column(2);
+      }
+    }
+
+  @include grid-media($lvca-tablet-grid) {
+
+    &.lvca-grid-tablet-1 {
+
+      .lvca-grid-item {
+        @include grid-column(12);
+        }
+      }
+    &.lvca-grid-tablet-2 {
+
+      .lvca-grid-item {
+        @include grid-column(6);
+        }
+      }
+
+    &.lvca-grid-tablet-3 {
+
+      .lvca-grid-item {
+        @include grid-column(4);
+        }
+      }
+
+    &.lvca-grid-tablet-4 {
+
+      .lvca-grid-item {
+        @include grid-column(3);
+        }
+      }
+
+    &.lvca-grid-tablet-5 {
+
+      .lvca-grid-item {
+        @include grid-column(1, $lvca-five-col-grid);
+        }
+      }
+
+    &.lvca-grid-tablet-6 {
+
+      .lvca-grid-item {
+        @include grid-column(2);
+        }
+      }
+    }
+
+  @include grid-media($lvca-desktop-grid) {
+
+    &.lvca-grid-desktop-1 {
+
+      .lvca-grid-item {
+        @include grid-column(12);
+        }
+      }
+    &.lvca-grid-desktop-2 {
+
+      .lvca-grid-item {
+        @include grid-column(6);
+        }
+      }
+
+    &.lvca-grid-desktop-3 {
+
+      .lvca-grid-item {
+        @include grid-column(4);
+        }
+      }
+
+    &.lvca-grid-desktop-4 {
+
+      .lvca-grid-item {
+        @include grid-column(3);
+        }
+      }
+
+    &.lvca-grid-desktop-5 {
+
+      .lvca-grid-item {
+        @include grid-column(1, $lvca-five-col-grid);
+        }
+      }
+
+    &.lvca-grid-desktop-6 {
+
+      .lvca-grid-item {
+        @include grid-column(2);
+        }
+      }
+    }
+  }
+/*--------- Gapless grid columns ----*/
+
+.lvca-gapless-grid {
+
+  .lvca-grid-container {
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
+
+    &.lvca-grid-mobile-1 {
+
+      .lvca-grid-item {
+        @include grid-column(12, $lvca-gapless-grid);
+        }
+      }
+    &.lvca-grid-mobile-2 {
+
+      .lvca-grid-item {
+        @include grid-column(6, $lvca-gapless-grid);
+        }
+      }
+
+    &.lvca-grid-mobile-3 {
+
+      .lvca-grid-item {
+        @include grid-column(4, $lvca-gapless-grid);
+        }
+      }
+
+    &.lvca-grid-mobile-4 {
+
+      .lvca-grid-item {
+        @include grid-column(3, $lvca-gapless-grid);
+        }
+      }
+
+    &.lvca-grid-mobile-5 {
+      .lvca-grid-item {
+        @include grid-column(1, $lvca-gapless-five-col-grid);
+        }
+      }
+
+    &.lvca-grid-mobile-6 {
+
+      .lvca-grid-item {
+        @include grid-column(2, $lvca-gapless-grid);
+        }
+      }
+
+    @include grid-media($lvca-tablet-grid) {
+
+      &.lvca-grid-tablet-1 {
+        .lvca-grid-item {
+          @include grid-column(12, $lvca-gapless-grid);
+          }
+        }
+
+      &.lvca-grid-tablet-2 {
+        .lvca-grid-item {
+          @include grid-column(6, $lvca-gapless-grid);
+          }
+        }
+
+      &.lvca-grid-tablet-3 {
+        .lvca-grid-item {
+          @include grid-column(4, $lvca-gapless-grid);
+          }
+        }
+      &.lvca-grid-tablet-4 {
+        .lvca-grid-item {
+          @include grid-column(3, $lvca-gapless-grid);
+          }
+        }
+      &.lvca-grid-tablet-5 {
+        .lvca-grid-item {
+          @include grid-column(1, $lvca-gapless-five-col-grid);
+          }
+        }
+      &.lvca-grid-tablet-6 {
+        .lvca-grid-item {
+          @include grid-column(2, $lvca-gapless-grid);
+          }
+        }
+      }
+
+    @include grid-media($lvca-desktop-grid) {
+
+      &.lvca-grid-desktop-1 {
+        .lvca-grid-item {
+          @include grid-column(12, $lvca-gapless-grid);
+          }
+        }
+
+      &.lvca-grid-desktop-2 {
+        .lvca-grid-item {
+          @include grid-column(6, $lvca-gapless-grid);
+          }
+        }
+
+      &.lvca-grid-desktop-3 {
+        .lvca-grid-item {
+          @include grid-column(4, $lvca-gapless-grid);
+          }
+        }
+      &.lvca-grid-desktop-4 {
+        .lvca-grid-item {
+          @include grid-column(3, $lvca-gapless-grid);
+          }
+        }
+      &.lvca-grid-desktop-5 {
+        .lvca-grid-item {
+          @include grid-column(1, $lvca-gapless-five-col-grid);
+          }
+        }
+      &.lvca-grid-desktop-6 {
+        .lvca-grid-item {
+          @include grid-column(2, $lvca-gapless-grid);
+          }
+        }
+      }
+    }
+  }
+
+/* ---------- Masonry Layout Grid columns -------------*/
+
+.lvca-gapless-grid .lvca-masonry {
+
+  /* Clear the omega for masonry layout */
+  .lvca-grid-item {
+    clear: none !important;
+    }
+
+  .lvca-grid-sizer {
+    @include grid-column(1, $lvca-gapless-grid);
+    }
+
+  &.lvca-grid-mobile-1 {
+
+    .lvca-grid-item.lvca-wide {
+      @include grid-column(12, $lvca-gapless-grid);
+      }
+    }
+  &.lvca-grid-mobile-2 {
+
+    .lvca-grid-item.lvca-wide {
+      @include grid-column(6, $lvca-gapless-grid); // keep it small for now
+      }
+    }
+
+  &.lvca-grid-mobile-3 {
+
+    .lvca-grid-item.lvca-wide {
+      @include grid-column(8, $lvca-gapless-grid);
+      }
+    }
+
+  &.lvca-grid-mobile-4 {
+
+    .lvca-grid-item.lvca-wide {
+      @include grid-column(6, $lvca-gapless-grid);
+      }
+    }
+
+  &.lvca-grid-mobile-5 {
+
+    .lvca-grid-item.lvca-wide {
+      @include grid-column(2, $lvca-gapless-five-col-grid);
+      }
+    }
+
+  &.lvca-grid-mobile-6 {
+
+    .lvca-grid-item.lvca-wide {
+      @include grid-column(4, $lvca-gapless-grid);
+      }
+    }
+
+  @include grid-media($lvca-tablet-grid) {
+
+    &.lvca-grid-tablet-1 {
+
+      .lvca-grid-item.lvca-wide {
+        @include grid-column(12, $lvca-gapless-grid);
+        }
+      }
+    &.lvca-grid-tablet-2 {
+
+      .lvca-grid-item.lvca-wide {
+        @include grid-column(6, $lvca-gapless-grid); // keep it small for now
+        }
+      }
+
+    &.lvca-grid-tablet-3 {
+
+      .lvca-grid-item.lvca-wide {
+        @include grid-column(8, $lvca-gapless-grid);
+        }
+      }
+
+    &.lvca-grid-tablet-4 {
+
+      .lvca-grid-item.lvca-wide {
+        @include grid-column(6, $lvca-gapless-grid);
+        }
+      }
+
+    &.lvca-grid-tablet-5 {
+
+      .lvca-grid-item.lvca-wide {
+        @include grid-column(2, $lvca-gapless-five-col-grid);
+        }
+      }
+
+    &.lvca-grid-tablet-6 {
+
+      .lvca-grid-item.lvca-wide {
+        @include grid-column(4, $lvca-gapless-grid);
+        }
+      }
+
+    }
+
+  @include grid-media($lvca-desktop-grid) {
+
+
+    &.lvca-grid-desktop-1 {
+
+      .lvca-grid-item.lvca-wide {
+        @include grid-column(12, $lvca-gapless-grid);
+        }
+      }
+    &.lvca-grid-desktop-2 {
+
+      .lvca-grid-item.lvca-wide {
+        @include grid-column(6, $lvca-gapless-grid); // keep it small for now
+        }
+      }
+
+    &.lvca-grid-desktop-3 {
+
+      .lvca-grid-item.lvca-wide {
+        @include grid-column(8, $lvca-gapless-grid);
+        }
+      }
+
+    &.lvca-grid-desktop-4 {
+
+      .lvca-grid-item.lvca-wide {
+        @include grid-column(6, $lvca-gapless-grid);
+        }
+      }
+
+    &.lvca-grid-desktop-5 {
+
+      .lvca-grid-item.lvca-wide {
+        @include grid-column(2, $lvca-gapless-five-col-grid);
+        }
+      }
+
+    &.lvca-grid-desktop-6 {
+
+      .lvca-grid-item.lvca-wide {
+        @include grid-column(4, $lvca-gapless-grid);
+        }
+      }
+    }
+  }
+
+/* --------------- Flexslider Styles -------------- */
+
+.lvca-container {
+  .lvca-thumbnailslider.lvca-flexslider {
+    margin-top: 15px;
+    .lvca-slide {
+      margin: 0 5px 0 0;
+      img {
+        display: block;
+        opacity: .5;
+        cursor: pointer;
+        &:hover {
+          opacity: 1;
+          }
+        }
+      &.lvca-flex-active-slide img {
+        opacity: 1;
+        cursor: default;
+        }
+      }
+    }
+  .lvca-flex-direction-nav {
+    padding: 0 !important;
+    margin: 0 !important;
+    }
+  .lvca-flex-direction-nav li {
+    position: initial;
+    }
+  .lvca-flex-direction-nav a, .lvca-flex-direction-nav a:hover {
+    opacity: 1;
+    text-shadow: none;
+    background: none;
+    color: #888;
+    @include lvca-icon-font();
+    font-size: 24px;
+    width: 28px;
+    height: 28px;
+    margin: -14px 0 0;
+    bottom: initial;
+    left: initial;
+    right: initial;
+    top: 50%;
+    text-indent: 0;
+    text-align: center;
+    color: #aaa;
+    transition: all 0.3s ease-in-out 0s;
+    outline: none;
+    &:before, &:hover:before {
+      margin: 2px;
+      vertical-align: middle;
+      display: inline;
+      font-family: inherit !important;
+      opacity: 1;
+      }
+    &:hover {
+      color: #888;
+      }
+    .lvca-dark-bg & {
+      color: #888;
+      &:hover {
+        color: #aaa;
+        }
+      }
+    @include respond-to-max(960) {
+      display: none; /* Let users navigate via touch */
+      }
+    }
+  .lvca-flex-direction-nav a.lvca-flex-prev {
+    left: -30px;
+    &:before {
+      content: "\e900";
+      }
+    }
+  .lvca-flex-direction-nav a.lvca-flex-next {
+    right: -30px;
+    &:before {
+      content: "\e901";
+      }
+    }
+  .lvca-flex-control-nav {
+    width: 100%;
+    position: absolute;
+    bottom: -40px;
+    text-align: center;
+    padding: 0 !important;
+    margin: 0 !important;
+    li, li:hover {
+      margin: 0 8px 0 0;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+      }
+    li a, li a:hover {
+      background: #aaa;
+      border: 1px solid #aaa;
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+      box-shadow: none;
+      transition: all 0.2s ease-in 0s;
+      display: inline-block;
+      vertical-align: middle;
+      outline: none;
+      .lvca-dark-bg & {
+        background: #ccc;
+        border-color: #ccc;
+        }
+      }
+    li a.lvca-flex-active, li a:hover.lvca-flex-active, li a:hover {
+      background: none;
+      }
+    li a.lvca-flex-active, li a:hover.lvca-flex-active {
+      width: 14px;
+      height: 14px;
+      }
+    }
+  .lvca-flex-control-thumbs {
+    bottom: -120px;
+    @include respond-to-max(600) {
+      bottom: -80px;
+      }
+    li {
+      width: auto;
+      float: none;
+      img {
+        max-width: 100%;
+        width: 150px;
+        @include respond-to-max(600) {
+          width: 100px;
+          }
+        }
+      }
+    }
+  }
+/* Sleek Carousel Styles */
+
+.slick-loading .slick-list {
+  background: #fff url('./ajax-loader.gif') center center no-repeat;
+  }
+.lvca-container {
+
+  button.slick-prev, button.slick-next {
+    position: absolute;
+    bottom: initial;
+    left: initial;
+    right: initial;
+    top: 50%;
+    width: 28px;
+    height: 28px;
+    margin: -14px 0 0;
+    &, &:before, &:after {
+      text-shadow: none;
+      background: none !important;
+      border: none;
+      padding: 0;
+      opacity: 1;
+      @include lvca-icon-font();
+      font-size: 24px;
+      color: #aaa !important;
+      overflow: hidden;
+      box-shadow: none;
+      outline: none;
+      text-indent: 0;
+      text-align: center;
+      transition: all 0.3s ease-in-out 0s;
+      }
+    &:before {
+      margin: 2px;
+      vertical-align: middle;
+      }
+    &:hover {
+      &:before, &:after {
+        color: #888 !important;
+        }
+      }
+    .lvca-dark-bg & {
+      &:before, &:after {
+        color: #888 !important;
+        }
+      &:hover {
+        &:before, &:after {
+          color: #aaa !important;
+          background: none !important;
+          }
+        }
+      }
+    @include respond-to-max(1024) {
+      display: none !important; /* Let users navigate via touch */
+      }
+    }
+  button.slick-prev {
+    left: -40px;
+    &:before {
+      content: "\e900";
+      }
+    }
+  button.slick-next {
+    right: -40px;
+    &:before {
+      content: "\e901";
+      }
+    }
+  ul.slick-dots {
+    width: 100%;
+    position: absolute;
+    bottom: -30px;
+    text-align: center;
+    padding: 0 !important;
+    margin: 0 !important;
+    li {
+      margin: 0 8px 0 0 !important;
+      padding: 0 !important;
+      display: inline-block;
+      font-size: 0;
+      }
+    li button {
+      padding: 0;
+      background: #aaa;
+      border: 1px solid #aaa;
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+      box-shadow: none;
+      transition: background 0.3s ease-in-out 0s;
+      font-size: 0;
+      outline: none;
+      .lvca-dark-bg & {
+        background: #888 !important;
+        border-color: #888 !important;
+        }
+      }
+    li button:hover, li.slick-active button {
+      background: none !important;
+      border-color: #aaa !important;
+      }
+    li.slick-active button {
+      width: 14px;
+      height: 14px;
+      }
+    }
+  }
+/* -------- Widget separator headline ------------ */
+
+.lvca-widget-heading {
+  @include lvca-heading-style();
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+  @include respond-to-max(767) {
+    font-size: 32px;
+    line-height: 44px;
+    }
+  }
+/* -------- Spacer styling ----------- */
+
+.lvca-spacer {
+  clear: both;
+  }
+
+/* --------------- Button CSS -------------------- */
+
+input.lvca-button, button.lvca-button, a.lvca-button, .lvca-button:active, .lvca-button:visited {
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 16px 40px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: #f94213;
+  color: #fefefe;
+  outline: none;
+  transition: all 0.4s ease-in-out 0s;
+  &.lvca-rounded {
+    border-radius: 999px;
+    }
+  &.lvca-large {
+    padding: 20px 60px;
+    }
+  &.lvca-small {
+    padding: 12px 25px;
+    font-size: 11px;
+    }
+  &:hover {
+    background-color: #f9633e;
+    color: #fefefe;
+    }
+  img, span.lvca-icon {
+    margin-right: 10px;
+    }
+  }
+$skin-names: ("black", "blue", "cyan", "green", "orange", "pink", "red", "teal");
+$color-collection: (#363636, #46a5d5, #57c0dc, #00a57d, #e87151, #dd5679, #da4f49, #28c2ba);
+
+@for $i from 0 to length($skin-names) {
+  $skin-name: nth($skin-names, $i+1);
+  $skin-color: nth($color-collection, $i+1);
+  .lvca-button.lvca-#{$skin-name} {
+    background-color: $skin-color;
+    }
+  .lvca-button.lvca-#{$skin-name}:hover {
+    background-color: lighten($skin-color, 5%);
+    }
+  }
+.lvca-button.lvca-trans {
+  color: #333;
+  background-color: transparent; /* IE */
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #a5a5a5;
+  &:hover {
+    background-color: #fff;
+    color: #333 !important;
+    border-color: #fff;
+    }
+  }
+.lvca-button.lvca-semitrans {
+  color: #fff;
+  background-color: transparent; /* IE */
+  background-color: rgba(125, 125, 125, 0.5);
+  &:hover {
+    background-color: #fff;
+    color: #333 !important;
+    }
+  }

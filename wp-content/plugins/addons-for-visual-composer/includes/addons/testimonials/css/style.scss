@@ -1,0 +1,78 @@
+@import "../../../../assets/css/lvca-lib";
+
+.lvca-testimonials {
+  .lvca-testimonial {
+    margin-bottom: 50px;
+  }
+  .lvca-testimonial-text {
+    background: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 30px;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    margin-bottom: 40px;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 24px;
+    color: #888;
+    .lvca-dark-bg & {
+      color: #666;
+      background: #eee;
+    }
+    &:after {
+      content: '';
+      display: block;
+      background: #fff;
+      border-left: 1px solid #dbdbdb;
+      border-bottom: 1px solid #dbdbdb;
+      background: #ffffff;
+      transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: skew(0deg, -44deg);
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      bottom: -12px;
+      left: 40px;
+      margin: auto;
+      .lvca-dark-bg & {
+        background: #eee;
+      }
+      }
+    text-align: center;
+    max-width: 450px;
+    }
+  .lvca-testimonial-user {
+    display: table;
+    .lvca-image-wrapper {
+      display: table-cell;
+      img {
+        max-width: 64px;
+        border-radius: 50%;
+        margin-right: 20px;
+        }
+      }
+    .lvca-text {
+      display: table-cell;
+      vertical-align: middle;
+      color: #888;
+      .lvca-dark-bg & {
+        color: #909090;
+      }
+      .lvca-author-name {
+        @include lvca-heading-style();
+        font-size: 15px;
+        line-height: 24px;
+        margin-bottom: 5px;
+        color: #333;
+        .lvca-dark-bg & {
+          color: #e5e5e5;
+        }
+        }
+      }
+    }
+  }

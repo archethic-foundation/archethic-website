@@ -1,0 +1,17 @@
+.zoomimage {
+	margin: 0 auto;
+	height: 500px;
+}
+
+
+.fix-controls .zoomer .zoomer-controls-left{height: 61px; width: 30px;}
+@media screen and (min-width: 479px) and (max-width: 640px) {
+	.zoomimage{
+		width: 100%;
+	}
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+	.zoomimage{
+		width: 100%;
+	}
+}

@@ -1,0 +1,90 @@
+.pinterest-container {
+	-webkit-transform: translateZ(0);
+  	-webkit-backface-visibility: hidden;
+	width: 100%;
+	list-style-type: none;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+.pinterest-container li {
+	list-style: none!important;
+	width: 200px;
+	background:transparent none repeat scroll 0 0;
+	background-image: none;
+	list-style-image:none;
+	list-style-type:none;
+	display: none;
+	margin: 0;
+	padding: 0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+.pinterest-container li.inactive {
+  visibility: hidden;
+  opacity: 0;
+}
+.pinterest-container a, .pinterest-container a:active, .pinterest-container a:focus{
+	text-decoration: none;
+	outline: 0;
+}
+
+.pinterest-container li {
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+.pinterest-container li img {
+	margin: 0;
+	padding: 0;
+	display: block;
+	-webkit-border-radius: 0;
+	 -moz-border-radius: 0;
+	      border-radius: 0;
+	box-shadow: none;
+
+
+
+}
+
+div.front{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	z-index: 1001;
+	background: #C71585;
+	color: #FFF;
+}
+
+div.back{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	background: #FFF;
+}
+div.back h4{
+	margin: 7px 7px 0 7px;
+}
+
+.pinterest-container li p, .pinterest-container li p, .pinterest-container li p{
+	color: #666;
+	font-size: 12px;
+	margin: 7px 7px 0 7px;
+	padding-bottom: 8px;
+	color: #FFF;
+}
+
+
+.wookmark-placeholder {
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+

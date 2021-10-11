@@ -1,0 +1,1278 @@
+<div class="essential-grid-revolution-update-list">
+
+	<h3 class="version-number">Version 3.0.11 (31th December 2020)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIX</strong></div>
+	<ul>
+		<li>Fixed filters "Hide All" not working properly</li>
+		<li>Fixed not beeing able to deselect filter categories</li>
+		<li>Fixed custom grids not replacing metas properly if they are set in the post fields</li>
+		<li>Fixed YouTube playlist select box being limited to 50 playlists</li>
+		<li>Fixed an issue with the Real Media Library's source selection reverting to "All" after every updating of the grid</li>
+		<li>Fixed an issue importing demo data not working properly when terms are invalid</li>
+		<li>Updated Ajax function handling to avoid console errors in some rare cases</li>
+		<li>Fixed Flip Up "out" layer animation effect</li>
+		<li>Fixed Custom Category List which mostly only show the used Categories, and not the Added Categories from List yet</li>
+	</ul>
+	
+	<h3 class="version-number">Version 3.0.10 (10th December 2020)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURE</strong></div>
+	<ul>
+		<li>Added new option in Nav-Filter-Sort - Filter Groups called "Add Filters By". This will allow to select if Categories, Tags or both will be added as filters to the Grid Items</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIX</strong></div>
+	<ul>
+		<li>Replaced depricated jQuery functions to raise compatibility with upcoming WordPress versions</li>			
+	</ul>
+	
+	<h3 class="version-number">Version 3.0.9 (2nd December 2020)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURE</strong></div>
+	<ul>
+		<li>Added new option in Nav-Filter-Sort - Filter Groups called "Add Filters By". This will allow to select if Categories, Tags or both will be added as filters to the Grid Items</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIX</strong></div>
+	<ul>
+		<li>UTF-8 characters now work properly in filters</li>
+		<li>Fixed a glitch with the Load More function which loaded Double of the elements at start</li>
+		<li>Fixed a bug where importin grids did not work if no fonts are present in the Essential Grid installation</li>
+		<li>Adding new Layers in Skin Editor sometimes produced zero dimension Elements. Bug is fixed</li>
+		<li>Replaced depricated jQuery functions to raise compatibility with upcoming WordPress versions</li>			
+	</ul>
+	
+	<h3 class="version-number">Version 3.0.8 (19th November 2020)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURE</strong></div>
+	<ul>
+		<li>Added Mute/Unmute option to Inline Videos</li>
+		<li>Added Filter options like Tags, Categories and Tags & Categories to Quick Grid Related Post Builder</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIX</strong></div>
+	<ul>
+		<li>Added a protecion against an unavailable function Parse_blocks which may brake Editor and frontend pages in older WP version</li>
+		<li>Added NameSpace protection for CodeMirror to avoid conflicts with Themes and other Plugins</li>
+		<li>If MP4 video Source is declared with mp3 audio files, autoplay and muted will be ignored and a controller will show in any cases which allows to play mp3 audio files in place</li>
+		<li>Fixed a bug where using the same Grid mutltiple times on a page may resulted in only one Grid showing up</li>
+		<li>Fixed Link target for links on item cover</li>
+		<li>Fixed a bug where the alternate image was not correctly translated in custom grids inside of text layer elements</li>
+		<li>Fixed a bug where the custom dropdown was using the same dropdown text</li>
+		<li>Fixed a bug in the flickr source, flickr user url needed to be shown for photoset selection also</li>
+		<li>Fixed a bug where example logos were not shown in the skin selection screen</li>
+		<li>Eliminated sloppy Gutenberg editor setting updating</li>
+		<li>Fixed Fonts Remove function in General Settings</li>
+		<li>Fixed Output of Multi-Select meta data</li>
+	</ul>
+
+	<h3 class="version-number">Version 3.0.7 (02nd September 2020)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURE</strong></div>
+	<ul>
+		<li>Added custom category editor to manage order and naming of custom categories in custom grids</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIX</strong></div>
+	<ul>
+		<li>Editing Posts and Custom items still showing edited sign after saving them.</li>
+		<li>Fixed FancyBox Thumbnail conflicts with Essential Lightbox'S Thumbnails</li>
+		<li>Fixed an issue where unchecking Post types or Sort Orders did not remove visually the selected states</li>		
+		<li>Fixed a bug which did not allow to remove Page Sources from the list any more, once they have been added</li>
+	</ul>
+
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Update some missing styles for Page selection in grid editor</li>
+	</ul>
+
+	<h3 class="version-number">Version 3.0.6 (28th August 2020)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURE</strong></div>
+	<ul>
+		<li>Added lightbox option to allow autoplay videos muted, or wait for user interaction and play videos on demand unmuted</li>
+	</ul>
+	<div class="change"><strong style="font-weight:700">PROTECTION</strong></div>
+	<ul>
+	  <li>Added protection against missing PHP libraries for XML/DOM</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 3.0.5 (26th August 2020)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURE</strong></div>
+	<ul>
+		<li>Custom Grid items in the grid editor can be edited and updated without the need to refresh the full grid to save time and make the work with grid items more efficient</li>
+		<li>Metas of post items can be quickly edited now in the grid editor. Changes will now only be rendered and saved on grid save, to make the work with items in the grid more powerful</li>
+		<li>Ability to trigger load more if a filter is selected but there are not items associated with that specific filter are present in pre-loaded items.</li>
+		<li>Added a new color picker similar to Slider Revolutions color picker. The color pickers from both plugins synchronize their custom color lists</li>
+		<li>Show even grid instead of cobbles on smaller devices (optional selectable device size)</li>
+		<li>Added video playback on hover option which can be set per grid</li>
+		<li>Added show/hide controls for inline playback</li>
+		<li>Added over/under layer playback of inline videos</li>
+	</ul>
+	<div class="change"><strong style="font-weight:700">PROTECTION</strong></div>
+	<ul>
+		<li>Added protection against perfectScrollbar conflicts in the template library overview</li>
+		<li>Added protection against third-party plugins and themes that globally change the standard UI elements like dialogs, tabs, etc.</li>
+	</ul>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Max grid items in the cobbles view changed from 500 to 1000+</li>
+		<li>Changed Deleting behaviuor, shorting up the process and keep Overview page without the need to reload the site</li>
+		<li>Added Anchor functions in Item skin editor, which allows to scroll the skin example on lower screens</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIX</strong></div>
+	<ul>
+		<li>Fixed %alternate-image% meta tag not working</li>
+		<li>Fixed element "alt. image" not working in layer settings</li>
+		<li>Importing a grid from the online library will now create missing metas</li>
+		<li>Custom styled Animations in backend was not showing up in some cases. This issue has been fixed now</li>
+		<li>Readded failing custom Metas to the Sorting list</li>
+		<li>Fixed JavaScript errors if Avadas latest Fusion Core is enabled</li>
+		<li>Updated Perfect Scrollbars engine</li>
+		<li>Fixed an issue where sometimes Text/HTML layers had no content</li>
+		<li>Updated the select2 plugin to avoid conflicts with other 3rd party codes</li>
+	</ul>
+
+	<h3 class="version-number">Version 3.0.4 Artemis (21th August 2020)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIX</strong></div>
+	<ul>
+		<li>Fixed font families not showing up in the selectbox after saving the global settings with 3.x</li>
+		<li>Fixed initialisation of Essential Grids if 3rd party plugins and/or themes do unbind state events on DOM</li>
+	</ul>
+
+	<h3 class="version-number">Version 3.0.3 Artemis (16th August 2020)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIX</strong></div>
+	<ul>
+		<li>Fixed image loading issues if file names contained special charachters like () and space.</li>
+		<li>Fixed WP5.5 Content Gallery based Lightbox functions</li>
+		<li>Added Protection against issues if the jQuery library is loaded in the Footer</li>
+	</ul>
+
+	<h3 class="version-number">Version 3.0.2 Artemis (13th August 2020)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIX</strong></div>
+	<ul>
+		<li>Fixed Lightbox Group issues</li>
+		<li>Fixed Lightbox issues with double Thumbnails</li>
+		<li>Fixed offseted Thumbnails in Lightbox galleries</li>
+		<li>Fixed Lightbox triggering on Cover and Media containers</li>
+	</ul>
+	<h3 class="version-number">Version 3.0.1 Artemis (12th August 2020)</h3>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Replaced jQuery.parseJSON against JSON.parse to support upcoming WP 5.6 with jQuery 3.0</li>
+		<li>Added Version Checking for rbtools.min.js which will allow to load the latest version of ThemePunch tools if Slider Revolution and Essential Grid also activated</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIX</strong></div>
+	<ul>
+		<li>Fixed missing Lightbox On/Off Global function</li>
+		<li>Fixed missing Select box of WooCommerce Elements in Skin Editor</li>
+		<li>Fixed missing Custom Metas in Skin Editor</li>
+		<li>Fixed Slide JavaScript Failure where over animations i.e. in HowardTaft Skin was not any more working</li>
+		<li>Fixed JSON Parse issues in Skin and Grid Editor</li>
+		<li>Fixed frontend issues in Grids with Blank elements where in some cases a javascritp error broke the page rendering</li>
+		<li>Get rid of Double or Muliple created thumbs in Lightbox Gallery thumbnails list</li>
+		<li>Fixed frontend special character display in meta information</li>
+	</ul>
+
+	<h3 class="version-number">Version 3.0.0 Artemis (11th August 2020)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURE</strong></div>
+	<ul>
+		<li>Added Support for Wordpress Version 5.5</li>
+		<li>Added option to disable the video playback in grids on click, on cover or media</li>
+		<li>Added new navigation skins </li>
+		<li>Added the element to add the full textual representation of a month (January through December) in the skin editor</li>
+	</ul>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Removed redundancy of processes to reduce cpu and gpu load</li>
+		<li>Updated FancyBox based Lightbox, and remove Older JackBox and Social Box based Lightboxes.</li>
+		<li>Moved Global Settings, Import/Export Settings, Font Settings, Meta and Search settings grouped under Global Settings now</li>
+		<li>Redesigned the Administraion Views</li>
+		<li>Added some Performance Boost, for better and more Effective loading, better filtering and smoother Animations</li>
+		<li>Changed duplication name from Grid-* to "Copy of #name# *"</li>
+		<li>Changed the behavior of sorting by favorite</li>
+		<li>Changed editor behaviour, where the available layer backgrounds will not auto change its color synced to the cover color to avoid visual issues</li>
+		<li>Connection to Instagram now via the official Facebook API (customer security)</li>
+		<li>Changed the activation/deactivation process so that OVH customers can now properly activate/deactivate the plugin. (in addition, the essential-grid-ovh plugin is needed)</li>
+		<li>New Essential Grid ShortCode/Quick Editor added to pages and posts. Gutenberg version extended with post based grids and custom quick grids</li>
+		<li>Minimum amount of Visible items will be loaded if Filter selected and amount of visible Items less then defatult</li>
+		<li>Simplified the script structures and shortened the required amounts of loaded files</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIX</strong></div>
+	<ul>
+		<li>Issues with autoplay of videos, embedded and/or in lightbox fixed in this version</li>
+		<li>Fixed an issue where clicking on the clear or search submit buttons would open clickable dropdown lists</li>
+		<li>Icon selector in skin editor was not scrollable when the mouse pointer was hovering the single icons</li>
+		<li>Click on cover will allow now also to play self hosted videos in ligthbox</li>
+		<li>CodeMirror updated, and some double scrollbars and missaligned formatting fixed</li>
+		<li>Touch swipe option will now show/hide further options based on this option value</li>
+		<li>Loading new items on filter change may sometimes shows double "No Items Available" and "No More Items Available" content. This will wait now until the loading finishes its job before it shows any further details</li>
+		<li>Fixed PHP 7.4 deprecated message for PHP implodes in the frontend</li>
+		<li>Fixed an issue in filters when titles contain single quotes (')</li>
+		<li>Fixed double output of meta value "date day"</li>
+		<li>Fixed caching issue for WordPress galleries (same output for each gallery)</li>
+		<li>Fixed animation issues on hover and added performance for smoother and quicker animations on single items</li>
+		<li>Fixed issue when using empty taxonimies layers</li>
+		<li>Fixed ajax loaded Slider Revolution links and navigation elements in lightbox mode. Required RS version 6.2.11</li>
+		<li>Fixed an issue where Slider Revolution can not be opened twice in a row in lightbox.  Required RS version 6.2.11</li>
+		<li>Fixed an issue in the source selection of grids: Taxonomies can now be combined with "and"</li>
+		<li>Duplicated existing Navigation Skins with the version number v2 to solve issues with stacking hover stlyes on mobile devices</li>
+		<li>Simplified navigation styles due the new v2 edition</li>
+		<li>Solved a problem where navigation, filtering, sorting and searching were not available if they were added by a shortcode outside of the grid</li>
+		<li>Embedded videos can start now again with auto play (muted due the new browser restrictions)</li>
+		<li>Fixed cache clearing issue for Vimeo streams</li>
+		<li>Fixed the issue that YouTube playlist overview grids did not show the images</li>
+		<li>Fixed WooCommerce sorting "total sales"</li>
+		<li>Fixed API limitation for Facebook albums</li>
+		<li>Fixed an issue where item animation when changing the Grid height would not trigger the new item in animation of other grids before scrolling the window</li>
+		<li>Changing the page in masonry look did not refresh the position of single items. This bug has been fixed in the latest version</li>
+		<li>Changed Twitter Sharing Link to the current one</li>
+	</ul>
+
+	<h3 class="version-number">Version 2.3.6 Artemis (16th December 2019)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIX</strong></div>
+	<ul>
+		<li>Fixed YouTube Streams only displaying up to 50 videos</li>
+		<li>Fixed Compatability Issue with WP Rocket Image Lazy Loading</li>
+		<li>Fixed JS Bug in Backend's Pagination selections (e. g. "Max Rows Visible Mobile" corresponding input field was not showing when enabled)</li>
+		<li>Fixed an issue where embedded Vimeo videos were not playing in Chrome</li>
+		<li>Fixed Facebook stream displaying pixelated images on video posts</li>
+	</ul>
+
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURE</strong></div>
+	<ul>
+		<li>Edit Grid Button added to Gutenberg Block</li>
+		<li>Extended Gutenberg's Core Gallery Block to optionally use Essential Grid for frontend output</li>
+		<li>Added "Description" as Layer Element (for Gallery Images)</li>
+	</ul>
+
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Changed link to Facebook Access Token handling to our own FAQ</li>
+		<li>Changed UI of Essential Grid Gutenberg Block Backend</li>
+		<li>Better Information for "Hide Under" Functionality in Skin Editor to better clarify that the Item Width and Height is needed there</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 2.3.5 Artemis ( 31st October 2019)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIX</strong></div>
+	<ul>
+		<li>Fixed Instagram Connection issue for servers with 'allow_url_fopen' restriction</li>
+	</ul>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Changed Facebook API connection to Access Token for easier handling</li>
+		<li>Removed Instagram Places because it is no longer supported by the Instagram API</li>
+	</ul>
+
+	<h3 class="version-number">Version 2.3.4 Artemis ( 3rd September 2019)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Content Gallery Based Lightbox was not showing more than 1 Gallery item</li>
+		<li>Fixed a compatibility issue with Slider Revolution</li>
+		<li>Fixed Instagram connection issues for some server environments</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 2.3.3 Artemis ( 18th July 2019)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Added fix for Slider Revolution 6 compatibility</li>
+	</ul>
+
+	<h3 class="version-number">Version 2.3.2 Artemis ( 29th January 2019)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>PHP 7.2 Compatibility Fixes (Thanks to CodeCanyon User "rreintjens")</li>
+		<li>PHP 7.3 Compatibility Fix (item-skin-class.php / continue 2 in switch block)</li>
+	</ul>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Added admin option to show/hide "Filter All" button</li>
+		<li>Grid Item border-radius styles can now be percentage based</li>
+		<li>Remove Google+ from Sharing Options</li>
+	</ul>
+
+	<h3 class="version-number">Version 2.3.1 Artemis (4th December 2018)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Gutenberg Editor CSS and JS Fix for WP 5</li>
+	</ul>
+
+	<h3 class="version-number">Version 2.3 Artemis (12th November 2018)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURE</strong></div>
+	<ul>
+		<li>Added Grid Library, please activate the plugin to make use of this feature</li>
+		<li>Added Loadbalancer, to further strengthen loading times when connecting to the ThemePunch servers</li>
+		<li>Added "Blank Item" option for Custom Grids</li>
+		<li>Added Mobile Touch-Swipe for Pagination</li>
+		<li>Added search option for grid overview page</li>
+		<li>Added "Max Visible Rows" option for mobile</li>
+		<li>Added speed options for skin animations</li>
+		<li>Added new cover animations for new skins</li>
+		<li>Added blur and grayscale options for images</li>
+		<li>Added ability to animate skin cover's box-shadow</li>
+		<li>Added mix-blend-mode filter option for skin covers</li>
+		<li>Added "min-height", "max-height" & "letter-spacing" for text</li>
+		<li>Added simple Gutenberg block</li>
+	</ul>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Added admin option to show/hide "Filter All" button</li>
+		<li>Grid Item border-radius styles can now be percentage based</li>
+		<li>Remove Google+ from Sharing Options</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed Shortcode Filter visibility issue</li>
+		<li>Removed Custom Meta Box from WP Media Attachment Pages</li>
+		<li>Fixed Standalone Videos not loading issue</li>
+		<li>Fixed Lightbox "Content Gallery Based" issue when using "Load More"</li>
+		<li>Fixed YouTube "no cookie" option not saving selected choice</li>
+		<li>Skin Covers will now animate when no elements exist</li>
+	</ul>
+
+	<h3 class="version-number">Version 2.2.5 Artemis (12th July 2018)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURE</strong></div>
+	<ul>
+		<li>Added Global Option for usage YouTube NoCookie URLs</li>
+		<li>Added the ability disable the initial "start" animation</li>
+		<li>Added new "start" animation options</li>
+		<li>Added new option to animate the grid when scrolled it's into view</li>
+		<li>Added new option to convert inline filters to dropdown on mobile</li>
+		<li>Added new Convert WP Galleries functionalities</li>
+	</ul>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Implemented "restore_current_blog" for multisite processes</li>
+		<li>Reorganized custom grid item dialog for better usability</li>
+		<li>"Hide markups before load" option is now deprecated</li>
+		<li>Start and filter animation options are now separated</li>
+		<li>Improved "esskill" API cleanup</li>
+		<li>WordPress Gallery replacement now works global or for single galleries</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed "Overwrite Existing" option for imported grids</li>
+		<li>Fixed Layers missing for split items with video</li>
+		<li>Fixed issue with Cookies when multiple grids are used</li>
+		<li>Fixed custom meta not working as navigation filters</li>
+		<li>Multi-select custom meta now sanitized for navigation filters</li>
+		<li>Fixed alternative image size issue for lightbox</li>
+		<li>Fixed Yoast SEO multisite conflict</li>
+		<li>Fixed Pagination Arrows for multiple grids</li>
+		<li>Fixed "Content Push" option not working in some cases</li>
+		<li>Fixed Facebook Stream lightbox image sizing</li>
+		<li>Fixed lightbox preview</li>
+	</ul>
+
+	<h3 class="version-number">Version 2.2.4.2 Artemis (25th May 2018)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed Global Search not working in some cases</li>
+		<li>Fixed Post Custom Styles not working in some cases</li>
+	</ul>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURE</strong></div>
+	<ul>
+		<li>Added GDPR info to the WP 4.9.6 Privacy Policy Guide</li>
+	</ul>
+
+	<h3 class="version-number">Version 2.2.4.1 Artemis (20th April 2018)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Adapted to current Instagram requirements</li>
+	</ul>
+	<h3 class="version-number">Version 2.2.4 Artemis (15th March 2018)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Adapted to new Instagram API result format</li>
+		<li>Fixed loading issues when used with ajax page loading theme in printed JS</li>
+	</ul>
+	<h3 class="version-number">Version 2.2.3 Artemis (13th March 2018)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed Lightbox Post Content special character issue</li>
+		<li>Fixed "TypeError: e.container.find(...).esgbox is not a function"</li>
+	</ul>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Added ";" to  themepunch.tools.min.js file to avoid issues when chaining js files</li>
+	</ul>
+	<h3 class="version-number">Version 2.2.2 Artemis (2nd March 2018)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed Lightbox "Content Gallery" option</li>
+		<li>Fixed Grid Creation Ajax Error message upon multiple save</li>
+		<li>Fixed older PHP compatability ("Fatal Error" messages)</li>
+		<li>Fixed HTML5 Audio source compatibility for Safari</li>
+		<li>Fixed Disable Lightbox option in Global Settings</li>
+		<li>Fixed missing essgrid_get_posts filter</li>
+	</ul>
+	<h3 class="version-number">Version 2.2.1 Artemis (23th February 2018)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed Limited Custom Grid Items</li>
+	</ul>
+	<h3 class="version-number">Version 2.2 Artemis (23th February 2018)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li>Upgraded default Lightbox to FancyBox 3 which includes:<ul style="margin-top: 7px">
+			<li>Ability to display a Slider Revolution, Essential Grid, SoundCloud & iFrame</li>
+			<li>Improved Mobile Display and Mobile Usability</li>
+			<li>Deep Linking for sharing Lightbox content</li>
+			<li>Ability to zoom/pan images at their original size</li>
+			<li>New button option to allow for image downloads</li>
+			<li>New content display animations</li>
+		</ul></li>
+		<li>Upgraded Instagram Integration<ul style="margin-top: 7px">
+			<li>Added new Instagram Searches Tag(s), Location/Places</li>
+			<li>Added new Instagram Mix Search Results</li>
+			<li>Added new Instagram possibility to add multiple users, tags, places</li>
+			</ul>
+		</li>
+		<li>Added new optional Icon Fonts Font-Awesome, PE Stroke 7</li>
+		<li>Added new Source Type "NextGen" Galleries (visible when the NextGen Galleries plugin is activated)</li>
+		<li>Added new Source Type "Real Media Library" (visible when the Real Media Library plugin is activated)</li>
+		<li>Added funtionality to complete the sentence in the excerpt/content after x minumum words</li>
+		<li>Added new "Like(heart) Post" functionality for WordPress posts</li>
+		<li>Added share links for Facebook, Twitter, Google Plus and Pinterest (Skin Editor)</li>
+		<li>Added Featured Grid Meta Option to replace the Featured Image of Posts with an Essential Grid</li>
+		<li>Added Filter Deeplinking Functionality (https://page_with_essgrid_url#filter_slug)</li>
+		<li>Added "No Filter Match" Text Global Option</li>
+		<li>Added Max Posts in Preview option for large blogs</li>
+		<li>Added Button to find downloadable skins in Import/Export page</li>
+	</ul>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Media Filters can now be turned off to clean up the backend (via Global Settings)</li>
+		<li>Removed set_ess_grid_as_theme function because it causes trouble with premium plugin customers</li>
+		<li>String links in Social Stream Contents are now converted to real HTML links</li>
+		<li>Icon Font loading is now optional</li>
+		<li>FullScreen button added to embedded YouTube videos</li>
+		<li>Related Posts grids now exclude the current post</li>
+		<li>Not usable Filter/Search fields not in the frontend output (for Stream and Gallery sources)</li>
+		<li>Not usable Filter/Search fields not in the backend "Available Modules" (for Stream and Gallery sources)</li>
+		<li>Replaced depricated WooCommerce get_cart_url with wc_get_cart_url</li>
+		<li>Removed admin page redirect on new grid creation</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed ESG-VC integration issue for Amazon S3 servers</li>
+		<li>Fixed adding Custom Image Search Field focus issue</li>
+		<li>Fixed Twitter image / text issues with extended tweets</li>
+		<li>Fixed Instagram dates displaying current system date instead of photo creation date</li>
+		<li>Fixed links over layers getting broken when HTML Link was inside this layer's content</li>
+		<li>Removed create_function() calls to gain compatibility with latest PHP version</li>
+		<li>Fixed WPML conflict in Post Grids Category navigation</li>
+		<li>Fixed issue with mailto links in Meta fields</li>
+		<li>Fixed issue with "Taxonomy List" Layers</li>
+		<li>Fixed Video Media Poster fetching non-https images</li>
+		<li>Fixed Custom CSS class names for skins</li>
+		<li>Fixed some imported grids missing a default source type</li>
+		<li>Fixed WooCommerce demo grid defaults</li>
+		<li>Fixed double-lightbox issue</li>
+	</ul>
+
+	<h3 class="version-number">Version 2.1.6.2.3 Artemis (17th November 2017)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed hover animation for McKinley and Taft skins</li>
+	</ul>
+
+	<h3 class="version-number">Version 2.1.6.2.2 Artemis (17th November 2017)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed Instagram Title issue</li>
+		<li>Fixed Skin Editor Styling issue</li>
+		<li>Fixed Color Picker Styling issue</li>
+	</ul>
+	<h3 class="version-number">Version 2.1.6.2.1 Artemis (15th November 2017)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>HotFix Instagram API issue</li>
+	</ul>
+	<h3 class="version-number">Version 2.1.6.2 Artemis (10th November 2017)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li>Added new Grid Item Animation Options</li>
+		<li>Added new Pagination Autoplay Option</li>
+	</ul>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Improved Element Animation Engine</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed Instagram API issue</li>
+		<li>Fixed Add Custom Grid item CSS issue</li>
+		<li>Fixed 2.1.0 Demo Grid import issue</li>
+		<li>Fixed "Undefined class constant 'isColor'" error</li>
+		<li>Fixed Ajax append argument not working</li>
+		<li>Fixed Lightbox title not updating in some cases</li>
+		<li>Fixed Lightbox "Filter based all Pages" not working</li>
+	</ul>
+
+	<h3 class="version-number">Version 2.1.6.1 Artemis (31st July 2017)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed TagList tracing issue</li>
+		<li>Fixed Ajax video playback issue for video streams</li>
+	</ul>
+
+	<h3 class="version-number">Version 2.1.6 Artemis (31st July 2017)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li>Added image source size option for mobile devices</li>
+		<li>Added new Author Posts Page, Author Website, Author Avatar (different sizes) metas/elements for items skins</li>
+		<li>Added new Date metas/elements for items skins</li>
+		<li>Added option to show the post's Alternative Image on hover</li>
+		<li>Added ability to show the item's media and cover content side by side</li>
+		<li>Added new Taxonomies meta/element for items skins</li>
+		<li>Added new Stream "Behance"</li>
+		<li>Added new "Post Content" lightbox option</li>
+		<li>Added new admin color-picker with support for background gradients</li>
+	</ul>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>3rd party shortcodes now possible inside Custom Meta</li>
+		<li>Added additional sanitation for manually written links</li>
+		<li>Added new skin options to make showing content without a hover easier</li>
+		<li>Leaving the "Filer All Text" blank will just auto-hide the button</li>
+		<li>Improved responsiveness for default lightbox</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed Nav Search Shortcode not outputting</li>
+		<li>Fixed Wistia not loading in Lightbox</li>
+		<li>Fixed cover not disappearing when using SoundCloud</li>
+		<li>Fixed image src "undefined" issue when no featured image is set</li>
+		<li>Fixed Load More for Grids build by WP Gallery</li>
+		<li>Fixed Ajax Callback not working in some cases</li>
+	</ul>
+
+	<h3 class="version-number">Version 2.1.5.1 Artemis (3nd July 2017)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Removed transparent image fallback for Masonry grid-types without an image set</li>
+		<li>Fixed issue where Featured Images would not load in some cases</li>
+		<li>Fixed issue where Preview Grids would not load in some cases</li>
+		<li>Replaced depricated add_to_cart_fragments filter with woocommerce_add_to_cart_fragments (WooCommerce 3)</li>
+	</ul>
+
+	<h3 class="version-number">Version 2.1.5 Artemis (26th June 2017)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li>Added basic WooCommerce 3.x compatibility</li>
+		<li>Added ability to set default image globally</li>
+		<li>Handling for Facebook Posts without media installed</li>
+		<li>Added ability to limit a CatList/TagList</li>
+	</ul>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Video Default Posters are only shown if Media Source contains the corresponding video source</li>
+		<li>Changed Lightbox Default Width and Height to a more appropiate size (960 x 540px)</li>
+		<li>Updated to Vimeo API version 2.1.0</li>
+		<li>Default Images now extended to the lightbox</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed Custom Grid Download Links</li>
+		<li>Fixed Edit Custom Element Modal Window did not close "Please wait" overlay</li>
+		<li>Fixed Sharing Link targets were always visible in Skin Editor</li>
+		<li>Fixed Link target can’t be set to any other option (see Fix above)</li>
+		<li>Fixed Skin Editor Layer "Save as template" does not clear "Please wait" overlay</li>
+		<li>Fixed Vimeo video issues where previous API was failing in some cases</li>
+		<li>Fixed compatibility issue with Slider Revolution's "Defer JS Loading" option</li>
+		<li>Fixed Search Shortcode Output</li>
+		<li>Fixed "Facebook reports: An access token is required to request this resource"</li>
+		<li>Fixed issue where search would not work without default filters</li>
+		<li>Fixed Item Skin Editor error when no PunchFonts existed</li>
+		<li>Fixed lightbox autoplay not working</li>
+		<li>Fixed navigation elements drag/drop quirks</li>
+		<li>Fixed HTML5 Video lightbox controls not visible</li>
+		<li>Fixed adding additional "Available Filters" throws errors in some cases</li>
+		<li>Fixed "Add To Cart" Button live updating "WooCommerce Menu Cart" item</li>
+		<li>Fixed YouTube Playlist selection resetting in backend</li>
+		<li>Fixed First Content Image lightbox option not working</li>
+		<li>Fixed admin filter options not always updating</li>
+		<li>Fixed Ajax prepend/append content not always saving inside grid editor</li>
+	</ul>
+
+	<h3 class="version-number">Version 2.1.0.2 Artemis (12th August 2016)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li>Added "Caption" as Layer Element (for Gallery Images)</li>
+	</ul>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Import process changed to make it compatible with PHP 5.2</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed Facebook album output</li>
+		<li>Fixed Twitter Link output</li>
+		<li>Fixed WooCommerce Ajax "Add to Cart" button</li>
+		<li>Fixed WooCommerce Price not accounting for decimals when items are sorted</li>
+		<li>Fixed WP Gallery Global feature grid not being recognised</li>
+		<li>Fixed WP Gallery Element Post Link to Detail Image Page</li>
+		<li>Fixed Wistia video not opening up in lightbox</li>
+		<li>Fixed Skin Editor's Source Meta Choice List</li>
+	</ul>
+
+	<h3 class="version-number">Version 2.1.0.1 Artemis (14th July 2016)</h3>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Updated help button to link to http://essential.themepunch.com/documentation</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed filter shortcode not showing filters</li>
+		<li>Fixed google font backend issue, which could create an JavaScript error</li>
+		<li>Fixed a bug where new Grids would not show the preview until they were saved one time and reloaded</li>
+		<li>Fixed Custom Grid's Load More if an order other than default order is selected</li>
+		<li>Fixed Grids not showing up if added through Widgets</li>
+		<li>Fixed "T_STRING in ..../RestApi.php on line 8" bug</li>
+	</ul>
+
+	<h3 class="version-number">Version 2.1.0 Artemis (8th July 2016)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li><b>Added new Source Type "Streams" (fetch YouTube, Vimeo, Instagram, flickr, Twitter, Facebook content)</b></li>
+		<li>Added new Item Skins for Social Streams</li>
+		<li>Added new Demo Grids for Social Streams, can be imported in the import/export page</li>
+		<li><b>Improved Grid Drawing processes to get smoother and quicker results</b></li>
+		<li>Added option to display standard WordPress Galleries as Essential Grids</li>
+		<li>Added support for recommended "Post Types Order" Plugin</li>
+		<li><b>Added support for only selecting a Post Type without Category or Tag</b></li>
+		<li>Added Option to add Filter that are not selected as an taxonomy</li>
+		<li>Added filters and actions in the whole plugin</li>
+		<li>Added option to turn on/off the Essential Grid Example Posttype</li>
+		<li>Added sorting by title, date and more for Custom Grids</li>
+		<li>Added YouTube/Vimeo/HTML5 Default Poster Options in Poster Orders Tab</li>
+		<li>Added option for Lazy Load, to show blurred thumbnails before loading the actual image</li>
+		<li>Added option for infinite scroll, to remove the "Load More" button</li>
+		<li>Added option to show/hide element only if LightBox is loading a Video</li>
+		<li>Added option to add Image Ratio also to Masonry Grids</li>
+		<li>Added Media Filter for Images in Grid Settings</li>
+		<li>Added Align Vertical and Horizontal options for Grid Elements</li>
+		<li>Added Image Draw Options like Cover and Contain Mode, and Repeat, Repeat-x, Repeat-Y and No-Repeat Mode for Grid Elements</li>
+		<li>Added new option to set Minimum Height of Masonry Content containers per Grid</li>
+		<li>Added option to choose background-fit for Skins and for each Item</li>
+		<li>Added option to choose background-position for Skins and for each Item</li>
+		<li>Added option to choose background-repeat for Skins and for each Item</li>
+		<li>Improved Lazy Load Speed and Processes</li>
+		<li>Added Width, Height, MinWidth, MinHeight, MaxWidth and MaxHeight options for Lightbox Elements</li>
+		<li>Lightbox AutoPlay, AutoPlaySpeed and Preload Image Amount options added</li>
+		<li>Added support for all common qTranslate plugins</li>
+		<li>Added option to change the Custom Post Type name/handle through filters</li>
+		<li>Added confirm message in Item Skin Editor if an element is deleted</li>
+	</ul>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>General overhaul of the Documentations at http://essential.themepunch.com/documentation</li>
+		<li>Opening the LightBox will no longer set the scrollposition to 0. This can be changed again through a new option in the LightBox tab.</li>
+		<li>Enabled Link Meta and all type of metas from Ess. Grid to be used with the filters.</li>
+		<li><b>Reduced database queries up to 80%</b></li>
+		<li>Renamed Essential Grid Example Post Type from "Ess. Grid Posts" to "Ess. Grid Example Posts" (Slug remains the same so no posts are lost)</li>
+		<li>Backend Ajax Request Visualisation</li>
+		<li>Moved Media Poster Settings next to Media Source for Better Understanding</li>
+		<li><b>Moved Global Settings to an own SubMenu</b></li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Highly improved loading speed for big amounts of elements in Grid</li>
+		<li>Added a few fixes which will prevent the plugin from beeing broken if invalid HTML markup is added to Item Skins</li>
+		<li>Fixed a bug where the search may not work in Custom Based Grids</li>
+		<li>Fixed a bug where WPML could not translate the widget title</li>
+		<li>Lightbox will now work properly if global caching is enabled</li>
+		<li>Fixed a bug where the AND relation for posts may not work properly</li>
+		<li>Fixed WooCommerce Add To Cart bug</li>
+		<li>Fixed a bug in ShortCode Generator where in a Custom Grid, it did not work properly if you select an existing Grid for predefined settings</li>
+		<li>Changed database creation to fix most of the "Empty Ajax Response" issues</li>
+		<li>Fixed advanced filter issues</li>
+		<li>Removed tags that were shown using the Cat. List element</li>
+		<li>Fixed an UTF8 bug fetching the excerpt</li>
+		<li>Fixed import issues with Navigation Skin and Global Styles</li>
+		<li>Fixed JavaScript error occuring in WordPress comment edit page</li>
+		<li>Fixed bug in Custom Grids not beeing able to set Cover Meta link</li>
+		<li>Fixed cyrillic characters not working with filters</li>
+		<li>Fixed Lightbox Gallery Filter Based on Current page and Filter Based on All Pages issue, where Gallery Mode without adding Filters was not working well.</li>
+		<li>Fixed DropDown zIndex issues where Dropdown buttons was overlapping each other</li>
+		<li>Fixed DropDown Click Event handling on Mobile Devices</li>
+		<li>Fixed Media Zoom Effect Bug where Media disappears after Mouse Leave Event</li>
+		<li>Fixed offset not working if used in "Additional Parameters"</li>
+		<li>Fixed a bug where the custom class was missing the Post ID for custom CSS rules</li>
+		<li>Fixed a bug where removing the image in Custom Grids was not possible</li>
+		<li>Fixed a bug where multiple Quick Grids would not show up</li>
+		<li>Fixed a bug with loading ajax content in combination with Visual Composer</li>
+		<li>Removed title attributes from Backend Input fields to prevent conflicts with other plugins</li>
+		<li>Fixed WooCommerce bug introduced in latest WooCommerce version</li>
+		<li>Infinity Scroll issue fixed after swapping between Filters</li>
+		<li>Fixed Bug where Videos disappeared after Sorting the sinle Items in Grid</li>
+		<li>Essential Grid in Ajax Container fails to navigate between Contents due a Sector Failure has been fixed</li>
+		<li>Fixed Bugs in Video API where Videos were not stopping / playing based on user Interactions</li>
+		<li>Fixed disappearing Video Contents during Playback and Filter callbacks</li>
+		<li>Fixed Gallery, Content, Product based Detail Lightbox</li>
+		<li>Fixed HTML5 videos for lightbox</li>
+		<li>Fixed HTMl5 Video Sizing Issues in LightBox</li>
+		<li>Fixed Cobbles Jumping Effect on Filter change</li>
+		<li>Fixed Gallery Height issues on Filter Change by Cobbles and Masonry Elements</li>
+		<li>Fixed issue with showing similiar elements Multipe times in Lightbox</li>
+		<li>Fixed Thumbnail Size Issues in Lightbox</li>
+		<li>Fixed FullScreen Slide Out Skin issues</li>
+		<li>Fixed missing thumbnails in Lightbox for HTML5 videos</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 2.0.9.1 Artemis (18th August 2015)</h3>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Sandboxed the Swipe Engine to protect conflicts between other Plugins with Swipe Functions</li>
+	</ul>
+
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed WP 4.3 jQuery Conflicts</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 2.0.9 Artemis (28th April 2015)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li>Added compatibility with WordPress version 4.2 regarding split terms changes</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed a very low risk vulnerability to stay on par with security standards: More info on the envato blog: http://marketblog.envato.com/news/wordpress-item-security-vulnerability/</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 2.0.8 Artemis (28th February 2015)</h3>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed a bug occuring in 2.0.7 where meta data could not be retrieved correctly</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 2.0.7 Artemis (27th February 2015)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li>Cookie system added for Pagination, Search and Filters (all optional).  Cookie expiration time can be set, and visitors within the defined timeframe will see the grid exactly as they left it when the cookie system is enabled.</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed a bug with FireFox 35 where rendering problems could occur on some computers</li>
+		<li>Fixed a bug where tinyMCE could break on some rare circumstances</li>
+		<li>Fixed a bug a syntax error could appear</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 2.0.6 Artemis (19th February 2015)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li>New Pagination option in Grid Settings to change pagination output from e.g.: 1 2 ... 6 to 1 2 3 4 5 6</li>
+		<li>Integrated Wistia videos to Ess. Grid</li>
+		<li>Enabled external "Navigation Positions through ShortCode" panel for Custom Grids</li>
+	</ul>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Adding single/bulk images in Custom Grids will now pull directly title/excerpt (title and description) from images</li>
+		<li>Sorting in Grid Overview will now be saved</li>
+		<li>Triggered routine to add last_modified column to the Grid table one more time</li>
+		<li>Added further caching checks to delete cache if a post is changing its status from scheduled to published</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed a bug where updating could remove images from Custom Grids</li>
+		<li>Fixed a bug where Cyrillic characters could break in Custom Grids</li>
+		<li>Fixed global search bug where clode icon would not be visible</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 2.0.5 Artemis (22th January 2015)</h3>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Changed a few parts of the Grid Settings for better user handling</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Compatibility fix for Visual Composer v4.4+</li>
+	</ul>
+
+	<h3 class="version-number">Version 2.0.4 Artemis (16th January 2015)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li>Added option to choose between hover/click for Filter Dropdowns</li>
+		<li>Added option to set start height for Grid to prevent jumping of Site.
+			<ul>
+				<li>Can be found in Grid Settings under Settings Mode by setting it to Advanced</li>
+			</ul>
+		</li>
+		<li>Added option to disable Ess. Grid LightBox in Global Settings</li>
+	</ul>
+
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed filter count not showing if enabled</li>
+		<li>Fixed click event on AJAX navigtion</li>
+		<li>Fixed click event on the Media and Cover links</li>
+		<li>Fixed blurry flip out animations</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 2.0.3 Artemis (13th January 2015)</h3>
+
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed cobbles issue occuring in 2.0.2</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 2.0.2 Artemis (10th January 2015)</h3>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Changed sanitization on JavaScript side to allow _ and - to be able to select a wider variation of metas for example</li>
+	</ul>
+
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed issues with the import process</li>
+		<li>Fixed problem with custom grids disappearing in preview mode</li>
+		<li>Fixed a bug with Quick Grids not showing properly in some cases</li>
+		<li>Fixed a bug with the search elements that occur one some installations</li>
+		<li>Fixed a bug where LightBox may not show all images from Content Based and Content Based Gallery setting</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 2.0.1 Artemis (24th December 2014)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li>Added newsletter subscribtion box to get latest informations from ThemePunch</li>
+		<li>Added option to set start filtering. Grids will only show elements of selected filter at the initial loading</li>
+		<li>Added filter essgrid_query_caching to disable caching fully (set return value to false)</li>
+		<li>Added support for <a href="http://codecanyon.net/item/social-gallery-wordpress-photo-viewer-plugin/2665332" target="_blank">Social Gallery WordPress Photo Viewer Plugin</a> (Min. required Version: 4.0). Can be enabled in the Global Settings of Essential Grid</li>
+	</ul>
+
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Added transparency number format fix where the transparency could have a value like 0,5 instead of 0.5</li>
+		<li>Fixed a bug where the inline search would not work correctly</li>
+		<li>Fixed a bug where custom meta images could not be modified in the Grid Preview correctly</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 2.0 Artemis (12th December 2014)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li>Added option to set an specific Item Skin for each item in the Grid</li>
+		<li>Added new Search Functionality
+			<ul>
+				<li>Global Search is now available, can be set on either any element by classes/ids or by adding elements with ShortCodes</li>
+				<li>New Navigation Element called Search, which allows to search withing the Grid Elements</li>
+			</ul>
+		</li>
+		<li>Added new Blank HTML element in Item Skin Editor. Paste HTML in here that will not be styles by Essential Grid</li>
+		<li>Item Skin Editor has now the option to choose wether to use styling on a text/HTML element or not</li>
+		<li>Added support for <a href="http://codecanyon.net/item/jackbox-responsive-lightbox-wordpress-plugin/3357551" target="_blank">JackBox - Responsive Lightbox - WordPress Plugin</a> (Min. required Version: 2.2). Can be enabled in the Global Settings of Essential Grid</li>
+		<li>Added option to remove styling from text/HTML layers through the Item Skin Editor</li>
+		<li>Added menu order for the start sorting</li>
+		<li>Added post_url to available meta in Item Skin Editor</li>
+		<li>Ajax can now also be selected in Layout Composition at Link/SEO</li>
+		<li>Last Modified Date added to Grids</li>
+		<li>Grids can now be set as favorite for a better user experience</li>
+		<li>Grids can now be sorted by Last Modified Date and by favorites</li>
+	</ul>
+
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Adding now http:// or https:// to URL's if Link To URL is choosen and http/https is missing</li>
+		<li>Changed filter essgrid_get_posts and added the current post ID as second argument</li>
+		<li>Improved overall speed</li>
+		<li>Order By None will now properly order by the given Post order</li>
+		<li>Added slug of Category/Tag in Grid Settings to the list since a different Category/Tag can have the same Name but not the same slug</li>
+	</ul>
+
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Added fallback to images that can not get cropped. Original image will then be shown</li>
+		<li>Fixed Tag List, now working correctly with "On Click" setting in Item Skin Editor</li>
+		<li>Ajax Content Pre and Post Container now encodes HTML correctly</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 1.5.4 (21th November 2014)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li>Added cobbles pattern option</li>
+		<li>Added option to add additional images to the lightbox: WooCommerce Gallery, Content Images and Content Gallery Images</li>
+		<li>Added option to change between WP_Query() and get_posts() in Global Settings</li>
+	</ul>
+
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Changed table structure of the grids table for custom grid improvements</li>
+		<li>Updated PunchFonts to version 1.0.1 and added ability to use useso.com for google related fonts through filter</li>
+	</ul>
+
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Filter dropdown & list can not be correctly mixed</li>
+		<li>Fixed a bug where pages where not correctly shown in grids</li>
+		<li>Fixed a bug which may not transfer Custom Skin Rules to the items</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 1.5.3 (14th November 2014)</h3>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Speeded up site loading</li>
+		<li>Order By and Order Direction will now be also working using the posts="" attribute in Essential Grid shortcodes</li>
+	</ul>
+
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed Hide Markup on Load bug</li>
+		<li>Fixed Lazy Loading bug when Videos were added in Grid</li>
+		<li>Fixed Filtering issues on Frontend</li>
+		<li>Fixed first Animation on elements</li>
+		<li>Fixed Grid Initialisation with Video Items in Grid</li>
+		<li>Fixed a bug with multiselect not beeing saved correct</li>
+		<li>Fixed a bug where pages may not be found correctly</li>
+		<li>Fixed a bug where number comments for example would not be shown if they were 0</li>
+		<li>Fixed a bug where in custom grids the lightbox image would not be original size</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 1.5.2 (30th October 2014)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li>Added option for multiple filtering, to set the relation to OR or AND</li>
+		<li>Added new button in preview to directly go to post/page edit</li>
+		<li>Added Close Button and Navigation Button for AJAX Loaded Content</li>
+	</ul>
+
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed badly positioned Even Images in Grid if Lazy Loading was enabled</li>
+		<li>Fixed AJAX Scroll Issues</li>
+		<li>Fixed AJAX Close Button</li>
+		<li>Fixed AJAX Content Height Animation issues</li>
+		<li>Removed double link if link is set on cover</li>
+		<li>Added new action to delete cache if needed after a post gets created through mobile devices</li>
+		<li>Fixed a bug where the shortcode gets inserted two times automatically through the Quick Grid Creator</li>
+		<li>Fixed a bug with Visual Composer that the alias is not written</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 1.5.1 (17th October 2014)</h3>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Replaced demo images with different placeholders to reduce plugin size from ~2MB to less than 1MB</li>
+		<li>Activating the plugin a second time will now no longer add default fonts again</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed a bug in Custom Grids where filter would only show the text list / dropdown</li>
+		<li>Fixed a bug where Custom Grids that are random sorted will not properly work with Load More set to Infinity Load</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 1.5.0 (15th October 2014)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li>Added Ajax Content Loading on user interaction
+			<ul>
+				<li>Avaliable Contents to load: Post Content, Vimeo, YouTube, HTML5, SoundCLoud, Images like Featured, Alternate and First Content</li>
+				<li>In combination with the latest Slider Revolution version, a Slider can also be loaded through ajax (Slider Revolution version 4.6.1 or newer)</li>
+				<li>The container that receives the content can be set to bottom, top or also be inserted as an ShortCode anywhere on the page.</li>
+				<li>An Ajax Callback can be set on the ajax request</li>
+				<li>A JavaScript file can be loaded on the ajax request</li>
+				<li>A CSS file can be loaded on the ajax request</li>
+				<li>Custom CSS can be inserted for the Ajax Container</li>
+				<li>Pre and Post content can be set as a wrapper to the container (HTML possible)</li>
+			</ul>
+		</li>
+		<li>Navigation Layout improvements for Post Grids:
+			<ul>
+				<li>Unlimited Filter panels can now be added</li>
+				<li>Filters can now also have meta values set. Available Metas can be selected from the List</li>
+				<li>All Layout elements can also be dragged into the external tab. This will enable the usage of ShortCodes for the element to set it anywhere on the page</li>
+			</ul>
+		</li>
+		<li>New option to create Meta References.
+			<ul>
+				<li>This is used to reference to an existing meta key outside of Ess. Grid</li>
+				<li>This is only needed to be able to sort Grids by some custom meta value</li>
+				<li>For sorting reasons, the Ess. Grid metas now have the option to be alphabetic or numeric (This is just for the sorting - alphabetic will sort: 1, 10, 12, 2 - numeric will sort: 1, 2, 10, 12)</li>
+			</ul>
+		</li>
+		<li>Advanced and Simple Rules Editor Added in Item Skin Editor for ELement Visibility
+			<ul>
+				<li>Build complex show/hide rules for Layers in a easy to use editor</li>
+				<li>Hide/Show Layers depending on Meta Setting available through the Advanced Rules editor</li>
+				<li>Hide under Height option in Item Skin Editor added for Layers</li>
+				<li>Hide under Height/Width option to select to either use display or visibility</li>
+			</ul>
+		</li>
+		<li>Option to change the Load More text added</li>
+		<li>Option to show/hide the number of items that can be loaded at Load More</li>
+		<li>Option to scroll to top, if pagination has been clicked, added</li>
+		<li>Right To Left (RTL) option now available in Grid Settings</li>
+		<li>Sorting By Meta values added</li>
+		<li>Advanced Shortcode Creator now also available through Visual Composer</li>
+		<li>Added "Edit Active Skin" button into Grid Overview for faster editing of Item Skins</li>
+		<li>Improved item limits in Custom Grids with additional warnings and other tweaks</li>
+	</ul>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Added "always visible" as option to Layers animation for further clarifications how to set up that an Layer will always be visible</li>
+		<li>Further adjustments for multisite installations</li>
+		<li>Updated english .mo/.po language files</li>
+		<li>Changed "No More Item for Selected Filter" to "No More Items for the Selected Filter"</li>
+		<li>Forcing now color picker styles to be loaded by the plugin on WordPress post/page editor</li>
+		<li>Removed the class additions for "a" tags if the source of the element is Text/HTML</li>
+		<li>jQuery UI 1.11.1 will be used for Skin end Grid Editor to avoid Drag and Drop failures</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>iOS8 blurry images and content fix added</li>
+		<li>Fixed a bug where the Link to Javascript setting did not print anything</li>
+		<li>Fixed a bug with WPML and Custom Post Types where categories will not be listed correctly</li>
+		<li>Fixed a bug where custom shortcodes may brake if alias and related/latest/popular is choosen</li>
+		<li>Fixed a bug where custom grids could not be saved if the choosen skin had no elements inside of it</li>
+		<li>Fixed a bug with WPML and the integrated caching</li>
+		<li>Fixed a bug with random sorting and the integrated caching</li>
+		<li>Fixed a bug where cobbles sizing may be lost for a post if it is used in more than one grid</li>
+		<li>Fixed a bug where Grid import may not work correctly</li>
+		<li>Fixed a bug where categories from custom post type would not be linked correctly</li>
+		<li>Fixed a bug where the loader/spinner was behind the container if it has an own color (on iPhone i.e.)</li>
+		<li>WPML in combination with cache now working properly</li>
+		<li>Further cache improvements at Post publishing</li>
+		<li>MultiSite compatiblitly improved on many ways</li>
+		<li>Video without Image Cover can now be edited properly in the Preview Grid</li>
+		<li>Order by Random now working properly in combination with caching</li>
+		<li>Import/Export quick selection of all, fixed for custom meta and fonts</li>
+		<li>Visual Composer compatibility fix for Frondend Editor</li>
+		<li>Drafts/Unpublished Posts are now excluded from the output</li>
+		<li>Masonry hover content can now be set to push the content to not fall under the footer and be invisible for example</li>
+		<li>Fixed Rotate Scale animations</li>
+		<li>RotateScale animation fixed</li>
+		<li>On import the date will now only be added to the imports if append is chosen and the element exists</li>
+		<li>Links on Cover not covering the whole Item fixed</li>
+		<li>Video Playback only shows a black box fixed for iOS 7.1</li>
+		<li>Fixed a bug where the full cover was not written if there were no elements added to the center dropzone of the Item Skin</li>
+		<li>JavaScript error opt.silence not defined fixed in the backend</li>
+		<li>Change load_plugin_textdomain() to point to the correct folder</li>
+		<li>Custom Grids can now be saved while using an Item Skin that has no content elements in it</li>
+		<li>Custom Grids can now use filter as dropdown</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 1.2.0 (25th August 2014)</h3>
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li>Added an Advanced Shortcode Creator inside of posts.
+			<ul>
+				<li>Create only with a few quick ready to use grids out of your post, page</li>
+				<li>Create grid based on popular posts, recent posts, related posts within 3 clicks</li>
+			</ul>
+		</li>
+		<li>Added the possibility to create Grids based on Search results</li>
+		<li>Added option to give each grid a unique ID through the Grid Settings</li>
+		<li>Added option to create grid based on gallery shortcode like: [ess_grid alias="your-alias"][gallery ids="1,2,3,4,5,6"][/ess_grid]</li>
+		<li>Improved Speed</li>
+		<li>Added cache system to improve overall speed. Can be enabled through the Global Settings</li>
+		<li>Added Query Caching, which will aute Cache Queries and recreate them if Posts, Grids or any other part of the Grid has been changed.</li>
+		<li>Added filter essgrid_set_cpt to disable Custom Post Type Ess. Grid Posts</li>
+		<li>New Media Sources: First Content Vimeo, YouTube, HTML5 and Soundcloud</li>
+		<li>Added option to choose default image if the post meets no criteria for a cover image</li>
+	</ul>
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Changed the code so that random sorting does work with Custom Grids</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed an issue that made some backends slowing down</li>
+		<li>Fixed an hover css issue where only the the css of the last element got written to document</li>
+		<li>Fixed a bug where Filter would not be shown correctly in certain settings</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 1.1.1 (26th July 2014)</h3>
+
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li>Updated Animation Engine</li>
+		<li>Added new Layer and Media Animation like Zoom To Slide, Short Slides, Scale left/right, Zoom To Default etc.</li>
+	</ul>
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed Hover Animation Issues</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 1.1.0 (5th July 2014)</h3>
+
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li>Added Drop Down Layout for filtering of categories and tags to frontend</li>
+		<li>Sort with Drag&Drop the order of filters</li>
+		<li>Show / Hide filters one by one.</li>
+		<li>Categories and subcategories can be selected in mixed mode also</li>
+		<li>HTML5 audio can now be added like HTML5 videos. The mp4 field will now be shared with audio</li>
+		<li>Spinner can now be disabled for each Grid</li>
+		<li>Option in Grid Settings added to load only a certain amount of entries</li>
+		<li>Option in Global Settings added to insert all JavaScript into the footer</li>
+		<li>Option in Global Settings added to choose wether or not hammer.js should be loaded</li>
+		<li>New developer option to disable the hammer.js on installation</li>
+		<li>New developer option to disable all notifications and the activation area. More information at <a href="http://www.themepunch.com/home/plugins/set-essential-grid-as-theme/" target="_blank">http://www.themepunch.com/home/plugins/set-essential-grid-as-theme/</a></li>
+	</ul>
+
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Added Tabs in Metas for better usability in Posts and Pages</li>
+		<li>Added pagination for the Grids Overview page</li>
+		<li>Added alt tag in images, using the alt text from wordpress image settings</li>
+		<li>Removed placeholder in "Purchase code" to prevent confusions</li>
+		<li>Renamed Aq_Resize script for preventing conflicts with other themes/plugins that modified the script</li>
+		<li>Updated GreenSock Engine to 12.1 </li>
+		<li>Protected Mode for GreenSock for ThemePunch Plugins added. No more conflict between any other plugins / themes and ThemePunch Tools</li>
+		<li>Lag Smoothing Enabled</li>
+	</ul>
+
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Available Layers inserting into an Item Skin now checks correctly the hover checkbox if it was set on the Layer.</li>
+		<li>Fixed a bug where the combination of Post &amp; Pages did not work correctly.</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 1.0.8 (12th June 2014)</h3>
+
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Code Snippet change for VC Tabs</li>
+		<li>Punch Fonts compatibility with Slider Revolution</li>
+	</ul>
+
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fix for: show tag list.</li>
+		<li>Fix for: Custom Meta in Custom Grid not working properly.</li>
+		<li>Fix for: Custom Meta images not selectable/removeable.</li>
+		<li>Fix for: Custom Grid sometimes showing no elements in FrontEnd.</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 1.0.7 (21th May 2014)</h3>
+
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li>Added new tab to Grid Settings called API/JavaScript for custom JavaScript and API functionality</li>
+		<li>Added new metas to use inside of meta field for posts</li>
+		<li>Post ID can now be retrieved in Skins through Item Skin Editor</li>
+		<li>Added Link Target in Item Skin Editor for Layer Settings and Layout Composition under Link/SEO tab</li>
+	</ul>
+
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Added check if hammer.js is already included</li>
+		<li>Updated the included documentation</li>
+	</ul>
+
+
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fix for LightBox gallery not working if Filters are not present in the navigation</li>
+		<li>Fix for widgets not working</li>
+		<li>Fix for WPML in combination with Pages</li>
+		<li>Fix for filter not working in some languages</li>
+		<li>Fix for Custom Grid - Custom Metas not working properly</li>
+		<li>Fix for Custom Grid were accent characters could be broken in frontend</li>
+		<li>Fix for Custom Grid were Grid will not be shown on frontend</li>
+		<li>Post excerpt will now be stripped of all tags again (was in wrong 1.0.5 again)</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 1.0.5 (2nd May 2014)</h3>
+
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Added possibility to use an array syntax in the additional parameters that were introduced in 1.0.4</li>
+	</ul>
+
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fix for the output of the category list of custom taxonomies</li>
+		<li>Fix for Custom Grids lightbox</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 1.0.4 (29th April 2014)</h3>
+
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li>Added possibility to insert additional parameters to wp_query through the Grid Settings under Source</li>
+	</ul>
+
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Post excerpt will now be stripped of all tags</li>
+	</ul>
+
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Custom Grid fix where elements got duplicated by clicking on Refresh Preview</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 1.0.3 (28th April 2014)</h3>
+
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li>Added new Link/SEO tab in Item Skin Editor under Layout Composition: Set links on the whole media or cover area!</li>
+	</ul>
+
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>LightBox will now always show the original image, even if thumbnail sizes are choosen as source under "set image source type"</li>
+		<li>Custom Metas are correctly replaced now with values set in posts</li>
+		<li>Cobbles will now show the right ratios in frontend</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 1.0.2 (25th April 2014)</h3>
+
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>"Set Image Source Type" now lists also custom created image thumbnail sizes</li>
+	</ul>
+
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Drag & Drop fix in Item Skin Editor for Elements with force !important</li>
+		<li>Font Family Fix with missing stripslashes, resulting in Font Family like \"Open Sans\"</li>
+		<li>Element order fix in Item Skin Editor if more than ten Elements existed in the same dropzone</li>
+		<li>Shadow not saving correctly in Item Skin Editor fixed</li>
+		<li>Fix for some installations where the WordPress Media Libary could not be opened within our plugin</li>
+		<li>Small adjustment in grids on Custom Grid selected with Custom Metas where the grid could break</li>
+		<li>Small adjustment in Grid Create Editor that categories are not empty on first visit</li>
+		<li>Updated link to online documentation</li>
+	</ul>
+
+
+	<h3 class="version-number">Version 1.0.1 (23th April 2014)</h3>
+
+	<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+	<ul>
+		<li>Added settings in cobbles for Posts/Entries to be up to three entries in width and height</li>
+		<li>Added multiple selection of images in custom grid</li>
+	</ul>
+
+	<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+	<ul>
+		<li>Grid preview will now be refreshed in Custom Grid after changing settings of an Entry</li>
+	</ul>
+
+	<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+	<ul>
+		<li>Fixed a behavior where creating a new grid may break the preview</li>
+	</ul>
+
+	<h3 class="version-number">Version 1.0.0 (22th April 2014)</h3>
+
+
+</div>

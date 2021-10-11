@@ -1,0 +1,64 @@
+/* Social Icons - styles moved into trx_addons.front to share them with theme */
+.sc_socials {
+	position: relative;	
+	padding-top: 0.0001px;
+}
+.socials_wrap {
+	display:block;
+	vertical-align:middle;
+	white-space:nowrap;
+	margin:-8px -8px 0 0;
+}
+.socials_wrap .social_item {
+	display: inline-block;
+	line-height:inherit;
+	vertical-align: top;
+	text-align: center;
+	margin: 8px 8px 0 0;
+}
+.socials_wrap .social_item:last-child {
+	margin-right:  0 !important;
+}
+.socials_wrap .social_item_style_bg {
+	overflow:hidden;
+}
+.socials_wrap .social_item .social_icon {
+	position:relative;
+	display: block;
+	background-size:100%;
+	background-position:top center;
+	overflow: hidden;
+	@include square(3em);
+	@include border-round;
+}
+.socials_wrap .social_item .social_icon,
+.socials_wrap .social_item .social_name {
+	@include transition-colors;
+}
+.socials_wrap .social_item_type_icons_names .social_icon {
+	margin: 0 auto;
+}
+
+// Prevent damage font via other plugins (TourMaster, etc.)
+.socials_wrap .social_item .social_name {
+	font-family: inherit;
+}
+.socials_wrap .social_item .social_name:before {
+	display: none;
+}
+
+.socials_wrap .social_item .social_icon + .social_name {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 0.5em;
+}
+.socials_wrap .social_item .social_icon .social_hover {
+	@include abs-cover;
+	opacity: 0;
+	background-size:100%;
+	background-position:bottom center;
+	@include transition-property(opacity);
+}
+.socials_wrap .social_item .social_icon:hover .social_hover {
+	opacity: 1;
+}

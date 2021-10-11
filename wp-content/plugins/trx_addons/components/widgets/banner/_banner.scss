@@ -1,0 +1,12 @@
+/* Widget: Banner */
+.widget_banner .image_wrap {
+	overflow:hidden;
+	display:block;
+	margin-bottom:1em;
+}
+.widget_banner .image_wrap img {
+	@include box(100%, auto);
+}
+.widget_banner.widget_fullwidth .image_wrap {
+	margin-bottom:0;
+}

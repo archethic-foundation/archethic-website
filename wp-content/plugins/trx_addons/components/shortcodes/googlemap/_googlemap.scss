@@ -1,0 +1,49 @@
+.sc_googlemap_wrap {
+	position:relative;
+}
+.sc_googlemap {
+	position: relative;	
+	padding-top: 0.0001px;
+}
+.sc_googlemap img {
+	max-width: none;
+}
+
+.sc_googlemap_prevent_scroll {
+	pointer-events: none;
+}
+
+.sc_googlemap_title + .sc_googlemap,
+.sc_googlemap_title + .sc_googlemap_content_wrap,
+.sc_googlemap_subtitle + .sc_googlemap,
+.sc_googlemap_subtitle + .sc_googlemap_content_wrap {
+	margin-top: 4.2em;
+}
+.sc_googlemap_descr + .sc_googlemap {
+	margin-top: 1em;
+}
+.sc_googlemap_content_wrap {
+	position:relative;
+}
+.sc_googlemap_content_default {
+	@include abs-pos(10%, 10%, 10%, auto);
+	width: 30%;
+	padding:1.5em;
+	overflow:auto;
+	@include border-box;
+}
+
+.sc_googlemap_content_detailed {
+	position:relative;
+	padding: 2em 2em 2em 5em;
+	@include border-box;
+}
+.sc_googlemap_content_detailed:before {
+	content: '\e8bb';
+	font-family: $trx_addons_icons;
+	@include font(2em, 1.3em);
+	@include abs-lt(1em, 1em, '');
+}
+.sc_googlemap_content_detailed p {
+	margin-bottom:1em;
+}

@@ -1,0 +1,12 @@
+@mixin categories_list--md() {
+    /* Widget: Categories List (Style 2) */
+	.widget_categories_list .categories_list_style_2 .categories_list_title {
+		width: 60%;
+	}
+}
+@mixin categories_list--sm() {
+    /* Widget: Categories List (Style 2) */
+	.widget_categories_list .categories_list_style_2 .categories_list_title {
+		width: 50%;
+	}
+}

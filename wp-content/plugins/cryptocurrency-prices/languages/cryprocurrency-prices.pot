@@ -1,0 +1,109 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cryptocurrency All-in-One\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Boyan Yankov\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Select interval"
+msgstr ""
+
+msgid "1 hour"
+msgstr ""
+
+msgid "24 hours"
+msgstr ""
+
+msgid "30 days"
+msgstr ""
+
+msgid "1 year"
+msgstr ""
+
+msgid "price"
+msgstr ""
+
+msgid "calculator"
+msgstr ""
+
+msgid "Coin"
+msgstr ""
+
+msgid "Total supply"
+msgstr ""
+
+msgid "Algorithm; Proof type"
+msgstr ""
+
+msgid "Ethereum address"
+msgstr ""
+
+msgid "Check Ethereum address balance"
+msgstr ""
+
+msgid "Get balance"
+msgstr ""
+
+msgid "View Ethereum block"
+msgstr ""
+
+msgid "Block number or hash"
+msgstr ""
+
+msgid "Get block"
+msgstr ""
+
+msgid "To donate"
+msgstr ""
+
+msgid ", scan the QR code or copy and paste the"
+msgstr ""
+
+msgid " wallet address:"
+msgstr ""
+
+msgid "Thank you!"
+msgstr ""
+
+msgid "Please enter order details:"
+msgstr ""
+
+msgid "Item name:"
+msgstr ""
+
+msgid "Order amount:"
+msgstr ""
+
+msgid "Name:"
+msgstr ""
+
+msgid "Email:"
+msgstr ""
+
+msgid "Address:"
+msgstr ""
+
+msgid "Telephone:"
+msgstr ""
+
+msgid "Proceed to payment"
+msgstr ""
+
+msgid "Order submitted. Please make a payment:"
+msgstr ""
+
+msgid "To pay"
+msgstr ""
+
+msgid ", scan the QR code or copy and paste the "
+msgstr ""
+
+msgid "Powered by"
+msgstr ""
+
+msgid "Data by"
+msgstr ""

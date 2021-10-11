@@ -1,0 +1,247 @@
+/* ATTENTION! This file was generated automatically! Don't change it!!!
+----------------------------------------------------------------------- */
+@import "../css/_mixins.scss";
+@import "../css/_trx_addons.vars.scss";
+
+// @required
+
+
+// General settings
+//------------------------------------------
+
+// Font with icons
+$theme_icons: "fontello";				// font-family for the font with theme-specific icons
+
+// Grid
+$content: 842px;			// Content width
+$sidebar: 368px;			// Sidebar width
+$gap: 68px;					// Gap between content and sidebar
+$page: $content + $gap + $sidebar;										// Width of the whole page
+
+$page_boxed: $page + 120px;	// Width of the whole page (boxed)
+
+$page_fullwide: 1920px;		// Max-width of the whole page (fullwidth)
+$paddings_fullwide: 130px;	// Horizontal paddings of the fullwidth page
+
+$menu_side: 70px;			// Sidemenu width
+$page_menu_side: $page - $menu_side;									// Width of page with side menu
+
+$grid_gap: 30px;			// Gap between columns in the grid
+
+
+
+
+// Responsive
+//------------------------------------------
+
+// --xl
+$xl_content: 760px;			// Content width
+$xl_sidebar: 310px;			// Sidebar width
+$xl_gap: 30px;				// Gap between content and sidebar
+$xl_page: $xl_content + $xl_gap + $xl_sidebar;							// Width of the whole page
+
+$xl_content_boxed: 660px;	// Content width on the boxed pages
+$xl_sidebar_boxed: 310px;	// Sidebar width on the boxed pages
+$xl_gap_boxed: 30px;		// Gap between content and sidebar
+$xl_page_boxed: $xl_content_boxed + $xl_gap_boxed + $xl_sidebar_boxed;	// Width of the whole page (boxed)
+
+$xl_menu_side: 70px;		// Sidemenu width
+$xl_page_menu_side: $xl_page - $xl_menu_side;							// Width of page with side menu
+
+$xl_grid_gap: 30px;			// Gap between columns in the grid
+
+
+// --lg
+$lg_content: 664px;			// Content width
+$lg_sidebar: 270px;			// Sidebar width
+$lg_gap: 30px;				// Gap between content and sidebar
+$lg_page: $lg_content + $lg_gap + $lg_sidebar;							// Width of the whole page
+
+$lg_menu_side: 60px;		// Sidemenu width
+$lg_page_menu_side: $lg_page - $lg_menu_side;							// Width of page with side menu
+
+$lg_grid_gap: 30px;			// Gap between columns in the grid
+
+
+// --md
+$md_content: 708px;			// Content width
+$md_page: $md_content;		// Width of the whole page
+
+$md_menu_side: 60px;		// Sidemenu width
+$md_page_menu_side: $md_content - $md_menu_side;						// Width of page with side menu
+
+$md_grid_gap: 30px;			// Gap between columns in the grid
+
+
+// --sm
+$sm_content: 440px;			// Content width
+$sm_page: $sm_content;		// Width of the whole page
+
+$sm_menu_side: 60px;		// Sidemenu width
+
+$sm_grid_gap: 20px;			// Gap between columns in the grid
+$sm_grid_max_columns: 1;	// Max columns in the row of the grid
+
+
+// --xs
+$xs_content: 280px;			// Content width
+$xs_page: $xs_content;		// Width of the whole page
+
+$xs_menu_side: 60px;		// Sidemenu width
+
+$xs_grid_gap: 20px;			// Gap between columns in the grid
+$xs_grid_max_columns: 1;	// Max columns in the row of the grid
+
+@import "../css/_trx_addons.responsive.scss";
+@import "../components/shortcodes/_shortcodes.responsive.scss";
+@import "../components/api/elementor/_elementor.responsive.scss";
+@import "../components/api/js_composer/_js_composer.responsive.scss";
+@import "../components/cpt/layouts/_layouts.responsive.scss";
+@import "../components/cpt/services/_services.responsive.scss";
+@import "../components/cpt/team/_team.responsive.scss";
+@import "../components/shortcodes/action/_action.responsive.scss";
+@import "../components/shortcodes/blogger/_blogger.responsive.scss";
+@import "../components/shortcodes/content/_content.responsive.scss";
+@import "../components/shortcodes/countdown/_countdown.responsive.scss";
+@import "../components/shortcodes/form/_form.responsive.scss";
+@import "../components/shortcodes/googlemap/_googlemap.responsive.scss";
+@import "../components/shortcodes/icons/_icons.responsive.scss";
+@import "../components/shortcodes/price/_price.responsive.scss";
+@import "../components/shortcodes/promo/_promo.responsive.scss";
+@import "../components/shortcodes/skills/_skills.responsive.scss";
+@import "../components/shortcodes/socials/_socials.responsive.scss";
+@import "../components/widgets/categories_list/_categories_list.responsive.scss";
+@import "../components/widgets/slider/_slider.responsive.scss";
+@import "../components/cpt/layouts/shortcodes/cart/_cart.responsive.scss";
+@import "../components/cpt/layouts/shortcodes/logo/_logo.responsive.scss";
+@import "../components/cpt/layouts/shortcodes/menu/_menu.responsive.scss";
+
+
+/* SASS Suffix: --desktop */
+@media (min-width: 1680px) {
+	@include elementor--desktop();
+	@include layouts--desktop();
+}
+
+
+/* SASS Suffix: --notebook */
+@media (min-width: 1280px) and (max-width: 1679px) {
+	@include elementor--notebook();
+	@include layouts--notebook();
+}
+
+
+/* SASS Suffix: --tablet */
+@media (min-width: 768px) and (max-width: 1279px) {
+	@include sc--tablet();
+	@include elementor--tablet();
+	@include layouts--tablet();
+}
+
+
+/* SASS Suffix: --mobile */
+@media (max-width: 767px) {
+	@include sc--mobile();
+	@include elementor--mobile();
+	@include layouts--mobile();
+}
+
+
+/* SASS Suffix: --xl */
+@media (max-width: 1439px) {
+	@include trx_addons--xl();
+	@include sc--xl();
+	@include layouts--xl();
+	@include sc_services--xl();
+	@include sc_team--xl();
+	@include sc_blogger--xl();
+	@include sc_content--xl();
+	@include sc_promo--xl();
+	@include layouts_logo--xl();
+}
+
+
+/* SASS Suffix: --lg */
+@media (max-width: 1279px) {
+	@include trx_addons--lg();
+	@include layouts--lg();
+	@include sc_blogger--lg();
+	@include sc_content--lg();
+	@include sc_icons--lg();
+	@include sc_promo--lg();
+	@include slider--lg();
+	@include layouts_menu--lg();
+}
+
+
+/* SASS Suffix: --md */
+@media (max-width: 1023px) {
+	@include trx_addons--md();
+	@include sc--md();
+	@include js_composer--md();
+	@include layouts--md();
+	@include sc_services--md();
+	@include sc_team--md();
+	@include sc_blogger--md();
+	@include sc_content--md();
+	@include sc_googlemap--md();
+	@include sc_price--md();
+	@include sc_promo--md();
+	@include sc_skills--md();
+	@include categories_list--md();
+	@include slider--md();
+	@include layouts_menu--md();
+}
+
+
+/* SASS Suffix: --sm */
+@media (max-width: 767px) {
+	@include trx_addons--sm();
+	@include sc--sm();
+	@include elementor--sm();
+	@include js_composer--sm();
+	@include layouts--sm();
+	@include sc_services--sm();
+	@include sc_team--sm();
+	@include sc_blogger--sm();
+	@include sc_content--sm();
+	@include sc_countdown--sm();
+	@include sc_form--sm();
+	@include sc_promo--sm();
+	@include sc_socials--sm();
+	@include categories_list--sm();
+	@include slider--sm();
+	@include layouts_cart--sm();
+	@include layouts_menu--sm();
+}
+
+
+/* SASS Suffix: --sm_wp */
+@media (max-width: 600px) {
+	@include layouts_cart--sm_wp();
+}
+
+
+/* SASS Suffix: --xs */
+@media (max-width: 479px) {
+	@include trx_addons--xs();
+	@include sc--xs();
+	@include layouts--xs();
+	@include sc_services--xs();
+	@include sc_team--xs();
+	@include sc_action--xs();
+	@include sc_content--xs();
+	@include sc_countdown--xs();
+	@include sc_form--xs();
+	@include sc_price--xs();
+	@include sc_promo--xs();
+	@include sc_skills--xs();
+	@include slider--xs();
+}
+
+
+/* SASS Suffix: --md_lg */
+@media (min-width: 768px) and (max-width: 1279px) {
+	@include elementor--md_lg();
+	@include js_composer--md_lg();
+}

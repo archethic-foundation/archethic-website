@@ -1,0 +1,133 @@
+.cq-imageoverlay2-container{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+}
+.cq-imageoverlay2{
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+h3.cq-imageoverlay2-title{
+  font-size: 2em;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  width: 90%;
+  line-height: 120%;
+}
+p.cq-imageoverlay2-content{
+  width: 90%;
+  font-size: 1em;
+  margin: 4px auto;
+  text-align: center;
+  line-height: 150%;
+  padding: 0;
+}
+.cq-imageoverlay2 img {
+  position: relative;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 1000ms ease-in-out;
+          transition: transform 1000ms ease-in-out;
+}
+.cq-imageoverlay2:hover img {
+  -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+
+.cq-imageoverlay2-background {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: rgba(128, 179, 255, 0.8);
+  -webkit-transform: rotate(45deg) translate3d(-180%, -30%, 0);
+          transform: rotate(45deg) translate3d(-180%, -30%, 0);
+  -webkit-transition: -webkit-transform 400ms 100ms cubic-bezier(.42,0,.58,1);
+          transition: transform 400ms 100ms cubic-bezier(.42,0,.58,1);
+}
+.cq-imageoverlay2:hover .cq-imageoverlay2-background {
+  -webkit-transform: rotate(45deg) translate3d(-50%, -10%, 0);
+          transform: rotate(45deg) translate3d(-50%, -10%, 0);
+}
+
+
+/* top right to bottom left */
+.cq-imageoverlay2-container.topright_bottomleft .cq-imageoverlay2-background {
+  -webkit-transform: rotate(45deg) translate3d(30%, -600%, 0);
+          transform: rotate(45deg) translate3d(30%, -600%, 0);
+}
+
+.cq-imageoverlay2-container.topright_bottomleft .cq-imageoverlay2:hover .cq-imageoverlay2-background {
+  -webkit-transform: rotate(45deg) translate3d(-50%, 0%, 0);
+          transform: rotate(45deg) translate3d(-50%, 0%, 0);
+}
+
+/* bottom left to top right */
+.cq-imageoverlay2-container.bottomleft_topright .cq-imageoverlay2-background {
+  -webkit-transform: rotate(45deg) translate3d(-100%, 360%, 0);
+          transform: rotate(45deg) translate3d(-100%, 360%, 0);
+}
+
+.cq-imageoverlay2-container.bottomleft_topright .cq-imageoverlay2:hover .cq-imageoverlay2-background {
+  -webkit-transform: rotate(45deg) translate3d(-50%, 0%, 0);
+          transform: rotate(45deg) translate3d(-50%, 0%, 0);
+}
+
+
+/* bottom right to top left */
+.cq-imageoverlay2-container.bottomright_topleft .cq-imageoverlay2-background {
+  -webkit-transform: rotate(45deg) translate3d(75%, -30%, 0);
+          transform: rotate(45deg) translate3d(75%, -30%, 0);
+}
+
+.cq-imageoverlay2-container.bottomright_topleft .cq-imageoverlay2:hover .cq-imageoverlay2-background {
+  -webkit-transform: rotate(45deg) translate3d(-75%, -30%, 0);
+          transform: rotate(45deg) translate3d(-75%, -30%, 0);
+}
+
+
+.cq-imageoverlay2-container.bottomright_topleft .text-container, .cq-imageoverlay2-container.bottomleft_topright .text-container {
+  -webkit-transform: translate(-50%, -20%);
+      -ms-transform: translate(-50%, -20%);
+          transform: translate(-50%, -20%);
+}
+
+
+.cq-imageoverlay2 .text-container {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -80%);
+      -ms-transform: translate(-50%, -80%);
+          transform: translate(-50%, -80%);
+  z-index: 100;
+  color: white;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: opacity 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+          transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+.cq-imageoverlay2:hover .text-container {
+  opacity: 1;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: opacity 500ms 200ms ease-in-out, -webkit-transform 500ms 200ms ease-in-out;
+          transition: opacity 500ms 200ms ease-in-out, transform 500ms 200ms ease-in-out;
+}
+
+.cq-imageoverlay2 .text-container h3{
+  color: #fff;
+}

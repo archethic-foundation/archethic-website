@@ -1,0 +1,123 @@
+.cq-material-card {
+  display: block;
+  margin: 0 auto;
+}
+.cq-material-card:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cq-material-card a{
+  text-decoration: none;
+}
+
+.material-card-content {
+  position: relative;
+  background-color: #fff;
+  width: 90%;
+  box-shadow: 3px 3px 18px rgba(134, 134, 134, 0.3), -3px -3px 18px rgba(134, 134, 134, 0.3);
+  margin: 0 auto;
+  padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+  list-style-type: none;
+  border-top: 15px solid #AAB2BD;
+  border-radius: 5px;
+  -webkit-transition: all .5s ease;
+          transition: all .5s ease;
+}
+.material-card-content:hover{
+  box-shadow: 4px 4px 15px rgba(134, 134, 134, 0.65), -4px -4px 15px rgba(134, 134, 134, 0.65);
+}
+
+h3.material-card-title{
+  padding: 0;
+  margin: 0.5em 0;
+  font-weight: 400;
+  font-size: 1.6em;
+}
+.material-card-content p{
+  color: #868686;
+  line-height: 1.5;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1em;
+}
+
+.cq-material-card .material-card-label {
+  color: #fff;
+  background-color: #AAB2BD;
+}
+.cq-material-card .material-card-label a:visited{
+  color: #fff;
+}
+
+.material-card-label {
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: .9em;
+  padding: .3rem .5rem .3rem .7rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 0 0 5px 0;
+}
+.material-card-label .material-card-label-link, .material-card-label .material-card-label-link:hover{
+  text-decoration: none;
+}
+i.cq-material-icon{
+}
+
+
+.ripple-circle {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #663399;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-animation: scale-circle 2.5s;
+          animation: scale-circle 2.5s;
+}
+
+@-webkit-keyframes scale-circle {
+  from {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+    opacity: 0.6;
+  }
+  to {
+    -webkit-transform: scale(100);
+    transform: scale(100);
+    opacity: 0;
+  }
+}
+
+@keyframes scale-circle {
+  from {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+    opacity: 0.6;
+  }
+  to {
+    -webkit-transform: scale(100);
+    transform: scale(100);
+    opacity: 0;
+  }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .cq-material-card {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+}
+@media only screen and (min-width: 160px) and (max-width: 319px) {
+  .cq-material-card {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}

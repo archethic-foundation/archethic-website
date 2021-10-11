@@ -1,0 +1,14 @@
+/* .scheme_default .sc_layouts_row_fixed_on {
+    background:rgba(0,0,0,0.1);
+
+} */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media only screen and (max-device-width: 768px) {
+    /* Styles */
+  .remove-social {
+      display: none;
+    }
+  }

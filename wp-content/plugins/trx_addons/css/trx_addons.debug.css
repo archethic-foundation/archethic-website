@@ -1,0 +1,44 @@
+/* Profiler
+-----------------------------------------------------------------*/
+.trx_addons_profiler {
+	background-color:#effcfc;
+	padding: 2em;
+	border-top: 1px dashed #20c7ca;
+}
+.trx_addons_cv .trx_addons_profiler {
+	width:50%;
+	float: right;
+	-webkit-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+@media (max-width: 1367px) {
+	.trx_addons_cv .trx_addons_profiler {
+		display:none;
+	}
+}
+@media (max-width: 799px) {
+	.trx_addons_profiler {
+		display:none;
+	}
+}
+.trx_addons_profiler .profiler_title {
+	margin-top:0;
+	font-size:1.5em;
+}
+.trx_addons_profiler table {
+	border-collapse:collapse;
+	margin: 0 auto;
+}
+.trx_addons_profiler table th,
+.trx_addons_profiler table td {
+	font-weight:normal;
+	border: 1px solid #aaeeee;
+	padding:6px 8px;
+}
+.trx_addons_profiler table th {
+	background-color:#ddf0f0;
+}
+.trx_addons_profiler table td {
+	text-align: right;
+}

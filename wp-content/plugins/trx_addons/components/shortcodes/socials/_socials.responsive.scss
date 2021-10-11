@@ -1,0 +1,9 @@
+@mixin sc_socials--sm() {
+    /* Socials */
+	.socials_wrap .social_item .social_icon {
+		@include square(2em);
+	}
+	.socials_wrap .social_item {
+		margin: 6px 6px 0 0;
+	}
+}

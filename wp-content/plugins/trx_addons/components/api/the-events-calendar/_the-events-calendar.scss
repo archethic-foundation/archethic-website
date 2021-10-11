@@ -1,0 +1,192 @@
+.sc_events {
+	position: relative;	
+}
+
+.sc_events_button {
+	text-align:center;
+}
+
+.sc_events_item {
+	display:block;
+	overflow:hidden;
+	position:relative;
+	background-color:#f7f7f7;
+	height: 5.2632em;
+}
+.sc_events_item + .sc_events_item {
+	margin-top: 1em;
+}
+.sc_events_item_date,
+.sc_events_item_title,
+.sc_events_item_button {
+	position:absolute;
+	@include transition-all;
+}
+.sc_events_item_date {
+	top: 0;
+	left: 0;
+	@include box(6.4286em, 5.2632em);
+	color: #292929;
+	text-align:center;
+}
+.sc_events_default .sc_events_item_date {
+	background-color:#292929;
+	color: #fff;
+}
+.sc_events_default .sc_events_item:hover .sc_events_item_date {
+	background-color:#efa758;
+}
+.sc_events_item_day {
+	display: block;
+	@include font(2em, 1.5em, 300);
+	margin-top:0.2em;
+}
+.sc_events_item_month {
+	@include font(0.7143em, 1.3em);
+	text-transform:uppercase;
+	display: block;
+}
+.sc_events_item_title {
+	@include font(1.1429em, 1.3em);
+	left: 8em;
+	color: #292929;
+	max-width:75%;
+	padding-right:3em;
+}
+.sc_events_item:hover .sc_events_item_title {
+	color:#efa758;
+}
+.sc_events_item_time {
+	color: #888888;
+}
+.sc_events_item:hover .sc_events_item_time {
+	color:#efa758;
+}
+.sc_events_item_title,
+.sc_events_item_button {
+	top: 50%;
+	@include translateY(-50%);
+}
+.sc_events_item_button {
+	right: 3em;
+	color: #292929;
+	text-align:center;
+	min-height:1.3em;
+}
+.sc_events_item:hover .sc_events_item_button {
+	color:#efa758;
+}
+.sc_events_item_button:before {
+	content:'\e884';
+	font-family: $trx_addons_icons;
+}
+.sc_events_item_button:before,
+.sc_events_item_button:after {
+	font-size:0.9286em;
+	@include abs-lt;
+	@include transition-all;
+}
+.sc_events_item_button:after {
+	left:-30px;
+	opacity:0;
+}
+.sc_events_item:hover .sc_events_item_button:before {
+	opacity:0;
+	left: 30px;
+}
+.sc_events_item:hover .sc_events_item_button:after {
+	opacity:1;
+	left: 0;
+}
+
+
+
+/* Style 'Detailed' */
+.sc_events_detailed .sc_events_item {
+	background-color: transparent;
+	border: 1px solid #efa758;
+	white-space:nowrap;
+	height:auto;
+}
+.sc_events_detailed .sc_events_item,
+.sc_events_detailed .sc_events_item_date,
+.sc_events_detailed .sc_events_item_date_wrap,
+.sc_events_detailed .sc_events_item_title,
+.sc_events_detailed .sc_events_item_time,
+.sc_events_detailed .sc_events_item_time_wrap:before,
+.sc_events_detailed .sc_events_item_button,
+.sc_events_detailed .sc_events_item_button_wrap:before {
+	@include transition-colors;
+}
+.sc_events_detailed .sc_events_item_date_wrap,
+.sc_events_detailed .sc_events_item_time_wrap,
+.sc_events_detailed .sc_events_item_title_wrap,
+.sc_events_detailed .sc_events_item_button_wrap {
+	position:relative;
+	display:inline-block;
+	vertical-align:top;
+	height: 4em;
+	@include border-box;
+}
+.sc_events_detailed .sc_events_item_date_wrap {
+	border-right: 1px solid #efa758;
+	width: 17%;
+}
+.sc_events_detailed .sc_events_item_title_wrap {
+	width: 48%;
+}
+.sc_events_detailed .sc_events_item_time_wrap {
+	width: 19%;
+}
+.sc_events_detailed .sc_events_item_button_wrap {
+	width: 16%;
+}
+.sc_events_detailed .sc_events_item_time_wrap:before,
+.sc_events_detailed .sc_events_item_button_wrap:before {
+	content:' ';
+	display:block;
+	border-right: 2px solid #efa758;
+	@include abs-lc;
+	@include box(0, 1em);
+}
+.sc_events_detailed .sc_events_item_date,
+.sc_events_detailed .sc_events_item_time,
+.sc_events_detailed .sc_events_item_title,
+.sc_events_detailed .sc_events_item_button {
+	display:block;
+	white-space: normal;
+	@include abs-lc;
+	@include box(100%, auto);
+	min-height:0;
+	max-height:none;
+	max-width:none;
+	padding: 0 1.5em;
+	background-color:transparent;
+	text-align:left;
+	@include border-box;
+}
+.sc_events_detailed .sc_events_item_date,
+.sc_events_detailed .sc_events_item_time,
+.sc_events_detailed .sc_events_item_button {
+	@include font(0.7368em, 1.3em, 700);
+	text-transform:uppercase;
+}
+.sc_events_detailed .sc_events_item_title {
+	@include font(1.0526em, 1.2em, 700, italic);
+}
+.sc_events_detailed .sc_events_item_time,
+.sc_events_detailed .sc_events_item_button {
+	padding: 0 1em;
+}
+.sc_events_detailed .sc_events_item_button:before,
+.sc_events_detailed .sc_events_item_button:after {
+	display:none;
+}
+.sc_events_detailed .sc_events_item:hover {
+	background-color:#efa758;
+	color: #fff;
+}
+.sc_events_detailed .sc_events_item:hover .sc_events_item_time_wrap:before,
+.sc_events_detailed .sc_events_item:hover .sc_events_item_button_wrap:before {
+	border-color: #fff;
+}

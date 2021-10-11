@@ -1,0 +1,339 @@
+/* =============== Common Styles ===================== */
+.lvca-icon {
+  position: relative;
+  display: inline-block;
+  margin-right: 5px; }
+
+.lvca-row {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 15px 18px;
+  margin: 0 25px 0 0; }
+
+h3.lvca-title {
+  padding: 8px 18px 0 18px !important;
+  font-size: 13px !important;
+  font-weight: bold; }
+
+.lvca-title.description {
+  padding: 4px 18px 0 18px !important;
+  margin: 0;
+  font-size: 12px;
+  font-style: initial; }
+
+.lvca-label {
+  font-weight: bold;
+  display: block;
+  font-size: 15px;
+  line-height: 24px;
+  cursor: default; }
+
+.lvca-type-number {
+  margin: 0;
+  padding-right: 0;
+  max-height: 28px; }
+
+label.lvca-inline {
+  display: inline-block;
+  vertical-align: baseline; }
+
+.lvca-desc {
+  color: #666666;
+  line-height: 15px;
+  margin: 4px 0 12px 0;
+  font-size: 12px;
+  font-weight: normal; }
+
+.lvca-sub-desc {
+  color: #666666;
+  line-height: 1.5;
+  margin: 4px 0 0 0;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: normal; }
+
+.lvca-select-wrap {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 28px;
+  background: #ffffff; }
+
+[data-multiple="true"].lvca-select-wrap {
+  height: auto; }
+
+/* ============= TABS ==================== */
+.lvca-tab-content {
+  position: relative;
+  display: none;
+  margin: 0; }
+
+.lvca-tab-content:first-child {
+  display: block; }
+
+.lvca-tabs-wrap {
+  margin: -7px -12px 15px;
+  background-color: #f1f1f1;
+  padding-top: 10px; }
+
+.lvca-menu-options .lvca-tabs-wrap {
+  padding: 0; }
+
+.lvca-tab {
+  display: inline-block;
+  list-style: none;
+  margin: 0px 1px;
+  padding: 10px 15px;
+  line-height: 18px;
+  cursor: pointer;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  border: 1px solid transparent;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-width: 0;
+  white-space: nowrap;
+  -webkit-transition: all .4s ease-in-out 0s;
+  transition: all .4s ease-in-out 0s; }
+
+.lvca-menu-options .lvca-tab {
+  padding: 15px;
+  border-right: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  margin-top: 10px;
+  background: #f9f9f9; }
+  .lvca-menu-options .lvca-tab:hover {
+    background: #fff; }
+
+.lvca-menu-options .lvca-tab:first-child {
+  margin: 0 0 0 150px; }
+  @media only screen and (max-width: 600px) {
+    .lvca-menu-options .lvca-tab:first-child {
+      margin: 0; } }
+
+.lvca-tab:hover {
+  background-color: #f9f9f9;
+  color: #666; }
+
+.lvca-tab:first-child {
+  margin-left: 12px; }
+
+.lvca-tab.selected {
+  background: #ffffff;
+  color: #666;
+  position: relative;
+  top: 1px;
+  z-index: 1; }
+
+.lvca-clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* ====================== Inputs ====================== */
+textarea.lvca-textarea,
+input[type=text].lvca-text {
+  background: #f1f1f1;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 3px 5px !important; }
+
+input[type=text].lvca-text {
+  height: 28px;
+  line-height: 26px; }
+
+.lvca-text.number {
+  width: 65px;
+  background: #f1f1f1;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
+.lvca-number-label {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px 0 0;
+  width: auto;
+  color: #888; }
+
+input[type=radio].lvca-radio {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  background: #ffffff;
+  margin-left: 15px;
+  padding: 0 !important;
+  color: #34495e;
+  border: 2px solid #34495e;
+  width: 14px !important;
+  height: 14px !important;
+  max-width: 14px !important;
+  min-width: 0px !important; }
+
+input[type=radio].first-input {
+  margin-left: 0; }
+
+input[type=radio].lvca-radio:checked:before {
+  background-color: #2c3e50;
+  margin: 2px;
+  width: 6px;
+  height: 6px; }
+
+/* ======================== Checkbox ======================= */
+.lvca-toggle {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 6px 0; }
+
+input[type=checkbox].lvca-checkbox {
+  position: absolute;
+  display: block;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0 !important; }
+
+.lvca-checkbox + label {
+  display: inline-block;
+  position: relative;
+  margin: 0 4px 0 0;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+input.lvca-checkbox + label {
+  padding: 2px;
+  width: 43px;
+  height: 20px;
+  background-color: #2c3e50;
+  border-radius: 60px;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s; }
+
+input.lvca-checkbox + label:before, input.lvca-checkbox + label:after {
+  display: block;
+  position: absolute;
+  content: ""; }
+
+input.lvca-checkbox + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s; }
+
+input.lvca-checkbox + label:after {
+  top: 3px;
+  left: 3px;
+  bottom: 3px;
+  width: 18px;
+  background-color: #2c3e50;
+  border-radius: 10px;
+  -webkit-transition: margin 0.2s, background 0.2s;
+  transition: margin 0.2s, background 0.2s; }
+
+input.lvca-checkbox:checked + label {
+  background-color: #4ECDC4; }
+
+input.lvca-checkbox:checked + label:after {
+  margin-left: 23px;
+  background-color: #4ECDC4; }
+
+/* =========================== Buttons ==================== */
+.lvca-button {
+  border: none !important;
+  text-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  line-height: 26px !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 10px !important;
+  color: #fff !important;
+  background: #f94213;
+  border-radius: 0 !important;
+  vertical-align: top;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s; }
+
+.lvca-button:hover {
+  opacity: 0.8; }
+
+/* ========================== Info box ====================== */
+.lvca-infobox {
+  position: relative;
+  display: block;
+  background: #f1f1f1;
+  margin: 30px;
+  padding: 15px;
+  line-height: 20px;
+  font-style: italic;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+.lvca-infobox .dashicons {
+  float: left;
+  margin-right: 10px;
+  -webkit-animation: flash linear 1s infinite;
+  animation: flash linear 1s infinite; }
+
+.lvca-infobox-wrap {
+  margin-left: 40px 30px 30px 30px; }
+
+.lvca-infobox h3 {
+  font-size: 14px;
+  padding: 0 !important;
+  margin: 0;
+  line-height: 1.4; }
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: .1; }
+  100% {
+    opacity: 1; } }
+@keyframes flash {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: .1; }
+  100% {
+    opacity: 1; } }
+/* ========= Misc ============= */
+.wp-picker-container {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; }
+
+.lvca-elements-deactivate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: justify;
+      align-content: space-between; }
+  .lvca-elements-deactivate .lvca-row {
+    width: 280px;
+    margin-bottom: 15px; }
+
+/*# sourceMappingURL=lvca-elements.css.map */

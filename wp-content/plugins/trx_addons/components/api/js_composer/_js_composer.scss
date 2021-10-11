@@ -1,0 +1,235 @@
+/* Make VC row relative to enable using absolute position in columns */
+.vc_row {
+	position:relative;
+}
+.sc_column_fixed_placeholder {
+	min-height: 1px;
+}
+
+
+/* Height variants for the empty space */
+.vc_empty_space.sc_height_tiny { 	height: 1rem !important; }
+.vc_empty_space.sc_height_small { 	height: 2rem !important; }
+.vc_empty_space.sc_height_medium {	height: 3.3333rem !important; }
+.vc_empty_space.sc_height_large,
+.vc_empty_space.sc_height_big { 	height: 6.6667rem !important; }
+.vc_empty_space.sc_height_huge { 	height: 8.6667rem !important; }
+
+
+/* Extra bg for VC columns and [trx_sc_content] */
+.wpb_row[class*="sc_bg_mask_"],
+.wpb_column[class*="sc_extra_bg_"] > .vc_column-inner,
+.wpb_column[class*="sc_bg_mask_"] > .vc_column-inner,
+.wpb_text_column[class*="sc_extra_bg_"],
+.wpb_text_column[class*="sc_bg_mask_"],
+.sc_content[class*="sc_extra_bg_"],
+.sc_content[class*="sc_bg_mask_"] {
+	position:relative;
+	z-index: 0;
+}
+.wpb_text_column[class*="sc_bg_mask_"] > .wpb_wrapper {
+	position:relative;
+	z-index:2;
+}
+.wpb_column[class*="sc_extra_bg_"] > .vc_column-inner:after,
+.wpb_text_column[class*="sc_extra_bg_"]:after,
+.sc_content[class*="sc_extra_bg_"]:after {
+	content:' ';
+	display: block;
+	position: absolute;
+	z-index:-1;
+	background:inherit;
+}
+.wpb_row[class*="sc_bg_mask_"]:before,
+.wpb_column[class*="sc_bg_mask_"] > .vc_column-inner:before,
+.wpb_text_column[class*="sc_bg_mask_"]:before,
+.sc_content[class*="sc_bg_mask_"]:before {
+	content:' ';
+	display: block !important;
+	background-color:inherit;
+	@include abs-cover(0);
+}
+.wpb_row.vc_parallax[class*="sc_bg_mask_"]:before {
+	z-index:1;
+}
+.wpb_column.sc_extra_bg_tiny[class*="sc_bg_mask_"] > .vc_column-inner:before,
+.wpb_text_column.sc_extra_bg_tiny[class*="sc_bg_mask_"]:before,
+.sc_content.sc_extra_bg_tiny[class*="sc_bg_mask_"]:before,
+.wpb_column.sc_extra_bg_tiny > .vc_column-inner:after,
+.wpb_text_column.sc_extra_bg_tiny:after,
+.sc_content.sc_extra_bg_tiny:after {
+	@include abs-pos(-2em, -2em, -2em, -2em, '');
+}
+.wpb_column.sc_extra_bg_small[class*="sc_bg_mask_"] > .vc_column-inner:before,
+.wpb_text_column.sc_extra_bg_small[class*="sc_bg_mask_"]:before,
+.sc_content.sc_extra_bg_small[class*="sc_bg_mask_"]:before,
+.wpb_column.sc_extra_bg_small > .vc_column-inner:after,
+.wpb_text_column.sc_extra_bg_small:after,
+.sc_content.sc_extra_bg_small:after {
+	@include abs-pos(-4em, -4em, -4em, -4em, '');
+}
+.wpb_column.sc_extra_bg_medium[class*="sc_bg_mask_"] > .vc_column-inner:before,
+.wpb_text_column.sc_extra_bg_medium[class*="sc_bg_mask_"]:before,
+.sc_content.sc_extra_bg_medium[class*="sc_bg_mask_"]:before,
+.wpb_column.sc_extra_bg_medium > .vc_column-inner:after,
+.wpb_text_column.sc_extra_bg_medium:after,
+.sc_content.sc_extra_bg_medium:after {
+	@include abs-pos(-6em, -6em, -6em, -6em, '');
+}
+.wpb_column.sc_extra_bg_large[class*="sc_bg_mask_"] > .vc_column-inner:before,
+.wpb_text_column.sc_extra_bg_large[class*="sc_bg_mask_"]:before,
+.sc_content.sc_extra_bg_large[class*="sc_bg_mask_"]:before,
+.wpb_column.sc_extra_bg_large > .vc_column-inner:after,
+.wpb_text_column.sc_extra_bg_large:after,
+.sc_content.sc_extra_bg_large:after {
+	@include abs-pos(-8em, -8em, -8em, -8em, '');
+}
+
+.wpb_row.sc_bg_mask_bg_color:before,
+.wpb_column.sc_bg_mask_bg_color > .vc_column-inner:before,
+.wpb_text_column.sc_bg_mask_bg_color:before,
+.sc_content.sc_bg_mask_bg_color:before { background-color:inherit; }
+.wpb_row.sc_bg_mask_1:before,
+.wpb_column.sc_bg_mask_1 > .vc_column-inner:before,
+.wpb_text_column.sc_bg_mask_1:before,
+.sc_content.sc_bg_mask_1:before {	opacity: 0.1; }
+.wpb_row.sc_bg_mask_2:before,
+.wpb_column.sc_bg_mask_2 > .vc_column-inner:before,
+.wpb_text_column.sc_bg_mask_2:before,
+.sc_content.sc_bg_mask_2:before {	opacity: 0.2; }
+.wpb_row.sc_bg_mask_3:before,
+.wpb_column.sc_bg_mask_3 > .vc_column-inner:before,
+.wpb_text_column.sc_bg_mask_3:before,
+.sc_content.sc_bg_mask_3:before {	opacity: 0.3; }
+.wpb_row.sc_bg_mask_4:before,
+.wpb_column.sc_bg_mask_4 > .vc_column-inner:before,
+.wpb_text_column.sc_bg_mask_4:before,
+.sc_content.sc_bg_mask_4:before {	opacity: 0.4; }
+.wpb_row.sc_bg_mask_5:before,
+.wpb_column.sc_bg_mask_5 > .vc_column-inner:before,
+.wpb_text_column.sc_bg_mask_5:before,
+.sc_content.sc_bg_mask_5:before {	opacity: 0.5; }
+.wpb_row.sc_bg_mask_6:before,
+.wpb_column.sc_bg_mask_6 > .vc_column-inner:before,
+.wpb_text_column.sc_bg_mask_6:before,
+.sc_content.sc_bg_mask_6:before {	opacity: 0.6; }
+.wpb_row.sc_bg_mask_7:before,
+.wpb_column.sc_bg_mask_7 > .vc_column-inner:before,
+.wpb_text_column.sc_bg_mask_7:before,
+.sc_content.sc_bg_mask_7:before {	opacity: 0.7; }
+.wpb_row.sc_bg_mask_8:before,
+.wpb_column.sc_bg_mask_8 > .vc_column-inner:before,
+.wpb_text_column.sc_bg_mask_8:before,
+.sc_content.sc_bg_mask_8:before {	opacity: 0.8; }
+.wpb_row.sc_bg_mask_9:before,
+.wpb_column.sc_bg_mask_9 > .vc_column-inner:before,
+.wpb_text_column.sc_bg_mask_9:before,
+.sc_content.sc_bg_mask_9:before {	opacity: 0.9; }
+
+/* Shift VC columns along X- and/or Y-axis */
+.wpb_column[class*="sc_shift_x_"],
+.wpb_column[class*="sc_shift_y_"],
+.sc_content[class*="sc_shift_x_"],
+.sc_content[class*="sc_shift_y_"] {
+	position:relative;
+	z-index: 0;
+}
+.wpb_column.sc_shift_x_tiny,
+.sc_content.sc_shift_x_tiny {			left: 2em; }
+.wpb_column.sc_shift_x_tiny_negative,
+.sc_content.sc_shift_x_tiny_negative {	left: -2em; }
+.wpb_column.sc_shift_x_small,
+.sc_content.sc_shift_x_small {			left: 4em; }
+.wpb_column.sc_shift_x_small_negative,
+.sc_content.sc_shift_x_small_negative {	left: -4em; }
+.wpb_column.sc_shift_x_medium,
+.sc_content.sc_shift_x_medium {			left: 6em; }
+.wpb_column.sc_shift_x_medium_negative,
+.sc_content.sc_shift_x_medium_negative {left: -6em; }
+.wpb_column.sc_shift_x_large,
+.sc_content.sc_shift_x_large {			left: 8em; }
+.wpb_column.sc_shift_x_large_negative,
+.sc_content.sc_shift_x_large_negative {	left: -8em; }
+
+.wpb_column.sc_shift_y_tiny,
+.sc_content.sc_shift_y_tiny {			top: 2em; }
+.wpb_column.sc_shift_y_tiny_negative,
+.sc_content.sc_shift_y_tiny_negative {	top: -2em; }
+.wpb_column.sc_shift_y_small,
+.sc_content.sc_shift_y_small {			top: 4em; }
+.wpb_column.sc_shift_y_small_negative,
+.sc_content.sc_shift_y_small_negative {	top: -4em; }
+.wpb_column.sc_shift_y_medium,
+.sc_content.sc_shift_y_medium {			top: 6em; }
+.wpb_column.sc_shift_y_medium_negative,
+.sc_content.sc_shift_y_medium_negative {top: -6em; }
+.wpb_column.sc_shift_y_large,
+.sc_content.sc_shift_y_large {			top: 8em; }
+.wpb_column.sc_shift_y_large_negative,
+.sc_content.sc_shift_y_large_negative {	top: -8em; }
+
+
+/* Move container controls to the right side */
+.compose-mode .vc_controls-container > div.vc_controls-out-tl {
+	left: auto;
+	right: 0;
+}
+
+
+/* Hide 'Add' button on the some shortcodes */
+.compose-mode .sc_widget_slider.vc_empty-element:after {
+	display: none !important;
+}
+
+
+/* Decorate Flexslider */
+.flex-direction-nav li {
+	position:static;
+}
+.flex-control-nav li:before {
+	display: none;
+}
+
+
+/* Progress bar - style 'Narrow' */
+.vc_progress_bar.vc_progress_bar_narrow .vc_single_bar {
+	@include box-shadow(none);
+	@include border-sharp;
+	height: 4px;
+	margin-top: 1.4em;
+}
+.vc_progress_bar.vc_progress_bar_narrow .vc_single_bar .vc_bar {
+	height: 4px;
+	@include border-sharp;
+}
+.vc_progress_bar.vc_progress_bar_narrow .vc_single_bar + .vc_single_bar {
+	margin-top: 3.3em;
+}
+.vc_progress_bar.vc_progress_bar_narrow .vc_single_bar .vc_label {
+	display:block;
+	width:100%;
+	@include abs-lt(0, -1.625em);
+	@include font(1.0667em, 1.5em, 400, normal);
+	padding:0;
+	text-shadow:none;
+}
+.vc_progress_bar.vc_progress_bar_narrow .vc_single_bar .vc_label .vc_label_units {
+	@include abs-rt(0, 1px);
+	font-size: 0.875em;
+	font-style:italic;
+}
+
+/* Message Box - add close button */
+.vc_message_box_closeable {
+	position:relative;
+}
+.vc_message_box_closeable:after {
+	content: '\e8be';
+	font-family: $trx_addons_icons;
+	@include font(1.5em, 1em, 400);
+	padding:1em;
+	color: inherit;
+	cursor:pointer;
+	@include abs-rt(0, 50%);
+	@include translateY(-50%);
+}

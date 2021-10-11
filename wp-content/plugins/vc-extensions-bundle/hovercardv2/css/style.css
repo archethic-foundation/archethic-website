@@ -1,0 +1,436 @@
+.cq-hovercardv2 {
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+}
+
+.cq-hovercardv2 .cq-hovercardv2-imagecontainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.cq-hovercardv2 .cq-hovercardv2-imagecontainer .cq-hovercardv2-img {
+    width: 100%;
+    transition: .5s;
+}
+
+.cq-hovercardv2:hover .cq-hovercardv2-imagecontainer .cq-hovercardv2-img {
+    opacity: .5;
+    transform: translateX(30%);
+}
+
+.cq-hovercardv2.cq-hovercardv2-horizontal2:hover .cq-hovercardv2-imagecontainer .cq-hovercardv2-img {
+    transform: translateX(-30%);
+}
+
+.cq-hovercardv2.cq-hovercardv2-vertical1:hover .cq-hovercardv2-imagecontainer .cq-hovercardv2-img {
+    transform: translateY(30%);
+}
+
+.cq-hovercardv2.cq-hovercardv2-vertical2:hover .cq-hovercardv2-imagecontainer .cq-hovercardv2-img {
+    transform: translateY(-30%);
+}
+
+.cq-hovercardv2 .cq-hovercardv2-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+
+.cq-hovercardv2-white .cq-hovercardv2-content {
+    background-color: #FFF;
+}
+.cq-hovercardv2-grapefruit .cq-hovercardv2-content {
+    background-color: rgb(207, 45, 66);
+}
+
+.cq-hovercardv2-bittersweet .cq-hovercardv2-content {
+    background-color: rgb(225, 64, 49);
+}
+
+.cq-hovercardv2-sunflower .cq-hovercardv2-content {
+    background-color: rgb(243, 174, 52);
+}
+
+.cq-hovercardv2-grass .cq-hovercardv2-content {
+    background-color: rgb(140, 193, 82);
+}
+
+.cq-hovercardv2-mint .cq-hovercardv2-content {
+    background-color: rgb(49, 177, 137);
+}
+
+.cq-hovercardv2-aqua .cq-hovercardv2-content {
+    background-color: rgb(50, 159, 209);
+}
+
+.cq-hovercardv2-lavender .cq-hovercardv2-content {
+    background-color: rgb(131, 97, 211);
+}
+
+.cq-hovercardv2-bluejeans .cq-hovercardv2-content {
+    background-color: rgb(59, 115, 211);
+}
+
+.cq-hovercardv2-pinkrose .cq-hovercardv2-content {
+    background-color: rgb(203, 86, 157);
+}
+
+.cq-hovercardv2-lightgray .cq-hovercardv2-content {
+    color: #333;
+    background-color: rgb(224, 227, 233);
+}
+
+.cq-hovercardv2-lightgray .cq-hovercardv2-title, .cq-hovercardv2-lightgray .cq-hovercardv2-content {
+    color: #333;
+}
+
+.cq-hovercardv2-mediumgray .cq-hovercardv2-content {
+    background-color: rgb(154, 162, 176);
+}
+
+.cq-hovercardv2-darkgray .cq-hovercardv2-content {
+    color: #FFF;
+    background-color: rgb(51, 57, 67);
+}
+
+.cq-hovercardv2-transparent .cq-hovercardv2-content {
+    background-color: none;
+}
+
+.cq-hovercardv2.cq-hovercardv2-ps1 .cq-hovercardv2-content {
+    width: 100%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-ps2 .cq-hovercardv2-content {
+    width: 90%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-ps2.cq-hovercardv2-horizontal2 .cq-hovercardv2-content {
+    width: 90%;
+    left: 10%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-ps3 .cq-hovercardv2-content {
+    width: 80%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-ps3.cq-hovercardv2-horizontal2 .cq-hovercardv2-content {
+    width: 80%;
+    left: 20%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-ps4 .cq-hovercardv2-content {
+    width: 70%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-ps4.cq-hovercardv2-horizontal2 .cq-hovercardv2-content {
+    width: 70%;
+    left: 30%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-ps5 .cq-hovercardv2-content {
+    width: 60%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-ps5.cq-hovercardv2-horizontal2 .cq-hovercardv2-content {
+    width: 60%;
+    left: 40%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-ps6 .cq-hovercardv2-content {
+    width: 50%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-ps6.cq-hovercardv2-horizontal2 .cq-hovercardv2-content {
+    width: 50%;
+    left: 50%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-ps7 .cq-hovercardv2-content {
+    width: 40%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-ps7.cq-hovercardv2-horizontal2 .cq-hovercardv2-content {
+    width: 40%;
+    left: 60%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-ps8 .cq-hovercardv2-content {
+    width: 30%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-ps8.cq-hovercardv2-horizontal2 .cq-hovercardv2-content {
+    width: 30%;
+    left: 70%;
+}
+
+.cq-hovercardv2:hover .cq-hovercardv2-content {
+    transform: perspective(2000px) rotateY(0deg);
+}
+
+.cq-hovercardv2.cq-hovercardv2-horizontal2 .cq-hovercardv2-content {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    transform-origin: right;
+    transform: perspective(2000px) rotateY(90deg);
+}
+
+.cq-hovercardv2.cq-hovercardv2-horizontal2:hover .cq-hovercardv2-content {
+    transform: perspective(2000px) rotateY(0deg);
+}
+
+.cq-hovercardv2.cq-hovercardv2-horizontal1 .cq-hovercardv2-content {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(90deg);
+}
+
+.cq-hovercardv2.cq-hovercardv2-horizontal1:hover .cq-hovercardv2-content {
+    transform: perspective(2000px) rotateY(0deg);
+}
+
+.cq-hovercardv2.cq-hovercardv2-vertical1 .cq-hovercardv2-content {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: top;
+    transform: perspective(2000px) rotateX(90deg);
+}
+
+.cq-hovercardv2.cq-hovercardv2-vertical1:hover .cq-hovercardv2-content {
+    transform: perspective(2000px) rotateX(0deg);
+}
+
+.cq-hovercardv2.cq-hovercardv2-vertical2 .cq-hovercardv2-content {
+    position: absolute;
+    width: 100%;
+
+    left: 0;
+    transform-origin: bottom;
+    transform: perspective(2000px) rotateX(-90deg);
+}
+
+.cq-hovercardv2.cq-hovercardv2-vertical2:hover .cq-hovercardv2-content {
+    transform: perspective(2000px) rotateX(0deg);
+}
+
+.cq-hovercardv2.cq-hovercardv2-vertical1.cq-hovercardv2-ps1 .cq-hovercardv2-content, .cq-hovercardv2.cq-hovercardv2-vertical2.cq-hovercardv2-ps1 .cq-hovercardv2-content {
+    height: 100%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-vertical1.cq-hovercardv2-ps2 .cq-hovercardv2-content {
+    height: 90%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-vertical2.cq-hovercardv2-ps2 .cq-hovercardv2-content {
+    height: 90%;
+    top: 10%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-vertical1.cq-hovercardv2-ps3 .cq-hovercardv2-content {
+    height: 80%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-vertical2.cq-hovercardv2-ps3 .cq-hovercardv2-content {
+    height: 80%;
+    top: 20%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-vertical1.cq-hovercardv2-ps4 .cq-hovercardv2-content {
+    height: 70%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-vertical2.cq-hovercardv2-ps4 .cq-hovercardv2-content {
+    height: 70%;
+    top: 30%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-vertical1.cq-hovercardv2-ps5 .cq-hovercardv2-content {
+    height: 60%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-vertical2.cq-hovercardv2-ps5 .cq-hovercardv2-content {
+    height: 60%;
+    top: 40%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-vertical1.cq-hovercardv2-ps6 .cq-hovercardv2-content {
+    height: 50%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-vertical2.cq-hovercardv2-ps6 .cq-hovercardv2-content {
+    height: 50%;
+    top: 50%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-vertical1.cq-hovercardv2-ps7 .cq-hovercardv2-content {
+    height: 40%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-vertical2.cq-hovercardv2-ps7 .cq-hovercardv2-content {
+    height: 40%;
+    top: 60%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-vertical1.cq-hovercardv2-ps8 .cq-hovercardv2-content {
+    height: 30%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-vertical2.cq-hovercardv2-ps8 .cq-hovercardv2-content {
+    height: 30%;
+    top: 70%;
+}
+
+.cq-hovercardv2 .cq-hovercardv2-avatar {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    background: #EFEFEF;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+
+.cq-hovercardv2 .cq-hovercardv2-avatarimage {
+    border-radius: 50%;
+}
+
+.cq-hovercardv2.cq-hovercardv2-iconsmall .cq-hovercardv2-avataricon {
+    font-size: 24px;
+}
+
+.cq-hovercardv2.cq-hovercardv2-iconmedium .cq-hovercardv2-avataricon {
+    font-size: 36px;
+}
+
+.cq-hovercardv2.cq-hovercardv2-iconlarge .cq-hovercardv2-avataricon {
+    font-size: 48px;
+}
+
+.cq-hovercardv2 .cq-hovercardv2-content .cq-hovercardv2-contentcontainer {
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.cq-hovercardv2 .cq-hovercardv2-content .cq-hovercardv2-contentcontainer .cq-hovercardv2-title {
+    margin: 0;
+    padding: 0;
+    color: #222F46;
+    line-height: 20px;
+    font-size: 20px;
+}
+
+.cq-hovercardv2 .cq-hovercardv2-content .cq-hovercardv2-contentcontainer .cq-hovercardv2-title .cq-hovercardv2-label {
+    display: inline-block;
+    font-size: 14px;
+    color: #222F46;
+    margin-top: 8px;
+}
+
+.cq-hovercardv2 .cq-hovercardv2-content .cq-hovercardv2-contentcontainer .cq-hovercardv2-description {
+    margin: 10px 0;
+    padding: 0;
+    color: #222F46;
+}
+
+.cq-hovercardv2 .cq-hovercardv2-content .cq-hovercardv2-contentcontainer .cq-hovercardv2-listcontainer {
+    margin: 10px auto 0;
+    padding: 0;
+    display: table;
+}
+
+.cq-hovercardv2 .cq-hovercardv2-content .cq-hovercardv2-contentcontainer .cq-hovercardv2-listcontainer .cq-hovercardv2-listitem {
+    list-style: none;
+    margin: 0 5px;
+    float: left;
+}
+
+.cq-hovercardv2-listcontainer .cq-hovercardv2-itemlink {
+    display: block;
+    background: #222F46;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    transform: .5s;
+}
+
+.cq-hovercardv2-listcontainer .cq-hovercardv2-itemlink:hover {
+    background: #ff3636;
+}
+
+
+
+.cq-hovercardv2-itemwhite .cq-hovercardv2-itemlink {
+    background-color: #FFF;
+}
+.cq-hovercardv2-itemgrapefruit .cq-hovercardv2-itemlink {
+    background-color: rgb(207, 45, 66);
+}
+
+.cq-hovercardv2-itembittersweet .cq-hovercardv2-itemlink {
+    background-color: rgb(225, 64, 49);
+}
+
+.cq-hovercardv2-itemsunflower .cq-hovercardv2-itemlink {
+    background-color: rgb(243, 174, 52);
+}
+
+.cq-hovercardv2-itemgrass .cq-hovercardv2-itemlink {
+    background-color: rgb(140, 193, 82);
+}
+
+.cq-hovercardv2-itemmint .cq-hovercardv2-itemlink {
+    background-color: rgb(49, 177, 137);
+}
+
+.cq-hovercardv2-itemaqua .cq-hovercardv2-itemlink {
+    background-color: rgb(50, 159, 209);
+}
+
+.cq-hovercardv2-itemlavender .cq-hovercardv2-itemlink {
+    background-color: rgb(131, 97, 211);
+}
+
+.cq-hovercardv2-itembluejeans .cq-hovercardv2-itemlink {
+    background-color: rgb(59, 115, 211);
+}
+
+.cq-hovercardv2-itempinkrose .cq-hovercardv2-itemlink {
+    background-color: rgb(203, 86, 157);
+}
+
+.cq-hovercardv2-itemlightgray .cq-hovercardv2-itemlink {
+    color: #333;
+    background-color: rgb(224, 227, 233);
+}
+
+.cq-hovercardv2-itemlightgray .cq-hovercardv2-title, .cq-hovercardv2-lightgray .cq-hovercardv2-itemlink {
+    color: #333;
+}
+
+.cq-hovercardv2-itemmediumgray .cq-hovercardv2-itemlink {
+    background-color: rgb(154, 162, 176);
+}
+
+.cq-hovercardv2-itemdarkgray .cq-hovercardv2-itemlink {
+    color: #FFF;
+    background-color: rgb(51, 57, 67);
+}

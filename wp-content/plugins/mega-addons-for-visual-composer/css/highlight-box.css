@@ -1,0 +1,144 @@
+/* General button style (reset) */
+.mega_highlight_box {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	display: inline-block;
+	letter-spacing: 1px;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	display: table-cell !important;vertical-align: middle !important; font-weight: 100;
+}
+.mega_highlight_box i {
+	text-align: center;
+}
+.mega_highlight_box .span-after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Button 5 */
+.btn-5 {
+	background: #823aa0;
+	color: #fff;
+	height: 150px;
+	min-width: 260px;
+	line-height: 24px;
+	font-size: 16px;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.btn-5:active {
+	background: #9053a9;
+	top: 2px;
+}
+
+.btn-5 .text {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 0.3s;
+	-webkit-backface-visibility: hidden;
+	-moz-transition: all 0.3s;
+	-moz-backface-visibility: hidden;
+	transition: all 0.3s;
+	backface-visibility: hidden;
+	text-align: center;
+	line-height: 1.5;
+}
+
+.btn-5 .span-before {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	line-height: 2.5;
+	font-size: 180%;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn-5:active .span-before {
+	color: #703b87;
+}
+
+/* Button 5a */
+.btn-5a:hover .text {
+	-webkit-transform: translateY(300%);
+	-moz-transform: translateY(300%);
+	-ms-transform: translateY(300%);
+	transform: translateY(300%);
+}
+
+.btn-5a .span-before {
+	left: 0;
+	top: -100%;
+}
+
+.btn-5a:hover .span-before {
+	top: 0;
+}
+
+/* Button 5b */
+.btn-5b:hover .text {
+	-webkit-transform: translateX(200%);
+	-moz-transform: translateX(200%);
+	-ms-transform: translateX(200%);
+	transform: translateX(200%);
+}
+
+.btn-5b .span-before {
+	left: -100%;
+	top: 0;
+}
+
+.btn-5b:hover .span-before {
+	left: 0;
+}
+
+/* Button 5c */
+.btn-5c:hover .text {
+	-webkit-transform: translateX(-200%);
+	-moz-transform: translateX(-200%);
+	-ms-transform: translateX(-200%);
+	transform: translateX(-200%);
+}
+
+.btn-5c .span-before {
+	right: -100%;
+	top: 0;
+}
+
+.btn-5c:hover .span-before {
+	right: 0;
+}
+
+/* Button 5d */
+.btn-5d:hover .text {
+	-webkit-transform: translateY(-300%);
+	-moz-transform: translateY(-300%);
+	-ms-transform: translateY(-300%);
+	transform: translateY(-300%);
+}
+
+.btn-5d .span-before {
+	left: 0;
+	bottom: -100%;
+}
+
+.btn-5d:hover .span-before {
+	bottom: 0;
+}

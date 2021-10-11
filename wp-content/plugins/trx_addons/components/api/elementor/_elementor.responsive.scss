@@ -1,0 +1,69 @@
+@mixin elementor--desktop() {
+    /* Elementor */
+	body.elementor-editor-active .elementor-hidden-desktop:not(.elementor-element-edit-mode) {	display: none !important; }
+}
+
+@mixin elementor--notebook() {
+    /* Elementor */
+	body.elementor-editor-active .elementor-hidden-desktop:not(.elementor-element-edit-mode) {	display: none !important; }
+}
+
+@mixin elementor--tablet() {
+    /* Elementor */
+	body.elementor-editor-active .elementor-hidden-tablet:not(.elementor-element-edit-mode) {	display: none !important; }
+}
+
+@mixin elementor--mobile() {
+    /* Elementor */
+	body.elementor-editor-active .elementor-hidden-phone:not(.elementor-element-edit-mode) {	display: none !important; }
+}
+
+
+
+
+@mixin elementor--md_lg() {
+    /* Elementor */
+	.elementor-section.hide_bg_image_on_tablet,
+	.elementor-column.hide_bg_image_on_tablet .elementor-column-wrap {
+		background-image: none !important;
+	}
+	.elementor-section.hide_bg_image_on_tablet[class*="sc_bg_mask_"]:before,
+	.elementor-column.hide_bg_image_on_tablet[class*="sc_bg_mask_"] > .elementor-column-wrap:before {
+		display:none !important;
+	}
+}
+
+@mixin elementor--sm() {
+    /* Elementor */
+	.elementor-column[class*="sc_extra_bg_"] > .elementor-column-wrap:after,
+	.elementor-widget-text-editor[class*="sc_extra_bg_"]:after {
+		display:none;
+	}
+	.elementor-column[class*="sc_extra_bg_"][class*="sc_bg_mask_"] > .elementor-column-wrap:before,
+	.elementor-widget-text-editor[class*="sc_extra_bg_"][class*="sc_bg_mask_"]:before {
+		left: 0; top: 0; right: 0; bottom: 0;
+	}
+	.elementor-column.sc_extra_bg_tiny > .elementor-column-wrap,
+	.elementor-widget-text-editor.sc_extra_bg_tiny {		padding: 1em !important; }
+	.elementor-column.sc_extra_bg_small > .elementor-column-wrap,
+	.elementor-widget-text-editor.sc_extra_bg_small {		padding: 1.5em !important; }
+	.elementor-column.sc_extra_bg_medium > .elementor-column-wrap,
+	.elementor-widget-text-editor.sc_extra_bg_medium {		padding: 2em !important; }
+	.elementor-column.sc_extra_bg_large > .elementor-column-wrap,
+	.elementor-widget-text-editor.sc_extra_bg_large {		padding: 2.5em !important; }
+
+	.elementor-column[class*="sc_shift_x_"],
+	.elementor-column[class*="sc_shift_y_"] {
+		left: auto;
+		top: auto;
+	}
+	
+	.elementor-section.hide_bg_image_on_mobile,
+	.elementor-column.hide_bg_image_on_mobile .elementor-column-wrap {
+		background-image: none !important;
+	}
+	.elementor-section.hide_bg_image_on_mobile[class*="sc_bg_mask_"]:before,
+	.elementor-column.hide_bg_image_on_mobile[class*="sc_bg_mask_"] > .elementor-column-wrap:before {
+		display:none !important;
+	}
+}

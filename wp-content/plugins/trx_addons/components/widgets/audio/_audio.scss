@@ -1,0 +1,41 @@
+/* Audio player's styles */
+.trx_addons_audio_player {
+	padding: 1em;
+	position:relative;
+	@include border-box;
+}
+.trx_addons_audio_player.with_cover {
+	@include bg-cover;
+}
+.trx_addons_audio_player.with_cover:after {
+	content:' ';
+	@include bg-mask(#000, 0.5, 1);
+}
+.trx_addons_audio_player.without_cover {
+	border: 1px solid #f0f0f0;
+	background-color:#f7f7f7;
+}
+
+.trx_addons_audio_player .audio_info {
+	position:relative;
+	z-index:2;
+	overflow: hidden;
+}
+
+.trx_addons_audio_player .audio_author,
+.trx_addons_audio_player .audio_caption {
+	margin: 0.5em 0.5em 1em;
+}
+.trx_addons_audio_player .audio_author + .audio_caption {
+	margin-top: -0.5em;
+}
+
+.trx_addons_audio_player .audio_frame {
+	width:100%;
+	position:relative;
+	z-index:2;
+}
+.trx_addons_audio_player .audio_info+.audio_embed,
+.trx_addons_audio_player .audio_info+.audio_frame {
+	margin-top: 1em;
+}

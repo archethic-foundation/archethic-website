@@ -1,0 +1,79 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Contact Form 7 Multi-Step Addon\n"
+"POT-Creation-Date: 2018-12-19 12:22+0200\n"
+"PO-Revision-Date: 2018-12-19 12:22+0200\n"
+"Last-Translator: \n"
+"Language-Team: ThemeREX\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-KeywordsList: _e;gettext;gettext_noop;__;_x;_n_noop;esc_html__;"
+"esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/multistep-form-class.php:52
+msgid "Progressbar"
+msgstr ""
+
+#: includes/multistep-form-class.php:54
+msgid "Step start"
+msgstr ""
+
+#: includes/multistep-form-class.php:55
+msgid "Step finish"
+msgstr ""
+
+#: includes/multistep-form-class.php:57 includes/multistep-form-class.php:191
+msgid "Next"
+msgstr ""
+
+#: includes/multistep-form-class.php:59
+msgid "Prev"
+msgstr ""
+
+#: includes/multistep-form-class.php:101
+msgid "Progressbar type"
+msgstr ""
+
+#: includes/multistep-form-class.php:105
+msgid "Numbers"
+msgstr ""
+
+#: includes/multistep-form-class.php:106
+msgid "Bullets"
+msgstr ""
+
+#: includes/multistep-form-class.php:107
+msgid "Just Line"
+msgstr ""
+
+#: includes/multistep-form-class.php:149 includes/multistep-form-class.php:189
+#: includes/multistep-form-class.php:225
+msgid "Label"
+msgstr ""
+
+#: includes/multistep-form-class.php:151
+msgid "Step 1"
+msgstr ""
+
+#: includes/multistep-form-class.php:227
+msgid "Previous"
+msgstr ""
+
+#: includes/multistep-form-class.php:267
+msgid "Security error"
+msgstr ""
+
+#: templates/admin/shortcode-generator.php:61
+msgid "Id attribute"
+msgstr ""
+
+#: templates/admin/shortcode-generator.php:65
+msgid "Class attribute"
+msgstr ""
