@@ -1,9 +1,0 @@
-<p class="feature_item_content_text">
-    The protocol natively integrates payment, customer identity management, data storage and security, etc... Here are the first 3 applications on ARCHEthic 
-    <br>
-    1. DWeb: One app to for website maintenance, security, handling and costing With more than 252000 websites created globally everyday where 99% of them being very small, small and medium sized websites, its maintenance, security risks & costs are very high. aeweb provides a single solution to all these within a fraction of this total cost! 
-    <br>
-    2. DMail: Email Redefined! An all in one email, messaging, wallet and payments app that provides the full suite for a user. 
-    <br>
-    3. DNFT: NFT 
-</p>

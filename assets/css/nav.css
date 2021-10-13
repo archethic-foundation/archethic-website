@@ -37,3 +37,13 @@
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+
+  .btn-lead{
+    margin-right: 20px;
+  }
+  
+  .btn-lead:hover,
+  .btn-lead:focus{
+    color: #fff;
+    border-color: #fff;
+  }
