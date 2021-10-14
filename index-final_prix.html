@@ -283,6 +283,11 @@
           cursor: pointer;
         }
 
+        #governance_animation {
+          margin-top: -150px;
+          margin-left: -70px;
+        }
+
         @media(min-width:1500px) {
             .pie_chart_pie_wrapper {
                 height: 280px;
@@ -307,6 +312,9 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+            }
+            #governance_animation {
+              margin-left: -200px;
             }
         }
 
@@ -404,6 +412,10 @@
             .landing_join_community_btn {
               margin: 10px 0px !important;
             }
+            #governance_animation {
+              margin-left: -100px;
+              margin-top: -60px;
+            }
         }
     </style>
     <link property="stylesheet" rel='stylesheet' id='js_composer_front-css' href='./wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=6.7.0' type='text/css' media='all' />
@@ -498,7 +510,7 @@
         }
 
         .vc_custom_1521564934406 {
-            background-image: url(./wp-content/uploads/2018/03/about_bg_3.png) !important;
+            /* background-image: url(./wp-content/uploads/2018/03/about_bg_3.png) !important; */
             background-position: center !important;
             background-repeat: no-repeat !important;
             background-size: cover !important;
@@ -1421,7 +1433,9 @@
                                 </div>
                                 <div class="wpb_column vc_column_container vc_col-sm-4 sc_layouts_column_icons_position_left">
                                     <div class="vc_column-inner">
-                                        <div class="wpb_wrapper"></div>
+                                        <div class="wpb_wrapper">
+                                          <div id="governance_animation"></div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="wpb_column vc_column_container vc_col-sm-4 sc_layouts_column_icons_position_left governance_content_wrapper">
@@ -2044,7 +2058,7 @@
                                                                     <img width="600"
 																								height="208"
 																								src="./assets/logo/OM-Iro1.png"
-                                                                                                
+
 																								class="attachment-hoverex-thumb-med size-hoverex-thumb-med wp-post-image"
 																								alt="" loading="lazy" />
                                                                                             </div>
@@ -3646,6 +3660,13 @@ style="margin: 0px;">
 
         <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
         <script src="./featured_gsap.js"></script>
+
+        <!-- Governance Animation -->
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16534/d3.v3.min.js"></script>
+
+        <link property="stylesheet" rel='stylesheet' href='./assets/css/governance.css' type='text/css' media='all' />
+        <script src="./assets/js/governance_art.js"></script>
+
         <!-- ECharts -->
         <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.1/dist/echarts.min.js"></script>
         <script src="./echarts.js"></script>
