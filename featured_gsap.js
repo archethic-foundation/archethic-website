@@ -286,39 +286,39 @@ let roadmap_btns = [false, false, false, false, false];
 $("#roadmap_q31_r").on("click", () => {
   $("#roadmap_q31").toggle("slow");
   roadmap_btns[0]
-    ? $("#roadmap_q31_r").text("Read less")
-    : $("#roadmap_q31_r").text("Read more");
+    ? $("#roadmap_q31_r").text("Read more")
+    : $("#roadmap_q31_r").text("Read less");
   roadmap_btns[0] = !roadmap_btns[0];
 });
 
 $("#roadmap_q41_r").on("click", () => {
   $("#roadmap_q41").toggle("slow");
   roadmap_btns[1]
-    ? $("#roadmap_q41_r").text("Read less")
-    : $("#roadmap_q41_r").text("Read more");
+    ? $("#roadmap_q41_r").text("Read more")
+    : $("#roadmap_q41_r").text("Read less");
   roadmap_btns[1] = !roadmap_btns[1];
 });
 
 $("#roadmap_q12_r").on("click", () => {
   $("#roadmap_q12").toggle("slow");
   roadmap_btns[2]
-    ? $("#roadmap_q12_r").text("Read less")
-    : $("#roadmap_q12_r").text("Read more");
+    ? $("#roadmap_q12_r").text("Read more")
+    : $("#roadmap_q12_r").text("Read less");
   roadmap_btns[2] = !roadmap_btns[2];
 });
 
 $("#roadmap_q22_r").on("click", () => {
   $("#roadmap_q22").toggle("slow");
   roadmap_btns[3]
-    ? $("#roadmap_q22_r").text("Read less")
-    : $("#roadmap_q22_r").text("Read more");
+    ? $("#roadmap_q22_r").text("Read more")
+    : $("#roadmap_q22_r").text("Read less");
   roadmap_btns[3] = !roadmap_btns[3];
 });
 
 $("#roadmap_q32_r").on("click", () => {
   $("#roadmap_q32").toggle("slow");
   roadmap_btns[4]
-    ? $("#roadmap_q32_r").text("Read less")
-    : $("#roadmap_q32_r").text("Read more");
+    ? $("#roadmap_q32_r").text("Read more")
+    : $("#roadmap_q32_r").text("Read less");
   roadmap_btns[4] = !roadmap_btns[4];
 });
