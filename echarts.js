@@ -20,7 +20,7 @@ option = {
             borderRadius: 5,
             borderColor: '#000',
             borderWidth: 1
-          },
+        },
         label: {
             show: false,
             position: 'center'
@@ -38,20 +38,20 @@ option = {
         data: [{
                 value: 44.8,
                 name: ' Network Pool',
-                itemStyle: { color: '#1F5EA8' },
+                itemStyle: { color: '#4CC9F0' },
 
-            }, { value: 3.2, name: 'Marketing', itemStyle: { color: '#B5179E' } },
-            { value: 5.6, name: 'Team', itemStyle: { color: '#2A9D8F' } },
+            }, { value: 3.2, name: 'Marketing', itemStyle: { color: '#FFFA46' } },
+            { value: 5.6, name: 'Team', itemStyle: { color: '#00818A' } },
             { value: 8.2, name: 'Funding Pool', itemStyle: { color: '#3F37C9' } },
             { value: 23.3, name: 'Deliverables', itemStyle: { color: '#4895EF' } },
             { value: 9.0, name: 'Enhancements', itemStyle: { color: '#38a3a5' } },
             { value: 2.2, name: 'Foundation', itemStyle: { color: '#F72585' } },
-           
+
 
             {
                 value: 3.4,
                 name: 'Exhange Platform',
-                itemStyle: { color: '#fb5607' }
+                itemStyle: { color: '#FF865E' }
             }
 
 

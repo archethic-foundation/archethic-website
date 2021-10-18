@@ -1,5 +1,6 @@
 /* ATTENTION! This file was generated automatically! Don&#039;t change it!!!
 ----------------------------------------------------------------------- */
+
 body {
     font-family: "Muli", sans-serif;
     font-size: 1rem;
@@ -389,7 +390,7 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
 .scheme_default h5 a:hover,
 .scheme_default h6 a:hover,
 .scheme_default li a:hover {
-    color: #1aafe9
+    /* color: #1aafe9 */
 }
 
 .scheme_default .color_style_link2 h1 a:hover,
@@ -1041,7 +1042,9 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
 .scheme_default .wp-block-button:not(.is-style-outline) .wp-block-button__link,
 .scheme_default .post_item .more-link,
 .scheme_default .comments_wrap .form-submit input[type="submit"],
+
 /* BB & Buddy Press */
+
 .scheme_default #buddypress .comment-reply-link,
 .scheme_default #buddypress .generic-button a,
 .scheme_default #buddypress a.button,
@@ -1172,7 +1175,9 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
 .scheme_default .wp-block-button:not(.is-style-outline) .wp-block-button__link:hover,
 .scheme_default .comments_wrap .form-submit input[type="submit"]:hover,
 .scheme_default .comments_wrap .form-submit input[type="submit"]:focus,
+
 /* BB & Buddy Press */
+
 .scheme_default #buddypress .comment-reply-link:hover,
 .scheme_default #buddypress .generic-button a:hover,
 .scheme_default #buddypress a.button:hover,
@@ -1249,7 +1254,7 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
     background: -o-linear-gradient(160deg, #017bfd 0%, #20bfe1 100%);
     background: -ms-linear-gradient(160deg, #017bfd 0%, #20bfe1 100%);
     background: linear-gradient(160deg, #017bfd 0%, #20bfe1 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#017bfd, endColorstr=#20bfe1, GradientType=1)
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#017bfd, endColorstr=#20bfe1, GradientType=1)
 }
 
 .scheme_default button:hover,
@@ -1271,7 +1276,7 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
     background: -o-linear-gradient(160deg, transparent 0%, transparent 100%);
     background: -ms-linear-gradient(160deg, transparent 0%, transparent 100%);
     background: linear-gradient(160deg, transparent 0%, transparent 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=transparent, endColorstr=transparent, GradientType=1)
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=transparent, endColorstr=transparent, GradientType=1)
 }
 
 .scheme_default .sc_button:not(.sc_button_simple):not(.sc_button_bordered):not(.sc_button_bg_image).color_style_link2 {
@@ -1281,7 +1286,7 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
     background: -o-linear-gradient(160deg, transparent 0%, transparent 100%);
     background: -ms-linear-gradient(160deg, transparent 0%, transparent 100%);
     background: linear-gradient(160deg, transparent 0%, transparent 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=transparent, endColorstr=transparent, GradientType=1)
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=transparent, endColorstr=transparent, GradientType=1)
 }
 
 .scheme_default .sc_button:not(.sc_button_simple):not(.sc_button_bordered):not(.sc_button_bg_image).color_style_link2:after {
@@ -1291,7 +1296,7 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
     background: -o-linear-gradient(160deg, #017bfd 0%, #20bfe1 100%);
     background: -ms-linear-gradient(160deg, #017bfd 0%, #20bfe1 100%);
     background: linear-gradient(160deg, #017bfd 0%, #20bfe1 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#017bfd, endColorstr=#20bfe1, GradientType=1)
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#017bfd, endColorstr=#20bfe1, GradientType=1)
 }
 
 .scheme_default .woocommerce #respond input#submit.alt:hover,
@@ -1516,7 +1521,9 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
     background-color: #050510
 }
 
+
 /* Row type:Narrow */
+
 .scheme_default .sc_layouts_row.sc_layouts_row_type_narrow,
 .scheme_default.sc_layouts_row.sc_layouts_row_type_narrow {
     color: #607290;
@@ -1695,7 +1702,9 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
     color: #ffffff
 }
 
+
 /* Row type:Compact */
+
 .scheme_default .sc_layouts_row_type_compact .sc_layouts_item,
 .scheme_default.sc_layouts_row_type_compact .sc_layouts_item {
     color: #607290
@@ -1790,7 +1799,9 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
     color: #070301
 }
 
+
 /* Row type:Normal */
+
 .scheme_default .sc_layouts_row_type_normal .sc_layouts_item,
 .scheme_default.sc_layouts_row_type_normal .sc_layouts_item {
     color: #607290
@@ -2708,7 +2719,7 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
     background: -o-linear-gradient(90deg, transparent 0%, transparent 100%);
     background: -ms-linear-gradient(90deg, transparent 0%, transparent 100%);
     background: linear-gradient(90deg, transparent 0%, transparent 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=transparent, endColorstr=transparent, GradientType=1)
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=transparent, endColorstr=transparent, GradientType=1)
 }
 
 .scheme_default .mejs-controls .mejs-volume-slider .mejs-volume-current {
@@ -2795,7 +2806,7 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
     background: -o-linear-gradient(160deg, #017bfd 0%, #20bfe1 100%);
     background: -ms-linear-gradient(160deg, #017bfd 0%, #20bfe1 100%);
     background: linear-gradient(160deg, #017bfd 0%, #20bfe1 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#017bfd, endColorstr=#20bfe1, GradientType=1)
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#017bfd, endColorstr=#20bfe1, GradientType=1)
 }
 
 .scheme_default .trx_addons_video_player.with_cover .video_hover:after,
@@ -2806,7 +2817,7 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
     background: -o-linear-gradient(160deg, transparent 0%, transparent 100%);
     background: -ms-linear-gradient(160deg, transparent 0%, transparent 100%);
     background: linear-gradient(160deg, transparent 0%, transparent 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=transparent, endColorstr=transparent, GradientType=1)
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=transparent, endColorstr=transparent, GradientType=1)
 }
 
 .scheme_default .trx_addons_video_player.with_cover .video_hover:hover,
@@ -3626,7 +3637,7 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
     background: -o-linear-gradient(90deg, transparent 0%, transparent 100%);
     background: -ms-linear-gradient(90deg, transparent 0%, transparent 100%);
     background: linear-gradient(90deg, transparent 0%, transparent 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='transparent', endColorstr='transparent', GradientType=1);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='transparent', endColorstr='transparent', GradientType=1);
 }
 
 .scheme_default ul.trx_addons_list_custom>li:before {
@@ -4004,7 +4015,9 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
     color: #1aafe9
 }
 
+
 /* Attention! This widget placed in the content area and should use main text colors */
+
 .scheme_default .sc_recent_news_header {
     border-color: #ffffff
 }
@@ -4802,7 +4815,9 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
     border-color: #23293b
 }
 
+
 /* Sports:Matches and Players */
+
 .scheme_default .sc_sport_default .sc_sport_item_subtitle .sc_sport_item_date {
     color: #607290
 }
@@ -5321,7 +5336,7 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
 }
 
 .scheme_default .sc_services_light .sc_services_item:hover .sc_services_item_icon {
-    color: #ffffff
+    /* color: #ffffff */
 }
 
 .scheme_default .sc_services_light.color_style_link2 .sc_services_item_icon {
@@ -5827,7 +5842,9 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
     color: #070301
 }
 
+
 /* Skills (Counters) */
+
 .scheme_default .sc_skills_counter .sc_skills_icon {
     color: #ffffff
 }
@@ -5865,7 +5882,7 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
     background: -o-linear-gradient(160deg, transparent 0%, transparent 100%);
     background: -ms-linear-gradient(160deg, transparent 0%, transparent 100%);
     background: linear-gradient(160deg, transparent 0%, transparent 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=transparent, endColorstr=transparent, GradientType=1)
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=transparent, endColorstr=transparent, GradientType=1)
 }
 
 .scheme_default .cq-timeline.cq-timeline-border-small:before {
@@ -5875,7 +5892,7 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
     background: -o-linear-gradient(0deg, transparent 0%, transparent 100%);
     background: -ms-linear-gradient(0deg, transparent 0%, transparent 100%);
     background: linear-gradient(0deg, transparent 0%, transparent 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=transparent, endColorstr=transparent, GradientType=1)
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=transparent, endColorstr=transparent, GradientType=1)
 }
 
 .scheme_default .cq-timeline .cq-timeline-row.cq-timeline-style-aqua:nth-child(even) .cq-timeline-item .cq-timeline-contentcontainer .cq-timeline-content:after {
@@ -6525,7 +6542,7 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
     background: -o-linear-gradient(160deg, #017bfd 0%, #20bfe1 100%);
     background: -ms-linear-gradient(160deg, #017bfd 0%, #20bfe1 100%);
     background: linear-gradient(160deg, #017bfd 0%, #20bfe1 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#017bfd, endColorstr=#20bfe1, GradientType=1)
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#017bfd, endColorstr=#20bfe1, GradientType=1)
 }
 
 .scheme_default .give_error.give_warning strong {
@@ -6690,7 +6707,9 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
     color: #ffffff
 }
 
+
 /* ================= BUTTON'S HOVERS ==================== */
+
 .scheme_default .sc_button_hover_slide_left {
     background: linear-gradient(to right, #ffffff 50%, #1aafe9 50%) no-repeat scroll right bottom / 210% 100% #1aafe9 !important
 }
@@ -6889,7 +6908,9 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
     color: #050510 !important
 }
 
+
 /* ================= IMAGE'S HOVERS ==================== */
+
 .scheme_default .post_featured.hover_dots .icons span {
     background-color: #1aafe9
 }
