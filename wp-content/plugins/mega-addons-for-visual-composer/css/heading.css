@@ -1,0 +1,66 @@
+.mega-line-container h2 {
+	margin: 5px 0 0 0;
+}
+
+.mega-line-container p {
+	margin: 5px 0 0 0;
+}
+
+.mega-line-container .mega-line-top span {
+	display: inline-block;
+}
+
+.mega-line-container .mega-line-center span {
+	display: inline-table;
+}
+
+.mega-line-container .mega-line-bottom span {
+	display: inline-block;
+}
+
+.mega-line-icon .line-icon {
+	width: 230px;
+    display: inline-block;
+    border-top: 2px solid #ccc;
+    padding-right: 15px;
+}
+
+.mega-line-icon .line-icon i {
+	position: absolute;
+	font-size: 16px;
+	margin-top: -9px;
+	margin-left: -7px;
+	background: #fff;
+	padding: 0 7px;
+}
+
+.mega-line-icon .line-icon img {
+	width: 60px;
+	/*height: 60px;*/
+	position: absolute;
+	font-size: 16px;
+	margin-top: -30px;
+	margin-left: -15px;
+	background: #fff;
+	padding: 0 7px;
+}
+
+#mega-line-img .line-img {
+	width: 230px;
+    display: inline-block;
+    border-top: 2px solid #ccc;
+}
+
+.mega-line-icon h2 {
+	/*line-height: 4;*/
+}
+
+#mega-line-img .line-img img {
+	width: 48px;
+	position: absolute;
+	font-size: 16px;
+	margin-top: -25px;
+	margin-left: -30px;
+	background: #fff;
+	padding: 0 7px;
+}

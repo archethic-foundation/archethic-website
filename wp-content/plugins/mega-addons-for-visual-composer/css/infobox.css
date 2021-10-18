@@ -1,0 +1,119 @@
+.mega_info_box .mega-info-img {
+	display: block;
+	padding-bottom: 8px;
+	margin: 0 auto;
+}
+
+.mega_info_box i {
+	margin-bottom: 12px;
+}
+
+.mega_info_box i{
+	transition: background .5s ease, color .3s ease;
+}
+
+.mega_info_box {
+	text-align: center;
+	padding-bottom: 1px;
+}
+
+.mega_info_box .mega-info-title {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	/*font-weight: bold;*/
+	color: #444444;
+}
+
+.mega_info_box .mega-info-desc {
+	margin-bottom: 10px;
+	/*color: #444444;*/
+	text-align: center;
+}
+
+.mega_info_box .mega-info-btn {
+	text-decoration: none;
+	padding: 0;
+    font-size: 15px;
+	/*background: #DD3333;*/
+	color: #fff;
+	border-radius: 4px;
+}
+
+/* Style 2
+============================================*/
+
+.mega_info_box_2 {
+	/*margin-top: 17px;*/
+	padding-bottom: 1px;
+}
+.mega_info_box_2 .clearfix {
+	clear: both;
+}
+.mega_info_box_2 i{
+	transition: background .5s ease, color .3s ease;
+}
+
+.mega_info_box_2 .mega-info-header {
+	display: table-cell;
+	padding-right: 15px;
+	/*height: 80px;*/
+	float: left;
+}
+
+.mega_info_box_2 .mega-info-footer {
+	display: table-cell;
+    vertical-align: middle;
+}
+
+.mega_info_box_2 .mega-info-img {
+	padding-bottom: 20px;
+	display: block;
+}
+
+.mega_info_box_2 i {
+	/*margin-bottom: 20px;*/
+    text-align: center;
+}
+
+.mega_info_box_2 .mega-info-title {
+	margin-bottom: 6px;
+	margin-top: 0px;
+	/*font-weight: bold;*/
+	color: #444444;
+}
+
+.mega_info_box_2 .mega-info-desc {
+	color: #444444;
+}
+
+.mega_info_box_2 .mega-info-btn {
+	text-decoration: none;
+	/*padding: 4px 10px;*/
+	/*background: #DD3333;*/
+	color: #fff;
+	/*border-radius: 4px;*/
+	font-size: 15px;
+	margin-top: 12px;
+}
+.nonesss {
+	transition: all .2s cubic-bezier(.02,.54,.58,1);
+	border-radius: 4px 4px 4px 4px;
+	padding: 15px 15px;
+}
+.vc_info_box_shadow {
+	box-shadow: 0 10px 55px 5px rgba(137,173,255,.35);
+	border-radius: 4px 4px 4px 4px;
+	padding: 15px 15px;
+	/*margin-bottom: 10px;*/
+	transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s;
+	transition: all .2s cubic-bezier(.02,.54,.58,1);
+}
+.vc_info_box_hvr_shadow:hover {
+	box-shadow: 0 10px 55px 5px rgba(137,173,255,.35) !important;
+	border-radius: 4px 4px 4px 4px;
+	padding: 15px 15px;
+	/*margin-bottom: 10px;*/
+	-webkit-transform: translate3d(0,-20px,0);
+    -moz-transform: translate3d(0,-20px,0);
+    transform: translate3d(0,-20px,0);
+}

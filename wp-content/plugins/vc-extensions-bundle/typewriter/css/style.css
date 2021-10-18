@@ -1,0 +1,64 @@
+.cq-typewriter-container{
+  position: relative;
+  padding: 0;
+  height: 200px;
+  color: #fff;
+  overflow: hidden;
+  margin: 12px auto 0 auto;
+  background: #AAB2BD;
+
+
+}
+img.cq-typewriter-image{
+  position: absolute;
+  max-width: none;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.cq-typewriter-hiddentext{
+  display: none;
+}
+
+.cq-typewriter-container .typewriter-link, .cq-typewriter-container .typewriter-link:visited{
+  color: #fff;
+  text-decoration: none;
+}
+.cq-typewriter-container .typewriter-link:focus{
+  outline: none;
+}
+.cq-typewriter {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  top: 50%;
+  text-align: center;
+  font-size: 1.8em;
+  line-height: 150%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+
+  .cq-typewriter {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.2em;
+  }
+
+}
+@media only screen and (min-width: 160px) and (max-width: 319px) {
+
+  .cq-typewriter {
+    margin: 0 auto;
+    width: 90%;
+    font-size: 1.2em;
+  }
+}
+
+

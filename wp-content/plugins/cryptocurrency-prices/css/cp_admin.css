@@ -1,0 +1,17 @@
+.cyptocurrency_page_affiliate-panel #wpcontent {
+  background: #2466e5;
+}
+
+.cyptocurrency_page_affiliate-panel .wrap {
+  height: 87vh;
+  min-height: 736px;
+}
+
+.cyptocurrency_page_affiliate-panel #wpfooter,
+.cyptocurrency_page_affiliate-panel #wpfooter a {
+  color: white;
+}
+
+#dashboard-widgets-wrap .wrap {
+  height: 550px;
+}

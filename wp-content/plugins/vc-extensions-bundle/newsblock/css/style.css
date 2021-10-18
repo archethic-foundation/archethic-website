@@ -1,0 +1,122 @@
+.cq-newsblock {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: -webkit-flex;
+  display: flex;
+}
+.cq-newsblock-square {
+  border-radius: 0;
+}
+.cq-newsblock-rounded {
+  border-radius: 8px;
+}
+.cq-newsblock-round{
+  border-radius: 16px;
+}
+
+.cq-newsblock-name {
+  background-size: cover;
+  background-position: center center;
+  padding: 8px 0 8px 0;
+  min-width: 20%;
+  height: 100%;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cq-newsblock.cq-newsblock-align-right .cq-newsblock-name {
+  border-right: none;
+ }
+.cq-newsblock-wrapper{
+  display: inline-block;
+  display: -webkit-flex;
+  display: flex;
+  margin-left: 20px;
+  margin-right: 32px;
+}
+.cq-newsblock.cq-newsblock-align-right .cq-newsblock-wrapper {
+  margin-left: 42px;
+  margin-right: 0;
+ }
+.cq-newsblock-item {
+  height: auto;
+  padding: 16px 8px;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h4.cq-newsblock-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  display: block;
+  line-height: 120%;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+.cq-newsblock .cq-newsblock-content {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+.cq-newsblock .cq-newsblock-content p {
+    margin: 0 0 10px 0;
+}
+
+.cq-newsblock .cq-newsblock-label {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-style: italic;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  display: -webkit-flex;
+  display: flex;
+  width: 12px;
+  height: 24px;
+  margin-top: -22px;
+  z-index: 10;
+  cursor: pointer;
+  background-size: 12px 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cq-newsblock .swiper-button-nav {
+
+}
+.cq-newsblock .swiper-button-prev {
+  left: auto;
+  right: 20px;
+  transform: rotate(90deg);
+}
+.cq-newsblock.cq-newsblock-align-right .swiper-button-prev {
+  left: 20px;
+  right: auto;
+ }
+
+.cq-newsblock .swiper-button-next {
+  left: auto;
+  margin-top: 12px;
+  right: 20px;
+  transform: rotate(90deg);
+}
+.cq-newsblock.cq-newsblock-align-right .swiper-button-next {
+  left: 20px;
+  right: auto;
+ }
+
+.cq-newsblock-pagination {
+  position: absolute;
+  right: 0;
+}

@@ -1,0 +1,329 @@
+.cq-comparecard{
+  margin: 0 auto;
+}
+.cq-comparecard-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.cq-comparecard-item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative; /* for iOS */
+  width: 50%;
+  padding: 20px;
+  color: #586875;
+  background-color: #f4f7f7;
+  box-shadow: 0 10px 20px #0006;
+  animation-duration: 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+  -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+  -ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+  -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+  animation-fill-mode: forwards;
+}
+
+.cq-comparecard-in {
+  animation-name: cq-animate-in;
+}
+
+.cq-comparecard-out {
+  animation-name: cq-animate-out;
+}
+
+.cq-comparecard-transparent-yes .cq-comparecard-in {
+  animation-name: cq-animate-in-transparent;
+}
+.cq-comparecard-transparent-yes .cq-comparecard-out {
+  animation-name: cq-animate-out-transparent;
+}
+
+@keyframes cq-animate-in {
+  0% {
+    z-index: 1; /* start behind other card */
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: translateX(-16px);
+  }
+
+  100% {
+    z-index: 2; /* end in front of other card */
+    transform: translateX(0px) scale(1.1);
+  }
+
+}
+
+@keyframes cq-animate-out {
+  0% {
+    z-index: 2;  /* start in front of other card */
+    transform: translateX(16px) scale(1.1);
+  }
+
+  50% {
+    transform: translateX(-16px);
+  }
+
+  100% {
+    z-index: 1; /* end behind other card */
+    transform: scale(0.8);
+  }
+
+}
+
+@keyframes cq-animate-in-transparent {
+  0% {
+    z-index: 1; /* start behind other card */
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: translateX(-16px);
+  }
+
+  100% {
+    z-index: 2; /* end in front of other card */
+    transform: translateX(0px) scale(1.1);
+    opacity: 1;
+  }
+
+}
+
+@keyframes cq-animate-out-transparent {
+  0% {
+    z-index: 2;  /* start in front of other card */
+    transform: translateX(16px) scale(1.1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(-16px);
+  }
+
+  100% {
+    z-index: 1; /* end behind other card */
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+
+}
+
+
+.cq-comparecard-avatar {
+  display: block;
+  margin: 0 auto;
+  clear: right;
+  color: #666;
+  background-color: #fff;
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+  line-height: 80px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  text-align: center;
+  background-size: cover;
+  background-position: center center;
+}
+
+.cq-comparecard-avatar-40 .cq-comparecard-avatar{
+  width: 40px;
+  height: 40px;
+}
+.cq-comparecard-avatar-40 .cq-comparecard-icon {
+  line-height: 40px;
+}
+
+.cq-comparecard-avatar-60 .cq-comparecard-avatar{
+  width: 60px;
+  height: 60px;
+}
+.cq-comparecard-avatar-60 .cq-comparecard-icon {
+  line-height: 60px;
+}
+
+.cq-comparecard-avatar-80 .cq-comparecard-avatar{
+  width: 80px;
+  height: 80px;
+}
+.cq-comparecard-avatar-80 .cq-comparecard-icon {
+  line-height: 80px;
+}
+
+
+.cq-comparecard-avatar-100 .cq-comparecard-avatar{
+  width: 100px;
+  height: 100px;
+}
+.cq-comparecard-avatar-100 .cq-comparecard-icon {
+  line-height: 100px;
+}
+
+.cq-comparecard-avatar-120 .cq-comparecard-avatar{
+  width: 120px;
+  height: 120px;
+}
+.cq-comparecard-avatar-120 .cq-comparecard-icon {
+  line-height: 120px;
+}
+
+.cq-comparecard-avatar-160 .cq-comparecard-avatar{
+  width: 160px;
+  height: 160px;
+}
+.cq-comparecard-avatar-160 .cq-comparecard-icon {
+  line-height: 160px;
+}
+
+.cq-comparecard-avatar-200 .cq-comparecard-avatar{
+  width: 200px;
+  height: 200px;
+}
+.cq-comparecard-avatar-200 .cq-comparecard-icon {
+  line-height: 200px;
+}
+
+.cq-comparecard-avatar-240 .cq-comparecard-avatar{
+  width: 240px;
+  height: 240px;
+}
+.cq-comparecard-avatar-240 .cq-comparecard-icon {
+  line-height: 240px;
+}
+
+.cq-comparecard-avatar-320 .cq-comparecard-avatar{
+  width: 320px;
+  height: 320px;
+}
+.cq-comparecard-avatar-320 .cq-comparecard-icon {
+  line-height: 320px;
+}
+
+
+
+.cq-comparecard .cq-comparecard-title {
+  color: #333;
+  font-size: 1.5em;
+  width: 100%;
+  line-height: 130%;
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+.cq-comparecard .cq-comparecard-subtitle {
+  font-size: 1.2em;
+  width: 100%;
+  display: inline-block;
+  margin: 0 auto;
+  line-height: 160%;
+  text-align: center;
+}
+
+.cq-comparecard-icon {
+  position: relative;
+  width: 100%;
+  line-height: 80px;
+  display: block;
+}
+
+.cq-comparecard-buttoncontainer {
+  position: relative;
+  top: 12px;
+  bottom: 0;
+  margin-top: 36px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+
+.cq-comparecard-arrow, .cq-comparecard-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.cq-comparecard-button {
+  position: relative;
+  top: 50%;
+  width: 74px;
+  height: 36px;
+  margin: -20px auto 0 auto;
+  overflow: hidden;
+}
+
+.cq-comparecard-button, .cq-comparecard-button .cq-comparecard-bar {
+  border-radius: 100px;
+}
+
+.cq-comparecard-button.b2 {
+  border-radius: 2px;
+}
+
+.cq-comparecard-checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.cq-comparecard-arrow {
+  z-index: 2;
+}
+
+.cq-comparecard-bar {
+  width: 100%;
+  background-color: #ebf7fc;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+/* Button 1 */
+.cq-comparecard-button .cq-comparecard-arrow {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 100%;
+  padding: 9px 4px;
+  background-color: #03A9F4;
+  border-radius: 50%;
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+.cq-comparecard-arrow .entypo-icon-left-open-big{
+ display: none;
+}
+
+
+.cq-comparecard-button .cq-comparecard-checkbox:checked + .cq-comparecard-arrow .entypo-icon-right-open-big {
+  display: none;
+}
+.cq-comparecard-button .cq-comparecard-checkbox:checked + .cq-comparecard-arrow .entypo-icon-left-open-big {
+  display: inline-block;
+}
+
+.cq-comparecard-button .cq-comparecard-checkbox:checked + .cq-comparecard-arrow {
+  left: 42px;
+}
+
+.cq-comparecard-button .cq-comparecard-checkbox:checked ~ .cq-comparecard-bar {
+}
+
+.cq-comparecard-button .cq-comparecard-arrow, .cq-comparecard-button .cq-comparecard-bar {
+  transition: 0.3s ease all;
+}

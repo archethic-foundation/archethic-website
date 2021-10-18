@@ -1,0 +1,217 @@
+@import "../../../../assets/css/lvca-lib";
+.lvca-clients {
+  clear: both;
+  overflow: hidden;
+  margin: 0 auto;
+
+  @include grid-media($lvca-mobile-only-grid) {
+    .lvca-grid-mobile-1 {
+      .lvca-grid-item:nth-child(1n + 1) {
+        border-left: 1px solid #ddd;
+        }
+      .lvca-grid-item:nth-child(-n + 1) {
+        border-top: 1px solid #ddd;
+        }
+      }
+    .lvca-grid-mobile-2 {
+      .lvca-grid-item:nth-child(2n + 1) {
+        border-left: 1px solid #ddd;
+        }
+      .lvca-grid-item:nth-child(-n + 2) {
+        border-top: 1px solid #ddd;
+        }
+      }
+    .lvca-grid-mobile-3 {
+      .lvca-grid-item:nth-child(3n + 1) {
+        border-left: 1px solid #ddd;
+        }
+      .lvca-grid-item:nth-child(-n + 3) {
+        border-top: 1px solid #ddd;
+        }
+      }
+    .lvca-grid-mobile-4 {
+      .lvca-grid-item:nth-child(4n + 1) {
+        border-left: 1px solid #ddd;
+        }
+      .lvca-grid-item:nth-child(-n + 4) {
+        border-top: 1px solid #ddd;
+        }
+      }
+    .lvca-grid-mobile-5 {
+      .lvca-grid-item:nth-child(5n + 1) {
+        border-left: 1px solid #ddd;
+        }
+      .lvca-grid-item:nth-child(-n + 5) {
+        border-top: 1px solid #ddd;
+        }
+      }
+    .lvca-grid-mobile-6 {
+      .lvca-grid-item:nth-child(6n + 1) {
+        border-left: 1px solid #ddd;
+        }
+      .lvca-grid-item:nth-child(-n + 6) {
+        border-top: 1px solid #ddd;
+        }
+      }
+    }
+  @include grid-media($lvca-tablet-only-grid) {
+
+    .lvca-grid-tablet-1 {
+      .lvca-grid-item:nth-child(1n + 1) {
+        border-left: 1px solid #ddd;
+        }
+      .lvca-grid-item:nth-child(-n + 1) {
+        border-top: 1px solid #ddd;
+        }
+      }
+    .lvca-grid-tablet-2 {
+      .lvca-grid-item:nth-child(2n + 1) {
+        border-left: 1px solid #ddd;
+        }
+      .lvca-grid-item:nth-child(-n + 2) {
+        border-top: 1px solid #ddd;
+        }
+      }
+    .lvca-grid-tablet-3 {
+      .lvca-grid-item:nth-child(3n + 1) {
+        border-left: 1px solid #ddd;
+        }
+      .lvca-grid-item:nth-child(-n + 3) {
+        border-top: 1px solid #ddd;
+        }
+      }
+    .lvca-grid-tablet-4 {
+      .lvca-grid-item:nth-child(4n + 1) {
+        border-left: 1px solid #ddd;
+        }
+      .lvca-grid-item:nth-child(-n + 4) {
+        border-top: 1px solid #ddd;
+        }
+      }
+    .lvca-grid-tablet-5 {
+      .lvca-grid-item:nth-child(5n + 1) {
+        border-left: 1px solid #ddd;
+        }
+      .lvca-grid-item:nth-child(-n + 5) {
+        border-top: 1px solid #ddd;
+        }
+      }
+    .lvca-grid-tablet-6 {
+      .lvca-grid-item:nth-child(6n + 1) {
+        border-left: 1px solid #ddd;
+        }
+      .lvca-grid-item:nth-child(-n + 6) {
+        border-top: 1px solid #ddd;
+        }
+      }
+    }
+  @include grid-media($lvca-desktop-grid) {
+    .lvca-grid-desktop-1 {
+      .lvca-grid-item:nth-child(1n + 1) {
+        border-left: 1px solid #ddd;
+        }
+      .lvca-grid-item:nth-child(-n + 1) {
+        border-top: 1px solid #ddd;
+        }
+      }
+    .lvca-grid-desktop-2 {
+      .lvca-grid-item:nth-child(2n + 1) {
+        border-left: 1px solid #ddd;
+        }
+      .lvca-grid-item:nth-child(-n + 2) {
+        border-top: 1px solid #ddd;
+        }
+      }
+    .lvca-grid-desktop-3 {
+      .lvca-grid-item:nth-child(3n + 1) {
+        border-left: 1px solid #ddd;
+        }
+      .lvca-grid-item:nth-child(-n + 3) {
+        border-top: 1px solid #ddd;
+        }
+      }
+    .lvca-grid-desktop-4 {
+      .lvca-grid-item:nth-child(4n + 1) {
+        border-left: 1px solid #ddd;
+        }
+      .lvca-grid-item:nth-child(-n + 4) {
+        border-top: 1px solid #ddd;
+        }
+      }
+    .lvca-grid-desktop-5 {
+      .lvca-grid-item:nth-child(5n + 1) {
+        border-left: 1px solid #ddd;
+        }
+      .lvca-grid-item:nth-child(-n + 5) {
+        border-top: 1px solid #ddd;
+        }
+      }
+    .lvca-grid-desktop-6 {
+      .lvca-grid-item:nth-child(6n + 1) {
+        border-left: 1px solid #ddd;
+        }
+      .lvca-grid-item:nth-child(-n + 6) {
+        border-top: 1px solid #ddd;
+        }
+      }
+    }
+  .lvca-client {
+    position: relative;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    .lvca-dark-bg & {
+      border-color: #505050 !important;
+      }
+    img {
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      -moz-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+      width: 100%;
+      margin: 0;
+      display: block;
+      }
+    .lvca-client-name {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      margin-top: -12px;
+      color: #fff;
+      font-size: 18px;
+      line-height: 26px;
+      transition: opacity .4s ease-in-out 0s;
+      opacity: 0;
+      a {
+        color: #fff;
+        text-decoration: none;
+        }
+      }
+    .lvca-image-overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      filter: alpha(opacity=0);
+      -moz-opacity: 0;
+      opacity: 0;
+      transition: opacity .4s ease-in-out 0s;
+      }
+    &:hover {
+      .lvca-image-overlay {
+        opacity: 0.7;
+        .lvca-dark-bg & {
+          opacity: 0.8;
+          }
+        }
+      .lvca-client-name {
+        opacity: 1;
+        }
+      }
+    }
+  }

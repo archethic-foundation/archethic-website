@@ -1,0 +1,196 @@
+.cq-stepcard{
+}
+
+.cq-stepcard-item {
+  position: absolute;
+  margin: 0;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cq-stepcard-item p{
+  color: #333;
+  margin: 0;
+}
+.cq-stepcard-item .cq-stepcard-content{
+  position: relative;
+  overflow: hidden;
+  padding: 20px 20px 20px 20px;
+  height: 86%;
+}
+.cq-stepcard-item .cq-stepcard-text{
+  overflow: hidden;
+}
+.cq-stepcard-text p {
+  margin-top: 12px;
+  line-height: 150%;
+}
+
+.cq-stepcard-text p:first-child {
+  margin-top: 0;
+}
+.cq-stepcard-active {
+  opacity: 1;
+  transition: ease-in-out 0.6s;
+}
+
+.cq-stepcard-cardcontainer {
+  position: relative;
+  background: #fff;
+  border-radius: 5px;
+  height: 300px;
+  box-sizing: border-box;
+  transition: .3s ease;
+  box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.35);
+}
+.cq-stepcard-cardcontainer .cq-stepcard-stepcontainer {
+  background-color: rgba(204, 204, 204, 0.6);
+  height: 6px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0 0 5px 5px;
+}
+.cq-stepcard-transparent .cq-stepcard-cardcontainer .cq-stepcard-stepcontainer {
+  height: 0px;
+  background-color: none;
+}
+.cq-stepcard-cardcontainer .cq-stepcard-stepcontainer .cq-stepcard-step {
+  height: 6px;
+  border-radius: 0 0 0 5px;
+}
+
+
+.cq-stepcard-grapefruit .cq-stepcard-stepcontainer .cq-stepcard-step {
+  background-color: #ED5565;
+}
+.cq-stepcard-bittersweet .cq-stepcard-stepcontainer .cq-stepcard-step {
+  background-color: #FC6E51;
+}
+.cq-stepcard-sunflower .cq-stepcard-stepcontainer .cq-stepcard-step {
+  background-color: #FFCE54;
+}
+.cq-stepcard-grass .cq-stepcard-stepcontainer .cq-stepcard-step {
+  background-color: #A0D468;
+}
+.cq-stepcard-mint .cq-stepcard-stepcontainer .cq-stepcard-step {
+  background-color: #48CFAD;
+}
+.cq-stepcard-aqua .cq-stepcard-stepcontainer .cq-stepcard-step {
+  background-color: #4FC1E9;
+}
+.cq-stepcard-lavender .cq-stepcard-stepcontainer .cq-stepcard-step {
+  background-color: #AC92EC;
+}
+.cq-stepcard-bluejeans .cq-stepcard-stepcontainer .cq-stepcard-step {
+  background-color: #5D9CEC;
+}
+.cq-stepcard-pinkrose .cq-stepcard-stepcontainer .cq-stepcard-step {
+  background-color: #EC87C0;
+}
+.cq-stepcard-lightgray .cq-stepcard-stepcontainer .cq-stepcard-step {
+  background-color: #CCD1D9;
+}
+.cq-stepcard-darkgray .cq-stepcard-stepcontainer .cq-stepcard-step {
+  background-color: #656D78;
+}
+
+.cq-stepcard-samebg-yes.cq-stepcard-grapefruit .cq-stepcard-cardcontainer{
+  background-color: #ED5565;
+}
+.cq-stepcard-samebg-yes.cq-stepcard-bittersweet .cq-stepcard-cardcontainer{
+  background-color: #FC6E51;
+}
+.cq-stepcard-samebg-yes.cq-stepcard-sunflower .cq-stepcard-cardcontainer{
+  background-color: #FFCE54;
+}
+.cq-stepcard-samebg-yes.cq-stepcard-grass .cq-stepcard-cardcontainer{
+  background-color: #A0D468;
+}
+.cq-stepcard-samebg-yes.cq-stepcard-mint .cq-stepcard-cardcontainer{
+  background-color: #48CFAD;
+}
+.cq-stepcard-samebg-yes.cq-stepcard-aqua .cq-stepcard-cardcontainer{
+  background-color: #4FC1E9;
+}
+.cq-stepcard-samebg-yes.cq-stepcard-lavender .cq-stepcard-cardcontainer{
+  background-color: #AC92EC;
+}
+.cq-stepcard-samebg-yes.cq-stepcard-bluejeans .cq-stepcard-cardcontainer{
+  background-color: #5D9CEC;
+}
+.cq-stepcard-samebg-yes.cq-stepcard-pinkrose .cq-stepcard-cardcontainer{
+  background-color: #EC87C0;
+}
+.cq-stepcard-samebg-yes.cq-stepcard-lightgray .cq-stepcard-cardcontainer{
+  background-color: #CCD1D9;
+}
+.cq-stepcard-samebg-yes.cq-stepcard-darkgray .cq-stepcard-cardcontainer{
+  background-color: #656D78;
+}
+
+
+
+.cq-stepcard-cardbar {
+  height: 8px;
+  border-radius: 5px 5px 0 0;
+  padding: 0;
+  box-shadow: none;
+}
+.cq-stepcard-grapefruit .cq-stepcard-cardbar {
+  background-color: #DA4453;
+}
+.cq-stepcard-bittersweet .cq-stepcard-cardbar {
+  background-color: #E9573F;
+}
+.cq-stepcard-sunflower .cq-stepcard-cardbar {
+  background-color: #F6BB42;
+}
+.cq-stepcard-grass .cq-stepcard-cardbar {
+  background-color: #8CC152;
+}
+.cq-stepcard-mint .cq-stepcard-cardbar {
+  background-color: #37BC9B;
+}
+.cq-stepcard-aqua .cq-stepcard-cardbar {
+  background-color: #3BAFDA;
+}
+.cq-stepcard-lavender .cq-stepcard-cardbar {
+  background-color: #967ADC;
+}
+.cq-stepcard-bluejeans .cq-stepcard-cardbar {
+  background-color: #4A89DC;
+}
+.cq-stepcard-pinkrose .cq-stepcard-cardbar {
+  background-color: #D770AD;
+}
+.cq-stepcard-lightgray .cq-stepcard-cardbar {
+  background-color: #E6E9ED;
+}
+.cq-stepcard-darkgray .cq-stepcard-cardbar {
+  background-color: #434A54;
+}
+
+.cq-stepcard-item .cq-stepcard-button{
+  font-size: 1em;
+}
+.cq-stepcard-nextstep{
+  display: inline-block;
+  position: absolute;
+  line-height: 100%;
+  bottom: 12px;
+}
+.cq-stepcard-nextstep.cq-stepcard-btnright{
+  right: 20px;
+}
+.cq-stepcard-nextstep.cq-stepcard-btnleft{
+  left: 20px;
+}
+.cq-stepcard .cq-stepcard-icon{
+  display: inline-block;
+  line-height: 100%;
+}

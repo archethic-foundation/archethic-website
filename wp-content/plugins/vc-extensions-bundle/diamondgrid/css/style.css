@@ -1,0 +1,152 @@
+.cq-diamondgrid-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cq-diamondgrid-link{
+  text-decoration: none;
+  outline: none;
+  border: 0;
+}
+
+.cq-diamondgrid-small, .cq-diamondgrid-large {
+  list-style-type: none;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: relative;
+  height: 235px;
+  width: 235px;
+  margin: 50px;
+  padding: 0;
+}
+.cq-diamondgrid-small .cq-diamondgrid-itemcontainer, .cq-diamondgrid-large .cq-diamondgrid-itemcontainer {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  position: absolute;
+  overflow: hidden;
+  cursor: pointer;
+}
+.cq-diamondgrid-small .cq-diamondgrid-itemcontainer:hover .cq-diamondgrid-item, .cq-diamondgrid-large .cq-diamondgrid-itemcontainer:hover .cq-diamondgrid-item {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.cq-diamondgrid-small .cq-diamondgrid-itemcontainer .cq-diamondgrid-item, .cq-diamondgrid-large .cq-diamondgrid-itemcontainer .cq-diamondgrid-item, .cq-diamondgrid-small .cq-diamondgrid-itemcontainer .cq-diamondgrid-icon, .cq-diamondgrid-large .cq-diamondgrid-itemcontainer .cq-diamondgrid-icon {
+  display: block;
+  width: 150%;
+  height: 150%;
+  margin-top: -25px;
+  margin-left: -25px;
+  background-size: cover;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.cq-diamondgrid-small .cq-diamondgrid-itemcontainer:first-child, .cq-diamondgrid-large .cq-diamondgrid-itemcontainer:first-child {
+  top: 0;
+  left: 0;
+}
+.cq-diamondgrid-small .cq-diamondgrid-itemcontainer:nth-child(2), .cq-diamondgrid-large .cq-diamondgrid-itemcontainer:nth-child(2) {
+  bottom: 0;
+  left: 0;
+}
+.cq-diamondgrid-small .cq-diamondgrid-itemcontainer:nth-child(3), .cq-diamondgrid-large .cq-diamondgrid-itemcontainer:nth-child(3) {
+  top: 0;
+  right: 0;
+}
+.cq-diamondgrid-small .cq-diamondgrid-itemcontainer:last-child, .cq-diamondgrid-large .cq-diamondgrid-itemcontainer:last-child {
+  bottom: 0;
+  right: 0;
+}
+
+.cq-diamondgrid-large {
+  height: 335px;
+  width: 335px;
+}
+.cq-diamondgrid-large .cq-diamondgrid-itemcontainer {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}
+.cq-diamondgrid-large .cq-diamondgrid-itemcontainer .cq-diamondgrid-item, .cq-diamondgrid-large .cq-diamondgrid-itemcontainer .cq-diamondgrid-icon {
+  width: 150%;
+  height: 150%;
+  margin-top: -33px;
+  margin-left: -33px;
+}
+
+.cq-diamondgrid-item {
+  background-position: center;
+  z-index: 2;
+}
+
+.cq-diamondgrid-container .cq-diamondgrid-icon {
+  color: #fff;
+  z-index: 1;
+  display: inline-block;
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+}
+.cq-diamondgrid-icon:before {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+.cq-diamondgrid-large .cq-diamondgrid-icon:before {
+  top: 43%;
+  left: 43%;
+}
+
+@media screen and (max-width: 1240px) {
+  .cq-diamondgrid-small, .cq-diamondgrid-large {
+    height: 180px;
+    width: 180px;
+    margin: 40px;
+  }
+  .cq-diamondgrid-small .cq-diamondgrid-itemcontainer, .cq-diamondgrid-large .cq-diamondgrid-itemcontainer {
+    height: 75px;
+    width: 75px;
+  }
+  .cq-diamondgrid-small .cq-diamondgrid-itemcontainer .cq-diamondgrid-item, .cq-diamondgrid-large .cq-diamondgrid-itemcontainer .cq-diamondgrid-item, .cq-diamondgrid-small .cq-diamondgrid-itemcontainer .cq-diamondgrid-icon, .cq-diamondgrid-large .cq-diamondgrid-itemcontainer .cq-diamondgrid-icon {
+    margin-top: -20px;
+    margin-left: -20px;
+  }
+
+  .cq-diamondgrid-large {
+    height: 280px;
+    width: 280px;
+  }
+  .cq-diamondgrid-large .cq-diamondgrid-itemcontainer {
+    height: 125px;
+    width: 125px;
+  }
+  .cq-diamondgrid-large .cq-diamondgrid-itemcontainer .cq-diamondgrid-item, .cq-diamondgrid-large .cq-diamondgrid-itemcontainer .cq-diamondgrid-icon {
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+
+  .cq-diamondgrid-icon {
+    font-size: 24px;
+  }
+}
+
+

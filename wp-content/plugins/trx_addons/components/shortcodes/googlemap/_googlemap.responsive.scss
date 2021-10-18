@@ -1,0 +1,16 @@
+@mixin sc_googlemap--md() {
+    /* Google Map */
+	.sc_googlemap {
+		max-height:60vh;
+	}
+
+	.sc_googlemap_content_default {
+		left: 7%;
+		right: 14%;
+		top: auto;
+		bottom: 7%;
+		width: auto;
+		max-height: 40%;
+		padding: 1em;
+	}
+}

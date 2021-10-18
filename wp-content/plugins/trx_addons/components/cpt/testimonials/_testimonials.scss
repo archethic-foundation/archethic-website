@@ -1,0 +1,99 @@
+.sc_testimonials_columns_wrap {
+	@include flex;
+	@include flex-wrap(wrap);
+}
+.sc_testimonials_slider .sc_testimonials_item,
+.sc_testimonials_columns_wrap .sc_testimonials_item {
+	display:inline-block;
+	vertical-align:top;
+	@include box(100%, 100%);
+	@include border-box;
+}
+.sc_testimonials_slider .sc_testimonials_item {
+	height: 95%;
+}
+
+.sc_testimonials {
+	position: relative;	
+}
+
+.sc_testimonials_item_content {
+	text-align:center;
+	@include font(1.1333em, 1.8824em, 400, normal);
+}
+.sc_testimonials [class*="column"] .sc_testimonials_item_content {
+	text-align: left;
+	@include font(1em, 1.4em);
+}
+.sc_testimonials_item_content:before {
+	content: '\e8b8';
+	font-family: $trx_addons_icons;
+	@include font(1.5em, 1.5em);
+	color: #efa758;
+	display:block;
+	margin-bottom:0.6em;
+}
+.sc_testimonials_item_content p {
+	margin:0;
+}
+.sc_testimonials_item_content p+p {
+	margin-top:1em;
+}
+
+.sc_testimonials_item_author {
+	margin:0.6em auto 0;
+	max-width:none;
+	padding: 1.5em 0.5em 1.5em 1.3em;
+	background-color:transparent;
+	color: #fff;
+	text-align:center;
+	@include border-box;
+}
+.sc_testimonials [class*="column"] .sc_testimonials_item_author {
+	text-align:left;
+	padding-left:0;
+}
+.sc_testimonials_item_author_avatar,
+.sc_testimonials_item_author_data {
+	display:inline-block;
+	vertical-align:middle;
+}
+.sc_testimonials_item_author_avatar {
+	overflow:hidden;
+	margin: 0 1.3em 0 0.6em;
+	@include box(5em, 5em);
+	@include border-round;
+}
+.sc_testimonials_item_author_data {
+	max-width:50%;
+}
+.sc_testimonials_item_author_title {
+	margin: 0;
+	color: #fff;
+	font-size: 1.0667em;
+	font-style:italic;
+	letter-spacing:0;
+	text-transform:none;
+}
+.sc_testimonials_item_author_title + .sc_testimonials_item_author_subtitle {
+	margin-top: 0.1em;
+	color: #ddd;
+	@include font(0.9286em, 1.3em);
+}
+
+.sc_testimonials_simple .sc_testimonials_item_author_data:before {
+	content: ' ';
+	@include box(1px, 1.5em);
+	margin: 1.3em auto;
+	background-color: #ddd;
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.sc_testimonials_simple [class*="column"] .sc_testimonials_item_author_data {
+	border-left: 1px solid #ddd;
+	padding-left: 1.5em;
+}
+.sc_testimonials_simple [class*="column"] .sc_testimonials_item_author_data:before {
+	display:none;
+}

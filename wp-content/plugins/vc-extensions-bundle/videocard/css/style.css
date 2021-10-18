@@ -1,0 +1,170 @@
+.cq-videocard-card {
+  background: #232323;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  min-height: 280px;
+  -webkit-transition: -webkit-transform .5s ease .25s;
+  transition: -webkit-transform .5s ease .25s;
+  transition: transform .5s ease .25s;
+  transition: transform .5s ease .25s, -webkit-transform .5s ease .25s;
+}
+.cq-videocard .cq-videocard-icon{
+  font-size: 30px;
+  text-align: center;
+  color: #333;
+  background-color: #EFEFEF;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.cq-videocard.cq-videocard-hidetextbydefault .cq-videocard-content{
+  opacity: 1;
+}
+
+.cq-videocard.cq-videocard-hidetextbyhover .cq-videocard-content{
+  opacity: 0;
+}
+.cq-videocard.cq-videocard-hidetextbydefault .cq-videocard-video{
+  -webkit-filter: grayscale(1) blur(4px);
+  filter: grayscale(1) blur(4px);
+}
+
+.cq-videocard.cq-videocard-hidetextbyhover .cq-videocard-video{
+  -webkit-filter: grayscale(0) blur(0);
+  filter: grayscale(0) blur(0);
+}
+
+.cq-videocard.cq-videocard-hidetextbydefault .cq-videocard-card:hover .cq-videocard-content{
+  opacity: 0;
+  z-index: -1;
+}
+.cq-videocard.cq-videocard-hidetextbyhover .cq-videocard-card:hover .cq-videocard-content{
+  opacity: 1;
+}
+.cq-videocard.cq-videocard-hidetextbydefault .cq-videocard-card:hover .cq-videocard-video{
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+  opacity: 1;
+}
+.cq-videocard.cq-videocard-hidetextbyhover .cq-videocard-card:hover .cq-videocard-video{
+  -webkit-filter: grayscale(1) blur(4px);
+  filter: grayscale(1) blur(4px);
+  opacity: 1;
+}
+.cq-videocard-card:hover .cq-videocard-video .mbYTP_wrapper{
+}
+.cq-videocard-card:hover .cq-videocard-video::after{
+}
+
+.cq-videocard-content {
+  font-size: 16px;
+  color: #FFF;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  -webkit-transition: opacity 0.3s ease-out 0.1s;
+  transition: opacity 0.3s ease-out 0.1s;
+}
+.cq-videocard-content h3, .cq-videocard-content h4, .cq-videocard-content h5{
+  margin: 0 0 12px 0;
+  font-size: 1.5em;
+  color: #FFF;
+  line-height: 120%;
+}
+.cq-videocard-content .cq-videocard-header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px;
+}
+.cq-videocard-content .cq-videocard-header .cq-videocard-avatar {
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+  background-size: cover;
+  background-position: center;
+  margin-right: 10px;
+}
+.cq-videocard-content .cq-videocard-header .cq-videocard-avatartext .cq-videocard-avatarname {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.cq-videocard-content .cq-videocard-header .cq-videocard-avatartext .cq-videocard-avatarlabel {
+  font-style: italic;
+  font-size: 14px;
+}
+.cq-videocard-content .cq-videocard-header .cq-videocard-avatartext .cq-videocard-avatarlabel a {
+  color: #787878;
+  text-decoration: none;
+}
+.cq-videocard-content .cq-videocard-text {
+  font-weight: 200;
+  padding: 0 30px 30px 30px;
+  line-height: 1.6;
+  text-shadow: 0 5px 1px rgba(0, 0, 0, 0.125);
+}
+.cq-videocard-content .cq-videocard-extra {
+  line-height: 120%;
+  padding: 0px 30px 24px 30px;
+  color: #FFF;
+  font-size: 13px;
+}
+.cq-videocard-content p:last-child{
+  margin-bottom: 0;
+}
+
+.cq-videocard-video {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  color: rbga(0, 0, 0, 0);
+  -webkit-transition: -webkit-filter .25s ease .125s;
+  transition: -webkit-filter .25s ease .125s;
+  transition: filter .25s ease .125s;
+  transition: filter .25s ease .125s, -webkit-filter .25s ease .125s;
+}
+.cq-videocard-video::after {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+100 */
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(35, 35, 35, 0) 0%, #232323 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(35, 35, 35, 0) 0%, #232323 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+  /* IE6-9 */
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: opacity .25s ease .125s;
+  transition: opacity .25s ease .125s;
+}
+
+.mb_YTPTime {
+  display: none;
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .cq-videocard-video .mbYTP_wrapper{
+    z-index: 1000!important;
+  }
+}
+
+

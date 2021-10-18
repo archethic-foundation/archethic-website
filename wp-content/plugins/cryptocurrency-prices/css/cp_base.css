@@ -1,0 +1,111 @@
+@media screen and (min-width: 640px) {
+
+  .dataTables_wrapper .top,
+  .dataTables_wrapper .bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+  }
+}
+
+.dataTables_wrapper input[type="text"],
+.dataTables_wrapper input[type="email"],
+.dataTables_wrapper input[type="url"],
+.dataTables_wrapper input[type="password"],
+.dataTables_wrapper input[type="search"],
+.dataTables_wrapper input[type="number"],
+.dataTables_wrapper input[type="tel"],
+.dataTables_wrapper input[type="range"],
+.dataTables_wrapper input[type="date"],
+.dataTables_wrapper input[type="month"],
+.dataTables_wrapper input[type="week"],
+.dataTables_wrapper input[type="time"],
+.dataTables_wrapper input[type="datetime"],
+.dataTables_wrapper input[type="datetime-local"],
+.dataTables_wrapper input[type="color"],
+.dataTables_wrapper textarea,
+.dataTables_wrapper select {
+  padding: 0.2rem 0.6rem;
+  line-height: 1;
+  height: auto;
+}
+
+
+.cp-table {
+  max-width: 100%;
+  font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+  text-decoration: none !important;
+}
+
+.cp-table thead {
+  background-image: url("DataTables-1.10.18/images/sort_both.png");
+  font-size: 0.9rem;
+}
+
+.cp-table tr img {
+  vertical-align: text-top;
+}
+
+/* 2 = Coin Column */
+.cp-table tr td:nth-of-type(2) {
+  color: #414141;
+  font-weight: bold;
+}
+
+/* 6 = Market Cap Column */
+.cp-table tr td:nth-of-type(6) {
+  text-align: right;
+  padding-right: 3%;
+}
+
+
+
+
+.cp-table a img {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-decoration: none !important;
+}
+
+.dataTables_wrapper .dataTables_paginate.paging_simple {
+  padding: 0;
+}
+
+.dataTables_powered_by {
+  padding: 0;
+  margin-left: 1rem;
+  font-size: 0.6rem;
+  color: gray;
+}
+
+.dataTables_powered_by a {
+  color: inherit;
+  box-shadow: none !important;
+  text-decoration: none;
+}
+
+.dataTables_wrapper .bottom .dataTables_paginate .paginate_button {
+  padding: 0.1em 0.6em;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous {
+  display: none;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  min-width: 170px;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.dataTables_info {
+  display: block !important;
+}
+
+
+
+.table.dataTable thead {
+  font-size: 50% !important;
+}

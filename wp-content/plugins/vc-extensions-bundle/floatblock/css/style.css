@@ -1,0 +1,212 @@
+.cq-floatblock {
+  opacity: 0;
+  position: fixed;
+  z-index: 999999;
+  width: 300px;
+  background: rgba(255,255,255,1);
+  box-shadow: 0 15px 35px rgba(50,50,90,0.1), 0 5px 15px rgba(0,0,0,0.07);
+}
+.cq-floatblock-shape-round{
+  border-radius: 4px;
+}
+.cq-floatblock-shape-rounded{
+  border-radius: 8px;
+}
+.cq-floatblock-shape-round .cq-floatblock-image{
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.cq-floatblock-shape-rounded .cq-floatblock-image{
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+
+.cq-floatblock.cq-floatblock-position-right_center{
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0;
+}
+.cq-floatblock.cq-floatblock-position-right_top{
+  top: 36px;
+  right: 0;
+}
+.cq-floatblock.cq-floatblock-position-right_bottom{
+  bottom: 32px;
+  right: 0;
+}
+
+.cq-floatblock.cq-floatblock-position-left_center{
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+}
+.cq-floatblock.cq-floatblock-position-left_top{
+  top: 36px;
+  left: 0;
+}
+.cq-floatblock.cq-floatblock-position-left_bottom{
+  left: 0;
+  bottom: 12px;
+}
+
+
+
+
+.cq-floatblock-header,
+.cq-floatblock-header .cq-floatblock-image {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.cq-floatblock-button {
+  position: absolute;
+  padding: 10px;
+  background: #4A89DC;
+  border-radius: 100%;
+  box-shadow: 1px 1px 8px 1px rgba(1,1,1,.3);
+  cursor: pointer;
+  transition: ease .2s;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+.cq-floatblock-btn-small .cq-floatblock-button {
+  padding: 6px;
+  bottom: -16px;
+}
+.cq-floatblock-btn-medium .cq-floatblock-button {
+  padding: 10px;
+  bottom: -20px;
+}
+.cq-floatblock-btn-large .cq-floatblock-button {
+  padding: 16px;
+  bottom: -24px;
+}
+.cq-floatblock-position-right_top .cq-floatblock-button{
+  right: 15px;
+}
+.cq-floatblock-position-right_center .cq-floatblock-button{
+  right: 15px;
+}
+.cq-floatblock-position-right_bottom .cq-floatblock-button{
+  right: 15px;
+}
+.cq-floatblock-position-left_top .cq-floatblock-button{
+  left: 15px;
+}
+.cq-floatblock-position-left_center .cq-floatblock-button{
+  left: 15px;
+}
+.cq-floatblock-position-left_bottom .cq-floatblock-button{
+  left: 15px;
+}
+
+
+.cq-floatblock-iconcontainer {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 100%;
+}
+.cq-floatblock-iconcontainer .cq-floatblock-icon {
+  color: #FFF;
+  display: inline-block;
+  background-color: none;
+  width: 100%;
+  line-height: 20px;
+  font-size: 16px;
+  text-align: center;
+  text-align: center;
+}
+
+.cq-floatblock-title h3 {
+  margin: 0;
+  padding: 14px 20px;
+  font-size: 1.6em;
+  line-height: 140%;
+  font-weight: 300;
+  letter-spacing: .06em;
+  color: #FFF;
+  background: #673AB7;
+}
+
+.cq-floatblock-title.cq-floatblock-mint h3 {
+    background-color: #37BC9B;
+}
+.cq-floatblock-title.cq-floatblock-bittersweet h3 {
+    background-color: #E9573F;
+}
+.cq-floatblock-title.cq-floatblock-grass h3 {
+    background-color: #8CC152;
+}
+.cq-floatblock-title.cq-floatblock-sunflower h3 {
+    background-color: #F6BB42;
+}
+.cq-floatblock-title.cq-floatblock-grapefruit h3 {
+    background-color: #DA4453;
+}
+.cq-floatblock-title.cq-floatblock-pinkrose h3 {
+    background-color: #D770AD;
+}
+.cq-floatblock-title.cq-floatblock-darkgray h3 {
+    background-color: #434A54;
+}
+.cq-floatblock-title.cq-floatblock-mediumgray h3 {
+    background-color: #AAB2BD;
+}
+.cq-floatblock-title.cq-floatblock-lightgray h3 {
+    background-color: #E6E9ED;
+}
+.cq-floatblock-title.cq-floatblock-bluejeans h3 {
+    background-color: #4A89DC;
+}
+.cq-floatblock-title.cq-floatblock-lavender h3 {
+    background-color: #967ADC;
+}
+.cq-floatblock-title.cq-floatblock-aqua h3 {
+    background-color: #3BAFDA;
+}
+.cq-floatblock-title.cq-floatblock-white h3 {
+    color: #333;
+    background-color: #FFF;
+}
+.cq-floatblock-title.cq-floatblock-transparent h3 {
+    color: #333;
+    background-color: none;
+}
+
+
+.cq-floatblock-content {
+  padding: 20px 20px;
+}
+
+.cq-floatblock-content p {
+  margin: 0;
+  padding: 6px 0;
+  font-size: .84em;
+}
+
+.cq-floatblock-content a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px 0;
+  padding: 8px;
+  font-size: .9em;
+  color: #5E35B1;
+  border: 1px solid #5E35B1;
+  transition: ease .8s;
+}
+
+.cq-floatblock-content a:hover {
+  color: #ffffff;
+  background: #9575CD;
+}

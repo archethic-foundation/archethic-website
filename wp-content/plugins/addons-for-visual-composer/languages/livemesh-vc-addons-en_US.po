@@ -1,0 +1,3677 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Events Calendar Slider\n"
+"POT-Creation-Date: 2018-06-29 13:09+0530\n"
+"PO-Revision-Date: 2018-06-29 13:09+0530\n"
+"Last-Translator: LiveMesh\n"
+"Language-Team: LiveMesh\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.10\n"
+"X-Poedit-KeywordsList: __;_e;_x;_n;esc_attr__;esc_attr_e;esc_html__;"
+"esc_html_e;_nx_noop\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/admin-ajax.php:56
+msgid "Sorry, an error occurred. Please refresh the page."
+msgstr ""
+
+#: admin/admin-ajax.php:82
+msgid "Sorry, an unknown error occurred..."
+msgstr ""
+
+#: admin/admin-ajax.php:123
+msgid "Saving plugin settings"
+msgstr ""
+
+#: admin/admin-ajax.php:124
+msgid "Plugin settings Saved"
+msgstr ""
+
+#: admin/admin-ajax.php:125
+msgid "Sorry, an error occurs while saving settings..."
+msgstr ""
+
+#: admin/admin-ajax.php:128
+msgid "Resetting plugin settings"
+msgstr ""
+
+#: admin/admin-ajax.php:129
+msgid "Plugin settings resetted"
+msgstr ""
+
+#: admin/admin-ajax.php:130
+msgid "Sorry, an error occurred while resetting settings"
+msgstr ""
+
+#: admin/admin-init.php:66 admin/views/admin-banner1.php:13
+#: admin/views/admin-banner2.php:13
+msgid "WPBakery Page Builder Addons"
+msgstr ""
+
+#: admin/admin-init.php:67 admin/views/documentation.php:198
+msgid "WPBakery Addons"
+msgstr ""
+
+#: admin/admin-init.php:77
+msgid "WPBakery Page Builder Addons Settings"
+msgstr ""
+
+#: admin/admin-init.php:78 includes/addons/heading/class-lvca-heading.php:129
+#: includes/addons/heading/class-lvca-heading.php:142
+#: includes/addons/heading/class-lvca-heading.php:150
+#: includes/addons/premium/button/class-lvca-button.php:353
+#: includes/addons/premium/button/class-lvca-button.php:360
+#: includes/addons/premium/button/class-lvca-button.php:366
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:543
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:560
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:569
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:578
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:591
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:604
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:613
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:626
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:639
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:648
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:659
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:670
+#: includes/addons/premium/slider/class-lvca-slider.php:154
+#: includes/addons/premium/slider/class-lvca-slider.php:167
+#: includes/addons/premium/slider/class-lvca-slider.php:176
+#: includes/addons/premium/slider/class-lvca-slider.php:185
+#: includes/addons/premium/slider/class-lvca-slider.php:194
+#: includes/addons/premium/slider/class-lvca-slider.php:203
+#: includes/addons/premium/slider/class-lvca-slider.php:212
+#: includes/addons/premium/slider/class-lvca-slider.php:221
+#: includes/addons/premium/slider/class-lvca-slider.php:230
+#: includes/addons/premium/slider/class-lvca-slider.php:241
+#: includes/addons/premium/slider/class-lvca-slider.php:252
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:334
+#: includes/addons/services/class-lvca-services.php:403
+#: includes/addons/team/class-lvca-team.php:373
+#: includes/addons/testimonials/class-lvca-testimonials.php:216
+msgid "Settings"
+msgstr ""
+
+#: admin/admin-init.php:87
+msgid "WPBakery Page Builder Addons Documentation"
+msgstr ""
+
+#: admin/admin-init.php:88
+msgid "Documentation"
+msgstr ""
+
+#: admin/views/admin-banner1.php:13
+msgid "Plugin Documentation"
+msgstr ""
+
+#: admin/views/admin-banner2.php:13
+msgid "Plugin Settings"
+msgstr ""
+
+#: admin/views/admin-banner2.php:16
+msgid "Save Settings"
+msgstr ""
+
+#: admin/views/admin-banner2.php:18
+msgid "Reset"
+msgstr ""
+
+#: admin/views/documentation.php:32
+#, php-format
+msgid "Getting started with %1$s v%2$s"
+msgstr ""
+
+#: admin/views/documentation.php:34
+#, php-format
+msgid ""
+"Thanks for installing %1$s! We truly appreciate the support and the "
+"opportunity to share our work with you. Please visit the tabs below to get "
+"started on using our plugin to build your site!"
+msgstr ""
+
+#: admin/views/documentation.php:42
+msgid "Help File"
+msgstr ""
+
+#: admin/views/documentation.php:45
+msgid "Plugins"
+msgstr ""
+
+#: admin/views/documentation.php:49
+msgid "FAQ &amp; Support"
+msgstr ""
+
+#: admin/views/documentation.php:53
+msgid "Latest Updates"
+msgstr ""
+
+#: admin/views/documentation.php:119 admin/views/documentation.php:202
+msgid "WPBakery Addons→Settings"
+msgstr ""
+
+#: admin/views/documentation.php:133 admin/views/documentation.php:180
+msgid "Tools→Import"
+msgstr ""
+
+#: admin/views/documentation.php:1125
+msgid "WPBakery Page Builder"
+msgstr ""
+
+#: admin/views/documentation.php:1128
+msgid "Install WPBakery Page Builder"
+msgstr ""
+
+#: admin/views/documentation.php:1129 admin/views/documentation.php:1153
+msgid "Install Now"
+msgstr ""
+
+#: admin/views/documentation.php:1133 admin/views/documentation.php:1157
+msgid "Installed"
+msgstr ""
+
+#: admin/views/documentation.php:1149
+msgid "Portfolio Post Type"
+msgstr ""
+
+#: admin/views/documentation.php:1152
+msgid "Install Portfolio Post Type"
+msgstr ""
+
+#: admin/views/documentation.php:1399
+msgid "Why upgrade to Premium version?"
+msgstr ""
+
+#: admin/views/documentation.php:1400
+msgid ""
+"Premium version offers multiple benefits - more addon elements, advanced "
+"features for addons including those part of the free plugin and priority "
+"support through a dedicated support forum."
+msgstr ""
+
+#: admin/views/documentation.php:1404 admin/views/settings.php:729
+msgid "Know More"
+msgstr ""
+
+#: admin/views/documentation.php:1404
+msgid "Know More Details"
+msgstr ""
+
+#: admin/views/documentation.php:1417
+#: includes/addons/team/social-profile.php:12
+msgid "Contact Us"
+msgstr ""
+
+#: admin/views/documentation.php:1427
+msgid "Write to Us"
+msgstr ""
+
+#: admin/views/settings.php:93
+msgid "General"
+msgstr ""
+
+#: admin/views/settings.php:96
+msgid "Elements"
+msgstr ""
+
+#: admin/views/settings.php:99 admin/views/settings.php:533
+#: admin/views/settings.php:539
+msgid "Custom CSS"
+msgstr ""
+
+#: admin/views/settings.php:102
+msgid "Debugging"
+msgstr ""
+
+#: admin/views/settings.php:105 admin/views/settings.php:606
+msgid "Premium Version"
+msgstr ""
+
+#: admin/views/settings.php:115
+msgid "Theme Colors"
+msgstr ""
+
+#: admin/views/settings.php:120
+msgid "Theme Color Scheme"
+msgstr ""
+
+#: admin/views/settings.php:121
+msgid ""
+"Most themes use a single color as a major color across the site. This color "
+"is often used for links, titles, buttons, icons, highlights etc. <br> To "
+"maintain the consistent look with the theme, specify the default color used "
+"by the theme activated on your site. This color will be applied to the addon "
+"elements by default. <br>The hover color refers to the color set for links "
+"on mouse hover."
+msgstr ""
+
+#: admin/views/settings.php:128
+msgid "Theme Color"
+msgstr ""
+
+#: admin/views/settings.php:129
+msgid "Select the default theme color."
+msgstr ""
+
+#: admin/views/settings.php:140
+msgid "Theme Hover Color"
+msgstr ""
+
+#: admin/views/settings.php:141
+msgid "Select the default hover color for your theme."
+msgstr ""
+
+#: admin/views/settings.php:165
+msgid "Optimize Plugin"
+msgstr ""
+
+#: admin/views/settings.php:173
+msgid "Deactivate elements for better performance"
+msgstr ""
+
+#: admin/views/settings.php:175
+msgid ""
+"You can deactivate those elements that you do not intend to use to avoid "
+"loading scripts and files related to those elements."
+msgstr ""
+
+#: admin/views/settings.php:183
+msgid "Deactivate Accordion"
+msgstr ""
+
+#: admin/views/settings.php:184
+msgid "Deactivate the accordion element."
+msgstr ""
+
+#: admin/views/settings.php:196
+msgid "Deactivate Carousel"
+msgstr ""
+
+#: admin/views/settings.php:197
+msgid "Deactivate the carousel element."
+msgstr ""
+
+#: admin/views/settings.php:208
+msgid "Deactivate Clients"
+msgstr ""
+
+#: admin/views/settings.php:209
+msgid "Deactivate the clients element."
+msgstr ""
+
+#: admin/views/settings.php:220
+msgid "Deactivate Heading"
+msgstr ""
+
+#: admin/views/settings.php:221
+msgid "Deactivate the heading element."
+msgstr ""
+
+#: admin/views/settings.php:232
+msgid "Deactivate Odometers"
+msgstr ""
+
+#: admin/views/settings.php:233
+msgid "Deactivate the odometers element."
+msgstr ""
+
+#: admin/views/settings.php:245
+msgid "Deactivate Piecharts"
+msgstr ""
+
+#: admin/views/settings.php:246
+msgid "Deactivate the piecharts element."
+msgstr ""
+
+#: admin/views/settings.php:258
+msgid "Deactivate Portfolio"
+msgstr ""
+
+#: admin/views/settings.php:259
+msgid "Deactivate the portfolio element."
+msgstr ""
+
+#: admin/views/settings.php:271
+msgid "Deactivate Posts Carousel"
+msgstr ""
+
+#: admin/views/settings.php:272
+msgid "Deactivate the posts carousel element."
+msgstr ""
+
+#: admin/views/settings.php:284
+msgid "Deactivate Pricing Table"
+msgstr ""
+
+#: admin/views/settings.php:285
+msgid "Deactivate the pricing table element."
+msgstr ""
+
+#: admin/views/settings.php:297
+msgid "Deactivate Spacer"
+msgstr ""
+
+#: admin/views/settings.php:298
+msgid "Deactivate the spacer element."
+msgstr ""
+
+#: admin/views/settings.php:309
+msgid "Deactivate Services"
+msgstr ""
+
+#: admin/views/settings.php:310
+msgid "Deactivate the services element."
+msgstr ""
+
+#: admin/views/settings.php:321
+msgid "Deactivate Stats Bars"
+msgstr ""
+
+#: admin/views/settings.php:322
+msgid "Deactivate the stats bars element."
+msgstr ""
+
+#: admin/views/settings.php:334
+msgid "Deactivate Tabs"
+msgstr ""
+
+#: admin/views/settings.php:335
+msgid "Deactivate the tabs element."
+msgstr ""
+
+#: admin/views/settings.php:346
+msgid "Deactivate Team"
+msgstr ""
+
+#: admin/views/settings.php:347
+msgid "Deactivate the team element."
+msgstr ""
+
+#: admin/views/settings.php:358
+msgid "Deactivate Testimonials"
+msgstr ""
+
+#: admin/views/settings.php:359
+msgid "Deactivate the testimonials element."
+msgstr ""
+
+#: admin/views/settings.php:371
+msgid "Deactivate Testimonials Slider"
+msgstr ""
+
+#: admin/views/settings.php:372
+msgid "Deactivate the testimonials slider element."
+msgstr ""
+
+#: admin/views/settings.php:386
+msgid "Deactivate Posts Block"
+msgstr ""
+
+#: admin/views/settings.php:387
+msgid "Deactivate the posts block element."
+msgstr ""
+
+#: admin/views/settings.php:399
+msgid "Deactivate FAQ"
+msgstr ""
+
+#: admin/views/settings.php:400
+msgid "Deactivate the faq element."
+msgstr ""
+
+#: admin/views/settings.php:412
+msgid "Deactivate Countdown"
+msgstr ""
+
+#: admin/views/settings.php:413
+msgid "Deactivate the countdown element."
+msgstr ""
+
+#: admin/views/settings.php:425
+msgid "Deactivate Features"
+msgstr ""
+
+#: admin/views/settings.php:426
+msgid "Deactivate the features element."
+msgstr ""
+
+#: admin/views/settings.php:438
+msgid "Deactivate Button"
+msgstr ""
+
+#: admin/views/settings.php:439
+msgid "Deactivate the button element."
+msgstr ""
+
+#: admin/views/settings.php:451
+msgid "Deactivate Gallery Carousel"
+msgstr ""
+
+#: admin/views/settings.php:452
+msgid "Deactivate the gallery carousel element."
+msgstr ""
+
+#: admin/views/settings.php:464
+msgid "Deactivate Gallery"
+msgstr ""
+
+#: admin/views/settings.php:465
+msgid "Deactivate the gallery element."
+msgstr ""
+
+#: admin/views/settings.php:477
+msgid "Deactivate Icon List"
+msgstr ""
+
+#: admin/views/settings.php:478
+msgid "Deactivate the icon list element."
+msgstr ""
+
+#: admin/views/settings.php:490
+msgid "Deactivate Image Slider"
+msgstr ""
+
+#: admin/views/settings.php:491
+msgid "Deactivate the image slider element."
+msgstr ""
+
+#: admin/views/settings.php:503
+msgid "Deactivate Slider"
+msgstr ""
+
+#: admin/views/settings.php:504
+msgid "Deactivate the slider element."
+msgstr ""
+
+#: admin/views/settings.php:541
+msgid "Please enter custom CSS for custom styling of elements"
+msgstr ""
+
+#: admin/views/settings.php:560
+msgid "Debug Mode"
+msgstr ""
+
+#: admin/views/settings.php:565
+msgid "Enable Script Debug Mode"
+msgstr ""
+
+#: admin/views/settings.php:567
+msgid ""
+"Use unminified Javascript files instead of minified ones to help developers "
+"debug an issue"
+msgstr ""
+
+#: admin/views/settings.php:580
+msgid "System Info"
+msgstr ""
+
+#: admin/views/settings.php:586
+msgid "System Information"
+msgstr ""
+
+#: admin/views/settings.php:587
+msgid "Server setup information useful for debugging purposes."
+msgstr ""
+
+#: admin/views/settings.php:615
+msgid "Why upgrade to Premium Version of the plugin?!"
+msgstr ""
+
+#: admin/views/settings.php:619
+msgid "Thanks for upgrading to the Premium Version of the plugin!"
+msgstr ""
+
+#: admin/views/settings.php:725
+msgid "Go Premium"
+msgstr ""
+
+#: includes/addons/accordion/class-lvca-accordion.php:104
+msgid "Accordion"
+msgstr ""
+
+#: includes/addons/accordion/class-lvca-accordion.php:109
+#: includes/addons/carousel/class-lvca-carousel.php:115
+#: includes/addons/carousel/class-lvca-carousel.php:137
+#: includes/addons/clients/class-lvca-clients.php:135
+#: includes/addons/heading/class-lvca-heading.php:86
+#: includes/addons/odometers/class-lvca-odometers.php:157
+#: includes/addons/piecharts/class-lvca-piecharts.php:129
+#: includes/addons/portfolio/class-lvca-portfolio.php:489
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:319
+#: includes/addons/premium/button/class-lvca-button.php:127
+#: includes/addons/premium/countdown/class-lvca-countdown.php:80
+#: includes/addons/premium/faq/class-lvca-faq.php:107
+#: includes/addons/premium/features/class-lvca-features.php:129
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:287
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:308
+#: includes/addons/premium/gallery/class-lvca-gallery.php:400
+#: includes/addons/premium/gallery/class-lvca-gallery.php:420
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:166
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:683
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:803
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:527
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:429
+#: includes/addons/premium/slider/class-lvca-slider.php:265
+#: includes/addons/premium/slider/class-lvca-slider.php:285
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:208
+#: includes/addons/services/class-lvca-services.php:173
+#: includes/addons/spacer/class-lvca-spacer.php:70
+#: includes/addons/stats-bar/class-lvca-stats-bar.php:119
+#: includes/addons/tabs/class-lvca-tabs.php:239
+#: includes/addons/team/class-lvca-team.php:188
+#: includes/addons/team/class-lvca-team.php:273
+#: includes/addons/testimonials-slider/class-lvca-testimonials-slider.php:147
+#: includes/addons/testimonials-slider/class-lvca-testimonials-slider.php:218
+#: includes/addons/testimonials/class-lvca-testimonials.php:128
+#: includes/addons/testimonials/class-lvca-testimonials.php:182
+msgid "Livemesh Addons"
+msgstr ""
+
+#: includes/addons/accordion/class-lvca-accordion.php:111
+msgid "Display collapsible content panels."
+msgstr ""
+
+#: includes/addons/accordion/class-lvca-accordion.php:120
+msgid "Choose Accordion Style"
+msgstr ""
+
+#: includes/addons/accordion/class-lvca-accordion.php:121
+msgid "Choose the particular style of accordion you need"
+msgstr ""
+
+#: includes/addons/accordion/class-lvca-accordion.php:123
+#: includes/addons/heading/class-lvca-heading.php:124
+#: includes/addons/premium/faq/class-lvca-faq.php:120
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:521
+#: includes/addons/services/class-lvca-services.php:151
+#: includes/addons/services/class-lvca-services.php:160
+#: includes/addons/tabs/class-lvca-tabs.php:252
+#: includes/addons/team/class-lvca-team.php:201
+msgid "Style 1"
+msgstr ""
+
+#: includes/addons/accordion/class-lvca-accordion.php:124
+#: includes/addons/heading/class-lvca-heading.php:125
+#: includes/addons/premium/faq/class-lvca-faq.php:121
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:522
+#: includes/addons/services/class-lvca-services.php:152
+#: includes/addons/services/class-lvca-services.php:161
+#: includes/addons/tabs/class-lvca-tabs.php:253
+#: includes/addons/team/class-lvca-team.php:202
+msgid "Style 2"
+msgstr ""
+
+#: includes/addons/accordion/class-lvca-accordion.php:125
+#: includes/addons/heading/class-lvca-heading.php:126
+#: includes/addons/services/class-lvca-services.php:153
+#: includes/addons/services/class-lvca-services.php:162
+#: includes/addons/tabs/class-lvca-tabs.php:254
+msgid "Style 3"
+msgstr ""
+
+#: includes/addons/accordion/class-lvca-accordion.php:133
+msgid "Allow to function like toggle?"
+msgstr ""
+
+#: includes/addons/accordion/class-lvca-accordion.php:134
+msgid "Check if multiple elements can be open at the same time."
+msgstr ""
+
+#: includes/addons/accordion/class-lvca-accordion.php:135
+#: includes/addons/accordion/class-lvca-accordion.php:143
+#: includes/addons/portfolio/class-lvca-portfolio.php:309
+#: includes/addons/portfolio/class-lvca-portfolio.php:334
+#: includes/addons/portfolio/class-lvca-portfolio.php:342
+#: includes/addons/portfolio/class-lvca-portfolio.php:350
+#: includes/addons/portfolio/class-lvca-portfolio.php:359
+#: includes/addons/portfolio/class-lvca-portfolio.php:367
+#: includes/addons/portfolio/class-lvca-portfolio.php:378
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:239
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:246
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:271
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:279
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:287
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:296
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:304
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:264
+#: includes/addons/premium/gallery/class-lvca-gallery.php:216
+#: includes/addons/premium/gallery/class-lvca-gallery.php:234
+#: includes/addons/premium/gallery/class-lvca-gallery.php:249
+#: includes/addons/premium/gallery/class-lvca-gallery.php:256
+#: includes/addons/premium/gallery/class-lvca-gallery.php:281
+#: includes/addons/premium/gallery/class-lvca-gallery.php:499
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:568
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:577
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:586
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:599
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:612
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:621
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:634
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:647
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:161
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:246
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:289
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:297
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:305
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:317
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:329
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:337
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:349
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:377
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:389
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:397
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:409
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:421
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:433
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:460
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:149
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:285
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:293
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:301
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:317
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:325
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:333
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:352
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:360
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:368
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:376
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:385
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:412
+#: includes/addons/premium/slider/class-lvca-slider.php:175
+#: includes/addons/premium/slider/class-lvca-slider.php:184
+#: includes/addons/premium/slider/class-lvca-slider.php:193
+#: includes/addons/premium/slider/class-lvca-slider.php:202
+#: includes/addons/premium/slider/class-lvca-slider.php:211
+#: includes/addons/premium/slider/class-lvca-slider.php:220
+#: includes/addons/premium/slider/class-lvca-slider.php:229
+#: includes/addons/testimonials-slider/class-lvca-testimonials-slider.php:173
+#: includes/addons/testimonials-slider/class-lvca-testimonials-slider.php:181
+#: includes/addons/testimonials-slider/class-lvca-testimonials-slider.php:189
+#: includes/addons/testimonials-slider/class-lvca-testimonials-slider.php:197
+#: includes/mapper-functions.php:135 includes/mapper-functions.php:143
+#: includes/mapper-functions.php:152 includes/mapper-functions.php:177
+#: plugin.php:339
+msgid "Yes"
+msgstr ""
+
+#: includes/addons/accordion/class-lvca-accordion.php:141
+msgid "Start expanded?"
+msgstr ""
+
+#: includes/addons/accordion/class-lvca-accordion.php:142
+msgid ""
+"Check if you need all elements to be expanded initially. Works only if "
+"toggle flag above is checked and hence multiple accordion elements can be "
+"open at the same time."
+msgstr ""
+
+#: includes/addons/accordion/class-lvca-accordion.php:156
+msgid "Panel"
+msgstr ""
+
+#: includes/addons/accordion/class-lvca-accordion.php:167
+msgid "Panel Title"
+msgstr ""
+
+#: includes/addons/accordion/class-lvca-accordion.php:168
+msgid "Title for the panel."
+msgstr ""
+
+#: includes/addons/accordion/class-lvca-accordion.php:176
+msgid "Panel ID"
+msgstr ""
+
+#: includes/addons/accordion/class-lvca-accordion.php:177
+msgid ""
+"The panel ID is required for accordion panel; enables linking to the panel "
+"from another page or within the same page. It must be unique across the "
+"page, must begin with a letter and may be followed by any number of letters, "
+"digits, hyphens or underscores."
+msgstr ""
+
+#: includes/addons/accordion/class-lvca-accordion.php:182
+msgid "Panel Content"
+msgstr ""
+
+#: includes/addons/accordion/class-lvca-accordion.php:183
+msgid "The collapsible content of the panel in the accordion."
+msgstr ""
+
+#: includes/addons/carousel/class-lvca-carousel.php:110
+#: includes/addons/carousel/class-lvca-carousel.php:132
+msgid "Carousel"
+msgstr ""
+
+#: includes/addons/carousel/class-lvca-carousel.php:117
+msgid "Display a carousel of html elements."
+msgstr ""
+
+#: includes/addons/carousel/class-lvca-carousel.php:143
+#: includes/addons/clients/class-lvca-clients.php:204
+#: includes/addons/testimonials/class-lvca-testimonials.php:189
+msgid "Name"
+msgstr ""
+
+#: includes/addons/carousel/class-lvca-carousel.php:144
+msgid ""
+"The title to identify the HTML element. Will not be output to the frontend."
+msgstr ""
+
+#: includes/addons/carousel/class-lvca-carousel.php:150
+msgid "HTML element"
+msgstr ""
+
+#: includes/addons/carousel/class-lvca-carousel.php:151
+msgid ""
+"The HTML content for the carousel item. Custom CSS for presentation of the "
+"HTML elements should be entered by the user in Settings->Custom CSS panel in "
+"WPBakery Page Builder or in the theme files."
+msgstr ""
+
+#: includes/addons/clients/class-lvca-clients.php:130
+msgid "Clients"
+msgstr ""
+
+#: includes/addons/clients/class-lvca-clients.php:137
+msgid "Display clients in a multi-column grid."
+msgstr ""
+
+#: includes/addons/clients/class-lvca-clients.php:149
+msgid "Clients per row"
+msgstr ""
+
+#: includes/addons/clients/class-lvca-clients.php:150
+msgid "The number of columns to display per row of the clients"
+msgstr ""
+
+#: includes/addons/clients/class-lvca-clients.php:160
+msgid "Clients per row in Tablet Resolution"
+msgstr ""
+
+#: includes/addons/clients/class-lvca-clients.php:161
+msgid ""
+"The number of columns to display per row of the clients in tablet resolution"
+msgstr ""
+
+#: includes/addons/clients/class-lvca-clients.php:171
+msgid "Clients per row in Mobile Resolution"
+msgstr ""
+
+#: includes/addons/clients/class-lvca-clients.php:172
+msgid ""
+"The number of columns to display per row of the clients in mobile resolution"
+msgstr ""
+
+#: includes/addons/clients/class-lvca-clients.php:178
+#: includes/addons/heading/class-lvca-heading.php:147
+#: includes/addons/premium/faq/class-lvca-faq.php:193
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:216
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:331
+#: includes/addons/services/class-lvca-services.php:400
+#: includes/addons/team/class-lvca-team.php:370
+#: includes/addons/testimonials/class-lvca-testimonials.php:213
+msgid "Choose Animation Type"
+msgstr ""
+
+#: includes/addons/clients/class-lvca-clients.php:193
+msgid "Client"
+msgstr ""
+
+#: includes/addons/clients/class-lvca-clients.php:205
+msgid "Name of the client/customer."
+msgstr ""
+
+#: includes/addons/clients/class-lvca-clients.php:211
+msgid "Client URL"
+msgstr ""
+
+#: includes/addons/clients/class-lvca-clients.php:212
+msgid "The website of the client/customer."
+msgstr ""
+
+#: includes/addons/clients/class-lvca-clients.php:218
+msgid "Client Logo."
+msgstr ""
+
+#: includes/addons/clients/class-lvca-clients.php:219
+msgid "The logo image for the client/customer."
+msgstr ""
+
+#: includes/addons/heading/class-lvca-heading.php:82
+msgid "Heading"
+msgstr ""
+
+#: includes/addons/heading/class-lvca-heading.php:87
+msgid "Create heading for a section."
+msgstr ""
+
+#: includes/addons/heading/class-lvca-heading.php:95
+#: includes/addons/odometers/class-lvca-odometers.php:218
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:242
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:703
+#: includes/addons/premium/slider/class-lvca-slider.php:291
+#: includes/addons/services/class-lvca-services.php:268
+msgid "Title"
+msgstr ""
+
+#: includes/addons/heading/class-lvca-heading.php:96
+msgid "Title for the heading."
+msgstr ""
+
+#: includes/addons/heading/class-lvca-heading.php:101
+msgid "Subheading or Subtitle"
+msgstr ""
+
+#: includes/addons/heading/class-lvca-heading.php:102
+msgid "A subtitle displayed above the title heading."
+msgstr ""
+
+#: includes/addons/heading/class-lvca-heading.php:111
+msgid "Short Text"
+msgstr ""
+
+#: includes/addons/heading/class-lvca-heading.php:112
+msgid "Short text generally displayed below the heading title."
+msgstr ""
+
+#: includes/addons/heading/class-lvca-heading.php:121
+#: includes/addons/services/class-lvca-services.php:183
+#: includes/addons/team/class-lvca-team.php:198
+msgid "Choose Style"
+msgstr ""
+
+#: includes/addons/heading/class-lvca-heading.php:122
+msgid "Choose the particular style of heading you need"
+msgstr ""
+
+#: includes/addons/heading/class-lvca-heading.php:134
+msgid "Align"
+msgstr ""
+
+#: includes/addons/heading/class-lvca-heading.php:135
+msgid "Alignment of the heading"
+msgstr ""
+
+#: includes/addons/heading/class-lvca-heading.php:137
+#: includes/addons/premium/button/class-lvca-button.php:220
+#: includes/addons/premium/countdown/class-lvca-countdown.php:93
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:208
+msgid "Center"
+msgstr ""
+
+#: includes/addons/heading/class-lvca-heading.php:138
+#: includes/addons/premium/button/class-lvca-button.php:219
+#: includes/addons/premium/countdown/class-lvca-countdown.php:91
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:207
+msgid "Left"
+msgstr ""
+
+#: includes/addons/heading/class-lvca-heading.php:139
+#: includes/addons/premium/button/class-lvca-button.php:221
+#: includes/addons/premium/countdown/class-lvca-countdown.php:92
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:209
+msgid "Right"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:152
+msgid "Odometers"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:159
+msgid "Display odometers in a multi-column grid."
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:171
+msgid "Odometers per row"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:172
+msgid "The number of columns to display per row of the odometers"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:182
+msgid "Odometers per row in Tablet Resolution"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:183
+msgid ""
+"The number of columns to display per row of the odometers in tablet "
+"resolution"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:193
+msgid "Odometers per row in Mobile Resolution"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:194
+msgid ""
+"The number of columns to display per row of the odometers in mobile "
+"resolution"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:207
+msgid "Odometer"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:219
+msgid "Title for the odometer stats."
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:225
+msgid "Start Value"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:226
+msgid "The start value for the odometer stats."
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:232
+msgid "Stop Value"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:233
+msgid "The stop value for the odometer stats."
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:239
+msgid "Prefix"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:240
+msgid ""
+"The prefix string for the odometer stats. Examples include currency symbols "
+"like $ to indicate a monetary value."
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:246
+msgid "Suffix"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:247
+msgid ""
+"The suffix string for the odometer stats. Examples include strings like hr "
+"for hours or m for million."
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:253
+#: includes/addons/premium/button/class-lvca-button.php:229
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:249
+#: includes/addons/services/class-lvca-services.php:275
+msgid "Choose Icon Type"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:256
+#: includes/addons/odometers/class-lvca-odometers.php:285
+#: includes/addons/odometers/class-lvca-odometers.php:302
+#: includes/addons/odometers/class-lvca-odometers.php:319
+#: includes/addons/odometers/class-lvca-odometers.php:336
+#: includes/addons/odometers/class-lvca-odometers.php:352
+#: includes/addons/premium/button/class-lvca-button.php:232
+#: includes/addons/premium/button/class-lvca-button.php:264
+#: includes/addons/premium/button/class-lvca-button.php:282
+#: includes/addons/premium/button/class-lvca-button.php:300
+#: includes/addons/premium/button/class-lvca-button.php:318
+#: includes/addons/premium/button/class-lvca-button.php:335
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:252
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:281
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:298
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:315
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:332
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:348
+#: includes/addons/services/class-lvca-services.php:278
+#: includes/addons/services/class-lvca-services.php:307
+#: includes/addons/services/class-lvca-services.php:324
+#: includes/addons/services/class-lvca-services.php:341
+#: includes/addons/services/class-lvca-services.php:358
+#: includes/addons/services/class-lvca-services.php:374
+#: includes/addons/tabs/class-lvca-tabs.php:331
+#: includes/addons/tabs/class-lvca-tabs.php:377
+#: includes/addons/tabs/class-lvca-tabs.php:394
+#: includes/addons/tabs/class-lvca-tabs.php:411
+#: includes/addons/tabs/class-lvca-tabs.php:427
+msgid "Icon"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:257
+#: includes/addons/premium/button/class-lvca-button.php:233
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:253
+#: includes/addons/services/class-lvca-services.php:279
+#: includes/addons/tabs/class-lvca-tabs.php:332
+msgid "Icon Image"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:264
+msgid "Odometer Image."
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:270
+#: includes/addons/premium/button/class-lvca-button.php:248
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:266
+#: includes/addons/services/class-lvca-services.php:292
+#: includes/addons/tabs/class-lvca-tabs.php:345
+msgid "Icon library"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:272
+#: includes/addons/premium/button/class-lvca-button.php:250
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:268
+#: includes/addons/services/class-lvca-services.php:294
+#: includes/addons/tabs/class-lvca-tabs.php:347
+msgid "Font Awesome"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:273
+#: includes/addons/premium/button/class-lvca-button.php:251
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:269
+#: includes/addons/services/class-lvca-services.php:295
+#: includes/addons/tabs/class-lvca-tabs.php:348
+msgid "Open Iconic"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:274
+#: includes/addons/premium/button/class-lvca-button.php:252
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:270
+#: includes/addons/services/class-lvca-services.php:296
+#: includes/addons/tabs/class-lvca-tabs.php:349
+msgid "Typicons"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:275
+#: includes/addons/premium/button/class-lvca-button.php:253
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:271
+#: includes/addons/services/class-lvca-services.php:297
+#: includes/addons/tabs/class-lvca-tabs.php:350
+msgid "Entypo"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:276
+#: includes/addons/premium/button/class-lvca-button.php:254
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:272
+#: includes/addons/services/class-lvca-services.php:298
+#: includes/addons/tabs/class-lvca-tabs.php:351
+msgid "Linecons"
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:280
+#: includes/addons/premium/button/class-lvca-button.php:258
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:276
+#: includes/addons/services/class-lvca-services.php:302
+#: includes/addons/tabs/class-lvca-tabs.php:355
+msgid "Select icon library."
+msgstr ""
+
+#: includes/addons/odometers/class-lvca-odometers.php:298
+#: includes/addons/odometers/class-lvca-odometers.php:315
+#: includes/addons/odometers/class-lvca-odometers.php:332
+#: includes/addons/odometers/class-lvca-odometers.php:365
+#: includes/addons/premium/button/class-lvca-button.php:277
+#: includes/addons/premium/button/class-lvca-button.php:295
+#: includes/addons/premium/button/class-lvca-button.php:313
+#: includes/addons/premium/button/class-lvca-button.php:348
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:294
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:311
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:328
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:361
+#: includes/addons/services/class-lvca-services.php:320
+#: includes/addons/services/class-lvca-services.php:337
+#: includes/addons/services/class-lvca-services.php:354
+#: includes/addons/services/class-lvca-services.php:387
+#: includes/addons/tabs/class-lvca-tabs.php:373
+#: includes/addons/tabs/class-lvca-tabs.php:390
+#: includes/addons/tabs/class-lvca-tabs.php:407
+#: includes/addons/tabs/class-lvca-tabs.php:440
+msgid "Select icon from library."
+msgstr ""
+
+#: includes/addons/piecharts/class-lvca-piecharts.php:124
+msgid "Piecharts"
+msgstr ""
+
+#: includes/addons/piecharts/class-lvca-piecharts.php:131
+msgid "Display piecharts in a multi-column grid."
+msgstr ""
+
+#: includes/addons/piecharts/class-lvca-piecharts.php:139
+#: includes/addons/stats-bar/class-lvca-stats-bar.php:171
+msgid "Bar color"
+msgstr ""
+
+#: includes/addons/piecharts/class-lvca-piecharts.php:145
+msgid "Track color"
+msgstr ""
+
+#: includes/addons/piecharts/class-lvca-piecharts.php:156
+msgid "Piecharts per row"
+msgstr ""
+
+#: includes/addons/piecharts/class-lvca-piecharts.php:157
+msgid "The number of columns to display per row of the piecharts"
+msgstr ""
+
+#: includes/addons/piecharts/class-lvca-piecharts.php:167
+msgid "Piecharts per row in Tablet Resolution"
+msgstr ""
+
+#: includes/addons/piecharts/class-lvca-piecharts.php:168
+msgid ""
+"The number of columns to display per row of the piecharts in tablet "
+"resolution"
+msgstr ""
+
+#: includes/addons/piecharts/class-lvca-piecharts.php:178
+msgid "Piecharts per row in Mobile Resolution"
+msgstr ""
+
+#: includes/addons/piecharts/class-lvca-piecharts.php:179
+msgid ""
+"The number of columns to display per row of the piecharts in mobile "
+"resolution"
+msgstr ""
+
+#: includes/addons/piecharts/class-lvca-piecharts.php:192
+msgid "Pierchart"
+msgstr ""
+
+#: includes/addons/piecharts/class-lvca-piecharts.php:203
+#: includes/addons/stats-bar/class-lvca-stats-bar.php:155
+msgid "Stats Title"
+msgstr ""
+
+#: includes/addons/piecharts/class-lvca-piecharts.php:204
+msgid "Title for the piechart."
+msgstr ""
+
+#: includes/addons/piecharts/class-lvca-piecharts.php:213
+#: includes/addons/stats-bar/class-lvca-stats-bar.php:165
+msgid "Percentage Value"
+msgstr ""
+
+#: includes/addons/piecharts/class-lvca-piecharts.php:214
+msgid "The percentage value for the piechart."
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:282
+msgid "Heading for the portfolio/blog"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:288
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:218
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:124
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:112
+msgid "Posts query"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:301
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:137
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:125
+msgid ""
+"Create WordPress loop, to populate content from your site. After you build "
+"the query, make sure you choose the right taxonomy below to display for your "
+"posts and filter on, based on the post type selected during build query."
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:308
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:238
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:288
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:284
+msgid "Link Images to Posts?"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:315
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:152
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:139
+msgid "Choose the taxonomy to display and filter on."
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:316
+msgid ""
+"Choose the taxonomy information to display for posts/portfolio and the "
+"taxonomy that is used to filter the portfolio/post. Takes effect only if no "
+"query category/tag/taxonomy filters are specified when building query."
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:325
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:252
+#: includes/addons/premium/features/class-lvca-features.php:152
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:270
+#: includes/addons/premium/gallery/class-lvca-gallery.php:240
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:511
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:167
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:308
+#: includes/addons/team/class-lvca-team.php:253
+msgid "Image Size"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:333
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:316
+msgid "Display posts title below the post/portfolio item?"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:335
+#: includes/addons/portfolio/class-lvca-portfolio.php:343
+#: includes/addons/portfolio/class-lvca-portfolio.php:351
+#: includes/addons/portfolio/class-lvca-portfolio.php:360
+#: includes/addons/portfolio/class-lvca-portfolio.php:368
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:264
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:272
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:280
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:288
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:297
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:305
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:290
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:298
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:306
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:318
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:330
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:338
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:350
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:366
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:378
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:390
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:398
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:410
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:422
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:434
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:286
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:294
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:302
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:318
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:326
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:334
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:345
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:353
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:361
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:369
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:377
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:386
+msgid "Post Info"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:341
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:278
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:359
+msgid "Display post author info below the post item?"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:349
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:286
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:367
+msgid "Display post date info below the post item?"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:358
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:384
+msgid "Display taxonomy info below the post/portfolio item?"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:366
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:324
+msgid "Display post excerpt/summary below the post/portfolio item?"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:377
+#: includes/addons/premium/gallery/class-lvca-gallery.php:215
+msgid "Filterable?"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:385
+#: includes/addons/premium/gallery/class-lvca-gallery.php:222
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:179
+msgid "Choose a layout for the portfolio/blog"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:387
+#: includes/addons/premium/gallery/class-lvca-gallery.php:224
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:181
+msgid "Fit Rows"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:388
+#: includes/addons/premium/gallery/class-lvca-gallery.php:225
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:182
+msgid "Masonry"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:401
+#: includes/addons/premium/gallery/class-lvca-gallery.php:312
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:210
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:183
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:202
+#: includes/mapper-functions.php:15 includes/mapper-functions.php:44
+#: includes/mapper-functions.php:83
+msgid "Columns per row"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:402
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:211
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:203
+msgid "The number of columns to display per row of the posts grid"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:403
+#: includes/addons/portfolio/class-lvca-portfolio.php:415
+#: includes/addons/portfolio/class-lvca-portfolio.php:427
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:185
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:200
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:212
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:224
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:236
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:177
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:192
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:208
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:224
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:240
+msgid "Layout"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:413
+#: includes/addons/premium/gallery/class-lvca-gallery.php:325
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:222
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:218
+msgid "Columns per row in Tablet Resolution"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:414
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:223
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:219
+msgid ""
+"The number of columns to display per row of the posts grid in tablet "
+"resolution"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:425
+#: includes/addons/premium/gallery/class-lvca-gallery.php:338
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:234
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:234
+msgid "Columns per row in Mobile Resolution"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:426
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:235
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:235
+msgid ""
+"The number of columns to display per row of the posts grid in mobile "
+"resolution"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:433
+#: includes/addons/premium/gallery/class-lvca-gallery.php:346
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:474
+#: includes/mapper-functions.php:35 includes/mapper-functions.php:64
+#: includes/mapper-functions.php:103
+msgid "Gutter"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:434
+#: includes/addons/premium/gallery/class-lvca-gallery.php:347
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:475
+#: includes/mapper-functions.php:36 includes/mapper-functions.php:65
+#: includes/mapper-functions.php:104
+msgid "Space between columns."
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:445
+#: includes/addons/premium/gallery/class-lvca-gallery.php:355
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:483
+msgid "Gutter in Tablets"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:446
+#: includes/addons/premium/gallery/class-lvca-gallery.php:356
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:484
+msgid "Space between columns in tablets."
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:454
+#: includes/addons/premium/gallery/class-lvca-gallery.php:364
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:492
+#: includes/addons/spacer/class-lvca-spacer.php:88
+msgid "Tablet Resolution"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:455
+#: includes/addons/premium/gallery/class-lvca-gallery.php:365
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:493
+#: includes/mapper-functions.php:74
+msgid "The resolution to treat as a tablet resolution."
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:464
+#: includes/addons/premium/gallery/class-lvca-gallery.php:374
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:502
+msgid "Gutter in Mobiles"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:465
+#: includes/addons/premium/gallery/class-lvca-gallery.php:375
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:503
+msgid "Space between columns in mobiles."
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:473
+#: includes/addons/premium/gallery/class-lvca-gallery.php:383
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:511
+#: includes/addons/spacer/class-lvca-spacer.php:112
+#: includes/addons/tabs/class-lvca-tabs.php:280
+msgid "Mobile Resolution"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:474
+#: includes/addons/premium/gallery/class-lvca-gallery.php:384
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:512
+#: includes/mapper-functions.php:113
+msgid "The resolution to treat as a mobile resolution."
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:485
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:523
+msgid "Posts Grid"
+msgstr ""
+
+#: includes/addons/portfolio/class-lvca-portfolio.php:490
+msgid "Display posts or post types with a filterable grid."
+msgstr ""
+
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:231
+msgid "Create WordPress loop, to populate content from your site."
+msgstr ""
+
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:245
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:296
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:292
+msgid "Open post links in new window?"
+msgstr ""
+
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:260
+msgid "Choose the taxonomy to display info."
+msgstr ""
+
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:261
+msgid ""
+"Choose the taxonomy to use for display of taxonomy information for posts/"
+"custom post types."
+msgstr ""
+
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:270
+msgid "Display posts title below the post item?"
+msgstr ""
+
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:295
+msgid "Display taxonomy info below the post item?"
+msgstr ""
+
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:303
+msgid "Display post excerpt/summary below the post item?"
+msgstr ""
+
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:315
+msgid "Posts Carousel"
+msgstr ""
+
+#: includes/addons/posts-carousel/class-lvca-posts-carousel.php:320
+msgid "Display posts or post types as a carousel."
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:124
+msgid "Button"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:128
+msgid "Flat style buttons with rich set of customization options."
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:135
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:739
+msgid "Button Title"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:136
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:740
+msgid "The text or title for the button."
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:141
+msgid "URL"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:142
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:747
+msgid ""
+"The URL to which button should point to. The user is taken to this "
+"destination when the button is clicked.eg.http://targeturl.com"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:147
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:200
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:753
+msgid "Open the link in new window?"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:152
+#: includes/addons/premium/button/class-lvca-button.php:173
+#: includes/addons/premium/button/class-lvca-button.php:184
+#: includes/addons/premium/button/class-lvca-button.php:197
+#: includes/addons/premium/button/class-lvca-button.php:209
+#: includes/addons/premium/button/class-lvca-button.php:215
+#: includes/addons/services/class-lvca-services.php:228
+#: includes/addons/services/class-lvca-services.php:236
+#: includes/addons/services/class-lvca-services.php:244
+msgid "Customize"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:153
+msgid "Color"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:155
+#: includes/gallery/common.php:35
+msgid "Default"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:156
+msgid "Custom"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:157
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:761
+msgid "Black"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:158
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:762
+msgid "Blue"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:159
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:763
+msgid "Cyan"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:160
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:764
+msgid "Green"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:161
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:765
+msgid "Orange"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:162
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:766
+msgid "Pink"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:163
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:767
+msgid "Red"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:164
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:768
+msgid "Teal"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:165
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:769
+msgid "Transparent"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:166
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:770
+msgid "Semi Transparent"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:168
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:772
+msgid "The color of the button."
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:174
+msgid "Custom Button color"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:176
+msgid "Custom color for the button."
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:185
+msgid "Custom Button Hover Color"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:187
+msgid "The custom hover color for the button."
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:198
+msgid "Type"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:200
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:781
+#: includes/helper-functions.php:636
+msgid "Medium"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:201
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:782
+msgid "Small"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:202
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:783
+msgid "large"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:204
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:785
+msgid "Can be large, small or medium."
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:210
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:791
+msgid "Display Rounded Button?"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:216
+#: includes/addons/premium/countdown/class-lvca-countdown.php:88
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:205
+msgid "Alignment"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:218
+#: includes/addons/premium/gallery/class-lvca-gallery.php:268
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:446
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:398
+#: includes/addons/tabs/class-lvca-tabs.php:330
+#: includes/helper-functions.php:547 includes/helper-functions.php:594
+msgid "None"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:223
+msgid ""
+" Alignment of the button and text alignment of the button title displayed."
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:227
+#: includes/addons/premium/button/class-lvca-button.php:239
+#: includes/addons/premium/button/class-lvca-button.php:247
+#: includes/addons/premium/button/class-lvca-button.php:263
+#: includes/addons/premium/button/class-lvca-button.php:281
+#: includes/addons/premium/button/class-lvca-button.php:299
+#: includes/addons/premium/button/class-lvca-button.php:317
+#: includes/addons/premium/button/class-lvca-button.php:334
+msgid "Button Icon"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:241
+msgid "Button Image."
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:354
+msgid "Button Class"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:355
+msgid ""
+"Custom CSS class name to be set for the button element created (optional)"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:361
+msgid "Button Style"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:362
+msgid ""
+"Inline CSS styling applied for the button element created eg.padding: 10px "
+"20px; (optional)"
+msgstr ""
+
+#: includes/addons/premium/button/class-lvca-button.php:368
+msgid "Choose Animation for Button"
+msgstr ""
+
+#: includes/addons/premium/countdown/class-lvca-countdown.php:76
+msgid "Countdown"
+msgstr ""
+
+#: includes/addons/premium/countdown/class-lvca-countdown.php:81
+msgid "Display a countdown timer for an end date."
+msgstr ""
+
+#: includes/addons/premium/countdown/class-lvca-countdown.php:89
+msgid "Choose the alignment of the countdown addon"
+msgstr ""
+
+#: includes/addons/premium/countdown/class-lvca-countdown.php:102
+msgid "Countdown Label"
+msgstr ""
+
+#: includes/addons/premium/countdown/class-lvca-countdown.php:103
+msgid "The label for the countdown."
+msgstr ""
+
+#: includes/addons/premium/countdown/class-lvca-countdown.php:108
+msgid "End date"
+msgstr ""
+
+#: includes/addons/premium/countdown/class-lvca-countdown.php:109
+msgid "The end date for the countdown"
+msgstr ""
+
+#: includes/addons/premium/faq/class-lvca-faq.php:102
+msgid "FAQ"
+msgstr ""
+
+#: includes/addons/premium/faq/class-lvca-faq.php:109
+msgid "Create FAQ to display in a multi-column grid."
+msgstr ""
+
+#: includes/addons/premium/faq/class-lvca-faq.php:117
+msgid "Choose FAQ Style"
+msgstr ""
+
+#: includes/addons/premium/faq/class-lvca-faq.php:118
+msgid "Choose the particular style of faq you need"
+msgstr ""
+
+#: includes/addons/premium/faq/class-lvca-faq.php:134
+msgid "FAQ Items per row"
+msgstr ""
+
+#: includes/addons/premium/faq/class-lvca-faq.php:135
+msgid "The number of columns to display per row of the FAQ"
+msgstr ""
+
+#: includes/addons/premium/faq/class-lvca-faq.php:145
+msgid "FAQ items per row in Tablet Resolution"
+msgstr ""
+
+#: includes/addons/premium/faq/class-lvca-faq.php:146
+msgid ""
+"The number of columns to display per row of the FAQ in tablet resolution"
+msgstr ""
+
+#: includes/addons/premium/faq/class-lvca-faq.php:156
+msgid "FAQ items per row in Mobile Resolution"
+msgstr ""
+
+#: includes/addons/premium/faq/class-lvca-faq.php:157
+msgid ""
+"The number of columns to display per row of the FAQ in mobile resolution"
+msgstr ""
+
+#: includes/addons/premium/faq/class-lvca-faq.php:170
+msgid "FAQ Item"
+msgstr ""
+
+#: includes/addons/premium/faq/class-lvca-faq.php:181
+msgid "Question"
+msgstr ""
+
+#: includes/addons/premium/faq/class-lvca-faq.php:182
+msgid "The question for the FAQ item."
+msgstr ""
+
+#: includes/addons/premium/faq/class-lvca-faq.php:187
+msgid "Answer"
+msgstr ""
+
+#: includes/addons/premium/faq/class-lvca-faq.php:188
+msgid "The HTML content as answer for the FAQ item."
+msgstr ""
+
+#: includes/addons/premium/faq/class-lvca-faq.php:194
+msgid "Animation for the FAQ item"
+msgstr ""
+
+#: includes/addons/premium/features/class-lvca-features.php:124
+msgid "Features"
+msgstr ""
+
+#: includes/addons/premium/features/class-lvca-features.php:131
+msgid "Display product features or services offered."
+msgstr ""
+
+#: includes/addons/premium/features/class-lvca-features.php:139
+msgid "Features Container ID"
+msgstr ""
+
+#: includes/addons/premium/features/class-lvca-features.php:140
+msgid "The CSS ID for the features container DIV element."
+msgstr ""
+
+#: includes/addons/premium/features/class-lvca-features.php:145
+msgid "Features Container Class"
+msgstr ""
+
+#: includes/addons/premium/features/class-lvca-features.php:146
+msgid "The CSS class for the feature container DIV element."
+msgstr ""
+
+#: includes/addons/premium/features/class-lvca-features.php:160
+msgid "Apply tiled design"
+msgstr ""
+
+#: includes/addons/premium/features/class-lvca-features.php:161
+msgid ""
+"Specify if you want to apply tiled design by removing spacing between "
+"feature items."
+msgstr ""
+
+#: includes/addons/premium/features/class-lvca-features.php:174
+msgid "Feature"
+msgstr ""
+
+#: includes/addons/premium/features/class-lvca-features.php:184
+msgid "Feature Class"
+msgstr ""
+
+#: includes/addons/premium/features/class-lvca-features.php:185
+msgid "The CSS class for the feature DIV element."
+msgstr ""
+
+#: includes/addons/premium/features/class-lvca-features.php:191
+msgid "Feature Title"
+msgstr ""
+
+#: includes/addons/premium/features/class-lvca-features.php:192
+msgid "The title for the feature."
+msgstr ""
+
+#: includes/addons/premium/features/class-lvca-features.php:197
+msgid "Feature Subtitle"
+msgstr ""
+
+#: includes/addons/premium/features/class-lvca-features.php:198
+msgid "The subtitle for the feature."
+msgstr ""
+
+#: includes/addons/premium/features/class-lvca-features.php:203
+msgid "Feature Image"
+msgstr ""
+
+#: includes/addons/premium/features/class-lvca-features.php:204
+msgid ""
+"An icon image or a bitmap which best represents the feature we are capturing."
+msgstr ""
+
+#: includes/addons/premium/features/class-lvca-features.php:209
+msgid "Feature Text"
+msgstr ""
+
+#: includes/addons/premium/features/class-lvca-features.php:210
+msgid "The feature content."
+msgstr ""
+
+#: includes/addons/premium/features/class-lvca-features.php:215
+msgid "Choose Animation for Feature Image"
+msgstr ""
+
+#: includes/addons/premium/features/class-lvca-features.php:222
+msgid "Choose Animation for Feature Text"
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:263
+#: includes/addons/premium/gallery/class-lvca-gallery.php:233
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:160
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:300
+msgid "Enable Lightbox Gallery?"
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:282
+msgid "Gallery Carousel"
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:289
+msgid "Display images or videos in a responsive carousel."
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:304
+msgid "Gallery Carousel Item"
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:314
+#: includes/addons/premium/gallery/class-lvca-gallery.php:426
+msgid "Item Type"
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:315
+#: includes/addons/premium/gallery/class-lvca-gallery.php:427
+msgid ""
+"Specify the item type - if this is an image or represents a YouTube/Vimeo/"
+"HTML5 video."
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:318
+#: includes/addons/premium/gallery/class-lvca-gallery.php:430
+msgid "Image"
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:319
+#: includes/addons/premium/gallery/class-lvca-gallery.php:431
+msgid "YouTube Video"
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:320
+#: includes/addons/premium/gallery/class-lvca-gallery.php:432
+msgid "Vimeo Video"
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:321
+#: includes/addons/premium/gallery/class-lvca-gallery.php:433
+msgid "HTML5 Video"
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:327
+#: includes/addons/premium/gallery/class-lvca-gallery.php:439
+msgid "Item Label"
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:328
+#: includes/addons/premium/gallery/class-lvca-gallery.php:440
+msgid "The label or name for the gallery item."
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:334
+#: includes/addons/premium/gallery/class-lvca-gallery.php:446
+msgid "Gallery Image."
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:335
+#: includes/addons/premium/gallery/class-lvca-gallery.php:447
+msgid ""
+"The image for the gallery item. If item type chosen is YouTube or Vimeo or "
+"MP4/WebM video, the image will be used as a placeholder image for video."
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:340
+#: includes/addons/premium/gallery/class-lvca-gallery.php:452
+msgid "Item Tag(s)"
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:341
+#: includes/addons/premium/gallery/class-lvca-gallery.php:453
+msgid "One or more comma separated tags for the gallery item."
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:346
+#: includes/addons/premium/gallery/class-lvca-gallery.php:458
+msgid "Page URL"
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:347
+#: includes/addons/premium/gallery/class-lvca-gallery.php:459
+msgid ""
+"The URL of the page to which the image gallery item points to (optional)."
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:356
+#: includes/addons/premium/gallery/class-lvca-gallery.php:468
+msgid "Video URL"
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:357
+#: includes/addons/premium/gallery/class-lvca-gallery.php:469
+msgid "The URL of the YouTube or Vimeo video."
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:366
+#: includes/addons/premium/gallery/class-lvca-gallery.php:478
+msgid "MP4 Video URL"
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:367
+#: includes/addons/premium/gallery/class-lvca-gallery.php:479
+msgid "The URL of the MP4 video."
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:376
+#: includes/addons/premium/gallery/class-lvca-gallery.php:488
+msgid "WebM Video URL"
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:377
+#: includes/addons/premium/gallery/class-lvca-gallery.php:489
+msgid "The URL of the WebM video."
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:386
+#: includes/addons/premium/gallery/class-lvca-gallery.php:508
+msgid "Item description"
+msgstr ""
+
+#: includes/addons/premium/gallery-carousel/class-lvca-gallery-carousel.php:387
+#: includes/addons/premium/gallery/class-lvca-gallery.php:509
+msgid ""
+"Short description for the gallery item displayed in the lightbox gallery."
+"(optional)"
+msgstr ""
+
+#: includes/addons/premium/gallery/class-lvca-gallery.php:201
+msgid ""
+"Specify an unique identifier used as a custom CSS class name and lightbox "
+"group name/slug for the gallery element."
+msgstr ""
+
+#: includes/addons/premium/gallery/class-lvca-gallery.php:202
+msgid "Gallery Class/Identifier"
+msgstr ""
+
+#: includes/addons/premium/gallery/class-lvca-gallery.php:209
+msgid "Heading for the grid"
+msgstr ""
+
+#: includes/addons/premium/gallery/class-lvca-gallery.php:248
+msgid "Display Item Title?"
+msgstr ""
+
+#: includes/addons/premium/gallery/class-lvca-gallery.php:255
+msgid "Display Item Tags?"
+msgstr ""
+
+#: includes/addons/premium/gallery/class-lvca-gallery.php:265
+#: includes/addons/premium/gallery/class-lvca-gallery.php:273
+#: includes/addons/premium/gallery/class-lvca-gallery.php:282
+#: includes/addons/premium/gallery/class-lvca-gallery.php:294
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:443
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:452
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:461
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:395
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:404
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:413
+msgid "Pagination"
+msgstr ""
+
+#: includes/addons/premium/gallery/class-lvca-gallery.php:266
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:444
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:396
+msgid ""
+"Choose pagination type or choose None if no pagination is desired. Make sure "
+"you enter the items per page value in the option 'Number of items to be "
+"displayed per page and on each load more invocation' field below to control "
+"number of items to display per page."
+msgstr ""
+
+#: includes/addons/premium/gallery/class-lvca-gallery.php:269
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:448
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:400
+msgid "Paged"
+msgstr ""
+
+#: includes/addons/premium/gallery/class-lvca-gallery.php:270
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:449
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:401
+#: includes/blocks/block.php:321 includes/gallery/common.php:345
+msgid "Load More"
+msgstr ""
+
+#: includes/addons/premium/gallery/class-lvca-gallery.php:280
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:459
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:411
+msgid "Display count of items yet to be loaded with the load more button?"
+msgstr ""
+
+#: includes/addons/premium/gallery/class-lvca-gallery.php:292
+msgid ""
+"Number of items to be displayed per page and on each load more invocation."
+msgstr ""
+
+#: includes/addons/premium/gallery/class-lvca-gallery.php:313
+msgid "The number of gallery items to display per row of the gallery"
+msgstr ""
+
+#: includes/addons/premium/gallery/class-lvca-gallery.php:314
+#: includes/addons/premium/gallery/class-lvca-gallery.php:327
+#: includes/addons/premium/gallery/class-lvca-gallery.php:340
+#: includes/addons/premium/gallery/class-lvca-gallery.php:349
+#: includes/addons/premium/gallery/class-lvca-gallery.php:358
+#: includes/addons/premium/gallery/class-lvca-gallery.php:368
+#: includes/addons/premium/gallery/class-lvca-gallery.php:377
+#: includes/addons/premium/gallery/class-lvca-gallery.php:387
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:477
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:486
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:496
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:505
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:515
+msgid "Responsiveness"
+msgstr ""
+
+#: includes/addons/premium/gallery/class-lvca-gallery.php:326
+msgid ""
+"The number of gallery items to display per row of the gallery in tablet "
+"resolution"
+msgstr ""
+
+#: includes/addons/premium/gallery/class-lvca-gallery.php:339
+msgid ""
+"The number of gallery items to display per row of the gallery in mobile "
+"resolution"
+msgstr ""
+
+#: includes/addons/premium/gallery/class-lvca-gallery.php:395
+msgid "Gallery"
+msgstr ""
+
+#: includes/addons/premium/gallery/class-lvca-gallery.php:402
+msgid "Display images or videos in a multi-column grid."
+msgstr ""
+
+#: includes/addons/premium/gallery/class-lvca-gallery.php:416
+msgid "Gallery Item"
+msgstr ""
+
+#: includes/addons/premium/gallery/class-lvca-gallery.php:498
+msgid "Display Video Inline?"
+msgstr ""
+
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:161
+msgid "Icon List"
+msgstr ""
+
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:168
+msgid ""
+"Use images or icon fonts to create social icons list, show payment options "
+"etc."
+msgstr ""
+
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:181
+msgid "Icon/Image size in pixels"
+msgstr ""
+
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:186
+#: includes/addons/services/class-lvca-services.php:233
+msgid "Icon color"
+msgstr ""
+
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:188
+#: includes/addons/services/class-lvca-services.php:235
+msgid "Custom color for the font icon."
+msgstr ""
+
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:193
+#: includes/addons/services/class-lvca-services.php:241
+msgid "Icon Hover color"
+msgstr ""
+
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:195
+#: includes/addons/services/class-lvca-services.php:243
+msgid "Custom hover color for the font icon."
+msgstr ""
+
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:211
+msgid "Alignment of the icon list."
+msgstr ""
+
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:231
+msgid "Icon Item"
+msgstr ""
+
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:243
+msgid "Title for the icon."
+msgstr ""
+
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:260
+#: includes/addons/services/class-lvca-services.php:286
+msgid "Service Image."
+msgstr ""
+
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:367
+msgid "Target URL"
+msgstr ""
+
+#: includes/addons/premium/icon-list/class-lvca-icon-list.php:368
+msgid ""
+"The URL to which icon/image should point to. (optional).eg.http://targeturl."
+"com"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:489
+#: includes/addons/premium/slider/class-lvca-slider.php:138
+msgid "Slider Class"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:490
+#: includes/addons/premium/slider/class-lvca-slider.php:139
+msgid "Custom CSS class name to be set for the slider (optional)"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:496
+msgid "Slider Type"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:498
+msgid "Flex Slider"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:499
+msgid "Nivo Slider"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:500
+msgid "Slick Slider"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:501
+msgid "Responsive Slider"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:503
+msgid "Choose the slider type."
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:519
+msgid "Choose Caption Style"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:533
+#: includes/addons/premium/slider/class-lvca-slider.php:148
+msgid "Slider Animation"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:535
+#: includes/addons/premium/slider/class-lvca-slider.php:150
+#: includes/addons/premium/slider/class-lvca-slider.php:281
+msgid "Slide"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:536
+#: includes/addons/premium/slider/class-lvca-slider.php:151
+msgid "Fade"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:549
+#: includes/addons/premium/slider/class-lvca-slider.php:160
+msgid "Sliding Direction"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:550
+#: includes/addons/premium/slider/class-lvca-slider.php:161
+msgid "Select the sliding direction."
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:552
+#: includes/addons/premium/slider/class-lvca-slider.php:163
+msgid "Horizontal"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:553
+#: includes/addons/premium/slider/class-lvca-slider.php:164
+msgid "Vertical"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:566
+#: includes/addons/premium/slider/class-lvca-slider.php:173
+#: includes/addons/testimonials-slider/class-lvca-testimonials-slider.php:187
+msgid "Direction Navigation"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:567
+#: includes/addons/premium/slider/class-lvca-slider.php:174
+msgid "Should the slider have direction navigation?"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:575
+#: includes/addons/premium/slider/class-lvca-slider.php:182
+#: includes/addons/testimonials-slider/class-lvca-testimonials-slider.php:195
+msgid "Navigation Controls"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:576
+#: includes/addons/premium/slider/class-lvca-slider.php:183
+msgid "Should the slider have navigation controls?"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:584
+msgid "Thumbnails Navigation?"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:585
+msgid "Use thumbnails for Control Nav?"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:597
+#: includes/addons/premium/slider/class-lvca-slider.php:191
+msgid "Randomize slides?"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:598
+#: includes/addons/premium/slider/class-lvca-slider.php:192
+msgid "Randomize slide order?"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:610
+#: includes/addons/premium/slider/class-lvca-slider.php:200
+#: includes/addons/testimonials-slider/class-lvca-testimonials-slider.php:179
+#: includes/mapper-functions.php:175
+msgid "Pause on Hover"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:611
+#: includes/addons/premium/slider/class-lvca-slider.php:201
+#: includes/addons/testimonials-slider/class-lvca-testimonials-slider.php:180
+#: includes/mapper-functions.php:176
+msgid "Should the slider pause on mouse hover over the slider."
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:619
+#: includes/addons/premium/slider/class-lvca-slider.php:209
+#: includes/addons/testimonials-slider/class-lvca-testimonials-slider.php:171
+msgid "Pause slider on action."
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:620
+#: includes/addons/premium/slider/class-lvca-slider.php:210
+#: includes/addons/testimonials-slider/class-lvca-testimonials-slider.php:172
+msgid ""
+"Should the slideshow pause once user initiates an action using navigation/"
+"direction controls."
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:632
+#: includes/addons/premium/slider/class-lvca-slider.php:218
+msgid "Loop?"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:633
+#: includes/addons/premium/slider/class-lvca-slider.php:219
+msgid "Should the animation loop?"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:645
+#: includes/addons/premium/slider/class-lvca-slider.php:227
+msgid "Slideshow?"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:646
+#: includes/addons/premium/slider/class-lvca-slider.php:228
+msgid "Animate slider automatically without user intervention."
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:654
+#: includes/addons/premium/slider/class-lvca-slider.php:236
+#: includes/addons/testimonials-slider/class-lvca-testimonials-slider.php:157
+msgid "Slideshow speed"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:665
+#: includes/addons/premium/slider/class-lvca-slider.php:247
+#: includes/addons/testimonials-slider/class-lvca-testimonials-slider.php:164
+msgid "Animation Speed"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:678
+msgid "Image Slider"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:685
+msgid "Create a responsive image slider."
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:705
+#: includes/addons/premium/slider/class-lvca-slider.php:293
+msgid "The title to identify the slide"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:710
+msgid "Slide Image."
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:711
+msgid "The image for the slide."
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:716
+msgid "URL to link to by image and caption heading. (optional)"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:717
+msgid ""
+"Specify the URL to which the slide image and caption heading should link to. "
+"(optional)"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:726
+msgid "Caption Heading"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:727
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:733
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:741
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:748
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:754
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:774
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:786
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:792
+msgid "Caption"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:732
+msgid "Caption Sub-heading"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:746
+msgid "Button URL"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:759
+msgid "Button Color"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:779
+msgid "Button Size"
+msgstr ""
+
+#: includes/addons/premium/image-slider/class-lvca-image-slider.php:799
+msgid "Image Slide"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:145
+msgid ""
+"Specify an unique identifier used as a custom CSS class name and lightbox "
+"group name/slug for the grid element.(optional)"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:146
+msgid "Grid Class/Identifier"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:153
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:140
+msgid ""
+"Choose the taxonomy information to display for posts/portfolio and the "
+"taxonomy that is used to filter the posts/portfolio items. Takes effect only "
+"if no query category/tag/taxonomy filters are specified when building query."
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:190
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:160
+msgid "Choose Block Style"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:192
+msgid "Grid Style 1"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:193
+msgid "Grid Style 2"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:194
+msgid "Grid Style 3"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:195
+msgid "Grid Style 4"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:196
+msgid "Grid Style 5"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:197
+msgid "Grid Style 6"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:245
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:148
+msgid "Display Category/Taxonomy Filters?"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:247
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:255
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:262
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:279
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:250
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:257
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:274
+msgid "Block Header"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:254
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:249
+msgid "Heading for the posts block"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:261
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:256
+msgid "URL for the heading"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:268
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:263
+msgid "Choose Header Style"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:270
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:265
+msgid "Header Style 1"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:271
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:266
+msgid "Header Style 2"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:272
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:267
+msgid "Header Style 3"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:273
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:268
+msgid "Header Style 4"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:274
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:269
+msgid "Header Style 5"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:275
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:270
+msgid "Header Style 6"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:276
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:271
+msgid "Header Style 7"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:304
+msgid "Display project title on post/project thumbnail?"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:316
+msgid "Display taxonomy info on post/project thumbnail?"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:328
+msgid "Display posts title for the post/portfolio item?"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:336
+msgid "Display post excerpt/summary for the post/portfolio item?"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:348
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:332
+msgid "Preserve shortcodes/HTML tags in excerpt?"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:365
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:344
+msgid "Excerpt Length?"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:376
+msgid "Display read more link the post/portfolio item?"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:388
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:351
+msgid "Display post excerpt/summary in the lightbox?"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:396
+msgid "Display post author info for the post item?"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:408
+msgid "Display post date info for the post item?"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:420
+msgid "Display comments number for the post item?"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:432
+msgid "Display taxonomy info for the post/portfolio item?"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:447
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:399
+msgid "Next Prev"
+msgstr ""
+
+#: includes/addons/premium/portfolio/class-lvca-portfolio.php:528
+msgid "Display posts or custom post types in a multi-column grid."
+msgstr ""
+
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:132
+msgid ""
+"Specify an unique identifier used as a custom CSS class name and lightbox "
+"group name/slug for the block element.(optional)"
+msgstr ""
+
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:133
+msgid "Block Class/Identifier"
+msgstr ""
+
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:162
+msgid "Block Style 1"
+msgstr ""
+
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:163
+msgid "Block Style 2"
+msgstr ""
+
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:164
+msgid "Block Style 3"
+msgstr ""
+
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:165
+msgid "Block Style 4"
+msgstr ""
+
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:166
+msgid "Block Style 5"
+msgstr ""
+
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:167
+msgid "Block Style 6"
+msgstr ""
+
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:168
+msgid "Block Style 7"
+msgstr ""
+
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:169
+msgid "Block Style 8"
+msgstr ""
+
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:170
+msgid "Block Style 9"
+msgstr ""
+
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:171
+msgid "Block Style 10"
+msgstr ""
+
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:172
+msgid "Block Style 11"
+msgstr ""
+
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:173
+msgid "Block Style 12"
+msgstr ""
+
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:174
+msgid "Block Style 13"
+msgstr ""
+
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:375
+msgid "Display comments number below the post item?"
+msgstr ""
+
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:425
+msgid "Posts Block"
+msgstr ""
+
+#: includes/addons/premium/posts-block/class-lvca-posts-block.php:430
+msgid ""
+"Display your blog posts or custom post types in a filterable block list "
+"layout."
+msgstr ""
+
+#: includes/addons/premium/slider/class-lvca-slider.php:131
+msgid "Slider ID"
+msgstr ""
+
+#: includes/addons/premium/slider/class-lvca-slider.php:132
+msgid "Set a ID for the slider. (optional)."
+msgstr ""
+
+#: includes/addons/premium/slider/class-lvca-slider.php:260
+msgid "Slider"
+msgstr ""
+
+#: includes/addons/premium/slider/class-lvca-slider.php:267
+msgid "Create a responsive slider of custom HTML content."
+msgstr ""
+
+#: includes/addons/premium/slider/class-lvca-slider.php:299
+msgid "HTML Content"
+msgstr ""
+
+#: includes/addons/premium/slider/class-lvca-slider.php:300
+msgid "The HTML content for the slide"
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:203
+msgid "Pricing Table"
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:210
+msgid "Display pricing table in a multi-column grid."
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:222
+msgid "Pricing Plans per row"
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:223
+msgid "The number of columns to display per row of the pricing table"
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:233
+msgid "Pricing Plans per row in Tablet Resolution"
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:234
+msgid ""
+"The number of columns to display per row of the pricing table in tablet "
+"resolution"
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:244
+msgid "Pricing Plans per row in Mobile Resolution"
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:245
+msgid ""
+"The number of columns to display per row of the pricing table in mobile "
+"resolution"
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:258
+msgid "Pricing Plan"
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:268
+msgid "Pricing Plan Title"
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:269
+msgid "The title for the pricing plan"
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:275
+msgid "Tagline Text"
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:276
+msgid ""
+"Provide any subtitle or taglines like \"Most Popular\", \"Best Value\", "
+"\"Best Selling\", \"Most Flexible\" etc. that you would like to use for this "
+"pricing plan."
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:282
+msgid "Pricing Image"
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:288
+msgid "Price Tag"
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:289
+msgid "Enter the price tag for the pricing plan. HTML is accepted."
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:295
+msgid "Highlight Pricing Plan"
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:296
+msgid "Specify if you want to highlight the pricing plan."
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:302
+msgid "Pricing Plan Details"
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:303
+msgid ""
+"Enter the content for the pricing plan that include information about "
+"individual features of the pricing plan. For prebuilt styling, enter "
+"shortcodes content like - [lvca_pricing_item title=\"Storage Space\" value="
+"\"50 GB\"] [lvca_pricing_item title=\"Video Uploads\" value=\"50\"]"
+"[lvca_pricing_item title=\"Portfolio Items\" value=\"20\"]"
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:309
+msgid "Text for Pricing Link/Button"
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:310
+msgid ""
+"Provide the text for the link or the button shown for this pricing plan."
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:317
+msgid "URL for the Pricing link/button"
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:318
+msgid ""
+"Provide the target URL for the link or the button shown for this pricing "
+"plan."
+msgstr ""
+
+#: includes/addons/pricing-table/class-lvca-pricing-table.php:325
+msgid "Open Button URL in a new window"
+msgstr ""
+
+#: includes/addons/services/class-lvca-services.php:154
+#: includes/addons/tabs/class-lvca-tabs.php:255
+msgid "Style 4"
+msgstr ""
+
+#: includes/addons/services/class-lvca-services.php:155
+#: includes/addons/tabs/class-lvca-tabs.php:256
+msgid "Style 5"
+msgstr ""
+
+#: includes/addons/services/class-lvca-services.php:168
+msgid "Services"
+msgstr ""
+
+#: includes/addons/services/class-lvca-services.php:175
+msgid "Display services in a column grid."
+msgstr ""
+
+#: includes/addons/services/class-lvca-services.php:184
+msgid "Choose the particular style of services you need"
+msgstr ""
+
+#: includes/addons/services/class-lvca-services.php:195
+msgid "Services per row"
+msgstr ""
+
+#: includes/addons/services/class-lvca-services.php:196
+msgid "The number of columns to display per row of the services"
+msgstr ""
+
+#: includes/addons/services/class-lvca-services.php:206
+msgid "Services per row in Tablet Resolution"
+msgstr ""
+
+#: includes/addons/services/class-lvca-services.php:207
+msgid ""
+"The number of columns to display per row of the services in tablet resolution"
+msgstr ""
+
+#: includes/addons/services/class-lvca-services.php:217
+msgid "Services per row in Mobile Resolution"
+msgstr ""
+
+#: includes/addons/services/class-lvca-services.php:218
+msgid ""
+"The number of columns to display per row of the services in mobile resolution"
+msgstr ""
+
+#: includes/addons/services/class-lvca-services.php:227
+msgid "Icon size in pixels"
+msgstr ""
+
+#: includes/addons/services/class-lvca-services.php:257
+msgid "Service"
+msgstr ""
+
+#: includes/addons/services/class-lvca-services.php:269
+msgid "Title of the service."
+msgstr ""
+
+#: includes/addons/services/class-lvca-services.php:393
+msgid "Service description"
+msgstr ""
+
+#: includes/addons/services/class-lvca-services.php:394
+msgid "Provide a short description for the service"
+msgstr ""
+
+#: includes/addons/services/class-lvca-services.php:408
+msgid ""
+"Short description (field will be removed in future - move text to Service "
+"description)"
+msgstr ""
+
+#: includes/addons/services/class-lvca-services.php:409
+msgid "Provide a short description for the service "
+msgstr ""
+
+#: includes/addons/services/class-lvca-services.php:410
+msgid "Deprecated"
+msgstr ""
+
+#: includes/addons/spacer/class-lvca-spacer.php:66
+msgid "Spacer"
+msgstr ""
+
+#: includes/addons/spacer/class-lvca-spacer.php:71
+msgid "Add spacer between rows and elements."
+msgstr ""
+
+#: includes/addons/spacer/class-lvca-spacer.php:77
+msgid "Desktop Spacing"
+msgstr ""
+
+#: includes/addons/spacer/class-lvca-spacer.php:78
+msgid "Space in pixels in Desktop Resolution"
+msgstr ""
+
+#: includes/addons/spacer/class-lvca-spacer.php:89
+msgid "The resolution to treat as a tablet resolution"
+msgstr ""
+
+#: includes/addons/spacer/class-lvca-spacer.php:100
+msgid "Tablet Spacing"
+msgstr ""
+
+#: includes/addons/spacer/class-lvca-spacer.php:101
+msgid "Space in Tablet Resolution"
+msgstr ""
+
+#: includes/addons/spacer/class-lvca-spacer.php:113
+msgid "The resolution to treat as a mobile resolution"
+msgstr ""
+
+#: includes/addons/spacer/class-lvca-spacer.php:124
+msgid "Mobile Spacing"
+msgstr ""
+
+#: includes/addons/spacer/class-lvca-spacer.php:125
+msgid "Space in Mobile Resolution"
+msgstr ""
+
+#: includes/addons/stats-bar/class-lvca-stats-bar.php:114
+msgid "Stats Bars"
+msgstr ""
+
+#: includes/addons/stats-bar/class-lvca-stats-bar.php:121
+msgid "Display stats bars of skills or percentage stats."
+msgstr ""
+
+#: includes/addons/stats-bar/class-lvca-stats-bar.php:129
+msgid "Default Bar color"
+msgstr ""
+
+#: includes/addons/stats-bar/class-lvca-stats-bar.php:130
+msgid ""
+"The default bar color to be used if none specified for individual stats bars"
+msgstr ""
+
+#: includes/addons/stats-bar/class-lvca-stats-bar.php:144
+msgid "Stats Bar"
+msgstr ""
+
+#: includes/addons/stats-bar/class-lvca-stats-bar.php:156
+msgid "Title for the stats bar."
+msgstr ""
+
+#: includes/addons/stats-bar/class-lvca-stats-bar.php:166
+msgid "The percentage value for the stats."
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:234
+msgid "Tabs"
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:241
+msgid "Display tabbed content in variety of styles."
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:249
+msgid "Choose Tab Style"
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:250
+msgid "Choose the particular style of tabs you need"
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:257
+msgid "Style 6"
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:258
+msgid "Vertical Style 1"
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:259
+msgid "Vertical Style 2"
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:260
+msgid "Vertical Style 3"
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:261
+msgid "Vertical Style 4"
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:270
+msgid "Tab Highlight color"
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:281
+msgid ""
+"The resolution to treat as a mobile resolution for invoking responsive tabs."
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:299
+msgid "Tab"
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:310
+msgid "Tab Title"
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:311
+msgid "The title for the tab shown as name for tab navigation."
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:319
+msgid "Tab ID"
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:320
+msgid ""
+"The Tab ID is required to link to a tab. It must be unique across the page, "
+"must begin with a letter and may be followed by any number of letters, "
+"digits, hyphens or underscores."
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:326
+msgid "Choose Tab Icon Type or None"
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:327
+msgid "Some styles may ignore icons chosen."
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:339
+msgid "Tab Image."
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:360
+msgid "Tab Icon"
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:446
+msgid "Tab Content"
+msgstr ""
+
+#: includes/addons/tabs/class-lvca-tabs.php:447
+msgid "The content of the tab."
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:183
+msgid "Team Members"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:190
+msgid "Create team members."
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:199
+msgid "Choose the particular style of team you need"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:213
+msgid "Team Members per row"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:214
+msgid "The number of team members to display per row of the team"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:228
+msgid "Team Members per row in Tablet Resolution"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:229
+msgid ""
+"The number of team members to display per row of the team in tablet "
+"resolution"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:243
+msgid "Team Members per row in Mobile Resolution"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:244
+msgid ""
+"The number of team members to display per row of the team in mobile "
+"resolution"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:268
+msgid "Team Member"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:280
+msgid "Team Member Name"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:281
+msgid "Name of the team member."
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:287
+msgid "Team Member Image."
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:292
+msgid "Position"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:293
+msgid "Specify the position/title of the team member."
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:299
+msgid "Short details"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:300
+msgid "Provide a short writeup for the team member"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:306
+#: includes/addons/team/class-lvca-team.php:314
+#: includes/addons/team/class-lvca-team.php:322
+#: includes/addons/team/class-lvca-team.php:330
+#: includes/addons/team/class-lvca-team.php:338
+#: includes/addons/team/class-lvca-team.php:346
+#: includes/addons/team/class-lvca-team.php:354
+#: includes/addons/team/class-lvca-team.php:362
+msgid "Social Profile"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:307
+msgid "Email Address"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:308
+msgid "Enter the email address of the team member."
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:315
+msgid "Facebook Page URL"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:316
+msgid "URL of the Facebook page of the team member."
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:323
+msgid "Twitter Profile URL"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:324
+msgid "URL of the Twitter page of the team member."
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:331
+msgid "LinkedIn Page URL"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:332
+msgid "URL of the LinkedIn profile of the team member."
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:339
+msgid "Pinterest Page URL"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:340
+msgid "URL of the Pinterest page for the team member."
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:347
+msgid "Dribbble Profile URL"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:348
+msgid "URL of the Dribbble profile of the team member."
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:355
+msgid "GooglePlus Page URL"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:356
+msgid "URL of the Google Plus page of the team member."
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:363
+msgid "Instagram Page URL"
+msgstr ""
+
+#: includes/addons/team/class-lvca-team.php:364
+msgid "URL of the Instagram feed for the team member."
+msgstr ""
+
+#: includes/addons/team/social-profile.php:14
+msgid "Follow on Facebook"
+msgstr ""
+
+#: includes/addons/team/social-profile.php:16
+msgid "Subscribe to Twitter Feed"
+msgstr ""
+
+#: includes/addons/team/social-profile.php:18
+msgid "View LinkedIn Profile"
+msgstr ""
+
+#: includes/addons/team/social-profile.php:20
+msgid "Follow on Google Plus"
+msgstr ""
+
+#: includes/addons/team/social-profile.php:22
+msgid "View Instagram Feed"
+msgstr ""
+
+#: includes/addons/team/social-profile.php:24
+msgid "Subscribe to Pinterest Feed"
+msgstr ""
+
+#: includes/addons/team/social-profile.php:26
+msgid "View Dribbble Portfolio"
+msgstr ""
+
+#: includes/addons/testimonials-slider/class-lvca-testimonials-slider.php:142
+msgid "Testimonials Slider"
+msgstr ""
+
+#: includes/addons/testimonials-slider/class-lvca-testimonials-slider.php:149
+msgid "Capture client testimonials in a slider."
+msgstr ""
+
+#: includes/addons/testimonials-slider/class-lvca-testimonials-slider.php:188
+msgid "Should the slider have direction navigation."
+msgstr ""
+
+#: includes/addons/testimonials-slider/class-lvca-testimonials-slider.php:196
+msgid "Should the slider have navigation controls."
+msgstr ""
+
+#: includes/addons/testimonials-slider/class-lvca-testimonials-slider.php:210
+#: includes/addons/testimonials/class-lvca-testimonials.php:123
+msgid "Testimonials"
+msgstr ""
+
+#: includes/addons/testimonials-slider/class-lvca-testimonials-slider.php:213
+msgid "Testimonial Slide"
+msgstr ""
+
+#: includes/addons/testimonials/class-lvca-testimonials.php:130
+msgid "Display testimonials in a multi-column grid."
+msgstr ""
+
+#: includes/addons/testimonials/class-lvca-testimonials.php:141
+msgid "Testimonials per row"
+msgstr ""
+
+#: includes/addons/testimonials/class-lvca-testimonials.php:142
+msgid "The number of columns to display per row of the testimonials"
+msgstr ""
+
+#: includes/addons/testimonials/class-lvca-testimonials.php:152
+msgid "Testimonials per row in Tablet Resolution"
+msgstr ""
+
+#: includes/addons/testimonials/class-lvca-testimonials.php:153
+msgid ""
+"The number of columns to display per row of the testimonials in tablet "
+"resolution"
+msgstr ""
+
+#: includes/addons/testimonials/class-lvca-testimonials.php:163
+msgid "Testimonials per row in Mobile Resolution"
+msgstr ""
+
+#: includes/addons/testimonials/class-lvca-testimonials.php:164
+msgid ""
+"The number of columns to display per row of the testimonials in mobile "
+"resolution"
+msgstr ""
+
+#: includes/addons/testimonials/class-lvca-testimonials.php:177
+msgid "Testimonial"
+msgstr ""
+
+#: includes/addons/testimonials/class-lvca-testimonials.php:190
+msgid "The author of the testimonial"
+msgstr ""
+
+#: includes/addons/testimonials/class-lvca-testimonials.php:195
+msgid "Author Details"
+msgstr ""
+
+#: includes/addons/testimonials/class-lvca-testimonials.php:196
+msgid ""
+"The details of the author like company name, position held, company URL etc."
+msgstr ""
+
+#: includes/addons/testimonials/class-lvca-testimonials.php:202
+msgid "Author Image"
+msgstr ""
+
+#: includes/addons/testimonials/class-lvca-testimonials.php:207
+msgid "Text"
+msgstr ""
+
+#: includes/addons/testimonials/class-lvca-testimonials.php:208
+msgid "What your client/customer has to say"
+msgstr ""
+
+#: includes/blocks/block-header.php:114
+#: includes/blocks/headers/block-header-4.php:18
+#: includes/blocks/headers/block-header-4.php:22
+#: includes/blocks/headers/block-header-6.php:16
+#: includes/gallery/common.php:385 includes/helper-functions.php:240
+msgid "All"
+msgstr ""
+
+#: includes/blocks/block-header.php:126
+msgid "More"
+msgstr ""
+
+#: includes/blocks/headers/block-header-6.php:21
+#: includes/gallery/common.php:390 includes/helper-functions.php:245
+msgid "View all items filed under "
+msgstr ""
+
+#: includes/blocks/module.php:226 includes/blocks/modules/module-10.php:33
+#: includes/blocks/modules/module-7.php:28
+#: includes/blocks/modules/module-8.php:28
+msgid "Read more"
+msgstr ""
+
+#: includes/blocks/module.php:288 includes/helper-functions.php:205
+msgid "By "
+msgstr ""
+
+#: includes/blocks/module.php:304 includes/helper-functions.php:192
+#: includes/helper-functions.php:196
+msgid "l, F, Y, g:i a"
+msgstr ""
+
+#: includes/blocks/module.php:330 includes/blocks/module.php:358
+msgid "No Comments"
+msgstr ""
+
+#: includes/blocks/module.php:330 includes/blocks/module.php:358
+#, php-format
+msgid "%1$s Comment"
+msgstr ""
+
+#: includes/blocks/module.php:330 includes/blocks/module.php:358
+#, php-format
+msgid "%1$s Comments"
+msgstr ""
+
+#: includes/blocks/module.php:342 includes/blocks/module.php:344
+#: includes/blocks/module.php:346
+#, php-format
+msgid "Comment on %1$s"
+msgstr ""
+
+#: includes/gallery/common.php:31
+msgid "Masonry Width"
+msgstr ""
+
+#: includes/gallery/common.php:36
+msgid "Wide"
+msgstr ""
+
+#: includes/gallery/common.php:39
+msgid "Width of the image in masonry gallery grid"
+msgstr ""
+
+#: includes/helper-functions.php:196
+msgid "Y"
+msgstr ""
+
+#: includes/helper-functions.php:196
+msgid "m"
+msgstr ""
+
+#: includes/helper-functions.php:196
+msgid "d"
+msgstr ""
+
+#: includes/helper-functions.php:548
+msgid "Bounce"
+msgstr ""
+
+#: includes/helper-functions.php:549
+msgid "Flash"
+msgstr ""
+
+#: includes/helper-functions.php:550
+msgid "Pulse"
+msgstr ""
+
+#: includes/helper-functions.php:551
+msgid "Swing"
+msgstr ""
+
+#: includes/helper-functions.php:552
+msgid "Shake"
+msgstr ""
+
+#: includes/helper-functions.php:553
+msgid "Tada"
+msgstr ""
+
+#: includes/helper-functions.php:554
+msgid "Wobble"
+msgstr ""
+
+#: includes/helper-functions.php:555
+msgid "Jello"
+msgstr ""
+
+#: includes/helper-functions.php:556
+msgid "Rubber Band"
+msgstr ""
+
+#: includes/helper-functions.php:557
+msgid "Bounce In"
+msgstr ""
+
+#: includes/helper-functions.php:558
+msgid "Bounce In Left"
+msgstr ""
+
+#: includes/helper-functions.php:559
+msgid "Bounce In Right"
+msgstr ""
+
+#: includes/helper-functions.php:560
+msgid "Bounce In Down"
+msgstr ""
+
+#: includes/helper-functions.php:561
+msgid "Bounce In Up"
+msgstr ""
+
+#: includes/helper-functions.php:562 includes/helper-functions.php:595
+msgid "Fade In"
+msgstr ""
+
+#: includes/helper-functions.php:563 includes/helper-functions.php:596
+msgid "Fade In Left"
+msgstr ""
+
+#: includes/helper-functions.php:564
+msgid "Fade In Left Big"
+msgstr ""
+
+#: includes/helper-functions.php:565 includes/helper-functions.php:597
+msgid "Fade In Right"
+msgstr ""
+
+#: includes/helper-functions.php:566
+msgid "Fade In Right Big"
+msgstr ""
+
+#: includes/helper-functions.php:567
+msgid "Fade In Up"
+msgstr ""
+
+#: includes/helper-functions.php:568
+msgid "Fade In Up Big"
+msgstr ""
+
+#: includes/helper-functions.php:569
+msgid "Fade In Down"
+msgstr ""
+
+#: includes/helper-functions.php:570
+msgid "Fade In Down Big"
+msgstr ""
+
+#: includes/helper-functions.php:571
+msgid "Flip"
+msgstr ""
+
+#: includes/helper-functions.php:572
+msgid "Flip In X"
+msgstr ""
+
+#: includes/helper-functions.php:573
+msgid "Flip In Y"
+msgstr ""
+
+#: includes/helper-functions.php:574
+msgid "Light Speed In"
+msgstr ""
+
+#: includes/helper-functions.php:575
+msgid "Rotate In"
+msgstr ""
+
+#: includes/helper-functions.php:576
+msgid "Rotate In Up Left"
+msgstr ""
+
+#: includes/helper-functions.php:577
+msgid "Rotate In Up Right"
+msgstr ""
+
+#: includes/helper-functions.php:578
+msgid "Rotate In Down Left"
+msgstr ""
+
+#: includes/helper-functions.php:579
+msgid "Rotate In Down Right"
+msgstr ""
+
+#: includes/helper-functions.php:580
+msgid "Slide In Left"
+msgstr ""
+
+#: includes/helper-functions.php:581
+msgid "Slide In Right"
+msgstr ""
+
+#: includes/helper-functions.php:582
+msgid "Slide In Down"
+msgstr ""
+
+#: includes/helper-functions.php:583
+msgid "Slide In Up"
+msgstr ""
+
+#: includes/helper-functions.php:584
+msgid "Zoom In"
+msgstr ""
+
+#: includes/helper-functions.php:585
+msgid "Zoom In Left"
+msgstr ""
+
+#: includes/helper-functions.php:586
+msgid "Zoom In Right"
+msgstr ""
+
+#: includes/helper-functions.php:587
+msgid "Zoom In Down"
+msgstr ""
+
+#: includes/helper-functions.php:588
+msgid "Zoom In Up"
+msgstr ""
+
+#: includes/helper-functions.php:589
+msgid "Roll In"
+msgstr ""
+
+#: includes/helper-functions.php:634
+msgid "Original Size"
+msgstr ""
+
+#: includes/helper-functions.php:635
+msgid "Thumbnail"
+msgstr ""
+
+#: includes/helper-functions.php:637
+msgid "Large"
+msgstr ""
+
+#: includes/mapper-functions.php:20 includes/mapper-functions.php:30
+#: includes/mapper-functions.php:38
+msgid "Desktop"
+msgstr ""
+
+#: includes/mapper-functions.php:25 includes/mapper-functions.php:54
+#: includes/mapper-functions.php:93
+msgid "Columns to scroll"
+msgstr ""
+
+#: includes/mapper-functions.php:49 includes/mapper-functions.php:59
+#: includes/mapper-functions.php:67 includes/mapper-functions.php:77
+msgid "Tablet"
+msgstr ""
+
+#: includes/mapper-functions.php:73 includes/mapper-functions.php:112
+msgid "Resolution"
+msgstr ""
+
+#: includes/mapper-functions.php:88 includes/mapper-functions.php:98
+#: includes/mapper-functions.php:106 includes/mapper-functions.php:116
+msgid "Mobile"
+msgstr ""
+
+#: includes/mapper-functions.php:134
+msgid "Prev/Next Arrows?"
+msgstr ""
+
+#: includes/mapper-functions.php:142
+msgid "Show dot indicators for navigation?"
+msgstr ""
+
+#: includes/mapper-functions.php:150
+msgid "Autoplay?"
+msgstr ""
+
+#: includes/mapper-functions.php:151
+msgid "Should the carousel autoplay as in a slideshow."
+msgstr ""
+
+#: includes/mapper-functions.php:159
+msgid "Autplay speed"
+msgstr ""
+
+#: includes/mapper-functions.php:167
+msgid "Autoplay animation speed in ms"
+msgstr ""
+
+#: plugin.php:53 plugin.php:62
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: plugin.php:340
+msgid ""
+"Indicate if this row has a dark background color. Dark color scheme will be "
+"applied for all elements in this row."
+msgstr ""

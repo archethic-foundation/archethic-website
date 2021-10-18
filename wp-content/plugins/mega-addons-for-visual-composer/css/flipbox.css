@@ -1,0 +1,195 @@
+/*Rotate Verticle
+***************************************/
+  .vc-ihe-panel {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    font-size: .8em;
+    -webkit-perspective: 600px;
+            perspective: 600px;
+  }
+  .vc-ihe-panel .pad h4, .vc-ihe-panel .pad p {
+    text-align: center;
+    margin: 5px;
+  }
+  .vc-ihe-panel .pad h4 {
+    margin-top: 15px;
+  }
+  .vc-ihe-panel a {
+    font-size: 16px;
+  }
+  .vc-ihe-panel .mega_hvr_btn {
+    text-decoration: none;
+    padding: 5px 13px;
+  }
+  .vc-ihe-panel .mega_hvr_btn:hover {
+    text-decoration: none;
+  }
+  .vc-ihe-panel .front {
+    float: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    -webkit-transform: rotateY(0) rotateY(0);
+            transform: rotateY(0) rotateY(0);
+
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+  }
+  .vc-ihe-panel:hover .front {
+    z-index: 900;
+    -webkit-transform: rotateX(179deg);
+            transform: rotateX(179deg);
+  }
+
+  .vc-ihe-panel .back {
+    float: none;
+    /*padding: 10px;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 800;
+    width: inherit;
+    height: inherit;
+    -webkit-transform: rotateX(-179deg);
+            transform: rotateX(-179deg);
+
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+  }
+
+  .vc-ihe-panel:hover .back {
+    z-index: 1000;
+    -webkit-transform: rotateY(0) rotateX(0);
+            transform: rotateY(0) rotateX(0);
+  }
+
+/* Rotate Horizental
+***************************************/
+
+  .vc-ihe-panel .front1 {
+    float: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    -webkit-transform: rotateX(0) rotateX(0);
+            transform: rotateX(0) rotateX(0);
+
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+  }
+  .vc-ihe-panel:hover .front1 {
+    z-index: 900;
+    -webkit-transform: rotateY(179deg);
+            transform: rotateY(179deg);
+  }
+
+  .vc-ihe-panel .back1 {
+    float: none;
+    position: absolute;
+    /*padding: 10px;*/
+    top: 0;
+    left: 0;
+    z-index: 800;
+    width: inherit;
+    height: inherit;
+    -webkit-transform: rotateY(-179deg);
+            transform: rotateY(-179deg);
+
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+  }
+
+  .vc-ihe-panel:hover .back1 {
+    z-index: 1000;
+    -webkit-transform: rotateX(0) rotateX(0);
+            transform: rotateX(0) rotateX(0);
+  }
+
+
+/* 3D Flip
+***************************************/
+.cube .mega_hvr_btn {
+    text-decoration: none;
+    padding: 5px 13px;
+  }
+  .cube .mega_hvr_btn:hover {
+    text-decoration: none;
+  }
+.cube {
+  position: relative;
+  width: 100%;
+  color: #000;
+  text-align:center;
+}
+.cube h4 {
+  font-size: 17px;
+  margin: 0;
+  text-align: center;
+  margin: 10px;
+}
+.cube p {
+  font-size: 15px;
+  text-align: center;
+  margin: 0;
+}
+.cube a {
+  font-size: 16px;
+}
+.default-state, .active-state {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: transform 0.4s ease;
+  -webkit-transform-origin: center center -100px;
+  width: 100%;
+}
+.default-state {
+  background-color: #03a9f4;
+  transform: perspective(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  /*padding: 0 10px;*/
+}
+.active-state {
+  background: #1976d2;
+  transform: perspective(100000px) rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+  /*padding: 0 10px;*/
+}
+.cube:hover .default-state {
+  transform: perspective(10000000px) rotateX(90deg) rotateY(0) rotateZ(0deg);
+}
+.cube:hover .active-state {
+  z-index: 99999;
+  transform: perspective(100000px) rotateX(0deg) rotateY(0deg) rotateZ(0);
+}

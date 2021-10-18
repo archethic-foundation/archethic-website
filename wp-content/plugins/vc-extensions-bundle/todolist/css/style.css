@@ -1,0 +1,124 @@
+.cqlist-container{
+  min-width: 240px;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+.cqlist {
+  margin: 0;
+  position: relative;
+}
+.cqlist h3 {
+  position: relative;
+  text-align: center;
+  background: #663399;
+  background-repeat: repeat;
+  color: #fff;
+  margin: 0;
+  padding: 6px 10px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.cqlist span.cqlist-label{
+  background-image: url(../img/ricepaper.png);
+  background-repeat: repeat;
+  color: #666;
+  width: 100%;
+  display: inline-block;
+  margin: 0;
+  padding: 7px 0;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+.cqlist h3 a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.cqlist ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cqlist del{
+  color: #666;
+}
+.cqlist ul li {
+  position: relative;
+  background: #fff;
+  color: #666;
+  line-height: 40px;
+  margin: 0;
+  padding: 4px 0 4px 0;
+}
+.cqlist.border ul li{
+  border-bottom: 1px solid #EFEFEF;
+}
+.cqlist ul li.done, .cqlist ul li.done span.todolist-content{
+  text-decoration: line-through;
+}
+.cqlist ul li span{
+  display: inline-block;
+  line-height: 180%;
+}
+.cqlist ul li span.todolist-content{
+  width: 80%;
+}
+.cqlist ul li span.no-icon{
+  padding: 0 14px;
+}
+
+
+.cqlist ul li a.todolist-btn {
+  display: inline-block;
+  vertical-align: top;
+  width: 40px;
+  opacity: 1;
+  height: 40px;
+  margin-right: 0px;
+  color: #333;
+  cursor: default;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -ms-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+.cqlist ul li:nth-child(2n) {
+  background: #f7f7f7;
+}
+.cqlist.border ul li:nth-child(2n) {
+  background: none;
+}
+
+.cqlist ul li a.todolist-btn:focus{
+  outline: none;
+}
+
+.cqlist-signup a{
+  display: block;
+  max-width: 120px;
+  border-radius: 4px;
+  margin: 0 auto;
+  background: #663399;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 4px 6px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -ms-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+}

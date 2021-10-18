@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*********************
+Style number 1
+*********************/
+
+#mega_count_bar .mega_count_img img {
+  display: block;
+  margin: 0 auto;
+}
+#mega_count_bar .mega_count_img {
+  padding-bottom: 5px;
+  text-align: center;
+}
+#mega_count_bar .mega_count_content h3 {
+  text-align: center;
+  margin: 5px;
+  margin-top: 0;
+  line-height: 1.3;
+}
+#mega_count_bar .mega_count_content span {
+	margin: 0;
+}
+
+#mega_count_bar h3 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+#mega_count_bar hr {
+    width: 30px;
+    height: 2px;
+    background: #8e8e8e;
+    display: block;
+    margin: 4px auto;
+}
+
+
+
+/*********************
+Style number 2
+*********************/
+
+#mega_count_bar_2 .mega_count_img {
+    text-align: left;
+    display: table-cell;
+    vertical-align: middle;
+}
+#mega_count_bar_2 .mega_count_img img {
+  display: block;
+  margin: 0 auto;
+}
+#mega_count_bar_2 i {
+  display: block;
+  text-align: center;
+}
+#mega_count_bar_2 .mega_count_content {
+  text-align: left;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 15px;
+}
+#mega_count_bar_2 .mega_count_content h3, #mega_count_bar_2 .mega_count_content p {
+  text-align: left;
+}
+
+#mega_count_bar_2 h3 {
+  font-size: 30px;
+  font-weight: 500;
+  margin: 5px;
+}
+
+
+/*********************
+Style number 3
+*********************/
+
+#mega_count_bar_3 .mega_count_img {
+    text-align: left;
+    display: table-cell;
+    vertical-align: middle;
+}
+#mega_count_bar_3 .mega_count_img img {
+  display: block;
+  margin: 0 auto;
+}
+#mega_count_bar_3 i {
+  display: block;
+  text-align: center;
+}
+#mega_count_bar_3 .mega_count_content {
+  text-align: left;
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 15px;
+    padding-top: 10px;
+}
+#mega_count_bar_3 .mega_count_content h3, #mega_count_bar_3 .mega_count_content p {
+  text-align: left;
+  margin: 0;
+}
+
+#mega_count_bar_3 h3 {
+  font-size: 30px;
+  font-weight: 500;
+  margin: 5px;
+  margin-right: 0;
+  padding-top: 10px;
+}
+
+
+/*********************
+Style number 4
+*********************/
+
+#mega_count_bar_4 .mega_count_img img {
+  display: block;
+  margin: 0 auto;
+}
+#mega_count_bar_4 .mega_count_img {
+  text-align: center;
+}
+#mega_count_bar_4 .mega_count_content h3 {
+  text-align: center;
+}
+
+#mega_count_bar_4 h3 {
+  font-size: 30px;
+  font-weight: 500;
+  margin: 5px;
+}
+
+#mega_count_bar_4 p {
+  font-size: 22px;
+  padding-bottom: 6px;
+}

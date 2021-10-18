@@ -1,0 +1,70 @@
+.cq-shadowcard-item {
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+  width: 100%;
+  height: 240px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  transition: box-shadow 0.15s ease-out, transform 0.25s ease;
+  perspective: 500px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+}
+.cq-shadowcard-item:hover {
+  transform: scale(1.1);
+  box-shadow: none;
+}
+.cq-shadowcard-item.cq-shadowcard-ending {
+  transition: box-shadow 0.5s ease;
+}
+
+@media screen and (min-width: 160px) and (max-width: 480px) {
+  .cq-shadowcard-item {
+    display: inline-block;
+  }
+  .cq-shadowcard-item .cq-shadowcard-title {
+    opacity: 0.8;
+  }
+  .cq-shadowcard-item + .cq-shadowcard-item {
+    margin: 0 0 0 25px;
+  }
+}
+
+.cq-shadowcard-link {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform-origin: center center;
+  transform-style: preserve-3d;
+}
+
+.cq-shadowcard-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.cq-shadowcard-title {
+  font-size: 14px;
+  width: 100%;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.15s ease-in;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.06);
+  margin: 6px 0 0 0;
+}
+.cq-shadowcard-item:hover .cq-shadowcard-title {
+  opacity: 0.8;
+}
+

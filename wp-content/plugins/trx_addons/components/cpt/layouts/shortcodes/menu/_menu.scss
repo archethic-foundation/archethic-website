@@ -1,0 +1,669 @@
+/* Menu mobile button */
+.sc_layouts_item_menu_mobile_button,
+.sc_layouts_menu_mobile_button {
+	display: none !important;
+}
+.sc_layouts_menu_mobile_button .sc_layouts_item_icon {
+	font-size: 2em;
+}
+.sc_layouts_menu_mobile_button .sc_layouts_item_icon:before {
+	line-height:1.2em;
+}
+.sc_layouts_menu_mobile_button_burger:not(.without_menu) {
+	display:inline-block !important;
+}
+
+/* Menu: common rules
+----------------------------------------- */
+.sc_layouts_menu {
+	position:relative;
+	z-index:1000;
+	overflow:hidden;
+	visibility:hidden;
+	max-height:3em;
+}
+.sc_layouts_menu.inited {
+	overflow: visible;
+	visibility: visible;
+	max-height:none;
+}
+.sc_layouts_menu_nav, .sc_layouts_menu_nav ul {
+	display:inline-block;
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+.sc_layouts_menu_nav:after, .sc_layouts_menu_nav ul:after {
+	content:' ';
+	@include clear;
+}
+.sc_layouts_menu_nav li {
+	margin: 0;
+	position:relative;
+}
+.sc_layouts_menu_nav li > a {
+	display:block;
+	position:relative;
+}
+
+/* 1st level */
+.sc_layouts_menu_nav {
+	text-align:left;
+	vertical-align:middle;
+	padding-left: 0 !important;
+}
+.sc_layouts_menu_nav > li {
+	position:relative;
+	float:left;
+	z-index:20;
+}
+.sc_layouts_menu_nav > li+li { z-index:19; }
+.sc_layouts_menu_nav > li+li+li { z-index:18; }
+.sc_layouts_menu_nav > li+li+li+li { z-index:17; }
+.sc_layouts_menu_nav > li+li+li+li+li { z-index:16; }
+.sc_layouts_menu_nav > li+li+li+li+li+li { z-index:15; }
+.sc_layouts_menu_nav > li+li+li+li+li+li+li { z-index:14; }
+.sc_layouts_menu_nav > li+li+li+li+li+li+li+li { z-index:13; }
+.sc_layouts_menu_nav > li+li+li+li+li+li+li+li+li { z-index:12; }
+.sc_layouts_menu_nav > li+li+li+li+li+li+li+li+li+li { z-index:11; }
+
+.sc_layouts_menu_nav > li > a {
+	padding: 1em;
+	position:relative;
+	color: #333;
+	@include transition-colors;
+}
+
+.sc_layouts_menu_nav > li > a:hover,
+.sc_layouts_menu_nav > li.sfHover > a,
+.sc_layouts_menu_nav > li.current-menu-item > a,
+.sc_layouts_menu_nav > li.current-menu-parent > a,
+.sc_layouts_menu_nav > li.current-menu-ancestor > a {
+	color: #efa758;
+}
+.sc_layouts_menu_nav > li.current-menu-item > a,
+.sc_layouts_menu_nav > li.current-menu-parent > a,
+.sc_layouts_menu_nav > li.current-menu-ancestor > a {
+	font-weight:600 !important;
+}
+.sc_layouts_menu_nav > li.menu-item-has-children > a {
+	padding-right: 2em;
+}
+.sc_layouts_menu_nav > li.menu-item-has-children > a:after {
+	content: '\e882';
+	font-family: $trx_addons_icons;
+	font-weight:normal;
+	display:inline-block;
+	@include abs-rc(1em);
+	@include transition-color;
+}
+.sc_layouts_menu_popup .sc_layouts_menu_nav > li.menu-item-has-children > a:after,
+.sc_layouts_menu_nav li li.menu-item-has-children > a:after {
+	content: '\e884';
+	font-family: $trx_addons_icons;
+	font-weight:normal;
+	@include abs-rt(0.75em, 0.65em); //abs-rc(0.75em);
+	@include transition-color;
+}
+.sc_layouts_menu_popup .sc_layouts_menu_nav > li.menu-item-has-children > a:after {
+	top: 1.2em;
+}
+
+.sc_layouts_menu_nav li[class*="icon-"]:before {
+	@include transition-color;
+}
+.sc_layouts_menu_nav > li[class*="icon-"] > a {
+	padding-left: 2em;
+}
+.sc_layouts_menu_nav > li[class*="icon-"]:before {
+	display:inline-block;
+	padding:1em 0;
+	width: 1em;
+	line-height:inherit;
+	@include abs-lt(0.5em, 0);
+}
+.sc_layouts_menu_nav > li[class*="columns-"][class*="icon-"]:before {
+	position:static;
+	margin:0 0 0 0.5em;
+	float:left;
+}
+.sc_layouts_menu_nav > li[class*="columns-"][class*="icon-"] > a {
+	float:left;
+	margin-left: -1.5em;
+}
+
+.sc_layouts_menu_nav li[class*="image-"] > a {
+	background-position: 1em center;
+	background-repeat:no-repeat;
+	background-size: 1em;
+	padding-left: 2.3em;
+}
+
+/* Submenu */
+.sc_layouts_menu_popup .sc_layouts_menu_nav,
+.sc_layouts_menu_nav > li ul {
+	position:absolute;
+	display:none;
+	z-index:10000;
+	width:13em;
+	padding: 1.4em 0;
+	text-align:left;
+	background-color: #f0f0f0;
+	@include border-box;
+	@include box-shadow(1px 1px 2px 0px rgba(0,0,0,0.2));
+}
+.sc_layouts_menu_popup .sc_layouts_menu_nav {
+	display:block;
+}
+
+.widget_nav_menu li.menu-delimiter,
+.sc_layouts_menu_nav > li li.menu-delimiter {
+	margin-top: 0.5em;
+	padding-top: 0.5em;
+	border-top: 1px solid #f0f0f0; 
+	text-align: center;
+	height: 0;
+	overflow:hidden;
+}
+
+.sc_layouts_menu_popup .sc_layouts_menu_nav > li > a,
+.sc_layouts_menu_nav > li li > a {
+	padding: 0.6em 1.5em;
+	color: #333;
+}
+.sc_layouts_menu_nav > li li > a:hover,
+.sc_layouts_menu_nav > li li.sfHover > a,
+.sc_layouts_menu_nav > li li.current-menu-item > a,
+.sc_layouts_menu_nav > li li.current-menu-parent > a,
+.sc_layouts_menu_nav > li li.current-menu-ancestor > a {
+	color: #efa758;
+}
+
+.sc_layouts_menu_nav > li li[class*="icon-"] > a > span {
+	display: inline-block;
+	padding-left: 1.5em;
+}
+.sc_layouts_menu_nav > li li[class*="icon-"]:before {
+	@include abs-lc(1.5em);
+	color: #333;
+}
+.sc_layouts_menu_nav > li li[class*="icon-"]:hover:before,
+.sc_layouts_menu_nav > li li[class*="icon-"].shHover:before,
+.sc_layouts_menu_nav > li li.current-menu-item:before,
+.sc_layouts_menu_nav > li li.current-menu-parent:before,
+.sc_layouts_menu_nav > li li.current-menu-ancestor:before {
+	color: #efa758;
+}
+
+.sc_layouts_menu_nav > li li[class*="image-"] > a {
+	background-position: 1.6667em center;
+	padding-left: 3em;
+}
+
+.sc_layouts_menu_nav > li > ul {
+	top:4.2em;
+
+	/* To align submenu center */
+	/* left:50%;*/
+	/* margin-left:-6.5em;*/	/* Don't use translate, because translate is used in the show effects */
+
+	/* To align submenu left */
+	left: 0;
+}
+.sc_layouts_menu_nav > li:last-child > ul,
+.sc_layouts_column_align_right .sc_layouts_menu_nav > li.menu-collapse > ul {
+	left: auto;
+	right: 0;
+}
+.sc_layouts_menu_popup .sc_layouts_menu_nav,
+.sc_layouts_menu_popup .sc_layouts_menu_nav > li > ul,
+.sc_layouts_menu_nav > li > ul ul {
+	left:13em;
+	top:-1.4em;
+	margin: 0 0 0 2px;
+	background-color: #f0f0f0;
+}
+.sc_layouts_menu_nav > li > ul ul.submenu_left {
+	left:-13em;
+	margin: 0 0 0 -2px;
+}
+
+/* Multi-columns submenu */
+.sc_layouts_menu_nav > li[class*="columns-"] {
+	position:static;
+}
+
+.sc_layouts_menu_nav > li[class*="columns-"] > ul {
+	left: 0;
+	right: 0;
+	width: 100%;
+	margin-left:0;
+}
+.sc_layouts_menu_nav ul li.columns-2 > ul {					width:26em; }
+.sc_layouts_menu_nav ul li.columns-2 > ul.submenu_left {	left:-26em; }
+.sc_layouts_menu_nav ul li.columns-3 > ul {					width:39em; }
+.sc_layouts_menu_nav ul li.columns-3 > ul.submenu_left {	left:-39em; }
+.sc_layouts_menu_nav ul li.columns-4 > ul {					width:52em; }
+.sc_layouts_menu_nav ul li.columns-4 > ul.submenu_left { 	left:-52em; }
+.sc_layouts_menu_nav ul li.columns-5 > ul {					width:65em; }
+.sc_layouts_menu_nav ul li.columns-5 > ul.submenu_left { 	left:-65em; }
+
+.sc_layouts_menu_nav li[class*="columns-"] > ul > li {
+	display:inline-block;
+	vertical-align:top;
+}
+.sc_layouts_menu_nav li.columns-2 > ul > li {	width:50%; }
+.sc_layouts_menu_nav li.columns-3 > ul > li {	width:33.3333%; }
+.sc_layouts_menu_nav li.columns-4 > ul > li {	width:25%; }
+.sc_layouts_menu_nav li.columns-5 > ul > li {	width:20%; }
+
+.sc_layouts_menu_nav li[class*="columns-"] li.menu-item-has-children > a {
+	font-weight:600 !important;
+	font-size: 1.0667em !important;
+}
+.sc_layouts_menu_nav li[class*="columns-"] li.menu-item-has-children > a:after {
+	display:none;
+}
+
+.sc_layouts_menu_nav li[class*="columns-"] > ul ul {
+	position:static !important;
+	display:block !important;
+	margin-left: 0;	/* Specify positive value if you want to shift submenu items */
+	padding : 0;
+	left: auto;
+	top: auto;
+	width: auto;
+	vertical-align:top;
+	opacity: 1 !important;
+	@include transform(none !important);
+	@include box-shadow(none !important);
+}
+
+
+/* Layouts as the menu */
+.sc_layouts_menu li > ul.sc_layouts_submenu {
+	@include border-box;
+	width: auto;
+	padding: 1.4em;
+}
+.sc_layouts_menu li > ul.sc_layouts_submenu .vc_row {
+	overflow:hidden;
+}
+.sc_layouts_menu li > ul.sc_layouts_submenu .sc_layouts_item {
+	margin:0 !important;
+	display: block !important;
+	vertical-align:top;
+}
+
+// Submenu inside the Custom Menu widget
+.widget_nav_menu [class*="sc_content_width_"] {
+	width: auto !important;
+}
+.widget_nav_menu ul.sc_layouts_submenu {
+	padding-left: 0;
+	margin-top: 1em;
+}
+.widget_nav_menu ul.sc_layouts_submenu .wpb_column {
+	width: 100% !important;
+	float: none;
+}
+.widget_nav_menu ul.sc_layouts_submenu .wpb_column + .wpb_column {
+	margin-top: 1.5em;
+}
+.widget_nav_menu .post_item .post_thumb {
+	float: none;
+	display: block;
+	margin: 0 0 1em;
+}
+.widget_nav_menu .post_item .post_thumb img {
+	@include border-sharp;
+}
+.widget_nav_menu .post_item .post_title {
+	font-size: 1em;
+}
+
+/* Vertical menu */
+.sc_layouts_menu_dir_vertical .sc_layouts_menu_nav {
+	display: block;
+}
+.sc_layouts_menu_dir_vertical .sc_layouts_menu_nav > li {
+	display: block;
+	float: none;
+	width: 100%;
+}
+.sc_layouts_menu_dir_vertical .sc_layouts_menu_nav > li:before {
+	display: none;
+}
+.sc_layouts_menu_dir_vertical .sc_layouts_menu_nav > li > a {
+	padding: 0.25em 0;
+}
+.sc_layouts_menu_dir_vertical .sc_layouts_menu_nav > li.menu-item-has-children > a:after {
+	content: '\e884';
+}
+.sc_layouts_menu_dir_vertical .sc_layouts_menu_nav > li > ul,
+.sc_layouts_menu_dir_vertical .sc_layouts_menu_nav > li:last-child > ul {
+	left:100%;
+	top:-1.4em;
+	margin: 0 0 0 2px;
+}
+
+
+/* Description in the menu items 
+-------------------------------------------------- */
+.sc_layouts_menu_item_description {
+	display: block;
+	margin-top: 2px;
+	@include font(8px, 12px);
+}
+.sc_layouts_menu_nav > li > a .sc_layouts_menu_item_description {
+	margin-top: 0;
+	@include abs-lt(0, 4.8em);
+	@include border-box;
+	width: 100%;
+	text-align: left;
+	padding: 0 1em 0 2em;
+}
+
+
+/* Fixed rows
+----------------------------------------------------- */
+.sc_layouts_row_fixed_on {
+	@include box-shadow(0 2px 10px 0 rgba(0,0,0,0.2));
+}
+
+
+/* Dropdown */
+.sc_layouts_dropdown > li > ul {
+	top: 2.6em;
+	left: -1.5em;
+}
+.sc_layouts_column_align_right .sc_layouts_dropdown > li > ul {
+	left: auto;
+	right: -1.5em;
+}
+.sc_layouts_dropdown li.menu-item.menu-item-has-children > a {
+	padding: 0;
+}
+.sc_layouts_dropdown li.menu-item.menu-item-has-children > a:after {
+	position:static;
+	display:inline-block;
+	vertical-align: middle;
+	margin-left: 0.3em;
+	@include transform-none;
+}
+
+
+/* Menu popup
+----------------------------------------------------- */
+.sc_layouts_menu_mobile_button_burger {
+	position:relative;
+}
+.sc_layouts_menu_popup {
+	@include abs-ct(2.4em, 1000);
+	display:none;
+}
+.sc_layouts_menu_popup .sc_layouts_menu_nav {
+	position:relative;
+	left:0;
+	top: 0;
+}
+.sc_layouts_menu_popup .sc_layouts_menu_nav > li {
+	display:block;
+	float:none;
+}
+
+
+/* Menu collapse
+----------------------------------------------------- */
+.sc_layouts_menu_nav .menu-collapse {
+	display:none;
+}
+.sc_layouts_menu_nav .menu-collapse > a {
+	position:relative;
+	text-align:center;
+}
+.sc_layouts_menu_nav .menu-collapse > a:before {
+	@include rel-lt(0, 1px, 2);
+	//@include rotate(90deg);
+}
+.sc_layouts_menu_nav .menu-collapse > a:after {
+	content: ' ';
+	display:block;
+	background-color: #f7f7f7;
+	@include abs-cc;
+	@include box(2em, 2em);
+	@include border-round;
+}
+
+
+/* Menu hovers
+----------------------------------------------------- */
+
+/* Slide Line and Slide Box */
+.menu_hover_slide_line > ul > li#blob,
+.menu_hover_slide_box > ul > li#blob {
+	position: absolute;
+	top: 0;
+	z-index : 1;
+	opacity:0;
+	@include transition(all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275)); // easeOutBack
+}
+.menu_hover_slide_line > ul > li.blob_over:not(.current-menu-item):not(.current-menu-parent):not(.current-menu-ancestor):hover,
+.menu_hover_slide_line > ul > li.blob_over:not(.current-menu-item):not(.current-menu-parent):not(.current-menu-ancestor).sfHover {
+	background-color: transparent;
+	@include box-shadow(none);
+}
+.menu_hover_slide_line > ul > li#blob {
+	height: 1px;
+	margin-top: 3em;
+}
+
+/* Zoom Line */
+.menu_hover_zoom_line > ul > li > a {
+	position:relative;
+}
+.menu_hover_zoom_line > ul > li > a:before {
+	content: "";
+	margin-left:0.25em;
+	@include abs-ct(3em);
+	@include box(0, 1px);
+	@include transition-all(0.1s);
+}
+.menu_hover_zoom_line > ul > li > a:hover:before,
+.menu_hover_zoom_line > ul > li.sfHover > a:before,
+.menu_hover_zoom_line > ul > li.current-menu-item > a:before,
+.menu_hover_zoom_line > ul > li.current-menu-parent > a:before,
+.menu_hover_zoom_line > ul > li.current-menu-ancestor > a:before {
+	width: 80%;
+}
+
+/* Path Line */
+.menu_hover_path_line > ul > li > a {
+	position:relative;
+}
+.menu_hover_path_line > ul > li:before,
+.menu_hover_path_line > ul > li:after,
+.menu_hover_path_line > ul > li > a:before,
+.menu_hover_path_line > ul > li > a:after {
+	content: ' ' !important;
+	position: absolute;
+	@include transition-property(transform, 0.1s);
+	@include transition-timing(1, 0.68, 0.16, 0.9);
+}
+/* left and right line */
+.menu_hover_path_line > ul > li:before,
+.menu_hover_path_line > ul > li:after {
+	top: 0.5em;
+	bottom: 0.5em;
+	width: 1px;
+	/*height: 100%;*/
+	@include scale3d(1, 0, 1);
+}
+/* left line */
+.menu_hover_path_line > ul > li:before {
+	left: 0.2em;
+	@include transform-origin(50% 100%);
+}
+/* right line */
+.menu_hover_path_line > ul > li:after {
+	right: 0.2em;
+	@include transform-origin(50% 0%);
+}
+/* top and bottom line */
+.menu_hover_path_line > ul > li > a:before,
+.menu_hover_path_line > ul > li > a:after,
+.menu_hover_path_line > ul > li.menu-item-has-children > a:after {
+	left: 0.2em;
+	right: 0.2em;
+	/*width: 100%;*/
+	height: 1px;
+	@include scale3d(0, 1, 1);
+}
+/* top line */
+.menu_hover_path_line > ul > li > a:before {
+	top: 0.5em;
+	bottom: auto;
+	@include transform-origin(0 50%);
+}
+/* bottom line */
+.menu_hover_path_line > ul > li > a:after,
+.menu_hover_path_line > ul > li.menu-item-has-children > a:after {
+	top: auto;
+	bottom: 0.5em;
+	@include transform-origin(100% 50%);
+}
+/* Delays (first reverse, then current) */
+/* These rules can be simplified, but let's keep it for better readability */
+/* bottom line */
+.menu_hover_path_line > ul > li > a:after,
+.menu_hover_path_line > ul > li.menu-item-has-children > a:after {
+	@include transition-delay(0.3s);
+}
+
+.menu_hover_path_line > ul > li > a:hover:after,
+.menu_hover_path_line > ul > li.sfHover > a:after,
+.menu_hover_path_line > ul > li.menu-item-has-children > a:hover:after,
+.menu_hover_path_line > ul > li.sfHover.menu-item-has-children > a:after {
+	@include transition-delay(0s);
+}
+/* left line */
+.menu_hover_path_line > ul > li:before {
+	@include transition-delay(0.2s);
+}
+.menu_hover_path_line > ul > li:hover:before,
+.menu_hover_path_line > ul > li.sfHover:before {
+	@include transition-delay(0.1s);
+}
+/* top line */
+.menu_hover_path_line > ul > li > a:before {
+	@include transition-delay(0.1s);
+}
+.menu_hover_path_line > ul > li.sfHover > a:before,
+.menu_hover_path_line > ul > li > a:hover:before {
+	@include transition-delay(0.2s);
+}
+/* right line */
+.menu_hover_path_line > ul > li.sfHover:after,
+.menu_hover_path_line > ul > li:hover:after {
+	@include transition-delay(0.3s);
+}
+
+.menu_hover_path_line > ul > li.sfHover:before,
+.menu_hover_path_line > ul > li:hover:before,
+.menu_hover_path_line > ul > li.sfHover:after,
+.menu_hover_path_line > ul > li:hover:after,
+.menu_hover_path_line > ul > li.sfHover > a:before,
+.menu_hover_path_line > ul > li > a:hover:before,
+.menu_hover_path_line > ul > li > a:hover:after,
+.menu_hover_path_line > ul > li.sfHover > a:after {
+	@include scale3d(1, 1, 1);
+}
+
+/* Roll Down */
+.menu_hover_roll_down > ul > li > a:before {
+	content: ' ';
+	@include abs-pos(3.3em, 1.5em, auto, 1.5em, '');
+	height: 1px;
+	opacity: 0;
+	@include translate3d(0, -3em, 0);
+	@include transition(transform 0s 0.3s, opacity 0.2s);
+}
+.menu_hover_roll_down > ul > li > a:hover:before,
+.menu_hover_roll_down > ul > li.sfHover > a:before,
+.menu_hover_roll_down > ul > li.current-menu-item > a:before,
+.menu_hover_roll_down > ul > li.current-menu-ancestor > a:before,
+.menu_hover_roll_down > ul > li.current-menu-parent > a:before {
+	opacity: 1;
+	@include translate3d(0, 0, 0);
+	@include transition(transform 0.3s, opacity 0.1s);
+	@include transition-timing(0.4, 0, 0.2, 1);
+}
+
+.menu_hover_roll_down > ul > li > a > span {
+	display: block;
+	pointer-events: none;
+}
+
+.menu_hover_roll_down > ul > li.sfHover > a > span,
+.menu_hover_roll_down > ul > li > a:hover > span,
+.menu_hover_roll_down > ul > li.current-menu-item > a > span,
+.menu_hover_roll_down > ul > li.current-menu-ancestor > a > span,
+.menu_hover_roll_down > ul > li.current-menu-parent > a > span {
+	@include animation(anim-roll-down 0.3s forwards);
+}
+
+@-webkit-keyframes anim-roll-down {
+	50% { opacity: 0; @include translate3d(0, 100%, 0); }
+	51% { opacity: 0; @include translate3d(0, -100%, 0); }
+	100%{ opacity: 1; @include translate3d(0, 0, 0); }
+}
+
+@keyframes anim-roll-down {
+	50% { opacity: 0; @include translate3d(0, 100%, 0); }
+	51% { opacity: 0; @include translate3d(0, -100%, 0); }
+	100%{ opacity: 1; @include translate3d(0, 0, 0); }
+}
+
+/* Color Line */
+.menu_hover_color_line > ul > li > a:hover:before,
+.menu_hover_color_line > ul > li > a:focus:before {
+	@include scale3d(1, 1, 1);
+	@include transition-delay(0s);
+}
+
+.menu_hover_color_line > ul > li > a:before,
+.menu_hover_color_line > ul > li > a:after,
+.menu_hover_color_line > ul > li.menu-item-has-children > a:after {
+	content: ' ' !important;
+	@include abs-pos(3.3em, 1.5em !important, auto, 1.5em, '');
+	margin: 0;
+	height: 1px;
+	@include scale3d(0, 1, 1);
+	@include transform-origin(center left);
+	@include transition(transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1));
+}
+.menu_hover_color_line > ul > li > a:hover,
+.menu_hover_color_line > ul > li.sfHover > a:after,
+.menu_hover_color_line > ul > li > a:hover:after,
+.menu_hover_color_line > ul > li > a:before {
+	@include transition-delay(0.3s);
+}
+
+.menu_hover_color_line > ul > li.sfHover > a:after,
+.menu_hover_color_line > ul > li.menu-item-has-children > a:hover:after,
+.menu_hover_color_line > ul > li > a:hover:after,
+.menu_hover_color_line > ul > li.sfHover > a:before,
+.menu_hover_color_line > ul > li > a:hover:before,
+.menu_hover_color_line > ul > li.current-menu-item > a:after,
+.menu_hover_color_line > ul > li.current-menu-item > a:before,
+.menu_hover_color_line > ul > li.current-menu-ancestor > a:after,
+.menu_hover_color_line > ul > li.current-menu-ancestor > a:before,
+.menu_hover_color_line > ul > li.current-menu-parent > a:after,
+.menu_hover_color_line > ul > li.current-menu-parent > a:before {
+	@include scale3d(1, 1, 1);
+}
+
+.menu_hover_color_line > ul > li.sfHover > a:before,
+.menu_hover_color_line > ul > li > a:hover:before {
+	@include transition-delay(0s);
+}

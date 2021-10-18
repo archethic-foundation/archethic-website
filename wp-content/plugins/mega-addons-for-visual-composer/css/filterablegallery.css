@@ -1,0 +1,375 @@
+.maw_portfolioGallery_ul {
+    list-style-type: none;
+        text-align: center;
+}
+
+.maw_portfolioGallery_ul li {
+    float: none;
+    background-color: #EAF1F8;
+    margin: 0 5px;
+    color: #454597;
+    cursor: pointer;
+    padding: 9px 26px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 6px !important;
+}
+
+.maw_portfolioGallery_ul .mixitup-control-active {
+    background-color: #1DA1F5;
+    color: #fff;
+}
+
+/* Grid Masonry Breakpoints 
+---------------------------------------------------------------------- */
+
+.maw_portfolioGallery_container {
+    overflow: hidden;
+}
+
+/* 2 Columns */
+
+.maw_portfolioGallery_wrapper {
+    -webkit-column-count: ;
+    -moz-column-count: ;
+    column-count: ;
+}
+
+@media screen and (max-width: 961px) {
+    .maw_portfolioGallery_wrapper {
+        -webkit-column-count: ;
+        -moz-column-count: ;
+        column-count: ;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .maw_portfolioGallery_wrapper {
+        -webkit-column-count: ;
+        -moz-column-count: ;
+        column-count: ;
+    }
+}
+
+/* Fade Effect
+---------------------------------------------------------------------- */
+
+.ih_item_fade_effect {
+    overflow: hidden;
+}
+
+.ih_item_fade_effect .info {
+    right: 0;
+    text-align: center;
+    bottom: 0;
+    top: 0;
+    left: 0
+}
+
+.ih_item_fade_effect {
+    position: relative;
+    /*width: 100%;*/
+    height: 100%;
+    display: inline-block;
+}
+
+.ih_item_fade_effect .info {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.ih_item_fade_effect:hover .info{
+    /*opacity: 1 !important;*/
+}
+.ih_item_fade_effect:hover .img{
+    transform: scale(1.0) !important;
+}
+
+.ih_item_fade_effect .info {
+    background: ;
+    visibility: hidden;
+    opacity: 0 !important;
+    transition: opacity 1s linear; 
+    transition: all .35s ease-in-out;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.ih_item_fade_effect .a-tag:hover .info {
+    visibility: visible;
+    opacity: 1 !important;
+}
+
+.maw_portfolioGallery_ihe .portfolio_icon {
+    display: inline-block;
+    /*background-color: #ff622a;*/
+    color: #fff;
+    border-radius: 50px;
+    font-size: 17px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    padding: 0 !important;
+}
+
+
+
+/* Slide Up
+---------------------------------------------------------------------- */
+
+.ih_item_slide_up {
+    overflow: hidden;
+    display: inline-block;
+}
+
+.ih_item_slide_up .info {
+    right: 0;
+    text-align: center;
+    bottom: 0;
+    top: 0;
+    left: 0
+}
+
+.ih_item_slide_up {
+    position: relative;
+    /*width: 100%;*/
+    height: 100%;
+}
+
+.ih_item_slide_up .info {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+
+.ih_item_slide_up .img {
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.ih_item_slide_up .info {
+  background: #333333;
+  background: rgba(0, 0, 0, 0.6);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+.ih_item_slide_up .info p,
+.ih_item_slide_up .info i {
+  font-size: 12px;
+  position: relative;
+  color: #bbb;
+  padding: 20px 20px 20px;
+  text-align: center;
+  
+}
+.ih_item_slide_up .a-tag:hover .img {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.ih_item_slide_up .a-tag:hover .info {
+  visibility: visible;
+  opacity: 1;
+}
+
+.ih_item_slide_up .info h1, .ih_item_slide_up .info h2, .ih_item_slide_up .info h3, .ih_item_slide_up .info h4,
+.ih_item_slide_up .info h5, .ih_item_slide_up .info p, .ih_item_slide_up .info i, .ih_item_slide_up .info span{
+-webkit-transition: all 0.25s 0.1s linear;
+  -moz-transition: all 0.25s 0.1s linear;
+  transition: all 0.25s 0.1s linear;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+}
+.ih_item_slide_up .a-tag:hover .info * {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+
+/* Zoom In
+---------------------------------------------------------------------- */
+
+.ih_item_zoom_in {
+    overflow: hidden;
+    display: inline-block;
+}
+
+.ih_item_zoom_in .info {
+    right: 0;
+    text-align: center;
+    bottom: 0;
+    top: 0;
+    left: 0
+}
+
+.ih_item_zoom_in {
+    position: relative;
+    /*width: 100%;*/
+    height: 100%;
+}
+
+.ih_item_zoom_in .info {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+
+.ih_item_zoom_in .img {
+  opacity: 1;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+.ih_item_zoom_in .info {
+  background-color: rgba(0,0,0,0.7);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+.ih_item_zoom_in .info h3 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  font-size: 17px;
+  padding: 0px;
+  margin: 10px 0 0 0;
+  -webkit-transition: all 0.35s 0.1s ease-in-out;
+  -moz-transition: all 0.35s 0.1s ease-in-out;
+  transition: all 0.35s 0.1s ease-in-out;
+}
+.ih_item_zoom_in .info p {
+  font-style: italic;
+  font-size: 12px;
+  position: relative;
+  color: #bbb;
+  padding: 20px 20px 20px;
+  text-align: center;
+  -webkit-transition: all 0.35s 0.15s linear;
+  -moz-transition: all 0.35s 0.15s linear;
+  transition: all 0.35s 0.15s linear;
+}
+.ih_item_zoom_in .a-tag:hover .img {
+  opacity: 1;
+}
+.ih_item_zoom_in .a-tag:hover .info {
+  visibility: visible;
+  opacity: 1;
+}
+
+.ih_item_zoom_in .img {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.ih_item_zoom_in .info {
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+.ih_item_zoom_in .info h3,
+.ih_item_zoom_in .info p {
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+.ih_item_zoom_in .a-tag:hover .img {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.ih_item_zoom_in .a-tag:hover .info {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.ih_item_zoom_in .a-tag:hover .info h3,
+.ih_item_zoom_in .a-tag:hover .info p {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+/* Card Effect
+---------------------------------------------------------------------- */
+
+.ih_item_card_effect {
+    overflow: hidden;
+    display: inline-block;
+}
+
+.ih_item_card_effect .info {
+    right: 0;
+    text-align: center;
+    bottom: 0;
+    top: 0;
+    left: 0
+}
+
+.ih_item_card_effect {
+    position: relative;
+    /*width: 100%;*/
+    height: 100%;
+}
+
+.ih_item_card_effect .info {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+
+.ih_item_card_effect:hover .info{
+    /*opacity: 1 !important;*/
+}
+.ih_item_card_effect:hover .img{
+    transform: scale(1.0) !important;
+}
+
+.ih_item_card_effect .info {
+    background: ;
+    visibility: hidden;
+    opacity: 0 !important;
+    transition: opacity 1s linear; 
+    transition: all .35s ease-in-out;
+    background-color: rgba(0,0,0,0.7) !important;
+}
+
+.ih_item_card_effect .a-tag:hover .info {
+    visibility: visible;
+    opacity: 1 !important;
+}
+
+

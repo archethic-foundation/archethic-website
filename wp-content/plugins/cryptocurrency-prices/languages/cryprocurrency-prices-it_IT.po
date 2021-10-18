@@ -1,0 +1,172 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cryptocurrency All-in-One\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-24 07:06+0000\n"
+"PO-Revision-Date: 2018-02-03 10:02+0000\n"
+"Last-Translator: admin <a@aaaddaa.com>\n"
+"Language-Team: Italian\n"
+"Language: it-IT\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+# Tradotto da CryptoMercato.it
+#: includes/common.class.php:91
+msgid "Powered by"
+msgstr "Creato da"
+
+#: includes/common.class.php:105
+msgid "Data by"
+msgstr "Dati da"
+
+#: includes/cryptodonation.class.php:73
+msgid "To donate"
+msgstr "Per donare"
+
+#: includes/cryptodonation.class.php:73
+msgid ", scan the QR code or copy and paste the"
+msgstr ", scansiona il codice QR oppure copia/incolla l' "
+
+#: includes/cryptodonation.class.php:73 includes/cryptopayment.class.php:173
+msgid " wallet address:"
+msgstr "indirizzo del wallet:"
+
+#: includes/cryptodonation.class.php:81
+msgid "Thank you!"
+msgstr "Grazie!"
+
+#: includes/cryptopayment.class.php:169
+msgid "Order submitted. Please make a payment:"
+msgstr "Ordine confermato. Procedi al pagamento:"
+
+#: includes/cryptopayment.class.php:173
+msgid "To pay"
+msgstr "Da pagare:"
+
+#: includes/cryptopayment.class.php:173
+msgid ", scan the QR code or copy and paste the "
+msgstr ", scansiona il codice QR oppure copia/incolla il"
+
+#: includes/cryptopayment.class.php:251
+msgid "Please enter order details:"
+msgstr "Inserisci i dettagli dell'ordine:"
+
+#: includes/cryptopayment.class.php:259
+msgid "Item name:"
+msgstr "Nome elemento:"
+
+#: includes/cryptopayment.class.php:273
+msgid "Order amount:"
+msgstr "Quantità:"
+
+#: includes/cryptopayment.class.php:285
+msgid "Name:"
+msgstr "Nome:"
+
+#: includes/cryptopayment.class.php:293
+msgid "Email:"
+msgstr "Email:"
+
+#: includes/cryptopayment.class.php:301
+msgid "Address:"
+msgstr "Indirizzo:"
+
+#: includes/cryptopayment.class.php:309
+msgid "Telephone:"
+msgstr "Telefono:"
+
+#: includes/cryptopayment.class.php:317
+msgid "Proceed to payment"
+msgstr "Procedi al pagamento"
+
+#: includes/currencyprice.class.php:83
+msgid "price"
+msgstr "Prezzo"
+
+#: includes/currencyprice.class.php:91
+msgid "calculator"
+msgstr "Convertitore"
+
+#: includes/currencyprice.class.php:513
+msgid "Select interval"
+msgstr "Seleziona intervallo"
+
+#: includes/currencyprice.class.php:517
+msgid "1 hour"
+msgstr "1 ora"
+
+#: includes/currencyprice.class.php:519
+msgid "24 hours"
+msgstr "24 ore"
+
+#: includes/currencyprice.class.php:521
+msgid "30 days"
+msgstr "30 giorni"
+
+#: includes/currencyprice.class.php:523
+msgid "1 year"
+msgstr "1 anno"
+
+#: includes/currencyprice.class.php:621
+msgid "Coin"
+msgstr "Moneta"
+
+#: includes/currencyprice.class.php:623
+msgid "Algorithm; Proof type"
+msgstr "Algoritmo; Sicurezza"
+
+#: includes/currencyprice.class.php:625
+msgid "Total supply"
+msgstr "Approvvigionamento totale:"
+
+#: includes/ethereum.class.php:59
+msgid "Check Ethereum address balance"
+msgstr "Consulta il bilancio del tuo indirizzo Ethereum"
+
+#: includes/ethereum.class.php:63
+msgid "Ethereum address"
+msgstr "Indirizzo Ethereum"
+
+#: includes/ethereum.class.php:65
+msgid "Get balance"
+msgstr "Visualizza bilancio"
+
+#: includes/ethereum.class.php:157
+msgid "View Ethereum block"
+msgstr "Visualizza blocco Ethereum"
+
+#: includes/ethereum.class.php:161
+msgid "Block number or hash"
+msgstr "Numero del blocco/partizione"
+
+#: includes/ethereum.class.php:163
+msgid "Get block"
+msgstr "Blocco"
+
+#. Name of the plugin
+msgid "Cryptocurrency All-in-One"
+msgstr "Cryptocurrency All-in-One"
+
+#. Description of the plugin
+msgid ""
+"Provides multiple cryptocurrency features: accepting payments, displaying "
+"prices and exchange rates, cryptocurrency calculator, accepting donations."
+msgstr ""
+"Fornisce multi-funzionalità per diverse cryptovalute: accetta pagamenti, "
+"visualizza prezzi di scambio, calcola i cambi tra cryptovalute, accetta "
+"donazioni."
+
+#. URI of the plugin
+msgid "https://creditstocks.com/"
+msgstr "https://creditstocks.com/"
+
+#. Author of the plugin
+msgid "Boyan Yankov"
+msgstr "Boyan Yankov"
+
+#. Author URI of the plugin
+msgid "http://byankov.com/"
+msgstr "http://byankov.com/"

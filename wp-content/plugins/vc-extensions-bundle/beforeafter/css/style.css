@@ -1,0 +1,128 @@
+.cq-beforeafter-link{
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+.cq-beforeafter {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.cq-beforeafter .cq-beforeafter-caption{
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+  min-width: 240px;
+  display: block;
+  position: relative;
+  padding: 8px;
+  background: #FFF;
+  color: #333;
+  left: 0;
+  bottom: 0;
+}
+.cq-beforeafter-caption.cq-beforeafter-captionright{
+}
+.cq-beforeafter img.cq-beforeafter-img {
+  display: block;
+  width: 100%;
+}
+
+.cq-beforeafter .cq-beforeafter-resize{
+  position: absolute;
+  z-index: 1;
+  display: block;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+}
+.cq-beforeafter .cq-beforeafter-resize .cq-beforeafter-img {
+  opacity: 0;
+}
+
+
+.cq-beforeafter .cq-beforeafter-handle { /* Thin line seperator */
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:2px;
+  margin-left:-1px;
+  background: rgba(255,255,255,.2);
+  cursor: ew-resize;
+  z-index: 2;
+}
+.cq-beforeafter .cq-beforeafter-handle i{
+  position: absolute;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  display: block;
+  margin: -16px 0 0 -16px;
+  color: #333;
+  font-size: 12px;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 50%;
+  transition:all 0.3s ease;
+  background: #ffb800;
+  border: 1px solid #e6a600; /* darken(@orange, 5%) */
+  box-shadow:
+      0 2px 6px rgba(0,0,0,.2),
+      inset 0 2px 0 rgba(255,255,255,.2),
+      inset 0 60px 50px -30px #ffd466; /* lighten(@orange, 20%)*/
+}
+
+.cq-beforeafter .cq-beforeafter-handle.grass i{
+  background: #8CC152;
+  border: 1px solid #8ac051;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2), inset 0 2px 0 rgba(255,255,255,.2), inset 0 60px 50px -30px #A0D468;
+}
+.cq-beforeafter .cq-beforeafter-handle.aqua i{
+  background: #3BAFDA;
+  border: 1px solid #349dc2;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2), inset 0 2px 0 rgba(255,255,255,.2), inset 0 60px 50px -30px #4FC1E9;
+}
+.cq-beforeafter .cq-beforeafter-handle.grapefruit i{
+  background: #DA4453;
+  border: 1px solid #cf404f;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2), inset 0 2px 0 rgba(255,255,255,.2), inset 0 60px 50px -30px #ED5565;
+}
+
+.cq-beforeafter .cq-beforeafter-handle.pinkrose i{
+  background: #D770AD;
+  border: 1px solid #c767a1;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2), inset 0 2px 0 rgba(255,255,255,.2), inset 0 60px 50px -30px #EC87C0;
+}
+
+.cq-beforeafter .cq-beforeafter-handle.lightgray i{
+  background: #E6E9ED;
+  border: 1px solid #d7d8dd;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2), inset 0 2px 0 rgba(255,255,255,.2), inset 0 60px 50px -30px #F5F7FA;
+}
+
+.cq-beforeafter .cq-beforeafter-handle.darkgray i{
+  background: #656D78;
+  border: 1px solid #AAB2BD;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2), inset 0 2px 0 rgba(255,255,255,.2), inset 0 60px 50px -30px #AAB2BD;
+}
+
+.cq-beforeafter .cq-beforeafter-handle.lavender i{
+  color: #fff;
+  background: #967ADC;
+  border: 1px solid #876dc4;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2), inset 0 2px 0 rgba(255,255,255,.2), inset 0 60px 50px -30px #AC92EC;
+}
+.cq-beforeafter .cq-beforeafter-handle.draggable i{
+  width: 48px;
+  height: 48px;
+  margin: -24px 0 0 -24px;
+  line-height: 48px;
+  font-size: 18px;
+}
+

@@ -1,0 +1,12 @@
+.sc_popup {
+	display: none;
+	background-color:#fff;
+	@include box-shadow(0 0 20px 0 rgba(0, 0, 0, 0.2));
+}
+.mfp-content .sc_popup {
+	display:block;
+}
+.mfp-inline-holder .mfp-content, .mfp-ajax-holder .mfp-content {
+	max-width: 70%;
+	max-height: 70%;
+}

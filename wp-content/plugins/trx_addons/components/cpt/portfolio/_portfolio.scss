@@ -1,0 +1,91 @@
+.sc_portfolio_columns_wrap {
+	@include flex;
+	@include flex-wrap(wrap);
+}
+.sc_portfolio_slider .sc_portfolio_item,
+.sc_portfolio_columns_wrap .sc_portfolio_item {
+	display:inline-block;
+	vertical-align:top;
+	@include box(100%, 100%);
+	@include border-box;
+}
+.sc_portfolio_slider .sc_portfolio_item {
+	height: 95%;
+}
+
+.sc_portfolio {
+	position: relative;	
+}
+
+/* Style 'Default' */
+.sc_portfolio_default .sc_portfolio_item {
+	background-color:#fafafa;
+	margin-bottom: 2em;
+	text-align:center;
+	padding-top:0.0001px;
+}
+.sc_portfolio_default.slider_swiper .sc_portfolio_item,
+.sc_portfolio_default .columns_padding_bottom .sc_portfolio_item {
+	margin-bottom:0;
+}
+
+.sc_portfolio_default .sc_portfolio_item_thumb {
+	margin-bottom: 0;
+}
+.sc_portfolio_default .sc_portfolio_item_thumb img {
+	width: 100%;
+}
+
+.sc_portfolio_default .sc_portfolio_item_info {
+	padding: 1.5em 2em;
+}
+
+.sc_portfolio_default .sc_portfolio_item_title {
+	margin: 0;
+}
+.sc_portfolio_default .sc_portfolio_item_subtitle {
+	font-size: 0.9286em;
+	line-height:1.5em;
+	margin-top: 0.5em;
+}
+
+.sc_portfolio_default .sc_portfolio_item_content {
+	margin-top:1em;
+}
+.sc_portfolio_default .sc_portfolio_item_content p {
+	margin:0;
+}
+
+.sc_portfolio_default .sc_portfolio_item_button {
+	margin:1em 0 0;
+}
+
+
+/* Style "Simple" */
+.sc_portfolio_simple .sc_portfolio_item_title {
+	margin: 0;
+}
+.sc_portfolio_simple .sc_portfolio_item_subtitle {
+	@include font(0.9286em, 1.5em);
+	margin-top: 0.5em;
+}
+
+.sc_portfolio_simple .sc_portfolio_item_content {
+	margin-top:1em;
+}
+.sc_portfolio_simple .sc_portfolio_item_content p {
+	margin:0;
+}
+
+.sc_portfolio_simple .sc_portfolio_item_button {
+	margin:1em 0 0;
+}
+
+
+/* Single post (not in CV) */
+.portfolio_page_header {
+	margin-bottom: 3em;
+}
+.portfolio_page_header img {
+	width: 100%;
+}

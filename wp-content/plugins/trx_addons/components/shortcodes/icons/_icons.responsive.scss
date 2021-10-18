@@ -1,0 +1,10 @@
+@mixin sc_icons--lg() {
+    /* Icons */
+	.sc_icons .sc_icons_icon + .sc_icons_item_title,
+	.sc_icons .sc_icons_icon + .sc_icons_item_description {
+		margin-top:1em;
+	}
+	.sc_icons .sc_icons_item_description {
+		font-size: 14px;
+	}
+}

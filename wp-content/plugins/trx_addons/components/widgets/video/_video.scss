@@ -1,0 +1,66 @@
+/* Video player's styles */
+.trx_addons_video_player.with_cover {
+	position:relative;
+	overflow: hidden;
+}
+.trx_addons_video_player.with_cover .video_embed {
+	@include flex;
+	@include flex-align-items(center);
+	@include flex-justify-content(center);
+	@include abs-cover;
+	text-align:center;
+	opacity:0;
+	overflow:hidden;
+	@include transition-all;
+}
+.trx_addons_video_player.with_cover img {
+	position:relative;
+	z-index:2;
+	@include box(100%, auto);
+}
+.trx_addons_video_player.with_cover .video_mask {
+	@include bg-mask(#000, 0.5, 3);
+	@include transition-all;
+	opacity:0;
+}
+.trx_addons_video_player.with_cover:hover .video_mask {
+	opacity:1;
+}
+.trx_addons_video_player.with_cover .video_hover {
+	@include abs-cc(4);
+	@include square(2em);
+	@include border-round;
+	@include transition-all;
+	font-size:3em;
+	cursor: pointer;
+	overflow:hidden;
+	margin-top: 2em;
+	background-color: rgba(0,0,0,0.5);
+	color: #fff;
+	opacity: 0;
+}
+.trx_addons_video_player.with_cover .video_hover:before {
+	content: '\e888';
+	font-family: $trx_addons_icons;
+	margin:0;
+}
+.trx_addons_video_player.with_cover .video_hover:hover {
+	background-color: rgba(0,0,0,0.5);
+}
+.trx_addons_video_player.with_cover:hover .video_hover {
+	opacity: 1;
+	margin-top: 0;
+}
+
+/* 'Play' state */
+.trx_addons_video_player.video_play .video_mask {
+	opacity: 1;
+	background-color:#000;
+}
+.trx_addons_video_player.video_play .video_embed {
+	opacity:1;
+	z-index:10;
+}
+.trx_addons_video_player.video_play .video_hover {
+	display:none;
+}

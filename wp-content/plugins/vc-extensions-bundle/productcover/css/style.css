@@ -1,0 +1,224 @@
+@import url('entypo.css');
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+  line-height:2rem;
+  font-weight:normal;
+  padding:10px;
+
+}
+
+.productcover-content {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width:100%;
+}
+.productcover-content .megaph {
+  display: inline-block;
+  margin-bottom: -8px;
+  font-size:2.1rem;
+}
+.productcover-content .arrdown {
+  display:block;
+  margin-top: 4px;
+  font-size:2rem;
+  font-weight: 100;
+}
+
+.productcover-content, .productcover-cat > ul li {box-sizing: border-box;}
+.productcover-content img {
+  border-radius: 0;
+}
+.productcover-content .cover-image {
+  width:100%;
+}
+.productcover-box {
+    position:relative;
+    width:100%;
+    height:0px;
+    padding-bottom:30%;
+    float:left;
+}
+.productcover-cat{
+    margin: 0;
+    padding: 0;
+    position:absolute;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+.productcover-cat img, .productcover-caption {position:absolute;}
+.productcover-caption {
+  color:white;width:100%;
+}
+.productcover-cat > img {
+  top:0px;
+  left:0px;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+}
+.productcover-cat:hover > img {top:-20px;}
+.productcover-cat > h3 {
+  position:absolute;
+  width:100%;
+  bottom:5%;
+  margin:0px;
+  padding:0px;
+  color:white;
+  text-align:center;
+  font-size:2rem;
+  line-height:2rem;
+  font-weight:400;
+  letter-spacing:2px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.productcover-cat:hover > h3 {bottom:100%;}
+.productcover-cat > span.productcover-caption {
+  top:100%;
+  left:0px;
+  -webkit-transition: all 0.45s;
+  -moz-transition: all 0.45s;
+  -ms-transition: all 0.45s;
+  -o-transition: all 0.45s;
+  transition: all 0.45s;
+}
+.productcover-cat:hover > span.productcover-caption {
+  top:80%;
+}
+
+.productcover-cat > span h4 {
+  display:inline-block;
+  padding:0px;
+  margin:0px 0px 20px 0px;
+  max-width:43px;
+  overflow:hidden;
+  font-size:1.2rem;
+  font-weight:700;
+  line-height:2.8rem;
+  padding-left: 16px;
+  color:white;
+  letter-spacing:0px;
+  opacity: 0;
+  -webkit-transition: all 0.5s 0.3s;
+  -moz-transition: all 0.5s 0.3s;
+  -ms-transition: all 0.5s 0.3s;
+  -o-transition: all 0.5s 0.3s;
+  transition: all 0.5s 0.3s;
+  padding-right:15px;
+  letter-spacing:2px;
+  max-width:100%;
+}
+.productcover-cat:hover > span h4 {
+  opacity: 1;
+}
+.productcover-content .productcover-box .productcover-cat > ul li{
+  display: block;
+  margin: 0;
+}
+.productcover-cat > ul {
+  width:100%;
+  height:0px;
+  list-style-type:none;
+  margin:0px;
+  position:relative;
+  top:100%;
+  padding:0px 0px 25% 0px;
+  float:left;
+  text-align:center;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.productcover-cat > ul li {
+  position:absolute;
+  height:100%;
+  bottom:0px;
+  overflow:hidden;
+  background:transparent;
+  opacity:0;
+  -webkit-transition: all 0.5s 0.3s;
+  -moz-transition: all 0.5s 0.3s;
+  -ms-transition: all 0.5s 0.3s;
+  -o-transition: all 0.5s 0.3s;
+  transition: all 0.5s 0.3s;
+}
+.productcover-cat > ul li img {
+  position:relative;
+}
+.productcover-cat:hover > ul {
+}
+.productcover-cat:hover > ul li {
+  opacity:1;
+}
+
+.productcover-cat > ul li > span.thumb-caption {
+  display: block;
+  position:absolute;
+  top:0px;
+  width:100%;
+  margin:0px;
+  padding:0px;
+  font-size:1rem;
+  font-weight:300;
+  line-hight:1.6rem;
+  color:rgba(0,0,0,0);
+  background:rgba(255,255,255,0);
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.productcover-cat > ul li:hover > span.thumb-caption {background:rgba(255,255,255,0.7);color:#333;}
+
+.productcover-content .thin {font-weight:300;}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .productcover-cat > h3 {
+    font-size: 1.5rem;
+  }
+  .productcover-cat > span h4 {
+    font-size: 1rem;
+    line-height:2rem;
+  }
+  .productcover-cat > ul li > span.thumb-caption {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+
+  .productcover-content .arrdown {
+    margin-top: -4px;
+    font-size:1.5rem;
+    font-weight: 100;
+  }
+
+}
+@media only screen and (min-width: 160px) and (max-width: 479px) {
+  .productcover-cat > h3 {
+    font-size: 1rem;
+  }
+  .productcover-cat > span h4 {
+    font-size: 0.7rem;
+    line-height:1.6rem;
+  }
+  .productcover-cat > ul li > span.thumb-caption {
+    font-size: 0.7rem;
+    line-height: 1.2rem;
+  }
+  .productcover-content .arrdown {
+    margin-top: -10px;
+    font-size:1rem;
+    font-weight: 100;
+  }
+
+}
+

@@ -1,0 +1,34 @@
+// @required
+
+
+// General settings
+//------------------------------------------
+
+// Font with icons
+$trx_addons_icons: "trx_addons_icons";	// font-family for the font with plugin-specific icons
+
+$grid_gap: 30px;		// Gap between columns in the grid
+
+
+// Responsive
+//------------------------------------------
+
+// --xl
+$xl_page: 1100px;		// Width of the whole page
+$xl_grid_gap: 30px;		// Gap between columns in the grid
+
+// --lg
+$lg_page: 964px;		// Width of the whole page
+$lg_grid_gap: 30px;		// Gap between columns in the grid
+
+// --md
+$md_page: 708px;		// Width of the whole page
+$md_grid_gap: 30px;		// Gap between columns in the grid
+
+// --sm
+$sm_page: 440px;		// Width of the whole page
+$sm_grid_gap: 20px;		// Gap between columns in the grid
+
+// --xs
+$xs_page: 280px;		// Width of the whole page
+$xs_grid_gap: 20px;		// Gap between columns in the grid

@@ -1,0 +1,762 @@
+.cq-userprofile {
+  height: 240px;
+}
+
+.cq-userprofile-container {
+  position: relative;
+  width: 70%;
+  min-height: 80px;
+  height: auto;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  animation: init-container 0.5s forwards ease-in-out;
+}
+.cq-userprofile-avatarlink{
+  border: none;
+  outline: none;
+}
+
+@media only screen and (min-width:160px) and (max-width:640px) {
+  .cq-userprofile-container {
+     max-width: 100%;
+  }
+
+}
+
+@keyframes init-container {
+  0% {
+    width: 0;
+  }
+
+}
+
+.cq-userprofile-container .cq-userprofile-avatar, .cq-userprofile-container .cq-userprofile-content {
+  box-sizing: border-box;
+}
+
+
+.cq-userprofile-container .cq-userprofile-avatar {
+  position: relative;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #FFF;
+  background-color: #FFF;
+}
+.cq-userprofile-container.none-shadow .cq-userprofile-avatar{
+  box-shadow: none;
+}
+.cq-userprofile-container.light-shadow .cq-userprofile-avatar{
+  box-shadow: 0 0 0.5rem #F5F7FA;
+}
+.cq-userprofile-container.dark-shadow .cq-userprofile-avatar{
+  box-shadow: 0 0 0.5rem #656D78;
+}
+.cq-userprofile-avatar-80 .cq-userprofile-avatar{
+  width: 80px;
+  height: 80px;
+}
+.cq-userprofile-avatar-120 .cq-userprofile-avatar{
+  width: 120px;
+  height: 120px;
+}
+.cq-userprofile-avatar-160 .cq-userprofile-avatar{
+  width: 160px;
+  height: 160px;
+}
+
+@keyframes rotate-photo {
+  100% {
+    transform: rotate(-360deg);
+  }
+
+}
+
+.cq-userprofile-avatar-80 .cq-userprofile-container{
+  height: 80px;
+}
+.cq-userprofile-avatar-100 .cq-userprofile-container{
+  height: 100px;
+}
+.cq-userprofile-avatar-120 .cq-userprofile-container{
+  height: 120px;
+}
+.cq-userprofile-avatar-160 .cq-userprofile-container{
+  height: 160px;
+}
+
+.cq-userprofile-container .cq-userprofile-avatar img {
+  width: 100%;
+}
+
+.cq-userprofile-container .cq-userprofile-content {
+  position: absolute;
+  width: calc(100% - 48px);
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  padding-left: 70px;
+  border-radius: 5px;
+  background-color: #E6E9ED;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.cq-userprofile-shadow-none .cq-userprofile-content{
+  box-shadow: none;
+}
+.cq-userprofile-shadow-medium .cq-userprofile-content{
+  box-shadow: 0 0 1rem #CCD1D9;
+}
+.cq-userprofile-shadow-large .cq-userprofile-content{
+  box-shadow: 0 0 2rem #CCD1D9;
+}
+
+
+.cq-userprofile-container .cq-userprofile-user {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  width: 80%;
+}
+.cq-userprofile-avatar-160 .cq-userprofile-container .cq-userprofile-content{
+  padding-left: 120px;
+}
+.cq-userprofile-avatar-120 .cq-userprofile-container .cq-userprofile-content{
+  padding-left: 90px;
+}
+.cq-userprofile-avatar-80 .cq-userprofile-container .cq-userprofile-content{
+  padding-left: 60px;
+}
+
+
+.cq-userprofile-container .cq-userprofile-content .cq-userprofile-name{
+  font-size: 1.3em;
+}
+.cq-userprofile-container .cq-userprofile-content .cq-userprofile-role{
+  display: block;
+  font-size: 1em;
+}
+.cq-userprofile-container .cq-userprofile-content .cq-userprofile-name, .cq-userprofile-container .cq-userprofile-content .cq-userprofile-role {
+  font-weight: normal;
+  margin: 3px 0;
+}
+
+.cq-userprofile-container .cq-userprofile-btn {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: #abc;
+  z-index: 1;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  animation: animate-btn 0.3s both ease-in-out 0.5s;
+}
+
+.cq-userprofile-icon-large.cq-userprofile-avatar-160 .cq-userprofile-btn{
+  top: 50px;
+}
+.cq-userprofile-icon-small.cq-userprofile-avatar-160 .cq-userprofile-btn{
+  top: 64px;
+}
+.cq-userprofile-icon-large.cq-userprofile-avatar-120 .cq-userprofile-btn{
+  top: 40px;
+}
+.cq-userprofile-icon-small.cq-userprofile-avatar-120 .cq-userprofile-btn{
+  top: 44px;
+}
+
+.cq-userprofile-icon-small.cq-userprofile-avatar-100 .cq-userprofile-btn{
+  top: 34px;
+}
+.cq-userprofile-icon-small.cq-userprofile-avatar-80 .cq-userprofile-btn{
+  top: 22px;
+}
+
+.cq-userprofile-icon-large.cq-userprofile-avatar-80 .cq-userprofile-btn{
+  top: 16px;
+}
+.cq-userprofile-icon-large.cq-userprofile-avatar-100 .cq-userprofile-btn{
+  top: 24px;
+}
+.cq-userprofile-icon-large.cq-userprofile-avatar-120 .cq-userprofile-btn{
+  top: 34px;
+}
+
+
+
+@keyframes animate-btn {
+  0% {
+    transform: scale(0);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+.cq-userprofile-container .cq-userprofile-content .cq-userprofile-btn:hover {
+}
+
+.cq-userprofile-container .cq-userprofile-content .cq-userprofile-btn span {
+  width: 60%;
+  height: 2px;
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  left: 20%;
+  transform: translateY(-50%);
+  animation: close-menu 0.3s forwards ease-in-out;
+}
+
+.cq-userprofile-icon-small  .cq-userprofile-btn {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  right: 14px;
+}
+
+.cq-userprofile-icon-small .cq-userprofile-container .cq-userprofile-btn span {
+  width: 50%;
+  left: 25%;
+}
+
+.cq-userprofile-icon-small .cq-userprofile-container .cq-userprofile-content .cq-userprofile-btn.active span::before, .cq-userprofile-icon-small .cq-userprofile-container .cq-userprofile-content .cq-userprofile-btn.active span::after {
+  width: 65%;
+  right: 0px;
+}
+.cq-userprofile-icon-small .cq-userprofile-container .cq-userprofile-content .cq-userprofile-btn.active span::before{
+  top: 3px;
+}
+.cq-userprofile-icon-small .cq-userprofile-container .cq-userprofile-content .cq-userprofile-btn.active span::after{
+  top: -3px;
+}
+
+
+.cq-userprofile-container .cq-userprofile-content .cq-userprofile-btn span::before, .cq-userprofile-container .cq-userprofile-content .cq-userprofile-btn span::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background-color: white;
+  transition-duration: 0.3s;
+  transform: rotate(0deg);
+  right: 0;
+}
+
+.cq-userprofile-container .cq-userprofile-content .cq-userprofile-btn span::before {
+  margin-top: -7px;
+}
+
+.cq-userprofile-container .cq-userprofile-content .cq-userprofile-btn span::after {
+  margin-top: 7px;
+}
+
+.cq-userprofile-container .cq-userprofile-content .cq-userprofile-btn.active span {
+  animation: open-menu 0.3s forwards ease-in-out;
+}
+
+.cq-userprofile-container .cq-userprofile-content .cq-userprofile-btn.active span::before, .cq-userprofile-container .cq-userprofile-content .cq-userprofile-btn.active span::after {
+  width: 60%;
+  right: -1px;
+}
+
+.cq-userprofile-container .cq-userprofile-content .cq-userprofile-btn.active span::before {
+  transform: rotate(45deg);
+}
+
+.cq-userprofile-container .cq-userprofile-content .cq-userprofile-btn.active span::after {
+  transform: rotate(-45deg);
+}
+
+@keyframes close-menu {
+  from {
+    transform: translateY(-50%) rotate(-180deg);
+  }
+
+}
+
+@keyframes open-menu {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+
+  to {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 50%;
+  top: 50%;
+  right: -30%;
+  transform: translate(-50%, -50%);
+  transition-duration: 0.3s;
+}
+
+.cq-userprofile-radius-small .cq-userprofile-container .cq-userprofile-iconcontainer {
+  right: -20%;
+}
+.cq-userprofile-radius-medium .cq-userprofile-container .cq-userprofile-iconcontainer {
+  right: -30%;
+}
+.cq-userprofile-radius-large .cq-userprofile-container .cq-userprofile-iconcontainer {
+  right: -40%;
+}
+
+
+.cq-userprofile-icon-small .cq-userprofile-container .cq-userprofile-iconcontainer {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+}
+.cq-userprofile-radius-small.cq-userprofile-icon-small .cq-userprofile-container .cq-userprofile-iconcontainer {
+  right: -10%;
+}
+.cq-userprofile-radius-medium.cq-userprofile-icon-small .cq-userprofile-container .cq-userprofile-iconcontainer {
+  right: -20%;
+}
+.cq-userprofile-radius-large.cq-userprofile-icon-small .cq-userprofile-container .cq-userprofile-iconcontainer {
+  right: -28%;
+}
+
+
+.cq-userprofile-container .cq-userprofile-iconcontainer .cq-userprofile-buttonlink {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 26px;
+  line-height: 48px;
+  position: absolute;
+  left: 20%;
+  top: calc(75px - 48px/2);
+  opacity: 0;
+  background: #656D78;
+  transition-duration: 0.3s;
+}
+
+.cq-userprofile-icon-small .cq-userprofile-container .cq-userprofile-iconcontainer .cq-userprofile-buttonlink {
+  border-radius: 50%;
+  background-color: #656D78;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 20%;
+  top: calc(57px - 32px/2);
+}
+.cq-userprofile .cq-userprofile-icon{
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #FFF;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 48px;
+  width: 48px;
+  height: 48px;
+}
+
+.cq-userprofile-icon-small .cq-userprofile-icon{
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #FFF;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 32px;
+  width: 32px;
+  height: 32px;
+}
+
+.cq-userprofile-iconshadow-none .cq-userprofile-icon{
+  box-shadow: none;
+}
+.cq-userprofile-iconshadow-medium .cq-userprofile-icon{
+  box-shadow: 0 0 4px #CCD1D9;
+}
+.cq-userprofile-iconshadow-large .cq-userprofile-icon{
+  box-shadow: 0 0 8px #CCD1D9;
+}
+
+.cq-userprofile-container .cq-userprofile-icon:hover {
+  transition-delay: initial !important;
+}
+.cq-userprofile .cq-userprofile-icon:hover{
+}
+
+.cq-userprofile.cq-userprofile-white .cq-userprofile-iconshadow-medium .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 2px #FFF;
+}
+.cq-userprofile.cq-userprofile-grapefruit .cq-userprofile-iconshadow-medium .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 2px rgb(207, 45, 66);
+}
+.cq-userprofile.cq-userprofile-bittersweet .cq-userprofile-iconshadow-medium .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 2px rgb(225, 64, 49);
+}
+.cq-userprofile.cq-userprofile-sunflower .cq-userprofile-iconshadow-medium .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 2px rgb(243, 174, 52);
+}
+.cq-userprofile.cq-userprofile-grass .cq-userprofile-iconshadow-medium .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 2px rgb(140, 193, 82);
+}
+.cq-userprofile.cq-userprofile-mint .cq-userprofile-iconshadow-medium .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 2px rgb(49, 177, 137);
+}
+.cq-userprofile.cq-userprofile-aqua .cq-userprofile-iconshadow-medium .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 2px rgb(50, 159, 209);
+}
+.cq-userprofile.cq-userprofile-lavender .cq-userprofile-iconshadow-medium .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 2px rgb(131, 97, 211);
+}
+.cq-userprofile.cq-userprofile-bluejeans .cq-userprofile-iconshadow-medium .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 2px rgb(59, 115, 211);
+}
+.cq-userprofile.cq-userprofile-pinkrose .cq-userprofile-iconshadow-medium .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 2px rgb(203, 86, 157);
+}
+.cq-userprofile.cq-userprofile-lightgray .cq-userprofile-iconshadow-medium .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 2px rgb(224, 227, 233);
+}
+.cq-userprofile.cq-userprofile-mediumgray .cq-userprofile-iconshadow-medium .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 2px rgb(154, 162, 176);
+}
+.cq-userprofile.cq-userprofile-darkgray .cq-userprofile-iconshadow-medium .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 2px rgb(51, 57, 67);
+}
+.cq-userprofile.cq-userprofile-transparent .cq-userprofile-iconshadow-medium .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 2px none;
+}
+
+.cq-userprofile.cq-userprofile-white .cq-userprofile-iconshadow-large .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 4px #FFF;
+}
+.cq-userprofile.cq-userprofile-grapefruit .cq-userprofile-iconshadow-large .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 4px rgb(207, 45, 66);
+}
+.cq-userprofile.cq-userprofile-bittersweet .cq-userprofile-iconshadow-large .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 4px rgb(225, 64, 49);
+}
+.cq-userprofile.cq-userprofile-sunflower .cq-userprofile-iconshadow-large .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 4px rgb(243, 174, 52);
+}
+.cq-userprofile.cq-userprofile-grass .cq-userprofile-iconshadow-large .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 4px rgb(140, 193, 82);
+}
+.cq-userprofile.cq-userprofile-mint .cq-userprofile-iconshadow-large .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 4px rgb(49, 177, 137);
+}
+.cq-userprofile.cq-userprofile-aqua .cq-userprofile-iconshadow-large .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 4px rgb(50, 159, 209);
+}
+.cq-userprofile.cq-userprofile-lavender .cq-userprofile-iconshadow-large .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 4px rgb(131, 97, 211);
+}
+.cq-userprofile.cq-userprofile-bluejeans .cq-userprofile-iconshadow-large .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 4px rgb(59, 115, 211);
+}
+.cq-userprofile.cq-userprofile-pinkrose .cq-userprofile-iconshadow-large .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 4px rgb(203, 86, 157);
+}
+.cq-userprofile.cq-userprofile-lightgray .cq-userprofile-iconshadow-large .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 4px rgb(224, 227, 233);
+}
+.cq-userprofile.cq-userprofile-largegray .cq-userprofile-iconshadow-large .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 4px rgb(154, 162, 176);
+}
+.cq-userprofile.cq-userprofile-darkgray .cq-userprofile-iconshadow-large .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 4px rgb(51, 57, 67);
+}
+.cq-userprofile.cq-userprofile-transparent .cq-userprofile-iconshadow-large .cq-userprofile-icon:hover {
+    box-shadow: 0 0 0 4px none;
+}
+
+
+
+.cq-userprofile-container .cq-userprofile-iconcontainer.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer.open .cq-userprofile-buttonlink {
+  left: 60px;
+  opacity: 1;
+}
+
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-10.open .cq-userprofile-buttonlink:nth-of-type(1) {
+  transform: rotate(-135deg) translateX(120px) rotate(135deg);
+  transition-delay: 0.2s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-10.open .cq-userprofile-buttonlink:nth-of-type(2) {
+  transform: rotate(-105deg) translateX(120px) rotate(105deg);
+  transition-delay: 0.3s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-10.open .cq-userprofile-buttonlink:nth-of-type(3) {
+  transform: rotate(-75deg) translateX(120px) rotate(75deg);
+  transition-delay: 0.4s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-10.open .cq-userprofile-buttonlink:nth-of-type(4) {
+  transform: rotate(-45deg) translateX(120px) rotate(45deg);
+  transition-delay: 0.5s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-10.open .cq-userprofile-buttonlink:nth-of-type(5) {
+  transform: rotate(-15deg) translateX(120px) rotate(15deg);
+  transition-delay: 0.6s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-10.open .cq-userprofile-buttonlink:nth-of-type(6) {
+  transform: rotate(15deg) translateX(120px) rotate(-15deg);
+  transition-delay: 0.7s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-10.open .cq-userprofile-buttonlink:nth-of-type(7) {
+  transform: rotate(45deg) translateX(120px) rotate(-45deg);
+  transition-delay: 0.8s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-10.open .cq-userprofile-buttonlink:nth-of-type(8) {
+  transform: rotate(75deg) translateX(120px) rotate(-75deg);
+  transition-delay: 0.9s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-10.open .cq-userprofile-buttonlink:nth-of-type(9) {
+  transform: rotate(105deg) translateX(120px) rotate(-105deg);
+  transition-delay: 1s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-10.open .cq-userprofile-buttonlink:nth-of-type(10) {
+  transform: rotate(135deg) translateX(120px) rotate(-135deg);
+  transition-delay: 1.1s;
+}
+
+
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-9.open .cq-userprofile-buttonlink:nth-of-type(1) {
+  transform: rotate(-100deg) translateX(120px) rotate(100deg);
+  transition-delay: 0.2s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-9.open .cq-userprofile-buttonlink:nth-of-type(2) {
+  transform: rotate(-75deg) translateX(120px) rotate(75deg);
+  transition-delay: 0.3s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-9.open .cq-userprofile-buttonlink:nth-of-type(3) {
+  transform: rotate(-50deg) translateX(120px) rotate(50deg);
+  transition-delay: 0.4s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-9.open .cq-userprofile-buttonlink:nth-of-type(4) {
+  transform: rotate(-25deg) translateX(120px) rotate(25deg);
+  transition-delay: 0.5s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-9.open .cq-userprofile-buttonlink:nth-of-type(5) {
+  transform: rotate(0deg) translateX(120px) rotate(0deg);
+  transition-delay: 0.6s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-9.open .cq-userprofile-buttonlink:nth-of-type(6) {
+  transform: rotate(25deg) translateX(120px) rotate(-25deg);
+  transition-delay: 0.7s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-9.open .cq-userprofile-buttonlink:nth-of-type(7) {
+  transform: rotate(50deg) translateX(120px) rotate(-50deg);
+  transition-delay: 0.8s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-9.open .cq-userprofile-buttonlink:nth-of-type(8) {
+  transform: rotate(75deg) translateX(120px) rotate(-75deg);
+  transition-delay: 0.9s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-9.open .cq-userprofile-buttonlink:nth-of-type(9) {
+  transform: rotate(100deg) translateX(120px) rotate(-100deg);
+  transition-delay: 1s;
+}
+
+
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-8.open .cq-userprofile-buttonlink:nth-of-type(1) {
+  transform: rotate(-105deg) translateX(120px) rotate(105deg);
+  transition-delay: 0.2s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-8.open .cq-userprofile-buttonlink:nth-of-type(2) {
+  transform: rotate(-75deg) translateX(120px) rotate(75deg);
+  transition-delay: 0.3s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-8.open .cq-userprofile-buttonlink:nth-of-type(3) {
+  transform: rotate(-45deg) translateX(120px) rotate(45deg);
+  transition-delay: 0.4s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-8.open .cq-userprofile-buttonlink:nth-of-type(4) {
+  transform: rotate(-15deg) translateX(120px) rotate(15deg);
+  transition-delay: 0.5s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-8.open .cq-userprofile-buttonlink:nth-of-type(5) {
+  transform: rotate(15deg) translateX(120px) rotate(-15deg);
+  transition-delay: 0.6s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-8.open .cq-userprofile-buttonlink:nth-of-type(6) {
+  transform: rotate(45deg) translateX(120px) rotate(-45deg);
+  transition-delay: 0.7s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-8.open .cq-userprofile-buttonlink:nth-of-type(7) {
+  transform: rotate(75deg) translateX(120px) rotate(-75deg);
+  transition-delay: 0.8s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-8.open .cq-userprofile-buttonlink:nth-of-type(8) {
+  transform: rotate(105deg) translateX(120px) rotate(-105deg);
+  transition-delay: 0.9s;
+}
+
+
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-7.open .cq-userprofile-buttonlink:nth-of-type(1) {
+  transform: rotate(-90deg) translateX(120px) rotate(90deg);
+  transition-delay: 0.2s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-7.open .cq-userprofile-buttonlink:nth-of-type(2) {
+  transform: rotate(-60deg) translateX(120px) rotate(60deg);
+  transition-delay: 0.3s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-7.open .cq-userprofile-buttonlink:nth-of-type(3) {
+  transform: rotate(-30deg) translateX(120px) rotate(30deg);
+  transition-delay: 0.4s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-7.open .cq-userprofile-buttonlink:nth-of-type(4) {
+  transform: rotate(0deg) translateX(120px) rotate(0deg);
+  transition-delay: 0.5s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-7.open .cq-userprofile-buttonlink:nth-of-type(5) {
+  transform: rotate(30deg) translateX(120px) rotate(-30deg);
+  transition-delay: 0.6s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-7.open .cq-userprofile-buttonlink:nth-of-type(6) {
+  transform: rotate(60deg) translateX(120px) rotate(-60deg);
+  transition-delay: 0.7s;
+}
+.cq-userprofile-container .cq-userprofile-iconcontainer-7.open .cq-userprofile-buttonlink:nth-of-type(7) {
+  transform: rotate(90deg) translateX(120px) rotate(-90deg);
+  transition-delay: 0.8s;
+}
+
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-6.open .cq-userprofile-buttonlink:nth-of-type(1) {
+  transform: rotate(-100deg) translateX(120px) rotate(100deg);
+  transition-delay: 0s;
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-6.open .cq-userprofile-buttonlink:nth-of-type(2) {
+  transform: rotate(-60deg) translateX(120px) rotate(60deg);
+  transition-delay: 0.1s;
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-6.open .cq-userprofile-buttonlink:nth-of-type(3) {
+  transform: rotate(-20deg) translateX(120px) rotate(20deg);
+  transition-delay: 0.2s;
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-6.open .cq-userprofile-buttonlink:nth-of-type(4) {
+  transform: rotate(20deg) translateX(120px) rotate(-20deg);
+  transition-delay: 0.3s;
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-6.open .cq-userprofile-buttonlink:nth-of-type(5) {
+  transform: rotate(60deg) translateX(120px) rotate(-60deg);
+  transition-delay: 0.4s;
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-6.open .cq-userprofile-buttonlink:nth-of-type(6) {
+  transform: rotate(100deg) translateX(120px) rotate(-100deg);
+  transition-delay: 0.5s;
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-5.open .cq-userprofile-buttonlink:nth-of-type(1) {
+  transform: rotate(-90deg) translateX(120px) rotate(90deg);
+  transition-delay: 0s;
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-5.open .cq-userprofile-buttonlink:nth-of-type(2) {
+  transform: rotate(-45deg) translateX(120px) rotate(45deg);
+  transition-delay: 0.1s;
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-5.open .cq-userprofile-buttonlink:nth-of-type(3) {
+  transform: rotate(0deg) translateX(120px) rotate(0deg);
+  transition-delay: 0.2s;
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-5.open .cq-userprofile-buttonlink:nth-of-type(4) {
+  transform: rotate(45deg) translateX(120px) rotate(-45deg);
+  transition-delay: 0.3s;
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-5.open .cq-userprofile-buttonlink:nth-of-type(5) {
+  transform: rotate(90deg) translateX(120px) rotate(-90deg);
+  transition-delay: 0.4s;
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-4.open .cq-userprofile-buttonlink:nth-of-type(1) {
+  transform: rotate(-75deg) translateX(120px) rotate(75deg);
+  transition-delay: 0s;
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-4.open .cq-userprofile-buttonlink:nth-of-type(2) {
+  transform: rotate(-25deg) translateX(120px) rotate(25deg);
+  transition-delay: 0.1s;
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-4.open .cq-userprofile-buttonlink:nth-of-type(3) {
+  transform: rotate(25deg) translateX(120px) rotate(-25deg);
+  transition-delay: 0.2s;
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-4.open .cq-userprofile-buttonlink:nth-of-type(4) {
+  transform: rotate(75deg) translateX(120px) rotate(-75deg);
+  transition-delay: 0.3s;
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-3.open .cq-userprofile-buttonlink:nth-of-type(1) {
+  transform: rotate(-45deg) translateX(120px) rotate(45deg);
+  transition-delay: 0s;
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-3.open .cq-userprofile-buttonlink:nth-of-type(2) {
+  transform: rotate(0deg) translateX(120px) rotate(0deg);
+  transition-delay: 0.1s;
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-3.open .cq-userprofile-buttonlink:nth-of-type(3) {
+  transform: rotate(45deg) translateX(120px) rotate(-45deg);
+  transition-delay: 0.2s;
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-2.open .cq-userprofile-buttonlink:nth-of-type(1) {
+  transform: rotate(-25deg) translateX(120px) rotate(25deg);
+  transition-delay: 0s;
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-2.open .cq-userprofile-buttonlink:nth-of-type(2) {
+  transform: rotate(25deg) translateX(120px) rotate(-25deg);
+  transition-delay: 0.1s;
+}
+
+.cq-userprofile-container .cq-userprofile-iconcontainer-1.open .cq-userprofile-buttonlink:nth-of-type(1) {
+  transform: rotate(0deg) translateX(120px) rotate(0deg);
+  transition-delay: 0s;
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="4.2333331mm"
+   height="6.3499999mm"
+   viewBox="0 0 4.233333 6.3499999"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (1:1.1+202109281949+c3084ef5ed)"
+   sodipodi:docname="podcast.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="16.126161"
+     inkscape:cx="-6.7281976"
+     inkscape:cy="10.510871"
+     inkscape:window-width="1920"
+     inkscape:window-height="972"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-39.092083,-114.14)">
+    <g
+       id="g347">
+      <g
+         transform="matrix(0.26458333,0,0,0.26458333,38.03375,-157.9575)"
+         id="g19"
+         style="fill:#f2f2f2">
+        <path
+           d="m 19,1038.4 c 0.552,0 1,0.4 1,1 v 1 c 0,4 -3.056,7.4 -7,7.9 v 2.1 h 6 c 0.552,0 1,0.4 1,1 0,0.5 -0.448,1 -1,1 H 5 c -0.5523,0 -1,-0.5 -1,-1 0,-0.6 0.4477,-1 1,-1 h 6 v -2.1 c -3.9444,-0.5 -7,-3.9 -7,-7.9 v -1 c 0,-0.6 0.4477,-1 1,-1 0.5523,0 1,0.4 1,1 v 1 c 0,3.3 2.6863,6 6,6 3.314,0 6,-2.7 6,-6 v -1 c 0,-0.6 0.448,-1 1,-1 z"
+           fill="#95a5a6"
+           id="path9"
+           style="fill:#f2f2f2" />
+        <path
+           d="m 12,1028.4 c 2.209,0 4,1.8 4,4 v 8 c 0,2.2 -1.791,4 -4,4 -2.2091,0 -4,-1.8 -4,-4 v -8 c 0,-2.2 1.7909,-4 4,-4 z"
+           fill="#bdc3c7"
+           id="path11"
+           style="fill:#f2f2f2" />
+        <path
+           d="m 12,1028.4 v 16 c -2.2091,0 -4,-1.8 -4,-4 v -8 c 0,-2.2 1.7909,-4 4,-4 z"
+           fill="#95a5a6"
+           id="path13"
+           style="fill:#f2f2f2" />
+        <path
+           d="m 16,1033.4 v 1 h -2 v -1 z m 0,2 v 1 h -2 v -1 z m 0,2 v 1 h -2 v -1 z"
+           fill="#95a5a6"
+           id="path15"
+           style="fill:#f2f2f2" />
+        <path
+           d="m 10,1033.4 v 1 H 8 v -1 z m 0,2 v 1 H 8 v -1 z m 0,2 v 1 H 8 v -1 z"
+           fill="#7f8c8d"
+           id="path17"
+           style="fill:#f2f2f2" />
+      </g>
+      <path
+         style="fill:#f2f2f2;stroke-width:0.062011"
+         d="m 154.78031,447.24753 c -1.05977,-0.25619 -2.07408,-1.07517 -2.56503,-2.07106 -0.44449,-0.90165 -0.44098,-0.85591 -0.44219,-5.75337 -0.001,-4.71572 0.009,-4.88215 0.33982,-5.63045 0.44604,-1.00859 1.31529,-1.78931 2.41919,-2.17279 0.43132,-0.14984 0.58786,-0.17201 1.20862,-0.17115 0.63147,8.7e-4 0.7738,0.0223 1.24296,0.18678 1.20236,0.42164 2.08475,1.29895 2.5286,2.51404 l 0.16614,0.45483 0.0179,4.58881 c 0.02,5.15085 0.0251,5.07883 -0.42221,5.97085 -0.5163,1.02955 -1.51962,1.8313 -2.61485,2.0895 -0.48855,0.11518 -1.38957,0.11231 -1.8789,-0.006 z"
+         id="path107"
+         transform="scale(0.26458333)" />
+      <path
+         style="fill:#f2f2f2;stroke-width:0.062011"
+         d="m 154.78031,447.24753 c -1.05972,-0.25618 -2.074,-1.07511 -2.56509,-2.07106 -0.45519,-0.92315 -0.45072,-0.86079 -0.43031,-6.00733 l 0.0181,-4.56478 0.16614,-0.45483 c 0.45088,-1.23431 1.3357,-2.1127 2.5405,-2.52201 0.44999,-0.15287 0.61149,-0.17601 1.23106,-0.17639 0.61739,-3.7e-4 0.77965,0.0225 1.20862,0.17021 0.65246,0.22471 1.12944,0.52148 1.60004,0.99554 0.45124,0.45456 0.73279,0.90271 0.9629,1.53265 l 0.16614,0.45483 0.0179,4.58881 c 0.02,5.15101 0.0252,5.07787 -0.42244,5.97223 -0.51541,1.02976 -1.51645,1.82922 -2.61462,2.08812 -0.48855,0.11518 -1.38957,0.11231 -1.8789,-0.006 z"
+         id="path146"
+         transform="scale(0.26458333)" />
+    </g>
+  </g>
+</svg>

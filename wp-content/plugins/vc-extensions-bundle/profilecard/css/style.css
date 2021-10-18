@@ -1,0 +1,259 @@
+.profilecard-container  {
+	-webkit-transform-style: preserve-3d;
+	-webkit-perspective: 800px;
+	perspective: 800px;
+	transform-style: preserve-3d;
+}
+
+.profilecard-container a:focus{
+	outline: none;
+}
+
+.profilecard-icon-link{
+	display: inline-block;
+}
+
+i.profilecard-icon{
+	font-size: 20px;
+	width: 20px;
+	height: 20px;
+	margin-top: 20px;
+	margin-left: 15px;
+	color: #333333;
+}
+i.profilecard-icon:hover{
+	opacity: 1;
+}
+
+.profilecard-cover, .profilecard-controlsright, .profilecard-cover, .profilecard-controlsbottom {
+	cursor: pointer;
+}
+.profilecard-controlsright {
+	background: -webkit-linear-gradient(left bottom, #E1E3EB, #EFEFEF);
+	background: linear-gradient(to right top, #E1E3EB, #EFEFEF);
+	-moz-box-shadow: 4px 0px 16px 2px #DCDCDC;
+	-webkit-box-shadow: 4px 0px 16px 2px #DCDCDC;
+	box-shadow: 4px 0px 16px 2px #DCDCDC;
+	border-radius: 3px;
+	position: absolute;
+	z-index: -1;
+}
+.profilecard-controlsleft {
+	background: -webkit-linear-gradient(left bottom, #E1E3EB, #EFEFEF);
+	background: linear-gradient(to right top, #E1E3EB, #EFEFEF);
+	-moz-box-shadow: 4px 0px 16px 2px #DCDCDC;
+	-webkit-box-shadow: 4px 0px 16px 2px #DCDCDC;
+	box-shadow: 4px 0px 16px 2px #DCDCDC;
+	border-radius: 3px;
+	position: absolute;
+	z-index: -1;
+}
+
+.profilecard-controlsbottom, .profilecard-controlstop {
+	background: -webkit-linear-gradient(left bottom, #E1E3EB, #EFEFEF);
+	background: linear-gradient(to right top, #E1E3EB, #EFEFEF);
+	border-radius: 3px;
+	-moz-box-shadow: 0px 4px 16px 2px #DCDCDC;
+	-webkit-box-shadow: 0px 4px 16px 2px #DCDCDC;
+	box-shadow: 0px 4px 16px 2px #DCDCDC;
+	position: absolute;
+	z-index: -1;
+}
+
+.profilecard-cover.right1 {
+	background: url() no-repeat;
+	background-position: 0px 0px;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+	position: absolute;
+}
+.profilecard-cover.left2 {
+	background: url() no-repeat;
+	background-position: 0px 0px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	position: absolute;
+}
+
+
+.profilecard-cover.right2 span, .profilecard-cover.left1 span { -webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
+
+.profilecard-cover.right2.unfoldright span, .profilecard-cover.left1.unfoldleft span {
+	background: rgba(0,0,0,0.2);
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+	position: absolute;
+}
+
+.profilecard-cover.right2{
+	-webkit-transform-origin: left center;
+	transform-origin: left center;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+	position: absolute;
+}
+.profilecard-cover.left1 {
+	-webkit-transform-origin: right center;
+	transform-origin: right center;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	position: absolute;
+}
+
+
+/* top to bottom */
+.profilecard-cover.bottom1 {
+	background-position: 0px 0px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	position: absolute;
+}
+
+.profilecard-cover.top2 {
+	background-position: 0px 0px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	position: absolute;
+}
+
+
+.profilecard-cover.bottom2 span, .profilecard-cover.top1 span { -webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
+
+.profilecard-cover.bottom2.unfoldbottom span, .profilecard-cover.top1.unfoldtop span {
+	background: rgba(0,0,0,0.2);
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+	position: absolute;
+}
+
+.profilecard-cover.bottom2 {
+	-webkit-transform-origin: top center;
+	transform-origin: top center;
+	background: url() no-repeat;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	position: absolute;
+}
+.profilecard-cover.top1 {
+	-webkit-transform-origin: bottom center;
+	transform-origin: bottom center;
+	background: url() no-repeat;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	position: absolute;
+}
+
+
+.unfoldright { -webkit-animation: unfoldright 300ms ease 0s 1 normal forwards; -ms-animation: unfoldright 300ms ease 0s 1 normal forwards; animation: unfoldright 300ms ease 0s 1 normal forwards; }
+.unfoldbottom { -webkit-animation: unfoldbottom 300ms ease 0s 1 normal forwards; -ms-animation: unfoldbottom 300ms ease 0s 1 normal forwards; animation: unfoldbottom 300ms ease 0s 1 normal forwards; }
+.unfoldleft { -webkit-animation: unfoldleft 300ms ease 0s 1 normal forwards; -ms-animation: unfoldleft 300ms ease 0s 1 normal forwards; animation: unfoldleft 300ms ease 0s 1 normal forwards; }
+.unfoldtop { -webkit-animation: unfoldtop 300ms ease 0s 1 normal forwards; -ms-animation: unfoldtop 300ms ease 0s 1 normal forwards; animation: unfoldtop 300ms ease 0s 1 normal forwards; }
+
+.foldright { -webkit-animation: foldright 300ms ease 0s 1 normal forwards; -ms-animation: foldright 300ms ease 0s 1 normal forwards; animation: foldright 300ms ease 0s 1 normal forwards; }
+.foldbottom { -webkit-animation: foldbottom 300ms ease 0s 1 normal forwards; -ms-animation: foldbottom 300ms ease 0s 1 normal forwards; animation: foldbottom 300ms ease 0s 1 normal forwards; }
+.foldleft { -webkit-animation: foldleft 300ms ease 0s 1 normal forwards; -ms-animation: foldleft 300ms ease 0s 1 normal forwards; animation: foldleft 300ms ease 0s 1 normal forwards; }
+.foldtop { -webkit-animation: foldtop 300ms ease 0s 1 normal forwards; -ms-animation: foldtop 300ms ease 0s 1 normal forwards; animation: foldtop 300ms ease 0s 1 normal forwards; }
+
+
+@-webkit-keyframes unfoldright {
+	from { -webkit-transform: rotateY(0deg); }
+	to { -webkit-transform: rotateY(-60deg); }
+}
+@-ms-keyframes unfoldright {
+	from { -ms-transform: rotateY(0deg); }
+	to { -ms-transform: rotateY(-60deg); }
+}
+@keyframes unfoldright {
+	from { transform: rotateY(0deg); transform: rotateY(0deg); }
+	to { transform: rotateY(-60deg); transform: rotateY(-60deg); }
+}
+@-webkit-keyframes foldright {
+	from { -webkit-transform: rotateY(-60deg); }
+	to { -webkit-transform: rotateY(0deg); }
+}
+@-ms-keyframes foldright {
+	from { -ms-transform: rotateY(-60deg); }
+	to { -ms-transform: rotateY(0deg); }
+}
+@keyframes foldright {
+	from { -webkit-transform: rotateY(-60deg); transform: rotateY(-60deg); }
+	to { -webkit-transform: rotateY(0deg); transform: rotateY(0deg); }
+}
+
+
+@-webkit-keyframes unfoldbottom {
+	from { -webkit-transform: rotateX(0deg); }
+	to { -webkit-transform: rotateX(60deg); }
+}
+@-ms-keyframes unfoldbottom {
+	from { -ms-transform: rotateX(0deg); }
+	to { -ms-transform: rotateX(60deg); }
+}
+@keyframes unfoldbottom {
+	from { transform: rotateX(0deg); transform: rotateX(0deg); }
+	to { transform: rotateX(60deg); transform: rotateX(60deg); }
+}
+@-webkit-keyframes foldbottom {
+	from { -webkit-transform: rotateX(60deg); }
+	to { -webkit-transform: rotateX(0deg); }
+}
+@-ms-keyframes foldbottom {
+	from { -ms-transform: rotateX(60deg); }
+	to { -ms-transform: rotateX(0deg); }
+}
+@keyframes foldbottom {
+	from { transform: rotateX(60deg); transform: rotateX(60deg); }
+	to { transform: rotateX(0deg); transform: rotateX(0deg); }
+}
+
+@-webkit-keyframes unfoldtop {
+	from { -webkit-transform: rotateX(0deg); }
+	to { -webkit-transform: rotateX(-60deg); }
+}
+@-ms-keyframes unfoldtop {
+	from { -ms-transform: rotateX(0deg); }
+	to { -ms-transform: rotateX(-60deg); }
+}
+@keyframes unfoldtop {
+	from { transform: rotateX(0deg); transform: rotateX(0deg); }
+	to { transform: rotateX(-60deg); transform: rotateX(-60deg); }
+}
+@-webkit-keyframes foldtop {
+	from { -webkit-transform: rotateX(-60deg); }
+	to { -webkit-transform: rotateX(0deg); }
+}
+@-ms-keyframes foldtop {
+	from { -ms-transform: rotateX(-60deg); }
+	to { -ms-transform: rotateX(0deg); }
+}
+@keyframes foldtop {
+	from { transform: rotateX(-60deg); transform: rotateX(-60deg); }
+	to { transform: rotateX(0deg); transform: rotateX(0deg); }
+}
+
+
+
+@-webkit-keyframes unfoldleft {
+	from { -webkit-transform: rotateY(0deg); }
+	to { -webkit-transform: rotateY(60deg); }
+}
+@-ms-keyframes unfoldleft {
+	from { -ms-transform: rotateY(0deg); }
+	to { -ms-transform: rotateY(60deg); }
+}
+@keyframes unfoldleft {
+	from { transform: rotateY(0deg); transform: rotateY(0deg); }
+	to { transform: rotateY(60deg); transform: rotateY(60deg); }
+}
+@-webkit-keyframes foldleft {
+	from { -webkit-transform: rotateY(60deg); }
+	to { -webkit-transform: rotateY(0deg); }
+}
+@-ms-keyframes foldleft {
+	from { -ms-transform: rotateY(60deg); }
+	to { -ms-transform: rotateY(0deg); }
+}
+@keyframes foldleft {
+	from { transform: rotateY(60deg); transform: rotateY(60deg); }
+	to { transform: rotateY(0deg); transform: rotateY(0deg); }
+}
