@@ -1249,7 +1249,8 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
     background: -o-linear-gradient(160deg, #017bfd 0%, #20bfe1 100%);
     background: -ms-linear-gradient(160deg, #017bfd 0%, #20bfe1 100%);
     background: linear-gradient(160deg, #017bfd 0%, #20bfe1 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#017bfd, endColorstr=#20bfe1, GradientType=1)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#017bfd, endColorstr=#20bfe1, GradientType=1);
+    
 }
 
 .scheme_default button:hover,

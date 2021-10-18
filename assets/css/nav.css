@@ -20,6 +20,14 @@
     color: #0087ca;
   }
 
+  .hover-underline-animation a span {
+    color: rgba(255, 255, 255, 0.651)
+  }
+
+  .hover-underline-animation:hover a span {
+    color: rgba(255, 255, 255, 1)
+  }
+
   .hover-underline-animation:after {
     content: '';
     position: absolute;

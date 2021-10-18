@@ -111,7 +111,9 @@ $("#btn_read_more_1").on("click", () => {
           height: "auto",
         });
       } else {
-        gsap.to("#featured_content", { duration: durationTiming, height: 0 });
+        gsap.to("#featured_content", { duration: durationTiming, height: 0 }).then(() => {
+          featuredElem1.style.display = "none";
+        });
       }
       open = !open;
       setBtnText();

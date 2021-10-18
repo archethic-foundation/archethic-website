@@ -42,7 +42,7 @@ function ready(error, world, places) {
         .attr("cx", "75%")
         .attr("cy", "25%");
       ocean_fill.append("stop").attr("offset", "5%").attr("stop-color", "#fff");
-      ocean_fill.append("stop").attr("offset", "100%").attr("stop-color", "#3284f9");
+      ocean_fill.append("stop").attr("offset", "100%").attr("stop-color", "#050510");
 
   // var globe_highlight = svg.append("defs").append("radialGradient")
   //       .attr("id", "globe_highlight")
