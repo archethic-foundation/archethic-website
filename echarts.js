@@ -155,62 +155,52 @@ optionsG = {
         radius: '55%',
         center: ['50%', '50%'],
         data: [
-
             {
-                value: 850,
-                name: 'Blockchain',
+                value: 300,
+                name: 'Technical & Ethical Council',
                 itemStyle: {
-                    color: '#004adf'
+                    color: '#113CFC'
                 }
             },
-            
-            
-            
             {
-                value: 850,
+                value: 550,
+                name: 'Foundation',
+                itemStyle: {
+                    color: '#69DADB'
+                }
+            },
+            {
+                value: 400,
+                name: 'Applications & Services',
+                itemStyle: {
+                    color: '#193498'
+                }
+            },
+            {
+                value: 450,
                 name: 'Miners',
                 itemStyle: {
                     color: '#004adf'
                 }
             },
             {
-                value: 800,
-                name: 'Foundation',
+                value: 500,
+                name: 'Blockchain',
                 itemStyle: {
-                    color: '#69DADB'
+                    color: '#004adf'
                 }
             },
-
             {
-                value: 860,
-                name: 'Technical & Ethical Council',
-                itemStyle: {
-                    color: '#113CFC'
-                }
-            },
-
-            
-            
-            {
-                value: 810,
+                value: 350,
                 name: 'Users',
                 itemStyle: {
                     color: '#1597E5'
                 }
             },
             
-            {
-                value: 880,
-                name: 'Applications & Services',
-                itemStyle: {
-                    color: '#193498'
-                }
-            }
-            
-           
-            
-            
-        ],
+        ].sort(function(a, b){
+            return a.value - b.value
+        }),
         roseType: 'radius',
         label: {
             color: 'rgba(255, 255, 255, 0.6)'
