@@ -113,11 +113,16 @@ function onWindowResize2() {
 
 function getGovItemData(name) {
     switch(name) {
-        case "Users": return "Users - Anyone with the ability to prove their uniqueness (via biometric devices or other processes).";
-        case "Miners": return "Miners - Owners of the mining nodes which constitute the network itself";
-        case "Applications & Services": return "Applications & Services - Application providers with a weightage based on the generated usage.";
-        case "Foundation": return "Foundation - Their role is to lead the community and to organize governance.";
-        case "Technical Council": return "Technical Council - Composed of the 'core developers' with a weightage based on the importance of their code contribution.";
+        
+        case "Blockchain": return "Blockchain - <br>The Blockchain itself, specifically<br> through its ability to <br>test a full-scale functionality<br> before deploying it on<br> the network. For example, the<br> maximum size of transactions <br>is not linked to <br>a point of view, rather <br>it can be directly tested <br>to determine the actual <br>impact on the network <br>with respect to the<br> need considered. ";
+        case "Users": return "Users - <br>Anyone with the ability<br> to prove their uniqueness<br> (via biometric devices or<br> other processes).";
+        case "Foundation": return "Foundation - <br>Their role is to<br> lead the community and<br> to organize governance.";
+        case "Miners": return "Miners - <br>Owners of the mining<br> nodes which constitute the<br> network itself";
+        case "Technical & Ethical Council": return "Technical & Ethical Council - <br>Composed of the 'core developers'<br> with a weightage based<br> on the importance of <br>their code contribution.";
+        case "Applications & Services": return "Applications & Services - <br>Application providers with a <br>weightage based on the<br> generated usage.";
+        
+       
+        
     }
 }
 
@@ -149,25 +154,23 @@ optionsG = {
         type: 'pie',
         radius: '55%',
         center: ['50%', '50%'],
-        data: [{
-                value: 880,
-                name: 'Users',
+        data: [
+
+            {
+                value: 850,
+                name: 'Blockchain',
                 itemStyle: {
-                    color: '#193498'
+                    color: '#004adf'
                 }
             },
+            
+            
+            
             {
-                value: 860,
+                value: 850,
                 name: 'Miners',
                 itemStyle: {
-                    color: '#113CFC'
-                }
-            },
-            {
-                value: 810,
-                name: 'Applications & Services',
-                itemStyle: {
-                    color: '#1597E5'
+                    color: '#004adf'
                 }
             },
             {
@@ -177,16 +180,37 @@ optionsG = {
                     color: '#69DADB'
                 }
             },
+
             {
-                value: 850,
-                name: 'Technical Council',
+                value: 860,
+                name: 'Technical & Ethical Council',
                 itemStyle: {
-                    color: '#004adf'
+                    color: '#113CFC'
+                }
+            },
+
+            
+            
+            {
+                value: 810,
+                name: 'Users',
+                itemStyle: {
+                    color: '#1597E5'
+                }
+            },
+            
+            {
+                value: 880,
+                name: 'Applications & Services',
+                itemStyle: {
+                    color: '#193498'
                 }
             }
-        ].sort(function (a, b) {
-            return a.value - b.value;
-        }),
+            
+           
+            
+            
+        ],
         roseType: 'radius',
         label: {
             color: 'rgba(255, 255, 255, 0.6)'
