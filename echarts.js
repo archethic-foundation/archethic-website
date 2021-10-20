@@ -2,7 +2,10 @@ var option;
 
 option = {
     tooltip: {
-        trigger: 'item'
+        trigger: 'item',
+        // formatter: (a) => {
+        //     return a.data.value + " %" 
+        // }
     },
     legend: {
         show: false,
@@ -171,16 +174,16 @@ optionsG = {
             },
             {
                 value: 400,
-                name: 'Applications & Services',
+                name: 'Miners',
                 itemStyle: {
-                    color: '#193498'
+                    color: '#004adf'
                 }
             },
             {
                 value: 450,
-                name: 'Miners',
+                name: 'Applications & Services',
                 itemStyle: {
-                    color: '#004adf'
+                    color: '#193498'
                 }
             },
             {
