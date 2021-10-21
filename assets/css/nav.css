@@ -9,7 +9,7 @@
   @media only screen and (max-device-width: 768px) {
     /* Styles */
   .remove-social {
-      display: none;
+      display: none !important;
     }
   }
 

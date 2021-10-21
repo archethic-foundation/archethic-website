@@ -410,7 +410,7 @@
 .icon-21-reliable:before { content: '\e963'; } /* '' */
 .icon-20-usability:before { content: '\e964'; } /* '' */
 .icon-19-partner:before { content: '\e965'; } /* '' */
-.icon-18-global:before { content: '\e966'; } /* '' */
+.icon-18-global:before { height: 10px; width: 65px; content: '\e966'; } /* '' */
 .icon-16-email:before { content: '\e967'; } /* '' */
 .icon-15-phone:before { content: '\e968'; } /* '' */
 .icon-14-check:before { content: '\e969'; } /* '' */
