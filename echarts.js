@@ -40,56 +40,57 @@ option = {
                 value: 44.8,
                 name: ' Network Pool',
                 itemStyle: {
-                    color: '#193498'
+                    color: '#80ECFF'
                 },
 
             }, {
                 value: 3.2,
                 name: 'Marketing',
                 itemStyle: {
-                    color: '#3F37C9'
+                    color: '#B21F66'
                 }
             },
             {
                 value: 5.6,
                 name: 'Team',
                 itemStyle: {
-                    color: '#4895EF'
+                    color: '#1DB9C3 '
                 }
             },
             {
                 value: 8.2,
                 name: 'Funding Pool',
                 itemStyle: {
-                    color: '#1F5EA8'
+                    color: '#FFD371'
                 }
             },
             {
                 value: 23.3,
                 name: 'Deliverables',
                 itemStyle: {
-                    color: '#1597E5'
+                    color: '#5C33F6'
+                    
                 }
             },
             {
                 value: 9.0,
                 name: 'Enhancements',
                 itemStyle: {
-                    color: '#38a3a5'
+                    color: '#7ECA9C'
                 }
             },
             {
                 value: 2.2,
                 name: 'Foundation',
                 itemStyle: {
-                    color: '#2A9D8F'
+                    color: '#14F195'
                 }
             },
             {
                 value: 3.4,
                 name: 'Exhange Platform',
                 itemStyle: {
-                    color: '#69DADB'
+                    color: '#FF884B'
                 }
             }
 
@@ -162,7 +163,7 @@ optionsG = {
                 value: 300,
                 name: 'Technical & Ethical Council',
                 itemStyle: {
-                    color: '#113CFC'
+                    color: '#FFA41B'
                 }
             },
             {
@@ -176,21 +177,21 @@ optionsG = {
                 value: 400,
                 name: 'Miners',
                 itemStyle: {
-                    color: '#004adf'
+                    color: '#16FFA3'
                 }
             },
             {
                 value: 450,
                 name: 'Applications & Services',
                 itemStyle: {
-                    color: '#193498'
+                    color: '#FFE87C'
                 }
             },
             {
                 value: 500,
                 name: 'Blockchain',
                 itemStyle: {
-                    color: '#004adf'
+                    color: '#6538FF'
                 }
             },
             {
