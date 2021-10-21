@@ -7,6 +7,7 @@ option = {
         //     return a.data.value + " %" 
         // }
     },
+    color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
     legend: {
         show: false,
         top: '5%',
@@ -30,8 +31,18 @@ option = {
             label: {
                 show: false,
                 fontSize: '18',
-                color: "#FFFFFF"
-            }
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    {
+                      offset: 0,
+                      color: 'rgba(128, 255, 165)'
+                    },
+                    {
+                      offset: 1,
+                      color: 'rgba(1, 191, 236)'
+                    }
+                  ])
+                },
+            
         },
         labelLine: {
             show: false
@@ -40,29 +51,69 @@ option = {
                 value: 44.8,
                 name: ' Network Pool',
                 itemStyle: {
-                    color: '#80ECFF'
-                },
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                          offset: 0,
+                          color: 'rgba(0, 221, 255)'
+                        },
+                        {
+                          offset: 1,
+                          color: 'rgba(77, 119, 255)'
+                        }
+                      ])
+                    },
+                
 
             }, {
                 value: 3.2,
                 name: 'Marketing',
                 itemStyle: {
-                    color: '#B21F66'
-                }
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                          offset: 0,
+                          color: 'rgba(55, 162, 255)'
+                        },
+                        {
+                          offset: 1,
+                          color: 'rgba(116, 21, 219)'
+                        }
+                      ])
+                    }
+                
             },
             {
                 value: 5.6,
                 name: 'Team',
                 itemStyle: {
-                    color: '#1DB9C3 '
-                }
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                          offset: 0,
+                          color: 'rgba(255, 0, 135)'
+                        },
+                        {
+                          offset: 1,
+                          color: 'rgba(135, 0, 157)'
+                        }
+                      ])
+                    }
+                
             },
             {
                 value: 8.2,
                 name: 'Funding Pool',
                 itemStyle: {
-                    color: '#FFD371'
-                }
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                          offset: 0,
+                          color: 'rgba(255, 191, 0)'
+                        },
+                        {
+                          offset: 1,
+                          color: 'rgba(224, 62, 76)'
+                        }
+                      ])
+                    }
+                
             },
             {
                 value: 23.3,
@@ -163,36 +214,86 @@ optionsG = {
                 value: 300,
                 name: 'Technical & Ethical Council',
                 itemStyle: {
-                    color: '#FFA41B'
-                }
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                          offset: 0,
+                          color: 'rgba(128, 255, 165)'
+                        },
+                        {
+                          offset: 1,
+                          color: 'rgba(1, 191, 236)'
+                        }
+                      ])
+                    }
+                
             },
             {
                 value: 550,
                 name: 'Foundation',
                 itemStyle: {
-                    color: '#69DADB'
-                }
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                          offset: 0,
+                          color: 'rgba(0, 221, 255)'
+                        },
+                        {
+                          offset: 1,
+                          color: 'rgba(77, 119, 255)'
+                        }
+                      ])
+                    }
+                
             },
             {
                 value: 400,
                 name: 'Miners',
                 itemStyle: {
-                    color: '#16FFA3'
-                }
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                          offset: 0,
+                          color: 'rgba(55, 162, 255)'
+                        },
+                        {
+                          offset: 1,
+                          color: 'rgba(116, 21, 219)'
+                        }
+                      ])
+                    }
+                
             },
             {
                 value: 450,
                 name: 'Applications & Services',
                 itemStyle: {
-                    color: '#FFE87C'
-                }
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                          offset: 0,
+                          color: 'rgba(255, 0, 135)'
+                        },
+                        {
+                          offset: 1,
+                          color: 'rgba(135, 0, 157)'
+                        }
+                      ])
+                    }
+                
             },
             {
                 value: 500,
                 name: 'Blockchain',
                 itemStyle: {
-                    color: '#6538FF'
-                }
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                          offset: 0,
+                          color: 'rgba(255, 191, 0)'
+                        },
+                        {
+                          offset: 1,
+                          color: 'rgba(224, 62, 76)'
+                        }
+                      ])
+                    }
+                
             },
             {
                 value: 350,
