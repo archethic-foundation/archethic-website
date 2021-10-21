@@ -334,6 +334,25 @@
             width: 500px; */
         }
 
+        .dev_card {
+            background: none;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 2em;
+            padding: 1.5em;
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .dev_card:hover {
+
+            background: rgba(14, 14, 36, 0.7);
+            box-shadow: none;
+        }
+
         @media(min-width:1500px) {
             .pie_chart_pie_wrapper {
                 height: 280px;
@@ -497,6 +516,9 @@
 
             #sc_icons_459329026 {
                 margin-top: -80px
+            }
+            .dev_card {
+              min-height: 250px;
             }
         }
     </style>
@@ -719,7 +741,7 @@
                 <div
                     class="vc_row wpb_row vc_row-fluid sc_layouts_row sc_layouts_row_type_compact sc_layouts_row_fixed sc_layouts_hide_on_mobile">
 
-                    <div class="wpb_column vc_column_container vc_col-sm-4 sc_layouts_column_icons_position_left">
+                    <div class="wpb_column vc_column_container vc_col-sm-2 sc_layouts_column_icons_position_left">
                         <div class="vc_column-inner">
                             <div class="wpb_wrapper">
                                 <div class="sc_layouts_item">
@@ -735,7 +757,7 @@
                     <div
                         class="wpb_column vc_column_container vc_col-sm-8 sc_layouts_column sc_layouts_column_align_right sc_layouts_column_icons_position_left">
                         <div class="vc_column-inner">
-                            <div class="wpb_wrapper">
+                            <div class="wpb_wrapper" style="display: flex; justify-content: center;">
                                 <div class="sc_layouts_item">
                                     <nav class="sc_layouts_menu sc_layouts_menu_default sc_layouts_menu_dir_horizontal menu_hover_fade hide_on_mobile"
                                         id="sc_layouts_menu_1429290530">
@@ -776,19 +798,8 @@
                                                 <a href="#scroll-to-roadmap-section"><span
                                                         class="nav-bar-content-half-transparent">Roadmap</span></a>
                                             </li>
-
-                                            <li id="menu-item-buy"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page ">
-                                                <a href="#scroll-to-uco-section" id="sc_button_145826105"
-                                                    class="sc_button color_style_default sc_button_default sc_button_size_normal sc_button_icon_left button_transparent"
-                                                    style="margin-top: 8px; margin-left: 40px;"><span
-                                                        class="sc_button_text" target="_blank"><span
-                                                            class="sc_button_title" style="color: #fff">Buy
-                                                            UCO</span></span>
-                                                </a>
-                                            </li>
-
                                         </ul>
+
                                     </nav>
                                     <!-- /.sc_layouts_menu -->
                                     <div class="sc_layouts_iconed_text sc_layouts_menu_mobile_button">
@@ -802,12 +813,25 @@
                             </div>
                         </div>
                     </div>
-
+                    <div
+                      class="wpb_column vc_column_container vc_col-sm-2 sc_layouts_column sc_layouts_column_align_right sc_layouts_column_icons_position_left">
+                      <div class="vc_column-inner">
+                        <div class="wpb_wrapper">
+                          <a href="#scroll-to-uco-section" id="sc_button_145826105"
+                            class="sc_button color_style_default sc_button_default sc_button_size_normal sc_button_icon_left button_transparent"
+                            style="margin-top: 15px;"><span
+                                class="sc_button_text" target="_blank"><span
+                                    class="sc_button_title" style="color: #fff">Buy
+                                    UCO</span></span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                 </div>
                 <div
                     class="vc_row wpb_row vc_row-fluid vc_row-o-equal-height vc_row-o-content-middle vc_row-flex sc_layouts_row sc_layouts_row_type_compact sc_layouts_row_fixed sc_layouts_hide_on_desktop sc_layouts_hide_on_notebook sc_layouts_hide_on_tablet">
                     <div
-                        class="wpb_column vc_column_container vc_col-sm-6 vc_col-xs-6 sc_layouts_column sc_layouts_column_align_left sc_layouts_column_icons_position_left">
+                        class="wpb_column vc_column_container vc_col-sm-4 vc_col-xs-4 sc_layouts_column sc_layouts_column_align_left sc_layouts_column_icons_position_left">
                         <div class="vc_column-inner">
                             <div class="wpb_wrapper">
                                 <div class="sc_layouts_item">
@@ -820,7 +844,23 @@
                         </div>
                     </div>
                     <div
-                        class="wpb_column vc_column_container vc_col-sm-6 vc_col-xs-6 sc_layouts_column sc_layouts_column_align_right sc_layouts_column_icons_position_left">
+                        class="wpb_column vc_column_container vc_col-sm-6 vc_col-xs-6 sc_layouts_column sc_layouts_column_align_left sc_layouts_column_icons_position_left">
+                        <div class="vc_column-inner">
+                            <div class="wpb_wrapper" style="display: flex; justify-content: center;">
+                                <div class="sc_layouts_item">
+                                  <a href="#scroll-to-uco-section" id="sc_button_145826105"
+                                    class="sc_button color_style_default sc_button_default sc_button_size_normal sc_button_icon_left button_transparent"
+                                    style="margin-top: 0px;"><span
+                                        class="sc_button_text" target="_blank"><span
+                                            class="sc_button_title" style="color: #fff">Buy
+                                            UCO</span></span>
+                                  </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="wpb_column vc_column_container vc_col-sm-2 vc_col-xs-2 sc_layouts_column sc_layouts_column_align_right sc_layouts_column_icons_position_left">
                         <div class="vc_column-inner">
                             <div class="wpb_wrapper">
                                 <div class="sc_layouts_item">
@@ -830,6 +870,7 @@
 
                                         </ul>
                                     </nav>
+
                                     <!-- /.sc_layouts_menu -->
                                     <div class="sc_layouts_iconed_text sc_layouts_menu_mobile_button">
                                         <a class="sc_layouts_item_link sc_layouts_iconed_text_link" href="#">
@@ -880,6 +921,9 @@
             <div class="menu_mobile menu_mobile_fullscreen">
                 <div class="menu_mobile_inner">
                     <a class="menu_mobile_close icon-cancel"></a>
+                    <div class="vc_empty_space "
+                      style="height: 2em"><span
+                        class="vc_empty_space_inner"></span></div>
                     <a class="" href="#"><img src="./assets/logo/archethic-white.png" alt="ArchEthic" width="175"
                             height="37"></a>
                     <nav class="menu_mobile_nav_area">
@@ -895,9 +939,6 @@
                                 <a href="#scroll-to-goverance-section"><span
                                         class="nav-bar-content-half-transparent">Governance</span></a>
                             </li>
-
-
-
                             <li id="menu_mobile-item-1242"
                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1242">
                                 <a href="#scroll-to-uco-section"><span
@@ -969,7 +1010,7 @@
                                     data-vc-stretch-content="true"
                                     class="vc_row wpb_row vc_row-fluid wpb_animate_when_almost_visible wpb_fadeIn fadeIn vc_custom_1520937033954 vc_row-has-fill vc_row-no-padding vc_row-o-equal-height vc_row-o-content-middle vc_row-flex">
 
-                                    <video class="video_main" autoplay loop muted defer
+                                    <video class="video_main" autoplay loop muted
                                         poster="./assets/img/video_poster.jpg">
                                         <source src="./assets/img/video.webm" type="video/webm">
                                     </video>
@@ -1806,7 +1847,7 @@
                                             class="vc_empty_space_inner"></span></div>
 
                                 </div>
-                                
+
                                 <div data-vc-full-width="true" data-vc-full-width-init="false"
                                     class="vc_row wpb_row vc_row-fluid  vc_row-has-fill vc_row-o-equal-height vc_row-o-content-middle vc_row-flex hide_bg_image_on_mobile"
                                     style="opacity: 1 !important; ">
@@ -1863,7 +1904,7 @@
                                                 </div>
 
                                                 <!-- /.sc_icons -->
-                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -2625,139 +2666,196 @@
 
                                             <!--Developers Start-->
                                             <div data-vc-full-width="true" data-vc-full-width-init="false"
-                                                class="vc_row wpb_row vc_row-fluid wpb_animate_when_almost_visible wpb_fadeIn fadeIn vc_custom_1520936890000 vc_row-has-fill hide_bg_image_on_mobile">
+                                            class="vc_row wpb_row vc_row-fluid wpb_animate_when_almost_visible wpb_fadeIn fadeIn vc_custom_1520936973486 vc_row-has-fill hide_bg_image_on_mobile">
+
+                                              <div data-vc-full-width="true" data-vc-full-width-init="false"
+                                                  class="vc_row wpb_row vc_row-fluid wpb_animate_when_almost_visible vc_custom_1520936973486 wpb_fadeIn fadeIn vc_row-has-fill hide_bg_image_on_mobile">
 
 
-                                                <hr id="scroll-to-developer-section" />
-                                                <div class="vc_row wpb_row vc_row-fluid">
-                                                    <div
-                                                        class="wpb_column vc_column_container vc_col-sm-12 sc_layouts_column_icons_position_left">
-                                                        <div class="vc_column-inner">
-                                                            <div class="wpb_wrapper">
-                                                                <div id="sc_title_685104356"
-                                                                    class="sc_title color_style_default sc_title_default">
+                                                  <hr id="scroll-to-developer-section" />
 
-                                                                    <h1 class="sc_item_title sc_title_title sc_align_center
-							  sc_item_title_style_accent sc_item_title_tag">
-                                                                        Developers</h1>
+                                                  <div class="vc_row wpb_row vc_row-fluid">
+                                                      <div
+                                                          class="wpb_column vc_column_container vc_col-sm-12 sc_layouts_column_icons_position_left">
+                                                          <div class="vc_column-inner">
+                                                              <div class="wpb_wrapper">
+                                                                  <div id="sc_title_685104356"
+                                                                      class="sc_title color_style_default sc_title_default">
 
-                                                                    <br />
-                                                                    <p
-                                                                        style="text-align: center; color: rgba(255, 255, 255, 0.651)">
-                                                                        Welcome to the ARCHEthic Developer Portal to
-                                                                        discover all there is to ARCHEthic <br /> its
-                                                                        architecture and ecosystem, deploying smart
-                                                                        contracts, and setting up !</p>
+                                                                      <h1 class="sc_item_title sc_title_title sc_align_center
+                                                                              sc_item_title_style_accent sc_item_title_tag">
+                                                                          Developers</h1>
 
-                                                                    <div class="vc_empty_space  sc_height_medium"
-                                                                        style="height: 0px">
-                                                                        <span class="vc_empty_space_inner"></span>
-                                                                    </div>
-                                                                    <!--div id="canvas_container" style="height: 180px; width: 100%;">
+                                                                      <br />
+                                                                      <p
+                                                                          style="text-align: center; color: rgba(255, 255, 255, 0.651)">
+                                                                          Welcome to the ARCHEthic Developer Portal to
+                                                                          discover all there is to ARCHEthic <br /> its
+                                                                          architecture and ecosystem, deploying smart
+                                                                          contracts, and setting up !</p>
 
-                                                                    </div-->
-                                                                    <div style="display: block;
-                                                                    margin-left: auto;
-                                                                    margin-right: auto;
-                                                                    width: 50%;">
+                                                                      <div class="vc_empty_space  sc_height_medium"
+                                                                          style="height: 0px">
+                                                                          <span class="vc_empty_space_inner"></span>
+                                                                      </div>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <div >
+                                                      <div
+                                                          class="wpb_column vc_column_container vc_col-sm-6 sc_layouts_column_icons_position_left">
+                                                          <div class="vc_column-inner">
+                                                              <div class="wpb_wrapper">
+                                                                  <div id="sc_title_1709596069"
+                                                                      class="sc_title color_style_default sc_title_default">
+                                                                      <h3
+                                                                          class="sc_item_title sc_title_title sc_align_left sc_item_title_style_default sc_item_title_tag">
+                                                                        Developer Resources</h3>
+                                                                      <div
+                                                                          class="sc_item_descr sc_title_descr sc_align_left remove-social">
+                                                                          <p style="color: rgba(255, 255, 255, 0.651)">
+                                                                              Get started Today with ARCH<i>Ethic</i> Ecosystem. By builders for builders.
+                                                                          </p>
+                                                                      </div>
+                                                                      <div>
+                                                                          <a href="https://archethic-foundation.github.io/archethic-docs/#/README"
+                                                                              class="sc_price_item_link sc_button button_transparent"
+                                                                              target="_blank">Explore the Docs
+                                                                          </a>
+                                                                          <a href="https://github.com/archethic-foundation"
+                                                                              class="sc_price_item_link sc_button button_transparent"
+                                                                              target="_blank">Build Today
+                                                                          </a>
+                                                                      </div>
+                                                                  </div>
+                                                                  <!-- /.sc_title -->
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                      <div
+                                                          class="wpb_column vc_column_container vc_col-sm-6 sc_layouts_column_icons_position_left">
+                                                          <div class="vc_column-inner">
+                                                              <div class="wpb_wrapper">
+                                                                  <img width="600" height="208"
+                                                                              src="./assets/logo/OM-Iro1.png"
+                                                                              class="attachment-hoverex-thumb-med size-hoverex-thumb-med wp-post-image"
+                                                                              alt="" loading="lazy" />
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <div class="vc_empty_space "
+                                                      style="height: 1.5em"><span
+                                                          class="vc_empty_space_inner"></span>
+                                                  </div>
+                                                  <div id="sc_price_1166706575"
+                                                      class="sc_price color_style_default sc_price_default">
+                                                      <div
+                                                          class="sc_price_columns_wrap sc_item_columns trx_addons_columns_wrap columns_padding_bottom">
+                                                          <div class="trx_addons_column-1_3">
+                                                              <div
+                                                                  class="sc_price_item sc_price_item_default">
+                                                                  <div
+                                                                      class="sc_price_item_info dev_button_wrapper">
+                                                                      <div class="dev_card">
+                                                                          <div class="vc_empty_space "
+                                                                              style="height: 1em"><span
+                                                                                  class="vc_empty_space_inner"></span>
+                                                                          </div>
+                                                                          <h3
+                                                                              class="sc_item_title sc_title_title sc_align_left sc_item_title_style_default sc_item_title_tag">
+                                                                              Introductory Guide to ARCH<i>Ethic</i>
+                                                                          </h3>
+                                                                          <div class="vc_empty_space "
+                                                                              style="height: 1.5em"><span
+                                                                                  class="vc_empty_space_inner"></span>
+                                                                          </div>
+                                                                          <p
+                                                                              style="color: rgba(255, 255, 255, 0.8); text-align: left;">
+                                                                              Introductory guide to get started with building on ARCH<i>Ethic</i> Ecosystem, a Sample static website to deploy.
+                                                                          </p>
 
-                                                                        <img width="600" height="208"
-                                                                            src="./assets/logo/OM-Iro1.png"
-                                                                            class="attachment-hoverex-thumb-med size-hoverex-thumb-med wp-post-image"
-                                                                            alt="" loading="lazy" />
-                                                                    </div>
-                                                                    <!-- <svg width="960" height="600" style="background: none;" id="developers_anim"></svg>
- -->
+                                                                          <a href="https://github.com/archethic-foundation"
+                                                                              class="sc_button sc_button_bordered sc_button_size_small sc_services_item_button sc_item_button"
+                                                                              target="_blank">Github</a>
+                                                                      </div>
+                                                                  </div>
+                                                                  <!-- /.sc_price_item_info -->
+                                                              </div>
+                                                          </div>
+                                                          <div class="trx_addons_column-1_3">
+                                                              <div
+                                                                  class="sc_price_item sc_price_item_default">
+                                                                  <div
+                                                                      class="sc_price_item_info dev_button_wrapper">
 
-                                                                </div>
-                                                                <!-- /.sc_title -->
+                                                                      <div class="dev_card">
+                                                                          <div class="vc_empty_space "
+                                                                              style="height: 1em"><span
+                                                                                  class="vc_empty_space_inner"></span>
+                                                                          </div>
+                                                                          <h3
+                                                                              class="sc_item_title sc_title_title sc_align_left sc_item_title_style_default sc_item_title_tag">
+                                                                              Introductory Guide to ARCH<i>Ethic</i>
+                                                                          </h3>
+                                                                          <div class="vc_empty_space "
+                                                                              style="height: 1.5em"><span
+                                                                                  class="vc_empty_space_inner"></span>
+                                                                          </div>
+                                                                          <p
+                                                                              style="color: rgba(255, 255, 255, 0.8); text-align: left;">
+                                                                              Introductory guide to get started with building on ARCH<i>Ethic</i> Ecosystem, a Sample static website to deploy.
+                                                                          </p>
 
-                                                                <div id="sc_price_1166706575"
-                                                                    class="sc_price color_style_default sc_price_default">
-                                                                    <div
-                                                                        class="sc_price_columns_wrap sc_item_columns trx_addons_columns_wrap columns_padding_bottom">
-                                                                        <div class="trx_addons_column-1_3">
-                                                                            <div
-                                                                                class="sc_price_item sc_price_item_default">
-                                                                                <div
-                                                                                    class="sc_price_item_info dev_button_wrapper">
+                                                                          <a href="https://github.com/archethic-foundation"
+                                                                            class="sc_button sc_button_bordered sc_button_size_small sc_services_item_button sc_item_button"
+                                                                            target="_blank">Github</a>
+                                                                      </div>
+                                                                  </div>
+                                                                  <!-- /.sc_price_item_info -->
+                                                              </div>
+                                                          </div>
+                                                          <div class="trx_addons_column-1_3">
+                                                              <div
+                                                                  class="sc_price_item sc_price_item_default ">
+                                                                  <div
+                                                                      class="sc_price_item_info dev_button_wrapper">
 
-                                                                                    <a href="https://github.com/archethic-foundation"
-                                                                                        class="sc_price_item_link sc_button button_transparent"
-                                                                                        target="_blank">Github</a>
-                                                                                    <div class="vc_empty_space "
-                                                                                        style="height: 1.5em"><span
-                                                                                            class="vc_empty_space_inner"></span>
-                                                                                    </div>
-                                                                                    <p
-                                                                                        style="color: rgba(255, 255, 255, 0.651)">
-                                                                                        Get started with the Core
-                                                                                        Infrastructure and the SDK tools
-                                                                                        available to get renumerated in
-                                                                                        UCOs
-                                                                                    </p>
-                                                                                </div>
-                                                                                <!-- /.sc_price_item_info -->
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="trx_addons_column-1_3">
-                                                                            <div
-                                                                                class="sc_price_item sc_price_item_default">
-                                                                                <div
-                                                                                    class="sc_price_item_info dev_button_wrapper">
+                                                                      <div class="dev_card">
+                                                                          <div class="vc_empty_space "
+                                                                              style="height: 1em"><span
+                                                                                  class="vc_empty_space_inner"></span>
+                                                                          </div>
+                                                                          <h3
+                                                                              class="sc_item_title sc_title_title sc_align_left sc_item_title_style_default sc_item_title_tag">
+                                                                              Setup a Node in ARCH<i>Ethic</i>
+                                                                          </h3>
+                                                                          <div class="vc_empty_space "
+                                                                              style="height: 1.5em"><span
+                                                                                  class="vc_empty_space_inner"></span>
+                                                                          </div>
+                                                                          <p
+                                                                              style="color: rgba(255, 255, 255, 0.8); text-align: left;">
+                                                                              Setup a Node in ARCH<i>Ethic</i> Ecosystem, and start earning today.
+                                                                          </p>
 
-                                                                                    <a href="https://mainnet.archethic.net/explorer"
-                                                                                        class="sc_price_item_link sc_button button_transparent"
-                                                                                        target="_blank">Explorer</a>
-                                                                                    <div class="vc_empty_space "
-                                                                                        style="height: 1.5em"><span
-                                                                                            class="vc_empty_space_inner"></span>
-                                                                                    </div>
-                                                                                    <p
-                                                                                        style="color: rgba(255, 255, 255, 0.651)">
-                                                                                        View all the information
-                                                                                        associated with blocks,
-                                                                                        addresses, and past and current
-                                                                                        transactions on ARCHEthic.
-                                                                                    </p>
-                                                                                </div>
-                                                                                <!-- /.sc_price_item_info -->
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="trx_addons_column-1_3">
-                                                                            <div
-                                                                                class="sc_price_item sc_price_item_default ">
-                                                                                <div
-                                                                                    class="sc_price_item_info dev_button_wrapper">
+                                                                          <div class="vc_empty_space "
+                                                                              style="height: 1.5em"><span
+                                                                                  class="vc_empty_space_inner"></span>
+                                                                          </div>
 
-                                                                                    <a href="https://archethic-foundation.github.io/archethic-docs/#/README"
-                                                                                        class="sc_price_item_link sc_button button_transparent"
-                                                                                        target="_blank">Docs
-                                                                                    </a>
-                                                                                    <div class="vc_empty_space "
-                                                                                        style="height: 1.5em"><span
-                                                                                            class="vc_empty_space_inner"></span>
-                                                                                    </div>
-                                                                                    <p
-                                                                                        style="color: rgba(255, 255, 255, 0.651)">
-                                                                                        Docs is a place to get started
-                                                                                        and aims to provide a brief
-                                                                                        description about the ARCHEthic
-                                                                                        protocol & ecosystem.
-                                                                                    </p>
-                                                                                    </p>
-                                                                                </div>
-                                                                                <!-- /.sc_price_item_info -->
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <!-- /.sc_price -->
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
+                                                                          <a href="https://github.com/archethic-foundation"
+                                                                              class="sc_button sc_button_bordered sc_button_size_small sc_services_item_button sc_item_button"
+                                                                              target="_blank">Github</a>
+                                                                      </div>
+                                                                  </div>
+                                                                  <!-- /.sc_price_item_info -->
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
                                             </div>
                                             <div class="vc_row-full-width vc_clearfix">
                                             </div>
@@ -3143,7 +3241,7 @@ tag-popular">
                     ./assets/community1/6/6-370x.png 370w,
                     ./assets/community1/6/6-300x.png 300w,
                     ./assets/community1/6/6-100x.png 100w"
-                     sizes="(max-width: 90px) 100vw, 90px" 
+                     sizes="(max-width: 90px) 100vw, 90px"
                      >
 
                                             <div class="mask"></div>
@@ -3889,9 +3987,6 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
                                                                                     Youtube</p>
                                                                             </a>
                                                                         </li>
-
-
-
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -3920,7 +4015,7 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
 
                                                                         <li id="menu-item-752 "
                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-752 ">
-                                                                            <a href="https://uniris.io/blog/cryptocurrency-the/">
+                                                                            <a href="#scroll-to-goverance-section">
                                                                                 <p
                                                                                     style="color: rgba(255, 255, 255, 0.651)">
                                                                                     Price Prediction
@@ -3929,7 +4024,7 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
                                                                         </li>
                                                                         <li id="menu-item-753 "
                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-753 ">
-                                                                            <a href="https://uniris.io/blog/archethic-x-quickswap-liquidity-staking-details/">
+                                                                            <a href="#scroll-to-uco-section">
                                                                                 <p
                                                                                     style="color: rgba(255, 255, 255, 0.651)">
                                                                                     Liquidity Staking
@@ -4890,7 +4985,7 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
                 <div class="video_embed video_frame">
 
                     <iframe src="http://www.youtube.com/embed/KWusIBUNmsY" width="640" height="360" frameborder="0"
-                        allowfullscreen="allowfullscreen" ></iframe>
+                        allowfullscreen="allowfullscreen"></iframe>
 
                 </div>
             </div>
