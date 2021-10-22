@@ -169,7 +169,7 @@ option = {
 function getGovItemData(name) {
     switch(name) {
 
-        case "Blockchain": return "Blockchain - <br>The Blockchain itself, specifically<br> through its ability to <br>test a full-scale functionality<br> before deploying it on<br> the network. For example, the<br> maximum size of transactions <br>is not linked to <br>a point of view, rather <br>it can be directly tested <br>to determine the actual <br>impact on the network <br>with respect to the<br> need considered. ";
+        case "Blockchain": return "Blockchain - <br>Blockchain has the ability<br> to test a full-scale<br> functionality and its impact <br>before deploying it on <br>the network.";
         case "Users": return "Users - <br>Anyone with the ability<br> to prove their uniqueness<br> (via biometric devices or<br> other processes).";
         case "Foundation": return "Foundation - <br>Their role is to<br> lead the community and<br> to organize governance.";
         case "Miners": return "Miners - <br>Owners of the mining<br> nodes which constitute the<br> network itself";
@@ -332,6 +332,7 @@ optionsG = {
             shadowBlur: 200,
             shadowColor: 'rgba(0, 0, 0, 0.8)'
         },
+       
         animationType: 'scale',
         animationEasing: 'elasticOut',
         animationDelay: function (idx) {
