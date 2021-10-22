@@ -60,7 +60,7 @@ function setBtnText() {
   }
 }
 
-$("#btn_read_more_1").on("click", () => {
+$("#btn_read_more_1, #btn_read_more_1_icon").on("click", () => {
   // console.log(open);
   // console.log(curIdx);
   // console.log("Click Triggered")
@@ -121,7 +121,7 @@ $("#btn_read_more_1").on("click", () => {
   }
 });
 
-$("#btn_read_more_2").on("click", () => {
+$("#btn_read_more_2, #btn_read_more_2_icon").on("click", () => {
   // console.log(open);
   // console.log(curIdx);
   // console.log("Click Triggered")
@@ -174,7 +174,7 @@ $("#btn_read_more_2").on("click", () => {
   }
 });
 
-$("#btn_read_more_3").on("click", () => {
+$("#btn_read_more_3 , #btn_read_more_3_icon").on("click", () => {
   // console.log(open);
   // console.log(curIdx);
   // console.log("Click Triggered")

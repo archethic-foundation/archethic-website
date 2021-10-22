@@ -4,7 +4,7 @@ option = {
     tooltip: {
         trigger: 'item',
         // formatter: (a) => {
-        //     return a.data.value + " %" 
+        //     return a.data.value + " %"
         // }
     },
     color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
@@ -42,7 +42,7 @@ option = {
                     }
                   ])
                 },
-            
+
         },
         labelLine: {
             show: false
@@ -62,7 +62,7 @@ option = {
                         }
                       ])
                     },
-                
+
 
             }, {
                 value: 3.2,
@@ -79,7 +79,7 @@ option = {
                         }
                       ])
                     }
-                
+
             },
             {
                 value: 5.6,
@@ -96,7 +96,7 @@ option = {
                         }
                       ])
                     }
-                
+
             },
             {
                 value: 8.2,
@@ -113,14 +113,14 @@ option = {
                         }
                       ])
                     }
-                
+
             },
             {
                 value: 23.3,
                 name: 'Deliverables',
                 itemStyle: {
                     color: '#5C33F6'
-                    
+
                 }
             },
             {
@@ -150,34 +150,34 @@ option = {
     }]
 };
 
-var chartDom = document.getElementById('pie_item');
-var myChart = echarts.init(chartDom);
+// var chartDom = document.getElementById('pie_item');
+// var myChart = echarts.init(chartDom);
 
-option && myChart.setOption(option);
+// option && myChart.setOption(option);
 
-window.addEventListener('resize', onWindowResize2, false);
+// window.addEventListener('resize', onWindowResize2, false);
 
-function onWindowResize2() {
+// function onWindowResize2() {
 
-    var chartDom = document.getElementById('pie_item');
-    var myChart = echarts.init(chartDom);
+//     var chartDom = document.getElementById('pie_item');
+//     var myChart = echarts.init(chartDom);
 
-    option && myChart.setOption(option);
-}
+//     option && myChart.setOption(option);
+// }
 
 
 function getGovItemData(name) {
     switch(name) {
-        
+
         case "Blockchain": return "Blockchain - <br>The Blockchain itself, specifically<br> through its ability to <br>test a full-scale functionality<br> before deploying it on<br> the network. For example, the<br> maximum size of transactions <br>is not linked to <br>a point of view, rather <br>it can be directly tested <br>to determine the actual <br>impact on the network <br>with respect to the<br> need considered. ";
         case "Users": return "Users - <br>Anyone with the ability<br> to prove their uniqueness<br> (via biometric devices or<br> other processes).";
         case "Foundation": return "Foundation - <br>Their role is to<br> lead the community and<br> to organize governance.";
         case "Miners": return "Miners - <br>Owners of the mining<br> nodes which constitute the<br> network itself";
         case "Technical & Ethical Council": return "Technical & Ethical Council - <br>Composed of the 'core developers'<br> with a weightage based<br> on the importance of <br>their code contribution.";
         case "Applications & Services": return "Applications & Services - <br>Application providers with a <br>weightage based on the<br> generated usage.";
-        
-       
-        
+
+
+
     }
 }
 
@@ -193,7 +193,7 @@ optionsG = {
             color: "#fff"
         },
         formatter: (a) => {
-            return getGovItemData(a.data.name) 
+            return getGovItemData(a.data.name)
         }
     },
     visualMap: {
@@ -225,7 +225,7 @@ optionsG = {
                         }
                       ])
                     }
-                
+
             },
             {
                 value: 550,
@@ -242,7 +242,7 @@ optionsG = {
                         }
                       ])
                     }
-                
+
             },
             {
                 value: 400,
@@ -259,7 +259,7 @@ optionsG = {
                         }
                       ])
                     }
-                
+
             },
             {
                 value: 450,
@@ -276,7 +276,7 @@ optionsG = {
                         }
                       ])
                     }
-                
+
             },
             {
                 value: 500,
@@ -293,7 +293,7 @@ optionsG = {
                         }
                       ])
                     }
-                
+
             },
             {
                 value: 350,
@@ -302,7 +302,7 @@ optionsG = {
                     color: '#1597E5'
                 }
             },
-            
+
         ].sort(function(a, b){
             return a.value - b.value
         }),
