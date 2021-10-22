@@ -4,9 +4,10 @@ option = {
     tooltip: {
         trigger: 'item',
         // formatter: (a) => {
-        //     return a.data.value + " %" 
+        //     return a.data.value + " %"
         // }
     },
+    color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
     legend: {
         show: false,
         top: '5%',
@@ -30,8 +31,18 @@ option = {
             label: {
                 show: false,
                 fontSize: '18',
-                color: "#FFFFFF"
-            }
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    {
+                      offset: 0,
+                      color: 'rgba(128, 255, 165)'
+                    },
+                    {
+                      offset: 1,
+                      color: 'rgba(1, 191, 236)'
+                    }
+                  ])
+                },
+
         },
         labelLine: {
             show: false
@@ -40,36 +51,76 @@ option = {
                 value: 44.8,
                 name: ' Network Pool',
                 itemStyle: {
-                    color: '#80ECFF'
-                },
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                          offset: 0,
+                          color: 'rgba(0, 221, 255)'
+                        },
+                        {
+                          offset: 1,
+                          color: 'rgba(77, 119, 255)'
+                        }
+                      ])
+                    },
+
 
             }, {
                 value: 3.2,
                 name: 'Marketing',
                 itemStyle: {
-                    color: '#B21F66'
-                }
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                          offset: 0,
+                          color: 'rgba(55, 162, 255)'
+                        },
+                        {
+                          offset: 1,
+                          color: 'rgba(116, 21, 219)'
+                        }
+                      ])
+                    }
+
             },
             {
                 value: 5.6,
                 name: 'Team',
                 itemStyle: {
-                    color: '#1DB9C3 '
-                }
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                          offset: 0,
+                          color: 'rgba(255, 0, 135)'
+                        },
+                        {
+                          offset: 1,
+                          color: 'rgba(135, 0, 157)'
+                        }
+                      ])
+                    }
+
             },
             {
                 value: 8.2,
                 name: 'Funding Pool',
                 itemStyle: {
-                    color: '#FFD371'
-                }
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                          offset: 0,
+                          color: 'rgba(255, 191, 0)'
+                        },
+                        {
+                          offset: 1,
+                          color: 'rgba(224, 62, 76)'
+                        }
+                      ])
+                    }
+
             },
             {
                 value: 23.3,
                 name: 'Deliverables',
                 itemStyle: {
                     color: '#5C33F6'
-                    
+
                 }
             },
             {
@@ -99,34 +150,34 @@ option = {
     }]
 };
 
-var chartDom = document.getElementById('pie_item');
-var myChart = echarts.init(chartDom);
+// var chartDom = document.getElementById('pie_item');
+// var myChart = echarts.init(chartDom);
 
-option && myChart.setOption(option);
+// option && myChart.setOption(option);
 
-window.addEventListener('resize', onWindowResize2, false);
+// window.addEventListener('resize', onWindowResize2, false);
 
-function onWindowResize2() {
+// function onWindowResize2() {
 
-    var chartDom = document.getElementById('pie_item');
-    var myChart = echarts.init(chartDom);
+//     var chartDom = document.getElementById('pie_item');
+//     var myChart = echarts.init(chartDom);
 
-    option && myChart.setOption(option);
-}
+//     option && myChart.setOption(option);
+// }
 
 
 function getGovItemData(name) {
     switch(name) {
-        
+
         case "Blockchain": return "Blockchain - <br>The Blockchain itself, specifically<br> through its ability to <br>test a full-scale functionality<br> before deploying it on<br> the network. For example, the<br> maximum size of transactions <br>is not linked to <br>a point of view, rather <br>it can be directly tested <br>to determine the actual <br>impact on the network <br>with respect to the<br> need considered. ";
         case "Users": return "Users - <br>Anyone with the ability<br> to prove their uniqueness<br> (via biometric devices or<br> other processes).";
         case "Foundation": return "Foundation - <br>Their role is to<br> lead the community and<br> to organize governance.";
         case "Miners": return "Miners - <br>Owners of the mining<br> nodes which constitute the<br> network itself";
         case "Technical & Ethical Council": return "Technical & Ethical Council - <br>Composed of the 'core developers'<br> with a weightage based<br> on the importance of <br>their code contribution.";
         case "Applications & Services": return "Applications & Services - <br>Application providers with a <br>weightage based on the<br> generated usage.";
-        
-       
-        
+
+
+
     }
 }
 
@@ -142,7 +193,7 @@ optionsG = {
             color: "#fff"
         },
         formatter: (a) => {
-            return getGovItemData(a.data.name) 
+            return getGovItemData(a.data.name)
         }
     },
     visualMap: {
@@ -160,54 +211,113 @@ optionsG = {
         center: ['50%', '50%'],
         data: [
             {
-                value: 300,
+                value: 400,
                 name: 'Technical & Ethical Council',
                 itemStyle: {
-                    color: '#FFA41B'
+                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    {
+                      offset: 0,
+                      color: 'rgba(128, 255, 165)'
+                    },
+                    {
+                      offset: 1,
+                      color: 'rgba(1, 191, 236)'
+                    }
+                  ])
                 }
-            },
+                },
             {
-                value: 550,
+                value: 400,
                 name: 'Foundation',
                 itemStyle: {
-                    color: '#69DADB'
+                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    {
+                      offset: 0,
+                      color: 'rgba(0, 221, 255)'
+                    },
+                    {
+                      offset: 1,
+                      color: 'rgba(77, 119, 255)'
+                    }
+                  ])
                 }
-            },
+                },
             {
                 value: 400,
                 name: 'Miners',
                 itemStyle: {
-                    color: '#16FFA3'
+                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    {
+                      offset: 0,
+                      color: 'rgba(55, 162, 255)'
+                    },
+                    {
+                      offset: 1,
+                      color: 'rgba(116, 21, 219)'
+                    }
+                  ])
                 }
-            },
+                },
             {
-                value: 450,
+                value: 400,
                 name: 'Applications & Services',
                 itemStyle: {
-                    color: '#FFE87C'
+                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    {
+                      offset: 0,
+                      color: '#134e5e'
+                    },
+                    {
+                      offset: 1,
+                      color: '#71b280'
+                    }
+                  ])
                 }
-            },
+          },
             {
-                value: 500,
+                value: 400,
                 name: 'Blockchain',
                 itemStyle: {
-                    color: '#6538FF'
+                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    {
+                      offset: 0,
+                      color: 'rgba(255, 191, 0)'
+                    },
+                    {
+                      offset: 1,
+                      color: 'rgba(224, 62, 76)'
+                    }
+                  ])
                 }
-            },
+                },
             {
-                value: 350,
+                value: 400,
                 name: 'Users',
                 itemStyle: {
-                    color: '#1597E5'
+
+                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    {
+                      offset: 0,
+                      color: 'rgba(255, 0, 135)'
+                    },
+                    {
+                      offset: 1,
+                      color: 'rgba(135, 0, 157)'
+                    }
+                  ])
                 }
-            },
-            
+                },
+                 
+
         ].sort(function(a, b){
             return a.value - b.value
         }),
         roseType: 'radius',
         label: {
             color: 'rgba(255, 255, 255, 0.6)'
+        },
+        emphasis: {
+          scaleSize: 15
         },
         labelLine: {
             lineStyle: {

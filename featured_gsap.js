@@ -60,7 +60,7 @@ function setBtnText() {
   }
 }
 
-$("#btn_read_more_1").on("click", () => {
+$("#btn_read_more_1, #btn_read_more_1_icon").on("click", () => {
   // console.log(open);
   // console.log(curIdx);
   // console.log("Click Triggered")
@@ -121,7 +121,7 @@ $("#btn_read_more_1").on("click", () => {
   }
 });
 
-$("#btn_read_more_2").on("click", () => {
+$("#btn_read_more_2, #btn_read_more_2_icon").on("click", () => {
   // console.log(open);
   // console.log(curIdx);
   // console.log("Click Triggered")
@@ -174,7 +174,7 @@ $("#btn_read_more_2").on("click", () => {
   }
 });
 
-$("#btn_read_more_3").on("click", () => {
+$("#btn_read_more_3 , #btn_read_more_3_icon").on("click", () => {
   // console.log(open);
   // console.log(curIdx);
   // console.log("Click Triggered")
@@ -265,10 +265,15 @@ function adjustViews() {
 }
 
 // Accordian Jquery UI
+var icons = {
+  header: "ui-icon-circle-arrow-e",
+  activeHeader: "ui-icon-circle-arrow-s"
+};
 $(function () {
   $("#accordion").accordion({
     collapsible: false,
     heightStyle: "fill",
+    icons: icons
   });
 });
 
@@ -324,3 +329,15 @@ $("#roadmap_q32_r").on("click", () => {
     : $("#roadmap_q32_r").text("Read less");
   roadmap_btns[4] = !roadmap_btns[4];
 });
+
+
+// Terms and Conditions Popup
+
+$("#open-terms").on('click', () => {
+  console.log("OPen Popup Clicked")
+  $("#popup-root").removeClass("hidden");
+})
+
+$("#close-terms").on('click', () => {
+  $("#popup-root").addClass("hidden");
+})
