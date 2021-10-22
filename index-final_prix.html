@@ -286,6 +286,13 @@
         .community_categories:hover {
             color: #fff !important;
             cursor: pointer;
+
+        }
+
+        .community_categories {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row-reverse;
         }
 
         .roadmap_read_more {
@@ -356,7 +363,24 @@
         .content_features_header {
             min-height: 130px;
         }
-        
+
+        .ui-icon-circle-arrow-s {
+          width: 18px;
+          height: 15px;
+          display: block !important;
+          background-size: contain !important;
+          background-repeat: no-repeat;
+          background: url("./assets/section-icons/down_arrow.svg");
+        }
+        .ui-icon-circle-arrow-e {
+          width: 18px;
+          height: 15px;
+          display: block !important;
+          background-size: contain !important;
+          background-repeat: no-repeat;
+          background: url("./assets/section-icons/up_arrow.svg");
+        }
+
 
         @media(min-width:1500px) {
             .pie_chart_pie_wrapper {
@@ -1035,7 +1059,7 @@
                                     data-vc-stretch-content="true"
                                     class="vc_row wpb_row vc_row-fluid wpb_animate_when_almost_visible wpb_fadeIn fadeIn vc_custom_1520937033954 vc_row-has-fill vc_row-no-padding vc_row-o-equal-height vc_row-o-content-middle vc_row-flex">
 
-                                    <video class="video_main" autoplay loop muted 
+                                    <video class="video_main" autoplay loop muted
                                         poster="./assets/img/video_poster.jpg">
                                         <source src="./assets/img/video.webm" type="video/webm" defer>
                                     </video>
@@ -1231,7 +1255,7 @@
                                                     <div
                                                         class="sc_services_columns_wrap sc_item_columns sc_item_columns_3 trx_addons_columns_wrap">
                                                         <div class="trx_addons_column-1_3">
-                                                            <div 
+                                                            <div
                                                                 class="sc_services_item no_links with_content with_icon sc_services_item_featured_top post-287 cpt_services type-cpt_services status-publish has-post-thumbnail hentry cpt_services_group-Universal Coin">
 
                                                                 <div class="featured_application_col_img_wrapper" >
@@ -1268,7 +1292,7 @@
                                                                     <div
                                                                         style="display: flex; align-items: center; justify-content: center;">
                                                                         <div id="sc_services_item_content_1_bottom">
-                                                                           
+
                                                                             <div
                                                                                 class="featured_application_col_wrapper">
                                                                                 <div class="featured_application_col">
@@ -1292,7 +1316,7 @@
                                                                                     <h5>Safest</h5>
                                                                                     <p
                                                                                         style="color: rgba(255, 255, 255, 0.651)">
-                                                                                        Beyond just PoW (51%) or dBFT (66%), ARCHEthic implements a Proof-of-Work allowing to handle 90% of malicious miners and decentralized security based on the standards of aviation safety (fraud risk < 10-9).</p> </div> 
+                                                                                        Beyond just PoW (51%) or dBFT (66%), ARCHEthic implements a Proof-of-Work allowing to handle 90% of malicious miners and decentralized security based on the standards of aviation safety (fraud risk < 10-9).</p> </div>
                                                                                         <div
                                                                                             class="featured_application_col">
                                                                                             <div
@@ -1325,7 +1349,7 @@
                                                                             <a>Unlimited Applications</a>
                                                                         </h4>
                                                                     </div>
-                                                                    <div class="sc_services_item_content feature_item_content content_features_header" 
+                                                                    <div class="sc_services_item_content feature_item_content content_features_header"
                                                                         id="sc_services_item_content_2">
                                                                         <p style="color: rgba(255, 255, 255, 0.651)">Our
                                                                             blockchain platform aims to replace and to
@@ -2392,9 +2416,17 @@
 
                                                             <div id="sc_icons_1764268373"
                                                                 class="sc_icons sc_icons_modern sc_icons_size_medium sc_align_center">
+                                                                <div class="vc_empty_space hide_on_desktop hide_on_tablet"
+                                                                            style="height: 2em"><span
+                                                                                class="vc_empty_space_inner"></span>
+                                                                        </div>
+                                                                <div class="vc_empty_space hide_on_mobile"
+                                                                            style="height: 5em"><span
+                                                                                class="vc_empty_space_inner"></span>
+                                                                        </div>
                                                                 <div
                                                                     class="sc_icons_columns_wrap sc_item_columns trx_addons_columns_wrap columns_padding_bottom">
-                                                                    <div class="trx_addons_column-1_2">
+                                                                    <!-- <div class="trx_addons_column-1_2">
                                                                         <div class="sc_icons_item">
                                                                             <div id="sc_icons_1764268373_icon-18-global"
                                                                                 class="sc_icons_icon sc_icon_type_ ">
@@ -2428,10 +2460,10 @@
                                                                             <h4 class="sc_icons_item_title">
                                                                                 <span>Total Supply</span></h4>
                                                                         </div>
-                                                                    </div>
+                                                                    </div> -->
                                                                     <div class="trx_addons_column-1_2">
                                                                         <div class="sc_icons_item"
-                                                                            style="border-top: 0px">
+                                                                            style="border-top: 0px; border-bottom: 0px;">
                                                                             <div id="sc_icons_1764268373_icon-18-global"
                                                                                 class="sc_icons_icon sc_icon_type_ ">
                                                                                 <div class="live-values-container">
@@ -2497,7 +2529,7 @@
                                             <!--div class="chart" id="chart_container"></div-->
                                             <br>
 
-                                            <div data-vc-full-width="true" data-vc-full-width-init="false"
+                                            <!-- <div data-vc-full-width="true" data-vc-full-width-init="false"
                                                 class="vc_row wpb_row vc_row-fluid wpb_animate_when_almost_visible wpb_fadeIn fadeIn vc_custom_1520936973486 vc_row-has-fill hide_bg_image_on_mobile">
 
                                                 <div data-vc-full-width="true" data-vc-full-width-init="false"
@@ -2530,7 +2562,7 @@
 
                                                                     </div>
                                                                 </div>
-                                                                
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -2657,7 +2689,7 @@
                                                     <div class="vc_row-full-width vc_clearfix">
                                                     </div>
 
-                                                </div>
+                                                </div> -->
 
                                             </div>
 
@@ -2668,7 +2700,7 @@
                                             <div data-vc-full-width="true" data-vc-full-width-init="false"
                                                 class="vc_row wpb_row vc_row-fluid wpb_animate_when_almost_visible wpb_fadeIn fadeIn vc_custom_1520936973486 vc_row-has-fill hide_bg_image_on_mobile">
 
-                                             
+
                                                   <hr id="scroll-to-developer-section" />
 
                                                   <div class="vc_row wpb_row vc_row-fluid">
@@ -2706,19 +2738,19 @@
                                                               <div class="wpb_wrapper">
                                                                   <div id="sc_title_1709596069"
                                                                       class="sc_title color_style_default sc_title_default" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                                                                        
+
                                                                         <div style="display: flex; justify-content: center;">
                                                                             <a href="https://archethic-foundation.github.io/archethic-docs/#/README"
                                                                                 class="sc_price_item_link sc_button button_transparent" style="margin-top: 0px"
                                                                                 target="_blank">Explore the Documentation
                                                                             </a>
-                                                                
+
                                                                             <a href="https://github.com/archethic-foundation"
                                                                                 class="sc_price_item_link sc_button button_transparent" style="margin-top: 0px"
                                                                                 target="_blank">Contribute to Earn UCO
                                                                             </a>
-                                                                           
-                                                                            </div>  
+
+                                                                            </div>
                                                                     </div>
                                                                     <!-- /.sc_title -->
                                                                     <div class="vc_empty_space "
@@ -2728,9 +2760,9 @@
                                                               </div>
                                                           </div>
                                                       </div>
-                                                     
+
                                                   </div>
-                                                  
+
                                                   <div id="sc_price_1166706575"
                                                       class="sc_price color_style_default sc_price_default">
                                                       <div
@@ -2749,7 +2781,7 @@
                                                                               class="sc_item_title sc_title_title sc_align_left sc_item_title_style_default sc_item_title_tag">
                                                                               Join our ecosystem
                                                                           </h3>
-                                                                          
+
                                                                           <p
                                                                               style="color: rgba(255, 255, 255, 0.8); text-align: left; margin-top: auto">
                                                                               Interested in joining the most advanced Blockchain protocol in the world. Join our discord community.
@@ -2778,19 +2810,19 @@
                                                                               class="sc_item_title sc_title_title sc_align_left sc_item_title_style_default sc_item_title_tag">
                                                                               SDK
                                                                           </h3>
-                                                                          
+
                                                                           <p
                                                                               style="color: rgba(255, 255, 255, 0.8); text-align: left; margin-top: auto">
                                                                               The JavaScript Software Development Kit (SDK) to build applications on top of ARCHEthic blockchain.
 
 
                                                                           </p>
-                                                                        <div style="margin-top: auto;">  
-                                                                        <a href="https://github.com/archethic-foundation/libjs" 
+                                                                        <div style="margin-top: auto;">
+                                                                        <a href="https://github.com/archethic-foundation/libjs"
                                                                             class="sc_button sc_button_bordered sc_button_size_small sc_services_item_button sc_item_button"
                                                                             target="_blank">Javascript SDK
                                                                         </a>
-                                                                            <a href="https://github.com/archethic-foundation/libdart" 
+                                                                            <a href="https://github.com/archethic-foundation/libdart"
                                                                             class="sc_button sc_button_bordered sc_button_size_small sc_services_item_button sc_item_button"
                                                                             target="_blank">Dart SDK
                                                                         </a>
@@ -2815,13 +2847,13 @@
                                                                               class="sc_item_title sc_title_title sc_align_left sc_item_title_style_default sc_item_title_tag">
                                                                               Testnet
                                                                           </h3>
-                                                                        
+
                                                                           <p
                                                                               style="color: rgba(255, 255, 255, 0.8); text-align: left; margin-top: auto">
                                                                               Interested to build applications on top of ARCHEthic blockchain explore and try out your application on testnet.
                                                                           </p>
 
-                                                                          
+
 
                                                                           <a href="https://testnet.archethic.net/explorer"
                                                                               class="sc_button sc_button_bordered sc_button_size_small sc_services_item_button sc_item_button" style="margin-top: auto;"
@@ -2833,11 +2865,11 @@
                                                           </div>
                                                       </div>
                                                   </div>
-                                             
+
                                             </div>
                                             <div class="vc_row-full-width vc_clearfix">
                                             </div>
-                                            
+
                                             <!--Developers Manuj End-->
 
 
@@ -3033,9 +3065,11 @@ tag-popular">
                                                                     <div
                                                                         class="trx_addons_column-1_2 community_col_wrapper">
                                                                         <div id="accordion" style="min-height: 335px;">
-                                                                            <h3 class="community_categories"
+                                                                            <h3 class="community_categories h3_community"
                                                                                 style="color: rgba(255, 255, 255, 0.651)">
-                                                                                Developers</h3>
+                                                                                Developers
+
+                                                                            </h3>
                                                                             <div>
                                                                                 <article class="post_item post_layout_news-magazine
       post_format_standard post_accented_off post-304 post type-post
@@ -3512,7 +3546,7 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
                                                                                             Q4 2021 (Beta Network)
                                                                                         </h4>
                                                                                         <p class="cq-timeline-text"
-                                                                                            style="color: rgba(255, 255, 255, 0.651)">                                                                            
+                                                                                            style="color: rgba(255, 255, 255, 0.651)">
                                                                                             Token Swap
                                                                                             <br />
                                                                                             Fully fledged Mobile Wallet

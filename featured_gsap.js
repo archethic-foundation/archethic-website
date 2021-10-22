@@ -265,10 +265,15 @@ function adjustViews() {
 }
 
 // Accordian Jquery UI
+var icons = {
+  header: "ui-icon-circle-arrow-e",
+  activeHeader: "ui-icon-circle-arrow-s"
+};
 $(function () {
   $("#accordion").accordion({
     collapsible: false,
     heightStyle: "fill",
+    icons: icons
   });
 });
 
