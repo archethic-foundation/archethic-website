@@ -1,0 +1,1 @@
+function revealVideo(e,t){var n=document.getElementById(t).src;document.getElementById(t).src=n,document.getElementById(e).style.display="block"}function hideVideo(e,t){var n=document.getElementById(t).src.replace("&autoplay=1","");document.getElementById(t).src=n,document.getElementById(e).style.display="none"}
