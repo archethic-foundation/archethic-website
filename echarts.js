@@ -186,8 +186,10 @@ let optionG;
 
 optionsG = {
     backgroundColor: 'rgba(0,0,0,0)',
+    
     tooltip: {
         trigger: 'item',
+        position: 'inside',
         backgroundColor: "#05050f",
         textStyle: {
             color: "#fff"
@@ -317,6 +319,7 @@ optionsG = {
             color: 'rgba(255, 255, 255, 0.6)'
         },
         emphasis: {
+          scale: true,
           scaleSize: 15
         },
         labelLine: {
@@ -332,6 +335,7 @@ optionsG = {
             shadowBlur: 200,
             shadowColor: 'rgba(0, 0, 0, 0.8)'
         },
+
        
         animationType: 'scale',
         animationEasing: 'elasticOut',
@@ -342,6 +346,8 @@ optionsG = {
 };
 
 
+
 var chartDom2 = document.getElementById('gov_item');
 var myChart2 = echarts.init(chartDom2);
 optionsG && myChart2.setOption(optionsG);
+
