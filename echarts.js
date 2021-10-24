@@ -194,6 +194,7 @@ optionsG = {
         textStyle: {
             color: "#fff"
         },
+        className: 'echarts-tooltip echarts-tooltip-dark',
         formatter: (a) => {
             return getGovItemData(a.data.name)
         }
