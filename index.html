@@ -71,8 +71,9 @@
         }
     </style>
 
-
-
+    <link rel="stylesheet" href="./assets/css/video.css">
+    <script type='text/javascript' src='./assets/js/video-min.js' >
+    </script>
 
     <link property="stylesheet" rel='stylesheet' id='trx_addons-icons-css'
         href='./assets/css/trx_addons_icons-embedded.css' type='text/css' media='all' />
@@ -86,7 +87,7 @@
         type='text/css' media='all' />
 
     <link property="stylesheet" rel='stylesheet' id='hoverex-font-google_fonts-css'
-        href='http://fonts.googleapis.com/css?family=Muli:300,400,600,700&#038;subset=latin,latin-ext' type='text/css'
+        href='https://fonts.googleapis.com/css?family=Muli:300,400,600,700&#038;subset=latin,latin-ext' type='text/css'
         media='all' />
 
     <style type='text/css'>
@@ -129,7 +130,7 @@
             padding-left: 50px !important;
         }
 
-        .feature_item_content {}
+        
 
         #sc_services_item_content_1_bottom {
             height: 0px;
@@ -286,6 +287,27 @@
         .community_categories:hover {
             color: #fff !important;
             cursor: pointer;
+
+        }
+
+        .community_categories {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: row-reverse;
+          padding-bottom: 5px;
+          margin-bottom: 10px;
+        }
+        .community_categories div {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+        }
+
+        .community_categories div p {
+            margin: 0px !important;
         }
 
         .roadmap_read_more {
@@ -329,10 +351,7 @@
             color: #fff !important;
         }
 
-        #sc_icons_459329026 {
-            /* margin-left: -100px;
-            width: 500px; */
-        }
+        
 
         .dev_card {
             background: none;
@@ -352,6 +371,103 @@
             background: rgba(14, 14, 36, 0.7);
             box-shadow: none;
         }
+
+        .content_features_header {
+            min-height: 130px;
+        }
+
+        .ui-icon-circle-arrow-s {
+          width: 18px;
+          height: 15px;
+          display: block !important;
+          background-size: contain !important;
+          background-repeat: no-repeat;
+          background: url("./assets/section-icons/down_arrow.svg");
+        }
+        .ui-icon-circle-arrow-e {
+          width: 18px;
+          height: 15px;
+          display: block !important;
+          background-size: contain !important;
+          background-repeat: no-repeat;
+          background: url("./assets/section-icons/up_arrow.svg");
+        }
+
+        #btn_read_more_1_icon, #btn_read_more_2_icon, #btn_read_more_3_icon {
+          transition: all 0.3s ease;
+          border-radius: 5px;
+        }
+
+        #btn_read_more_1_icon:hover, #btn_read_more_2_icon:hover, #btn_read_more_3_icon:hover {
+          cursor: pointer;
+          box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .full-screen {
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+            z-index: 1000;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .flex-container-center {
+            displaY: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+        }
+
+        .full-screen-popup{
+            color: white
+        }
+
+        .hidden-popup {
+                display: none;
+        }
+
+        .popup-content {
+            max-width: 760px;
+            background: black;
+            padding: 30px;
+            position: relative;
+        }
+
+        .popup-content h2 {
+            text-align: center;
+        }
+        .popup-para p {
+            word-wrap: break-word;
+        }
+
+        .popup-close-button {
+            position: absolute;
+            right: 20px;
+            top: 60px;
+            font-size: 2em;
+            font-weight: 800;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #00ade8;
+            color: #fff !important;
+        }
+
+        .popup-close-button:hover {
+            background: none;
+            color: #00ade8 !important;
+        }
+
+        .popup-para {
+            max-height: 60vh;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            padding: 30px;
+        }
+
 
         @media(min-width:1500px) {
             .pie_chart_pie_wrapper {
@@ -520,6 +636,26 @@
             .dev_card {
               min-height: 250px;
             }
+
+            .mob-padding {
+                padding: 1em;
+            }
+            .content_features_header {
+                min-height: auto;
+            }
+
+            .landing_button_wrapper {
+                display: flex;
+                flex-direction: column;
+
+            }
+            .landing_button_wrapper a {
+                width: max-content !important;
+                margin: 5px 0px !important;
+            }
+            .vc_custom_1519995047370 {
+                border-width: 0px !important;
+            }
         }
     </style>
     <link property="stylesheet" rel='stylesheet' id='js_composer_front-css'
@@ -545,9 +681,9 @@
     <script type='text/javascript' src='./assets/js/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
     <script type='text/javascript' src='./assets/js/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'>
     </script>
-    <script type='text/javascript' src='./assets/js/babel-polyfill.js?ver=2.13.4' id='babel-polyfill-js'></script>
+    <script type='text/javascript' src='./assets/js/babel-polyfill-min.js?ver=2.13.4' id='babel-polyfill-js'></script>
 
-    <script type='text/javascript' src='./assets/js/give.js?ver=2.13.4' id='give-js'>
+    <script type='text/javascript' src='./assets/js/give-min.js?ver=2.13.4' id='give-js'>
     </script>
 
     <link rel="canonical" href="./" />
@@ -559,7 +695,7 @@
     <!-- user-styles-import-end -->
 
     <!-- user-scripts-import-starts -->
-    <script type="text/javascript" src="./assets/js/live-values.js"></script>
+    <script type="text/javascript" src="./assets/js/live-values-min.js"></script>
     <!-- user-scripts-import-ends -->
 
     <link rel="icon" href="./assets/logo/Uniris-favicon.png" sizes="32x32" />
@@ -924,7 +1060,7 @@
                     <div class="vc_empty_space "
                       style="height: 2em"><span
                         class="vc_empty_space_inner"></span></div>
-                    <a class="" href="#"><img src="./assets/logo/archethic-white.png" alt="ArchEthic" width="175"
+                    <a class="" href="#"><img src="./assets/logo/archethic-white.png" alt="ArchEthic" width="250"
                             height="37"></a>
                     <nav class="menu_mobile_nav_area">
                         <ul id="menu_mobile_1101014152">
@@ -1010,9 +1146,9 @@
                                     data-vc-stretch-content="true"
                                     class="vc_row wpb_row vc_row-fluid wpb_animate_when_almost_visible wpb_fadeIn fadeIn vc_custom_1520937033954 vc_row-has-fill vc_row-no-padding vc_row-o-equal-height vc_row-o-content-middle vc_row-flex">
 
-                                    <video class="video_main" autoplay loop muted
+                                    <video class="video_main" preload="metadata" autoplay loop muted
                                         poster="./assets/img/video_poster.jpg">
-                                        <source src="./assets/img/video.webm" type="video/webm">
+                                        <source src="./assets/img/video.webm" type="video/webm" defer>
                                     </video>
                                     <div class="video_overlay"></div>
                                     <div
@@ -1039,7 +1175,7 @@
                                                                 each individual, control over their identity
                                                             </p>
                                                         </div>
-                                                        <div class="sc_item_descr sc_title_descr sc_align_left">
+                                                        <div class="sc_item_descr sc_title_descr sc_align_left landing_button_wrapper">
                                                             <a href="#scroll-to-uco-section" id="sc_button_145826105"
                                                                 class="sc_button color_style_default sc_button_default sc_button_size_normal sc_button_icon_left button_transparent"><span
                                                                     class="sc_button_text" target="_blank"><span
@@ -1055,8 +1191,9 @@
                                                                         Community</span></span>
                                                                 <!-- /.sc_button_text -->
                                                             </a>
-                                                            <a href="#popup_video" target="_self"
-                                                                class="vc_single_image-wrapper   vc_box_border_grey vc_align_left"><img
+                                                            <a href="https://www.youtube.com/watch?v=KWusIBUNmsY"
+                                                            target="_blank"
+                                                                ><img
                                                                     width="50" height="50"
                                                                     src="./assets/img/image-13-copyright.png"
                                                                     class="vc_single_image-img attachment-full" alt=""
@@ -1208,25 +1345,37 @@
                                                         <div class="trx_addons_column-1_3">
                                                             <div
                                                                 class="sc_services_item no_links with_content with_icon sc_services_item_featured_top post-287 cpt_services type-cpt_services status-publish has-post-thumbnail hentry cpt_services_group-Universal Coin">
-                                                                <a id="trx_sc_services_410738692_icon-18-global_3"
-                                                                    class="sc_services_item_icon icon-18-global"></a>
+
+                                                                
                                                                 <div class="sc_services_item_info">
-                                                                    <div class="sc_services_item_header">
+                                                                    <div class="sc_services_item_header" id="btn_read_more_1_icon">
+                                                                        <div class="vc_empty_space " style="height: 1.0em">
+                                                                            <span class="vc_empty_space_inner"></span>
+                                                                        </div>
+                                                                        <div class="featured_application_col_img_wrapper" >
+                                                                            <div class="featured_application_col_img_wrapper">
+                                                                                <img src="./assets/section-icons/limitless.svg" style="height: 60px; width: 60px;" >
+                                                                                
+                                                                            </div>
+                                                                        </div>
                                                                         <h4 class="sc_services_item_title"><a>Limitless
                                                                                 Network</a>
                                                                         </h4>
+                                                                        <div class="vc_empty_space " style="height: 0.2em">
+                                                                            <span class="vc_empty_space_inner"></span>
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="sc_services_item_content feature_item_content"
-                                                                        id="sc_services_item_content_1">
+                                                                    <div class="sc_services_item_content feature_item_content content_features_header"
+                                                                        id="sc_services_item_content_1"  >
                                                                         <p style="color: rgba(255, 255, 255, 0.651)">
                                                                             With a scalability >1 Million TPS,
                                                                             validation time
-                                                                            &lt; 5 sec, the capability to handle upto
+                                                                            &lt; 5 sec, capability to handle up to
                                                                             90%
                                                                             maliciousness, 3.6 billion times less
-                                                                            energy consuming and with a 0.1%
+                                                                            energy consumption than Bitcoin and 0.1%
                                                                             transaction fee, the transactions
-                                                                            outperform the market standards. </p>
+                                                                            outperform market standards. </p>
                                                                     </div>
                                                                     <div class="sc_button sc_button_bordered sc_button_size_small sc_services_item_button sc_item_button"
                                                                         id="btn_read_more_1"
@@ -1239,64 +1388,42 @@
                                                                     <div
                                                                         style="display: flex; align-items: center; justify-content: center;">
                                                                         <div id="sc_services_item_content_1_bottom">
+
                                                                             <div
                                                                                 class="featured_application_col_wrapper">
                                                                                 <div class="featured_application_col">
                                                                                     <div
                                                                                         class="featured_application_col_img_wrapper">
                                                                                         <img
-                                                                                            src="./assets/logo/Uniris.png" />
+                                                                                            src="./assets/section-icons/speed.svg" style="height: 60px; width: 60px;" />
                                                                                     </div>
                                                                                     <h5>Super Fast & Limitless</h5>
                                                                                     <p
                                                                                         style="color: rgba(255, 255, 255, 0.651)">
-                                                                                        Without impacting the global
-                                                                                        validation, the heuristic
-                                                                                        polymorphic replication provides
-                                                                                        a linear increase of the
-                                                                                        capacity (in storage and number
-                                                                                        of validations) allowing to
-                                                                                        reach 1 MILLION TPS</p>
+                                                                                        Without impacting the global validation, the   heuristic polymorphic replication provides a linear increase of the capacity (in storage and number of validations) allowing us to reach 1 MILLION TPS
+                                                                                    </p>
                                                                                 </div>
                                                                                 <div class="featured_application_col">
                                                                                     <div
                                                                                         class="featured_application_col_img_wrapper">
                                                                                         <img
-                                                                                            src="./assets/logo/Uniris.png" />
+                                                                                            src="./assets/section-icons/safest.svg" style="height: 60px; width: 60px;"/>
                                                                                     </div>
                                                                                     <h5>Safest</h5>
                                                                                     <p
                                                                                         style="color: rgba(255, 255, 255, 0.651)">
-                                                                                        Beyond just PoW (51%) or dBFT
-                                                                                        (66%), the ARCHEthic blockchain
-                                                                                        provides a collaborative &
-                                                                                        Formal Proof-of-Work allowing to
-                                                                                        handle 90% of malicious miners,
-                                                                                        ushering an inclusive and new
-                                                                                        age of decentralized security
-                                                                                        based on the standards of
-                                                                                        aviation safety (fraud risk <
-                                                                                            10-9).</p> </div> <div
+                                                                                        Beyond just PoW (51%) or dBFT (66%), ARCHEthic implements a consensus that can handle 90% of malicious miners and decentralized security based on the standards of aviation safety (fraud risk < 10<sup>-9</sup>).</p> </div>
+                                                                                        <div
                                                                                             class="featured_application_col">
                                                                                             <div
                                                                                                 class="featured_application_col_img_wrapper">
                                                                                                 <img
-                                                                                                    src="./assets/logo/Uniris.png" />
+                                                                                                    src="./assets/section-icons/green.svg"  style="height: 60px; width: 60px;"/>
                                                                                             </div>
                                                                                             <h5>Earth Friendly</h5>
                                                                                             <p
                                                                                                 style="color: rgba(255, 255, 255, 0.651)">
-                                                                                                3.6 Billion times less
-                                                                                                energy consumption than
-                                                                                                Bitcoin, by using the
-                                                                                                ARCH consensus based on
-                                                                                                heuristic miners'
-                                                                                                election and a
-                                                                                                polymorphic worldwide
-                                                                                                replication. Each
-                                                                                                ARCHEthic transaction
-                                                                                                only needs 0.42w of
-                                                                                                energy (0.1g of sugar).
+                                                                                                3.6 Billion times less energy consumption than Bitcoin by using the ARCH consensus based on heuristic miners' election and a polymorphic worldwide replication. Each transaction only needs 0.42w vof energy.
                                                                                             </p>
                                                                                 </div>
                                                                             </div>
@@ -1309,15 +1436,23 @@
                                                         <div class="trx_addons_column-1_3">
                                                             <div
                                                                 class="sc_services_item no_links with_content with_icon sc_services_item_featured_top post-287 cpt_services type-cpt_services status-publish has-post-thumbnail hentry cpt_services_group-Universal Coin">
-                                                                <a id="sc_services_1299249809_icon-icon_7_1"
-                                                                    class="sc_services_item_icon icon-icon_7"></a>
+                                                                
                                                                 <div class="sc_services_item_info">
-                                                                    <div class="sc_services_item_header">
+                                                                    <div class="sc_services_item_header" id="btn_read_more_2_icon">
+                                                                        <div class="vc_empty_space " style="height: 1.0em">
+                                                                            <span class="vc_empty_space_inner"></span>
+                                                                        </div>
+                                                                        <div class="featured_application_col_img_wrapper" >
+                                                                            <img src="./assets/section-icons/marketplace2.svg" style="height: 60px; width: 60px;" >
+                                                                        </div>
                                                                         <h4 class="sc_services_item_title">
                                                                             <a>Unlimited Applications</a>
                                                                         </h4>
+                                                                        <div class="vc_empty_space " style="height: 0.2em">
+                                                                            <span class="vc_empty_space_inner"></span>
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="sc_services_item_content feature_item_content"
+                                                                    <div class="sc_services_item_content feature_item_content content_features_header"
                                                                         id="sc_services_item_content_2">
                                                                         <p style="color: rgba(255, 255, 255, 0.651)">Our
                                                                             blockchain platform aims to replace and to
@@ -1351,19 +1486,18 @@
                                                                                         style="color: rgba(255, 255, 255, 0.651)">
                                                                                         One app for website maintenance,
                                                                                         security, handling and costing
-                                                                                        on the blockchain with a
-                                                                                        fraction of its cost!</p>
+                                                                                        on the blockchain at a fraction of the current hosting costs!</p>
                                                                                 </div>
                                                                                 <div class="featured_application_col">
                                                                                     <div
                                                                                         class="featured_application_col_img_wrapper">
                                                                                         <img
-                                                                                            src="./assets/logo/Uniris.png" />
+                                                                                            src="./assets/section-icons/aemail.svg" />
                                                                                     </div>
                                                                                     <h5>DMail</h5>
                                                                                     <p
                                                                                         style="color: rgba(255, 255, 255, 0.651)">
-                                                                                        Email Redefined! An all in one
+                                                                                        Email Redefined! An all-in-one 
                                                                                         email, messaging, wallet and
                                                                                         payments app that provides the
                                                                                         full suite for a user.</p>
@@ -1372,12 +1506,12 @@
                                                                                     <div
                                                                                         class="featured_application_col_img_wrapper">
                                                                                         <img
-                                                                                            src="./assets/logo/Uniris.png" />
+                                                                                            src="./assets/section-icons/nft.svg" />
                                                                                     </div>
                                                                                     <h5>D-NFT</h5>
                                                                                     <p
                                                                                         style="color: rgba(255, 255, 255, 0.651)">
-                                                                                        NFTs Reimagined in collaboration
+                                                                                        NFTs reimagined in collaboration
                                                                                         with artists! <br>Coming Soon!
                                                                                     </p>
                                                                                 </div>
@@ -1391,24 +1525,27 @@
                                                         <div class="trx_addons_column-1_3">
                                                             <div
                                                                 class="sc_services_item no_links with_content with_icon sc_services_item_featured_top post-287 cpt_services type-cpt_services status-publish has-post-thumbnail hentry cpt_services_group-Universal Coin">
-                                                                <a id="trx_sc_services_410738692_icon-11-network_2"
-                                                                    class="sc_services_item_icon icon-11-network"></a>
+                                                                
+
                                                                 <div class="sc_services_item_info">
-                                                                    <div class="sc_services_item_header">
+                                                                    <div class="sc_services_item_header" id="btn_read_more_3_icon">
+                                                                        <div class="vc_empty_space " style="height: 1.0em">
+                                                                            <span class="vc_empty_space_inner"></span>
+                                                                        </div>
+                                                                        <div class="featured_application_col_img_wrapper">
+                                                                            <img src="./assets/section-icons/Asset 5.svg" style="height: 60px; width: 60px;">
+                                                                        </div>
                                                                         <h4 class="sc_services_item_title">
                                                                             <a>Decentralized Identity</a>
                                                                         </h4>
+                                                                        <div class="vc_empty_space " style="height: 0.2em">
+                                                                            <span class="vc_empty_space_inner"></span>
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="sc_services_item_content feature_item_content"
+                                                                    <div class="sc_services_item_content feature_item_content content_features_header"
                                                                         id="sc_services_item_content_3">
                                                                         <p style="color: rgba(255, 255, 255, 0.651)">
-                                                                            Your identity is your right. With ARCHEthic,
-                                                                            you can access your identity but no one owns
-                                                                            it. The security and threat issues that
-                                                                            centralised systems pose helped us realise
-                                                                            that
-                                                                            ownership identity is needed now more than
-                                                                            ever.</p>
+                                                                            Your identity is your right. With ARCHEthic, you can access your identity but no one owns it. The security and threat issues that centralized systems pose helped us realize that self-sovereign identity is needed now more than ever.</p>
                                                                     </div>
                                                                     <div class="sc_button sc_button_bordered sc_button_size_small sc_services_item_button sc_item_button"
                                                                         id="btn_read_more_3"
@@ -1423,23 +1560,7 @@
                                                                         <div id="sc_services_item_content_3_bottom">
                                                                             <p
                                                                                 style="text-align: center; color: rgba(255, 255, 255, 0.651)">
-                                                                                Have you ever wondered how many times
-                                                                                your identity is exploited without your
-                                                                                knowledge by centralized monopolies like
-                                                                                Google, Facebook or even your favourite
-                                                                                merchant site? The world wants you to
-                                                                                believe that ownership doesn’t matter.
-                                                                                We are here to
-                                                                                change that narrative. Identity is not
-                                                                                just about ownership but control and
-                                                                                freedom. As systems innovate, the desire
-                                                                                for ownership and control will increase,
-                                                                                because people
-                                                                                will start to realize the possibilities
-                                                                                with true ownership in the Web 3.0 era.
-                                                                                Enter the era of innovation and
-                                                                                decentralized identity that is your to
-                                                                                own and control.
+                                                                                Have you ever wondered how many times your identity is exploited without your knowledge by centralized monopolies or even your favorite merchant site? The world wants you to believe that ownership doesn’t matter. We are here to change that narrative. Identity is not just about ownership but control and freedom. ARCHEthic provides interoperable decentralized identity management using both the traditional key management as well as our crypto-biometrics key management solution. Enter the era of innovation and decentralized identity that is yours to own and control.
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -1466,36 +1587,26 @@
                                                 <div class="featured_application_col_wrapper">
                                                     <div class="featured_application_col">
                                                         <div class="featured_application_col_img_wrapper">
-                                                            <img src="./assets/logo/Uniris.png" />
+                                                            <img src="./assets/section-icons/speed.svg" style="height: 60px; width: 65px;" />
                                                         </div>
                                                         <h5>Super Fast & Limitless</h5>
-                                                        <p style="color: rgba(255, 255, 255, 0.651)">Without impacting
-                                                            the global validation, the heuristic polymorphic replication
-                                                            provides a linear increase of the capacity (in storage and
-                                                            number of validations) allowing to reach 1 MILLION TPS</p>
+                                                        <p style="color: rgba(255, 255, 255, 0.651)">Without impacting the global validation, the heuristic polymorphic replication provides a linear increase of the capacity (in storage and number of validations) allowing us to reach 1 MILLION TPS transactions per second.
+                                                        </p>
                                                     </div>
                                                     <div class="featured_application_col">
                                                         <div class="featured_application_col_img_wrapper">
-                                                            <img src="./assets/logo/Uniris.png" />
+                                                            <img src="./assets/section-icons/safest.svg"  style="height: 60px; width: 65px;"/>
                                                         </div>
                                                         <h5>Safest</h5>
-                                                        <p style="color: rgba(255, 255, 255, 0.651)">Beyond just PoW
-                                                            (51%) or dBFT (66%), the ARCHEthic blockchain provides a
-                                                            collaborative & Formal Proof-of-Work allowing to handle 90%
-                                                            of malicious miners, ushering an inclusive and new age of
-                                                            decentralized security based on the standards of aviation
-                                                            safety (fraud risk < 10-9).</p> </div> <div
+                                                        <p style="color: rgba(255, 255, 255, 0.651)">Beyond just PoW (51%) or dBFT (66%), ARCHEthic implements a consensus that can handle 90% of malicious miners and decentralized security based on the standards of aviation safety (fraud risk < 10<sup>-9</sup>).
+                                                        </p> </div> <div
                                                                 class="featured_application_col">
                                                                 <div class="featured_application_col_img_wrapper">
-                                                                    <img src="./assets/logo/Uniris.png" />
+                                                                    <img src="./assets/section-icons/green.svg" style="height: 60px; width: 65px;"/>
                                                                 </div>
                                                                 <h5>Earth Friendly</h5>
-                                                                <p style="color: rgba(255, 255, 255, 0.651)">3.6 Billion
-                                                                    times less energy consumption than Bitcoin, by using
-                                                                    the ARCH consensus based on heuristic miners'
-                                                                    election and a polymorphic worldwide replication.
-                                                                    Each ARCHEthic transaction only needs 0.42w of
-                                                                    energy (0.1g of sugar).</p>
+                                                                <p style="color: rgba(255, 255, 255, 0.651)">3.6 Billion times less energy consumption than Bitcoin by using the ARCH consensus based on heuristic miners' election and a polymorphic worldwide replication. Each transaction only needs 0.42w of energy.
+                                                                    </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1503,45 +1614,35 @@
                                                 <div class="featured_application_col_wrapper">
                                                     <div class="featured_application_col">
                                                         <div class="featured_application_col_img_wrapper">
-                                                            <img src="./assets/logo/Uniris.png" />
+                                                            <img src="./assets/section-icons/aeweb.svg" />
                                                         </div>
                                                         <h5>DWeb</h5>
                                                         <p style="color: rgba(255, 255, 255, 0.651)">One app for website
                                                             maintenance, security, handling and costing on the
-                                                            blockchain with a fraction of its cost!</p>
+                                                            blockchain at a fraction of the current hosting costs!</p>
                                                     </div>
                                                     <div class="featured_application_col">
                                                         <div class="featured_application_col_img_wrapper">
-                                                            <img src="./assets/logo/Uniris.png" />
+                                                            <img src="./assets/section-icons/aemail.svg" />
                                                         </div>
                                                         <h5>DMail</h5>
                                                         <p style="color: rgba(255, 255, 255, 0.651)">Email Redefined! An
-                                                            all in one email, messaging, wallet and payments app that
+                                                            all-in-one email, messaging, wallet and payments app that
                                                             provides the full suite for a user.</p>
                                                     </div>
                                                     <div class="featured_application_col">
                                                         <div class="featured_application_col_img_wrapper">
-                                                            <img src="./assets/logo/Uniris.png" />
+                                                            <img src="./assets/section-icons/nft.svg" />
                                                         </div>
                                                         <h5>D-NFT</h5>
-                                                        <p style="color: rgba(255, 255, 255, 0.651)">NFTs Reimagined in
+                                                        <p style="color: rgba(255, 255, 255, 0.651)">NFTs reimagined in
                                                             collaboration with artists! <br>Coming Soon!</p>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div id="featured_content_3_desktop" class="featured_content_desktop">
                                                 <p class="feature_item_content_text"
-                                                    style="color: rgba(255, 255, 255, 0.651)">Have you ever wondered how
-                                                    many times your identity is exploited without your knowledge by
-                                                    centralized monopolies like Google, Facebook or even your favourite
-                                                    merchant site? The world wants you to believe
-                                                    that ownership doesn’t matter. We are here to change that narrative.
-                                                    Identity is not just about ownership but control and freedom. As
-                                                    systems innovate, the desire for ownership and control will
-                                                    increase,
-                                                    because people will start to realize the possibilities with true
-                                                    ownership in the Web 3.0 era. Enter the era of innovation and
-                                                    decentralized identity that is your to own and control.
+                                                    style="color: rgba(255, 255, 255, 0.651)">Have you ever wondered how many times your identity is exploited without your knowledge by centralized monopolies or even your favorite merchant site? The world wants you to believe that ownership doesn’t matter. We are here to change that narrative. Identity is not just about ownership but control and freedom. ARCHEthic provides interoperable decentralized identity management using both the traditional key management as well as our crypto-biometrics key management solution. Enter the era of innovation and decentralized identity that is yours to own and control.
                                                 </p>
                                                 <div id="anim" style="width: 80%; margin-left: 10%;"></div>
                                             </div>
@@ -1697,7 +1798,7 @@
                                                                             40</td>
                                                                         <td
                                                                             style="text-align: center; color: rgba(255, 255, 255, 0.651)">
-                                                                            10 Millions
+                                                                            10 Million
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -1771,7 +1872,7 @@
                                                                         </td>
                                                                         <td
                                                                             style="text-align: center; font-weight: bold; color: #fff !important;">
-                                                                            Supervised Multicase
+                                                                            Supervised Multicast	
                                                                         </td>
                                                                         <td
                                                                             style="text-align: center; color: rgba(255, 255, 255, 0.651)">
@@ -1889,8 +1990,8 @@
                                                     </h4>
                                                     <br>
                                                     <div class="sc_services_item_content ">
-                                                        <p style="color: rgba(255, 255, 255, 0.651)">Foundation is a
-                                                            non-profit foundation whose vision is the promotion of the
+                                                        <p style="color: rgba(255, 255, 255, 0.651)">ARCHEthic foundation is a
+                                                            non-profit organization whose vision is the promotion of the
                                                             ARCHEthic Public Blockchain Protocol. It considers ARCHEthic
                                                             as a project – where a solid technical foundation is a key
                                                             to winning the marathon race to global adoption. Its role is
@@ -1910,12 +2011,12 @@
                                     </div>
 
                                 </div>
-
+                                <div class="vc_empty_space" style="height: 1em"><span
+                                    class="vc_empty_space_inner"></span></div>
                                 <div id="sc_title_1705483835" class="sc_title color_style_default sc_title_default">
                                     <h4
                                         class="sc_item_title sc_title_title sc_align_center sc_item_title_style_default sc_item_title_tag">
-                                        The governance of the ARCHEthic Blockchain is based on these technical and
-                                        functional fundamentals
+                                        An inclusive, generously incentivized, and on-chain Governance
                                     </h4>
                                 </div>
 
@@ -1952,7 +2053,7 @@
                                                                     <div class="sc_services_item_content remove-social">
                                                                         <p style="color: rgba(255, 255, 255, 0.651)">An
                                                                             essential prerequisite for a human-inclusive
-                                                                            governance in blockchain i: the ability of
+                                                                            governance in blockchain is the ability of
                                                                             the ecosystem to uniquely identify a person
                                                                             and to integrate that person into a relevant
                                                                             group.
@@ -1973,7 +2074,7 @@
                                                                 <div class="sc_services_item_info">
                                                                     <div class="sc_services_item_header">
                                                                         <h4 class="sc_services_item_title">
-                                                                            <a>On-Chain</a>
+                                                                            <a>On-Chain Governance</a>
                                                                         </h4>
                                                                     </div>
                                                                     <div
@@ -2030,7 +2131,7 @@
                                                                 <div class="sc_services_item_info">
                                                                     <div class="sc_services_item_header">
                                                                         <h4 class="sc_services_item_title">
-                                                                            <a>Incentives</a>
+                                                                            <a>Generous Incentives</a>
                                                                         </h4>
                                                                     </div>
                                                                     <div class="sc_services_item_content remove-social">
@@ -2128,7 +2229,7 @@
                                                             </div>
                                                             <div
                                                                 class="wpb_column vc_column_container vc_col-sm-1 vc_col-has-fill sc_layouts_column_icons_position_left">
-                                                                <div class="vc_column-inner vc_custom_1519995047370">
+                                                                <div class="vc_column-inner">
                                                                     <div class="wpb_wrapper">
 
                                                                     </div>
@@ -2177,7 +2278,7 @@
                                                                 <div
                                                                     class="wpb_column vc_column_container vc_col-sm-2 vc_col-has-fill sc_layouts_column_icons_position_left">
                                                                     <div
-                                                                        class="vc_column-inner vc_custom_1519995066122">
+                                                                        class="vc_column-inner vc_custom_1519995047370">
                                                                         <div class="wpb_wrapper">
                                                                             <div class="vc_empty_space"
                                                                                 style="height: 1em">
@@ -2216,7 +2317,7 @@
                                                                 <div
                                                                     class="wpb_column vc_column_container vc_col-sm-2 vc_col-has-fill sc_layouts_column_icons_position_left">
                                                                     <div
-                                                                        class="vc_column-inner  vc_custom_1519995084183">
+                                                                        class="vc_column-inner  vc_custom_1519995047370">
                                                                         <div class="wpb_wrapper">
                                                                             <div class="vc_empty_space  hide_on_tablet hide_on_mobile"
                                                                                 style="height: 0.775em"><span
@@ -2255,7 +2356,7 @@
                                                                 <div
                                                                     class="wpb_column vc_column_container vc_col-sm-2 vc_col-has-fill sc_layouts_column_icons_position_left">
                                                                     <div
-                                                                        class="vc_column-inner  vc_custom_1519995084183 ">
+                                                                        class="vc_column-inner  vc_custom_1519995047370 ">
                                                                         <div class="wpb_wrapper ">
                                                                             <div class="vc_empty_space  hide_on_tablet hide_on_mobile"
                                                                                 style="height: 0.775em"><span
@@ -2293,7 +2394,7 @@
                                                                 </div>
                                                                 <div
                                                                     class="wpb_column vc_column_container vc_col-sm-2 vc_col-has-fill sc_layouts_column_icons_position_left">
-                                                                    <div class="vc_column-inner ">
+                                                                    <div class="vc_column-inner">
                                                                         <div class="wpb_wrapper">
                                                                             <div class="vc_empty_space  hide_on_tablet hide_on_mobile"
                                                                                 style="height: 0.775em"><span
@@ -2345,8 +2446,6 @@
                                             </div>
                                             <br>
                                             <div class="vc_row wpb_row vc_inner vc_row-fluid">
-
-
                                                 <div
                                                     class="wpb_column vc_column_container vc_col-sm-6 sc_layouts_column_icons_position_left">
                                                     <div class="vc_column-inner">
@@ -2370,13 +2469,11 @@
                                                                     ecosystem according to the growth hypotheses and
                                                                     priorities of the project. In the ICO, two
                                                                     parties have been privileged:
-                                                                    <li style="color: rgba(255, 255, 255, 0.651)">Early
-                                                                        Investors: the near-exclusivity of available
-                                                                        tokens during the first two years will be those
-                                                                        of the ICO.</li>
+                                                                    <ul><li style="color: rgba(255, 255, 255, 0.651)">Early
+                                                                        Investors: near-exclusive availability of tokens during the first two years will be those of the ICO.</li>
                                                                     <li style="color: rgba(255, 255, 255, 0.651)">The
                                                                         Contributors mobilized up to the delivery of the
-                                                                        ecosystem.</li>
+                                                                        ecosystem.</li></ul>
 
                                                                 </div>
                                                             </div>
@@ -2393,9 +2490,17 @@
 
                                                             <div id="sc_icons_1764268373"
                                                                 class="sc_icons sc_icons_modern sc_icons_size_medium sc_align_center">
+                                                                <div class="vc_empty_space hide_on_desktop hide_on_tablet"
+                                                                            style="height: 2em"><span
+                                                                                class="vc_empty_space_inner"></span>
+                                                                        </div>
+                                                                <div class="vc_empty_space hide_on_mobile"
+                                                                            style="height: 5em"><span
+                                                                                class="vc_empty_space_inner"></span>
+                                                                        </div>
                                                                 <div
                                                                     class="sc_icons_columns_wrap sc_item_columns trx_addons_columns_wrap columns_padding_bottom">
-                                                                    <div class="trx_addons_column-1_2">
+                                                                    <!-- <div class="trx_addons_column-1_2">
                                                                         <div class="sc_icons_item">
                                                                             <div id="sc_icons_1764268373_icon-18-global"
                                                                                 class="sc_icons_icon sc_icon_type_ ">
@@ -2429,10 +2534,10 @@
                                                                             <h4 class="sc_icons_item_title">
                                                                                 <span>Total Supply</span></h4>
                                                                         </div>
-                                                                    </div>
+                                                                    </div> -->
                                                                     <div class="trx_addons_column-1_2">
                                                                         <div class="sc_icons_item"
-                                                                            style="border-top: 0px">
+                                                                            style="border-top: 0px; border-bottom: 0px;">
                                                                             <div id="sc_icons_1764268373_icon-18-global"
                                                                                 class="sc_icons_icon sc_icon_type_ ">
                                                                                 <div class="live-values-container">
@@ -2498,7 +2603,7 @@
                                             <!--div class="chart" id="chart_container"></div-->
                                             <br>
 
-                                            <div data-vc-full-width="true" data-vc-full-width-init="false"
+                                            <!-- <div data-vc-full-width="true" data-vc-full-width-init="false"
                                                 class="vc_row wpb_row vc_row-fluid wpb_animate_when_almost_visible wpb_fadeIn fadeIn vc_custom_1520936973486 vc_row-has-fill hide_bg_image_on_mobile">
 
                                                 <div data-vc-full-width="true" data-vc-full-width-init="false"
@@ -2531,7 +2636,7 @@
 
                                                                     </div>
                                                                 </div>
-                                                                <!-- /.sc_title -->
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -2658,18 +2763,16 @@
                                                     <div class="vc_row-full-width vc_clearfix">
                                                     </div>
 
-                                                </div>
+                                                </div> -->
 
                                             </div>
 
                                             <div class="vc_row-full-width vc_clearfix"></div>
+                                            <div class="vc_row-full-width vc_clearfix"></div>
 
                                             <!--Developers Start-->
                                             <div data-vc-full-width="true" data-vc-full-width-init="false"
-                                            class="vc_row wpb_row vc_row-fluid wpb_animate_when_almost_visible wpb_fadeIn fadeIn vc_custom_1520936973486 vc_row-has-fill hide_bg_image_on_mobile">
-
-                                              <div data-vc-full-width="true" data-vc-full-width-init="false"
-                                                  class="vc_row wpb_row vc_row-fluid wpb_animate_when_almost_visible vc_custom_1520936973486 wpb_fadeIn fadeIn vc_row-has-fill hide_bg_image_on_mobile">
+                                                class="vc_row wpb_row vc_row-fluid wpb_animate_when_almost_visible wpb_fadeIn fadeIn vc_custom_1520936973486 vc_row-has-fill hide_bg_image_on_mobile">
 
 
                                                   <hr id="scroll-to-developer-section" />
@@ -2690,9 +2793,9 @@
                                                                       <p
                                                                           style="text-align: center; color: rgba(255, 255, 255, 0.651)">
                                                                           Welcome to the ARCHEthic Developer Portal to
-                                                                          discover all there is to ARCHEthic <br /> its
-                                                                          architecture and ecosystem, deploying smart
-                                                                          contracts, and setting up !</p>
+                                                                          discover all there is to ARCHEthic.<br />Explore it's
+                                                                          architecture, ecosystem, deploy smart
+                                                                          contracts and be ready to build !</p>
 
                                                                       <div class="vc_empty_space  sc_height_medium"
                                                                           style="height: 0px">
@@ -2704,81 +2807,63 @@
                                                   </div>
                                                   <div >
                                                       <div
-                                                          class="wpb_column vc_column_container vc_col-sm-6 sc_layouts_column_icons_position_left">
+                                                          class="wpb_column vc_column_container vc_col-sm-12 sc_layouts_column_icons_position_center">
                                                           <div class="vc_column-inner">
                                                               <div class="wpb_wrapper">
                                                                   <div id="sc_title_1709596069"
-                                                                      class="sc_title color_style_default sc_title_default">
-                                                                      <h3
-                                                                          class="sc_item_title sc_title_title sc_align_left sc_item_title_style_default sc_item_title_tag">
-                                                                        Developer Resources</h3>
-                                                                      <div
-                                                                          class="sc_item_descr sc_title_descr sc_align_left remove-social">
-                                                                          <p style="color: rgba(255, 255, 255, 0.651)">
-                                                                              Get started Today with ARCH<i>Ethic</i> Ecosystem. By builders for builders.
-                                                                          </p>
-                                                                      </div>
-                                                                      <div>
-                                                                          <a href="https://archethic-foundation.github.io/archethic-docs/#/README"
-                                                                              class="sc_price_item_link sc_button button_transparent"
-                                                                              target="_blank">Explore the Docs
-                                                                          </a>
-                                                                          <a href="https://github.com/archethic-foundation"
-                                                                              class="sc_price_item_link sc_button button_transparent"
-                                                                              target="_blank">Build Today
-                                                                          </a>
-                                                                      </div>
-                                                                  </div>
-                                                                  <!-- /.sc_title -->
+                                                                      class="sc_title color_style_default sc_title_default" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+
+                                                                        <div style="display: flex; justify-content: center;">
+                                                                            <a href="https://archethic-foundation.github.io/archethic-docs/#/README"
+                                                                                class="sc_price_item_link sc_button button_transparent" style="margin-top: 0px"
+                                                                                target="_blank">Explore the Documentation
+                                                                            </a>
+
+                                                                            <a href="https://github.com/archethic-foundation"
+                                                                                class="sc_price_item_link sc_button button_transparent" style="margin-top: 0px"
+                                                                                target="_blank">Contribute to Earn UCO
+                                                                            </a>
+
+                                                                            </div>
+                                                                    </div>
+                                                                    <!-- /.sc_title -->
+                                                                    <div class="vc_empty_space "
+                                                                        style="height: 2.5em"><span
+                                                                            class="vc_empty_space_inner"></span>
+                                                                    </div>
                                                               </div>
                                                           </div>
                                                       </div>
-                                                      <div
-                                                          class="wpb_column vc_column_container vc_col-sm-6 sc_layouts_column_icons_position_left">
-                                                          <div class="vc_column-inner">
-                                                              <div class="wpb_wrapper">
-                                                                  <img width="600" height="208"
-                                                                              src="./assets/logo/OM-Iro1.png"
-                                                                              class="attachment-hoverex-thumb-med size-hoverex-thumb-med wp-post-image"
-                                                                              alt="" loading="lazy" />
-                                                              </div>
-                                                          </div>
-                                                      </div>
+
                                                   </div>
-                                                  <div class="vc_empty_space "
-                                                      style="height: 1.5em"><span
-                                                          class="vc_empty_space_inner"></span>
-                                                  </div>
+
                                                   <div id="sc_price_1166706575"
                                                       class="sc_price color_style_default sc_price_default">
                                                       <div
-                                                          class="sc_price_columns_wrap sc_item_columns trx_addons_columns_wrap columns_padding_bottom">
+                                                          class="sc_price_columns_wrap sc_item_columns trx_addons_columns_wrap columns_padding_bottom" style="width: 100%;">
                                                           <div class="trx_addons_column-1_3">
                                                               <div
                                                                   class="sc_price_item sc_price_item_default">
                                                                   <div
                                                                       class="sc_price_item_info dev_button_wrapper">
                                                                       <div class="dev_card">
-                                                                          <div class="vc_empty_space "
+                                                                          <div class="vc_empty_space"
                                                                               style="height: 1em"><span
                                                                                   class="vc_empty_space_inner"></span>
                                                                           </div>
                                                                           <h3
                                                                               class="sc_item_title sc_title_title sc_align_left sc_item_title_style_default sc_item_title_tag">
-                                                                              Introductory Guide to ARCH<i>Ethic</i>
+                                                                              Join our ecosystem
                                                                           </h3>
-                                                                          <div class="vc_empty_space "
-                                                                              style="height: 1.5em"><span
-                                                                                  class="vc_empty_space_inner"></span>
-                                                                          </div>
+
                                                                           <p
-                                                                              style="color: rgba(255, 255, 255, 0.8); text-align: left;">
-                                                                              Introductory guide to get started with building on ARCH<i>Ethic</i> Ecosystem, a Sample static website to deploy.
+                                                                              style="color: rgba(255, 255, 255, 0.8); text-align: left; margin-top: auto">
+                                                                              Interested in joining the most advanced Blockchain protocol in the world. Join our discord community.
                                                                           </p>
 
-                                                                          <a href="https://github.com/archethic-foundation"
+                                                                          <a href="https://discord.com/invite/CJZJvVReBx" style="margin-top: auto;"
                                                                               class="sc_button sc_button_bordered sc_button_size_small sc_services_item_button sc_item_button"
-                                                                              target="_blank">Github</a>
+                                                                              target="_blank">Discord</a>
                                                                       </div>
                                                                   </div>
                                                                   <!-- /.sc_price_item_info -->
@@ -2797,20 +2882,25 @@
                                                                           </div>
                                                                           <h3
                                                                               class="sc_item_title sc_title_title sc_align_left sc_item_title_style_default sc_item_title_tag">
-                                                                              Introductory Guide to ARCH<i>Ethic</i>
+                                                                              SDK
                                                                           </h3>
-                                                                          <div class="vc_empty_space "
-                                                                              style="height: 1.5em"><span
-                                                                                  class="vc_empty_space_inner"></span>
-                                                                          </div>
-                                                                          <p
-                                                                              style="color: rgba(255, 255, 255, 0.8); text-align: left;">
-                                                                              Introductory guide to get started with building on ARCH<i>Ethic</i> Ecosystem, a Sample static website to deploy.
-                                                                          </p>
 
-                                                                          <a href="https://github.com/archethic-foundation"
+                                                                          <p
+                                                                              style="color: rgba(255, 255, 255, 0.8); text-align: left; margin-top: auto">
+                                                                              The Software Development Kit (SDK) to build applications on top of ARCHEthic blockchain.
+
+
+                                                                          </p>
+                                                                        <div style="margin-top: auto;">
+                                                                        <a href="https://github.com/archethic-foundation/libjs"
                                                                             class="sc_button sc_button_bordered sc_button_size_small sc_services_item_button sc_item_button"
-                                                                            target="_blank">Github</a>
+                                                                            target="_blank">Js SDK
+                                                                        </a>
+                                                                            <a href="https://github.com/archethic-foundation/libdart"
+                                                                            class="sc_button sc_button_bordered sc_button_size_small sc_services_item_button sc_item_button"
+                                                                            target="_blank">Dart SDK
+                                                                        </a>
+                                                                    </div>
                                                                       </div>
                                                                   </div>
                                                                   <!-- /.sc_price_item_info -->
@@ -2829,25 +2919,19 @@
                                                                           </div>
                                                                           <h3
                                                                               class="sc_item_title sc_title_title sc_align_left sc_item_title_style_default sc_item_title_tag">
-                                                                              Setup a Node in ARCH<i>Ethic</i>
+                                                                              Testnet
                                                                           </h3>
-                                                                          <div class="vc_empty_space "
-                                                                              style="height: 1.5em"><span
-                                                                                  class="vc_empty_space_inner"></span>
-                                                                          </div>
+
                                                                           <p
-                                                                              style="color: rgba(255, 255, 255, 0.8); text-align: left;">
-                                                                              Setup a Node in ARCH<i>Ethic</i> Ecosystem, and start earning today.
+                                                                              style="color: rgba(255, 255, 255, 0.8); text-align: left; margin-top: auto">
+                                                                              Interested to build applications on top of ARCHEthic blockchain - explore and try out your application on testnet.
                                                                           </p>
 
-                                                                          <div class="vc_empty_space "
-                                                                              style="height: 1.5em"><span
-                                                                                  class="vc_empty_space_inner"></span>
-                                                                          </div>
 
-                                                                          <a href="https://github.com/archethic-foundation"
-                                                                              class="sc_button sc_button_bordered sc_button_size_small sc_services_item_button sc_item_button"
-                                                                              target="_blank">Github</a>
+
+                                                                          <a href="https://testnet.archethic.net/explorer"
+                                                                              class="sc_button sc_button_bordered sc_button_size_small sc_services_item_button sc_item_button" style="margin-top: auto;"
+                                                                              target="_blank">Explore Testnet</a>
                                                                       </div>
                                                                   </div>
                                                                   <!-- /.sc_price_item_info -->
@@ -2855,11 +2939,12 @@
                                                           </div>
                                                       </div>
                                                   </div>
-                                              </div>
+
                                             </div>
                                             <div class="vc_row-full-width vc_clearfix">
                                             </div>
-                                            <!--Developers End-->
+
+                                            <!--Developers Manuj End-->
 
 
 
@@ -3008,55 +3093,17 @@
                                                                 </div>
                                                                 <div
                                                                     class="sc_recent_news_columns_wrap trx_addons_columns_wrap community_cols_wrapper">
+                                                                    
                                                                     <div
-                                                                        class="trx_addons_column-1_2 community_col_wrapper">
-                                                                        <article class="post_item
-post_layout_news-magazine post_format_standard post_accented_on
-post-287 post type-post status-publish format-standard
-has-post-thumbnail hentry category-currency-market tag-news
-tag-popular">
-
-                                                                            <div
-                                                                                class="post_featured with_thumb hover_icon community-left">
-
-
-                                                                                <img width="360" height="130"
-                                                                                    src="./assets/community1/1/1-360x.png"
-                                                                                    class="attachment-hoverex-thumb-extra-bigsize-hoverex-thumb-extra-big wp-post-image"
-                                                                                    alt="" loading="lazy" srcset="./assets/community1/1/1-360x.png 360w,
-                        ./assets/community1/1/1-370x.png 370w" sizes="(max-width: 360px) 100vw, 360px">
-                                                                                <div class="mask"></div>
-                                                                                <div class="icons">
-                                                                                    <a href="https://uniris.io/blog/what-is-uniris-archethic-and-archethic-foundation/"
-                                                                                        aria-hidden="true"></a>
-                                                                                </div>
-                                                                                <div class="cat_in_image"></div>
-                                                                            </div>
-                                                                            <div class="post_header entry-header">
-                                                                                <h5 class=" post_meta_item post_title entry-title" ">
-                            <a href=" https://uniris.io/blog/what-is-uniris-archethic-and-archethic-foundation/"
-                                                                                    rel="bookmark"
-                                                                                    style="color: rgba(255, 255, 255, 0.651)">
-                                                                                    What is Uniris,
-                                                                                    <b>ARCHEthic</b> and
-                                                                                    <b>ARCHEthic</b>
-                                                                                    Foundation?</a>
-                                                                                </h5>
-                                                                                <div class="post_meta">
-                                                                                    <span
-                                                                                        class="post_meta_item post_date">
-                                                                                        27 September, 2021</span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <!-- .entry-header -->
-                                                                        </article>
-                                                                    </div>
-                                                                    <div
-                                                                        class="trx_addons_column-1_2 community_col_wrapper">
-                                                                        <div id="accordion" style="min-height: 335px;">
+                                                                        class="trx_addons_column-1_2 ">
+                                                                        <div id="accordion" style="min-height: 400px; max-width: 700px; width: 100%;">
                                                                             <h3 class="community_categories"
-                                                                                style="color: rgba(255, 255, 255, 0.651)">
-                                                                                Developers</h3>
+                                                                                style="color: rgba(255, 255, 255, 0.651) ">
+                                                                                <div>
+                                                                                    <p style="font-weight: normal; font-size: 20px;" class="remove-social1">Dev Updates</p>
+                                                                                    <span style="font-size: 20px;" class="remove-social1">Developers</span>
+                                                                                </div>
+                                                                            </h3>
                                                                             <div>
                                                                                 <article class="post_item post_layout_news-magazine
       post_format_standard post_accented_off post-304 post type-post
@@ -3097,11 +3144,61 @@ tag-popular">
                                                                                     </div>
                                                                                     <!-- .entry-header -->
                                                                                 </article>
+
+                                                                                <article class="post_item post_layout_news-magazine
+                                                                                post_format_standard post_accented_off post-300 post type-post
+                                                                                status-publish format-standard has-post-thumbnail hentry
+                                                                                category-currency-market tag-news tag-popular community-right">
+                                                                          
+                                                                                                                                                              <div
+                                                                                                                                                                  class="post_featured with_thumb hover_icon community-right-img-wrapper">
+                                                                          
+                                                                                                                                                                  <img width="90" height="90"
+                                                                                                                                                                      src="./assets/community1/4/4-90x90.png"
+                                                                                                                                                                      class="attachment-hoverex-thumb-tiny size-hoverex-thumb-tiny
+                                                                                                                                                            wp-post-image" alt="" loading="lazy"
+                                                                                                                                                                      srcset="./assets/community1/4/4-90x.png 90w,
+                                                                                                                                                            ./assets/community1/4/4-150x.png 150w,
+                                                                                                                                                            ./assets/community1/4/4-370x.png 370w,
+                                                                                                                                                            ./assets/community1/4/4-300x.png 300w,
+                                                                                                                                                            ./assets/community1/4/4-100x.png 100w"
+                                                                                                                                                                      sizes="(max-width: 90px) 100vw, 90px">
+                                                                                                                                                                  <div class="mask"></div>
+                                                                                                                                                                  <div class="icons">
+                                                                                                                                                                      <a href="https://uniris.io/blog/the-mysterious-new-proof-of-work/"
+                                                                                                                                                                          aria-hidden="true"></a>
+                                                                                                                                                                  </div>
+                                                                                                                                                              </div>
+                                                                                                                                                              <div
+                                                                                                                                                                  class="post_header entry-header">
+                                                                                                                                                                  <h6 style="color:#60708E"
+                                                                                                                                                                      class=" post_meta_item post_title entry-title">
+                                                                                                                                                                      <a href="https://uniris.io/blog/uco-ledger/"
+                                                                                                                                                                          rel="bookmark"
+                                                                                                                                                                          style="color: rgba(255, 255, 255, 0.651)">
+                                                                                                                                                                          The Mysterious new Proof-of-Work by Uniris
+                                                                                                                                                                      </a></h6>
+                                                                                                                                                                  <div class="post_meta">
+                                                                                                                                                                      <span
+                                                                                                                                                                          class="post_meta_item post_date">
+                                                                                                                                                                          20 February, 2020
+                                                                                                                                                                  </div>
+                                                                          
+                                                                                                                                                              </div>
+                                                                                                                                                              <!-- .entry-header -->
+                                                                          
+                                                                                                                                                          </article>
+                                                                                
                                                                             </div>
+                                                                            
 
                                                                             <h3 class="community_categories"
                                                                                 style="color: rgba(255, 255, 255, 0.651)">
-                                                                                Crypto Investors</h3>
+                                                                                <div>
+                                                                                    <p style="font-weight: normal; font-size: 20px;" class="remove-social1">Tokenomics</p>
+                                                                                    <span style="font-size: 20px;" class="remove-social1">Crypto Investors</span>
+                                                                                </div>
+                                                                            </h3>
                                                                             <div>
                                                                                 <article class="post_item post_layout_news-magazine
       post_format_standard post_accented_off post-300 post type-post
@@ -3194,7 +3291,11 @@ tag-popular">
                                                                             </div>
                                                                             <h3 class="community_categories"
                                                                                 style="color: rgba(255, 255, 255, 0.651)">
-                                                                                Tech Updates</h3>
+                                                                                <div>
+                                                                                    <p style="font-weight: normal; font-size: 20px" class="remove-social1">Latest Upgrades</p>
+                                                                                    <span style="font-size: 20px;" class="remove-social1">Tech Updates</span>
+                                                                                </div>
+                                                                            </h3>
                                                                             <div>
      <article class="post_item post_layout_news-magazine      post_format_standard post_accented_off post-302 post type-post      status-publish format-standard has-post-thumbnail hentry
       category-currency-market tag-news tag-popular community-right">
@@ -3272,7 +3373,12 @@ tag-popular">
 
                                                                             <h3 class="community_categories"
                                                                                 style="color: rgba(255, 255, 255, 0.651)">
-                                                                                Archers</h3>
+                                                                                <div>
+                                                                                    <p style="font-weight: normal; font-size: 20px;" class="remove-social1">Follow ARCHEthic</p>
+                                                                                    <span style="font-size: 20px" >Archers</span>
+                                                                                </div>
+                                                                                
+                                                                            </h3>
                                                                             <div>
                                                                                 <article style="margin-top: 5px;" class="post_item post_layout_news-magazine post_format_standard
 post_accented_off post-298 post type-post status-publish
@@ -3452,7 +3558,7 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
                                                                                     <div class="cq-timeline-content">
                                                                                         <h4 class="cq-timeline-title"
                                                                                             style="color:#607290;font-size:18px;font-weight: bold !important;">
-                                                                                            Q3 2021
+                                                                                            Q3 2021 (Alpha Mainnet)
                                                                                         </h4>
                                                                                         <p class="cq-timeline-text"
                                                                                             style="color: rgba(255, 255, 255, 0.651)">
@@ -3530,17 +3636,23 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
                                                                                     <div class="cq-timeline-content">
                                                                                         <h4 class="cq-timeline-title"
                                                                                             style="color:#607290;font-size:18px;font-weight: bold !important;">
-                                                                                            Q4 2021
+                                                                                            Q4 2021 (Beta Network)
                                                                                         </h4>
                                                                                         <p class="cq-timeline-text"
                                                                                             style="color: rgba(255, 255, 255, 0.651)">
-                                                                                            Token SWAP
+                                                                                            Token Swap
+                                                                                            <br />
+                                                                                            Fully fledged Mobile Wallet
+                                                                                            <br />
+                                                                                            NFC functionality for Mobile Wallet
+
                                                                                         </p>
                                                                                         <p class="cq-timeline-text"
                                                                                             id="roadmap_q41"
                                                                                             style="display: none; color: rgba(255, 255, 255, 0.651)">
 
-                                                                                            Read More
+                                                                                            Bug & Security Fixing
+
                                                                                         </p>
                                                                                         <p class="roadmap_read_more"
                                                                                             id="roadmap_q41_r">Read more
@@ -3573,20 +3685,16 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
                                                                                         </h4>
                                                                                         <p class="cq-timeline-text"
                                                                                             style="color: rgba(255, 255, 255, 0.651)">
-                                                                                            Fully fledged Mobile Wallet
-                                                                                            <br /> NFC functionality for
-                                                                                            Mobile Wallet
-                                                                                            <br /> Malicious detection
+                                                                                            Malicious detection
                                                                                             implementation
-
+                                                                                            <br /> Manage origin keys (renewal
+                                                                                            / device sign-in)
+                                                                                            <br /> Graphs on the explorer
                                                                                         </p>
                                                                                         <p class="cq-timeline-text"
                                                                                             id="roadmap_q12"
                                                                                             style="display: none; color: rgba(255, 255, 255, 0.651)">
-                                                                                            Manage origin keys (renewal
-                                                                                            / device sign-in)
-                                                                                            <br />Graphs on the explorer
-                                                                                            <br />SC: more advanced
+                                                                                            SC: more advanced
                                                                                             functions
                                                                                             <br />SGX integration
                                                                                             <br />Simple Mobile Wallet
@@ -3752,6 +3860,7 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
             <!-- footer-starts-here======================================================================-->
             <!-- footer-starts-here======================================================================-->
             <!-- footer-starts-here======================================================================-->
+            <div id=footer>
             <footer class="footer_wrap footer_custom footer_custom_748 footer_custom_footer-home2 scheme_dark">
                 <div class="vc_row wpb_row vc_row-fluid">
                     <div class="wpb_column vc_column_container vc_col-sm-12 sc_layouts_column_icons_position_left">
@@ -3813,13 +3922,16 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
                                                                                     Blog</p>
                                                                             </a>
                                                                         </li>
+                                                                      
                                                                         <li id="menu-item-753 "
-                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-753 ">
-                                                                            <a href="https://anchor.fm/uniris">
-                                                                                <p
-                                                                                    style="color: rgba(255, 255, 255, 0.651)">
-                                                                                    Podcast</p>
-                                                                            </a>
+                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-754 ">
+                                                                            <a href="#footer"
+                                                                                    
+                                                                                        style="  text-align: right; color: rgba(255, 255, 255, 0.651)"
+                                                                                        id="open-terms">
+                                                                                        Terms of use
+                                                                                    </a>
+                                                                                </span>
                                                                         </li>
 
 
@@ -3867,13 +3979,13 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
                                                                         </li>
                                                                         <li id="menu-item-753 "
                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-753 ">
-                                                                            <a href="https://mainnet.archethic.net/">
+                                                                            <a href="https://anchor.fm/uniris">
                                                                                 <p
                                                                                     style="color: rgba(255, 255, 255, 0.651)">
-                                                                                    Explorer
-                                                                                </p>
+                                                                                    Podcast</p>
                                                                             </a>
                                                                         </li>
+                                                                        
 
 
 
@@ -4015,7 +4127,7 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
 
                                                                         <li id="menu-item-752 "
                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-752 ">
-                                                                            <a href="#scroll-to-goverance-section">
+                                                                            <a href="https://uniris.io/blog/cryptocurrency-the/">
                                                                                 <p
                                                                                     style="color: rgba(255, 255, 255, 0.651)">
                                                                                     Price Prediction
@@ -4024,7 +4136,7 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
                                                                         </li>
                                                                         <li id="menu-item-753 "
                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-753 ">
-                                                                            <a href="#scroll-to-uco-section">
+                                                                            <a href="https://info.quickswap.exchange/pair/0x25bae75f6760ac30554cc62f9282307c3038c3a0">
                                                                                 <p
                                                                                     style="color: rgba(255, 255, 255, 0.651)">
                                                                                     Liquidity Staking
@@ -4033,7 +4145,7 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
                                                                         </li>
                                                                         <li id="menu-item-754 "
                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-754 ">
-                                                                            <a href="#scroll-to-developer-section">
+                                                                            <a href="https://uniris.io/blog/mass-adoption-of-blockchain-technology/">
                                                                                 <p
                                                                                     style="color: rgba(255, 255, 255, 0.651)">
                                                                                     Mass Adoption
@@ -4065,7 +4177,7 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
                         <div class="vc_column-inner">
                             <div class="wpb_wrapper">
 
-                                <div class="vc_empty_space  hide_on_tablet hide_on_mobile" style="height: 2em"><span
+                                <div class="vc_empty_space" style="height: 2em"><span
                                         class="vc_empty_space_inner"></span></div>
                             </div>
                         </div>
@@ -4262,13 +4374,9 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
                                                                     <div class="wpb_wrapper">
                                                                         <p style="color: rgba(255, 255, 255, 0.651)">
                                                                             <span class="trx_addons_copyright">
-                                                                                <span>
-                                                                                    <a href="#" target="_blank"
-                                                                                        rel="noopener"
-                                                                                        style="color: rgba(255, 255, 255, 0.651)">
-                                                                                        ARCHEthic</span></a>
-                                                                            </span>
-                                                                            © 2021 All rights reserved.
+                                                                                
+                                                                                  
+                                                                            ARCHEthic © 2021 All rights reserved.
                                                                             </span>
                                                                         </p>
 
@@ -4281,35 +4389,7 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
                                                 </div>
                                             </div>
 
-                                            <div id="sitemap-sm33"
-                                                class="wpb_column vc_column_container vc_col-sm-4 sc_layouts_column_icons_position_left">
-                                                <div class="vc_column-inner">
-                                                    <div class="wpb_wrapper">
-                                                        <div class="vc_wp_custommenu wpb_content_element">
-                                                            <div class="widget widget_nav_menu">
-                                                                <div class="wpb_text_column wpb_content_element ">
-                                                                    <div class="wpb_wrapper">
-                                                                        <p>
-                                                                            <span class="trx_addons_copyright">
-                                                                                <span id="sitemap-span-privacy">
-                                                                                    <a
-                                                                                        href="./Legal.html#terms-of-use"
-                                                                                        target="_blank"
-                                                                                        style="  text-align: right; color: rgba(255, 255, 255, 0.651)">
-                                                                                        Terms-Of-Use &nbsp;
-                                                                                    </a>
-                                                                                </span>
-                                                                            </span>
-                                                                        </p>
-
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            
                                         </div>
 
                                     </div>
@@ -4327,6 +4407,7 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
 
 
             </footer>
+        </div>
 
 
             <!-- footer-ends-here======================================================================-->
@@ -4342,6 +4423,99 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
 
     <a href="#" class="trx_addons_scroll_to_top trx_addons_icon-up" title="Scroll to top"></a>
 
+    <!-- This is Popup For Terms of Use -->
+    <div class="full-screen hidden flex-container-center" id="popup-root">
+        <div class="popup-content">
+            <h2 >Terms of Use</h2>
+            <div class="popup-para">
+                <p>
+                    These Terms of Use apply to <strong> www.archethic.net </strong> as well as any other affiliated sites,
+                    digital services, or applications on which a link to these Terms of Use appears
+                    (collectively, the " Website") and apply to all visitors. These Terms of Use and any
+                    other terms that appear on the page from which you were directed to these Terms of
+                    Use govern your use of the Website. By accessing the Website, you agree to be
+                    legally bound by the Terms of Use then in effect. Please also refer to the relevant
+                    additional legal information applicable to your country.
+                </p>
+                <p>
+                    These Terms of Use as well as the information and materials contained in the
+                    Website are subject to change at any time and from time to time, without notice. If
+                    you do not agree to be bound by these Terms of Use, do not use the Website.
+                </p>
+                <p>
+                    The Website and all information and functionalities contained within them are not
+                    directed at or intended for use by any person resident or located in any jurisdiction
+                    where (1) the distribution of such information or functionality is contrary to the laws of
+                    such jurisdiction; or (2) such distribution is prohibited without obtaining the necessary
+                    licenses or authorizations by the relevant branch, subsidiary or affiliate office of
+                    Foundation and such licenses or authorizations have not been obtained.
+                </p>
+                <p>
+                    Unless specifically stated otherwise, all price information is indicative only. No
+                    representation or warranty, either express or implied, is provided in relation to the
+                    accuracy, completeness or reliability of the materials, nor are they a complete
+                    statement of the securities, markets or developments referred to herein. The
+                    materials should not be regarded by recipients as a substitute for the exercise of
+                    their own judgment.
+                </p>
+                <p>
+                    All information and materials published, distributed or otherwise made available on
+                    the Website are provided for informational purposes, for your non-commercial,
+                    personal use only. No information or materials published on the Website constitutes
+                    a solicitation, an offer, or a recommendation to buy or sell any investment
+                    instruments, to effect any transactions, or to conclude any legal act of any kind
+                    whatsoever.
+                </p>
+                <p>
+                    Foundation does not provide investment, legal or tax advice through the Website and
+                    nothing herein should be construed as being financial, legal, tax or other advice.
+                </p> 
+                <p>
+                    Your use of the Website is at your own risk. The Website, together with all content,
+                    information and materials contained therein, is provided "as is" and "as available",
+                    without any representations or warranties of any kind. Any materials, information or
+                    content accessed, downloaded or otherwise obtained through the use of the Website
+                    is done at your own risk and Foundation is not responsible for any damage to your
+                    computer systems or loss of data that results from the download of such material.
+                </p> 
+                <p>
+                    To the fullest extent permitted by law, in no event shall Foundation or our affiliates, or
+                    any of our directors, employees, contractors, service providers or agents have any
+                    liability whatsoever to any person for any direct or indirect loss, liability, cost, claim,
+                    expense or damage of any kind, whether in contract or in tort, including negligence,
+                    or otherwise, arising out of or related to the use of all or part of the Website, or any
+                    links to third party websites.
+                </p> 
+                <p>
+                    Foundation shall not be liable to you or anybody else for any damages incurred in
+                    connection with any messages sent to Foundation using ordinary E-mail or any other
+                    electronic messaging system.
+                </p> 
+                <p>
+                    Nothing in this website is an offer to sell, or the solicitation of an offer to buy, any
+                    tokens. ARCHEthic is publishing this website solely to receive feedback and
+                    comments from the public. If and when ARCHEthic offers for sale any tokens (or a
+                    Simple Agreement for Future Tokens), it will do so through definitive offering
+                    documents, including a disclosure document and risk factors. Those definitive
+                    documents also are expected to include an updated version of this website, which
+                    may differ significantly from the current version. If and when ARCHEthic makes such
+                    an offering in the United States, the offering likely will be available solely to
+                    accredited investors.
+                </p> 
+                <p>
+                    Nothing in this website should be treated or read as a guarantee or promise of how
+                    ARCHEthic’s business or the tokens will develop or of the utility or value of the
+                    tokens. This website outlines current plans, which could change at its discretion, and
+                    the success of which will depend on many factors outside ARCHEthic’s control,
+                    including market-based factors and factors within the data and cryptocurrency
+                    industries, among others. Any statements about future events are based solely on
+                    ARCHEthic’s analysis of the issues described in this website. That analysis may
+                    prove to be incorrect.
+                </p> 
+            </div>
+            <a href="#footer" id="close-terms" class="popup-close-button">X</a>
+        </div>
+    </div>
 
     <link property="stylesheet" rel='stylesheet' id='vc_animate-css-css' href='./assets/css/animate.min.css'
         type='text/css' media='all' />
@@ -4352,28 +4526,23 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
     <script type='text/javascript' src='./assets/js/wp-polyfill.min.js' id='wp-polyfill-js'>
     </script>
 
-    <script src="https://code.highcharts.com/stock/highstock.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script defer src="highcharts-theme.js"></script>
-
-
-    <script src="index.js"></script>
+  
 
     <script type='text/javascript' src='./assets/js/swiper.jquery.min.js' id='swiperslider-js'></script>
     <script type='text/javascript' src='./assets/js/jquery.magnific-popup.min.js' id='magnific-popup-js'></script>
 
-    <script type='text/javascript' src='./assets/js/trx_addons.js' id='trx_addons-js'></script>
+    <script type='text/javascript' src='./assets/js/trx_addons-min.js' id='trx_addons-js'></script>
     <script type='text/javascript' src='./assets/js/superfish.min.js' id='superfish-js'>
     </script>
 
-    <script type='text/javascript' src='./assets/js/__scripts.js' id='hoverex-init-js'></script>
+    <script type='text/javascript' src='./assets/js/__scripts-min.js' id='hoverex-init-js'></script>
 
 
     <script type='text/javascript' src='./assets/js/wp-mediaelement.min.js' id='wp-mediaelement-js'></script>
 
     <script type='text/javascript' src='./assets/js/js_composer_front.min.js' id='wpb_composer_front_js-js'></script>
     <script type='text/javascript' src='./assets/js/vc-waypoints.min.js' id='vc_waypoints-js'></script>
-    <script type='text/javascript' src='./assets/js/core.js' id='jquery-ui-core-js'>
+    <script type='text/javascript' src='./assets/js/core-min.js' id='jquery-ui-core-js'>
     </script>
     <script type='text/javascript' src='./assets/js/tabs.min.js' id='jquery-ui-tabs-js'>
     </script>
@@ -4387,7 +4556,7 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
                 display: grid;
             }
 
-            #subscribe-logo-site-map {}
+
 
             #sitemap-sm22 {
                 margin-top: 30px !important;
@@ -4430,7 +4599,7 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
                 display: grid;
             }
 
-            #subscribe-logo-site-map {}
+            
 
             #sitemap-sm32 {
                 padding-left: 0px;
@@ -4827,7 +4996,7 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
     <script type='text/javascript' src='./assets/js/wp-polyfill.min.js' id='wp-polyfill-js'>
     </script>
 
-    <script type='text/javascript' src='./assets/js/index_contact_7.js' id='contact-form-7-js'></script>
+    
     <script type='text/javascript' src='./assets/js/swiper.jquery.min.js' id='swiperslider-js'></script>
     <script type='text/javascript' src='./assets/js/jquery.magnific-popup.min.js' id='magnific-popup-js'></script>
     <script type='text/javascript' id='trx_addons-js-extra'>
@@ -4873,17 +5042,17 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
         };
         /* ]]> */
     </script>
-    <script type='text/javascript' src='./assets/js/trx_addons.js' id='trx_addons-js'></script>
+    <script type='text/javascript' src='./assets/js/trx_addons-min.js' id='trx_addons-js'></script>
 
     <script type='text/javascript' src='./assets/js/734e5f942.min.js' id='9328c535a-js'></script>
 
     <script type='text/javascript' src='./assets/js/scripts.min.js' id='trx_mscf_scripts-js'></script>
     <script type='text/javascript' src='./assets/js/superfish.min.js' id='superfish-js'>
     </script>
-    <script type='text/javascript' src='./assets/js/frontend-script.js' id='elementskit-framework-js-frontend-js'>
+    <script type='text/javascript' src='./assets/js/frontend-script-min.js' id='elementskit-framework-js-frontend-js'>
     </script>
 
-    <script type='text/javascript' src='./assets/js/widget-scripts.js' id='ekit-widget-scripts-js'></script>
+    <script type='text/javascript' src='./assets/js/widget-scripts-min.js' id='ekit-widget-scripts-js'></script>
     <script type='text/javascript' id='hoverex-init-js-extra'>
         /* <![CDATA[ */
         var HOVEREX_STORAGE = {
@@ -4918,7 +5087,7 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
         };
         /* ]]> */
     </script>
-    <script type='text/javascript' src='./assets/js/__scripts.js' id='hoverex-init-js'></script>
+    <script type='text/javascript' src='./assets/js/__scripts-min.js' id='hoverex-init-js'></script>
 
     <script type='text/javascript' src='./assets/js/js_composer_front.min.js' id='wpb_composer_front_js-js'></script>
     <script type='text/javascript' src='./assets/js/vc-waypoints.min.js' id='vc_waypoints-js'></script>
@@ -4927,7 +5096,7 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
     <script type='text/javascript' src='./assets/js/script_hotspot.min.js' id='vc_hotspot_cq_script-js'></script>
     <script type='text/javascript' src='./assets/js/vc-accordion.min.js' id='vc_accordion_script-js'></script>
     <script type='text/javascript' src='./assets/js/vc-tta-autoplay.min.js' id='vc_tta_autoplay_script-js'></script>
-    <script type='text/javascript' src='./assets/js/core.js' id='jquery-ui-core-js'>
+    <script type='text/javascript' src='./assets/js/core-min.js' id='jquery-ui-core-js'>
     </script>
     <script type='text/javascript' src='./assets/js/tabs.min.js' id='jquery-ui-tabs-js'>
     </script>
@@ -4974,26 +5143,56 @@ wp-post-image" alt="" loading="lazy" srcset="./assets/community1/7/7-90x.png 90w
 <!-- ECharts -->
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.1/dist/echarts.min.js"></script>
 <script src="./echarts.js"></script>
+<!-- 
+<div id="popup_video"  class="sc_popup sc_popup_default">
+    go_video_in_content 
+    <div iid="widget_video_1091729435" class="widget_area sc_widget_video vc_widget_video wpb_content_element">
 
-<div id="popup_video" class="sc_popup sc_popup_default">
+        <aside id="widget_video_1091729435_widget" class="widget widget_video">
 
-    <div id="widget_video_1940094715" class="widget_area sc_widget_video vc_widget_video wpb_content_element">
-
-        <aside id="widget_video_1940094715_widget" class="widget widget_video">
-
-            <div id="sc_video_1695177611" class="trx_addons_video_player without_cover">
+            <div  id="sc_video_514067180" class="trx_addons_video_player without_cover">
                 <div class="video_embed video_frame">
 
-                    <iframe src="http://www.youtube.com/embed/KWusIBUNmsY" width="640" height="360" frameborder="0"
-                        allowfullscreen="allowfullscreen"></iframe>
-
+                    <iframe src=""  
+                   
+                    width="640" height="360" frameborder="0"
+                        allowfullscreen="allowfullscreen" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+                        <iframe  class="responsive-iframe" width="560" height="315" 
+                            
+                            src="http://www.youtube.com/embed/KWusIBUNmsY" frameborder="0" 
+                            style="position: absolute;
+                            top: 0;
+                            left: 0;
+                            bottom: 0;
+                            right: 0;
+                            width: 100%;
+                            height: 100%; z-index: 200;
+                            display: block;
+                            overflow: hidden; text-align: center    ;"> </iframe>
                 </div>
             </div>
 
         </aside>
 
     </div>
-</div>
+</div> -->
 
-
-</html>
+<div  id="video" class="temp-lightbox" 
+onclick="hideVideo('video','youtube')">
+    <div class="temp-lightbox-container">  
+      <div class="temp-lightbox-content">
+        
+        <a style="color:white !important" onclick="hideVideo('video','youtube')" class="temp-lightbox-close">
+          Close | ✕
+        </a>
+        <div class="video-container">
+          <!--iframe id="youtube" width="960" height="540"  
+          src="https://www.youtube.com/embed/KWusIBUNmsY" frameborder="0"  allowfullscreen></iframe-->
+        </div>      
+        
+      </div>
+    </div>
+    </div>
+    </html>
+<!-- </html>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KWusIBUNmsY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->

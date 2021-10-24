@@ -169,7 +169,7 @@ option = {
 function getGovItemData(name) {
     switch(name) {
 
-        case "Blockchain": return "Blockchain - <br>The Blockchain itself, specifically<br> through its ability to <br>test a full-scale functionality<br> before deploying it on<br> the network. For example, the<br> maximum size of transactions <br>is not linked to <br>a point of view, rather <br>it can be directly tested <br>to determine the actual <br>impact on the network <br>with respect to the<br> need considered. ";
+        case "Blockchain": return "Blockchain - <br>Blockchain has the ability<br> to test a full-scale<br> functionality and its impact <br>before deploying it on <br>the network.";
         case "Users": return "Users - <br>Anyone with the ability<br> to prove their uniqueness<br> (via biometric devices or<br> other processes).";
         case "Foundation": return "Foundation - <br>Their role is to<br> lead the community and<br> to organize governance.";
         case "Miners": return "Miners - <br>Owners of the mining<br> nodes which constitute the<br> network itself";
@@ -186,8 +186,10 @@ let optionG;
 
 optionsG = {
     backgroundColor: 'rgba(0,0,0,0)',
+
     tooltip: {
         trigger: 'item',
+        position: 'inside',
         backgroundColor: "#05050f",
         textStyle: {
             color: "#fff"
@@ -211,97 +213,103 @@ optionsG = {
         center: ['50%', '50%'],
         data: [
             {
-                value: 300,
+                value: 400,
                 name: 'Technical & Ethical Council',
                 itemStyle: {
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                        {
-                          offset: 0,
-                          color: 'rgba(128, 255, 165)'
-                        },
-                        {
-                          offset: 1,
-                          color: 'rgba(1, 191, 236)'
-                        }
-                      ])
+                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    {
+                      offset: 0,
+                      color: 'rgba(128, 255, 165)'
+                    },
+                    {
+                      offset: 1,
+                      color: 'rgba(1, 191, 236)'
                     }
-
-            },
+                  ])
+                }
+                },
             {
-                value: 550,
+                value: 400,
                 name: 'Foundation',
                 itemStyle: {
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                        {
-                          offset: 0,
-                          color: 'rgba(0, 221, 255)'
-                        },
-                        {
-                          offset: 1,
-                          color: 'rgba(77, 119, 255)'
-                        }
-                      ])
+                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    {
+                      offset: 0,
+                      color: 'rgba(0, 221, 255)'
+                    },
+                    {
+                      offset: 1,
+                      color: 'rgba(77, 119, 255)'
                     }
-
-            },
+                  ])
+                }
+                },
             {
                 value: 400,
                 name: 'Miners',
                 itemStyle: {
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                        {
-                          offset: 0,
-                          color: 'rgba(55, 162, 255)'
-                        },
-                        {
-                          offset: 1,
-                          color: 'rgba(116, 21, 219)'
-                        }
-                      ])
+                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    {
+                      offset: 0,
+                      color: 'rgba(55, 162, 255)'
+                    },
+                    {
+                      offset: 1,
+                      color: 'rgba(116, 21, 219)'
                     }
-
-            },
+                  ])
+                }
+                },
             {
-                value: 450,
+                value: 400,
                 name: 'Applications & Services',
                 itemStyle: {
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                        {
-                          offset: 0,
-                          color: 'rgba(255, 0, 135)'
-                        },
-                        {
-                          offset: 1,
-                          color: 'rgba(135, 0, 157)'
-                        }
-                      ])
+                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    {
+                      offset: 0,
+                      color: '#134e5e'
+                    },
+                    {
+                      offset: 1,
+                      color: '#71b280'
                     }
-
-            },
+                  ])
+                }
+          },
             {
-                value: 500,
+                value: 400,
                 name: 'Blockchain',
                 itemStyle: {
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                        {
-                          offset: 0,
-                          color: 'rgba(255, 191, 0)'
-                        },
-                        {
-                          offset: 1,
-                          color: 'rgba(224, 62, 76)'
-                        }
-                      ])
+                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    {
+                      offset: 0,
+                      color: 'rgba(255, 191, 0)'
+                    },
+                    {
+                      offset: 1,
+                      color: 'rgba(224, 62, 76)'
                     }
-
-            },
+                  ])
+                }
+                },
             {
-                value: 350,
+                value: 400,
                 name: 'Users',
                 itemStyle: {
-                    color: '#1597E5'
+
+                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    {
+                      offset: 0,
+                      color: 'rgba(255, 0, 135)'
+                    },
+                    {
+                      offset: 1,
+                      color: 'rgba(135, 0, 157)'
+                    }
+                  ])
                 }
-            },
+                },
+
 
         ].sort(function(a, b){
             return a.value - b.value
@@ -309,6 +317,10 @@ optionsG = {
         roseType: 'radius',
         label: {
             color: 'rgba(255, 255, 255, 0.6)'
+        },
+        emphasis: {
+          scale: true,
+          scaleSize: 15
         },
         labelLine: {
             lineStyle: {
@@ -323,6 +335,8 @@ optionsG = {
             shadowBlur: 200,
             shadowColor: 'rgba(0, 0, 0, 0.8)'
         },
+
+
         animationType: 'scale',
         animationEasing: 'elasticOut',
         animationDelay: function (idx) {
@@ -330,6 +344,7 @@ optionsG = {
         }
     }]
 };
+
 
 
 var chartDom2 = document.getElementById('gov_item');

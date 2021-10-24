@@ -329,3 +329,15 @@ $("#roadmap_q32_r").on("click", () => {
     : $("#roadmap_q32_r").text("Read less");
   roadmap_btns[4] = !roadmap_btns[4];
 });
+
+
+// Terms and Conditions Popup
+
+$("#open-terms").on('click', () => {
+  console.log("OPen Popup Clicked")
+  $("#popup-root").removeClass("hidden");
+})
+
+$("#close-terms").on('click', () => {
+  $("#popup-root").addClass("hidden");
+})

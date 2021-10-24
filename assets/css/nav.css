@@ -1,34 +1,35 @@
-/* .scheme_default .sc_layouts_row_fixed_on {
-    background:rgba(0,0,0,0.1);
+html {
+    scroll-behavior: smooth
+}
 
-} */
-  html {
-    scroll-behavior: smooth;
-  }
-
-  @media only screen and (max-device-width: 768px) {
-    /* Styles */
-  .remove-social {
-      display: none !important;
+@media only screen and (max-device-width:768px) {
+    .remove-social {
+        display: none !important
     }
-  }
+}
 
+@media only screen and (max-device-width:768px) {
+    .remove-social1 {
+        font-size: small !important;
+        
+    }
+}
 
-  .hover-underline-animation {
+.hover-underline-animation {
     display: inline-block;
     position: relative;
-    color: #0087ca;
-  }
+    color: #0087ca
+}
 
-  .hover-underline-animation a span {
-    color: rgba(255, 255, 255, 0.651)
-  }
+.hover-underline-animation a span {
+    color: rgba(255, 255, 255, .651)
+}
 
-  .hover-underline-animation:hover a span {
-    color: rgba(255, 255, 255, 1)
-  }
+.hover-underline-animation:hover a span {
+    color: #fff
+}
 
-  .hover-underline-animation:after {
+.hover-underline-animation:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -38,20 +39,20 @@
     left: 0;
     background-color: #0087ca;
     transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
+    transition: transform .25s ease-out
+}
 
-  .hover-underline-animation:hover:after {
+.hover-underline-animation:hover:after {
     transform: scaleX(1);
-    transform-origin: bottom left;
-  }
+    transform-origin: bottom left
+}
 
-  .btn-lead{
-    margin-right: 20px;
-  }
-  
-  .btn-lead:hover,
-  .btn-lead:focus{
+.btn-lead {
+    margin-right: 20px
+}
+
+.btn-lead:focus,
+.btn-lead:hover {
     color: #fff;
-    border-color: #fff;
-  }
+    border-color: #fff
+}
