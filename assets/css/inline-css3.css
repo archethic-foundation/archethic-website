@@ -1,0 +1,154 @@
+.vc_custom_1520936891137 {
+    background-image: url(/assets/img/01_home_06.jpg) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.vc_custom_1520936909496 {
+    background-image: url(/assets/img/01_home_06.jpg) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.vc_custom_1520936947851 {
+    background-image: url(/assets/img/home-partners.png) !important;
+    background-position: top left !important;
+}
+
+.vc_custom_1520936973486 {
+    background-image: url(/assets/img/01_home_06.jpg) !important;
+    background-position: top left !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.vc_custom_1520936970032 {
+    background-image: url(/assets/img/01_home_06.webp) !important;
+    background-position: top left !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.vc_custom_1520936991902 {
+    background-image: url(/assets/img/home-team.png) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.vc_custom_1521564934406 {
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.vc_custom_1624460741120 {
+    padding-right: 45px !important;
+    padding-left: 45px !important;
+}
+
+.vc_custom_1519995047370 {
+    border-right-width: 1px !important;
+    border-right-color: #23293b !important;
+    border-right-style: solid !important;
+}
+
+.vc_custom_1519995066122 {
+    border-right-width: 1px !important;
+    border-right-color: #23293b !important;
+    border-right-style: solid !important;
+}
+
+.vc_custom_1519995084183 {
+    border-right-width: 1px !important;
+    border-right-color: #23293b !important;
+    border-right-style: solid !important;
+}
+
+.vc_custom_1519995196207 {
+    border-bottom-width: 1px !important;
+    border-bottom-color: #23293b !important;
+    border-bottom-style: solid !important;
+}
+
+.vc_custom_1519995121040 {
+    border-right-width: 1px !important;
+    border-right-color: #23293b !important;
+    border-right-style: solid !important;
+}
+
+.vc_custom_1519995133725 {
+    border-right-width: 1px !important;
+    border-right-color: #23293b !important;
+    border-right-style: solid !important;
+}
+
+.vc_custom_1519995146211 {
+    border-right-width: 1px !important;
+    border-right-color: #23293b !important;
+    border-right-style: solid !important;
+}
+
+.vc_custom_1520936890000 {
+    background-image: url(/assets/img/bg-2.jpg) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.muted_hr {
+    margin: 20px 0px 0px;
+}
+
+.hr_btw_dapps_uco {
+    margin: 0px 0px 6em;
+}
+
+.video_main {
+    width: 100vw !important;
+    height: 100% !important;
+    position: absolute;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.video_overlay {
+    width: 100vw !important;
+    height: 100% !important;
+    position: absolute;
+    object-fit: fill;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+video::-webkit-media-controls {
+    display: none !important;
+}
+
+/* Could Use thise as well for Individual Controls */
+
+video::-webkit-media-controls-play-button {
+    display: none !important;
+}
+
+video::-webkit-media-controls-volume-slider {
+    display: none !important;
+}
+
+video::-webkit-media-controls-mute-button {
+    display: none !important;
+}
+
+video::-webkit-media-controls-timeline {
+    display: none !important;
+}
+
+video::-webkit-media-controls-current-time-display {
+    display: none !important;
+}
+
+.cq-timeline-border-small::before {
+    background: linear-gradient(0deg, #0094C5 0%, #00ade8 100%) !important;
+}
