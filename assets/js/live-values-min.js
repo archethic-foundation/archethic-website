@@ -33,9 +33,9 @@ promise.then(
  market_cap=0;
 
 async function getstats() {
-    const e = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=uniris&vs_currencies=usd"),
+    const e = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=archethic&vs_currencies=usd"),
         t = await e.json();
-    current_price = t.uniris.usd;
+    current_price = t.archethic.usd;
     const c = await fetch("https://ck7163lr1l.execute-api.us-east-1.amazonaws.com/default/uniris_circulating_supply"),
         r = await c.json();
     current_circulating_supply = 216000000;
