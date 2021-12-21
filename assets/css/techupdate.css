@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+.container, .container-md {
+    max-width: 1141px;
+}
+
+.blog-content {
+    width: 43%;
+    min-height: 450px;
+    padding: 1.5em;
+    background: linear-gradient(
+180deg, #00A4DB 0, #CC00FF 100%);
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    grid-column-gap: 1.5rem;
+    -moz-column-gap: 1.5rem;
+    column-gap: 1.5rem;
+    grid-row-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.section-title {
+    display: block;
+    font-size: 2.75rem;
+    line-height: 100%!important;
+    letter-spacing: -1px;
+    color: #FFF;
+    font-weight: 700;
+}
+
+.blog-content .blog-text {
+    max-width: 950px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-row-gap: 1.5rem;
+    row-gap: 1.5rem;
+    color: #FFF;
+}
+
+.bMYVRP.btn {
+    font-family: inherit;
+    font-weight: normal;
+    line-height: 1.25rem;
+    width: fit-content;
+    background-color: black;
+    border-radius: 1.5rem;
+    padding: 0.625rem 1.3125rem;
+    color: white;
+    border: 1px solid transparent;
+    display: inline-block;
+    float: left;
+}
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.bMYVRP.btn:hover, .bMYVRP.btn:active, .bMYVRP.btn:focus {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 1px solid black;
+}
+
+.section-content-text.secondary {
+    font-size: 1.3125rem;
+}
+
+.blog-shadow {
+    position: absolute;
+    z-index: -1;
+    top: calc(100% - 0.75rem);
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(
+0deg, #00A4DB 0, #CC00FF 100%);
+    -webkit-clip-path: polygon(0 0,5% 100%,95% 100%,100% 0);
+    clip-path: polygon(0 0,5% 100%,95% 100%,100% 0);
+}
+
+.top-card-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+@media screen and (max-width: 1600px) {
+    .blog-content {
+        min-height: 300px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .top-wrapper {
+        margin-top: 40px;
+    }
+
+    .blog-content {
+        width: 100%;
+        min-height: 200px;
+        margin-bottom: 4.5rem;
+        max-height: 100vh !important;
+    }
+    .btn-update{
+        margin-bottom: 10px !important;
+    }
+}
