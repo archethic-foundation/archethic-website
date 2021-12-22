@@ -3087,7 +3087,7 @@ form.mc4wp-form .mc4wp-form-fields input[type=submit] {
 }
 
 .scheme_default .sc_item_title.sc_item_title_style_accent.sc_align_center:before {
-    background: -webkit-gradient(linear, right bottom, left bottom, from(#017bfd), to(#20bfe1));
+    background: -webkit-gradient(linear, right bottom, left bottom, from(#00A4DB), to(#CC00FF));
     color: #1aafe9;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
