@@ -8,10 +8,18 @@
 
 .live-values-fonts {
     padding: 10px;
-    color: #00ade8;
+    background: linear-gradient(to right, #00A4DB 0%, #CC00FF 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
     font-size: 20px;
     font-weight: 1000
 }
+
+.roadmap-btn {
+    background: linear-gradient( #00A4DB , #CC00FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -20,7 +28,7 @@
 
 ::-webkit-scrollbar-thumb {
     cursor: pointer;
-    background: #00a4db
+    background: linear-gradient(180deg,#00A4DB,#CC00FF)
 }
 
 ::selection {

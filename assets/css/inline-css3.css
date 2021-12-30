@@ -150,5 +150,5 @@ video::-webkit-media-controls-current-time-display {
 }
 
 .cq-timeline-border-small::before {
-    background: linear-gradient(0deg, #0094C5 0%, #00ade8 100%) !important;
+    background: linear-gradient(0deg, #00A4DB 0%, #CC00FF 100%) !important;
 }

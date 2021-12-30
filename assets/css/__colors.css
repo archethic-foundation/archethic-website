@@ -1653,7 +1653,9 @@ form.mc4wp-form .mc4wp-form-fields input[type=submit] {
 
 .scheme_default .sc_layouts_row_type_compact .sc_layouts_item_icon,
 .scheme_default.sc_layouts_row_type_compact .sc_layouts_item_icon {
-    color: #1aafe9
+    background: linear-gradient( #00A4DB , #CC00FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .scheme_default .sc_layouts_row_type_compact .sc_layouts_item_details_line1,
@@ -6031,7 +6033,7 @@ form.mc4wp-form .mc4wp-form-fields input[type=submit] {
 .scheme_default .trx_addons_scroll_to_top {
     color: #fff;
     border-color: #1aafe9;
-    background-color: #1aafe9
+    background: linear-gradient(180deg, #00A4DB, #CC00FF)
 }
 
 .scheme_default .trx_addons_cv .trx_addons_scroll_to_top:hover,

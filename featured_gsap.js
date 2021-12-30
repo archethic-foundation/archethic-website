@@ -281,7 +281,7 @@ $(function () {
 
 window.addEventListener("scroll", () => {
   if (window.scrollY !== 0) {
-    $("#navbar-icon").width(160);
+    $("#navbar-icon").width(250);
   } else {
     $("#navbar-icon").width(250);
   }
