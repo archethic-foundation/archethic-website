@@ -2604,7 +2604,9 @@ form.mc4wp-form .mc4wp-form-fields input[type=submit] {
 }
 
 .scheme_default .post_meta_item:before {
-    color: #1aafe9
+    background: -webkit-linear-gradient(#CC00FF, #00A4DB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .scheme_default .format-audio .post_featured.with_thumb .post_audio_author,
@@ -5254,7 +5256,9 @@ form.mc4wp-form .mc4wp-form-fields input[type=submit] {
 }
 
 .scheme_default .sc_services_light .sc_services_item_icon {
-    color: #1aafe9
+    background: -webkit-gradient(linear, right bottom, left bottom, from(#00A4DB), to(#CC00FF));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .scheme_default .sc_services_light.color_style_link2 .sc_services_item_icon {
