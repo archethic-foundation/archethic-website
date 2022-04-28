@@ -1,6 +1,6 @@
-# archethic.net
+# Archethic Website (archethic.net)
 
-The website aims to connect the protocol with the user by providing the information needed throughout the various stages of the project. Checkout the Website for an indetailed analysis of the ARCHEthic project
+The website aims to connect the protocol with the user by providing the information needed throughout the various stages of the project. Checkout the Website for an indetailed analysis of the Archethic project
 
 This is the repo for the archethic.net website, a resource for the Archethic community. The website is improved and changed over time through the contributions of community members who submit content, give feedback, or volunteer their time to managing its evolution. If you’re interested in helping to improve archethic.net reach out to foundation@archethic.net 
 
