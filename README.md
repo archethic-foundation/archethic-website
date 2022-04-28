@@ -1,4 +1,4 @@
-# archethic.net
+# Archethic Website (archethic.net)
 
 The website aims to connect the protocol with the user by providing the information needed throughout the various stages of the project. Checkout the Website for an indetailed analysis of the Archethic project
 
