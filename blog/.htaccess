@@ -1,0 +1,2 @@
+RewriteRule (.*) https://blog.archethic.net/%{REQUEST_URI} [L,R=301]
+
