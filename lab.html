@@ -8,11 +8,11 @@
 
     <title>Archethic Lab</title>
     <meta name='robots' content='max-image-preview:large' />
-    <script defer data-domain="archethic.net/lab.html" src="https://plausible.io/js/plausible.js"></script>
+    <script defer data-domain="archethic.net" src="https://plausible.io/js/plausible.js"></script>
 
     <meta property="og:url" content="/ " />
     <meta property="og:title" content="ARCHEthic" />
-    <meta property="og:description" content="" />
+    <meta property="og:description" content="Archethic Lab Page" />
     <meta property="og:type" content="article" />
 
      <!--link property="stylesheet" rel='stylesheet' 
@@ -45,10 +45,11 @@
         <link rel="preload" href="/assets/css/trx_addons.animation.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/assets/css/trx_addons.animation.css"></noscript>
 
-        <link rel="preload" href="/assets/css/disclaimer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/assets/css/disclaimer.css"></noscript>
+        <!-- <link rel="preload" href="/assets/css/disclaimer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/assets/css/disclaimer.css"></noscript> -->
 
-        
+        <link property="stylesheet" rel='stylesheet' 
+        href='assets/css/disclaimer.css' type='text/css'>
 
     <!--link property="stylesheet" rel='stylesheet' id='elementor-frontend-css' href='/assets/css/frontend.min.css'
         type='text/css'  /-->
@@ -116,7 +117,8 @@
     <script async type='text/javascript' src='/assets/js/give-min.js?ver=2.13.4' id='give-js'>
     </script>
     
-
+    <script async type='text/javascript' src='/assets/js/disclaimer.js'>
+    </script>
 
     <link rel="canonical" href="/" />
     <link rel='shortlink' href='/' />
@@ -152,6 +154,7 @@
     </noscript>
     
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    
 </head>
 
 <body
@@ -350,7 +353,7 @@
                                                             class="sc_price_columns_wrap sc_item_columns trx_addons_columns_wrap columns_padding_bottom" style="width: 100%;">
                                                           
                                                             
-                                                            <div class="trx_addons_column-1_2">
+                                                            <div id="mobile-wallet" class="trx_addons_column-1_2">
                                                                 <div
                                                                     class="sc_price_item sc_price_item_default ">
                                                                     <div
@@ -377,7 +380,7 @@
                                                                     <!-- /.sc_price_item_info -->
                                                                 </div>
                                                             </div>
-                                                            <div class="trx_addons_column-1_2">
+                                                            <div id="testnet-faucet" class="trx_addons_column-1_2">
                                                                 <div
                                                                     class="sc_price_item sc_price_item_default">
                                                                     <div
@@ -406,7 +409,7 @@
                                                                   <!-- /.sc_price_item_info -->
                                                               </div>
                                                           </div>
-                                                          <div class="trx_addons_column-1_2">
+                                                          <div id="aeweb-redefined" class="trx_addons_column-1_2">
                                                               <div
                                                                   class="sc_price_item sc_price_item_default">
                                                                   <div
@@ -431,7 +434,7 @@
                                                                   <!-- /.sc_price_item_info -->
                                                               </div>
                                                           </div>
-                                                          <div class="trx_addons_column-1_2">
+                                                          <div id="beacon-explorer" class="trx_addons_column-1_2">
                                                               <div
                                                                   class="sc_price_item sc_price_item_default ">
                                                                   <div
@@ -558,10 +561,10 @@
                                                                             </li>
                                                                             <li id="menu-item-751 "
                                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-751 ">
-                                                                                <a href="https://archethic.net/brand.html" target="_blank">
+                                                                                <a href="brand.html" target="_blank">
                                                                                     <p
                                                                                         style="color: rgba(255, 255, 255, 0.651)">
-                                                                                        Brand Assets</p>
+                                                                                        Brand & Press</p>
                                                                                 </a>
                                                                             </li>
                                                                             <li id="menu-item-752 "
@@ -1041,7 +1044,7 @@
                                                                                 <span class="trx_addons_copyright">
     
     
-                                                                                Archethic © <script type="text/javascript">document.write(new Date().getFullYear());</script> All rights reserved.
+                                                                                Archethic © <script type="text/javascript" async>document.write(new Date().getFullYear());</script> All rights reserved.
                                                                                 </span>
                                                                             </p>
     
@@ -1259,6 +1262,8 @@
         type='text/css'  />
 
 
+    
+
     <script type='text/javascript' src='/assets/js/editor-panel.min.js' id='stratum-editor-panel-js-js'></script>
     <script type='text/javascript' src='/assets/js/regenerator-runtime.min.js' id='regenerator-runtime-js'></script>
     <script type='text/javascript' src='/assets/js/wp-polyfill.min.js' id='wp-polyfill-js'>
@@ -1392,6 +1397,7 @@
 
 <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
 
+<script src="/featured_gsap.js"></script>
 <script src="/lab_functions.js"></script>
 <script src="assets/js/pause-js.js"></script>
 

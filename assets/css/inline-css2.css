@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: eicons;
     src: url(/assets/fonts/eicons.eot);
@@ -19,6 +20,14 @@
     --e-global-typography-text-font-weight: 400;
     --e-global-typography-accent-font-family: "Roboto";
     --e-global-typography-accent-font-weight: 500;
+}
+
+.zoom{
+    transition: transform .2s;
+}
+
+.zoom:hover {
+    transform: scale(1.2); 
 }
 
 .elementor-section.elementor-section-boxed>.elementor-container {
@@ -289,7 +298,7 @@ h1.entry-title {
   display: block !important;
   background-size: contain !important;
   background-repeat: no-repeat;
-  background: url("/assets/section-icons/down_arrow.svg");
+  /* background: url("/assets/section-icons/down_arrow.svg"); */
 }
 .ui-icon-circle-arrow-e {
   width: 18px;
@@ -323,7 +332,7 @@ h1.entry-title {
 }
 
 .flex-container-center {
-    displaY: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
@@ -556,13 +565,34 @@ h1.entry-title {
 
     .landing_button_wrapper {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        width: max-content !important;
+        margin: 5px 0px !important;
 
     }
-    .landing_button_wrapper a {
+
+    .gap-above{
+        margin-top: 10px !important;
+    }
+
+    .gap-left{
+        margin-left: 20px !important;
+    }
+
+    .gap-left-community{
+        margin-left: 10px !important;
+    }
+
+    .landing_wrapper {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .landing_wrapper a {
         width: max-content !important;
         margin: 5px 0px !important;
     }
+   
     .vc_custom_1519995047370 {
         border-width: 0px !important;
     }
