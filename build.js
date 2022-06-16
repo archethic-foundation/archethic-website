@@ -1,7 +1,5 @@
-import esbuildServe from "esbuild-serve";
-
-esbuildServe(
-  {
+require("esbuild")
+  .build({
     entryPoints: ["./bundle.js", "./bundle.css"],
     bundle: true,
     outdir: "dist",
@@ -10,6 +8,4 @@ esbuildServe(
     treeShaking: true,
     splitting: true,
     format: 'esm'
-  }
-  
-).catch(() => process.exit(1));
+  }).catch(() => process.exit(1));

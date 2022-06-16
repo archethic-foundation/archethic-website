@@ -158,3 +158,11 @@
     min-height: 500px;
     min-width: 400px;
 }
+
+
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
