@@ -24,6 +24,7 @@
 
     <link property="stylesheet" rel='stylesheet' href='/build/bundle.css' type='text/css' />
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <style type="text/css">
         @font-face {
             font-family: eicons;
@@ -290,8 +291,9 @@
 
         .button_transparent:hover {
             background: transparent !important;
-            border: 1px solid #fff !important;
+            /* border: 1px solid #fff !important; */
             color: #fff !important;
+            box-shadow:inset 0 0 0 1px white;
         }
 
 
@@ -395,26 +397,34 @@
 
         .popup-close-button {
             position: absolute;
-            right: 20px;
-            top: 60px;
-            font-size: 2em;
-            font-weight: 800;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #00ade8;
+            right: 15px;
+            top: 50px;
+   
+            /* background-color: #00ade8; */
             color: #fff !important;
         }
 
-        .popup-close-button:hover {
+        /* .popup-close-button:hover {
             background: none;
             color: #00ade8 !important;
-        }
+        } */
 
         .popup-para {
             max-height: 60vh;
             overflow-y: scroll;
             overflow-x: hidden;
             padding: 30px;
+        }
+
+        @media only screen and (max-device-width:768px) {
+            .popup-close-button-mobile {
+            position: absolute;
+            right: 22px;
+            top: 55px;
+
+            /* background-color: #00ade8; */
+            color: #fff !important;
+        }
         }
 
 
@@ -3189,7 +3199,7 @@
 
                                                                 <div class="lab_updates_wrapper">
 
-                                                                    <div class="swiper">
+                                                                    <div class="swiper mySwiper">
 
                                                                         <div class="swiper-wrapper">
 
@@ -3340,6 +3350,7 @@
                                                                                                         sync with the
                                                                                                         network.</p>
                                                                                     </div>
+                                                                                    <div class="remove-desktop"style="margin-bottom: 32px;"></div>
                                                                                     <a href="/lab.html#beacon-explorer"
                                                                                         target="_blank" rel="noreferrer"
                                                                                         style="font-family: Muli, sans-serif; font-weight: bold"
@@ -3363,7 +3374,7 @@
                                                                                 <div class="card-wrapper">
                                                                                     <div>
                                                                                         <h5 class="section-title">
-                                                                                            Mobile Wallet
+                                                                                            Archethic Wallet
                                                                                         </h5>
                                                                                         <p
                                                                                             class="section-content-text mb-0">
@@ -3420,6 +3431,43 @@
 
 
                                                                     </div>
+                                                                    <script
+                                                                        src="https://unpkg.com/swiper/swiper-bundle.min.js">
+                                                                    </script>
+
+                                                                    <!-- Initialize Swiper -->
+                                                                    <script>
+                                                                        var swiper = new Swiper(".mySwiper", {
+                                                                            
+                                                                            spaceBetween: 10,
+                                                                            
+                                                                            breakpoints: {
+                                                                                // when window width is >= 320px
+                                                                                450: {
+                                                                                    slidesPerView: 1,
+                                                                                    spaceBetween: 10
+                                                                                },
+                                                                                // when window width is >= 640px
+                                                                                768: {
+                                                                                    slidesPerView: 2,
+                                                                                    spaceBetween: 10
+                                                                                },
+                                                                                960: {
+                                                                                    slidesPerView: 3,
+                                                                                    spaceBetween: 10
+                                                                                },
+                                                                                1280: {
+                                                                                    slidesPerView: 4,
+                                                                                    spaceBetween: 10
+                                                                                }
+
+                                                                            },
+                                                                            pagination: {
+                                                                                el: ".swiper-pagination",
+                                                                                clickable: true,
+                                                                            },
+                                                                        });
+                                                                    </script>
                                                                     <div class="goto-lab-wrapper">
                                                                         <a class="btn sc_price_item_link sc_button button_transparent"
                                                                             href="/lab.html" target="_blank">Visit
@@ -3631,6 +3679,40 @@
                                                                             </div>
                                                                         </h3>
                                                                         <div>
+
+
+                                                                            <article
+                                                                                class="post_item post_layout_news-magazine      post_format_standard post_accented_off post-302 post type-post      status-publish format-standard has-post-thumbnail hentry
+                                                                                    category-currency-market tag-news tag-popular community-right">
+                                                                                <div
+                                                                                    class="post_featured with_thumb hover_icon community-right-img-wrapper">
+                                                                                    <img width="90" height="90"
+                                                                                        src="/assets/community1/may-2022.png"
+                                                                                        alt="April 2022">
+                                                                                    <div class="mask"></div>
+                                                                                    <div class="icons">
+                                                                                        <a href="https://blog.archethic.net/tech-update-may-2022/"
+                                                                                            aria-hidden="true"></a>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="post_header entry-header">
+                                                                                    <h6 style="color:#60708E"
+                                                                                        class="post_meta_item post_title entry-title">
+                                                                                        <a href="https://blog.archethic.net/tech-update-may-2022/"
+                                                                                            rel="bookmark"
+                                                                                            style="color: rgba(255, 255, 255, 0.651)">
+                                                                                            Tech Update -
+                                                                                            May 2022
+                                                                                        </a></h6>
+                                                                                    <div class="post_meta">
+                                                                                        <span
+                                                                                            class="post_meta_item post_date">
+                                                                                            24 June, 2022
+                                                                                    </div>
+
+                                                                                </div>
+
+                                                                            </article>
 
 
                                                                             <article
@@ -4131,7 +4213,7 @@
                                                                             <li id="menu-item-752 "
                                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-752 ">
                                                                                 <a
-                                                                                    href="https://uniris.io/blog/tag/media/">
+                                                                                    href="https://blog.archethic.net/">
                                                                                     <p
                                                                                         style="color: rgba(255, 255, 255, 0.651)">
                                                                                         Blog</p>
@@ -4666,10 +4748,10 @@
     <!-- /.body_wrap -->
     <a href="#" class="trx_addons_scroll_to_top trx_addons_icon-up" title="Scroll to top"></a>
     <!-- This is Popup For Terms of Use -->
-    <div class="full-screen hidden flex-container-center" id="popup-root">
+    <div class="full-screen hidden " id="popup-root">
         <div class="popup-content">
             <h2>Terms of Use</h2>
-            <div class="popup-para">
+            <div class="popup-para" style="color: rgba(255, 255, 255, 0.651); text-align: justify;">
                 <p>
                     These Terms of Use apply to <strong> www.archethic.net </strong> as well as any other affiliated
                     sites,
@@ -4756,7 +4838,8 @@
                     prove to be incorrect.
                 </p>
             </div>
-            <a href="#footer" id="close-terms" class="popup-close-button">X</a>
+            <a href="#footer" id="close-terms" class="popup-close-button popup-close-button-mobile"><img src="assets/img/close.png" width="40px"
+                height="40px" /></a>
         </div>
     </div>
     <link property="stylesheet" rel='stylesheet' href='/assets/css/inline-css5.css' type='text/css' />
