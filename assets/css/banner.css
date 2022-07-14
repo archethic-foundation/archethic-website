@@ -1,0 +1,40 @@
+.banner {
+	background: linear-gradient(to right, #00A4DB , #CC00FF);
+  }
+  
+  .banner__content {
+	padding: 8px;
+	max-width: 600px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+  }
+  
+  .banner__text {
+	flex-grow: 1;
+	line-height: 1.4;
+	
+  }
+  
+  
+  
+  .banner__text,
+  .banner__close > span {
+	color: #ffffff;
+  }
+
+@media only screen and (max-device-width:768px) {
+    .bug-bounty-mobile {
+        font-size: large !important;
+		max-width: 400px;
+        
+    }
+}
+
+
+@media only screen and (min-device-width:768px) {
+    .bug-bounty-desktop {
+        font-size:larger !important;
+		max-width: 550px;
+    }
+}
