@@ -50,3 +50,9 @@
        max-height: 100px !important
     }
 }
+
+@media only screen and (max-device-width:768px) {
+    .top-mobile-tab {
+       margin-top:20px;
+    }
+}
