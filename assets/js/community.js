@@ -59,11 +59,10 @@ fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27
         data1 += `<article
     class="post_item post_layout_news-magazine-extra post_format_standard post_accented_off post-300 post type-post status-publish format-standard has-post-thumbnail hentry category-currency-market" >
 
-    <div class="post_featured with_thumb hover_icon" style="display:flex;max-height:100px">
-    
+    <div class="post_featured with_thumb hover_icon" style="display:flex">
             <img 
-            width="200" onclick="window.open('${values.url}')"
-            src="${values.feature_image}" style="margin-right:20px;cursor: pointer;"
+            onclick="window.open('${values.url}')"
+            src="${values.feature_image}" style="margin-right:20px; cursor: pointer; max-width: 200px; width:auto;"
             class="attachment-hoverex-thumb-magazine-extra size-hoverex-thumb-magazine-extra wp-post-image reduce-size-mobile"
             alt="" loading="lazy" />
             <div class="post_header entry-header">
@@ -91,11 +90,10 @@ fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27
         data += `<article
     class="post_item post_layout_news-magazine-extra post_format_standard post_accented_off post-300 post type-post status-publish format-standard has-post-thumbnail hentry category-currency-market" >
 
-    <div class="post_featured with_thumb hover_icon" style="display:flex;max-height:100px">
-    
+    <div class="post_featured with_thumb hover_icon" style="display:flex">
             <img
-            width="200" height="202" onclick="window.open('${values.url}')"
-            src="${values.feature_image}" style="margin-right:20px;cursor: pointer;"
+           onclick="window.open('${values.url}')"
+            src="${values.feature_image}" style="margin-right:20px; cursor: pointer; max-width: 200px; width:auto;"
             class="attachment-hoverex-thumb-magazine-extra size-hoverex-thumb-magazine-extra wp-post-image reduce-size-mobile"
             alt="" loading="lazy" />
             <div class="post_header entry-header">
@@ -123,10 +121,10 @@ fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27
         data2 += `<article
     class="post_item post_layout_news-magazine-extra post_format_standard post_accented_off post-300 post type-post status-publish format-standard has-post-thumbnail hentry category-currency-market" >
 
-    <div class="post_featured with_thumb hover_icon" style="display:flex;max-height:100px">
+    <div class="post_featured with_thumb hover_icon" style="display:flex">
             <img
-            width="200" height="202" onclick="window.open('${values.url}')"
-            src="${values.feature_image}" style="margin-right:20px;cursor: pointer;"
+            onclick="window.open('${values.url}')"
+            src="${values.feature_image}" style="margin-right:20px; cursor: pointer; max-width: 200px; width:auto;"
             class="attachment-hoverex-thumb-magazine-extra size-hoverex-thumb-magazine-extra wp-post-image reduce-size-mobile"
             alt="" loading="lazy" />
             <div class="post_header entry-header">
