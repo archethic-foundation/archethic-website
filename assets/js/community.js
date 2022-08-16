@@ -35,14 +35,14 @@ function formatDate(date) {
     return [year, month, day].join('-');
 }
 
-fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27993205631&fields=title,feature_image,url,custom_excerpt,published_at").then((data) => {
+fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27993205631&fields=title,feature_image,url,meta_description,published_at").then((data) => {
 
     return data.json();
 }).then((completedata) => {
 
     document.getElementById('title').innerHTML = completedata.posts[0].title
     document.getElementById('image').src = completedata.posts[0].feature_image
-    document.getElementById('excerpt').innerHTML = completedata.posts[0].custom_excerpt
+    document.getElementById('excerpt').innerHTML = completedata.posts[0].meta_description
     document.getElementById('url').href = completedata.posts[0].url
     document.getElementById('date').innerHTML = formatDate(completedata.posts[0].published_at)
 
@@ -50,7 +50,7 @@ fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27
 
 
 
-fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27993205631&fields=title,feature_image,url,custom_excerpt,published_at&filter=tag:global&limit=6").then((data) => {
+fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27993205631&fields=title,feature_image,url,custom_excerpt,published_at&filter=tag:global&limit=5").then((data) => {
     return data.json();
 }).then((completedata1) => {
     let data1 = "";
@@ -59,14 +59,14 @@ fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27
         data1 += `<article
     class="post_item post_layout_news-magazine-extra post_format_standard post_accented_off post-300 post type-post status-publish format-standard has-post-thumbnail hentry category-currency-market" >
 
-    <div class="post_featured with_thumb hover_icon" style="display:flex">
+    <div class="post_featured with_thumb hover_icon display-flex" >
             <img 
             onclick="window.open('${values.url}')"
             src="${values.feature_image}" style="margin-right:20px; cursor: pointer; max-width: 200px; width:auto;"
-            class="attachment-hoverex-thumb-magazine-extra size-hoverex-thumb-magazine-extra wp-post-image reduce-size-mobile"
+            class="attachment-hoverex-thumb-magazine-extra size-hoverex-thumb-magazine-extra wp-post-image width-max"
             alt="" loading="lazy" />
-            <div class="post_header entry-header">
-            <h6 class="post_title entry-title"><a
+            <div class="post_header entry-header top-mobile-tab">
+            <h6 class="post_title entry-title "><a
                     href="${values.url}" target="_blank"
                     rel="bookmark">${values.title}</a></h6>
             <div class="post_meta">
@@ -82,7 +82,7 @@ fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27
     console.log(err);
 })
 
-fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27993205631&fields=title,feature_image,url,custom_excerpt,published_at&filter=tag:tech-update&limit=6").then((data) => {
+fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27993205631&fields=title,feature_image,url,custom_excerpt,published_at&filter=tag:tech-update&limit=5").then((data) => {
     return data.json();
 }).then((completedata) => {
     let data = "";
@@ -90,13 +90,13 @@ fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27
         data += `<article
     class="post_item post_layout_news-magazine-extra post_format_standard post_accented_off post-300 post type-post status-publish format-standard has-post-thumbnail hentry category-currency-market" >
 
-    <div class="post_featured with_thumb hover_icon" style="display:flex">
+    <div class="post_featured with_thumb hover_icon display-flex">
             <img
            onclick="window.open('${values.url}')"
             src="${values.feature_image}" style="margin-right:20px; cursor: pointer; max-width: 200px; width:auto;"
-            class="attachment-hoverex-thumb-magazine-extra size-hoverex-thumb-magazine-extra wp-post-image reduce-size-mobile"
+            class="attachment-hoverex-thumb-magazine-extra size-hoverex-thumb-magazine-extra wp-post-image width-max"
             alt="" loading="lazy" />
-            <div class="post_header entry-header">
+            <div class="post_header entry-header top-mobile-tab">
             <h6 class="post_title entry-title"><a
                     href="${values.url}" target="_blank"
                     rel="bookmark">${values.title}</a></h6>
@@ -113,7 +113,7 @@ fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27
     console.log(err);
 })
 
-fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27993205631&fields=title,feature_image,url,custom_excerpt,published_at&filter=tag:partnership&limit=6").then((data) => {
+fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27993205631&fields=title,feature_image,url,custom_excerpt,published_at&filter=tag:partnership&limit=5").then((data) => {
     return data.json();
 }).then((completedata) => {
     let data2 = "";
@@ -121,13 +121,13 @@ fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27
         data2 += `<article
     class="post_item post_layout_news-magazine-extra post_format_standard post_accented_off post-300 post type-post status-publish format-standard has-post-thumbnail hentry category-currency-market" >
 
-    <div class="post_featured with_thumb hover_icon" style="display:flex">
+    <div class="post_featured with_thumb hover_icon display-flex">
             <img
             onclick="window.open('${values.url}')"
             src="${values.feature_image}" style="margin-right:20px; cursor: pointer; max-width: 200px; width:auto;"
-            class="attachment-hoverex-thumb-magazine-extra size-hoverex-thumb-magazine-extra wp-post-image reduce-size-mobile"
+            class="attachment-hoverex-thumb-magazine-extra size-hoverex-thumb-magazine-extra wp-post-image width-max"
             alt="" loading="lazy" />
-            <div class="post_header entry-header">
+            <div class="post_header entry-header top-mobile-tab">
             <h6 class="post_title entry-title"><a
                     href="${values.url}" target="_blank"
                     rel="bookmark">${values.title}</a></h6>
