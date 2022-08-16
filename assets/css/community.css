@@ -44,15 +44,20 @@
 
 /* } */
 
-@media only screen and (max-device-width:768px) {
-    .reduce-size-mobile {
-       max-width: 100px !important;
-       max-height: 100px !important
+@media only screen and (min-device-width:768px) {
+    .display-flex {
+     display: flex;
     }
+   
+    
 }
 
 @media only screen and (max-device-width:768px) {
     .top-mobile-tab {
        margin-top:20px;
     }
+    .width-max {
+        max-width:270px !important;
+     }
+    
 }
