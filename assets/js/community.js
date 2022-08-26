@@ -50,11 +50,11 @@ fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27
 
 
 
-fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27993205631&fields=title,feature_image,url,custom_excerpt,published_at&filter=tag:global&limit=5").then((data) => {
+fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27993205631&fields=title,feature_image,url,custom_excerpt,published_at&filter=tag:global&limit=6").then((data) => {
     return data.json();
 }).then((completedata1) => {
     let data1 = "";
-    completedata1.posts.map((values) => {
+    completedata1.posts.slice(1).map((values) => {
 
         data1 += `<article
     class="post_item post_layout_news-magazine-extra post_format_standard post_accented_off post-300 post type-post status-publish format-standard has-post-thumbnail hentry category-currency-market" >
