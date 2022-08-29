@@ -48,6 +48,10 @@
     .display-flex {
      display: flex;
     }
+
+    .margin-right-icons{
+        margin-right: 50px;
+    }
    
     
 }
