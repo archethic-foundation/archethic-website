@@ -1,0 +1,23 @@
+/* html {
+    height: 100%;
+}
+body {
+    background: url(img/bg.jpg);
+    background-size: 100% 100%;
+    margin: 0;
+} */
+#globe3d {
+    /* position:absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+#toolbar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
