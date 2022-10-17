@@ -41,7 +41,7 @@
 
 
 .roadmap-quarter-title-left {
-  background: linear-gradient(to right, #00A4DB 0%, #CC00FF 30%);
+  background: linear-gradient(#00A4DB, #CC00FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 20px;
@@ -49,7 +49,7 @@
 }
 
 .roadmap-quarter-title-right {
-  background: linear-gradient(to right, #00A4DB 0%, #CC00FF 30%);
+  background: linear-gradient(#CC00FF, #00A4DB);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 20px;
