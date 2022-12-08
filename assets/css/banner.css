@@ -3,16 +3,15 @@
 }
 
 .banner__content {
-  padding: 8px;
-  max-width: 600px;
+  padding: 10px;
+  max-width: 800px;
   margin: 0 auto;
   display: flex;
-  align-items: center;
+  
 }
 
 .banner__text {
   flex-grow: 1;
-  line-height: 1.4;
 
 }
 
@@ -27,7 +26,8 @@
   .bug-bounty-mobile {
     font-size: large !important;
     max-width: 400px;
-
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -35,7 +35,7 @@
 @media only screen and (min-device-width:768px) {
   .bug-bounty-desktop {
     font-size: larger !important;
-    max-width: 550px;
+    max-width: 800px;
   }
 }
 
