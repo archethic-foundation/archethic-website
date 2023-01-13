@@ -1,3 +1,5 @@
+let tag
+
 (function () {
 
     var $ = function (selector, context) {
@@ -35,7 +37,7 @@ function formatDate(date) {
     return [year, month, day].join('-');
 }
 
-fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27993205631&fields=title,feature_image,url,meta_description,published_at").then((data) => {
+fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27993205631&fields=title,feature_image,url,meta_description,published_at&include=tags").then((data) => {
 
     return data.json();
 }).then((completedata) => {
@@ -46,17 +48,20 @@ fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27
     document.getElementById('url').href = completedata.posts[0].url
     document.getElementById('date').innerHTML = formatDate(completedata.posts[0].published_at)
 
-})
+    for (let i = 0; i < completedata.posts[0].tags.length; i++) {
+        if (completedata.posts[0].tags[i].slug == 'global') {
+            tag = completedata.posts[0].tags[i].slug
+        }
+    }
 
+    fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27993205631&fields=title,feature_image,url,custom_excerpt,published_at&filter=tag:global&limit=6").then((data) => {
+        return data.json();
+    }).then((completedata1) => {
+        let data1 = "";
+        if (tag == 'global') {
+            completedata1.posts.slice(1).map((values) => {
 
-
-fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27993205631&fields=title,feature_image,url,custom_excerpt,published_at&filter=tag:global&limit=6").then((data) => {
-    return data.json();
-}).then((completedata1) => {
-    let data1 = "";
-    completedata1.posts.slice(1).map((values) => {
-
-        data1 += `<article
+                data1 += `<article
     class="post_item post_layout_news-magazine-extra post_format_standard post_accented_off post-300 post type-post status-publish format-standard has-post-thumbnail hentry category-currency-market" >
 
     <div class="post_featured with_thumb hover_icon display-flex" >
@@ -76,10 +81,37 @@ fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27
     </div>        
     </div>
 </article>`
-    });
-    document.getElementById('global').innerHTML = data1;
-}).catch((err) => {
-    console.log(err);
+            });
+        } else {
+            completedata1.posts.slice(0, 5).map((values) => {
+
+                data1 += `<article
+class="post_item post_layout_news-magazine-extra post_format_standard post_accented_off post-300 post type-post status-publish format-standard has-post-thumbnail hentry category-currency-market" >
+
+<div class="post_featured with_thumb hover_icon display-flex" >
+        <img 
+        onclick="window.open('${values.url}')"
+        src="${values.feature_image}" style="margin-right:20px; cursor: pointer; max-width: 200px; width:auto;"
+        class="attachment-hoverex-thumb-magazine-extra size-hoverex-thumb-magazine-extra wp-post-image width-max"
+        alt="" loading="lazy" />
+        <div class="post_header entry-header top-mobile-tab">
+        <h6 class="post_title entry-title "><a
+                href="${values.url}" target="_blank"
+                rel="bookmark">${values.title}</a></h6>
+        <div class="post_meta">
+            <span class="post_meta_item post_date" style="color: #607290">${formatDate(values.published_at)}</span> 
+        </div>
+    </div>      
+</div>        
+</div>
+</article>`
+            })
+        };
+        document.getElementById('global').innerHTML = data1;
+    }).catch((err) => {
+        console.log(err);
+    })
+
 })
 
 fetch("https://blog.archethic.net/ghost/api/content/posts/?key=aeec92562cfcb3f27993205631&fields=title,feature_image,url,custom_excerpt,published_at&filter=tag:tech-update&limit=5").then((data) => {
