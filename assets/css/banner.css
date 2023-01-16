@@ -64,7 +64,6 @@
 }
 
 .logo-slider {
-	/* background: white; */
 	-webkit-box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
 	box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
 	margin: auto;
@@ -74,12 +73,8 @@
 }
 
 .logo-slider::before, .logo-slider::after {
-	/* background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
-	background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%); */
 	content: "";
-	/* height: 175px; */
 	position: absolute;
-	/* width: 200px; */
 	z-index: 2;
 }
 
