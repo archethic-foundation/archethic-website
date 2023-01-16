@@ -25,14 +25,10 @@ var x = setInterval(function () {
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("text").innerHTML = `Archethic Public Blockchain is LIVE!`;
-    document.getElementById("demo").innerHTML = `<a href="aewallet.html" target="_blank">
+    document.getElementById("text").innerHTML = `We excited to announce that Archethic Bridge is live!`;
+    document.getElementById("demo").innerHTML = `<a href="" target="_blank">
      <div class="sc_button color_style_default sc_button_bordered sc_button_size_small sc_button_icon_left button_transparent"
-         style="margin-left:10px;margin-top:10px;">Install App</div>
-     </a>
-     <a href="https://mainnet.archethic.net/explorer" target="_blank">
-     <div class="sc_button color_style_default sc_button_bordered sc_button_size_small sc_button_icon_left button_transparent"
-         style="margin-left:10px;margin-top:10px;">Explorer</div>
+         style="margin-left:10px;margin-top:10px;">Learn more</div>
      </a>`;
   }
 }, 1000);  
