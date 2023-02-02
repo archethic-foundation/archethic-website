@@ -1,4 +1,6 @@
-on: [push]
+on: 
+  push:
+    branches: [ preprod ]
 
 jobs:
   deploy_to_aeweb:
