@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  deploy_to_aeweb:
+    runs-on: ubuntu-latest
+    name: A job to deploy file to AEweb | testnet network
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Deploy to AEweb
+        id: deploy
+        uses: archethic-foundation/aeweb-github-action@v1.5.3
+        with:
+          seed: ${{ secrets.ARCH_BASE_TESTNET_SEED }}
+          endpoint: "https://testnet.archethic.net"
+          path: "." 
