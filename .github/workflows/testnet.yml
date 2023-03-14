@@ -12,8 +12,10 @@ jobs:
 
       - name: Deploy to AEweb
         id: deploy
-        uses: archethic-foundation/aeweb-github-action@v1.5.4
+        uses: archethic-foundation/aeweb-github-action@v1.7.0
         with:
           seed: ${{ secrets.ARCH_BASE_TESTNET_SEED }}
           endpoint: "https://testnet.archethic.net"
           path: "." 
+          keychainFundingService: "archethic-wallet-ARCHETHIC.NET"
+          keychainWebsiteService: "aeweb-ARCHETHIC-website"
