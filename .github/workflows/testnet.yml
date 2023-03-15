@@ -12,7 +12,7 @@ jobs:
 
       - name: Deploy to AEweb
         id: deploy
-        uses: archethic-foundation/aeweb-github-action@develop
+        uses: archethic-foundation/aeweb-github-action@1.7.1
         with:
           seed: ${{ secrets.ARCH_BASE_TESTNET_SEED }}
           endpoint: "https://testnet.archethic.net"
