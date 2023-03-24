@@ -20,6 +20,7 @@ jobs:
           keychainFundingService: "archethic-wallet-ARCHETHIC.NET"
           keychainWebsiteService: "aeweb-ARCHETHIC-website"
           sslCertificate: > 
+            -----BEGIN CERTIFICATE-----
             MIIEZjCCA06gAwIBAgISAwF7j347YYXqDkOzBykmxC2BMA0GCSqGSIb3DQEBCwUA
             MDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD
             EwJSMzAeFw0yMzAzMjQwNjM1MzVaFw0yMzA2MjIwNjM1MzRaMCAxHjAcBgNVBAMT
@@ -44,4 +45,6 @@ jobs:
             /PSSrlNNqYz2H8izIbhtZ61IU0wK1TBrZcs4Gx1MLglOia71M0bsgwB8W35FsBFa
             g3wAs0hmYhuH4d/vYhvax0FpBD9VXnsJ6hGfpdzRBRO1E5lI6gYBnh0KTAoP/qyu
             Si7cV4e297k9FuLkv9eBagouu4lQMQU9Q7k=
+            -----END CERTIFICATE-----
+
           sslKey: ${{ secrets.SSL_KEY }}
