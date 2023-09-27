@@ -6,8 +6,8 @@ async function getstats() {
     const e = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=archethic&vs_currencies=usd"),
         t = await e.json();
     current_price = t.archethic.usd;
-    const c = await fetch("https://ck7163lr1l.execute-api.us-east-1.amazonaws.com/default/uniris_circulating_supply"),
-        r = await c.json();
+    const c = await fetch("https://faas-fra1-afec6ce7.doserverless.co/api/v1/web/fn-22626224-17fb-4eaa-a5a6-0b487a06ac59/https/uco-circulating-supply"),
+    r = await c.json();
     current_circulating_supply = r.circulating_supply;
     market_cap = current_price*current_circulating_supply;
     
