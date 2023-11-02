@@ -1,0 +1,87 @@
+@import '@/ui/_styles/variables.scss';
+
+.container {
+  position: relative;
+  z-index: $index-section-content;
+
+  @include largeUp() {
+    .text {
+      padding-left: 110px;
+
+      >p {
+        width: 50%;
+      }
+    }
+  }
+
+  @include medium() {
+    .text {
+      padding-left: 50px;
+
+      >p {
+        width: 50%;
+      }
+    }
+  }
+
+  @include small-early() {
+    .text {
+      padding-left: 0;
+
+      >p {
+        width: 100%;
+      }
+    }
+  }
+
+  .cards {
+    display: flex;
+    overflow-x: auto;
+
+    @include mediumUp() {
+      gap: 24px;
+      margin: 48px -80px 0 -80px;
+      max-width: calc(100vw - 80px);
+
+      >div {
+        width: fit-content;
+        min-width: 450px;
+        flex-shrink: 0;
+
+        &:first-child {
+          margin-left: 190px;
+        }
+
+        &:last-child {
+          margin-right: 80px;
+        }
+      }
+    }
+
+    @include medium() {
+      margin-top: 0;
+
+      >div {
+        &:first-child {
+          margin-left: 130px;
+        }
+      }
+    }
+
+    @include small-early() {
+      max-width: calc(100vw - 60px);
+      margin-top: 0;
+
+      >div {
+        min-width: 300px;
+      }
+    }
+
+    @include small() {
+      gap: 8px;
+      margin: 0;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}

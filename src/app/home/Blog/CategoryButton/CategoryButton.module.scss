@@ -1,0 +1,43 @@
+@import '@/ui/_styles/variables.scss';
+
+.container {
+  @include transition(0.8s, border, color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  width: fit-content;
+  border-radius: $border-radius-sm;
+  line-height: 1;
+  border: 2px solid transparent;
+
+  span {
+    white-space: nowrap;
+
+    @include small() {
+      @include text-text-large();
+    }
+  }
+
+  @include small() {
+    padding: 6px 12px;
+    border-width: 1px;
+    span {
+      @include text-text-large();
+    }
+  }
+
+  @include hover() {
+    border-color: $color-brand-raspberry-300;
+  }
+}
+
+.active {
+  color: $color-brand-raspberry-300;
+  border-color: $color-brand-raspberry-300;
+}
+
+.disabled {
+  opacity: 0.2;
+  cursor: no-drop;
+}

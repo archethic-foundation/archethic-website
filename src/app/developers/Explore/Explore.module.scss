@@ -1,0 +1,47 @@
+@import '@/ui/_styles/variables.scss';
+
+/*
+ * Component
+ */
+.container {
+  position: relative;
+  z-index: $index-section-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
+.cards {
+  position: relative;
+  z-index: 2;
+  align-items: stretch;
+
+  @include medium() {
+    gap: 40px;
+  }
+
+  @include small-early() {
+    gap: 30px;
+  }
+
+  @include small() {
+    flex-direction: column;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 844px;
+  text-align: center;
+  height: 70vh;
+
+  @include small() {
+    height: 50vh;
+
+    h2 {
+      max-width: 400px;
+    }
+  }
+}

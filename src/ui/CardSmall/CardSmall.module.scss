@@ -1,0 +1,60 @@
+@import '@/ui/_styles/variables.scss';
+
+.container {
+  position: relative;
+  padding: 40px;
+  border-radius: $border-radius-sm;
+}
+
+.variant {
+  &-primary {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 32px;
+
+    @include small() {
+      padding: 24px;
+    }
+  }
+  &-secondary {
+    padding: 40px;
+    background: rgba($color-brand-purple-800, 0.9);
+
+    @include small() {
+      padding: 24px;
+    }
+  }
+  &-tertiary {
+    padding: 40px;
+    background: rgba($color-brand-purple-800, 0.9);
+
+    @include small() {
+      padding: 24px;
+    }
+  }
+  &-stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+    background: rgba($color-neutral-0, 0.1);
+
+    h6 {
+      margin-bottom: 0;
+    }
+
+    @include small() {
+      padding: 24px;
+    }
+  }
+}
+
+.counter {
+  margin-bottom: 24px;
+
+  @include small() {
+    margin-bottom: 12px;
+  }
+}
+
+.button {
+  margin-top: 8px;
+}

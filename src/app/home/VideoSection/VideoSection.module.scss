@@ -1,0 +1,7 @@
+@import '@/ui/_styles/variables.scss';
+
+.container {
+  @include small() {
+    margin: 50px 0;
+  }
+}

@@ -1,0 +1,109 @@
+@import '@/ui/_styles/variables.scss';
+
+/*
+ * Component
+ */
+.wrapper {
+  position: relative;
+}
+
+.container {
+  z-index: $index-section-content + 1;
+
+  @include small() {
+    position: relative;
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 620px;
+
+  @include small() {
+    gap: 12px;
+  }
+}
+
+.cardsSlider {
+  display: flex;
+  overflow-x: auto;
+  gap: 24px;
+  margin: 0 -80px;
+
+  swiper-container {
+    width: 100%;
+  }
+
+  @include mediumUp() {
+    swiper-slide {
+      width: auto !important;
+
+      >div {
+        width: fit-content;
+        max-width: 320px;
+        height: 100%;
+      }
+
+      &:first-child>div {
+        margin-left: 190px;
+      }
+
+      &:last-child>div {
+        margin-right: 80px;
+      }
+    }
+  }
+
+  @include small() {
+    margin: 0 -32px;
+
+    swiper-slide {
+      margin-left: 32px;
+      width: 76% !important;
+
+      >div {
+        height: 100%;
+      }
+
+      /* width: 65% !important;
+
+
+
+      &:last-child > div {
+        margin-right: 70px;
+      }*/
+    }
+  }
+}
+
+$w: 250px;
+
+.circleLeftBottomShape {
+  position: absolute;
+  border-radius: 24px;
+  width: $w;
+  height: $w;
+  left: calc(50% - ($w / 2) - 35%);
+  top: -30px;
+  background: $color-brand-raspberry-300;
+  filter: blur(200px);
+}
+
+/*
+ * Card
+ */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 40px;
+  background-color: #241a4f;
+  @include regular-border-radius;
+
+  @include small() {
+    padding: 24px;
+  }
+
+}

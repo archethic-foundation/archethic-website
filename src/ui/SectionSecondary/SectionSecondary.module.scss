@@ -1,0 +1,55 @@
+@import '@/ui/_styles/variables.scss';
+
+.section {
+  position: relative;
+  z-index: $index-section-content;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  background-color: $color-brand-purple-400;
+  overflow: hidden;
+  width: 100%;
+  padding: 110px 120px;
+  @include regular-border-radius;
+
+  @include small-early() {
+    padding: 60px;
+  }
+
+  @include small() {
+    padding: 40px 24px;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding-left: 50%;
+  width: 100%;
+
+  @include small() {
+    padding-left: 0;
+  }
+}
+
+.backgroundImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -5%;
+  top: 0;
+  z-index: 0;
+  background-image: url('/images/shared/section-secondary--bg@2x.png');
+  background-position: left top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  @include small() {
+    left: 0;
+    background-position: calc(100% - -30px) 0%;
+    background-size: 240px;
+    background-image: url('/images/shared/section-primary--leftConnerBrandIcon-bg@2x.png');
+  }
+}

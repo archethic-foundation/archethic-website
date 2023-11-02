@@ -1,0 +1,78 @@
+@import '@/ui/_styles/variables.scss';
+
+.topWrapper,
+.middleWrapper,
+.bottomWrapper {
+  position: relative;
+  @include regular-border-radius;
+}
+
+.topWrapper {
+  position: relative;
+  padding-top: 160px;
+  z-index: 7;
+
+  .topWrapperLightsLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(44.41% 56.57% at 4.1% 16.67%,
+        rgba(153, 72, 247, 0.45) 0%,
+        rgba(153, 72, 247, 0) 61.11%,
+        rgba(153, 72, 247, 0) 100%);
+  }
+
+  @include small() {
+    padding-top: 80px;
+    margin-bottom: -100px;
+  }
+}
+
+.middleWrapper {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  z-index: 6;
+
+  .middleWrapperLightsLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background: radial-gradient(28.85% 22.91% at 100% 22.91%,
+        rgba(213, 92, 255, 0.3) 0%,
+        rgba(32, 24, 68, 0) 100%,
+        rgba(32, 24, 68, 0) 100%),
+      radial-gradient(44.86% 34.1% at 1.42% 13.27%,
+        rgba(153, 72, 247, 0.4) 0%,
+        rgba(153, 72, 247, 0) 66.17%),
+      radial-gradient(55.66% 45.26% at 50% 60.2%,
+        rgba(213, 92, 255, 0.3) 0%,
+        rgba(32, 24, 68, 0) 100%);
+
+    @include small() {
+      background: radial-gradient(58.73% 9.17% at 100% 22.91%,
+          rgba(213, 92, 255, 0.3) 0%,
+          rgba(32, 24, 68, 0) 100%,
+          rgba(32, 24, 68, 0) 100%),
+        radial-gradient(53.05% 10.23% at 1.42% 13.27%,
+          rgba(153, 72, 247, 0.32) 0%,
+          rgba(153, 72, 247, 0) 66.17%),
+        radial-gradient(78.69% 12.29% at 50% 60.2%,
+          rgba(213, 92, 255, 0.2) 0%,
+          rgba(32, 24, 68, 0) 100%);
+    }
+  }
+
+  @include small() {
+    padding-top: 300px;
+    padding-bottom: 280px;
+    margin-bottom: -150px;
+    overflow: hidden;
+  }
+}
+
+.bottomWrapper {}

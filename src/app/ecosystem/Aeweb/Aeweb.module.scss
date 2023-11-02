@@ -1,0 +1,47 @@
+@import '@/ui/_styles/variables.scss';
+
+$top-padding: 200px;
+$bottom-padding: 230px;
+
+.container {
+  position: relative;
+  z-index: 6;
+}
+
+.list {
+  display: grid;
+
+  @include mediumUp() {
+    gap: 28px;
+    padding-left: 110px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @include medium() {
+    padding-left: 0;
+  }
+
+  @include small-early() {
+    grid-template-columns: 100%;
+  }
+
+  @include small() {
+    gap: 24px;
+    grid-template-columns: 100%;
+  }
+}
+
+$w: 330px;
+
+.gradientShape {
+  position: absolute;
+  left: calc(50% - ($w / 2));
+  top: 20%;
+  width: $w;
+  height: $w;
+  background: $color-brand-raspberry-300;
+  filter: blur(200px);
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: -1;
+}
