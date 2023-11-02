@@ -1,0 +1,37 @@
+@import '@/ui/_styles/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  background-color: $color-neutral-800;
+  border-radius: $border-radius-lg;
+  padding: 40px 48px;
+  width: 640px;
+  //box-shadow: 1px 3px 20px 12px #0000002e;
+  box-shadow: 1px 11px 20px 12px rgba(0, 0, 0, 0.1803921569);
+
+  h1 {
+    @include maxHeightScreen(600px) {
+      @include text-display-extrasmall();
+    }
+  }
+
+  p {
+    @include small() {
+      @include text-text-large();
+    }
+  }
+
+  @include small() {
+    width: 100%;
+    padding: 24px;
+  }
+}
+
+.image {
+  width: 86px;
+  height: 86px;
+  margin-bottom: 8px;
+}

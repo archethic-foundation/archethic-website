@@ -1,0 +1,122 @@
+@import '@/ui/_styles/variables.scss';
+
+$border-radius: 100px;
+$border-width: 2px;
+
+.container {
+  @include button-reset();
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  border-radius: $border-radius;
+  position: relative;
+  background: transparent;
+
+  span {
+    z-index: 1;
+    line-height: 1;
+    white-space: nowrap;
+    @include transition(0.8s, transform);
+  }
+  svg {
+    z-index: 1;
+    @include transition(0.8s, transform, opacity);
+  }
+  &::after {
+    @include transition(0.8s, transform);
+    content: '';
+    position: absolute;
+    border-radius: $border-radius;
+    inset: 0;
+    z-index: 0;
+  }
+
+  @include hover() {
+    &.animeWithIcon {
+      span {
+        transform: translateX(12px);
+      }
+      svg {
+        transform: translateX(16px);
+        opacity: 0;
+      }
+    }
+
+    &::after {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.variant {
+  &-primary {
+    &::after {
+      background: linear-gradient(268.5deg, #562fed 0.15%, $color-brand-raspberry-300 100%);
+    }
+
+    &.size {
+      &-sm,
+      &-md {
+        min-height: 44px;
+        padding: 12px 20px;
+
+        @include small() {
+          min-height: 40px;
+          padding: 8px 24px;
+        }
+      }
+    }
+  }
+  &-secondary {
+    &::after {
+      padding: $border-width;
+      background: linear-gradient(45deg, $color-brand-raspberry-300, $color-brand-blue-400);
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+
+    &.size {
+      &-sm {
+        min-height: 44px;
+        padding: 10px 24px;
+
+        @include small() {
+          min-height: 40px;
+          padding: 8px 24px;
+        }
+      }
+      &-md {
+        min-height: 56px;
+        padding: 16px 24px;
+        @include small() {
+          min-height: 40px;
+          padding: 8px 24px;
+        }
+      }
+    }
+  }
+  &-tertiary {
+    color: $color-neutral-900;
+
+    &::after {
+      background-color: $color-neutral-0;
+    }
+
+    &.size {
+      &-sm,
+      &-md {
+        min-height: 44px;
+        padding: 10px 16px;
+
+        @include small() {
+          min-height: 40px;
+          padding: 8px 24px;
+        }
+      }
+    }
+  }
+}

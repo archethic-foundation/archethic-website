@@ -1,0 +1,37 @@
+@import '@/ui/_styles/variables.scss';
+
+.container {
+  @include transition(0.8s, background-color);
+  display: flex;
+  padding: 20px 24px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: $border-radius-sm;
+  background-color: rgba(255, 255, 255, 0.1);
+  line-height: 1;
+  width: fit-content;
+
+  span {
+    line-height: 1;
+    padding-top: 4px;
+  }
+
+  svg {
+    display: block;
+  }
+
+  @include hover() {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  @include small() {
+    padding: 12px 16px;
+
+    svg {
+      width: 20px;
+      height: auto;
+    }
+  }
+}

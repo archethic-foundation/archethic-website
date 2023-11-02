@@ -1,0 +1,185 @@
+@import '@/ui/_styles/variables.scss';
+
+$marginContainerWidth: 220px;
+$scrolling-nav-height: $layout-desktop-navigation-height - 30px;
+.container {
+  @include small() {
+    display: none;
+  }
+
+  transition:
+    all 0.8s $transition-easeOutQuart,
+    margin-top 1.2s $transition-easeOutQuart;
+
+  height: $layout-desktop-navigation-height;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: fixed;
+  z-index: $index-main-navigation;
+
+  &.state-initial {
+  }
+
+  &.state-pinned,
+  &.state-scrolling {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: $scrolling-nav-height;
+    backdrop-filter: blur(10px);
+    backface-visibility: hidden;
+  }
+
+  &.state-scrolling {
+    //margin-top: -$scrolling-nav-height;
+  }
+
+  &.state-pinned {
+  }
+}
+
+.brandWrapper {
+  width: $marginContainerWidth;
+
+  svg {
+    display: block;
+  }
+
+  @include medium() {
+    width: $marginContainerWidth;
+    svg {
+      max-width: 180px;
+    }
+  }
+}
+
+.navWrapper {
+  display: flex;
+  gap: 48px;
+
+  &.navWrapperLinkShorted a:after {
+    bottom: -20px;
+  }
+
+  a {
+    @include transition(0.8s, color);
+    position: relative;
+
+    &:after {
+      @include transition(0.8s, width);
+      content: ' ';
+      transform: translateX(-50%);
+      position: absolute;
+      left: 50%;
+      bottom: -36px;
+      width: 0;
+      height: 1px;
+      background-color: $color-brand-raspberry-300;
+    }
+
+    @include hover() {
+      color: $color-brand-raspberry-300;
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+
+  @include medium() {
+    gap: 25px;
+  }
+
+  @media screen and (max-width: $grid-breakpoint-sm-early) {
+    gap: 20px;
+  }
+}
+
+.ctaWrapper {
+  width: $marginContainerWidth;
+  display: flex;
+  justify-content: flex-end;
+
+  @include medium() {
+    width: 170px;
+  }
+
+  @include small-early() {
+    display: none;
+  }
+}
+
+/*
+ * Nav Link Button
+ */
+.navLinkButton {
+  @include text-headline-medium-small();
+
+  &.active {
+    color: $color-brand-raspberry-300;
+    pointer-events: none;
+  }
+}
+
+/*
+ * Nav Dropdown
+ */
+.navDropdown {
+  position: relative;
+  display: flex;
+
+  &_button {
+    @include text-headline-medium-small();
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &_popover {
+    @include transition(0.8s, opacity, transform);
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    background-color: $color-neutral-900;
+    border-radius: 12px;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(15px);
+
+    &.isOpen {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+  }
+
+  &_link {
+    @include text-headline-medium-small();
+    width: fit-content;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    justify-content: space-between;
+
+    svg {
+      @include transition(0.8s, transform);
+    }
+
+    &:after {
+      display: none;
+    }
+
+    @include hover() {
+      svg {
+        transform: translate(3px, -3px);
+      }
+    }
+  }
+}

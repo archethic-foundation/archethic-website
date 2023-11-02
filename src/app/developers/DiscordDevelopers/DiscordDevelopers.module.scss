@@ -1,0 +1,20 @@
+@import '@/ui/_styles/variables.scss';
+
+.joinUs {
+  padding-left: 20%;
+  ;
+
+  .titleWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  @include small-early() {
+    padding-left: 0;
+  }
+
+  @include small() {
+    padding-left: 0;
+  }
+}

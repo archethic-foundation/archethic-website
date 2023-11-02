@@ -1,0 +1,29 @@
+@import '@/ui/_styles/variables.scss';
+
+.container {
+  @include transition(0.8s, background-color, border-radius);
+  background-color: $color-brand-blue-400;
+  border-radius: $border-radius-lg;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  &[disabled] {
+    opacity: 0.2;
+    cursor: no-drop;
+  }
+
+  &:not([disabled]) {
+    @include hover() {
+      border-radius: 40px;
+      background-color: $color-brand-blue-800;
+    }
+  }
+}
+
+.reverse {
+  transform: scaleX(-1);
+}

@@ -1,0 +1,47 @@
+@import 'variables';
+
+@font-face {
+  font-family: telegraf-fallback;
+  src: local("Arial");
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  min-height: 100%;
+  color-scheme: dark;
+}
+
+body {
+  position:relative;
+  padding: 0;
+  margin: 0;
+  max-width: 100vw;
+  width: 100vw;
+  min-height: 100%;
+  overflow-x: hidden;
+  color: $color-neutral-0;
+  background-color: $color-neutral-900;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Telegraf', telegraf-fallback, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}

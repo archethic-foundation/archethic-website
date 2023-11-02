@@ -1,0 +1,14 @@
+@import '@/ui/_styles/variables.scss';
+
+.container {
+  width: 100%;
+  max-width: $layout-content-max-width;
+  margin: 0 auto;
+  padding-left: $grid-gap-xl;
+  padding-right: $grid-gap-xl;
+
+  @include small() {
+    padding-left: $grid-gap-sm;
+    padding-right: $grid-gap-sm;
+  }
+}

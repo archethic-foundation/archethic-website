@@ -1,0 +1,108 @@
+@import '@/ui/_styles/variables.scss';
+
+.container {
+  strong {
+    font-weight: $typography-font-weight-semibold;
+  }
+  u {
+    position: relative;
+    font-weight: $typography-font-weight-semibold;
+    background: $gradient-pink-purple-500;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 1px;
+    text-decoration: none;
+  }
+
+  p {
+    margin-block: 12px;
+  }
+  ul {
+    padding-left: 20px;
+    li {
+      margin-block: 6px;
+    }
+  }
+
+  &.textWrap {
+    text-wrap: balance;
+  }
+}
+
+.color {
+  &-inherit {
+    color: inherit;
+  }
+  &-raspberry-300 {
+    color: $color-brand-raspberry-300;
+  }
+  &-neutral-500 {
+    color: $color-neutral-500;
+  }
+}
+
+.size {
+  &-inherit {
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+  }
+
+  &-display-extralarge {
+    @include text-display-extralarge();
+  }
+  &-display-large {
+    @include text-display-large();
+  }
+  &-display-medium {
+    @include text-display-medium();
+  }
+  &-display-small {
+    @include text-display-small();
+  }
+  &-display-extrasmall {
+    @include text-display-extrasmall();
+  }
+
+  &-headline-heavy {
+    @include text-headline-heavy();
+  }
+  &-headline-large {
+    @include text-headline-large();
+  }
+  &-headline-medium {
+    @include text-headline-medium();
+  }
+  &-headline-medium-small {
+    @include text-headline-medium-small();
+  }
+  &-headline-regular {
+    @include text-headline-regular();
+  }
+
+  &-text-large {
+    @include text-text-large();
+  }
+  &-text-medium {
+    @include text-text-medium();
+  }
+  &-label-regular {
+    @include text-label-regular();
+  }
+}
+
+.weight {
+  &-light {
+    font-weight: $typography-font-weight-light;
+  }
+  &-normal {
+    font-weight: $typography-font-weight-normal;
+  }
+  &-semibold {
+    font-weight: $typography-font-weight-semibold;
+  }
+  &-bold {
+    font-weight: $typography-font-weight-bold;
+  }
+}

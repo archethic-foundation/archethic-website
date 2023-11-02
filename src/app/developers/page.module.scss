@@ -1,0 +1,50 @@
+@import '@/ui/_styles/variables.scss';
+
+.hero {
+  position: relative;
+  z-index: 6;
+}
+
+.topWrapper,
+.middleWrapper,
+.bottomWrapper {
+  position: relative;
+  @include regular-border-radius;
+
+  @include small() {
+    padding-top: 120px;
+  }
+}
+
+.topWrapper {
+  padding-top: 200px;
+
+  @include small() {
+    padding-top: 30px;
+  }
+}
+
+.middleWrapper {
+  padding-top: 160px;
+  padding-bottom: 160px;
+  z-index: 6;
+
+  @include small() {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+.bottomWrapper {
+  padding-top: 200px;
+  padding-bottom: 250px;
+  z-index: 6;
+  overflow-x: hidden;
+  margin-bottom: -250px;
+
+  @include small() {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    margin-bottom: -140px;
+  }
+}

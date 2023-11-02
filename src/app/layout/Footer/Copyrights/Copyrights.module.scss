@@ -1,0 +1,22 @@
+@import '@/ui/_styles/variables.scss';
+
+.container {
+  padding-top: 55px;
+
+  @include small() {
+    padding-top: 40px;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $color-neutral-0;
+    opacity: 0.2;
+  }
+
+  p {
+    padding: 23px 0;
+  }
+}

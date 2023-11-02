@@ -1,0 +1,165 @@
+@import '@/ui/_styles/variables.scss';
+
+.sectionWrapper {
+  position: relative;
+}
+
+.section {
+  position: relative;
+  z-index: $index-section-content;
+  height: calc(120vh * 4);
+}
+
+.container {
+  top: 50px;
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 80px;
+  height: 110vh;
+  padding-top: 10vh;
+  z-index: 2;
+
+  @include small() {
+    gap: 20px;
+    padding-top: 8vh;
+  }
+
+  @include maxHeightScreen(550px) {
+    gap: 40px;
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include small() {
+    gap: 12px;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+
+  @include small() {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .cardsIndex {
+    .cardsIndexNumber {
+      position: relative;
+      z-index: 2;
+      background-color: rgba($color-brand-raspberry-300, 0.2);
+      padding: 24px;
+      border-radius: $border-radius-lg;
+      width: 76px;
+      height: 76px;
+      display: flex;
+
+      @include small() {
+        padding: 10px;
+        width: 48px;
+        height: 48px;
+        border-radius: $border-radius-sm;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .sliderContainer {
+    position: relative;
+    z-index: 2;
+  }
+  $up-step: 15px;
+  .sliderCard {
+    @include transition(1s, transform, opacity);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(0) scale(1);
+    transform-origin: center top;
+
+    &[data-slide='-1'] {
+      z-index: 6;
+      transform: translateY(100px) scale(1.1);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &[data-slide='0'] {
+      z-index: 5;
+      transform: translateY(0) scale(1);
+    }
+    &[data-slide='1'] {
+      z-index: 4;
+      transform: translateY(-$up-step) scale(0.9);
+
+      article {
+        background-color: darken(#202020, 2%);
+      }
+    }
+    &[data-slide='2'] {
+      z-index: 3;
+      transform: translateY(-$up-step * 2) scale(0.8);
+      article {
+        background-color: darken(#202020, 3%);
+      }
+    }
+    &[data-slide='3'] {
+      z-index: 2;
+      transform: translateY(-$up-step * 3) scale(0.7);
+      article {
+        background-color: darken(#202020, 4%);
+      }
+    }
+    &[data-slide='4'] {
+      z-index: 1;
+      transform: translateY(-$up-step * 3.5) scale(0.6);
+      article {
+        background-color: darken(#202020, 5%);
+      }
+    }
+  }
+}
+
+.bgShapeA {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    rgb(19 19 19 / 50%) 2.24%,
+    rgb(64 39 162 / 40%) 46.77%,
+    rgb(64 39 162 / 10%) 67.48%,
+    #131313 101.65%
+  );
+  opacity: 1;
+  z-index: $index-bg-shapes;
+}
+
+.bgShapeB {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: $index-bg-shapes;
+  background: radial-gradient(
+      26.41% 29.16% at 68.68% 45.24%,
+      rgba(213, 92, 255, 0.6) 0%,
+      rgba(32, 24, 68, 0) 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+}

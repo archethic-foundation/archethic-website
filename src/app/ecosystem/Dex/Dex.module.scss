@@ -1,0 +1,38 @@
+@import '@/ui/_styles/variables.scss';
+
+$extra-left-padding: 80px;
+$w: 300px;
+
+.container {
+  position: relative;
+  padding-bottom: 50px;
+  width: 100%;
+
+  @include small() {
+    padding-bottom: 50px;
+  }
+}
+
+.dexContainer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.circleBlurredShape1 {
+  z-index: -1;
+
+  @include small() {
+    --width: 500px;
+    --left: calc(100% - 300px);
+    --top: -20%;
+  }
+}
+
+.circleBlurredShape2 {
+  z-index: -1;
+
+  @include small() {
+    display: none;
+  }
+}

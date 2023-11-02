@@ -1,0 +1,31 @@
+@import '@/ui/_styles/variables.scss';
+
+.container {
+  z-index: -1;
+  position: absolute;
+  top: var(--top, 0);
+  left: 0;
+  width: 100%;
+  height: var(--height, 100%);
+  pointer-events: none;
+  @include regular-border-radius;
+  overflow: hidden;
+}
+
+.variant {
+  &-gradient-light-to-dark-blue {
+    background: $gradient-light-to-dark-blue;
+  }
+
+  &-gradient-dark-to-light-blue {
+    background: $gradient-dark-to-light-blue;
+  }
+
+  &-purple {
+    background: $color-brand-purple-800;
+  }
+
+  &-dark-purple {
+    background: $color-brand-purple-900;
+  }
+}
