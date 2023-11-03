@@ -57,7 +57,7 @@ const TEAM = [
     },
     role: 'LEAD ARCHITECT',
     name: 'Samuel Manzanera',
-    text: 'Samuel is a co-creator of the ARCH Consensus. He specialized in solidity on ETH since 8+ years with a focus on Identity Management & Fundraising Models. Previous collaborations with industry leaders such as Michelin, Viseo, and Deloitte.',
+    text: 'Samuel is the Lead Architect of the Blockchain Development Team. He specialized in solidity on ETH since 8+ years with a focus on Identity Management & Fundraising Models. Previous collaborations with industry leaders such as Michelin, Viseo, and Deloitte.',
   },
   {
     image: {
