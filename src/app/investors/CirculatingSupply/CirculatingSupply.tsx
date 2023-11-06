@@ -1,5 +1,5 @@
 import React from 'react'
-import { ExternalLinks } from '@/config'
+import { InternalLinks } from '@/config'
 import { ArrowRightIcon } from '@/ui/_assets/icons/ArrowRightIcon'
 import { Button } from '@/ui/Button/Button'
 import CardSmall from '@/ui/CardSmall/CardSmall'
@@ -16,7 +16,7 @@ export default function CirculatingSupply() {
       <div className={styles.title}>
         <Flex gap={20}>
           <T as='h5' size='headline-large' weight='bold'>
-            UCO Circulating Supply
+            $UCO - Circulating Supply
           </T>
           <T as='h2' size='display-large' weight='semibold'>
             <u>1 Billion </u> total
@@ -25,9 +25,9 @@ export default function CirculatingSupply() {
 
         <div>
           <Button
-            to={ExternalLinks.Tokenomics}
+            to={InternalLinks.Tokenomics}
             target='_blank'
-            label='Check our tokenomics'
+            label='Tokenomics'
             variant='secondary'
             size='sm'
             icon={<ArrowRightIcon />}

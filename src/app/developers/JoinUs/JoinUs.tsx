@@ -83,7 +83,7 @@ export default function JoinUs() {
               Join us
             </T>
             <T as='h2' size='display-large' weight='semibold'>
-              Build with us
+              Build on the first-ever<br /><u>Transaction Chain</u>
             </T>
             <T as='p' size='headline-regular'>
               Archethic smart-contracts expand developers boundaries enabling them to create a new

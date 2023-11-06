@@ -66,26 +66,25 @@ export default function Hero({ className }: HeroProps) {
             ref={titleRef}
             inView={inView}
           >
-            <span>Digital</span> <span>sovereignty</span> <i /> <span>at</span> <span>your</span>{' '}
+            <span><u>Digital</u></span> <span>sovereignty</span> <i /> <span>at</span> <span>your</span>{' '}
             <span>
-              <u>fingertips</u>
+              fingertips
             </span>
           </T>
           <div className={styles.heroDescription} data-inview={inView}>
             <T as='h2' size='headline-regular'>
-              Embrace Decentralization: Secure Biometrics, Seamless Smart Contracts. Redefining
-              Technology{"'"}s Trust.
+              Build decentralized services accessible to billions
             </T>
             <div className={styles.buttonsList}>
               <Button
-                label='Access Bridge'
+                label='Archethic Bridge'
                 to={ExternalLinks.Bridge}
                 target='_blank'
                 variant='secondary'
                 icon={<ArrowRightIcon />}
               />
               <Button
-                label='Get Archethic wallet'
+                label='Archethic Wallet'
                 variant='secondary'
                 to={InternalLinks.Wallet}
                 icon={<ArrowRightIcon />}

@@ -1,0 +1,57 @@
+@import '@/ui/_styles/variables.scss';
+
+$text-indentation: 110px;
+
+.container {
+  margin-top: -135px;
+}
+
+.text {
+  max-width: 700px;
+  @include mediumUp() {
+    padding-left: $text-indentation;
+  }
+}
+.cardsList {
+  @include mediumUp() {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding-left: $text-indentation;
+  }
+
+  @include medium() {
+    padding-left: 0;
+    margin-top: 0;
+  }
+
+  @include small-early() {
+    grid-template-columns: 100%;
+    gap: 16px;
+  }
+
+  @include small() {
+    display: flex;
+    gap: 16px;
+    padding-left: 0;
+    overflow-x: auto;
+
+    width: calc(100vw - 40px);
+    margin-left: -32px;
+    margin-right: -32px;
+
+    > div {
+      width: 73vw;
+      flex-shrink: 0;
+
+      &:first-child {
+        margin-left: 32px;
+      }
+
+      &:last-child {
+        margin-right: 32px;
+      }
+    }
+  }
+}

@@ -8,6 +8,20 @@ $bottom-padding: 230px;
   z-index: 6;
 }
 
+
+.aewebHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aewebImage {
+  padding-left: 5px;
+  width: auto;
+  height: 20px;
+
+}
+
 .list {
   display: grid;
 

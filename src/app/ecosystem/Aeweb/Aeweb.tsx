@@ -11,29 +11,36 @@ export default function Aeweb() {
     <MaxWidthLayoutContainer className={styles.container}>
       <Flex gap={80} smGap={40}>
         <Flex gap={16}>
-          <T as='h5' size='label-regular'>
-            AEWEB
-          </T>
+          <Flex alignItems="center" direction="row" className={styles.aewebHeader}>
+            <T as='h5' size='label-regular'>
+              AEWeb - Testnet
+            </T>
+            <img
+              src='/images/ecosystem/up.png'
+              alt='UP'
+              className={styles.aewebImage}
+            />
+          </Flex>
           <T as='h2' size='display-large' weight='semibold'>
-            Redefining Web Hosting
+            Decentralized Web Hosting
           </T>
           <T as='h2' size='headline-medium'>
-            Unshackle your online presence with AEWeb
+            Free your content, forever
           </T>
         </Flex>
 
         <div className={styles.list}>
           <CardSmallWithBlueLineBg
-            title='Future of web hosting'
-            text='Step into the future of web hosting with AEWeb on the TestNet.'
-          />
-          <CardSmallWithBlueLineBg
-            title='Security'
-            text='AEWeb provides a secure, censorship-resistant, and community-driven platform for hosting websites and applications.'
-          />
-          <CardSmallWithBlueLineBg
             title='Decentralization'
-            text='Break free from traditional limitations and experience the new era of decentralized web hosting.'
+            text='Your website is fully on-chain, sharded & secured around the world'
+          />
+          <CardSmallWithBlueLineBg
+            title='Immutability'
+            text='Your data is censorship-resistant. Tamper-proof as your front-end inherit native blockchain security'
+          />
+          <CardSmallWithBlueLineBg
+            title='Governance'
+            text='The web hosting is under the sole regulation of the DAO, ensuring decentralized control'
           />
         </div>
       </Flex>

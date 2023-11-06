@@ -152,6 +152,7 @@ export default function Blog({ className }: BlogProps) {
                   title={post.title}
                   excerpt={post.excerpt}
                   tag={post.primary_tag}
+                  link={post.url}
                 />
               </swiper-slide>
             ))}

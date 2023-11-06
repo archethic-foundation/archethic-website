@@ -7,10 +7,11 @@ export default function Hero() {
     <SectionHero id='hero'>
       <T as='h1' size='display-extralarge'>
         <span>
-          <u>Embrace</u>
+          <u>Invest</u>
         </span>{' '}
-        <span>the</span> <span>future</span> <br />
-        <i /> <span>with</span> <span>Archethic</span>
+        <span>in</span> <span>the</span><br />
+        <i /> <span>services</span> <span>of</span><br />
+        <span>tomorrow</span>
       </T>
     </SectionHero>
   )

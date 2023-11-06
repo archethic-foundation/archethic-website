@@ -90,7 +90,7 @@ export function MobileNavigation() {
           [styles.showButtons]: state === 'open',
         })}
       >
-        <NavLinkButton title='About' active={pathname === '/about/'} href={InternalLinks.About} />
+        <NavLinkButton title='Governance' active={pathname === '/governance/'} href={InternalLinks.Governance} />
         <NavLinkButton
           title='Developers'
           active={pathname === '/developers/'}

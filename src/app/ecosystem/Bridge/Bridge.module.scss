@@ -27,6 +27,20 @@ $extra-left-padding: 80px;
   }
 }
 
+
+.bridgeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bridgeImage {
+  padding-left: 5px;
+  width: auto;
+  height: 20px;
+
+}
+
 .title {
   span {
     width: $extra-left-padding;

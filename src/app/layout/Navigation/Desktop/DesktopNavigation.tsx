@@ -37,10 +37,10 @@ function NavDropdown() {
           [styles.isOpen]: isOpen,
         })}
       >
-        <Link href={InternalLinks.WhitePaper} className={styles.navDropdown_link}>
+        <Link href={InternalLinks.WhitePaper} target="_blank" className={styles.navDropdown_link}>
           White Paper <ArrowLeftRotatedIcon />
         </Link>
-        <Link href={InternalLinks.TechnicalPaper} className={styles.navDropdown_link}>
+        <Link href={InternalLinks.TechnicalPaper} target="_blank" className={styles.navDropdown_link}>
           Technical Paper <ArrowLeftRotatedIcon />
         </Link>
       </Flex>
@@ -104,22 +104,22 @@ export function DesktopNavigation() {
           [styles.navWrapperLinkShorted]: state !== 'initial',
         })}
       >
-        <NavLinkButton title='About' active={pathname === '/about/'} href={InternalLinks.About} />
         <NavLinkButton
           title='Developers'
           active={pathname === '/developers/'}
           href={InternalLinks.Developers}
         />
         <NavLinkButton
-          title='Ecosystem'
-          active={pathname === '/ecosystem/'}
-          href={InternalLinks.Ecosystem}
-        />
-        <NavLinkButton
           title='Investors'
           active={pathname === '/investors/'}
           href={InternalLinks.Investors}
         />
+        <NavLinkButton
+          title='Ecosystem'
+          active={pathname === '/ecosystem/'}
+          href={InternalLinks.Ecosystem}
+        />
+        <NavLinkButton title='Governance' active={pathname === '/governance/'} href={InternalLinks.Governance} />
         <NavDropdown />
       </nav>
 

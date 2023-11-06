@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name='msapplication-TileColor' content='#da532c' />
         <meta name='theme-color' content='#ffffff' />
         <title>Archethic - Public Blockchain</title>
-        <meta name="description" content="Embrace Decentralization: Secure Biometrics, Seamless Smart Contracts. Redefining Technology's Trust."></meta>
+        <meta name="description" content="Build decentralized services accessible to billions"></meta>
         <Script defer data-domain='archethic.net' src='https://plausible.io/js/plausible.js' />
       </head>
       <Body>

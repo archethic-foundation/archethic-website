@@ -10,6 +10,37 @@
   height: calc(120vh * 4);
 }
 
+
+.keyFeaturesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  background-color: $color-neutral-800;
+  border-radius: $border-radius-lg;
+  padding: 40px 48px;
+  width: 640px;
+  //box-shadow: 1px 3px 20px 12px #0000002e;
+  box-shadow: 1px 11px 20px 12px rgba(0, 0, 0, 0.1803921569);
+
+  h1 {
+    @include maxHeightScreen(600px) {
+      @include text-display-extrasmall();
+    }
+  }
+
+  p {
+    @include small() {
+      @include text-text-large();
+    }
+  }
+
+  @include small() {
+    width: 100%;
+    padding: 24px;
+  }
+}
+
 .container {
   top: 50px;
   position: -webkit-sticky;
@@ -78,7 +109,9 @@
     position: relative;
     z-index: 2;
   }
+
   $up-step: 15px;
+
   .sliderCard {
     @include transition(1s, transform, opacity);
     position: absolute;
@@ -98,6 +131,7 @@
       z-index: 5;
       transform: translateY(0) scale(1);
     }
+
     &[data-slide='1'] {
       z-index: 4;
       transform: translateY(-$up-step) scale(0.9);
@@ -106,23 +140,29 @@
         background-color: darken(#202020, 2%);
       }
     }
+
     &[data-slide='2'] {
       z-index: 3;
       transform: translateY(-$up-step * 2) scale(0.8);
+
       article {
         background-color: darken(#202020, 3%);
       }
     }
+
     &[data-slide='3'] {
       z-index: 2;
       transform: translateY(-$up-step * 3) scale(0.7);
+
       article {
         background-color: darken(#202020, 4%);
       }
     }
+
     &[data-slide='4'] {
       z-index: 1;
       transform: translateY(-$up-step * 3.5) scale(0.6);
+
       article {
         background-color: darken(#202020, 5%);
       }
@@ -136,13 +176,11 @@
   height: 100vh;
   left: 0;
   top: 0;
-  background: linear-gradient(
-    180deg,
-    rgb(19 19 19 / 50%) 2.24%,
-    rgb(64 39 162 / 40%) 46.77%,
-    rgb(64 39 162 / 10%) 67.48%,
-    #131313 101.65%
-  );
+  background: linear-gradient(180deg,
+      rgb(19 19 19 / 50%) 2.24%,
+      rgb(64 39 162 / 40%) 46.77%,
+      rgb(64 39 162 / 10%) 67.48%,
+      #131313 101.65%);
   opacity: 1;
   z-index: $index-bg-shapes;
 }
@@ -154,12 +192,11 @@
   left: 0;
   top: 0;
   z-index: $index-bg-shapes;
-  background: radial-gradient(
-      26.41% 29.16% at 68.68% 45.24%,
+  background: radial-gradient(26.41% 29.16% at 68.68% 45.24%,
       rgba(213, 92, 255, 0.6) 0%,
-      rgba(32, 24, 68, 0) 100%
-    )
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      rgba(32, 24, 68, 0) 100%)
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+  ;
   mix-blend-mode: hard-light;
   opacity: 0.5;
 }

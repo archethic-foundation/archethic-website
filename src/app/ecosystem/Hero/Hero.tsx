@@ -6,11 +6,11 @@ export default function Hero() {
   return (
     <SectionHero id='hero'>
       <T as='h1' size='display-extralarge'>
-        <span>A</span> <span>Peek</span> <span>into</span> <br />
-        <i />
-        <span>
-          <u>innovation</u>
-        </span>
+        <span><u>Accelerate</u></span>
+        <br />
+        <i /><span>adoption</span> <span>with</span>{' '}
+        <br /><span>native</span> <span>services</span>
+
       </T>
     </SectionHero>
   )

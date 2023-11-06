@@ -29,13 +29,10 @@ export default function Mission({ className }: MissionProps) {
 
               <div className={styles.description}>
                 <T as='p' size='headline-regular' textWrap={false}>
-                  Archethic aims to create a decentralized network in the hands of the world
-                  population.
+                  Archethic aims to create a safer, more inclusive, and transparent internet, where trust is embedded through cutting-edge biometric integration offering a new generation of services.
                 </T>
                 <T as='p' size='headline-regular' textWrap={false}>
-                  Our mission is to create a safer, more inclusive, and transparent internet, where
-                  trust is embedded through cutting-edge biometric integration offering a new
-                  generation of services.
+                  Creating a fully autonomous decentralized network in the hands of the world population made by the people, for the people.
                 </T>
               </div>
             </div>
