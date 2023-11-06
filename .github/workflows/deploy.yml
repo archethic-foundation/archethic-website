@@ -1,30 +1,27 @@
-name: Deploy to Github Pages
+name: Build and Deploy
 
 on:
   push:
-    branches: [todo]
+    branches: [main]
 
 jobs:
-  deploy:
-    name: Deploy to Github Pages
+  build_and_deploy_to_aeweb:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [19.x]
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
         with:
-          node-version: 16.x
-          cache: npm
-      - name: Build website
-        working-directory: .
-        run: |
-          npm ci
-          npm run build
+          node-version: ${{ matrix.node-version }}
 
+      - name: Install dependencies
+        run: npm install
 
-      - name: Deploy to Github Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
-          user_name: github-actions[bot]
-          user_email: 41898282+github-actions[bot]@users.noreply.github.com
+      - name: Build
+        run: npm run build
