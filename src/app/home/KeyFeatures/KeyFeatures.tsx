@@ -3,7 +3,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useWindowSize } from 'react-use'
 import { useHomePageStore } from '@/app/home/Home'
-import { KeyFeaturesCard } from '@/app/home/KeyFeatures/KeyFeaturesCard/KeyFeaturesCard'
 import { MaxWidthLayoutContainer } from '@/ui/MaxWidthLayoutContainer/MaxWidthLayoutContainer'
 import { T } from '@/ui/Text/Text'
 import { useIsomorphicLayoutEffect } from '@/utils/hooks/useIsomorphicLayoutEffect'
@@ -131,36 +130,53 @@ export default function KeyFeatures({ className }: KeyFeaturesProps) {
               </div>
               <div className={styles.sliderContainer}>
                 <div className={styles.sliderCard}>
-                  <KeyFeaturesCard
-                    ref={card1Ref}
-                    title='The eldorado of transaction chain'
-                    description='Each block is a transaction. Each transaction is a chain. Merging the capacity of millions of blockchains, into one.'
-                  />
+                  <article ref={card1Ref} className={classNames(styles.keyFeaturesContainer, className)}>
+                    <T as='h1' size='display-medium' color='raspberry-300' weight='semibold' style={{ whiteSpace: 'pre-line' }}>
+                      The Eldorado of Transaction Chain
+                    </T>
+
+                    <T as='p' size='headline-regular'>
+                      Archethic introduces a new type of Distributed Ledger Technology: <b>The Transaction Chain</b>.<br />Each block is a transaction. Each transaction is a chain.<br />Merging the capacity of <b>millions</b> of blockchain, <b>into one</b>.
+                    </T>
+                  </article>
                 </div>
 
                 <div className={styles.sliderCard}>
-                  <KeyFeaturesCard
-                    ref={card2Ref}
-                    title='ARCH Consensus'
-                    description='Archethic introduces a new consensus, solving the blockchain trilemma. Linear Scalability with 50 TPS per node. Fully decentralized through geo-sharding around the globe. Aeronautic grade security with 90% Malicious node tolerance.'
-                  />
+                  <article ref={card2Ref} className={classNames(styles.keyFeaturesContainer, className)}>
+                    <T as='h1' size='display-medium' color='raspberry-300' weight='semibold' style={{ whiteSpace: 'pre-line' }}>
+                      ARCH Consensus
+                    </T>
+
+                    <T as='p' size='headline-regular'>
+                      Archethic introduces a <b>new consensus</b>, solving the blockchain trilemma.<br />Linear Scalability with <b>50 TPS</b> per node.<br />Fully decentralized through <b>geo-sharding</b> around the globe. Aeronautic grade security with <b>90%</b> Malicious node tolerance
+                    </T>
+                  </article>
                 </div>
 
                 <div className={styles.sliderCard}>
-                  <KeyFeaturesCard
-                    ref={card3Ref}
-                    title='New Generation of Services'
-                    description='Archethic introduces groundbreaking smart-contract features enabling developers to create a new generation of decentralized applications.'
-                  />
+                  <article ref={card3Ref} className={classNames(styles.keyFeaturesContainer, className)}>
+                    <T as='h1' size='display-medium' color='raspberry-300' weight='semibold' style={{ whiteSpace: 'pre-line' }}>
+                      New Generation of Services
+                    </T>
+
+                    <T as='p' size='headline-regular'>
+                      Archethic introduces groundbreaking<br />smart-contract <b>features</b> enabling developers<br />to create a new generation of <b>decentralized applications</b>
+                    </T>
+                  </article>
                 </div>
 
                 <div className={styles.sliderCard}>
-                  <KeyFeaturesCard
-                    ref={card4Ref}
-                    title='Native Biometric Integration'
-                    description='Archethic introduces a tamper-proof biometric identification system that uniquely recognizes individuals without storing any biometric data. Granting seamless access to on-chain services for every human on the planet.'
-                  />
+                  <article ref={card4Ref} className={classNames(styles.keyFeaturesContainer, className)}>
+                    <T as='h1' size='display-medium' color='raspberry-300' weight='semibold' style={{ whiteSpace: 'pre-line' }}>
+                      Native Biometric Integration
+                    </T>
+
+                    <T as='p' size='headline-regular'>
+                      Archethic introduces a tamper-proof biometric identification system that uniquely recognizes individuals <b>without storing</b> any biometric data.<br />Granting seamless access to on-chain services for <b>every human on the planet</b>
+                    </T>
+                  </article>
                 </div>
+
               </div>
             </div>
           </div>

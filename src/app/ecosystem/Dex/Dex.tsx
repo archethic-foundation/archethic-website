@@ -22,7 +22,7 @@ export default function Dex() {
               SWAP assets on-chain, add liquidity & access LP staking.
             </T>
             <T as='h5' size='label-regular'>
-              (Soon)
+              Soon
             </T>
           </Flex>
         </MaxWidthLayoutContainer>

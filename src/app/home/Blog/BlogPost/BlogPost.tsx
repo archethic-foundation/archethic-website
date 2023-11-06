@@ -13,6 +13,7 @@ interface BlogPostProps {
   excerpt?: string
   tag: Nullable<Tag> | undefined
   className?: string
+  link: string | undefined
 }
 
 export default function BlogPost({
@@ -22,34 +23,42 @@ export default function BlogPost({
   excerpt,
   tag,
   className,
+  link,
 }: BlogPostProps) {
   return (
+
     <article className={classNames(styles.container, className)}>
-      <div className={styles.media}>
-        <img src={feature_image} alt='' />
-      </div>
+      <a href={link} target="_blank" rel="noopener noreferrer">
 
-      <div className={styles.content}>
-        {date && (
-          <T as='div' size='text-medium' weight='light'>
-            <time dateTime={date}>{formatDate(date)}</time>
-          </T>
-        )}
 
-        {title && (
-          <T as='h1' size='headline-heavy' weight='semibold'>
-            {title}
-          </T>
-        )}
+        <div className={styles.media}>
+          <img src={feature_image} alt='' />
+        </div>
 
-        {excerpt && (
-          <T as='p' size='text-medium' weight='normal' className={styles.description}>
-            {excerpt}
-          </T>
-        )}
-      </div>
+        <div className={styles.content}>
+          {date && (
+            <T as='div' size='text-medium' weight='light'>
+              <time dateTime={date}>{formatDate(date)}</time>
+            </T>
+          )}
+
+          {title && (
+            <T as='h1' size='headline-heavy' weight='semibold'>
+              {title}
+            </T>
+          )}
+
+          {excerpt && (
+            <T as='p' size='text-medium' weight='normal' className={styles.description}>
+              {excerpt}
+            </T>
+          )}
+        </div>
+      </a>
 
       {/* <div className={styles.footer}>{tag && <CategoryTag tag={String(tag)} />}</div>*/}
-    </article>
+
+    </article >
+
   )
 }

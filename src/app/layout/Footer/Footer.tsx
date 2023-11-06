@@ -49,15 +49,7 @@ export function Footer() {
                 >
                   Developers
                 </Link>
-                <Link
-                  href={InternalLinks.Ecosystem}
-                  prefetch={false}
-                  className={classNames({
-                    [styles.activeLink]: pathname === '/ecosystem/',
-                  })}
-                >
-                  Ecosystem
-                </Link>
+
                 <Link
                   href={InternalLinks.Investors}
                   prefetch={false}
@@ -66,6 +58,15 @@ export function Footer() {
                   })}
                 >
                   Investors
+                </Link>
+                <Link
+                  href={InternalLinks.Ecosystem}
+                  prefetch={false}
+                  className={classNames({
+                    [styles.activeLink]: pathname === '/ecosystem/',
+                  })}
+                >
+                  Ecosystem
                 </Link>
               </div>
             </div>
@@ -82,15 +83,6 @@ export function Footer() {
               </T>
               <div className={styles.linksList}>
                 <Link
-                  href={InternalLinks.About}
-                  prefetch={false}
-                  className={classNames({
-                    [styles.activeLink]: pathname === '/about/',
-                  })}
-                >
-                  About
-                </Link>
-                <Link
                   href={ExternalLinks.Documentation}
                   target='_blank'
                   prefetch={false}
@@ -99,6 +91,15 @@ export function Footer() {
                   })}
                 >
                   Documentation
+                </Link>
+                <Link
+                  href={InternalLinks.Governance}
+                  prefetch={false}
+                  className={classNames({
+                    [styles.activeLink]: pathname === '/governance/',
+                  })}
+                >
+                  Governance
                 </Link>
               </div>
             </div>

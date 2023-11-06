@@ -22,6 +22,7 @@ const TEAM = [
     role: 'CEO',
     name: 'Sébastien Dupont',
     text: 'Steered two flagship projects at Orange over a decade: Identity Management, catering to a vast user base of 100M & Mobile Banking in Africa, where he drove growth from €10M to €4 billion in revenue. Cybersecurity Specialist with Thales for 10 years, Bitcoin Evangelist since 2013.',
+    linkedln: 'https://www.linkedin.com/in/sebastien-dupont-uniris/'
   },
   {
     image: {
@@ -31,6 +32,7 @@ const TEAM = [
     role: 'COO',
     name: 'Nilesh Patankar',
     text: 'Nilesh is an ardent advocate of open-source principles and decentralization. He has assisted organizations like Mastercard and Barclays in modernizing their payment infrastructure and successfully transitioning to the cloud.',
+    linkedln: 'https://www.linkedin.com/in/nileshpatankar/'
   },
   {
     image: {
@@ -40,6 +42,7 @@ const TEAM = [
     role: 'CIO',
     name: 'Sylvain Séramy',
     text: 'With over two decades of experience, Sylvain, Chief Information Officer at Archethic, has committed his career to a leading firm specializing in the secure processing, storage, and management of sensitive data.',
+    linkedln: 'https://www.linkedin.com/in/sylvain-s%C3%A9ramy-1a01b26b/'
   },
   {
     image: {
@@ -49,6 +52,7 @@ const TEAM = [
     role: 'CCO',
     name: 'Victor Lafforgue',
     text: 'Victor is Chief Crypto Officer, leading ecosystem launch & development. He is co-founder of a private investment company that turned $100k investment into $10M+ AUM. With a 7+ years background in crypto markets, he is a DeFi “Degen” while also advising several crypto projects.',
+    linkedln: 'https://www.linkedin.com/in/victor-lafforgue/'
   },
   {
     image: {
@@ -58,6 +62,7 @@ const TEAM = [
     role: 'LEAD ARCHITECT',
     name: 'Samuel Manzanera',
     text: 'Samuel is the Lead Architect of the Blockchain Development Team. He specialized in solidity on ETH since 8+ years with a focus on Identity Management & Fundraising Models. Previous collaborations with industry leaders such as Michelin, Viseo, and Deloitte.',
+    linkedln: 'https://www.linkedin.com/in/samuel-manzanera-277371120/'
   },
   {
     image: {
@@ -67,6 +72,7 @@ const TEAM = [
     role: 'LAWYER',
     name: 'Gérard Aubert',
     text: `Expert in corporate law, taxation, and complex international group structures. Strategist in industries including Food, Biotech, and Fintech.\nFor 6 years, partnered with Manuel CASTRO, an international tax specialist, at CCA International in Brussels.`,
+    linkedln: '#'
   },
 ]
 
@@ -115,7 +121,7 @@ export default function Team() {
 
           <div className={styles.content_text}>
             <T as='p' size='headline-medium'>
-              Our team is composed of diverse individuals with expertise spanning blockchain
+              Our team is composed of diverse individuals with expertise spanning from blockchain
               technology, software development, finance, and more.
             </T>
           </div>
@@ -139,6 +145,7 @@ export default function Team() {
                 role={member.role}
                 name={member.name}
                 text={member.text}
+                linkedln={member.linkedln}
               />
             </swiper-slide>
           ))}

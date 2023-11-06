@@ -36,3 +36,11 @@ $w: 300px;
     display: none;
   }
 }
+
+.button {
+  margin-left: $extra-left-padding;
+
+  @include small() {
+    margin-left: 0;
+  }
+}

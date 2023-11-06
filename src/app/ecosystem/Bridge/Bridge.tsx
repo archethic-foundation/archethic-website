@@ -14,9 +14,16 @@ export default function Bridge() {
     <MaxWidthLayoutContainer className={styles.container}>
       <Flex direction='row' smDirection='column' gap={80} smGap={40}>
         <Flex direction='column' gap={24} className={styles.content}>
-          <T as='h5' size='label-regular'>
-            Bridge
-          </T>
+          <Flex alignItems="center" direction="row" className={styles.bridgeHeader}>
+            <T as='h5' size='label-regular'>
+              Bridge - Testnet
+            </T>
+            <img
+              src='/images/ecosystem/up.png'
+              alt='UP'
+              className={styles.bridgeImage}
+            />
+          </Flex>
           <T as='h2' size='display-large' weight='semibold' className={styles.title}>
             Discover a{' '}
             <u>
@@ -41,15 +48,15 @@ export default function Bridge() {
         <Flex direction='column' gap={32} className={styles.list}>
           <BridgeListItem
             iconRotation={135}
-            text='Our Bridge on the Mainnet provides a secure and efficient portal for depositing and withdrawing assets. '
+            text='The bridge provides a fully decentralized portal for depositing and withdrawing your assets'
           />
           <BridgeListItem
             iconRotation={135}
-            text="With Archethic's Bridge, you're opening a gateway to broader possibilities within our expanding ecosystem. "
+            text="The Safety Module safeguards user assets by limiting funds exposure"
           />
           <BridgeListItem
             iconRotation={135}
-            text='Explore the convenience and reliability of our Bridge as we pave the way for your financial interactions on the Mainnet.'
+            text='Atomic Swap guarantees no loss of funds for users through Refund Function'
           />
         </Flex>
       </Flex>

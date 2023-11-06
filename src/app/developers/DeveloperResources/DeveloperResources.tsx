@@ -15,14 +15,14 @@ export default function DeveloperResources() {
           Developer Resources
         </T>
         <T as='p' size='headline-medium' textWrap={false}>
-          Access essential developer resources to kickstart your journey with Archethic.
+          Learn, Participate, Build
         </T>
       </Flex>
       <div className={styles.cards}>
         <CtaCard
           variantColor='black'
           title='Github'
-          description='Explore the power of open source and the transparency of our codebase on GitHub!'
+          description='Explore the power of open source and the transparency of our codebase on GitHub'
           button={{ link: ExternalLinks.Github, label: 'View repositories', onNewTab: true }}
           image={{
             src: '/images/home/embrace-journey-card-invest-bg.png',
@@ -32,8 +32,8 @@ export default function DeveloperResources() {
         <CtaCard
           variantColor='raspberry'
           title='Documentation'
-          description="Discover essential developer documentation for Archethic's platform features and integrations."
-          button={{ link: ExternalLinks.Documentation, label: 'View document', onNewTab: true }}
+          description="Discover the technical knowledge directory of Archethic Ecosystem"
+          button={{ link: ExternalLinks.Documentation, label: 'View documentation', onNewTab: true }}
           image={{
             src: '/images/home/embrace-journey-card-building-bg.png',
             srcRetina: '/images/home/embrace-journey-card-building-bg@2x.png',

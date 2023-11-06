@@ -51,15 +51,13 @@ export default function Overview() {
             Overview
           </T>
           <T as='h2' size='display-large' weight='semibold'>
-            Investing in the Archethic Ecosystem
+            A Model designed to grow
           </T>
         </Flex>
 
         <Flex gap={80} smGap={16} direction='row' smDirection='column' className={styles.text}>
           <T as='p' size='headline-regular'>
-            The $UCO token represents decentralized shares of Archethic blockchain. It is the fuel
-            consumed for every transaction on the network and is engineered to scale exponentially
-            with increased on-chain traffic.
+            The $UCO token represents decentralized shares of Archethic blockchain.<br />It is the fuel consumed for every transaction on the network and is engineered to scale exponentially with on-chain traffic expansion.
           </T>
         </Flex>
       </Flex>

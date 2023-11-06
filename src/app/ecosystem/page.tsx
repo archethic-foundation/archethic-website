@@ -27,8 +27,9 @@ export default function Ecosystem() {
       </Flex>
 
       <Flex alignItems='center' gap={100} className={styles.middleWrapper}>
-        <Dex />
         <Aeweb />
+        <Dex />
+
 
         <BackgroundShape
           lightsLayer={<span className={styles.middleWrapperLightsLayer} />}

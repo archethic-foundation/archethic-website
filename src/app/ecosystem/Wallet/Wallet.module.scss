@@ -1,10 +1,37 @@
 @import '@/ui/_styles/variables.scss';
 
-.container {}
+.container {
+  svg {
+    height: 35px;
+  }
+}
+
+
+
+.button {
+  margin-left: 10px;
+
+  @include small() {
+    margin-left: 0;
+  }
+}
+
+.walletHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.walletImage {
+  padding-left: 5px;
+  width: auto;
+  height: 20px;
+
+}
+
 
 .content {
   @include mediumUp() {
-    padding-left: 110px;
 
     >* {
       width: 50%;

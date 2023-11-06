@@ -16,8 +16,7 @@ export default function VideoSection({ className }: VideoSectionProps) {
         <MaxWidthLayoutContainer className={className}>
           <div>
             <VideoCard
-              videoSrc='/videos/video.mp4'
-              /*videoSrc='https://preprod.archethic.net/assets/img/video.mp4'*/
+              videoSrc='/videos/Archethic-trailer-720p.mp4'
               image={{
                 src: '/images/home/video-cover-bg.webp',
                 srcRetina: '/images/home/video-cover-bg@2x.webp',
