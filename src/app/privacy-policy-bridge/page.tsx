@@ -71,7 +71,10 @@ export default function PrivacyPolicyBridge() {
               <br />
               <p><strong>Logs for Analyzing Anomalies</strong></p>
 
-              <p>In addition to the information mentioned above, we collect logs, both functional and technical, to analyze anomalies in the Apps operation. These logs may contain information related to the transactions performed but do not in any way allow us to alter or interfere with the transactions. These logs do not contain sensitive information such as seed or private keys.</p>
+              <p>In addition to the information mentioned above, we collect logs, both functional and technical, to analyze anomalies in the Apps operation. These logs may contain information related to the transactions performed but do not in any way allow us to alter or interfere with the transactions. These logs do not contain sensitive information such as seed or private keys.
+                <br /><br />We retain these logs for one month to ensure the security and integrity of the Apps operation.
+
+              </p>
               <br />
               <p><strong>How We Use Your Information</strong></p>
 
