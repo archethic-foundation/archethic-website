@@ -32,7 +32,7 @@ export default function PrivacyPolicyBridge() {
               <br />
               <p><strong>Changes to This Privacy Policy</strong></p>
 
-              <p>We may update this Privacy Policy from time to time, in which case we will post the updated Privacy Policy at <u><a href="/privacy-policy-wallet">https://www.archethic.net/privacy-policy-wallet.</a></u>
+              <p>We may update this Privacy Policy from time to time, in which case we will post the updated Privacy Policy at <u><a href="/privacy-policy-bridge">https://www.archethic.net/privacy-policy-bridge.</a></u>
                 The date on which this Privacy Policy has most recently been updated is indicated at the end of this Privacy Policy. In some cases, we may also tell you about changes by additional means, such as by informing you through an alert on the App.
                 Your continued use of the App after we make changes will be deemed to be your acceptance of those changes, so please check the Privacy Policy periodically for updates.</p>
               <br />
