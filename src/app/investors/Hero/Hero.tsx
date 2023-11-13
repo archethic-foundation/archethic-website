@@ -10,8 +10,7 @@ export default function Hero() {
           <u>Invest</u>
         </span>{' '}
         <span>in</span> <span>the</span><br />
-        <i /> <span>services</span> <span>of</span><br />
-        <span>tomorrow</span>
+        <i /> <span>services</span> <span>of</span><br /> <span>tomorrow</span>
       </T>
     </SectionHero>
   )
