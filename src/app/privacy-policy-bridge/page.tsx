@@ -17,7 +17,7 @@ export default function PrivacyPolicyBridge() {
           </T>
 
           <T as='h2' size='headline-medium'>
-            Last Updated: November 10, 2023
+            Last Updated: November 13, 2023
           </T>
 
           <div>
@@ -25,15 +25,15 @@ export default function PrivacyPolicyBridge() {
               <p><u><a href="https://github.com/archethic-foundation/bridge" target="_blank">Source code</a></u><br /><br /></p>
 
               <p>Archethic Bridge respects your privacy. We created this Privacy Policy to explain the types of information we may collect through the Archethic Bridge application (the “App”),
-                how we will use, disclose and protect this information once it is collected, and how you can opt in or opt out of some of our uses and disclosures of certain information relating to your use of the App.
+                how we will use, disclose and protect this information once it is collected, and how you can opt in or opt out of some of uses and disclosures of certain information relating to your use of the App.
                 <br /><br />
-                Please read this Privacy Policy carefully to understand our policies and practices regarding information that we collect through the App about you and your use of the App and how we will treat it.
+                Please read this Privacy Policy carefully to understand our ethics through regarding information that we collect through the App about you and your use of the App and how we will treat it.
                 If you do not agree with these policies and practices, do not download or use the App.</p>
               <br />
               <p><strong>Changes to This Privacy Policy</strong></p>
 
-              <p>We may update this Privacy Policy from time to time, in which case we will post the updated Privacy Policy at <u><a href="/privacy-policy-bridge">https://www.archethic.net/privacy-policy-bridge.</a></u>
-                The date on which this Privacy Policy has most recently been updated is indicated at the end of this Privacy Policy. In some cases, we may also tell you about changes by additional means, such as by informing you through an alert on the App.
+              <p>We may update this Privacy Policy regularly, we will post the updated Privacy Policy at <u><a href="/privacy-policy-bridge">https://www.archethic.net/privacy-policy-bridge.</a></u>
+                The most recent update date is indicated at the end of this Privacy Policy. In some cases, we may also tell you about changes by additional means, such as by informing you through an alert on the App.
                 Your continued use of the App after we make changes will be deemed to be your acceptance of those changes, so please check the Privacy Policy periodically for updates.</p>
               <br />
               <p><strong>What This Privacy Policy Applies To</strong></p>
@@ -41,7 +41,7 @@ export default function PrivacyPolicyBridge() {
               <p>This Privacy Policy applies only to the App and information that we collect through the App. This Privacy Policy DOES NOT, for example, apply to information that:
                 <br /><br />
                 You provide to, or is collected by, any third party.
-                <br />Our other apps and websites, and third parties, may have their own privacy policies, which we encourage you to read before using or providing information on, through or to them.
+                <br />Our other apps and websites, and third parties, may have their own privacy policies, which we encourage you to read before using or providing safe information, through or to them.
                 For example, when you use the App on your device, certain third parties, such as your mobile device manufacturer, your mobile service provider or the services you connect to may, separate from us, use automatic information collection technologies to collect information about you or your device, and that information they collect is not covered by this Privacy Policy.
                 We do not control these third parties’ data collection or tracking technologies or how they may be used.</p>
               <br />
@@ -53,7 +53,7 @@ export default function PrivacyPolicyBridge() {
               <br />
               <p><strong>Information We Collect and How We Collect It</strong></p>
 
-              <p>We may collect information from and about users of the App:<br /><br />Directly from you when you provide it to us in connection with the App<br />
+              <p>We may collect information from you, as users of the App and about you only:<br /><br />Directly from you when you provide it to us in connection with the App<br />
                 No personal information is required by us to use the app.<br />All private information you enter in the application (token public information, blockchain public information) are stored on your local device only and not transmitted to anyone.
                 <br /><br />
                 Automatically when you use the App.<br />When you use the App, we do not collect any type of personal information.<br />However, some information may be transmitted to third parties or become public for the need of proper service operation.
@@ -92,7 +92,7 @@ export default function PrivacyPolicyBridge() {
                 <br />
                 - For any other purpose disclosed by us when you provide the information;
                 <br />
-                - With your consent;
+                - With your unique and explicit consent;
                 <br />
                 - To comply with any court order, law or legal process, including to respond to any government or regulatory request;</p>
               <br />
