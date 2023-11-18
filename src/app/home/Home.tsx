@@ -41,6 +41,17 @@ export default function Home() {
   const updateSections = useHomePageStore((state) => state.updateSections)
 
   useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      setTimeout(() => {
+        const id = hash.replace("#", "");
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView();
+        }
+      }, 0);
+    }
+
     function handleResize() {
       if (!mainRef.current) return
 
