@@ -18,8 +18,8 @@ export default function VideoSection({ className }: VideoSectionProps) {
             <VideoCard
               videoSrc='/videos/Archethic-trailer-720p.mp4'
               image={{
-                src: '/images/home/video-cover-bg.webp',
-                srcRetina: '/images/home/video-cover-bg@2x.webp',
+                src: '/images/home/video-cover-bg.png',
+                srcRetina: '/images/home/video-cover-bg.png',
               }}
             />
           </div>
