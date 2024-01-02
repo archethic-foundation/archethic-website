@@ -15,8 +15,8 @@ export default function Bridge() {
       <Flex direction='row' smDirection='column' gap={80} smGap={40}>
         <Flex direction='column' gap={24} className={styles.content}>
           <Flex alignItems="center" direction="row" className={styles.bridgeHeader}>
-            <T as='h5' size='label-regular'>
-              Bridge - Testnet
+            <T as='h5'>
+              aeBridge - TESTNET
             </T>
             <img
               src='/images/ecosystem/up.png'

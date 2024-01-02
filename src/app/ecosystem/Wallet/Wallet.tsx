@@ -13,8 +13,8 @@ export default function Wallet() {
       <Flex direction='column' gap={48} smGap={24}>
         <Flex direction='column' gap={24} smGap={16}>
           <Flex alignItems="center" direction="row" className={styles.walletHeader}>
-            <T as='h5' size='label-regular'>
-              Wallet - Mainnet
+            <T as='h5'>
+              aeWallet - MAINNET
             </T>
             <img
               src='/images/ecosystem/up.png'
@@ -35,7 +35,7 @@ export default function Wallet() {
         </Flex>
         <div className={styles.button}>
           <Button
-            label='Archethic Wallet'
+            label='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aeWallet&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
             variant='primary'
             to={InternalLinks.Wallet}
             target='_blank'

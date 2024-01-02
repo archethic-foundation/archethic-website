@@ -18,8 +18,8 @@ export default function Download() {
       <MaxWidthLayoutContainer className={styles.downloadContainer}>
         <Flex direction='column' gap={32} smGap={24}>
           <Flex direction='column' gap={24} smGap={8}>
-            <T as='h5' size='label-regular'>
-              Archethic Wallet
+            <T as='h5'>
+              aeWallet - MAINNET
             </T>
             <T
               as='h2'

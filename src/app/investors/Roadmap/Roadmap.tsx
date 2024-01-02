@@ -29,7 +29,7 @@ export default function Roadmap() {
               Core services
             </T>
             <T as='div' size='headline-medium-small'>
-              Ecosytem testing:<br />Native DEX, Bridge, Staking Features, AEWeb
+              Ecosytem testing:<br />aeSwap, aeBridge, yield farming Features, aeHosting
             </T>
             <br />
             <T as='h4' size='display-extrasmall' weight='bold'>
@@ -45,7 +45,7 @@ export default function Roadmap() {
               Core services
             </T>
             <T as='div' size='headline-medium-small'>
-              Ecosytem deployment:<br />Native DEX, Bridge, Staking Features, AEWeb
+              Ecosytem deployment:<br />aeSwap, aeBridge, yield farming Features, aeHosting
             </T>
             <br />
             <T as='h4' size='display-extrasmall' weight='bold'>
