@@ -12,8 +12,8 @@ export default function Aeweb() {
       <Flex gap={80} smGap={40}>
         <Flex gap={16}>
           <Flex alignItems="center" direction="row" className={styles.aewebHeader}>
-            <T as='h5' size='label-regular'>
-              AEWeb - Testnet
+            <T as='h5'>
+              aeHosting - TESTNET
             </T>
             <img
               src='/images/ecosystem/up.png'

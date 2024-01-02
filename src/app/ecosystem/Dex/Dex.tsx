@@ -15,11 +15,11 @@ export default function Dex() {
       <Parallax speed={0.8}>
         <MaxWidthLayoutContainer>
           <Flex gap={24} smGap={16} alignItems='center' className={styles.dexContainer}>
-            <T as='h5' size='label-regular'>
-              DEX
+            <T as='h5'>
+              aeSwap
             </T>
             <T as='h2' size='display-large' weight='semibold'>
-              SWAP assets on-chain, add liquidity & access LP staking.
+              SWAP assets on-chain, add liquidity & access yield farming.
             </T>
             <T as='h5' size='label-regular'>
               Soon
