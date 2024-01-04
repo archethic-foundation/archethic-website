@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useWindowSize } from 'react-use'
 import { useHomePageStore } from '@/app/home/Home'
 import { ExternalLinks, InternalLinks } from '@/config'
@@ -12,6 +12,7 @@ import { useIntersectionObserver } from '@/utils/hooks/useIntersectionObserver'
 import { useScroll } from '@/utils/hooks/useScroll'
 import { findXPercentage } from '@/utils/maths'
 import classNames from 'classnames'
+import Banner from '@/app/home/Banner/Banner'
 import gsap from 'gsap'
 
 import styles from './Hero.module.scss'
@@ -21,6 +22,10 @@ interface HeroProps {
 }
 
 export default function Hero({ className }: HeroProps) {
+
+  const [bannerVisible, setBannerVisible] = useState(true);
+  const lastScrollY = useRef(window.scrollY);
+
   const scrollY = useScroll()
   const sections = useHomePageStore((state) => state.sections)
   const wrapperRef = useRef<HTMLDivElement>(null)
@@ -32,6 +37,25 @@ export default function Hero({ className }: HeroProps) {
   })
   const inView = !!entry?.isIntersecting
   const titleRef = useRef<HTMLDivElement>(null)
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY.current) {
+        setBannerVisible(false);
+      } else {
+        setBannerVisible(true);
+      }
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     if (!sections) {
@@ -93,7 +117,9 @@ export default function Hero({ className }: HeroProps) {
           </div>
         </MaxWidthLayoutContainer>
         {/*<span className={styles.mobileBlackBgShape} />*/}
+
       </section>
+      <Banner className={bannerVisible ? 'open' : ''} />
 
       <span className={styles.heroBlueBgShape} ref={bgColorRef} />
       <div className={styles.bgShapes} ref={shapesRef}>
