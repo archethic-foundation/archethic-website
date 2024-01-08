@@ -24,7 +24,7 @@ interface HeroProps {
 export default function Hero({ className }: HeroProps) {
 
   const [bannerVisible, setBannerVisible] = useState(true);
-  const lastScrollY = useRef(window.scrollY);
+  const lastScrollY = useRef(0);
 
   const scrollY = useScroll()
   const sections = useHomePageStore((state) => state.sections)
@@ -40,6 +40,8 @@ export default function Hero({ className }: HeroProps) {
 
 
   useEffect(() => {
+    lastScrollY.current = window.scrollY;
+
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       if (currentScrollY > lastScrollY.current) {
