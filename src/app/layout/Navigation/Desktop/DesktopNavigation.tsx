@@ -37,7 +37,7 @@ function NavDropdown() {
           [styles.isOpen]: isOpen,
         })}
       >
-        <Link href={InternalLinks.WhitePaper} target="_blank" className={styles.navDropdown_link}>
+        <Link href={InternalLinks.WhitePaperNew} target="_blank" className={styles.navDropdown_link}>
           White Paper <ArrowLeftRotatedIcon />
         </Link>
         <Link href={InternalLinks.TechnicalPaper} target="_blank" className={styles.navDropdown_link}>
