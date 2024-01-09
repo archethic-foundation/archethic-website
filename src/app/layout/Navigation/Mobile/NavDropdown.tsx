@@ -30,7 +30,7 @@ export function NavDropdown() {
           [styles.isOpen]: isOpen,
         })}
       >
-        <Link href={InternalLinks.WhitePaper} className={styles.navDropdown_link}>
+        <Link href={InternalLinks.WhitePaperNew} className={styles.navDropdown_link}>
           White Paper <ArrowLeftRotatedIcon />
         </Link>
         <Link href={InternalLinks.TechnicalPaper} className={styles.navDropdown_link}>
