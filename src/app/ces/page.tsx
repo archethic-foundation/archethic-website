@@ -6,7 +6,7 @@ import { MaxWidthLayoutContainer } from '@/ui/MaxWidthLayoutContainer/MaxWidthLa
 import { T } from '@/ui/Text/Text'
 import Link from 'next/link'
 import styles from './page.module.scss'
-import { InternalLinks } from '@/config'
+import { ExternalLinks, InternalLinks } from '@/config'
 import { ArrowLeftRotatedIcon } from '@/ui/_assets/icons/ArrowLeftRotatedIcon'
 
 export default function PrivacyPolicyWallet() {
@@ -33,12 +33,15 @@ export default function PrivacyPolicyWallet() {
             <T as='div' size='headline-medium-small'>
               <Link href={InternalLinks.WhitePaperNew} target="_blank" className={styles.navDropdown_link}>Find our new <u>White Paper</u>&nbsp;here <ArrowLeftRotatedIcon />
               </Link>
+              <br />
+              <Link href={ExternalLinks.CESInfo} target="_blank" className={styles.navDropdown_link}>More information&nbsp;<ArrowLeftRotatedIcon />
+              </Link>
             </T>
           </div>
           <div>
             <T as='div' size='headline-medium-small'>
               <Link href={InternalLinks.ContactUsCES} prefetch={false}>
-                Contact us at <u>ce2024@archethic.net</u>&nbsp;<ArrowLeftRotatedIcon />
+                Contact us at <u>ces2024@archethic.net</u>&nbsp;<ArrowLeftRotatedIcon />
               </Link>
             </T>
           </div>

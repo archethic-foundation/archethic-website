@@ -36,6 +36,7 @@ export enum InternalLinks {
   Ecosystem = '/ecosystem',
   Investors = '/investors',
   Governance = '/governance',
+  CES = '/ces',
   ContactUs = 'mailto:contact@archethic.net',
   ContactUsCES = 'mailto:ces2024@archethic.net',
   WhitePaper = '/ARCHEthic_WhitePaper.pdf',
@@ -64,6 +65,7 @@ export enum ExternalLinks {
   WalletAndroidDL = 'https://play.google.com/store/apps/details?id=net.archethic.archethic_wallet',
   WalletWindowsDL = 'https://apps.microsoft.com/store/detail/archethic-wallet/9N33TTVRJZXF',
   WalletLinuxDL = 'https://github.com/archethic-foundation/archethic-wallet/releases/',
+  CESInfo = 'https://medium.com/archethic/the-future-of-no-code-innovation-powered-by-archethic-9a82d19da436/',
   // Links
   Documentation = 'https://wiki.archethic.net/',
   Bridge = 'https://bridge.archethic.net',
