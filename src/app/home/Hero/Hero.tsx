@@ -12,7 +12,7 @@ import { useIntersectionObserver } from '@/utils/hooks/useIntersectionObserver'
 import { useScroll } from '@/utils/hooks/useScroll'
 import { findXPercentage } from '@/utils/maths'
 import classNames from 'classnames'
-import Banner from '@/app/home/Banner/Banner'
+//import Banner from '@/app/home/Banner/Banner'
 import gsap from 'gsap'
 
 import styles from './Hero.module.scss'
@@ -121,7 +121,7 @@ export default function Hero({ className }: HeroProps) {
         {/*<span className={styles.mobileBlackBgShape} />*/}
 
       </section>
-      <Banner className={bannerVisible ? 'open' : ''} />
+      {/*<Banner className={bannerVisible ? 'open' : ''} />*/}
 
       <span className={styles.heroBlueBgShape} ref={bgColorRef} />
       <div className={styles.bgShapes} ref={shapesRef}>
