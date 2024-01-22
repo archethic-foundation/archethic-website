@@ -12,7 +12,7 @@ interface VideoSectionProps {
 export default function VideoSection({ className }: VideoSectionProps) {
   return (
     <div className={styles.container}>
-      <Parallax speed={0.5} id='videoCard'>
+      <Parallax speed={0} id='videoCard'>
         <MaxWidthLayoutContainer className={className}>
           <div>
             <VideoCard

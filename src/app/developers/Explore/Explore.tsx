@@ -39,7 +39,7 @@ export default function Explore() {
         </Flex>
       </MaxWidthLayoutContainer>
 
-      <Parallax speed={0.8}>
+      <Parallax speed={0}>
         <Flex gap={32} className={styles.content} alignItems='center' justifyContent={'center'}>
           <Flex gap={24} smGap={16} alignItems='center'>
             <T as='h5' size='label-regular'>
