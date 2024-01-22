@@ -40,6 +40,10 @@ $scrolling-nav-height: $layout-desktop-navigation-height - 30px;
     height: $scrolling-nav-height;
     opacity: 1 !important;
     backface-visibility: hidden;
+
+    @include small() {
+      margin-top: 15px;
+    }
   }
 
   &.state-scrolling {

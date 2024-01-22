@@ -47,7 +47,7 @@ $text-indentation: 80px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
-  padding-left: $text-indentation;
+  padding-left: 0;
 
   @include medium() {
     grid-template-columns: repeat(3, 1fr);
