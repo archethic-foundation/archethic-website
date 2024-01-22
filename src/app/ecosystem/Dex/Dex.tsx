@@ -12,7 +12,7 @@ import styles from './Dex.module.scss'
 export default function Dex() {
   return (
     <div className={styles.container}>
-      <Parallax speed={0.8}>
+      <Parallax speed={0}>
         <MaxWidthLayoutContainer>
           <Flex gap={24} smGap={16} alignItems='center' className={styles.dexContainer}>
             <T as='h5'>

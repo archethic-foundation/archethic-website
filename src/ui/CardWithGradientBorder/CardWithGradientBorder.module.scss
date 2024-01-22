@@ -5,7 +5,7 @@ $border-width: 4px;
 .container {
   @include transition(background, 1s);
   position: relative;
-  padding: 80px;
+  padding: 90px;
   border-radius: $border-radius-lg;
   background: rgba($color-neutral-0, 0.03);
 
