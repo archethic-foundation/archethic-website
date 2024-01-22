@@ -124,7 +124,7 @@ export default function Download() {
             to={ExternalLinks.WalletLastUpdate}
             onNewTab={true}
             label='Watch last update'
-            variant='secondary'
+            variant='tertiary'
             size='sm'
             icon={<ArrowRightIcon />}
           />
@@ -133,7 +133,7 @@ export default function Download() {
             to={InternalLinks.PrivacyPolicyWallet}
             onNewTab={true}
             label='Privacy Policy'
-            variant='secondary'
+            variant='tertiary'
             size='sm'
             icon={<ArrowRightIcon />}
           />

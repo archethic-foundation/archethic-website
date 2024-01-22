@@ -10,7 +10,7 @@
 .topWrapper {
   z-index: 6;
   padding-top: 140px;
-  padding-bottom: 160px;
+  padding-bottom: 70px;
 
   .topWrapperLightsLayer {
     position: absolute;
@@ -28,7 +28,7 @@
   @include small() {
     padding-top: 80px;
     overflow: hidden;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     margin-bottom: -110px;
   }
 }
@@ -46,10 +46,11 @@
 
     @include small() {
       background: transparent;
-  }
+    }
 
-  @include small() {
-    padding-bottom: 100px;
+    @include small() {
+      padding-bottom: 100px;
+    }
   }
 }
 
