@@ -3,7 +3,7 @@
 .container {
   position: relative;
   z-index: $index-section-content;
-  padding-bottom: 100px;
+  padding-bottom: 90px;
 
   @include largeUp() {
     .text {
