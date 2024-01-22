@@ -1,6 +1,7 @@
 import React from 'react'
 import Biometrics from '@/app/governance/Biometrics/Biometrics'
 import Careers from '@/app/governance/Careers/Careers'
+import KeyFeatures2 from '@/app/home/KeyFeatures2/KeyFeatures2'
 import Governance from '@/app/governance/Governance/Governance'
 import Hero from '@/app/governance/Hero/Hero'
 import Flex from '@/ui/Flex/Flex'
@@ -14,6 +15,7 @@ export default function About() {
   return (
     <>
       <Hero />
+      <KeyFeatures2 />
       <div className={styles.topWrapper}>
         <Governance />
 
@@ -32,14 +34,21 @@ export default function About() {
         <Careers />
 
         <BackgroundShape
+          variant='gradient-light-to-dark-blue'
+          style={{
+            top: '-100px',
+            height: 'calc(100% + 150px)',
+          }}
+        />
+        {/* <BackgroundShape
           lightsLayer={<span className={styles.middleWrapperLightsLayer} />}
           variant='purple'
           className={styles.backgroundShape}
           style={{
             top: '0',
-            height: 'calc(100% + 250px)',
+            height: 'calc(100% + 600px)',
           }}
-        />
+        /> */}
       </Flex>
 
       <SectionJoinUs />

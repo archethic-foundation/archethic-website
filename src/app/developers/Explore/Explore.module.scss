@@ -9,7 +9,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 100px;
 }
 
 .cards {
@@ -35,10 +34,12 @@
   z-index: 2;
   max-width: 844px;
   text-align: center;
-  height: 70vh;
+  height: 40vh;
 
   @include small() {
-    height: 50vh;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    height: 40vh;
 
     h2 {
       max-width: 400px;

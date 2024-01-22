@@ -24,7 +24,7 @@
 
 .color {
   &-solid-raspberry {
-    background: $color-brand-raspberry-300;
+    background: $color-brand-raspberry-500;
     height: calc(var(--width, 800px) * 1.05);
 
     @include small() {
@@ -35,11 +35,11 @@
   &-gradient-soft-plum {
     height: calc(var(--width, 800px) * 1.4);
 
-    background: radial-gradient(
-      45.3% 41.62% at 45.67% 49.93%,
-      rgba(153, 72, 247, 0.5) 0%,
-      rgba(153, 72, 247, 0) 71.35%,
-      rgba(153, 72, 247, 0) 100%
+    background: linear-gradient(
+      181deg,
+      rgba(16, 8, 38, 0.75) 0%,
+      rgba(16, 8, 38, 0.3) 31%,
+      rgba(16, 8, 38, 0) 100%
     );
 
     @include small() {
@@ -50,11 +50,11 @@
   &-gradient-plum {
     height: calc(var(--width, 800px) * 1.4);
 
-    background: radial-gradient(
-      39.7% 28.94% at 45.67% 20%,
-      rgba(153, 72, 247, 0.5) 0%,
-      rgba(153, 72, 247, 0) 70%,
-      rgba(153, 72, 247, 0) 100%
+    background: linear-gradient(
+      181deg,
+      rgba(16, 8, 38, 0.75) 0%,
+      rgba(16, 8, 38, 0.3) 31%,
+      rgba(16, 8, 38, 0) 100%
     );
 
     @include small() {
@@ -63,12 +63,11 @@
   }
 
   &-gradient-raspberry-purple {
-    background: radial-gradient(
-      circle,
-      rgba(172, 16, 246, 0.8449973739495799) 0%,
-      rgba(28, 17, 82, 1) 48%,
-      rgba(28, 17, 82, 0.7693671218487395) 71%,
-      rgba(28, 17, 82, 0) 100%
+    background: linear-gradient(
+      181deg,
+      rgba(16, 8, 38, 0.75) 0%,
+      rgba(16, 8, 38, 0.3) 31%,
+      rgba(16, 8, 38, 0) 100%
     );
     width: calc(var(--width, 800px) * 1.3);
 

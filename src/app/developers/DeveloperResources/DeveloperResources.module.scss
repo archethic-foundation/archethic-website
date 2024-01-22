@@ -12,7 +12,7 @@
   gap: 72px;
 
   @include small() {
-    gap: 40px;
+    gap: 28px;
   }
 }
 
@@ -30,7 +30,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 28px;
-  width: 100%;
   position: relative;
   z-index: 6;
 
@@ -47,9 +46,30 @@ $shape-w: 600px;
   width: $shape-w;
   height: $shape-w;
   left: calc(50% - $shape-w / 2 - 300px);
-  top: calc(50% - $shape-w / 2 + 220px);
+  // top: calc(50% - $shape-w / 2 + 220px);
   pointer-events: none;
-  background: radial-gradient(circle, rgba(153, 72, 247, 1) 0%, rgba(17, 17, 40, 0) 80%);
+  background: radial-gradient(circle, $bright-purple-background 0%, rgba(17, 17, 40, 0) 60%);
+  opacity: 0.9;
+  filter: blur(50px);
+  z-index: 1;
+
+  @include small() {
+    width: 90vw;
+    height: 400px;
+    left: calc(50% - 60vw);
+    top: calc(50% - 70px);
+    filter: blur(40px);
+  }
+}
+
+.gradientShape2 {
+  position: absolute;
+  width: $shape-w;
+  height: $shape-w;
+  right: calc(50% - $shape-w / 2 - 300px);
+  // top: calc(50% - $shape-w / 2 + 220px);
+  pointer-events: none;
+  background: radial-gradient(circle, $bright-purple-background 0%, rgba(17, 17, 40, 0) 60%);
   opacity: 0.9;
   filter: blur(50px);
   z-index: 1;

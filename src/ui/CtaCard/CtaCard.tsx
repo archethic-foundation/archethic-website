@@ -59,8 +59,8 @@ export default function CtaCard({
 
       {variantColor === 'blueWaves' ? (
         <img
-          src='/images/components/ctaCard/blue-waves-bg.png'
-          srcSet={`/images/components/ctaCard/blue-waves-bg@2x.png 2x`}
+          src='/images/home/embrace-journey-card-building-bg.png'
+          srcSet={`/images/home/embrace-journey-card-building-bg@2x.png 2x`}
           alt={`Card Background - ${title}`}
           className={classNames(styles.image, styles.imageFull)}
         />

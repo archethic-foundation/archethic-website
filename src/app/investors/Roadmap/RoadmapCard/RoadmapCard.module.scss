@@ -6,7 +6,8 @@ $border-width: 3px;
   @include transition(background, 1s);
   position: relative;
   padding: 40px;
-  background-color: rgba($color-neutral-0, 0.03);
+  background: rgba(255, 255, 255, 0.11);
+  backdrop-filter: blur(20px);
   min-height: 280px;
   @include regular-border-radius;
 
@@ -23,7 +24,8 @@ $border-width: 3px;
     inset: 0;
     z-index: -1;
     padding: $border-width;
-    background: linear-gradient(45deg, $color-brand-raspberry-300, $color-brand-blue-400);
+    // background: linear-gradient(45deg, $color-brand-raspberry-500, $color-brand-blue-400);
+    border: 1px solid rgba($color-neutral-100, 0.1);
     -webkit-mask:
       linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);

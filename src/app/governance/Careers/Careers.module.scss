@@ -2,9 +2,11 @@
 
 .container {
   position: relative;
-  padding-left: 80px;
+  margin-top: 100px;
+  margin-bottom: 40px;
 
   @include small() {
+    margin-top: 50px;
     padding-left: 0;
   }
 }
@@ -26,23 +28,76 @@
 }
 
 .cards {
-  position: relative;
-  z-index: 6;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   gap: 28px;
+  width: 100%;
+  z-index: 7;
+
+  @include medium() {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 
   @include small-early() {
+    display: grid;
     grid-template-columns: 100%;
-    width: 100%;
 
-    >div {
+    > article {
       width: 100%;
+      max-width: 100%;
     }
   }
 
   @include small() {
-    grid-template-columns: 100%;
+    flex-direction: column;
     gap: 16px;
+  }
+}
+
+$shape-w: 600px;
+
+.gradientShape {
+  position: absolute;
+  width: $shape-w;
+  height: $shape-w;
+  top: 120px;
+  left: calc(50% - $shape-w / 2 - 300px);
+  // top: calc(50% - $shape-w / 2 + 220px);
+  pointer-events: none;
+  background: radial-gradient(circle, $bright-purple-background 0%, rgba(17, 17, 40, 0) 60%);
+  opacity: 0.9;
+  filter: blur(50px);
+  z-index: 6;
+
+  @include small() {
+    width: 90vw;
+    height: 400px;
+    left: calc(50% - 60vw);
+    top: calc(50% - 70px);
+    filter: blur(40px);
+  }
+}
+
+.gradientShape2 {
+  position: absolute;
+  width: $shape-w;
+  height: $shape-w;
+  top: 120px;
+  right: calc(50% - $shape-w / 2 - 300px);
+  // top: calc(50% - $shape-w / 2 + 220px);
+  pointer-events: none;
+  background: radial-gradient(circle, $bright-purple-background 0%, rgba(17, 17, 40, 0) 60%);
+  opacity: 0.9;
+  filter: blur(50px);
+  z-index: 6;
+
+  @include small() {
+    width: 90vw;
+    height: 400px;
+    left: calc(50% - 60vw);
+    top: calc(50% - 70px);
+    filter: blur(40px);
   }
 }

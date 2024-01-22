@@ -2,7 +2,8 @@
 
 .container {
   @include transition(0.8s, background-color, border-radius);
-  background-color: $color-brand-blue-400;
+  background-color: $bright-purple-background;
+  border: 1px solid $bright-purple-border;
   border-radius: $border-radius-lg;
   width: 72px;
   height: 72px;
@@ -18,8 +19,8 @@
 
   &:not([disabled]) {
     @include hover() {
-      border-radius: 40px;
-      background-color: $color-brand-blue-800;
+      background-color: $bright-purple-hover-background;
+      border: 1px solid $bright-purple-hover-border;
     }
   }
 }

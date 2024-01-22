@@ -19,9 +19,15 @@ $scrolling-nav-height: $layout-desktop-navigation-height - 30px;
   top: 0;
   left: 0;
   width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  // border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   position: fixed;
   z-index: $index-main-navigation;
+  background: linear-gradient(
+    180deg,
+    rgba(16, 8, 38, 0.8534007352941176) 0%,
+    rgba(16, 8, 38, 0.7245491946778712) 30%,
+    rgba(16, 8, 38, 0) 100%
+  );
 
   &.state-initial {
   }
@@ -30,8 +36,9 @@ $scrolling-nav-height: $layout-desktop-navigation-height - 30px;
   &.state-scrolling {
     padding-top: 15px;
     padding-bottom: 15px;
+    backdrop-filter: blur(20px);
     height: $scrolling-nav-height;
-    backdrop-filter: blur(10px);
+    opacity: 1 !important;
     backface-visibility: hidden;
   }
 
@@ -79,11 +86,11 @@ $scrolling-nav-height: $layout-desktop-navigation-height - 30px;
       bottom: -36px;
       width: 0;
       height: 1px;
-      background-color: $color-brand-raspberry-300;
+      background-color: $color-brand-raspberry-500;
     }
 
     @include hover() {
-      color: $color-brand-raspberry-300;
+      color: $color-brand-raspberry-500;
       &:after {
         width: 100%;
       }
@@ -120,7 +127,7 @@ $scrolling-nav-height: $layout-desktop-navigation-height - 30px;
   @include text-headline-medium-small();
 
   &.active {
-    color: $color-brand-raspberry-300;
+    color: $color-brand-raspberry-500;
     pointer-events: none;
   }
 }
@@ -144,7 +151,9 @@ $scrolling-nav-height: $layout-desktop-navigation-height - 30px;
     position: absolute;
     top: calc(100% + 5px);
     left: 0;
-    background-color: $color-neutral-900;
+    background-color: $pale-transparent-background;
+    border: 1px solid $pale-transparent-border !important;
+    backdrop-filter: blur(20px);
     border-radius: 12px;
     padding: 20px;
     opacity: 0;

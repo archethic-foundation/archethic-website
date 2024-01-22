@@ -3,11 +3,13 @@
 .container {
   position: relative;
   padding: 40px;
-  background-color: $color-brand-blue-800;
+  background: $pale-transparent-background;
+  border: 1px solid $pale-transparent-border;
+  backdrop-filter: blur(20px);
   border-radius: $border-radius-sm;
   background-position: bottom right;
   background-size: 550px;
-  background-image: url('/images/shared/line-wave-bg@2x.png');
+  // background-image: url('/images/shared/line-wave-bg@2x.png');
   background-repeat: no-repeat;
 
   @include small-early() {

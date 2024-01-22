@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import styles from './CircleBlurredShape.module.scss'
 
 interface CircleBlurredShapeProps {
-  color?: 'solid-raspberry' | 'gradient-plum' | 'gradient-soft-plum' | 'gradient-raspberry-purple'
+  color?: 'solid-raspberry' | '-plugradientm' | 'gradient-soft-plum' | 'gradient-raspberry-purple'
   style: {
     width?: string
     index?: number

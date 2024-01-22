@@ -13,13 +13,8 @@ export default function Aeweb() {
         <Flex gap={16}>
           <Flex alignItems="center" direction="row" className={styles.aewebHeader}>
             <T as='h5'>
-              aeHosting - TESTNET
+              aeHosting - TESTNET 🟢
             </T>
-            <img
-              src='/images/ecosystem/up.png'
-              alt='UP'
-              className={styles.aewebImage}
-            />
           </Flex>
           <T as='h2' size='display-large' weight='semibold'>
             Decentralized Web Hosting

@@ -16,12 +16,10 @@ $border-width: 4px;
     border-radius: $border-radius-lg;
     inset: 0;
     z-index: -1;
-
     padding: $border-width;
-    background: linear-gradient(45deg, $color-brand-raspberry-300, $color-brand-blue-400);
-    -webkit-mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
+    background: $pale-transparent-background;
+    border: 1px solid $pale-transparent-border;
+    backdrop-filter: blur(20px);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
   }

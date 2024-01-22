@@ -8,7 +8,9 @@
 
 .container {
   position: relative;
-  background-color: $color-brand-purple-400;
+  background-color: rgba($color-brand-purple-500, 0.1);
+  border: 1px solid rgba($color-brand-purple-500, 0.2);
+  backdrop-filter: blur(20px);
   overflow: hidden;
   width: 100%;
   padding: 110px 120px;

@@ -34,7 +34,7 @@ export default function Careers() {
                 to={ExternalLinks.JoinOurTeam}
                 onNewTab={true}
                 label='Learn more'
-                variant='secondary'
+                variant='tertiary'
                 size='sm'
                 icon={<ArrowRightIcon />}
               />
@@ -65,6 +65,8 @@ export default function Careers() {
               }}
             />
           </div>
+          <span className={styles.gradientShape} />
+          <span className={styles.gradientShape2} />
 
           <CircleBlurredShape
             color='solid-raspberry'

@@ -14,13 +14,8 @@ export default function Wallet() {
         <Flex direction='column' gap={24} smGap={16}>
           <Flex alignItems="center" direction="row" className={styles.walletHeader}>
             <T as='h5'>
-              aeWallet - MAINNET
+              aeWallet - MAINNET 🟢
             </T>
-            <img
-              src='/images/ecosystem/up.png'
-              alt='UP'
-              className={styles.walletImage}
-            />
           </Flex>
           <T as='h2' size='display-large' weight='semibold'>
             Securely store, transfer and swap tokens and collectibles

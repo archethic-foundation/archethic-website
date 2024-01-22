@@ -11,21 +11,3 @@
   @include regular-border-radius;
   overflow: hidden;
 }
-
-.variant {
-  &-gradient-light-to-dark-blue {
-    background: $gradient-light-to-dark-blue;
-  }
-
-  &-gradient-dark-to-light-blue {
-    background: $gradient-dark-to-light-blue;
-  }
-
-  &-purple {
-    background: $color-brand-purple-800;
-  }
-
-  &-dark-purple {
-    background: $color-brand-purple-900;
-  }
-}

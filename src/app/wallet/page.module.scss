@@ -18,22 +18,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(35.63% 42.82% at 101.42% 69.71%,
-        rgba(213, 92, 255, 0.5) 0%,
-        rgba(32, 24, 68, 0) 100%),
-      radial-gradient(45.24% 55.59% at 4.76% 26.12%,
-        rgba(153, 72, 247, 0.45) 0%,
-        rgba(153, 72, 247, 0) 63.2%,
-        rgba(153, 72, 247, 0) 100%);
+    background: transparent;
 
     @include small() {
-      background: radial-gradient(91.68% 21.15% at 101.42% 69.71%,
-          rgba(213, 92, 255, 0.5) 0%,
-          rgba(32, 24, 68, 0) 100%),
-        radial-gradient(66.42% 23.64% at 4.76% 26.12%,
-          rgba(153, 72, 247, 0.45) 0%,
-          rgba(153, 72, 247, 0) 63.2%,
-          rgba(153, 72, 247, 0) 100%);
+      background: transparent;
     }
   }
 
@@ -54,17 +42,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(34.03% 24.69% at 52.08% 62.06%,
-        rgba(213, 92, 255, 0.35) 0%,
-        rgba(213, 92, 255, 0) 81.91%,
-        rgba(213, 92, 255, 0) 100%);
+    background: transparent;
 
     @include small() {
-      background: radial-gradient(66.76% 11.24% at 50% 53.94%,
-          rgba(213, 92, 255, 0.35) 0%,
-          rgba(213, 92, 255, 0) 81.91%,
-          rgba(213, 92, 255, 0) 100%);
-    }
+      background: transparent;
   }
 
   @include small() {

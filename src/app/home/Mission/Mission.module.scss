@@ -11,10 +11,11 @@
 
 .container {
   position: relative;
-  background-color: rgba($color-brand-purple-400, 0.88);
+  background-color: $pale-purple-background;
+  border: 1px solid $pale-purple-border;
+  backdrop-filter: blur(20px);
   border-radius: $border-radius-lg;
   overflow: hidden;
-  backdrop-filter: blur(3px);
 }
 
 .content {
@@ -30,19 +31,19 @@
   }
 
   @include small-early() {
-    gap: 24px;
+    gap: 28px;
   }
 
   @include small() {
     padding: 30px;
-    gap: 24px;
+    gap: 28px;
   }
 }
 
 .title {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 28px;
   max-width: 620px;
 
   @include small() {
@@ -67,7 +68,7 @@
   }
 
   @include small() {
-    gap: 24px;
+    gap: 28px;
     flex-direction: column;
 
     p {
@@ -83,17 +84,19 @@
   left: 0;
   top: 0;
   z-index: 0;
-  background: radial-gradient(
-    24.45% 47.58% at 9.96% 24%,
-    rgba(213, 92, 255, 0.3) 0%,
-    rgba(213, 92, 255, 0) 100%
+  background: linear-gradient(
+    181deg,
+    rgba(16, 8, 38, 0.75) 0%,
+    rgba(16, 8, 38, 0.3) 31%,
+    rgba(16, 8, 38, 0) 100%
   );
 
   @include small() {
-    background: radial-gradient(
-      83.67% 57.31% at 10.03% 7.8%,
-      rgba(213, 92, 255, 0.3) 0%,
-      rgba(213, 92, 255, 0) 100%
+    background: linear-gradient(
+      181deg,
+      rgba(16, 8, 38, 0.75) 0%,
+      rgba(16, 8, 38, 0.3) 31%,
+      rgba(16, 8, 38, 0) 100%
     );
   }
 }

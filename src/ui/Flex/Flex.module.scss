@@ -2,10 +2,10 @@
 
 .container {
   display: flex;
-  gap: var(--lgGap);
+  gap: 28px;
 
   @include small() {
-    gap: var(--smGap);
+    gap: 28px;
   }
 }
 

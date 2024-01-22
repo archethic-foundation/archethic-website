@@ -42,8 +42,8 @@ export default function EmbraceJourney({ className }: EmbraceJourneyProps) {
             }}
           />
         </div>
-
-        <span className={styles.bgShape} />
+        <span className={styles.gradientShape} />
+        <span className={styles.gradientShape2} />
       </div>
     </MaxWidthLayoutContainer>
   )

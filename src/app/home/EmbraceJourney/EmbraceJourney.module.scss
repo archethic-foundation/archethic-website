@@ -6,8 +6,15 @@
   flex-direction: column;
   align-items: center;
   gap: 72px;
-  padding: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 0;
+  padding-right: 0;
   z-index: 0;
+
+  @include medium() {
+    padding-top: 0;
+  }
 
   @include small() {
     gap: 40px;
@@ -19,7 +26,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 28px;
 
   @include small() {
     padding: 0 5px;
@@ -35,6 +42,10 @@
   gap: 28px;
   width: 100%;
 
+  > article {
+    z-index: 2;
+  }
+
   @include medium() {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -47,6 +58,7 @@
     > article {
       width: 100%;
       max-width: 100%;
+      z-index: 2;
     }
   }
 
@@ -56,19 +68,46 @@
   }
 }
 
-$shape-w: 900px;
-.bgShape {
+$shape-w: 600px;
+
+.gradientShape {
   position: absolute;
   width: $shape-w;
   height: $shape-w;
-  left: calc(50% - $shape-w / 2);
-  top: -30%;
-  opacity: 0.5;
-  z-index: -1;
-  background: radial-gradient(circle, rgba(213, 92, 255, 0.5) 0%, rgba(213, 92, 255, 0) 55%);
+  left: calc(50% - $shape-w / 2 - 300px);
+  // top: calc(50% - $shape-w / 2 + 220px);
   pointer-events: none;
+  background: radial-gradient(circle, $bright-purple-background 0%, rgba(17, 17, 40, 0) 60%);
+  opacity: 0.9;
+  filter: blur(50px);
+  z-index: 1;
 
   @include small() {
-    height: 150vh;
+    width: 90vw;
+    height: 400px;
+    left: calc(50% - 60vw);
+    top: calc(50% - 70px);
+    filter: blur(40px);
+  }
+}
+
+.gradientShape2 {
+  position: absolute;
+  width: $shape-w;
+  height: $shape-w;
+  right: calc(50% - $shape-w / 2 - 300px);
+  // top: calc(50% - $shape-w / 2 + 220px);
+  pointer-events: none;
+  background: radial-gradient(circle, $bright-purple-background 0%, rgba(17, 17, 40, 0) 60%);
+  opacity: 0.9;
+  filter: blur(50px);
+  z-index: 1;
+
+  @include small() {
+    width: 90vw;
+    height: 400px;
+    left: calc(50% - 60vw);
+    top: calc(50% - 70px);
+    filter: blur(40px);
   }
 }

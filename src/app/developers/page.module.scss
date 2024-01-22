@@ -26,12 +26,12 @@
 
 .middleWrapper {
   padding-top: 160px;
-  padding-bottom: 160px;
+  padding-bottom: 40px;
   z-index: 6;
 
   @include small() {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 80px;
+    padding-bottom: 0px;
   }
 }
 
@@ -43,7 +43,7 @@
   margin-bottom: -250px;
 
   @include small() {
-    padding-top: 120px;
+    padding-top: 80px;
     padding-bottom: 120px;
     margin-bottom: -140px;
   }

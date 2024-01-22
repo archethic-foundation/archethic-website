@@ -10,18 +10,19 @@
   height: calc(120vh * 4);
 }
 
-
 .keyFeaturesContainer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 10px;
-  background-color: $color-neutral-800;
+  background: $pale-transparent-background;
+  border: 1px solid $pale-transparent-border;
+  backdrop-filter: blur(20px);
   border-radius: $border-radius-lg;
   padding: 40px 48px;
   width: 640px;
   //box-shadow: 1px 3px 20px 12px #0000002e;
-  box-shadow: 1px 11px 20px 12px rgba(0, 0, 0, 0.1803921569);
+  box-shadow: 1px 11px 20px 12px rgba(0, 0, 0, 0.075);
 
   h1 {
     @include maxHeightScreen(600px) {
@@ -49,13 +50,13 @@
   flex-direction: column;
   justify-content: flex-start;
   gap: 80px;
-  height: 110vh;
+  height: 50vh;
   padding-top: 10vh;
   z-index: 2;
 
   @include small() {
     gap: 20px;
-    padding-top: 8vh;
+    padding-top: 9vh;
   }
 
   @include maxHeightScreen(550px) {
@@ -66,7 +67,7 @@
 .title {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 28px;
 
   @include small() {
     gap: 12px;
@@ -76,18 +77,19 @@
 .cards {
   display: flex;
   flex-direction: row;
-  gap: 32px;
+  gap: 28px;
 
   @include small() {
     flex-direction: column;
-    gap: 24px;
+    gap: 28px;
   }
 
   .cardsIndex {
     .cardsIndexNumber {
       position: relative;
       z-index: 2;
-      background-color: rgba($color-brand-raspberry-300, 0.2);
+      background-color: $bright-purple-border;
+      border: 1px solid $bright-purple-border;
       padding: 24px;
       border-radius: $border-radius-lg;
       width: 76px;
@@ -176,11 +178,13 @@
   height: 100vh;
   left: 0;
   top: 0;
-  background: linear-gradient(180deg,
-      rgb(19 19 19 / 50%) 2.24%,
-      rgb(64 39 162 / 40%) 46.77%,
-      rgb(64 39 162 / 10%) 67.48%,
-      #131313 101.65%);
+  // background: linear-gradient(180deg,
+  //     rgb(19 19 19 / 50%) 2.24%,
+  //     rgb(64 39 162 / 40%) 46.77%,
+  //     rgb(64 39 162 / 10%) 67.48%,
+  //     #131313 101.65%);
+  background-color: $darkened-background;
+  backdrop-filter: blur(50px);
   opacity: 1;
   z-index: $index-bg-shapes;
 }
@@ -192,11 +196,12 @@
   left: 0;
   top: 0;
   z-index: $index-bg-shapes;
-  background: radial-gradient(26.41% 29.16% at 68.68% 45.24%,
-      rgba(213, 92, 255, 0.6) 0%,
-      rgba(32, 24, 68, 0) 100%)
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-  ;
+  background: linear-gradient(
+    181deg,
+    rgba(16, 8, 38, 0.75) 0%,
+    rgba(16, 8, 38, 0.3) 31%,
+    rgba(16, 8, 38, 0) 100%
+  );
   mix-blend-mode: hard-light;
   opacity: 0.5;
 }

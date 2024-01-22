@@ -87,21 +87,36 @@ export default function KeyFeatures({ className }: KeyFeaturesProps) {
       .to(card2Ref.current, {
         y: 0,
       })
-      .to(
-        card1Ref.current,
-        { startAt: { opacity: 1, scale: 1 }, opacity: 0, scale: outScale },
+      .to(card1Ref.current, {
+        startAt: { opacity: 1, scale: 1 },
+        opacity: 0,
+        scale: outScale
+      },
         outDelay
       )
-      .from(card3Ref.current, { y: outY })
+      .from(card3Ref.current, {
+        y: outY,
+      })
       .to(card3Ref.current, {
         y: 0,
       })
-      .to(card2Ref.current, { opacity: 0, scale: outScale }, outDelay)
-      .from(card4Ref.current, { y: outY })
+      .to(card2Ref.current, {
+        opacity: 0,
+        scale: outScale
+      },
+        outDelay
+      )
+      .from(card4Ref.current, {
+        y: outY
+      })
       .to(card4Ref.current, {
         y: 0,
       })
-      .to(card3Ref.current, { opacity: 0, scale: outScale }, outDelay)
+      .to(card3Ref.current, {
+        opacity: 0,
+        scale: outScale },
+        outDelay
+        )
   }, [])
 
   useIsomorphicLayoutEffect(() => {
