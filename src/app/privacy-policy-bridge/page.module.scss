@@ -2,7 +2,7 @@
 
 .container {
   max-width: 842px;
-  margin: 200px auto 100px auto;
+  margin: 200px auto -20px auto;
 
   @include small() {
     margin-top: 100px;
