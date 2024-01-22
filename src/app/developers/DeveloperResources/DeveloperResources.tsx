@@ -41,6 +41,7 @@ export default function DeveloperResources() {
         />
       </div>
       <span className={styles.gradientShape} />
+      <span className={styles.gradientShape2} />
     </MaxWidthLayoutContainer>
   )
 }

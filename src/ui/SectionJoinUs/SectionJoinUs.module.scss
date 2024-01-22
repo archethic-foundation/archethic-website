@@ -10,10 +10,12 @@
   z-index: 1;
   width: 100%;
   border-radius: $border-radius-lg;
-  background: $color-brand-purple-400;
+  background-color: rgba($color-brand-purple-500, 0.1);
+  border: 1px solid rgba($color-brand-purple-500, 0.2);
+  backdrop-filter: blur(20px);
   padding: 130px 100px;
   display: grid;
-  gap: 32px;
+  gap: 28px;
 
   @include mediumUp() {
     grid-template-columns: 1fr 1.5fr;

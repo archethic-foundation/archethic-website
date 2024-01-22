@@ -7,7 +7,7 @@
   u {
     position: relative;
     font-weight: $typography-font-weight-semibold;
-    background: $gradient-pink-purple-500;
+    background: $color-brand-blue-400;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -35,7 +35,7 @@
     color: inherit;
   }
   &-raspberry-300 {
-    color: $color-brand-raspberry-300;
+    color: $color-brand-raspberry-500;
   }
   &-neutral-500 {
     color: $color-neutral-500;

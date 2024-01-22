@@ -16,13 +16,8 @@ export default function Bridge() {
         <Flex direction='column' gap={24} className={styles.content}>
           <Flex alignItems="center" direction="row" className={styles.bridgeHeader}>
             <T as='h5'>
-              aeBridge - TESTNET
+              aeBridge - TESTNET 🟢
             </T>
-            <img
-              src='/images/ecosystem/up.png'
-              alt='UP'
-              className={styles.bridgeImage}
-            />
           </Flex>
           <T as='h2' size='display-large' weight='semibold' className={styles.title}>
             Discover a{' '}

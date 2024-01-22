@@ -23,7 +23,6 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 28px;
   z-index: 1;
-  padding: 0 80px;
 
   @include small-early() {
     padding: 0;
@@ -31,7 +30,7 @@
 
   @include small() {
     grid-template-columns: 100%;
-    gap: 24px;
+    gap: 28px;
     padding: 0;
   }
 }
@@ -55,11 +54,5 @@
     top: -120px;
     height: calc(100% + 400px);
     border-radius: $border-radius-sm;
-    background: radial-gradient(
-      288.16% 37.55% at 49.06% 48.89%,
-      rgba(213, 92, 255, 0.15) 0%,
-      rgba(213, 92, 255, 0) 66.37%,
-      rgba(213, 92, 255, 0) 100%
-    );
   }
 }

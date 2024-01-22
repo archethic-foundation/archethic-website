@@ -28,7 +28,7 @@ export default function CirculatingSupply() {
             to={InternalLinks.Tokenomics}
             target='_blank'
             label='Tokenomics'
-            variant='secondary'
+            variant='tertiary'
             size='sm'
             icon={<ArrowRightIcon />}
           />

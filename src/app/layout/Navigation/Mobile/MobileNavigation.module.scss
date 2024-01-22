@@ -24,13 +24,12 @@
     content: ' ';
     width: 100%;
     height: 1px;
-    background-color: rgba(255, 255, 255, 0.2);
     opacity: 1;
   }
 
   // Scroll Event
   &.event-scrolling {
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     backface-visibility: hidden;
   }
 
@@ -39,6 +38,7 @@
     @include transition(0.8s, height);
     transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
     height: 100vh;
+
     &:before {
       opacity: 0;
     }
@@ -82,10 +82,12 @@
         line:nth-child(1) {
           transform: rotate(43deg) translate(4px, -4px);
         }
+
         line:nth-child(2) {
           opacity: 0;
           transform: translateX(5px);
         }
+
         line:nth-child(3) {
           transform: rotate(-43deg) translate(-10px, -1px);
         }
@@ -107,14 +109,15 @@
   gap: 40px;
   padding: 20px;
 
-  > * {
+  >* {
     opacity: 0;
     transform: translateY(20px);
   }
 
   &.showButtons {
-    > * {
+    >* {
       @include transition(0.8s, opacity, transform);
+
       @for $i from 1 to 10 {
         &:nth-child(#{$i}) {
           transition-delay: $i * 0.1s;
@@ -137,6 +140,9 @@
   width: 100vw;
   opacity: 0;
   z-index: -1;
+  background-color: $darkened-background;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
 
   &.showBg {
     @include transition(1s, opacity);
@@ -151,7 +157,7 @@
   @include text-headline-heavy();
 
   &.active {
-    color: $color-brand-raspberry-300;
+    color: $color-brand-raspberry-500;
     pointer-events: none;
   }
 }

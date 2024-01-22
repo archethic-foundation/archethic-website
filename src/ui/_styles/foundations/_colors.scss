@@ -1,72 +1,75 @@
 // Neutral
-$color-neutral-0:   #FFFFFF;
-$color-neutral-40:  #F8F9FA;
-$color-neutral-50:  #F5F6F8;
-$color-neutral-100: #F1F2F5;
-$color-neutral-200: #EAEDF0;
-$color-neutral-300: #D7D7D7;
-$color-neutral-400: #B1B1B1;
-$color-neutral-500: #8F8F8F;
-$color-neutral-600: #6F6F6F;
-$color-neutral-700: #4F4F4F;
-$color-neutral-800: #202020;
-$color-neutral-900: #131313;
+$color-neutral-0:   hsl(0, 0%, 100%);
+$color-neutral-10:   hsla(0, 0%, 100%, 0.5);
+$color-neutral-40:  hsl(210, 0%, 96%);
+$color-neutral-50:  hsl(220, 0%, 95%);
+$color-neutral-100: hsl(225, 0%, 90%);
+$color-neutral-200: hsl(210, 0%, 80%);
+$color-neutral-300: hsl(0, 0%, 70%);
+$color-neutral-400: hsl(0, 0%, 60%);
+$color-neutral-500: hsl(0, 0%, 50%);
+$color-neutral-600: hsl(0, 0%, 40%);
+$color-neutral-700: hsl(0, 0%, 30%);
+$color-neutral-800: hsl(0, 0%, 20%);
+$color-neutral-850: hsl(0, 0%, 15%);
+$color-neutral-900: hsl(0, 0%, 10%);
 
 // Brand
 // - Purple
-$color-brand-purple-50:  #ECE9F6;
-$color-brand-purple-200: #B3A9DA;
-$color-brand-purple-300: #8C7DC7;
-$color-brand-purple-400: #4027A2;
-$color-brand-purple-800: #201844;
-$color-brand-purple-900: #140A2F;
+$color-brand-purple-500: hsl(250, 50%, 50%);                    //#5540bf
+$color-brand-purple-800: hsl(250, 50%, 20%);                    //#22194d
 // - Blue
-$color-brand-blue-50:  #EEEAFD;
-$color-brand-blue-200: #CCC1FA;
-$color-brand-blue-300: #896DF2;
-$color-brand-blue-400: #562FED;
-$color-brand-blue-800: #39147F;
-// - Plum
-$color-brand-plum-50:  #F5EDFE;
-$color-brand-plum-200: #CCA4FB;
-$color-brand-plum-300: #9948F7;
-$color-brand-plum-400: #7A3AC6;
-$color-brand-plum-800: #3D1D63;
+$color-brand-blue-400: hsl(255, 85%, 60%);                      //#6e42f0
 // - Raspberry
-$color-brand-raspberry-50:  #FBEFFF;
-$color-brand-raspberry-200: #EAAEFF;
-$color-brand-raspberry-300: #D55CFF;
-$color-brand-raspberry-400: #9816C5;
-$color-brand-raspberry-800: #552566;
+$color-brand-raspberry-50:  hsl(275, 50%, 95%);                 //#f3ecf9
+$color-brand-raspberry-500: hsl(275, 50%, 50%);                 //#8a40bf
+
+// Canvas
+$canvas-background: hsl(250, 100%, 2.5%);                       //#02000d
+$darkened-background: hsla(250, 100%, 2.5%, 0.50);              //#02000d80
+
+// Cards
+// - Transparent
+$pale-transparent-background: hsla(0, 0%, 100%, 0.1);           //#ffffff1a
+$pale-transparent-border: hsla(0, 0%, 90%, 0.1);                //#e6e6e61a
+$pale-transparent-hover-background: hsla(0, 0%, 100%, 0.2);     //#ffffff33
+$pale-transparent-hover-border: hsla(0, 0%, 90%, 0.2);          //#e6e6e633
+// - Pale Purple
+$pale-purple-background: hsla(250, 50%, 50%, 0.1);              //#5540bf1a
+$pale-purple-border: hsla(250, 50%, 50%, 0.2);                  //#5540bf33
+// - Bright Purple
+$bright-purple-background: hsla(250, 50%, 50%, 0.3);            //#5540bf4d
+$bright-purple-border: hsla(250, 50%, 50%, 0.4);                //#5540bf66
+$bright-purple-hover-background: hsla(250, 50%, 50%, 0.4);      //#5540bf66
+$bright-purple-hover-border: hsla(250, 50%, 50%, 0.5);          //#5540bf80
 
 // System
 // - Info
-$color-system-info-50:   #EBF4FD;
-$color-system-info-100:  #DEEFFF;
-$color-system-info-300:  #C3DFF9;
-$color-system-info-500:  #3693E9;
-$color-system-info-800:  #2071BD;
+$color-system-info-50:   hsl(210, 80%, 95%);
+$color-system-info-100:  hsl(210, 80%, 90%);
+$color-system-info-300:  hsl(210, 80%, 70%);
+$color-system-info-500:  hsl(210, 80%, 50%);
+$color-system-info-600:  hsl(210, 80%, 40%);
 // - Danger
-$color-system-danger-50:   #FDE9EB;
-$color-system-danger-100:  #FFDDE0;
-$color-system-danger-300:  #FABCC2;
-$color-system-danger-500:  #DA2A33;
-$color-system-danger-800:  #AE2229;
+$color-system-danger-50:   hsl(355, 80%, 95%);
+$color-system-danger-100:  hsl(355, 80%, 90%);
+$color-system-danger-300:  hsl(355, 80%, 70%);
+$color-system-danger-500:  hsl(355, 80%, 50%);
+$color-system-danger-600:  hsl(355, 80%, 40%);
 // - Warning
-$color-system-warning-50:   #FFF9DB;
-$color-system-warning-100:  #FFF2C6;
-$color-system-warning-300:  #FFEAA1;
-$color-system-warning-500:  #EDC844;
-$color-system-warning-800:  #D4AD24;
+$color-system-warning-50:   hsl(50, 80%, 95%);
+$color-system-warning-100:  hsl(50, 80%, 90%);
+$color-system-warning-300:  hsl(50, 80%, 70%);
+$color-system-warning-500:  hsl(50, 80%, 50%);
+$color-system-warning-600:  hsl(50, 80%, 40%);
 // - Positive
-$color-system-positive-50:   #EDF7F0;
-$color-system-positive-100:  #DDEEE2;
-$color-system-positive-300:  #CAE8D2;
-$color-system-positive-500:  #4EB46A;
-$color-system-positive-800:  #3C8550;
+$color-system-positive-50:   hsl(140, 40%, 95%);
+$color-system-positive-100:  hsl(140, 40%, 90%);
+$color-system-positive-300:  hsl(140, 40%, 70%);
+$color-system-positive-500:  hsl(140, 40%, 50%);
+$color-system-positive-600:  hsl(140, 40%, 40%);
 
 // Gradients
-$gradient-pink-purple-500: var(--gradient-1, linear-gradient(209deg, #562FED 0%, #D55CFF 100%));
-$gradient-light-to-dark-blue: linear-gradient(180deg, $color-brand-purple-800 0.52%, $color-brand-purple-400 100%);
-$gradient-dark-to-light-blue: linear-gradient(180deg, $color-brand-purple-400 0%, #121229 100%);
-
+$gradient-pink-purple-500: $color-brand-blue-400;
+$gradient-light-to-dark-blue: linear-gradient(180deg, $color-brand-purple-800 0.52%, $color-brand-purple-500 100%);
+$gradient-dark-to-light-blue: linear-gradient(180deg, $color-brand-purple-500 0%, hsl(240, 39%, 12%) 100%);

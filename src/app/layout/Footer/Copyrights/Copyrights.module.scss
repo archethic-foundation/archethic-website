@@ -1,7 +1,8 @@
 @import '@/ui/_styles/variables.scss';
 
 .container {
-  padding-top: 150px;
+  padding-top: 100px;
+  padding-bottom: 10px;
 
   @include small() {
     padding-top: 40px;
@@ -12,7 +13,6 @@
     height: 1px;
     width: 100%;
     border: none;
-    border-bottom: 1px solid $color-neutral-0;
     opacity: 0.2;
   }
 

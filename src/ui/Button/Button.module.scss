@@ -44,7 +44,7 @@ $border-width: 2px;
     }
 
     &::after {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
   }
 }
@@ -52,18 +52,18 @@ $border-width: 2px;
 .variant {
   &-primary {
     &::after {
-      background: linear-gradient(268.5deg, #562fed 0.15%, $color-brand-raspberry-300 100%);
+      background: $color-brand-purple-500;
     }
 
     &.size {
       &-sm,
       &-md {
-        min-height: 44px;
-        padding: 12px 20px;
+        min-height: 40px;
+        padding: 6px 20px;
 
         @include small() {
           min-height: 40px;
-          padding: 8px 24px;
+          padding: 6px 20px;
         }
       }
     }
@@ -71,7 +71,8 @@ $border-width: 2px;
   &-secondary {
     &::after {
       padding: $border-width;
-      background: linear-gradient(45deg, $color-brand-raspberry-300, $color-brand-blue-400);
+      // background: linear-gradient(45deg, $color-brand-raspberry-500, $color-brand-blue-400);
+      border: 1px solid rgba(230, 230, 230, 0.2);
       -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
@@ -82,18 +83,18 @@ $border-width: 2px;
     &.size {
       &-sm {
         min-height: 44px;
-        padding: 10px 24px;
+        padding: 8px 24px;
 
         @include small() {
-          min-height: 40px;
+          min-height: 44px;
           padding: 8px 24px;
         }
       }
       &-md {
-        min-height: 56px;
-        padding: 16px 24px;
+        min-height: 44px;
+        padding: 8px 24px;
         @include small() {
-          min-height: 40px;
+          min-height: 44px;
           padding: 8px 24px;
         }
       }
@@ -110,10 +111,10 @@ $border-width: 2px;
       &-sm,
       &-md {
         min-height: 44px;
-        padding: 10px 16px;
+        padding: 8px 24px;
 
         @include small() {
-          min-height: 40px;
+          min-height: 44px;
           padding: 8px 24px;
         }
       }

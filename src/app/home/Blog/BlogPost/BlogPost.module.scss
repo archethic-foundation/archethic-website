@@ -8,7 +8,9 @@
   align-items: flex-start;
   border-radius: $border-radius-lg;
   overflow: hidden;
-  background-color: $color-neutral-800;
+  background: $pale-transparent-background;
+  border: 1px solid $pale-transparent-border;
+  backdrop-filter: blur(20px);
   width: 100%;
 }
 

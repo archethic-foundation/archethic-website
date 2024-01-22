@@ -8,7 +8,7 @@ const Scene = () => {
   const { isScreenSmall } = useBreakpoints()
 
   return (
-    <Canvas>
+    <Canvas style={{ backgroundColor: 'hsl(250 100% 5% / 1)' }}>
       <ambientLight />
       <directionalLight color='white' position={[0, -113.0, 60.0]} />
 

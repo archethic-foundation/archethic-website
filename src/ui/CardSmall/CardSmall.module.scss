@@ -8,7 +8,9 @@
 
 .variant {
   &-primary {
-    background: rgba(255, 255, 255, 0.1);
+    background: $pale-transparent-background;
+    border: 1px solid $pale-transparent-border;
+    backdrop-filter: blur(20px);
     padding: 32px;
 
     @include small() {
@@ -16,8 +18,12 @@
     }
   }
   &-secondary {
+    cursor: grab;
+    user-select: none;
     padding: 40px;
-    background: rgba($color-brand-purple-800, 0.9);
+    background: $pale-transparent-background;
+    border: 1px solid $pale-transparent-border;
+    backdrop-filter: blur(20px);
 
     @include small() {
       padding: 24px;
@@ -25,7 +31,9 @@
   }
   &-tertiary {
     padding: 40px;
-    background: rgba($color-brand-purple-800, 0.9);
+    background: $pale-transparent-background;
+    border: 1px solid $pale-transparent-border;
+    backdrop-filter: blur(20px);
 
     @include small() {
       padding: 24px;
@@ -35,12 +43,12 @@
     display: flex;
     justify-content: space-between;
     padding: 32px;
-    background: rgba($color-neutral-0, 0.1);
-
+    background: $pale-transparent-background;
+    border: 1px solid $pale-transparent-border;
+    backdrop-filter: blur(20px);
     h6 {
       margin-bottom: 0;
     }
-
     @include small() {
       padding: 24px;
     }

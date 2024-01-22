@@ -52,7 +52,7 @@ export default function Explore() {
 
           <Button
             label='Explore'
-            variant='secondary'
+            variant='tertiary'
             to={ExternalLinks.Explorer}
             target='_blank'
             icon={<ArrowRightIcon />}

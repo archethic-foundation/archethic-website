@@ -27,7 +27,6 @@ $bottom-padding: 230px;
 
   @include mediumUp() {
     gap: 28px;
-    padding-left: 110px;
     grid-template-columns: 1fr 1fr 1fr;
   }
 
@@ -40,7 +39,7 @@ $bottom-padding: 230px;
   }
 
   @include small() {
-    gap: 24px;
+    gap: 28px;
     grid-template-columns: 100%;
   }
 }
@@ -53,7 +52,7 @@ $w: 330px;
   top: 20%;
   width: $w;
   height: $w;
-  background: $color-brand-raspberry-300;
+  background: $color-brand-raspberry-500;
   filter: blur(200px);
   opacity: 0.8;
   pointer-events: none;

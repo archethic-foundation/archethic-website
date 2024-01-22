@@ -109,9 +109,7 @@ export function MobileNavigation() {
         <NavDropdown />
       </nav>
 
-      <img
-        src='/images/mobile-navigation-bg.webp'
-        alt={''}
+      <div
         className={classNames(styles.bg, {
           [styles.showBg]: state === 'open',
         })}

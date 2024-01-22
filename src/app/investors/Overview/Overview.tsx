@@ -1,17 +1,28 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
-import CardSmall from '@/ui/CardSmall/CardSmall'
-import Flex from '@/ui/Flex/Flex'
-import SectionPrimary from '@/ui/SectionPrimary/SectionPrimary'
-import { T } from '@/ui/Text/Text'
+import React, { useState, useEffect, useRef } from 'react';
+import CardSmall from '@/ui/CardSmall/CardSmall';
+import Flex from '@/ui/Flex/Flex';
+import SectionPrimary from '@/ui/SectionPrimary/SectionPrimary';
+import { T } from '@/ui/Text/Text';
 
-import styles from './Overview.module.scss'
+import styles from './Overview.module.scss';
 
 export default function Overview() {
   const [marketCap, setMarketCap] = useState('');
   const [currentPrice, setCurrentPrice] = useState(0);
   const [currentCirculatingSupply, setCurrentCirculatingSupply] = useState('');
+  const [grabbing, setGrabbing] = useState(false);
+  const [initialX, setInitialX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const [cards, setCards] = useState([
+    { id: 1, title: 'Market Cap', text: 'Current market capitalization' },
+    { id: 2, title: 'Circulating Supply', text: 'Number of tokens in circulation' },
+    { id: 3, title: 'Current Price', text: 'Aggregated UCO Price' },
+    { id: 4, title: 'Total Supply', text: '1 B' },
+  ]);
+
+  const cardsRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -43,6 +54,24 @@ export default function Overview() {
     fetchData();
   }, []);
 
+  const handleMouseDown = (event: { clientX: number; }) => {
+    setGrabbing(true);
+    if (cardsRef.current) {
+      setInitialX(event.clientX - cardsRef.current.offsetLeft);
+      setScrollLeft(cardsRef.current.scrollLeft);
+    }
+  };
+
+  const handleMouseUp = () => {
+    setGrabbing(false);
+  };
+
+  const handleMouseMove = (event: { clientX: number; }) => {
+    if (!grabbing || !cardsRef.current) return;
+    const newScrollLeft = initialX - event.clientX + scrollLeft;
+    cardsRef.current.scrollLeft = newScrollLeft;
+  };
+
   return (
     <SectionPrimary id='buildWithUs' backgroundImage='dottedWave' className={styles.container}>
       <Flex gap={40}>
@@ -61,28 +90,24 @@ export default function Overview() {
           </T>
         </Flex>
       </Flex>
-      <div className={styles.cards}>
-        <CardSmall
-          variant='secondary'
-          counter={marketCap !== null ? `$${marketCap}` : ''}
-          title='Market Cap'
-          text='Current market capitalization'
-        />
-        <CardSmall
-          variant='secondary'
-          counter={currentCirculatingSupply !== null ? `${currentCirculatingSupply} UCO` : ''}
-          title='Circulating Supply'
-          text='Number of tokens in circulation'
-        />
-        <CardSmall
-          variant='secondary'
-          counter={currentPrice !== null ? `$${currentPrice}` : ''}
-          title='Current Price'
-          text='Aggregated UCO Price'
-        />
-        <CardSmall variant='secondary' counter='1 B' title='Total Supply' />
+      <div
+        ref={cardsRef}
+        className={`${styles.cards} ${grabbing ? styles.grabbing : ''}`}
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseUp}
+      >
+        {cards.map(card => (
+          <CardSmall
+            key={card.id}
+            variant='secondary'
+            counter={card.id === 1 ? `$${marketCap}` : card.id === 2 ? `${currentCirculatingSupply} UCO` : card.id === 3 ? `$${currentPrice}` : '1 B'}
+            title={card.title}
+            text={card.text}
+          />
+        ))}
       </div>
     </SectionPrimary>
-  )
+  );
 }
-

@@ -1,6 +1,7 @@
 import React from 'react'
 import CirculatingSupply from '@/app/investors/CirculatingSupply/CirculatingSupply'
 import Hero from '@/app/investors/Hero/Hero'
+import KeyFeatures2 from '@/app/home/KeyFeatures2/KeyFeatures2'
 import JoinUs from '@/app/investors/JoinUs/JoinUs'
 import Overview from '@/app/investors/Overview/Overview'
 import Roadmap from '@/app/investors/Roadmap/Roadmap'
@@ -15,6 +16,7 @@ export default function Investors() {
   return (
     <>
       <Hero />
+      <KeyFeatures2 />
       <Flex alignItems='center' gap={180} smGap={100} className={styles.topWrapper}>
         <Overview />
         <Tokenomics />
@@ -49,7 +51,7 @@ export default function Investors() {
           variant='gradient-dark-to-light-blue'
           style={{
             top: '0',
-            height: 'calc(100% + 180px)',
+            height: 'calc(100% + 600px)',
           }}
         />
       </div>

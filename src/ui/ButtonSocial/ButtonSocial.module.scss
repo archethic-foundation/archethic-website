@@ -9,7 +9,7 @@
   justify-content: center;
   gap: 10px;
   border-radius: $border-radius-sm;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: $pale-transparent-background;
   line-height: 1;
   width: fit-content;
 
@@ -23,7 +23,7 @@
   }
 
   @include hover() {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: $pale-transparent-hover-background;
   }
 
   @include small() {

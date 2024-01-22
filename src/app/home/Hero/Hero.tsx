@@ -106,12 +106,12 @@ export default function Hero({ className }: HeroProps) {
                 label='Archethic Bridge'
                 to={ExternalLinks.Bridge}
                 target='_blank'
-                variant='secondary'
+                variant='tertiary'
                 icon={<ArrowRightIcon />}
               />
               <Button
                 label='Archethic Wallet'
-                variant='secondary'
+                variant='tertiary'
                 to={InternalLinks.Wallet}
                 icon={<ArrowRightIcon />}
               />

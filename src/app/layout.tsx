@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Script defer data-domain='archethic.net' src='https://plausible.io/js/plausible.js' />
       </head>
       <Body>
-        <NextTopLoader color='#D55CFF' showSpinner={false} />
+        <NextTopLoader color='hsl(275, 50%, 50%)' showSpinner={false} />
 
         <DesktopNavigation />
         <MobileNavigation />

@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react'
 import DeveloperResources from '@/app/developers/DeveloperResources/DeveloperResources'
 import DiscordDevelopers from '@/app/developers/DiscordDevelopers/DiscordDevelopers'
 import Explore from '@/app/developers/Explore/Explore'
+import KeyFeatures2 from '@/app/home/KeyFeatures2/KeyFeatures2'
 import JoinUs from '@/app/developers/JoinUs/JoinUs'
 import {
   DevelopersPageSections,
@@ -47,6 +48,7 @@ export default function Developers() {
   return (
     <>
       <Hero />
+      <KeyFeatures2 />
 
       <section id='joinUs' className={styles.topWrapper}>
         <JoinUs />

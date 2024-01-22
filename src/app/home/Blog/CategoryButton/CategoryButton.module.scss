@@ -26,15 +26,10 @@
       @include text-text-large();
     }
   }
-
-  @include hover() {
-    border-color: $color-brand-raspberry-300;
-  }
 }
 
 .active {
-  color: $color-brand-raspberry-300;
-  border-color: $color-brand-raspberry-300;
+  color: $color-brand-raspberry-500;
 }
 
 .disabled {

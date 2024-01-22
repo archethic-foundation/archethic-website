@@ -6,11 +6,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 28px;
   width: 100%;
   max-width: 550px;
   flex-shrink: 0;
   overflow: hidden;
+  background: $pale-transparent-background;
+  border: 1px solid $pale-transparent-border;
+  backdrop-filter: blur(20px);
   @include regular-border-radius;
 
   @include small() {
@@ -30,10 +33,12 @@
 
 .variantColor {
   &-black {
-    background-color: $color-neutral-800;
+    background: $pale-transparent-background;
+    border: 1px solid $pale-transparent-border;
   }
   &-raspberry {
-    background-color: $color-brand-raspberry-400;
+    background-color: $bright-purple-background;
+    border: 1px solid $bright-purple-border;
   }
 }
 

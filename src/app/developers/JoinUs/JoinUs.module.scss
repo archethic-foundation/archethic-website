@@ -29,10 +29,11 @@
 .cardsSlider {
   display: flex;
   overflow-x: auto;
-  gap: 24px;
+  gap: 28px;
   margin: 0 -80px;
 
   swiper-container {
+    padding-top: 40px;
     width: 100%;
   }
 
@@ -47,7 +48,7 @@
       }
 
       &:first-child>div {
-        margin-left: 190px;
+        margin-left: 80px;
       }
 
       &:last-child>div {
@@ -87,7 +88,7 @@ $w: 250px;
   height: $w;
   left: calc(50% - ($w / 2) - 35%);
   top: -30px;
-  background: $color-brand-raspberry-300;
+  background: $color-brand-raspberry-500;
   filter: blur(200px);
 }
 
@@ -99,7 +100,9 @@ $w: 250px;
   flex-direction: column;
   gap: 8px;
   padding: 40px;
-  background-color: #241a4f;
+  background: $pale-transparent-background;
+  border: 1px solid $pale-transparent-border;
+  backdrop-filter: blur(20px);
   @include regular-border-radius;
 
   @include small() {
