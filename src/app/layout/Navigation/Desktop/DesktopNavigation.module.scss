@@ -90,7 +90,7 @@ $scrolling-nav-height: $layout-desktop-navigation-height - 30px;
     }
 
     @include hover() {
-      color: $color-brand-raspberry-500;
+      color: $color-brand-raspberry-50;
       &:after {
         width: 100%;
       }
@@ -151,8 +151,7 @@ $scrolling-nav-height: $layout-desktop-navigation-height - 30px;
     position: absolute;
     top: calc(100% + 5px);
     left: 0;
-    background-color: $pale-transparent-background;
-    border: 1px solid $pale-transparent-border !important;
+    background-color: $color-brand-purple-500;
     backdrop-filter: blur(20px);
     border-radius: 12px;
     padding: 20px;

@@ -25,7 +25,7 @@ export default function Vision({ className }: VisionProps) {
             variantColor='black'
             title='White Paper'
             description='Discover the vision'
-            button={{ link: InternalLinks.WhitePaperNew, label: 'View document', variant: 'primary', onNewTab: true }}
+            button={{ link: InternalLinks.WhitePaperNew, label: 'View document', variant: 'tertiary', onNewTab: true }}
           />
           <CtaCard
             variantColor='black'
