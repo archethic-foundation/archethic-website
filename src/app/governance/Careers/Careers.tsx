@@ -24,7 +24,7 @@ export default function Careers() {
                 Join our team
               </T>
             </Flex>
-            <Flex gap={24}>
+            <Flex gap={28}>
               <T size='headline-medium'>
                 Explore exciting career opportunities at Archethic and become part of our innovative
                 and dynamic team. Join us in shaping the future of decentralized technology.
