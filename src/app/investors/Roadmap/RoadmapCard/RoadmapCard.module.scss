@@ -31,6 +31,10 @@ $border-width: 3px;
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
+
+    @include small() {
+      border-radius: 16px;
+    }
   }
 }
 
