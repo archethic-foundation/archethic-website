@@ -142,7 +142,7 @@ export default function Download() {
       </MaxWidthLayoutContainer>
 
       <CircleBlurredShape
-        color='gradient-plum'
+        color='solid-raspberry'
         style={{
           width: '1300px',
           index: 0,
