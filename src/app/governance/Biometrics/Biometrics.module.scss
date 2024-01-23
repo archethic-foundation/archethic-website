@@ -35,7 +35,6 @@ $text-indentation: 110px;
     gap: 16px;
     padding-left: 0;
     overflow-x: auto;
-
     width: calc(100vw - 40px);
     margin-left: -32px;
     margin-right: -32px;
@@ -43,7 +42,7 @@ $text-indentation: 110px;
     > div {
       width: 73vw;
       flex-shrink: 0;
-
+      margin-bottom: 16px;
       &:first-child {
         margin-left: 32px;
       }
