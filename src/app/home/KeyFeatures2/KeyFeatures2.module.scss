@@ -75,7 +75,7 @@
   backdrop-filter: blur(50px);
   opacity: 0;
   z-index: $index-bg-shapes;
-  transition: opacity 0.5s ease;
+  transition: opacity 1s ease;
 }
 
 .bgShapeA.visible {
