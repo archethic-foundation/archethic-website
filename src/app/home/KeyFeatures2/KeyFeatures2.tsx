@@ -14,7 +14,7 @@ export default function KeyFeatures2({ className }: KeyFeaturesProps2) {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || window.pageYOffset;
-      const maxOpacity = 0.97;
+      const maxOpacity = 0.90;
       const scrollThreshold = (document.body.scrollHeight - window.innerHeight) / 4;
       const newOpacity = Math.min(maxOpacity, scrollY / scrollThreshold);
       setOpacity(newOpacity);
