@@ -41,7 +41,7 @@ export default function KeyFeatures2({ className }: KeyFeaturesProps2) {
               (opacitySectionEnd - opacitySectionStart) *
               100
           );
-          const opacity = Math.min(1, opacityProgress / 100);
+          const opacity = Math.min(0.97, opacityProgress / 100);
           gsap.to(shapeARef.current, { opacity: opacity, duration: 0.5 });
         },
       },
