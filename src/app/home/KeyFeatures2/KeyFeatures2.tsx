@@ -14,9 +14,14 @@ export default function KeyFeatures2({ className }: KeyFeaturesProps2) {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || window.pageYOffset;
-      const maxOpacity = 0.90;
-      const scrollThreshold = (document.body.scrollHeight - window.innerHeight) / 4;
+      const maxOpacity = 0.92;
+      
+      // Calculer le seuil de défilement à partir de 80% de la hauteur initiale de l'écran (en vh)
+      const scrollThreshold = (window.innerHeight * 0.8);
+      
+      // Calculer l'opacité en fonction du défilement
       const newOpacity = Math.min(maxOpacity, scrollY / scrollThreshold);
+      
       setOpacity(newOpacity);
     };
 
