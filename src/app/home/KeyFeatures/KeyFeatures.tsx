@@ -44,7 +44,7 @@ export default function KeyFeatures({ className }: KeyFeaturesProps) {
     const opacityProgress = Math.floor(
       findXPercentage(scrollY, opacitySectionStart, opacitySectionEnd)
     )
-    const opacity = opacityProgress / 100
+    const opacity = Math.min(0.97, opacityProgress / 100);
 
     gsap.to(shapeARef.current, {
       opacity: Math.max(opacity, 0),
