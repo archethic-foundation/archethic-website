@@ -1,4 +1,4 @@
-@import '@/ui/_styles/variables.scss';
+@import "@/ui/_styles/variables.scss";
 
 .darkPurpleBgWrapper {
   background-color: transparent;
@@ -9,9 +9,13 @@
   flex-direction: column;
   gap: 130px;
   overflow: hidden;
-  margin-top: 4vh;
+  margin-top: 19vh;
   z-index: $index-section-content;
   @include regular-border-radius;
+
+  @include extraLarge() {
+    margin-top: 0;
+  }
 
   @include medium() {
     margin-top: 0;
@@ -19,6 +23,7 @@
 
   @include small() {
     border-radius: $border-radius-sm;
+    margin-top: 4vh;
     padding-bottom: 40px;
     gap: 85px;
   }
@@ -48,7 +53,7 @@
     @include regular-border-radius;
 
     &:after {
-      content: ' ';
+      content: " ";
       position: absolute;
       width: 100%;
       height: 100%;
