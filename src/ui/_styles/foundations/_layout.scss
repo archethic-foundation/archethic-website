@@ -4,6 +4,7 @@ $grid-gap-md: 32px;
 $grid-gap-xl: 40px;
 
 // Breakpoints
+$grid-breakpoint-xxl: 1920px + ($grid-gap-xl * 2);
 $grid-breakpoint-xl: 1280px + ($grid-gap-xl * 2);
 $grid-breakpoint-lg: 1160px;
 $grid-breakpoint-md: 800px;
@@ -79,6 +80,12 @@ $index-page-bg-effects: 0;
 // Extra Large Devices
 @mixin extraLarge {
   @media screen and (min-width: $grid-breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin extraLarge {
+  @media screen and (min-width: $grid-breakpoint-xxl) {
     @content;
   }
 }
