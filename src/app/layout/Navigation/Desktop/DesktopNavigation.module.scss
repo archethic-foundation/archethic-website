@@ -90,7 +90,7 @@ $scrolling-nav-height: $layout-desktop-navigation-height - 30px;
       bottom: -36px;
       width: 0;
       height: 1px;
-      background-color: $color-brand-raspberry-500;
+      background-color: $color-brand-raspberry-300;
     }
 
     @include hover() {
@@ -131,7 +131,7 @@ $scrolling-nav-height: $layout-desktop-navigation-height - 30px;
   @include text-headline-medium-small();
 
   &.active {
-    color: $color-brand-raspberry-500;
+    color: $color-brand-raspberry-300;
     pointer-events: none;
   }
 }

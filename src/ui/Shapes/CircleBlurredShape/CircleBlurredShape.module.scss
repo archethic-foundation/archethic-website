@@ -24,7 +24,7 @@
 
 .color {
   &-solid-raspberry {
-    background: $color-brand-raspberry-500;
+    background: $color-brand-raspberry-300;
     height: calc(var(--width, 800px) * 1.05);
 
     @include small() {

@@ -8,6 +8,7 @@
     position: relative;
     font-weight: $typography-font-weight-semibold;
     background: $color-brand-blue-400;
+    // background: linear-gradient(to bottom, $color-brand-blue-700 -30%, $color-brand-raspberry-300 250%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -35,7 +36,7 @@
     color: inherit;
   }
   &-raspberry-300 {
-    color: $color-brand-raspberry-500;
+    color: $color-brand-raspberry-300;
   }
   &-neutral-500 {
     color: $color-neutral-500;
