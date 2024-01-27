@@ -157,7 +157,7 @@
   @include text-headline-heavy();
 
   &.active {
-    color: $color-brand-raspberry-500;
+    color: $color-brand-raspberry-300;
     pointer-events: none;
   }
 }
