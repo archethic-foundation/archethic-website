@@ -12,23 +12,22 @@ export default function KeyFeatures2({ className }: KeyFeaturesProps2) {
   const shapeARef = useRef(null);
 
   useEffect(() => {
+    let requestId: number;
     const handleScroll = () => {
       const scrollY = window.scrollY || window.pageYOffset;
       const maxOpacity = 0.90;
-      
-      // Calculer le seuil de défilement à partir de 80% de la hauteur initiale de l'écran (en vh)
-      const scrollThreshold = (window.innerHeight * 0.8);
-      
-      // Calculer l'opacité en fonction du défilement
+      const scrollThreshold = window.innerHeight * 0.8;
       const newOpacity = Math.min(maxOpacity, scrollY / scrollThreshold);
-      
+
       setOpacity(newOpacity);
+      requestId = window.requestAnimationFrame(handleScroll);
     };
 
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.cancelAnimationFrame(requestId);
     };
   }, []);
 
