@@ -7,8 +7,7 @@
   u {
     position: relative;
     font-weight: $typography-font-weight-semibold;
-    background: $color-brand-blue-400;
-    // background: linear-gradient(to bottom, $color-brand-blue-700 -30%, $color-brand-raspberry-300 250%);
+    background: linear-gradient(to left, $color-brand-blue-600 0%, $color-brand-blue-400 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

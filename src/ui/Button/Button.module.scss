@@ -52,9 +52,7 @@ $border-width: 2px;
 .variant {
   &-primary {
     &::after {
-      // background: linear-gradient(to bottom, #6825f5, #a4abec) !important;
-      background: linear-gradient(to bottom, $color-brand-blue-700 0%, $color-brand-raspberry-300 300%);
-      background: $color-brand-blue-400;
+      background: linear-gradient(to left, $color-brand-blue-600 0%, $color-brand-blue-400 100%);
     }
 
     &.size {
