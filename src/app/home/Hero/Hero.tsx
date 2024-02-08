@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useWindowSize } from 'react-use'
 import { useHomePageStore } from '@/app/home/Home'
-import { ExternalLinks } from '@/config'
+import { ExternalLinks, InternalLinks } from '@/config'
 import CtaCardApp from '@/ui/CtaCardApp/CtaCardApp'
 import { MaxWidthLayoutContainer } from '@/ui/MaxWidthLayoutContainer/MaxWidthLayoutContainer'
 import { T } from '@/ui/Text/Text'
@@ -118,7 +118,7 @@ export default function Hero({ className }: HeroProps) {
               <CtaCardApp
                 title='aeWallet'
                 description='The first fully decentralized wallet'
-                button={{ link: ExternalLinks.aeHostingTestnet, label: '' }}
+                button={{ link: InternalLinks.Wallet, label: '' }}
                 variantColor='raspberry'
                 env='MAINNET'
               />
