@@ -66,6 +66,11 @@ export enum ExternalLinks {
   // Links
   Documentation = 'https://wiki.archethic.net/',
   Bridge = 'https://bridge.archethic.net',
+  aeBridgeTestnet = 'https://bridge.testnet.archethic.net',
+  aeSwapTestnet = 'https://dex.testnet.archethic.net',
+  aeHostingTestnet = 'https://aeweb.archethic.net',
+  aePlaygroundTestnet = 'https://playground.archethic.net/',
+  aeExpplorer = 'https://mainnet.archethic.net/explorer',
   DevelopmentKit = 'https://github.com/archethic-foundation/libjs',
   Playground = 'https://playground.archethic.net/',
   Patents = 'https://wiki.archethic.net/learn/patents',

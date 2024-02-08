@@ -3,9 +3,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useWindowSize } from 'react-use'
 import { useHomePageStore } from '@/app/home/Home'
-import { ExternalLinks, InternalLinks } from '@/config'
-import { ArrowRightIcon } from '@/ui/_assets/icons/ArrowRightIcon'
-import { Button } from '@/ui/Button/Button'
+import { ExternalLinks } from '@/config'
+import CtaCardApp from '@/ui/CtaCardApp/CtaCardApp'
 import { MaxWidthLayoutContainer } from '@/ui/MaxWidthLayoutContainer/MaxWidthLayoutContainer'
 import { T } from '@/ui/Text/Text'
 import { useIntersectionObserver } from '@/utils/hooks/useIntersectionObserver'
@@ -101,20 +100,60 @@ export default function Hero({ className }: HeroProps) {
             <T as='h2' size='headline-regular'>
               Build decentralized services accessible to billions
             </T>
-            <div className={styles.buttonsList}>
-              <Button
-                label='Archethic Bridge'
-                to={ExternalLinks.Bridge}
-                target='_blank'
-                variant='tertiary'
-                icon={<ArrowRightIcon />}
+
+          </div>
+          <div className={styles.dapps}>
+            <T as='h2' size='headline-regular'>
+              Dive deep into the next-gen blockchain – Get started with Archethic DApps.
+            </T>
+            <br />
+            <div className={styles.cards}>
+              <CtaCardApp
+                title='aeBridge'
+                description='Discover a seamless transfer of assets'
+                button={{ link: ExternalLinks.Bridge, label: '' }}
+                variantColor='black'
+                env='MAINNET'
               />
-              <Button
-                label='Archethic Wallet'
-                variant='tertiary'
-                to={InternalLinks.Wallet}
-                icon={<ArrowRightIcon />}
+              <CtaCardApp
+                title='aeWallet'
+                description='The first fully decentralized wallet'
+                button={{ link: ExternalLinks.aeHostingTestnet, label: '' }}
+                variantColor='raspberry'
+                env='MAINNET'
               />
+              <CtaCardApp
+                title='aeExplorer'
+                description='Your gateway to transparency and discovery'
+                button={{ link: ExternalLinks.aeExpplorer, label: '' }}
+                variantColor='black'
+                env='MAINNET'
+              />
+            </div>
+            <br /><br />
+            <div className={styles.cards}>
+              <CtaCardApp
+                title='aeSwap'
+                description='Swap assets on-chain, add liquidity & access yield farming'
+                button={{ link: ExternalLinks.aeSwapTestnet, label: '' }}
+                variantColor='raspberry'
+                env='TESTNET'
+              />
+              <CtaCardApp
+                title='aeHosting'
+                description='Free your content, forever with decentralized web hosting'
+                button={{ link: ExternalLinks.aeHostingTestnet, label: '' }}
+                variantColor='black'
+                env='TESTNET'
+              />
+              <CtaCardApp
+                title='aePlayground'
+                description='Turn your ideas into smart contracts – no expertise required'
+                button={{ link: ExternalLinks.aePlaygroundTestnet, label: '' }}
+                variantColor='raspberry'
+                env='TESTNET'
+              />
+
             </div>
           </div>
         </MaxWidthLayoutContainer>
