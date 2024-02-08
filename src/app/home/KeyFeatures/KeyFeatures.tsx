@@ -53,16 +53,14 @@ export default function KeyFeatures({ className }: KeyFeaturesProps) {
 
     // Slide Progress
     const progressSectionStart = sections.keyFeatures.offsetTop
-    const progressSectionEnd = sections.keyFeatures.height
-    const progressProgress = Math.floor(
-      findXPercentage(scrollY, progressSectionStart, progressSectionEnd)
-    )
+    const progressDistanceScrolled = scrollY - progressSectionStart
+    const progressPercentage = Math.floor((progressDistanceScrolled / sections.keyFeatures.height) * 100)
 
-    if (progressProgress > 87) {
+    if (progressPercentage >= 75) {
       setCurrentSlide(4)
-    } else if (progressProgress > 48) {
+    } else if (progressPercentage >= 50) {
       setCurrentSlide(3)
-    } else if (progressProgress > 10) {
+    } else if (progressPercentage >= 25) {
       setCurrentSlide(2)
     } else {
       setCurrentSlide(1)
@@ -116,7 +114,7 @@ export default function KeyFeatures({ className }: KeyFeaturesProps) {
         opacity: 0,
         scale: outScale },
         outDelay
-        )
+      )
   }, [])
 
   useIsomorphicLayoutEffect(() => {
