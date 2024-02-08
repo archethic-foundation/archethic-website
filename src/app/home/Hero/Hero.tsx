@@ -108,9 +108,6 @@ export default function Hero({ className }: HeroProps) {
             </T>
             <br />
             <div className={styles.cards}>
-              <div>
-                
-              </div>
               <CtaCardApp
                 title='aeBridge'
                 description='Discover a seamless transfer of assets'
@@ -132,7 +129,7 @@ export default function Hero({ className }: HeroProps) {
                 variantColor='black'
                 env='MAINNET'
               />
-                            <CtaCardApp
+              <CtaCardApp
                 title='aeSwap'
                 description='Swap assets on-chain, add liquidity & access yield farming'
                 button={{ link: ExternalLinks.aeSwapTestnet, label: '' }}
