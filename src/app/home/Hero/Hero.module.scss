@@ -93,6 +93,11 @@
   .heroTitle {
     max-width: 1150px;
 
+    u {
+      background: linear-gradient(to left top, $color-brand-raspberry-300 0%, $color-brand-raspberry-500 100%);
+      background-clip: text;
+    }
+
     i {
       width: 190px;
       height: 10px;
