@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { ExternalLinks } from '@/config'
+import { InternalLinks } from '@/config'
 import { ArrowRightIcon } from '@/ui/_assets/icons/ArrowRightIcon'
 import { Button } from '@/ui/Button/Button'
 import Flex from '@/ui/Flex/Flex'
@@ -27,7 +27,7 @@ export default function NotFound() {
             <Button
               label='Go to Homepage'
               variant='primary'
-              to={ExternalLinks.Bridge}
+              to={InternalLinks.Home}
               target='_blank'
               icon={<ArrowRightIcon />}
             />
