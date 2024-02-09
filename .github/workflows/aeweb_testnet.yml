@@ -4,33 +4,33 @@ on:
     push:
       branches:
         - preprod
-  
-  jobs:
-    deploy_to_aeweb:
-      runs-on: ubuntu-latest
-      name: A job to deploy file to AEweb
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v3
+
+jobs:
+  deploy_to_aeweb:
+    runs-on: ubuntu-latest
+    name: A job to deploy file to AEweb
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '21.2'
+    
+      - name: Install dependencies
+        run: npm install
+    
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to aeHosting
+        id: deploy
+        uses: archethic-foundation/aeweb-github-action@v1.8.1
+        with:
+          seed: ${{ secrets.ARCH_BASE_TESTNET_SEED }}
+          endpoint: "https://testnet.archethic.net"
+          path: "./out"
+          keychainFundingService: "archethic-wallet-ARCHETHIC.NET"
+          keychainWebsiteService: "aeweb-ARCHETHIC-website"
         
-        - name: Set up Node.js
-          uses: actions/setup-node@v3
-          with:
-            node-version: '21.2'
-      
-        - name: Install dependencies
-          run: npm install
-      
-        - name: Build
-          run: npm run build
-  
-        - name: Deploy to aeHosting
-          id: deploy
-          uses: archethic-foundation/aeweb-github-action@v1.8.1
-          with:
-            seed: ${{ secrets.ARCH_BASE_TESTNET_SEED }}
-            endpoint: "https://testnet.archethic.net"
-            path: "./out"
-            keychainFundingService: "archethic-wallet-ARCHETHIC.NET"
-            keychainWebsiteService: "aeweb-ARCHETHIC-website"
-         
