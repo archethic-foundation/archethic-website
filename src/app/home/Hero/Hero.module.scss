@@ -26,7 +26,17 @@
     padding-bottom: 0;
   }
 
-  @media (min-width: 1025px) and (max-width: 1920px) {
+  @media (min-width: 1801px) and (max-width: 1920px) {
+    height: 147vh;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: 1701px) and (max-width: 1800px) {
+    height: 152vh;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: 1025px) and (max-width: 1700px) {
     height: 147vh;
     padding-bottom: 0;
   }
