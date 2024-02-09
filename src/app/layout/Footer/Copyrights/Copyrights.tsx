@@ -15,7 +15,7 @@ export default function Copyrights({ className }: CopyrightsProps) {
       <hr />
       <MaxWidthLayoutContainer>
         <T as='p' size='text-medium' style={{ textAlign: 'center', color: 'white' }}>
-        Made with ❤️ by ©Archethic - 2023 All rights reserved
+          2024 ©Archethic. All rights reserved
         </T>
       </MaxWidthLayoutContainer>
     </div>
