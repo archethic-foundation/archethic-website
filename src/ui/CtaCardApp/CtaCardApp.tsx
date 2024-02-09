@@ -37,7 +37,7 @@ export default function CtaCardApp({
           <div className={styles.content}>
             <div className={styles.header}>
               <T as='h1' size='display-extrasmall' weight='semibold'>
-                <u>{title}</u>
+                {title}
               </T>
               <T as='span' color={'raspberry-300'} className={styles[`color-${'raspberry-300'}`]}>
                 <ArrowRightIcon />
