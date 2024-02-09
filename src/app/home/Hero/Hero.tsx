@@ -112,7 +112,7 @@ export default function Hero({ className }: HeroProps) {
                 title='aeBridge'
                 description='Discover a seamless transfer of assets'
                 button={{ link: ExternalLinks.Bridge, label: '' }}
-                variantColor='black'
+                variantColor='raspberry'
                 env='MAINNET'
               />
               <CtaCardApp
@@ -126,14 +126,14 @@ export default function Hero({ className }: HeroProps) {
                 title='aeExplorer'
                 description='Your gateway to transparency and discovery'
                 button={{ link: ExternalLinks.aeExpplorer, label: '' }}
-                variantColor='black'
+                variantColor='raspberry'
                 env='MAINNET'
               />
               <CtaCardApp
                 title='aeSwap'
                 description='Swap assets on-chain, add liquidity & access yield farming'
                 button={{ link: ExternalLinks.aeSwapTestnet, label: '' }}
-                variantColor='raspberry'
+                variantColor='black'
                 env='TESTNET'
               />
               <CtaCardApp
@@ -147,7 +147,7 @@ export default function Hero({ className }: HeroProps) {
                 title='aePlayground'
                 description='Turn your ideas into smart contracts – no expertise required'
                 button={{ link: ExternalLinks.aePlaygroundTestnet, label: '' }}
-                variantColor='raspberry'
+                variantColor='black'
                 env='TESTNET'
               />
             </div>
