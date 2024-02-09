@@ -53,14 +53,16 @@ export default function KeyFeatures({ className }: KeyFeaturesProps) {
 
     // Slide Progress
     const progressSectionStart = sections.keyFeatures.offsetTop
-    const progressDistanceScrolled = scrollY - progressSectionStart
-    const progressPercentage = Math.floor((progressDistanceScrolled / sections.keyFeatures.height) * 100)
+    const progressSectionEnd = sections.keyFeatures.height
+    const progressProgress = Math.floor(
+      findXPercentage(scrollY, progressSectionStart, progressSectionEnd)
+    )
 
-    if (progressPercentage >= 75) {
+    if (progressProgress > 87) {
       setCurrentSlide(4)
-    } else if (progressPercentage >= 50) {
+    } else if (progressProgress > 48) {
       setCurrentSlide(3)
-    } else if (progressPercentage >= 25) {
+    } else if (progressProgress > 10) {
       setCurrentSlide(2)
     } else {
       setCurrentSlide(1)
