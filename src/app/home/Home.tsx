@@ -10,6 +10,7 @@ import KeyFeatures from '@/app/home/KeyFeatures/KeyFeatures'
 import Mission from '@/app/home/Mission/Mission'
 import VideoSection from '@/app/home/VideoSection/VideoSection'
 import Vision from '@/app/home/Vision/Vision'
+import DApps from '@/app/home/DApps/DApps'
 import { Main } from '@/app/layout/Main/Main'
 import { create } from 'zustand'
 
@@ -75,6 +76,7 @@ export default function Home() {
   return (
     <Main ref={mainRef}>
       <Hero />
+      <DApps />
       <Mission />
       <KeyFeatures />
 
