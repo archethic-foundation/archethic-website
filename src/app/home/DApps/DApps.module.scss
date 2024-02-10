@@ -1,13 +1,20 @@
 @import '@/ui/_styles/variables.scss';
 
+.section {
+  position: relative;
+  z-index: $index-section-content;
+
+  @include small() {
+    margin-top: 40px;
+  }
+}
+
 .container {
   position: relative;
 
   width: 100%;
   min-height: 50vh;
   padding-top: $layout-desktop-navigation-height;
-  z-index: $index-section-content;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,10 +57,6 @@
     max-width: 100%;
     flex-shrink: 0;
     overflow: hidden;
-    // background: hsla(0, 0%, 100%, 0.1);
-    // border: 1px solid hsla(0, 0%, 90%, 0.1);
-    // -webkit-backdrop-filter: blur(20px);
-    // backdrop-filter: blur(20px);
     border-radius: 24px;
     transition: color .25s, border-color .25s, background-color .25s, border-radius .25s, transform .25s;
 
