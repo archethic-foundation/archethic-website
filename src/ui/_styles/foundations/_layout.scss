@@ -18,8 +18,8 @@ $layout-content-max-width: 1280px + ($grid-gap-xl * 2);
 $layout-desktop-navigation-height: 95px;
 $layout-mobile-navigation-height: 60px;
 $layout-section-left-padding: 85px;
-$layout-desktop-section-gap:  140px;
-$layout-mobile-section-gap:  80px;
+$layout-desktop-section-gap: 140px;
+$layout-mobile-section-gap: 80px;
 
 // Z-Index
 $index-main-navigation: 200;
@@ -50,33 +50,38 @@ $index-page-bg-effects: 0;
     @content;
   }
 }
+
 @mixin mediumDown {
-  @media screen and (max-width: $grid-breakpoint-lg - 1px) {
+  @media screen and (max-width: ($grid-breakpoint-lg - 1px)) {
     @content;
   }
 }
+
 @mixin medium {
-  @media screen and (min-width: $grid-breakpoint-md) and (max-width: $grid-breakpoint-lg - 1px) {
+  @media screen and (min-width: $grid-breakpoint-md) and (max-width: ($grid-breakpoint-lg - 1px)) {
     @content;
   }
 }
 
 // Large Devices
 @mixin largeDown {
-  @media screen and (max-width: $grid-breakpoint-xl - 1px) {
+  @media screen and (max-width: ($grid-breakpoint-xl - 1px)) {
     @content;
   }
 }
+
 @mixin large {
-  @media screen and (min-width: $grid-breakpoint-lg) and (max-width: $grid-breakpoint-xl - 1px) {
+  @media screen and (min-width: $grid-breakpoint-lg) and (max-width: ($grid-breakpoint-xl - 1px)) {
     @content;
   }
 }
+
 @mixin largeUp {
   @media screen and (min-width: $grid-breakpoint-lg) {
     @content;
   }
 }
+
 // Extra Large Devices
 @mixin extraLarge {
   @media screen and (min-width: $grid-breakpoint-xl) {
