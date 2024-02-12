@@ -34,7 +34,6 @@ export default function Explore() {
               link: ExternalLinks.Playground,
               onNewTab: true,
             }}
-            image='rightTopCorner'
           />
         </Flex>
       </MaxWidthLayoutContainer>
