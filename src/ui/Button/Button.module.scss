@@ -19,10 +19,12 @@ $border-width: 2px;
     white-space: nowrap;
     @include transition(0.8s, transform);
   }
+
   svg {
     z-index: 1;
     @include transition(0.8s, transform, opacity);
   }
+
   &::after {
     @include transition(0.8s, transform);
     content: '';
@@ -37,6 +39,7 @@ $border-width: 2px;
       span {
         transform: translateX(12px);
       }
+
       svg {
         transform: translateX(16px);
         opacity: 0;
@@ -56,6 +59,7 @@ $border-width: 2px;
     }
 
     &.size {
+
       &-sm,
       &-md {
         min-height: 40px;
@@ -68,6 +72,7 @@ $border-width: 2px;
       }
     }
   }
+
   &-secondary {
     &::after {
       padding: $border-width;
@@ -90,9 +95,11 @@ $border-width: 2px;
           padding: 8px 24px;
         }
       }
+
       &-md {
         min-height: 44px;
         padding: 8px 24px;
+
         @include small() {
           min-height: 44px;
           padding: 8px 24px;
@@ -100,6 +107,7 @@ $border-width: 2px;
       }
     }
   }
+
   &-tertiary {
     color: $color-neutral-900;
 
@@ -108,6 +116,7 @@ $border-width: 2px;
     }
 
     &.size {
+
       &-sm,
       &-md {
         min-height: 44px;

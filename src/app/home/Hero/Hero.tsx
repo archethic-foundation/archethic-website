@@ -5,14 +5,17 @@ import { useWindowSize } from 'react-use'
 import { useHomePageStore } from '@/app/home/Home'
 import { MaxWidthLayoutContainer } from '@/ui/MaxWidthLayoutContainer/MaxWidthLayoutContainer'
 import { T } from '@/ui/Text/Text'
+import { ArrowRightIcon } from '@/ui/_assets/icons/ArrowRightIcon'
 import { useIntersectionObserver } from '@/utils/hooks/useIntersectionObserver'
 import { useScroll } from '@/utils/hooks/useScroll'
 import { findXPercentage } from '@/utils/maths'
 import classNames from 'classnames'
 //import Banner from '@/app/home/Banner/Banner'
+import { Button } from '@/ui/Button/Button'
 import gsap from 'gsap'
 
 import styles from './Hero.module.scss'
+import { InternalLinks } from '@/config'
 
 interface HeroProps {
   className?: string
@@ -98,7 +101,19 @@ export default function Hero({ className }: HeroProps) {
             <T as='h2' size='headline-regular'>
               Build decentralized services accessible to billions
             </T>
-
+            <div className={styles.buttonsList}>
+              <Button
+                label='White paper'
+                to={InternalLinks.WhitePaperNew}
+                target='_blank'
+                icon={<ArrowRightIcon />}
+              />
+              <Button
+                label='Technical paper'
+                to={InternalLinks.TechnicalPaper}
+                icon={<ArrowRightIcon />}
+              />
+            </div>
           </div>
         </MaxWidthLayoutContainer>
         {/*<span className={styles.mobileBlackBgShape} />*/}

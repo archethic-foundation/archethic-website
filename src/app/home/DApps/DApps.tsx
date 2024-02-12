@@ -19,10 +19,9 @@ export default function DApps({ className }: DAppsProps) {
 
         <MaxWidthLayoutContainer className={styles.content}>
 
-          <T as='h2' size='headline-regular'>
-            Dive deep into the next-gen blockchain – Get started with Archethic DApps.
+          <T as='h2' size='display-large' weight='semibold'>
+            <u>Get started</u> with Archethic Services
           </T>
-          <br />
           <div className={styles.cards}>
             <CtaCardApp
               title='aeBridge'
