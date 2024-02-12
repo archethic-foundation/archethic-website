@@ -15,7 +15,7 @@ export default function DApps({ className }: DAppsProps) {
 
   return (
     <section id='DApps' className={styles.section}>
-      <Parallax speed={4}>
+      <Parallax speed={1.7}>
 
         <MaxWidthLayoutContainer className={styles.content}>
 
