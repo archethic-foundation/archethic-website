@@ -27,6 +27,14 @@
     padding-bottom: 40px;
     gap: 85px;
   }
+
+  @media (min-width: 281px) and (max-width: 380px) {
+    margin-top: 19vh;
+  }
+
+  @media screen and (max-width: 280px) {
+    margin-top: 40vh;
+  }
 }
 
 .lightPurpleBgWrapper {

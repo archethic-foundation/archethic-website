@@ -11,6 +11,10 @@
   flex-direction: column;
   justify-content: center;
 
+  @media (min-width: 390px) and (max-width: 430px) {
+    padding-top: 0;
+  }
+
   &:before {
     content: ' ';
     width: 100%;
