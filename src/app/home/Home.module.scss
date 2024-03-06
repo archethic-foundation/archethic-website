@@ -21,6 +21,10 @@
     margin-top: 0;
   }
 
+  @media (min-width: 799px) and (max-width: 1160px) {
+    margin-top: 30vh;
+  }
+
   @include small() {
     border-radius: $border-radius-sm;
     margin-top: 4vh;
