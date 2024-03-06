@@ -40,7 +40,6 @@ export enum InternalLinks {
   WhitePaper = '/ARCHEthic_WhitePaper.pdf',
   WhitePaperNew = '/Archethic_White_Paper.pdf',
   TechnicalPaper = '/ARCHEthic_YellowPaper.pdf',
-  Tokenomics = '/ARCHEthic_UCOnomics.pdf',
   PrivacyPolicy = '/privacy-policy',
   PrivacyPolicyWallet = '/privacy-policy-wallet',
   TermsUse = '/terms-of-use',

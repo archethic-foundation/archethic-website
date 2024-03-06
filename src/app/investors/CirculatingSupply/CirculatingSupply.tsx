@@ -1,7 +1,4 @@
 import React from 'react'
-import { InternalLinks } from '@/config'
-import { ArrowRightIcon } from '@/ui/_assets/icons/ArrowRightIcon'
-import { Button } from '@/ui/Button/Button'
 import CardSmall from '@/ui/CardSmall/CardSmall'
 import Flex from '@/ui/Flex/Flex'
 import { MaxWidthLayoutContainer } from '@/ui/MaxWidthLayoutContainer/MaxWidthLayoutContainer'
@@ -22,17 +19,6 @@ export default function CirculatingSupply() {
             <u>1 Billion </u> total
           </T>
         </Flex>
-
-        <div>
-          <Button
-            to={InternalLinks.Tokenomics}
-            target='_blank'
-            label='Tokenomics'
-            variant='tertiary'
-            size='sm'
-            icon={<ArrowRightIcon />}
-          />
-        </div>
       </div>
 
       <div className={styles.cardsList}>
