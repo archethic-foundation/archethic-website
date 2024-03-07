@@ -9,7 +9,7 @@
   flex-direction: column;
   gap: 130px;
   overflow: hidden;
-  margin-top: 19vh;
+  margin-top: 22vh;
   z-index: $index-section-content;
   @include regular-border-radius;
 
@@ -17,15 +17,25 @@
     margin-top: 0;
   }
 
-  @include medium() {
+  @media (width: 1024px) {
+      margin-top: 2vh;
+  }
+
+  @media (min-width: 799px) and (max-width: 1600px) {
+    @media (min-height: 50px) and (max-height: 800px) {
+      margin-top: 40vh;
+    }
+  }
+
+  @media (min-width: 801px) and (max-width: 820px) {
+    margin-top: 8vh;
+  }
+  
+  @media (min-width: 460px) and (max-width: 800px) {
     margin-top: 0;
   }
 
-  @media (min-width: 799px) and (max-width: 1160px) {
-    margin-top: 30vh;
-  }
-
-  @include small() {
+  @media (min-width: 381px) and (max-width: 459px) {
     border-radius: $border-radius-sm;
     margin-top: 4vh;
     padding-bottom: 40px;
