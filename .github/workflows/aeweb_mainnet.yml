@@ -3,7 +3,7 @@ name: CI/CD
 on:
     push:
       branches:
-        - preprod
+        - main
 
 jobs:
   deploy_to_aeHosting:
@@ -28,9 +28,9 @@ jobs:
         id: deploy
         uses: archethic-foundation/aeweb-github-action@v1.8.1
         with:
-          seed: ${{ secrets.ARCH_BASE_TESTNET_SEED }}
-          endpoint: "https://testnet.archethic.net"
+          seed: ${{ secrets.ARCH_BASE_MAINNET_SEED }}
+          endpoint: "https://mainnet.archethic.net"
           path: "./out"
-          keychainFundingService: "archethic-wallet-ARCHETHIC.NET"
+          keychainFundingService: "archethic-wallet-archethic-front-app"
           keychainWebsiteService: "aeweb-ARCHETHIC-website"
         
