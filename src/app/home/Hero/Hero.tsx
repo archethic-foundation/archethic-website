@@ -111,6 +111,7 @@ export default function Hero({ className }: HeroProps) {
               <Button
                 label='Technical paper'
                 to={InternalLinks.TechnicalPaper}
+                target='_blank'
                 icon={<ArrowRightIcon />}
               />
             </div>
