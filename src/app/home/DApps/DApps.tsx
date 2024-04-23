@@ -26,7 +26,7 @@ export default function DApps({ className }: DAppsProps) {
             <CtaCardApp
               title='aeBridge'
               description='Discover a seamless transfer of assets'
-              button={{ link: ExternalLinks.Bridge, label: '' }}
+              button={{ link: ExternalLinks.aeBridge, label: '' }}
               variantColor='raspberry'
               env='MAINNET'
             />
@@ -40,16 +40,16 @@ export default function DApps({ className }: DAppsProps) {
             <CtaCardApp
               title='aeExplorer'
               description='Your gateway to transparency and discovery'
-              button={{ link: ExternalLinks.aeExpplorer, label: '' }}
+              button={{ link: ExternalLinks.aeExplorer, label: '' }}
               variantColor='raspberry'
               env='MAINNET'
             />
             <CtaCardApp
               title='aeSwap'
               description='Swap assets on-chain, add liquidity & access yield farming'
-              button={{ link: ExternalLinks.aeSwapTestnet, label: '' }}
-              variantColor='black'
-              env='TESTNET'
+              button={{ link: ExternalLinks.aeSwap, label: '' }}
+              variantColor='raspberry'
+              env='MAINNET'
             />
             <CtaCardApp
               title='aeHosting'
