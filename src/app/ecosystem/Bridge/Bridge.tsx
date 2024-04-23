@@ -16,7 +16,7 @@ export default function Bridge() {
         <Flex direction='column' gap={24} className={styles.content}>
           <Flex alignItems="center" direction="row" className={styles.bridgeHeader}>
             <T as='h5'>
-              aeBridge - TESTNET 🟢
+              aeBridge - MAINNET 🟢
             </T>
           </Flex>
           <T as='h2' size='display-large' weight='semibold' className={styles.title}>
@@ -31,9 +31,9 @@ export default function Bridge() {
 
           <div className={styles.button}>
             <Button
-              label='Archethic Bridge'
+              label='aeBridge'
               variant='primary'
-              to={ExternalLinks.Bridge}
+              to={ExternalLinks.aeBridge}
               target='_blank'
               icon={<ArrowRightIcon />}
             />

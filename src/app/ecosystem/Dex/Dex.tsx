@@ -6,6 +6,9 @@ import { MaxWidthLayoutContainer } from '@/ui/MaxWidthLayoutContainer/MaxWidthLa
 import { Parallax } from '@/ui/Parallax/Parallax'
 import CircleBlurredShape from '@/ui/Shapes/CircleBlurredShape/CircleBlurredShape'
 import { T } from '@/ui/Text/Text'
+import { ArrowRightIcon } from '@/ui/_assets/icons/ArrowRightIcon'
+import { Button } from '@/ui/Button/Button'
+import { ExternalLinks } from '@/config'
 
 import styles from './Dex.module.scss'
 
@@ -16,14 +19,20 @@ export default function Dex() {
         <MaxWidthLayoutContainer>
           <Flex gap={24} smGap={16} alignItems='center' className={styles.dexContainer}>
             <T as='h5'>
-              aeSwap
+              aeSwap - MAINNET 🟢
             </T>
             <T as='h2' size='display-large' weight='semibold'>
               SWAP assets on-chain, add liquidity & access yield farming.
             </T>
-            <T as='h5' size='label-regular'>
-              Soon
-            </T>
+            <div className={styles.button}>
+              <Button
+                label='aeSwap'
+                variant='primary'
+                to={ExternalLinks.aeSwap}
+                target='_blank'
+                icon={<ArrowRightIcon />}
+              />
+            </div>
           </Flex>
         </MaxWidthLayoutContainer>
       </Parallax>
