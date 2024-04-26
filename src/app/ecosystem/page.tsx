@@ -2,7 +2,7 @@ import React from 'react'
 import Aeweb from '@/app/ecosystem/Aeweb/Aeweb'
 import KeyFeatures2 from '@/app/home/KeyFeatures2/KeyFeatures2'
 import Bridge from '@/app/ecosystem/Bridge/Bridge'
-import Dex from '@/app/ecosystem/Dex/Dex'
+import Swap from '@/app/ecosystem/Swap/Swap'
 import Wallet from '@/app/ecosystem/Wallet/Wallet'
 import Flex from '@/ui/Flex/Flex'
 import SectionJoinUs from '@/ui/SectionJoinUs/SectionJoinUs'
@@ -30,7 +30,7 @@ export default function Ecosystem() {
 
       <Flex alignItems='center' gap={100} className={styles.middleWrapper}>
         <Aeweb />
-        <Dex />
+        <Swap />
 
 
         <BackgroundShape
