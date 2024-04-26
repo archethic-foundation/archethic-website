@@ -19,8 +19,8 @@ export default function Swap() {
               aeSwap - MAINNET 🟢
             </T>
           </Flex>
-          <T as='h2' size='display-large' weight='semibold' className={styles.title}>
-            <u>SWAP</u> assets on-chain, add liquidity & access yield farming.
+          <T as='h2' size='display-medium' weight='semibold' className={styles.title}>
+            <u>SWAP</u> assets on-chain<br />and access yield farming<br />by adding liquidity
           </T>
 
           <div className={styles.button}>
