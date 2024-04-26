@@ -16,7 +16,7 @@ export default function Swap() {
         <Flex direction='column' gap={24} className={styles.content}>
           <Flex alignItems="center" direction="row" className={styles.SwapHeader}>
             <T as='h5'>
-              Swap - MAINNET 🟢
+              aeSwap - MAINNET 🟢
             </T>
           </Flex>
           <T as='h2' size='display-large' weight='semibold' className={styles.title}>
