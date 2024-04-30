@@ -1,0 +1,10 @@
+@import '@/ui/_styles/variables.scss';
+
+.container {
+  max-width: 842px;
+  margin: 200px auto -20px auto;
+
+  @include small() {
+    margin-top: 100px;
+  }
+}
