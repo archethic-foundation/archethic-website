@@ -72,7 +72,7 @@ export enum ExternalLinks {
   DevelopmentKit = 'https://github.com/archethic-foundation/libjs',
   Playground = 'https://playground.archethic.net/',
   Patents = 'https://wiki.archethic.net/learn/patents',
-  BuyUCO = 'https://app.uniswap.org/#/swap?outputCurrency=0x8a3d77e9d6968b780564936d15b09805827c21fa&use=V2',
+  BuyUCO = 'https://dex.archethic.net',
   Explorer = 'https://mainnet.archethic.net/explorer',
   JoinOurTeam = 'mailto:contact@archethic.net',
   InvestorsJoinUs = 'https://t.me/ArchEthic_ENG',
