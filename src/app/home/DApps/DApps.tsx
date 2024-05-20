@@ -46,7 +46,7 @@ export default function DApps({ className }: DAppsProps) {
             />
             <CtaCardApp
               title='aeSwap'
-              description='Swap assets on-chain, add liquidity & access yield farming'
+              description='Swap assets on-chain and access yield farming by adding liquidity'
               button={{ link: ExternalLinks.aeSwap, label: '' }}
               variantColor='raspberry'
               env='MAINNET'
