@@ -46,16 +46,6 @@ const TEAM = [
   },
   {
     image: {
-      src: '/images/investors/team-cco.webp',
-      srcRetina: '/images/investors/team-cco@2x.webp',
-    },
-    role: 'CCO',
-    name: 'Victor Lafforgue',
-    text: 'Victor is Chief Crypto Officer, leading ecosystem launch & development. He is co-founder of a private investment company that turned $100k investment into $10M+ AUM. With a 7+ years background in crypto markets, he is a DeFi “Degen” while also advising several crypto projects.',
-    linkedln: 'https://www.linkedin.com/in/victor-lafforgue/'
-  },
-  {
-    image: {
       src: '/images/investors/team-lead-architect.webp',
       srcRetina: '/images/investors/team-lead-architect@2x.webp',
     },
