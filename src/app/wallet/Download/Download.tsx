@@ -112,8 +112,14 @@ export default function Download() {
           />
           <CardSmall
             variant='primary'
-            title='Web'
-            text='Soon'
+            title='Chrome Extension'
+            text='Chrome Web Store'
+            textLink={{
+              label: 'Download',
+              to: ExternalLinks.WalletExtChrome,
+              color: 'raspberry-300',
+              onNewTab: true,
+            }}
           />
 
         </div>

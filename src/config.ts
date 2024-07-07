@@ -62,6 +62,7 @@ export enum ExternalLinks {
   WalletAndroidDL = 'https://play.google.com/store/apps/details?id=net.archethic.archethic_wallet',
   WalletWindowsDL = 'https://apps.microsoft.com/store/detail/archethic-wallet/9N33TTVRJZXF',
   WalletLinuxDL = 'https://github.com/archethic-foundation/archethic-wallet/releases/',
+  WalletExtChrome = 'https://chromewebstore.google.com/detail/archethic-wallet/cbhmkogeimolnnnlflcpaapkmhmcoimh',
   // Links
   Documentation = 'https://wiki.archethic.net/',
   aeBridge = 'https://bridge.archethic.net',
