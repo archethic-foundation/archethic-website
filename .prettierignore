@@ -1,5 +1,0 @@
-# We can exclude files from formatting with prettier
-**/package-lock.json
-.next
-public
-storybook-static
