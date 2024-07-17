@@ -26,11 +26,13 @@ jobs:
 
       - name: Deploy to aeHosting
         id: deploy
-        uses: archethic-foundation/aeweb-github-action@v1.8.1
+        uses: archethic-foundation/aeweb-github-action@v1.8.7
         with:
           seed: ${{ secrets.ARCH_BASE_MAINNET_SEED }}
           endpoint: "https://mainnet.archethic.net"
           path: "./out"
           keychainFundingService: "archethic-wallet-archethic-front-app"
           keychainWebsiteService: "aeweb-ARCHETHIC-website"
+          sendTransactionTimeout: 180
+          percentageOfConfirmations: 50
         
