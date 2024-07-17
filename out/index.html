@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="icon" href="/favicon.b686943b.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/index.391268b5.css"><script type="module" src="/index.runtime.7587ee45.js"></script><script defer="" data-domain="archethic.net" src="https://plausible.io/js/plausible.js"></script>
+    <link rel="stylesheet" href="/index.391268b5.css"><script type="module" src="/index.runtime.f0c3d5ef.js"></script><script defer="" data-domain="archethic.net" src="https://plausible.io/js/plausible.js"></script>
 </head>
 
 <body>
@@ -56,7 +56,7 @@
                     <a class="nav-link" aria-current="page" href="#uco_token">UCO Token</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#team">Team & Backers</a>
+                    <a class="nav-link" aria-current="page" href="#team">Team & Investors</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="#developers">Developers</a>
@@ -749,26 +749,36 @@
     const data = await response.json();
     return data?.archethic?.usd;
 }
-async function fetchSupplyData() {
-    const defaultSupplyData = {
-        circulating_supply: 240709389.25,
-        total_supply: 909864047
-    };
+async function fetchCirculatingData() {
+    const defaultCirculatingData = 274503484.99245225;
     try {
-        const response = await fetch("https://faas-fra1-afec6ce7.doserverless.co/api/v1/web/fn-22626224-17fb-4eaa-a5a6-0b487a06ac59/https/uco-circulating-supply");
+        const response = await fetch("https://faas-fra1-afec6ce7.doserverless.co/api/v1/web/fn-22626224-17fb-4eaa-a5a6-0b487a06ac59/mainnet/circulatingsupply");
         if (response.ok) {
-            const data = await response.json();
-            return {
-                circulating_supply: data?.circulating_supply,
-                total_supply: data?.total_supply
-            };
+            const data = await response.text();
+            return parseFloat(data);
         } else {
             console.error(`Fetch failed: ${response.status}`);
-            return defaultSupplyData;
+            return defaultCirculatingData;
         }
     } catch (error) {
         console.error(`Fetch failed with error: ${error}`);
-        return defaultSupplyData;
+        return defaultCirculatingData;
+    }
+}
+async function fetchTotalData() {
+    const defaultTotalSupply = 965861930.26785046;
+    try {
+        const response = await fetch("https://faas-fra1-afec6ce7.doserverless.co/api/v1/web/fn-22626224-17fb-4eaa-a5a6-0b487a06ac59/mainnet/totalsupply");
+        if (response.ok) {
+            const data = await response.text();
+            return parseFloat(data);
+        } else {
+            console.error(`Fetch failed: ${response.status}`);
+            return defaultTotalSupply;
+        }
+    } catch (error) {
+        console.error(`Fetch failed with error: ${error}`);
+        return defaultTotalSupply;
     }
 }
 function showSpinner(elements) {
@@ -792,11 +802,13 @@ async function fetchData() {
     showSpinner(circulatingSupplyElements);
     showSpinner(totalSupplyElements);
     try {
-        const [fetchedCurrentPrice, supplyData] = await Promise.all([
+        const [fetchedCurrentPrice, fetchedCirculatingSupply, fetchedTotalSupply] = await Promise.all([
             fetchMarketData(),
-            fetchSupplyData()
+            fetchCirculatingData(),
+            fetchTotalData()
         ]);
-        const { circulating_supply: fetchedCirculatingSupply, total_supply: fetchedTotalSupply } = supplyData;
+        console.log("circulating_supply", fetchedCirculatingSupply);
+        console.log("total_supply", fetchedTotalSupply);
         const calculatedMarketCap = fetchedCurrentPrice * fetchedCirculatingSupply;
         const formattedMarketCap = (calculatedMarketCap / 1000000).toFixed(2) + "M";
         updateElements(ucoPriceElements, fetchedCurrentPrice, (price)=>"$" + price.toFixed(3));
