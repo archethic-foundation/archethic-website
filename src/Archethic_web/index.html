@@ -1,0 +1,927 @@
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Archethic">
+    <title>Archethic - First Biometric Blockchain</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/dist/css/aos.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <script defer data-domain='archethic.net' src='https://plausible.io/js/plausible.js'></script>
+</head>
+
+<body>
+
+<!-- React container -->
+<div id="app"></div>
+
+<!-- Top Navigation -->
+<nav id="main-nav" class="navbar navbar-expand-xl navbar-dark fixed-top px-3 px-lg-4 px-xl-5">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+            <svg width="200" height="33" viewBox="0 0 200 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_409_4566)">
+                    <path d="M62.9566 4.43701H58.4448L49.5709 27.7685L49.4961 27.9804H52.7615L55.0298 22.0353H66.3092L68.5775 27.9804H71.8803L62.9939 4.53672L62.9566 4.43701ZM56.0144 19.3931L60.6758 7.1291L65.3121 19.3931H56.0144Z"
+                          fill="white"></path>
+                    <path d="M77.1832 14.196V10.2077H74.1172V27.993H77.2206V21.4123C77.2206 17.8104 77.8188 15.6418 79.1399 14.358C80.1121 13.4108 81.483 12.9871 83.3152 13.0494H84.2375V9.9834H83.4523C80.5732 9.9834 78.4171 11.4416 77.1832 14.221V14.196Z"
+                          fill="white"></path>
+                    <path d="M99.5796 21.125C99.2181 24.2409 97.2489 25.9484 94.0458 25.9484C90.1822 25.9484 88.3002 23.7049 88.3002 19.081C88.3002 14.4571 90.2196 12.2137 94.158 12.2137C97.1617 12.2137 98.9813 13.7841 99.4175 16.7628L99.4425 16.8999H102.359V16.7379C102.035 12.2262 99.0187 9.64624 94.0583 9.64624C88.6616 9.64624 85.1719 13.3603 85.1719 19.0935C85.1719 24.8266 88.5744 28.5407 94.0583 28.5407C98.9938 28.5407 102.334 25.6492 102.558 21.1624V21.0004H99.6045V21.1375L99.5796 21.125Z"
+                          fill="white"></path>
+                    <path d="M114.962 9.63398C111.883 9.63398 109.702 11.1296 108.443 14.0834V3.21533H105.34V27.9801H108.443V21.1501C108.443 15.2674 110.388 12.2887 114.226 12.2887C117.018 12.2887 118.264 13.7344 118.264 16.9874V27.9676H121.368V16.6633C121.368 11.9272 119.274 9.62151 114.962 9.62151V9.63398Z"
+                          fill="white"></path>
+                    <path d="M141.171 19.7413C141.246 19.3051 141.246 18.9437 141.246 18.495C141.246 13.1108 137.968 9.646 132.883 9.646C127.436 9.646 124.059 13.2479 124.059 19.0559C124.059 24.8638 127.361 28.5405 132.883 28.5405C139.875 28.5405 141.021 23.8917 141.208 22.4708L141.233 22.2963H138.379L138.354 22.421C137.768 24.8638 135.961 26.1101 132.982 26.1101C129.281 26.1101 127.361 24.0786 127.137 19.8909H141.146L141.171 19.7663V19.7413ZM127.212 17.4605C127.598 13.8337 129.468 12.0764 132.908 12.0764C136.347 12.0764 138.018 13.8835 138.192 17.4605H127.212Z"
+                          fill="white"></path>
+                    <path d="M148.226 6.3191H146.457L145.397 9.98334L141.882 10.8309L141.758 10.8558V12.7128H145.11V23.7305C145.11 26.3478 145.833 27.968 149.46 27.968H153.735V25.3881H148.214V12.7004H153.972V10.1828H148.214V6.30664L148.226 6.3191Z"
+                          fill="white"></path>
+                    <path d="M166.524 9.63398C163.446 9.63398 161.265 11.1296 160.006 14.0834V3.21533H156.902V27.9801H160.006V21.1501C160.006 15.2674 161.95 12.2887 165.789 12.2887C168.581 12.2887 169.827 13.7344 169.827 16.9874V27.9676H172.93V16.6633C172.93 11.9272 170.836 9.62151 166.524 9.62151V9.63398Z"
+                          fill="white"></path>
+                    <path d="M179.775 10.1948H176.672V27.9801H179.775V10.1948Z" fill="white"></path>
+                    <path d="M180.156 4.43701H176.242V7.65257H180.156V4.43701Z" fill="white"></path>
+                    <path d="M197.043 20.9877V21.1248C196.656 24.2406 194.7 25.9481 191.484 25.9481C187.62 25.9481 185.738 23.7047 185.738 19.0808C185.738 14.4569 187.658 12.2135 191.596 12.2135C194.6 12.2135 196.42 13.7838 196.856 16.7626L196.881 16.8997H199.797V16.7377C199.473 12.2259 196.457 9.646 191.484 9.646C186.087 9.646 182.598 13.3601 182.598 19.0932C182.598 24.8264 186 28.5405 191.484 28.5405C196.42 28.5405 199.76 25.649 199.984 21.1622V21.0001H197.03L197.043 20.9877Z"
+                          fill="white"></path>
+                    <path d="M15.1056 0.436219L0.872437 14.6196C0.311585 15.1804 0 15.9407 0 16.7383V20.6643C0 21.462 0.311585 22.2222 0.872437 22.7831L3.0286 24.9268C3.72655 25.6247 4.89811 25.4627 5.38418 24.6027L18.0968 2.23095C18.6577 1.23388 17.9473 0 16.8006 0H16.165C15.7662 0 15.3923 0.162024 15.1056 0.436219Z"
+                          fill="white"></path>
+                    <path d="M37.8464 14.6196L23.6132 0.436219C23.339 0.162024 22.9527 0 22.5663 0H21.9307C20.784 0 20.0611 1.23388 20.6345 2.23095L33.3471 24.6027C33.8332 25.4627 35.0047 25.6123 35.7027 24.9268L37.8589 22.7831C38.4197 22.2222 38.7313 21.462 38.7313 20.6643V16.7383C38.7313 15.9407 38.4197 15.1804 37.8589 14.6196H37.8464Z"
+                          fill="white"></path>
+                    <path d="M10.2459 32.1178C10.8068 32.6786 11.567 32.9902 12.3522 32.9902H26.3611C27.1463 32.9902 27.9065 32.6786 28.4674 32.1178L31.7328 28.8648C32.68 27.9301 32.007 26.3098 30.6734 26.3098H8.0399C6.70632 26.3098 6.04576 27.9176 6.98051 28.8648L10.2459 32.1178Z"
+                          fill="white"></path>
+                    <path d="M4.41406 26.3104H4.42634L4.41406 26.2981V26.3104Z" fill="white"></path>
+                </g>
+            </svg>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0 ms-lg-auto me-lg-auto">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/">The project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#uco_token">UCO Token</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#team">Team & Backers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#developers">Developers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="wallet_hw.html">Cold Wallet</a>
+                </li>
+            </ul>
+            <a target="_blank" href="https://dex.archethic.net" class="btn btn-primary">Launch dApp<i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
+    </div>
+</nav>
+
+<!-- Home top -->
+<section class="pt-5">
+    <div class="container mt-md-5">
+        <div class="row text-shadow" data-aos="zoom-in">
+            <div class="col-xxl-7 col-xl-8 col-lg-10">
+                <h1 class="hero4 fw-normal mb-4 fw-bold text-center text-lg-start">Archethic is the first and only <u class="fw-bold">biometric blockchain</u></h1>
+            </div>
+        </div>
+        <div class="row p-3 p-md-0 text-shadow g-0" data-aos="zoom-in">
+            <div class="col-lg-6 col-xl-6 align-self-center order-2 order-lg-1">
+                <p class="text-xl mb-4">Access your private keys, your digital identity and your finances with the tip of your fingers.</p>
+                <p class="text-lg mb-1"><u><i class="bi bi-chevron-right ms-2 me-2"></i></u> <strong class="op-10">11</strong> Biometric & Blockchain <strong>Patents</strong>.</u>
+                </p>
+                <p class="text-lg mb-1"><u><i class="bi bi-chevron-right ms-2 me-2"></i></u> Blockchain transaction fee <strong><&nbsp;0.02$</strong>.</p>
+                <p class="text-lg mb-1"><u><i class="bi bi-chevron-right ms-2 me-2"></i></u> First <strong>Biometric cold Wallet</strong> where you are the private key.</p>
+            </div>
+            <div class="col-lg-6 col-xl-5 align-self-center order-1 order-lg-2">
+                <video id="background-video" autoplay loop muted poster="assets/img/wallet_hw.png" class="img-fluid">
+                    <source src="assets/video/wallet_3d.webm" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <!-- Market cap -->
+            <div class="col-lg-4 mt-4">
+                <div class="bg-2 rounded-xl p-4 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <h5 class="op-08">Market Cap</h5>
+                    <p class="hero2 fw-bold">
+                        <a class="link" href="https://coinmarketcap.com/currencies/archethic/#Markets" target="_blank"><span class="text-white market-cap"></span><sup class="ms-2"><i
+                                class="bi bi-box-arrow-up-right text-md"></i></sup></a>
+                    </p>
+                    <a class="me-4" href="https://t.me/ArchEthic_ENG" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
+                        </svg>
+                    </a>
+                    <a href="https://discord.com/invite/bZv9aHN7bd" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                            <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+                        </svg>
+                    </a>
+                    <a class="ms-4" href="https://twitter.com/archethic" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                        </svg>
+                    </a>
+                    <a class="ms-4" href="https://medium.com/archethic" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-medium" viewBox="0 0 16 16">
+                            <path d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8m4.95 0c0 2.34-1.01 4.236-2.256 4.236S9.463 10.339 9.463 8c0-2.34 1.01-4.236 2.256-4.236S13.975 5.661 13.975 8M16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- UCO price -->
+            <div class="col-lg-4 col-sm-6 mt-4">
+                <div class="bg-2 rounded-xl p-4 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <h5 class="op-08">UCO Price</h5>
+                    <p class="hero2 mb-1 fw-bold uco-price">
+                        $0.172
+                    </p>
+                    <a class="btn btn-outline-primary mt-1" href="#uco_token">
+                        Buy UCO<i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Farming APR -->
+            <div class="col-lg-4 col-sm-6 mt-4">
+                <div class="bg-2 rounded-xl p-4 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <h5 class="op-08">Farming APR</h5>
+                    <p class="hero2 mb-1 fw-bold">
+                        ___%
+                    </p>
+                    <a class="btn btn-outline-primary mt-1" href="https://dex.archethic.net/farmLock" target="_blank">
+                        Start earning<i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Vision et mission -->
+<section class="pt-5">
+    <div class="container">
+        <h1 class="hero3 text-center px-3 px-md-0 mb-3 mt-5 mt-md-0 mb-md-5 fw-bold text-shadow" data-aos="fade-up" data-aos-delay="0">Our <u>Vision</u> & Our <u>Mission</u></h1>
+        <div class="rounded-xxl bg-2 p-4 p-md-5">
+            <div class="row">
+                <div class="col-xl-6 order-xl-2">
+                    <p class="op-08">Imagine a world where using the internet is easier, safer, and faster than ever before. A world where you do not need to remember passwords or
+                        worry about online security because your fingerprint is all you need.</p>
+                    <p class="fw-bold">Archethic is working to bring this world to you.</p>
+                    <p class="op-08">Picture all the websites and apps you use today migrated to Archethic to harness the power of biometric blockchain technology to create a hack
+                        proof authentication system, which is even free from kind of central control.</p>
+                    <p class="op-08">Logging in, signing online documents, paying, all of this happens instantly. With Archethic, you have complete confidence that your personal
+                        information is safe. This is a world where everyone has control over their own data.</p>
+                    <p class="fw-bold">All of this sounds like a revolution. Yes, it is! And you can be part of this revolution, today!</p>
+                </div>
+                <div class="col-xl-6 order-xl-1">
+                    <div id="vidalytics_embed_TU80FjjDiPyKeXIY" style="width: 100%; position:relative; padding-top: 56.25%;"></div>
+                    <div class="text-center">
+                        <a target="_blank" href="assets/files/white_paper.pdf" class="btn btn-outline-primary mt-2">White paper <i class="bi bi-arrow-right ms-2"></i></a>
+                        <a target="_blank" href="assets/files/technical_paper.pdf" class="btn btn-outline-primary ms-2 mt-2">Technical paper <i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 3 core components -->
+<section class="pt-md-5">
+    <div class="container mt-5">
+        <div class="row px-3 px-md-0 mb-3 mb-md-5">
+            <div class="col-xl-8 col-lg-10 ms-auto me-auto" data-aos="fade-up" data-aos-delay="0">
+                <h1 class="hero3 text-center fw-bold text-shadow">Introducing the <u>3 Core Components</u> of Archethic</u></h1>
+            </div>
+        </div>
+        <div class="rounded-xxl bg-2 p-4 p-md-5">
+            <!-- Patents -->
+            <div class="row">
+                <div class="col-lg-5 text-lg-end pe-5">
+                    <p class="hero4 overflow-visible mb-2"><i class="bi bi-1-square-fill text-primary"></i></p>
+                    <h2 class="hero2 mb-4 mb-md-0">11 Patents merging Blockchain & Biometry</h2>
+                </div>
+                <div class="col-lg-7">
+                    <p class="fw-bold">Archethic holds <a target="_blank" href="https://wiki.archethic.net/learn/patents/" class="link">11 groundbreaking patents</a> that integrate
+                        blockchain and biometrics to protect user privacy.</p>
+                    <p class="op-08">These patents enable the generation of private keys on the fly directly from biometric data, such as fingerprints, without storing any
+                        biometric information. This innovative approach ensures secure and private digital interactions.</p>
+                    <p class="op-08">In the future, biometric identification devices, such as smartphone face ID, may require these patents to securely link to a blockchain,
+                        significantly enhancing the prominence and impact of Archethic technology.</p>
+                </div>
+            </div>
+            <!-- Blockchain -->
+            <div class="row mt-4 mt-lg-5">
+                <div class="col-lg-5 pe-5 text-lg-end">
+                    <p class="hero4 overflow-visible mb-2"><i class="bi bi-2-square-fill text-primary"></i></p>
+                    <h2 class="hero2 mb-4 mb-md-0">The Archethic Blockchain and ARCH consensus</h2>
+                </div>
+                <div class="col-lg-7">
+                    <p><strong>Archethic introduces a groundbreaking distributed ledger technology: <a target="_blank" href="https://wiki.archethic.net/learn/transaction-chain"
+                                                                                                       class="link">The transaction chain.</a></strong></p>
+                    <p class="op-08">Each block is a transaction, and each transaction forms a chain, merging the capacity of millions of blockchains into one.</p>
+                    <p class="mb-2"><strong>Our <a target="_blank" href="https://wiki.archethic.net/learn/arch-consensus/" class="link">ARCH Consensus</a> solves the blockchain
+                        trilemma:</strong></p>
+                    <p class="op-08 mb-1"><strong><u><i class="bi bi-chevron-right me-2"></i></u>Linear Scalability:</strong> 50 TPS per node (Target 10,000 TPS Q4 2024)</p>
+                    <p class="op-08 mb-1"><strong><u><i class="bi bi-chevron-right me-2"></i></u>Energy consumption:</strong> 3.5Bn time less than Bitcoin.</p>
+                    <p class="op-08 mb-1"><strong><u><i class="bi bi-chevron-right me-2"></i></u>Decentralization:</strong> Achieved through geo-sharding around the globe.</p>
+                    <p class="op-08"><strong><u><i class="bi bi-chevron-right me-2"></i></u>High Security:</strong> Aeronautic-grade security with 90% malicious node tolerance.</p>
+                    <p class="op-08">These innovations position Archethic as a leader in blockchain technology, providing unparalleled security, scalability, and efficiency.</p>
+                    <p class="op-08">And if that wasn’t enough, Archethic consumes 0.0001% of the energy required by Bitcoin! This makes Archethic scalable, but also
+                        sustainable.</p>
+                </div>
+            </div>
+            <!-- Cold wallet -->
+            <div class="row mt-4 mt-lg-5">
+                <div class="col-lg-5 text-lg-end pe-5">
+                    <p class="hero4 overflow-visible mb-2"><i class="bi bi-3-square-fill text-primary"></i></p>
+                    <h2 class="hero2 mb-4">Biometric Cold Wallet, The Key to Mass Adoption</h2>
+                    <div class="d-none d-lg-inline-block">
+                        <a href="wallet_hw.html" class="btn btn-primary p-2 px-4">Order Now <i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <p class="op-08 fw-bold"><em>Archethic cold wallet is designed to drive mass adoption of our blockchain technology. Here is how it stands out...</em></p>
+                    <h3 class="mb-2 text-md fw-bold">Patented Biometric Security</h3>
+                    <p class="op-08">Our cold wallet generates private keys directly from fingerprints without storing the image. This ensures top-notch security and privacy,
+                        eliminating the need for traditional passwords and PINs.</p>
+                    <h3 class="mb-2 text-md fw-bold">Competitive Advantages</h3>
+                    <p class="op-08 mb-1"><strong><u><i class="bi bi-chevron-right me-2"></i></u>Unmatched Security:</strong> Biometric key generation is tamperproof, with no data
+                        storage.</p>
+                    <p class="op-08 mb-1"><strong><u><i class="bi bi-chevron-right me-2"></i></u>User-Friendly:</strong> No logins or passwords needed; seamless key generation.</p>
+                    <p class="op-08 mb-1"><strong><u><i class="bi bi-chevron-right me-2"></i></u>Privacy Protection:</strong> No storage of biometric data ensures unbreakable user
+                        privacy.</p>
+                    <p class="op-08"><strong><u><i class="bi bi-chevron-right me-2"></i></u>Interoperable:</strong> Compatible with any blockchain.</p>
+                    <h3 class="mb-2 text-md fw-bold">Driving Blockchain Adoption</h3>
+                    <p class="op-08">Our cold wallet offers secure, decentralized identity through fingerprint authentication. It simplifies logging in and approving transactions
+                        on the Archethic network, attracting users and encouraging the development of decentralized applications (dApps) on our platform.</p>
+                    <div class="d-lg-none mt-4">
+                        <a target="_blank" href="wallet_hw.html" class="btn btn-primary p-2 px-4">Order Now <i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Roadmap -->
+<section class="">
+    <div class="container mt-5">
+        <h1 class="hero3 text-center col-xl-7 col-lg-9 ms-auto me-auto fw-bold px-3 px-md-0 mb-3 mb-md-5 pt-md-5 text-shadow" data-aos="fade-up" data-aos-delay="0">Our
+            <u>Roadmap</u></h1>
+        <div class="row g-2 justify-content-center">
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="bg-1 h-100 p-3 rounded">
+                    <h5 class="fw-bold text-lg"><u><i class="bi bi-check2-circle me-2"></i></u><span class="op-08">2016</span></h5>
+                    <p class="text-sm op-08 mb-0">Filing of 11 Patents - merging Blockchain and Biometric Technologies</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="bg-1 h-100 p-3 rounded">
+                    <h5 class="fw-bold text-lg"><u><i class="bi bi-check2-circle me-2"></i></u><span class="op-08">2019</span></h5>
+                    <p class="text-sm op-08 mb-1">CNRS Partnership to design ARCH Consensus and the First "Transaction Chain".</p>
+                    <a target="_blank" href="https://www.ins2i.cnrs.fr/fr/cnrsinfo/systemes-distribues-et-consensus-bernadette-charron-bost-primee-par-lacademie-des-sciences"
+                       class="link fw-bold">View article <i class="bi bi-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="bg-1 h-100 p-3 rounded">
+                    <h5 class="fw-bold text-lg"><u><i class="bi bi-check2-circle me-2"></i></u><span class="op-08">2019</span></h5>
+                    <p class="text-sm op-08 mb-1">Successful Approval of All 11 Patents.</p>
+                    <a target="_blank" href="https://wiki.archethic.net/learn/patents/" class="link fw-bold">View patents <i class="bi bi-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="bg-1 h-100 p-3 rounded">
+                    <h5 class="fw-bold text-lg"><u><i class="bi bi-check2-circle me-2"></i></u><span class="op-08">2019</span></h5>
+                    <p class="text-sm op-08 mb-0">Start of Archethic Transaction Chain Development.</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="bg-1 h-100 p-3 rounded">
+                    <h5 class="fw-bold text-lg"><u><i class="bi bi-check2-circle me-2"></i></u><span class="op-08">2019</span></h5>
+                    <p class="text-sm op-08 mb-1">CSF certifies Archethic Blockchain and Biometrics for Olympics 2024 & Mass Public events.</p>
+                    <a target="_blank" href="assets/files/CSF_article.pdf" class="link fw-bold">View certification <i class="bi bi-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="bg-1 h-100 p-3 rounded">
+                    <h5 class="fw-bold text-lg"><u><i class="bi bi-check2-circle me-2"></i></u><span class="op-08">2019</span></h5>
+                    <p class="text-sm op-08 mb-0">Launch of Testnet for Initial Testing and Validation.</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="bg-1 h-100 p-3 rounded">
+                    <h5 class="fw-bold text-lg"><u><i class="bi bi-check2-circle me-2"></i></u><span class="op-08">2022</span></h5>
+                    <p class="text-sm op-08 mb-0">Launch of Mainnet Making the Transaction Chain Fully Operational.</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="bg-1 h-100 p-3 rounded">
+                    <h5 class="fw-bold text-lg"><u><i class="bi bi-check2-circle me-2"></i></u><span class="op-08">2022</span></h5>
+                    <p class="text-sm op-08 mb-0">Release of Archethic Keychain with Biometric Security Features.</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="bg-1 h-100 p-3 rounded">
+                    <h5 class="fw-bold text-lg"><u><i class="bi bi-check2-circle me-2"></i></u><span class="op-08">2022</span></h5>
+                    <p class="text-sm op-08 mb-1">Launch of Downloadable Archethic Wallet for Ecosystem Access.</p>
+                    <a target="_blank" href="wallet.html" class="link fw-bold">Download wallet <i class="bi bi-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="bg-1 h-100 p-3 rounded">
+                    <h5 class="fw-bold text-lg"><u><i class="bi bi-check2-circle me-2"></i></u><span class="op-08">2023</span></h5>
+                    <p class="text-sm op-08 mb-1">Launch of Archethic Bridge for Blockchain Interoperability.</p>
+                    <a target="_blank" href="https://bridge.archethic.net/bridge" class="link fw-bold">Go to aeBridge <i class="bi bi-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="bg-1 h-100 p-3 rounded">
+                    <h5 class="fw-bold text-lg"><u><i class="bi bi-check2-circle me-2"></i></u><span class="op-08">2024</span></h5>
+                    <p class="text-sm op-08 mb-1">Release of Archethic DEX and Farming Features for Decentralized Finance.</p>
+                    <a target="_blank" href="https://dex.archethic.net/" class="link fw-bold">Go to aeSwap <i class="bi bi-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="bg-3 h-100 p-3 rounded">
+                    <h5 class="fw-bold text-lg"><span class="">Q4 2024</span></h5>
+                    <p class="text-sm mb-0">Opening of the Ecosystem to Third-Party Developers and Project Initiators.</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="bg-3 h-100 p-3 rounded">
+                    <h5 class="fw-bold text-lg"><span class="">Q4 2025</span></h5>
+                    <p class="text-sm mb-1">Launch of Archethic Biometric Cold Wallet.</p>
+                    <a target="_blank" href="wallet_hw.html" class="link fw-bold">Order Now <i class="bi bi-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xxl-2">
+                <div class="bg-3 h-100 p-3 rounded">
+                    <h5 class="fw-bold text-lg"><span class="">Q3 2026</span></h5>
+                    <p class="text-sm mb-0">Launch of Molecular, Technology for Seamless Migration of any project from Web2 to Web3.</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<!-- UCO Token -->
+<section class="" id="uco_token">
+    <div class="container mt-5">
+        <h1 class="hero3 text-center fw-bold px-3 px-md-0 mb-3 mb-md-5 pt-md-5 text-shadow" data-aos="fade-up" data-aos-delay="0">The <u>UCO</u> Token</h1>
+        <div class="rounded-xxl bg-2 p-4 p-md-5">
+            <div class="bg-4 py-4 pb-3 mb-5">
+                <div class="row g-2 d-flex justify-content-center">
+                    <div class="col-6 col-sm-4 col-xl-2">
+                        <div class="text-center">
+                            <p class="hero1 mb-0 fw-bold total-supply"></p>
+                            <p class="text-uppercase op-08 text-sm">Total supply</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-xl-2">
+                        <div class="text-center">
+                            <p class="hero1 mb-0 fw-bold circulating-supply"></p>
+                            <p class="text-uppercase op-08 text-sm">Circulating supply</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-xl-2">
+                        <div class="text-center">
+                            <p class="hero1 mb-0 fw-bold market-cap">$4.5M</p>
+                            <p class="text-uppercase op-08 text-sm">Market Cap</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-xl-2">
+                        <div class="text-center">
+                            <p class="hero1 mb-0 fw-bold uco-price"></p>
+                            <p class="text-uppercase op-08 text-sm">Current Price</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-sm-4 col-xl-2">
+                        <div class="text-center">
+                            <p class="hero1 mb-0 fw-bold"><a href="https://dex.archethic.net/farmLock" target="_blank" class="link"><u>___%<i class="bi bi-arrow-right ms-1"></i></u></a></p>
+                            <p class="text-uppercase op-08 text-sm">Farming APR</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-xxl fw-bold mb-4">Where to <u>Buy</u> UCO ?</h2>
+            <div class="row mb-5">
+                <div class="col-xl-3">
+                    <p class="mb-0"><strong>CEX</strong><br/><span class="op-08">Centralized exchanges</span></p>
+                    <div class="row g-3">
+                        <div class="col-6 col-md-4 col-xl-12 mt-3 mb-3 pt-2">
+                            <a class="btn btn-dark rounded-no w-100 p-3 bg-4" target="_blank" href="https://www.probit.com/app/exchange/UCO-USDT">
+                                <img height="70" src="assets/img/exchanges/probit.svg"/>
+                                <div class="pt-2">ProBit Global</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-9">
+                    <p class="mb-0"><strong>DEX</strong><br/><span class="op-08">Decentralized exchanges</span></p>
+                    <div class="row g-3">
+                        <div class="col-6 col-md-4 mt-3 pt-2">
+                            <a class="btn btn-dark rounded-no w-100 p-3 bg-4" target="_blank" href="https://dex.archethic.net/swap">
+                                <img height="70" src="assets/img/exchanges/archethic.png"/>
+                                <div class="pt-2">aeSwap</div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 mt-3 pt-2">
+                            <a class="btn btn-dark rounded-no w-100 p-3 bg-4" target="_blank"
+                               href="https://quickswap.exchange/#/swap?currency0=0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619&currency1=0x3C720206bFaCB2d16fA3ac0ed87D2048Dbc401Fc&swapIndex=0">
+                                <img height="70" src="assets/img/exchanges/quickswap.svg"/>
+                                <div class="pt-2">QuickSwap</div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 mt-3 pt-2">
+                            <a class="btn btn-dark rounded-no w-100 p-3 bg-4" target="_blank"
+                               href="https://app.uniswap.org/explore/tokens/ethereum/0x8a3d77e9d6968b780564936d15b09805827c21fa">
+                                <img height="70" src="assets/img/exchanges/uniswap.svg"/>
+                                <div class="pt-2">UniSwap</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-xxl fw-bold mb-4">What are the UCO <u>Applications</u>?</h2>
+            <p class="op-08">The UCO token is designed to serve 2 key functions within the Archethic ecosystem:</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 mb-3 mb-lg-0">
+                    <div class="bg-4 h-100 p-4">
+                        <h5 class="fw-bold text-lg"><u><i class="bi bi-1-circle me-2"></i></u> Transaction Fees</h5>
+                        <p class="op-08 mb-0">UCO tokens will be used to pay for transaction fees, ensuring efficient and secure network operations.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-4 h-100 p-4">
+                        <h5 class="fw-bold text-lg"><u><i class="bi bi-2-circle me-2"></i></u> Governance and Voting</h5>
+                        <p class="op-0 mb-0">Token holders will be able to lock UCO tokens to gain voting power in the DAO, participating in decision-making processes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team -->
+<section class="position-relative" id="team">
+    <div class="container mt-5">
+        <h1 class="hero3 text-center fw-bold px-3 px-md-0 mb-3 mb-md-5 pt-md-5 text-shadow" data-aos="fade-up" data-aos-delay="0">Our <u>Team</u></h1>
+        <div class="swiper-container team-slider overflow-hidden">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide single-box bg-5 rounded-xl overflow-hidden">
+                    <div class="img-area">
+                        <img class="img-fluid move-animation" src="assets/img/team/team-ceo.webp">
+                    </div>
+                    <div class="info-area p-4">
+                        <a class="float-end text-lg" target="_blank" href="https://www.linkedin.com/in/sebastien-dupont-uniris/"><i class="bi bi-linkedin"></i></a>
+                        <p class="text-uppercase text-md">CEO</p>
+                        <h4 class="text-xl fw-bold">Sebastien Dupont</h4>
+                        <p class="op-08 text-sm">Steered two flagship projects at Orange over a decade: Identity Management, catering to a vast user base of 100M & Mobile Banking
+                            in Africa, where he drove growth from €10M to €4 billion in revenue. Cybersecurity Specialist with Thales for 10 years, Bitcoin Evangelist since
+                            2013.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide single-box bg-5 rounded-xl overflow-hidden">
+                    <div class="img-area">
+                        <img class="img-fluid move-animation" src="assets/img/team/team-coo.webp">
+                    </div>
+                    <div class="info-area p-4">
+                        <a class="float-end text-lg" target="_blank" href="https://www.linkedin.com/in/nileshpatankar/"><i class="bi bi-linkedin"></i></a>
+                        <p class="text-uppercase text-md">COO</p>
+                        <h4 class="text-xl fw-bold">Nilesh Patankar</h4>
+                        <p class="op-08 text-sm">Nilesh is an ardent advocate of open-source principles and decentralization. He has assisted organizations like Mastercard and
+                            Barclays in modernizing their payment infrastructure and successfully transitioning to the cloud.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide single-box bg-5 rounded-xl overflow-hidden">
+                    <div class="img-area">
+                        <img class="img-fluid move-animation" src="assets/img/team/team-cio.webp">
+                    </div>
+                    <div class="info-area p-4">
+                        <a class="float-end text-lg" target="_blank" href="https://www.linkedin.com/in/sylvain-s%C3%A9ramy-1a01b26b/"><i class="bi bi-linkedin"></i></a>
+                        <p class="text-uppercase text-md">CIO</p>
+                        <h4 class="text-xl fw-bold">Sylvain Séramy</h4>
+                        <p class="op-08 text-sm">With over two decades of experience, Sylvain, Chief Information Officer at Archethic, has committed his career to a leading firm
+                            specializing in the secure processing, storage, and management of sensitive data.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide single-box bg-5 rounded-xl overflow-hidden">
+                    <div class="img-area">
+                        <img class="img-fluid move-animation" src="assets/img/team/team-lead-architect.webp">
+                    </div>
+                    <div class="info-area p-4">
+                        <a class="float-end text-lg" target="_blank" href="https://www.linkedin.com/in/samuel-manzanera-277371120/"><i class="bi bi-linkedin"></i></a>
+                        <p class="text-uppercase text-md">Lead architect</p>
+                        <h4 class="text-xl fw-bold">Samuel Manzanera</h4>
+                        <p class="op-08 text-sm">Samuel is the Lead Architect of the Blockchain Development Team. He specialized in solidity on ETH since 8+ years with a focus on
+                            Identity Management & Fundraising Models. Previous collaborations with industry leaders such as Michelin, Viseo, and Deloitte.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide single-box bg-5 rounded-xl overflow-hidden">
+                    <div class="img-area">
+                        <img class="img-fluid move-animation" src="assets/img/team/team-lead-tech.webp">
+                    </div>
+                    <div class="info-area p-4">
+                        <a class="float-end text-lg" target="_blank" href="https://www.linkedin.com/in/julien-leclerc05/"><i class="bi bi-linkedin"></i></a>
+                        <p class="text-uppercase text-md">Blockchain Lead Dev</p>
+                        <h4 class="text-xl fw-bold">Julien Leclerc</h4>
+                        <p class="op-08 text-sm">Julien is passionate about development and discovering new technologies. Motivated by challenges, he excels at finding clean
+                            solutions. With over 6 years in the web3 ecosystem, Julien leads blockchain development at Archethic, optimizing network scalability, stability, and
+                            smart contracts.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide single-box bg-5 rounded-xl overflow-hidden">
+                    <div class="img-area">
+                        <img class="img-fluid move-animation" src="assets/img/team/team-lead-rd.webp">
+                    </div>
+                    <div class="info-area p-4">
+                        <a class="float-end text-lg" target="_blank" href="https://www.linkedin.com/in/kandhi/"><i class="bi bi-linkedin"></i></a>
+                        <p class="text-uppercase text-md">Lead R&D Engineer</p>
+                        <h4 class="text-xl fw-bold">Akshay Reddy</h4>
+                        <p class="op-08 text-sm">Akshay is the Lead R&D Engineer focused on blockchain and biometrics AI at Archethic. He graduated from École Polytechnique as an
+                            International TotalEnergies Scholar. During his studies, Akshay also worked as a Data Scientist for the TotalEnergies Digital Factory team.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Ajoutez des boutons de navigation si nécessaire -->
+            <div class="swiper-button-next text-primary d-none d-sm-block"></div>
+            <div class="swiper-button-prev text-primary d-none d-sm-block"></div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Partners -->
+<section class="pt-5" id="partners">
+    <div class="container mt-5">
+        <h1 class="hero3 text-center fw-bold px-3 px-md-0 mb-3 mb-md-5 text-shadow" data-aos="fade-up" data-aos-delay="0">Our <u>Partners</u> & Our <u>Investors</u></h1>
+        <div class="row g-2 justify-content-center">
+            <div class="col-4 col-sm-3 col-lg-2">
+                <div class="bg-2 h-100 p-3 p-xl-4 rounded partner">
+                    <img class="img-fluid" src="assets/img/partners/cnrs.png"/>
+                </div>
+            </div>
+            <div class="col-4 col-sm-3 col-lg-2">
+                <div class="bg-2 h-100 p-3 p-xl-4 rounded partner">
+                    <img class="img-fluid" src="assets/img/partners/polytechnique.png"/>
+                </div>
+            </div>
+            <div class="col-4 col-sm-3 col-lg-2">
+                <div class="bg-2 h-100 p-3 p-xl-4 rounded partner">
+                    <img class="img-fluid mt-auto mb-auto" src="assets/img/partners/cointribune.png"/>
+                </div>
+            </div>
+            <div class="col-4 col-sm-3 col-lg-2">
+                <div class="bg-2 h-100 p-3 p-xl-4 rounded partner">
+                    <img class="img-fluid mt-auto mb-auto" src="assets/img/partners/flowdesk.png"/>
+                </div>
+            </div>
+            <div class="col-4 col-sm-3 col-lg-2">
+                <div class="bg-2 h-100 p-3 p-xl-4 rounded partner">
+                    <img class="img-fluid" src="assets/img/partners/bpifrance.png"/>
+                </div>
+            </div>
+            <div class="col-4 col-sm-3 col-lg-2">
+                <div class="bg-2 h-100 p-3 p-xl-4 rounded partner">
+                    <img class="img-fluid" src="assets/img/partners/generate.png"/>
+                </div>
+            </div>
+            <div class="col-4 col-sm-3 col-lg-2">
+                <div class="bg-2 h-100 p-3 p-xl-4 rounded partner">
+                    <img class="img-fluid p-4" src="assets/img/partners/french-tech.png"/>
+                </div>
+            </div>
+            <div class="col-4 col-sm-3 col-lg-2">
+                <div class="bg-2 h-100 p-3 p-xl-4 rounded partner">
+                    <img class="img-fluid" src="assets/img/partners/beys.png"/>
+                </div>
+            </div>
+            <div class="col-4 col-sm-3 col-lg-2">
+                <div class="bg-2 h-100 p-3 p-xl-4 rounded partner">
+                    <img class="img-fluid" src="assets/img/partners/hec.png"/>
+                </div>
+            </div>
+            <div class="col-4 col-sm-3 col-lg-2">
+                <div class="bg-2 h-100 p-3 p-xl-4 rounded partner">
+                    <img class="img-fluid" src="assets/img/partners/station-f.png"/>
+                </div>
+            </div>
+            <div class="col-4 col-sm-3 col-lg-2">
+                <div class="bg-2 h-100 p-3 p-xl-4 rounded partner">
+                    <img class="img-fluid" src="assets/img/partners/probit.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Developers -->
+<section class="" id="developers">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-xl-8 col-lg-10 ms-auto me-auto px-3 px-md-0 mb-3 mb-md-5 pt-md-5" data-aos="fade-up" data-aos-delay="0">
+                <h1 class="hero3 text-center fw-bold mb-3 mb-md-4 text-shadow">Join our <u>Developer</u> Community</h1>
+                <p class="op-08 text-lg text-center mb-4 text-shadow">Welcome to the Archethic Developer Hub! We are excited to have you join our growing community of developers
+                    building on the Archethic blockchain. Dive into our resources and get started with your projects today.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-4 mb-3">
+                <div class="bg-2 rounded-xl p-4 p-sm-5 h-100 d-flex align-items-start flex-column">
+                    <h3 class="text-xl fw-bold"><u><i class="bi bi-book-half me-2"></i></u>Knowledge Center</h3>
+                    <p class="op-08">Access our comprehensive documentation for detailed guides, API references, and tutorials.</p>
+                    <a href="https://wiki.archethic.net/" target="_blank" class="btn btn-primary mt-auto">Access now <i class="bi bi-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4 mb-3">
+                <div class="bg-2 rounded-xl p-4 p-sm-5 h-100 d-flex align-items-start flex-column">
+                    <h3 class="text-xl fw-bold"><u><i class="bi bi-github me-2"></i></u>Github</h3>
+                    <p class="op-08">Explore our GitHub repository for code samples, SDKs, and open-source projects.</p>
+                    <a href="https://github.com/archethic-foundation" target="_blank" class="btn btn-primary mt-auto">Access now <i class="bi bi-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4 mb-3">
+                <div class="bg-2 rounded-xl p-4 p-sm-5 h-100 d-flex align-items-start flex-column">
+                    <h3 class="text-xl fw-bold"><u><i class="bi bi-discord me-2"></i></u>Discord</h3>
+                    <p class="op-08">Connect with other developers, ask questions, and stay updated on the latest news.</p>
+                    <a href="https://discord.com/invite/bZv9aHN7bd" target="_blank" class="btn btn-primary mt-auto">Access now <i class="bi bi-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="p-3 pb-5 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 mt-5 mt-lg-0 text-center text-lg-start mb-3">
+                <svg width="200" height="33" viewBox="0 0 200 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_409_4566)">
+                        <path d="M62.9566 4.43701H58.4448L49.5709 27.7685L49.4961 27.9804H52.7615L55.0298 22.0353H66.3092L68.5775 27.9804H71.8803L62.9939 4.53672L62.9566 4.43701ZM56.0144 19.3931L60.6758 7.1291L65.3121 19.3931H56.0144Z"
+                              fill="white"></path>
+                        <path d="M77.1832 14.196V10.2077H74.1172V27.993H77.2206V21.4123C77.2206 17.8104 77.8188 15.6418 79.1399 14.358C80.1121 13.4108 81.483 12.9871 83.3152 13.0494H84.2375V9.9834H83.4523C80.5732 9.9834 78.4171 11.4416 77.1832 14.221V14.196Z"
+                              fill="white"></path>
+                        <path d="M99.5796 21.125C99.2181 24.2409 97.2489 25.9484 94.0458 25.9484C90.1822 25.9484 88.3002 23.7049 88.3002 19.081C88.3002 14.4571 90.2196 12.2137 94.158 12.2137C97.1617 12.2137 98.9813 13.7841 99.4175 16.7628L99.4425 16.8999H102.359V16.7379C102.035 12.2262 99.0187 9.64624 94.0583 9.64624C88.6616 9.64624 85.1719 13.3603 85.1719 19.0935C85.1719 24.8266 88.5744 28.5407 94.0583 28.5407C98.9938 28.5407 102.334 25.6492 102.558 21.1624V21.0004H99.6045V21.1375L99.5796 21.125Z"
+                              fill="white"></path>
+                        <path d="M114.962 9.63398C111.883 9.63398 109.702 11.1296 108.443 14.0834V3.21533H105.34V27.9801H108.443V21.1501C108.443 15.2674 110.388 12.2887 114.226 12.2887C117.018 12.2887 118.264 13.7344 118.264 16.9874V27.9676H121.368V16.6633C121.368 11.9272 119.274 9.62151 114.962 9.62151V9.63398Z"
+                              fill="white"></path>
+                        <path d="M141.171 19.7413C141.246 19.3051 141.246 18.9437 141.246 18.495C141.246 13.1108 137.968 9.646 132.883 9.646C127.436 9.646 124.059 13.2479 124.059 19.0559C124.059 24.8638 127.361 28.5405 132.883 28.5405C139.875 28.5405 141.021 23.8917 141.208 22.4708L141.233 22.2963H138.379L138.354 22.421C137.768 24.8638 135.961 26.1101 132.982 26.1101C129.281 26.1101 127.361 24.0786 127.137 19.8909H141.146L141.171 19.7663V19.7413ZM127.212 17.4605C127.598 13.8337 129.468 12.0764 132.908 12.0764C136.347 12.0764 138.018 13.8835 138.192 17.4605H127.212Z"
+                              fill="white"></path>
+                        <path d="M148.226 6.3191H146.457L145.397 9.98334L141.882 10.8309L141.758 10.8558V12.7128H145.11V23.7305C145.11 26.3478 145.833 27.968 149.46 27.968H153.735V25.3881H148.214V12.7004H153.972V10.1828H148.214V6.30664L148.226 6.3191Z"
+                              fill="white"></path>
+                        <path d="M166.524 9.63398C163.446 9.63398 161.265 11.1296 160.006 14.0834V3.21533H156.902V27.9801H160.006V21.1501C160.006 15.2674 161.95 12.2887 165.789 12.2887C168.581 12.2887 169.827 13.7344 169.827 16.9874V27.9676H172.93V16.6633C172.93 11.9272 170.836 9.62151 166.524 9.62151V9.63398Z"
+                              fill="white"></path>
+                        <path d="M179.775 10.1948H176.672V27.9801H179.775V10.1948Z" fill="white"></path>
+                        <path d="M180.156 4.43701H176.242V7.65257H180.156V4.43701Z" fill="white"></path>
+                        <path d="M197.043 20.9877V21.1248C196.656 24.2406 194.7 25.9481 191.484 25.9481C187.62 25.9481 185.738 23.7047 185.738 19.0808C185.738 14.4569 187.658 12.2135 191.596 12.2135C194.6 12.2135 196.42 13.7838 196.856 16.7626L196.881 16.8997H199.797V16.7377C199.473 12.2259 196.457 9.646 191.484 9.646C186.087 9.646 182.598 13.3601 182.598 19.0932C182.598 24.8264 186 28.5405 191.484 28.5405C196.42 28.5405 199.76 25.649 199.984 21.1622V21.0001H197.03L197.043 20.9877Z"
+                              fill="white"></path>
+                        <path d="M15.1056 0.436219L0.872437 14.6196C0.311585 15.1804 0 15.9407 0 16.7383V20.6643C0 21.462 0.311585 22.2222 0.872437 22.7831L3.0286 24.9268C3.72655 25.6247 4.89811 25.4627 5.38418 24.6027L18.0968 2.23095C18.6577 1.23388 17.9473 0 16.8006 0H16.165C15.7662 0 15.3923 0.162024 15.1056 0.436219Z"
+                              fill="white"></path>
+                        <path d="M37.8464 14.6196L23.6132 0.436219C23.339 0.162024 22.9527 0 22.5663 0H21.9307C20.784 0 20.0611 1.23388 20.6345 2.23095L33.3471 24.6027C33.8332 25.4627 35.0047 25.6123 35.7027 24.9268L37.8589 22.7831C38.4197 22.2222 38.7313 21.462 38.7313 20.6643V16.7383C38.7313 15.9407 38.4197 15.1804 37.8589 14.6196H37.8464Z"
+                              fill="white"></path>
+                        <path d="M10.2459 32.1178C10.8068 32.6786 11.567 32.9902 12.3522 32.9902H26.3611C27.1463 32.9902 27.9065 32.6786 28.4674 32.1178L31.7328 28.8648C32.68 27.9301 32.007 26.3098 30.6734 26.3098H8.0399C6.70632 26.3098 6.04576 27.9176 6.98051 28.8648L10.2459 32.1178Z"
+                              fill="white"></path>
+                        <path d="M4.41406 26.3104H4.42634L4.41406 26.2981V26.3104Z" fill="white"></path>
+                    </g>
+                </svg>
+                <p class="mt-3 op-09 pe-lg-4">Access your private keys, your digital identity and your finances with the tip of your fingers.</p>
+            </div>
+            <div class="col-lg-7">
+                <div class="row">
+                    <div class="col-sm-4 col-lg-4 mb-3 mb-sm-0 text-center text-sm-start">
+                        <p class="text-uppercase mb-2">Products</p>
+                        <p class="text-sm mb-1"><a href="https://dex.archethic.net/swap" target="_blank" class="">DEX (aeSwap)</a></p>
+                        <p class="text-sm mb-1"><a href="wallet.html" class="">Wallet (aeWallet)</a></p>
+                        <p class="text-sm mb-1"><a href="https://bridge.archethic.net/bridge" target="_blank" class="">Bridge (aeBridge)</a></p>
+                        <p class="text-sm mb-1"><a href="wallet_hw.html" class="">Biometric cold wallet</a></p>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-4 text-center text-sm-start">
+                        <p class="text-uppercase mb-2">Ressources</p>
+                        <p class="text-sm mb-1"><a href="https://wiki.archethic.net/" target="_blank" class="">Knowledge center</a></p>
+                        <p class="text-sm mb-1"><a href="assets/files/white_paper.pdf" target="_blank" class="">White paper</a></p>
+                        <p class="text-sm mb-1"><a href="assets/files/technical_paper.pdf" target="_blank" class="">Technical paper</a></p>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-4 text-center text-sm-start">
+                        <p class="text-uppercase mb-2">General</p>
+                        <p class="text-sm mb-1"><a href="mailto:contact@archethic.net" target="_blank" class="">Contact Us</a></p>
+                        <p class="text-sm mb-1"><a href="terms.html" class="">Terms of Use</a></p>
+                        <p class="text-sm mb-1"><a href="privacy.html" class="">Privacy Policy</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-xl mb-2 text-center border-top border-dark pt-4 mt-4">
+            <a href="https://medium.com/archethic" target="_blank" class="me-2 op-09 link"><i class="bi bi-medium"></i></a>
+            <a href="https://discord.com/invite/bZv9aHN7bd" target="_blank" class="me-2 op-09 link"><i class="bi bi-discord"></i></a>
+            <a href="https://github.com/archethic-foundation" target="_blank" class="me-2 op-09 link"><i class="bi bi-github"></i></a>
+            <a href="https://t.me/ArchEthic_ENG" target="_blank" class="me-2 op-09 link"><i class="bi bi-telegram"></i></a>
+            <a href="https://x.com/archethic" target="_blank" class="me-2 op-09 link"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/archethic-technologies/" target="_blank" class="me-2 op-09 link"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.youtube.com/channel/UCmP7Sg_TdBfbO1_u4EyIKzg" target="_blank" class="me-2 op-09 link"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.instagram.com/the_official_archethic/" target="_blank" class="op-09 link"><i class="bi bi-instagram"></i></a>
+        </div>
+        <p class="op-06 text-center">2024 ©Archethic. All rights reserved</p>
+    </div>
+</footer>
+
+<!-- Scripts to run the Team carousel-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper('.team-slider', {
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        speed: 450,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        breakpoints: {
+            576: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 3,
+            },
+            1400: {
+                slidesPerView: 4,
+            },
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+<script>
+    async function fetchMarketData() {
+        const response = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=archethic&vs_currencies=usd");
+        if (!response.ok) {
+            throw new Error(`Fetch failed: ${response.status}`);
+        }
+        const data = await response.json();
+        return data?.archethic?.usd;
+    }
+
+    async function fetchSupplyData() {
+        const defaultSupplyData = {
+            circulating_supply: 240709389.25,
+            total_supply: 909864047
+        };
+
+        try {
+            const response = await fetch("https://faas-fra1-afec6ce7.doserverless.co/api/v1/web/fn-22626224-17fb-4eaa-a5a6-0b487a06ac59/https/uco-circulating-supply");
+            if (response.ok) {
+                const data = await response.json();
+                return {
+                    circulating_supply: data?.circulating_supply,
+                    total_supply: data?.total_supply
+                };
+            } else {
+                console.error(`Fetch failed: ${response.status}`);
+                return defaultSupplyData;
+            }
+        } catch (error) {
+            console.error(`Fetch failed with error: ${error}`);
+            return defaultSupplyData;
+        }
+    }
+
+    function showSpinner(elements) {
+        const spinner = '<div class="spinner-grow text-light" role="status"><span class="visually-hidden">Loading...</span></div>';
+        Array.from(elements).forEach(element => {
+            element.innerHTML = spinner;
+        });
+    }
+
+    function updateElements(elements, value, formatter = v => v) {
+        Array.from(elements).forEach(element => {
+            element.textContent = value !== undefined ? formatter(value) : 'N/A';
+        });
+    }
+
+    async function fetchData() {
+        const ucoPriceElements = document.getElementsByClassName('uco-price');
+        const marketCapElements = document.getElementsByClassName('market-cap');
+        const circulatingSupplyElements = document.getElementsByClassName('circulating-supply');
+        const totalSupplyElements = document.getElementsByClassName('total-supply');
+
+        showSpinner(ucoPriceElements);
+        showSpinner(marketCapElements);
+        showSpinner(circulatingSupplyElements);
+        showSpinner(totalSupplyElements);
+
+        try {
+            const [fetchedCurrentPrice, supplyData] = await Promise.all([fetchMarketData(), fetchSupplyData()]);
+            const { circulating_supply: fetchedCirculatingSupply, total_supply: fetchedTotalSupply } = supplyData;
+
+            const calculatedMarketCap = fetchedCurrentPrice * fetchedCirculatingSupply;
+            const formattedMarketCap = (calculatedMarketCap / 1000000).toFixed(2) + "M";
+
+            updateElements(ucoPriceElements, fetchedCurrentPrice, price => '$' + price.toFixed(3));
+            updateElements(marketCapElements, calculatedMarketCap, cap => '$' + formattedMarketCap);
+            updateElements(circulatingSupplyElements, fetchedCirculatingSupply, supply => (supply / 1000000).toFixed(2) + "M");
+            updateElements(totalSupplyElements, fetchedTotalSupply, supply => (supply / 1000000).toFixed(0) + "M");
+
+            console.log([{ price: fetchedCurrentPrice, marketCap: calculatedMarketCap, circulatingSupply: fetchedCirculatingSupply }]);
+        } catch (error) {
+            console.error("Error fetching data:", error);
+            updateElements(ucoPriceElements);
+            updateElements(marketCapElements);
+            updateElements(circulatingSupplyElements);
+            updateElements(totalSupplyElements);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', fetchData);
+</script>
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/dist/js/aos.js"></script>
+<!-- Video embeded -->
+<script type="text/javascript">
+    (function (v, i, d, a, l, y, t, c, s) {
+        y = '_' + d.toLowerCase();
+        c = d + 'L';
+        if (!v[d]) {
+            v[d] = {};
+        }
+        if (!v[c]) {
+            v[c] = {};
+        }
+        if (!v[y]) {
+            v[y] = {};
+        }
+        var vl = 'Loader', vli = v[y][vl], vsl = v[c][vl + 'Script'], vlf = v[c][vl + 'Loaded'], ve = 'Embed';
+        if (!vsl) {
+            vsl = function (u, cb) {
+                if (t) {
+                    cb();
+                    return;
+                }
+                s = i.createElement("script");
+                s.type = "text/javascript";
+                s.async = 1;
+                s.src = u;
+                if (s.readyState) {
+                    s.onreadystatechange = function () {
+                        if (s.readyState === "loaded" || s.readyState == "complete") {
+                            s.onreadystatechange = null;
+                            vlf = 1;
+                            cb();
+                        }
+                    };
+                } else {
+                    s.onload = function () {
+                        vlf = 1;
+                        cb();
+                    };
+                }
+                i.getElementsByTagName("head")[0].appendChild(s);
+            };
+        }
+        vsl(l + 'loader.min.js', function () {
+            if (!vli) {
+                var vlc = v[c][vl];
+                vli = new vlc();
+            }
+            vli.loadScript(l + 'player.min.js', function () {
+                var vec = v[d][ve];
+                t = new vec();
+                t.run(a);
+            });
+        });
+    })(window, document, 'Vidalytics', 'vidalytics_embed_TU80FjjDiPyKeXIY', 'https://fast.vidalytics.com/embeds/4rR1bEHK/TU80FjjDiPyKeXIY/');
+</script>
+
+
+<script>
+    AOS.init({
+        easing: 'ease-in-out-sine',
+        duration: '600',
+        easing: 'ease-in-sine'
+    });
+</script>
+
+<!-- React animation -->
+<script type="module" src="../index.jsx"></script>
+
+</body>
+</html>

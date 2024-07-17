@@ -1,0 +1,25 @@
+// Hover
+@mixin link-hover-effect {
+  position: relative;
+    &::after {
+      @include transition(0.8s, transform);
+      background-color: $color-neutral-0;
+      content: "";
+      display: block;
+      left: 0;
+      position: absolute;
+      transform: scaleX(0);
+      transform-origin: right top;
+      width: 100%;
+
+      bottom: -1px;
+      height: 1px;
+    }
+
+  @include hover() {
+    &::after {
+    transform: scale(1);
+    transform-origin: left top;
+    }
+  }
+}

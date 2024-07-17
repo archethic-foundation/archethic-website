@@ -1,0 +1,83 @@
+@import '../_styles/variables';
+
+.sectionWrapper {
+  position: relative;
+}
+
+.section {
+  position: relative;
+  z-index: $index-section-content;
+  height: calc(120vh * 4);
+}
+
+.keyFeaturesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  background: $pale-transparent-background;
+  border: 1px solid $pale-transparent-border;
+  backdrop-filter: blur(20px);
+  border-radius: $border-radius-lg;
+  padding: 40px 48px;
+  width: 640px;
+  //box-shadow: 1px 3px 20px 12px #0000002e;
+  box-shadow: 1px 11px 20px 12px rgba(0, 0, 0, 0.075);
+
+  h1 {
+    @include maxHeightScreen(600px) {
+      @include text-display-extrasmall();
+    }
+  }
+
+  p {
+    @include small() {
+      @include text-text-large();
+    }
+  }
+
+  @include small() {
+    width: 100%;
+    padding: 24px;
+  }
+}
+
+.container {
+  top: 50px;
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 80px;
+  height: 100%;
+  width: 100%;
+  padding-top: 10vh;
+  z-index: 2;
+
+  @include small() {
+    gap: 20px;
+    padding-top: 8vh;
+  }
+
+  @include maxHeightScreen(550px) {
+    gap: 40px;
+  }
+}
+
+.bgShapeA {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: $darkened-background;
+  backdrop-filter: blur(50px);
+  opacity: 0;
+  z-index: $index-bg-shapes;
+  transition: opacity 1s ease;
+}
+
+.bgShapeA.visible {
+  opacity: 1;
+}

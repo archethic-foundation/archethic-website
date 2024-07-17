@@ -1,0 +1,127 @@
+// Gaps
+$grid-gap-sm: 20px;
+$grid-gap-md: 32px;
+$grid-gap-xl: 40px;
+
+// Breakpoints
+$grid-breakpoint-xxl: 1920px + ($grid-gap-xl * 2);
+$grid-breakpoint-xl: 1280px + ($grid-gap-xl * 2);
+$grid-breakpoint-lg: 1160px;
+$grid-breakpoint-md: 800px;
+$grid-breakpoint-sm-early: 950px;
+$grid-breakpoint-sm: $grid-breakpoint-md - 1px;
+
+// Max width
+$layout-content-max-width: 1280px + ($grid-gap-xl * 2);
+
+// Layout
+$layout-desktop-navigation-height: 95px;
+$layout-mobile-navigation-height: 60px;
+$layout-section-left-padding: 85px;
+$layout-desktop-section-gap: 140px;
+$layout-mobile-section-gap: 80px;
+
+// Z-Index
+$index-main-navigation: 200;
+$index-section-content: 0;
+$index-bg-shapes: -1;
+$index-bg-canvas: -2;
+$index-page-bg-effects: 0;
+
+/*
+ * Device Breakpoints
+ */
+// Small Devices
+@mixin small {
+  @media screen and (max-width: $grid-breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin small-early {
+  @media screen and (max-width: $grid-breakpoint-sm-early) {
+    @content;
+  }
+}
+
+// Medium Devices
+@mixin mediumUp {
+  @media screen and (min-width: $grid-breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin mediumDown {
+  @media screen and (max-width: ($grid-breakpoint-lg - 1px)) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (min-width: $grid-breakpoint-md) and (max-width: ($grid-breakpoint-lg - 1px)) {
+    @content;
+  }
+}
+
+// Large Devices
+@mixin largeDown {
+  @media screen and (max-width: ($grid-breakpoint-xl - 1px)) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media screen and (min-width: $grid-breakpoint-lg) and (max-width: ($grid-breakpoint-xl - 1px)) {
+    @content;
+  }
+}
+
+@mixin largeUp {
+  @media screen and (min-width: $grid-breakpoint-lg) {
+    @content;
+  }
+}
+
+// Extra Large Devices
+@mixin extraLarge {
+  @media screen and (min-width: $grid-breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin extraLarge {
+  @media screen and (min-width: $grid-breakpoint-xxl) {
+    @content;
+  }
+}
+
+@mixin maxWidthScreen($w) {
+  @media screen and (max-width: $w) {
+    @content;
+  }
+}
+
+@mixin minWidthScreen($w) {
+  @media screen and (min-width: $w) {
+    @content;
+  }
+}
+
+@mixin maxHeightScreen($w) {
+  @media screen and (max-height: $w) {
+    @content;
+  }
+}
+
+@mixin minHeightScreen($w) {
+  @media screen and (min-height: $w) {
+    @content;
+  }
+}
+
+:export {
+  gridBreakpoint_xl: $grid-breakpoint-xl;
+  gridBreakpoint_lg: $grid-breakpoint-lg;
+  gridBreakpoint_md: $grid-breakpoint-md;
+  gridBreakpoint_sm: $grid-breakpoint-sm;
+}

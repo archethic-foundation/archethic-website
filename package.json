@@ -1,0 +1,43 @@
+{
+  "name": "test_parcel",
+  "version": "1.0.0",
+  "source": "src/Archethic_web/index.html",
+  "type": "module",
+  "scripts": {
+    "start": "parcel src/Archethic_web/*.html",
+    "build": "parcel build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "targets": {
+    "default": {
+      "source": "src/Archethic_web/index.html",
+      "distDir": "out",
+      "publicUrl": "/",
+      "optimize": false
+    }
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "parcel": "^2.12.0",
+    "postcss": "^8.4.39",
+    "postcss-modules": "^4.3.1",
+    "process": "^0.11.10",
+    "sass": "^1.66.1"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.83.9",
+    "@react-three/fiber": "^8.14.1",
+    "@react-three/postprocessing": "^2.15.1",
+    "@tryghost/content-api": "^1.11.17",
+    "classnames": "^2.3.2",
+    "gsap": "^3.12.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "^5.0.1",
+    "react-use": "^17.4.0",
+    "three": "^0.156.1"
+  }
+}

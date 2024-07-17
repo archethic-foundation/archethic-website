@@ -1,0 +1,35 @@
+// Hover
+@mixin hover {
+  @media (hover: hover) {
+    &:global(.is-hovered),
+    &:hover {
+      @content;
+    }
+  }
+}
+
+// Reset Button
+@mixin button-reset {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Transition
+
+$transition-easeOutQuart: cubic-bezier(0.22, 1, 0.36, 1);
+$transition-default: $transition-easeOutQuart;
+$transition-delay-default: 0.08s;
+
+@mixin transition($time, $properties...) {
+  $transition: ();
+
+  @each $property in $properties {
+    $transition: append($transition, ($property $time $transition-default), $separator: comma);
+  }
+
+  transition: $transition;
+}

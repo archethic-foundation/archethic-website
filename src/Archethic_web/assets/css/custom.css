@@ -1,0 +1,408 @@
+
+/* TODO*/
+/*
+
+*/
+
+
+
+
+/* *************************************** */
+/* FONTS */
+/* *************************************** */
+
+@font-face {
+  font-family: 'Telegraf';
+  src: url('../fonts/Telegraf-Black.woff2') format('woff2'),
+       url('../fonts/Telegraf-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Telegraf';
+  src: url('../fonts/Telegraf-Bold.woff2') format('woff2'),
+       url('../fonts/Telegraf-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Telegraf';
+  src: url('../fonts/Telegraf-Light.woff2') format('woff2'),
+       url('../fonts/Telegraf-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Telegraf';
+  src: url('../fonts/Telegraf-Medium.woff2') format('woff2'),
+       url('../fonts/Telegraf-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Telegraf';
+  src: url('../fonts/Telegraf-Regular.woff2') format('woff2'),
+       url('../fonts/Telegraf-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Telegraf';
+  src: url('../fonts/Telegraf-SemiBold.woff2') format('woff2'),
+       url('../fonts/Telegraf-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Telegraf';
+  src: url('../fonts/Telegraf-UltraBold.woff2') format('woff2'),
+       url('../fonts/Telegraf-UltraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Telegraf';
+  src: url('../fonts/Telegraf-UltraLight.woff2') format('woff2'),
+       url('../fonts/Telegraf-UltraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+
+
+/* *************************************** */
+/* GENERAL */
+/* *************************************** */
+
+body {
+  font-family: 'Telegraf', sans-serif;
+  color:#fff;
+  position: relative;
+  padding: 70px 0 0 0;
+  margin: 0;
+  max-width: 100vw;
+  width: 100vw;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #030014;
+}
+
+a {
+  text-decoration:none;
+  color:#b98cd9;
+}
+a:hover {
+  color:#fff;
+  transition: 0.4s;
+}
+a.link:hover {
+  border-bottom: 1px solid #b98cd9;
+  padding-bottom:3px;
+  transition: 0.4s;
+}
+u {
+  color:#b16be3;
+  padding-bottom: 1px;
+  text-decoration: none;
+}
+.line-height-2 {line-height:2}
+.btn {
+  opacity:0.9;
+  border-radius:30px;
+  font-size:16px;
+}
+.btn:hover {
+  opacity:1;
+  transition:0.8s
+}
+.btn-primary {
+  background: linear-gradient(270deg, #3b0fbd 0, #6e42f0);
+  border-color:#6e42f0;
+}
+.btn-primary:hover,.btn-primary:focus  {
+  background: #6e42f0!important;
+}
+.btn-outline-primary {
+  border-color:#6e42f0!important;
+  color:#fff;
+  padding:7px 20px 7px 20px;
+}
+.btn-outline-primary:hover {
+  background: #6e42f0;
+}
+.btn-dark {
+  background:rgba(0,0,0,0.8)
+}
+.btn-dark:hover {
+  background:rgba(0,0,0,1);
+  border-color:#6e42f0
+}
+
+.hero1 {font-size:34px}
+.hero2 {font-size:34px}
+.hero3 {font-size:54px}
+.hero4 {font-size:66px}
+
+.text-xs {font-size:12px}
+.text-sm {font-size:14px}
+.text-md {font-size:16px}
+.text-lg {font-size:20px}
+.text-xl {font-size:24px}
+.text-xxl {font-size:28px}
+
+.rounded-no {border-radius:0}
+.rounded-xl {border-radius:20px}
+.rounded-xxl {border-radius:40px}
+
+.text-light {color:#eee!important}
+.text-medium {color:#ccc!important}
+.text-muted {color:#999!important}
+.text-primary {color:#805ee8!important}
+
+.text-shadow {text-shadow:0 1px 8px #000}
+
+.bg-1 {
+  background-color: rgba(85, 64, 191, .5);
+  border: 1px solid rgba(85, 64, 191, .6);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+.bg-2 {
+  background-color: rgba(75, 56, 167, 0.3);
+  border: 1px solid rgba(85, 64, 191, .4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+.bg-3 {
+  background-color: rgba(85, 64, 191, .7);
+  border: 1px solid rgba(85, 64, 191, .8);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+.bg-4 {
+  background:rgba(0,0,0,0.5);
+  border: 1px solid rgba(85, 64, 191, .4);
+}
+.bg-5 {
+  /*background:#1d192b;*/
+  background:rgba(50,50,50,0.5);
+  border: 1px solid #302d3f;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+.bg-dark {
+  background:rgba(0,0,0,0.8)!important;
+  
+}
+.bg-light {
+  background:rgba(255,255,255,0.8)!important;
+}
+.bg-uco-1 {
+  background-image: url('../img/bg/bg-uco-1.webp');
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.op-10 {opacity:1.0}
+.op-09 {opacity:0.9}
+.op-08 {opacity:0.8}
+.op-07 {opacity:0.7}
+.op-06 {opacity:0.6}
+.op-05 {opacity:0.5}
+.op-04 {opacity:0.4}
+.op-03 {opacity:0.3}
+.op-02 {opacity:0.2}
+.op-01 {opacity:0.1}
+
+.separator {border-top: 1px solid rgba(85, 64, 191, .3);}
+
+/* *************************************** */
+/* STRUCTURE */
+
+iframe.helix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  z-index: -1; /* Ensures iframe is in the background */
+}
+
+/* *************************************** */
+/* NAVIGATION */
+
+#main-nav.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgba(0,0,0,0.5);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    min-height: 70px;
+    opacity: 1 !important;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+#main-nav .navbar-toggler {
+  border:none;
+  font-size:36px;
+  color:white;
+}
+
+#main-nav .nav-link {
+  color:#fff;
+  padding:5px 0;
+  margin:0 10px;
+  font-weight:500;
+  opacity:0.95;
+  border-bottom:1px solid transparent;
+  font-size:16px;
+}
+#main-nav .nav-link:hover {
+  border-bottom:1px solid #b98cd9;
+  transition: 0.8s;
+  opacity:1;
+}
+
+#main-nav.navbar .show  {
+  padding:20px;
+  transition:0.5s;
+}
+
+#main-nav.navbar .show .nav-link  {
+  text-align:left;
+  margin-top:4px;
+}
+#main-nav.navbar .show .nav-link:hover {
+  margin-left:5px;
+  font-weight:700
+}
+
+/* *************************************** */
+/* TEAM */
+
+.info-area {
+  height:300px;
+}
+.img-area {
+	overflow: hidden;
+}
+.img-area img {
+	margin: 0 auto;
+  transform: scale(1.05);
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+.single-box:hover img {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.team-slider .owl-dots {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -60px;
+	text-align: center;
+	width: 100%;
+}
+.team-slider button.owl-dot {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	margin: 0 6px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: #333!important;
+}
+.team-slider .owl-dot.active {
+	background-color: #999!important;
+}
+.move-animation {
+	position: relative;
+	-webkit-animation: move-animation 5s ease-in-out infinite;
+	animation: move-animation 5s ease-in-out infinite;
+}
+@-webkit-keyframes move-animation {
+	0% {
+		top: 0px;
+	}
+	50% {
+		top: 0px;
+	}
+	100% {
+		top: 0px;
+	}
+}
+
+/* *************************************** */
+/* PARTNER */
+.partner img {opacity:0.8}
+.partner img:hover {opacity:1}
+
+/* *************************************** */
+/* FOOTER */
+
+footer {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+footer a {color:#fff; opacity:0.6}
+footer a:hover {opacity:1}
+
+
+
+/* *************************************** */
+/* MEDIA QUERIES */
+/* *************************************** */
+
+
+@media (max-width: 575.98px) {
+
+  .hero3 {font-size:40px}
+  .hero4 {font-size:45px}
+  .hero2 {font-size:30px}
+
+  .text-xl {font-size:20px}
+  .text-lg {font-size:18px}
+
+  #main-nav.navbar {background-color: rgba(0,0,0,0.7);}
+  .bg-1 {
+    background-color: rgba(20, 15, 48, 0.8);
+    border: 1px solid rgba(53, 38, 128, 0.7);
+  }
+  .bg-2 {
+    background-color: rgba(53, 38, 128, 0.6);
+    border: 1px solid rgba(53, 38, 128, 0.7);
+  }
+  .bg-3 {
+    background-color: rgba(53, 38, 128, 0.8);
+    border: 1px solid rgba(53, 38, 128, 0.9);
+  }
+  .bg-5 {background:rgba(50,50,50,0.7);}
+  footer {background-color: rgba(0,0,0,0.5);}
+}
+
+@media (max-width: 767.98px) {  }
+
+@media (max-width: 991.98px) {  }
+
+@media (max-width: 1199.98px) {  }
+
+@media (max-width: 1399.98px) {  }
+
+
+
+
+
+
+
+
