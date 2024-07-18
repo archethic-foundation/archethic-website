@@ -4,7 +4,7 @@
   "source": "src/Archethic_web/index.html",
   "type": "module",
   "scripts": {
-    "start": "parcel src/Archethic_web/*.",
+    "start": "parcel src/Archethic_web/*.*",
     "build": "parcel build src/Archethic_web/*.html"
   },
   "keywords": [],
