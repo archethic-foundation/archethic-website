@@ -6,6 +6,9 @@
         ],
         "*.pdf": [
             "@parcel/transformer-raw"
+        ],
+        "*.crt": [
+            "@parcel/transformer-raw"
         ]
     }
 }

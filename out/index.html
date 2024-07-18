@@ -7,13 +7,13 @@
     <meta name="author" content="Archethic">
     <title>Archethic - First Biometric Blockchain</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-    <link href="/index.596a7453.css" rel="stylesheet">
-    <link href="/index.f32c2564.css" rel="stylesheet">
-    <link href="/index.e9dcc36b.css" rel="stylesheet">
+    <link href="/404.026c9327.css" rel="stylesheet">
+    <link href="/404.79b96e38.css" rel="stylesheet">
+    <link href="/404.fcd6478d.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="icon" href="/favicon.b686943b.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/index.dd77f07c.css"><script type="module" src="/index.runtime.93f58668.js"></script><script defer="" data-domain="archethic.net" src="https://plausible.io/js/plausible.js"></script>
+    <link rel="stylesheet" href="/404.c59f119d.css"><script type="module" src="/404.runtime.12296f07.js"></script><script defer="" data-domain="archethic.net" src="https://plausible.io/js/plausible.js"></script>
 </head>
 
 <body>
@@ -807,21 +807,12 @@ async function fetchData() {
             fetchCirculatingData(),
             fetchTotalData()
         ]);
-        console.log("circulating_supply", fetchedCirculatingSupply);
-        console.log("total_supply", fetchedTotalSupply);
         const calculatedMarketCap = fetchedCurrentPrice * fetchedCirculatingSupply;
         const formattedMarketCap = (calculatedMarketCap / 1000000).toFixed(2) + "M";
         updateElements(ucoPriceElements, fetchedCurrentPrice, (price)=>"$" + price.toFixed(3));
         updateElements(marketCapElements, calculatedMarketCap, (cap)=>"$" + formattedMarketCap);
         updateElements(circulatingSupplyElements, fetchedCirculatingSupply, (supply)=>(supply / 1000000).toFixed(2) + "M");
         updateElements(totalSupplyElements, fetchedTotalSupply, (supply)=>(supply / 1000000).toFixed(0) + "M");
-        console.log([
-            {
-                price: fetchedCurrentPrice,
-                marketCap: calculatedMarketCap,
-                circulatingSupply: fetchedCirculatingSupply
-            }
-        ]);
     } catch (error) {
         console.error("Error fetching data:", error);
         updateElements(ucoPriceElements);
@@ -833,8 +824,8 @@ async function fetchData() {
 document.addEventListener("DOMContentLoaded", fetchData);
 
 </script>
-<script src="/index.fb43cf19.js"></script>
-<script src="/index.66bca57e.js"></script>
+<script src="/404.d18f46bf.js"></script>
+<script src="/404.8fa2fef1.js"></script>
 <!-- Video embeded -->
 <script type="text/javascript">(function(v, i, d, a, l, y, t, c, s) {
     y = "_" + d.toLowerCase();
@@ -890,7 +881,7 @@ document.addEventListener("DOMContentLoaded", fetchData);
 </script>
 
 <!-- React animation -->
-<script type="module" src="/index.860b427b.js"></script>
+<script type="module" src="/404.cbde30ae.js"></script>
 
 </body>
 </html>

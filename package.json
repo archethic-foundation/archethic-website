@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "parcel src/Archethic_web/*.*",
-    "build": "parcel build src/Archethic_web/*.html src/Archethic_web/*.pdf"
+    "build": "parcel build src/Archethic_web/*.html src/Archethic_web/*.pdf src/Archethic_web/*.crt"
   },
   "keywords": [],
   "author": "",

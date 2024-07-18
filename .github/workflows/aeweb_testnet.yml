@@ -33,6 +33,8 @@ jobs:
           path: "./out"
           keychainFundingService: "archethic-wallet-ARCHETHIC.NET"
           keychainWebsiteService: "aeweb-ARCHETHIC-website"
+          sslCertificateFile: "certificate_testnet.crt"
+          sslKey: ${{ secrets.SSL_KEY_TESTNET }}
           sendTransactionTimeout: 180
           percentageOfConfirmations: 50  
         
