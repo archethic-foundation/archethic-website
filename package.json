@@ -4,8 +4,8 @@
   "source": "src/Archethic_web/index.html",
   "type": "module",
   "scripts": {
-    "start": "parcel src/Archethic_web/*.html",
-    "build": "parcel build"
+    "start": "parcel src/Archethic_web/*.",
+    "build": "parcel build src/Archethic_web/*.html"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +13,6 @@
   "description": "",
   "targets": {
     "default": {
-      "source": "src/Archethic_web/index.html",
       "distDir": "out",
       "publicUrl": "/",
       "optimize": false
