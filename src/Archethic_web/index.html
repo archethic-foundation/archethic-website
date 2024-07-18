@@ -845,8 +845,6 @@
 
         try {
             const [fetchedCurrentPrice, fetchedCirculatingSupply, fetchedTotalSupply] = await Promise.all([fetchMarketData(), fetchCirculatingData(), fetchTotalData()]);
-            console.log("circulating_supply", fetchedCirculatingSupply);
-            console.log("total_supply", fetchedTotalSupply);
             const calculatedMarketCap = fetchedCurrentPrice * fetchedCirculatingSupply;
             const formattedMarketCap = (calculatedMarketCap / 1000000).toFixed(2) + "M";
 
@@ -854,8 +852,6 @@
             updateElements(marketCapElements, calculatedMarketCap, cap => '$' + formattedMarketCap);
             updateElements(circulatingSupplyElements, fetchedCirculatingSupply, supply => (supply / 1000000).toFixed(2) + "M");
             updateElements(totalSupplyElements, fetchedTotalSupply, supply => (supply / 1000000).toFixed(0) + "M");
-
-            console.log([{ price: fetchedCurrentPrice, marketCap: calculatedMarketCap, circulatingSupply: fetchedCirculatingSupply }]);
         } catch (error) {
             console.error("Error fetching data:", error);
             updateElements(ucoPriceElements);
