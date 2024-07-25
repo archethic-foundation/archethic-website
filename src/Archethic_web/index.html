@@ -182,12 +182,13 @@
                 <div class="col-lg-4 col-sm-6 mt-4">
                     <div class="bg-2 rounded-xl p-4 text-center" data-aos="fade-up" data-aos-delay="300">
                         <h5 class="op-08">Farming APR</h5>
-                        <p class="hero2 mb-1 fw-bold">
+                        <p class="hero2 mb-1 fw-bold farm-apr">
                             ___%
                         </p>
-                        <a class="btn btn-outline-primary mt-1">
-                            Coming soon
-                        </a>
+                        <a class="btn btn-outline-primary mt-1" href="https://dex.archethic.net/farmLock"
+                        target="_blank">
+                        Start earning<i class="bi bi-arrow-right ms-2"></i>
+                    </a>
                     </div>
                 </div>
             </div>
@@ -503,10 +504,9 @@
                                 <p class="text-uppercase op-08 text-sm">Current Price</p>
                             </div>
                         </div>
-
                         <div class="col-6 col-sm-4 col-xl-2">
                             <div class="text-center">
-                                <p class="hero1 mb-0 fw-bold"><u>___%</u></p>
+                                <u><p class="hero1 mb-0 fw-bold farm-apr"></p></u>
                                 <p class="text-uppercase op-08 text-sm">Farming APR</p>
                             </div>
                         </div>
@@ -984,6 +984,25 @@
             }
         }
 
+        async function fetchAPRFarm() {
+           
+            try {
+                const response = await fetch("https://faas-lon1-917a94a7.doserverless.co/api/v1/web/fn-279bbae3-a757-4cef-ade7-a63bdaca36f7/mainnet/apr");
+                if (response.ok) {
+                    const data = await response.json();
+                    const defaultAPR = parseFloat(data?.apr.toFixed(3)).toLocaleString('fr-FR') + '%';
+                    const defaultAPRDuration = data?.level;
+                    return { defaultAPR, defaultAPRDuration };
+                } else {
+                    console.error(`Fetch failed: ${response.status}`);
+                    return { defaultAPR: '___%', defaultAPRDuration: '' };
+                }
+            } catch (error) {
+                console.error(`Fetch failed with error: ${error}`);
+                return { defaultAPR: '___%', defaultAPRDuration: '' };
+            }
+        }
+
         function showSpinner(elements) {
             const spinner = '<div class="spinner-grow text-light" role="status"><span class="visually-hidden">Loading...</span></div>';
             Array.from(elements).forEach(element => {
@@ -1002,27 +1021,35 @@
             const marketCapElements = document.getElementsByClassName('market-cap');
             const circulatingSupplyElements = document.getElementsByClassName('circulating-supply');
             const totalSupplyElements = document.getElementsByClassName('total-supply');
+            const farmAPRElements = document.getElementsByClassName('farm-apr');
 
             showSpinner(ucoPriceElements);
             showSpinner(marketCapElements);
             showSpinner(circulatingSupplyElements);
             showSpinner(totalSupplyElements);
+            showSpinner(farmAPRElements);
 
             try {
-                const [fetchedCurrentPrice, fetchedCirculatingSupply, fetchedTotalSupply] = await Promise.all([fetchMarketData(), fetchCirculatingData(), fetchTotalData()]);
+                const [fetchedCurrentPrice, fetchedCirculatingSupply, fetchedTotalSupply, fetchedAPRResult] = await Promise.all([fetchMarketData(), fetchCirculatingData(), fetchTotalData(), fetchAPRFarm()]);
                 const calculatedMarketCap = fetchedCurrentPrice * fetchedCirculatingSupply;
                 const formattedMarketCap = (calculatedMarketCap / 1000000).toFixed(2) + "M";
+                console.log('fetchedAPRResult', fetchedAPRResult);
+                const { defaultAPR, defaultAPRDuration } = fetchedAPRResult;
+                console.log('fetchedAPR', defaultAPR);
+                console.log('fetchedAPRDuration', defaultAPRDuration);
 
                 updateElements(ucoPriceElements, fetchedCurrentPrice, price => '$' + price.toFixed(3));
                 updateElements(marketCapElements, calculatedMarketCap, cap => '$' + formattedMarketCap);
                 updateElements(circulatingSupplyElements, fetchedCirculatingSupply, supply => (supply / 1000000).toFixed(2) + "M");
                 updateElements(totalSupplyElements, fetchedTotalSupply, supply => (supply / 1000000).toFixed(0) + "M");
+                updateElements(farmAPRElements, defaultAPR);
             } catch (error) {
                 console.error("Error fetching data:", error);
                 updateElements(ucoPriceElements);
                 updateElements(marketCapElements);
                 updateElements(circulatingSupplyElements);
                 updateElements(totalSupplyElements);
+                updateElements(farmAPRElements);
             }
         }
 
