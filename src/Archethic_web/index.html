@@ -990,7 +990,7 @@
                 const response = await fetch("https://faas-lon1-917a94a7.doserverless.co/api/v1/web/fn-279bbae3-a757-4cef-ade7-a63bdaca36f7/mainnet/apr");
                 if (response.ok) {
                     const data = await response.json();
-                    const defaultAPR = parseFloat(data?.apr.toFixed(3)).toLocaleString('fr-FR') + '%';
+                    const defaultAPR = parseFloat(data?.apr.toFixed(0)).toLocaleString('fr-FR') + ' %';
                     const defaultAPRDuration = data?.level;
                     return { defaultAPR, defaultAPRDuration };
                 } else {
