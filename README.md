@@ -1,6 +1,5 @@
 # Archethic Website
 
-
 ## Installation
 
 To install the project, run the following command: `npm install`
