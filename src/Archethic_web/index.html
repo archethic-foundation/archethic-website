@@ -110,13 +110,16 @@
                     <p class="text-xl mb-4">Access your private keys, your digital identity and your finances with the
                         tip of your fingers.</p>
                     <p class="text-lg mb-1"><u><i class="bi bi-chevron-right ms-2 me-2"></i></u> <strong
+                            class="op-10">8 years</strong> of continuous progress and commitment.</u>
+                    </p>
+                    <p class="text-lg mb-1"><u><i class="bi bi-chevron-right ms-2 me-2"></i></u> <strong
                             class="op-10">11</strong> Biometric & Blockchain <strong>Patents</strong>.</u>
                     </p>
                     <p class="text-lg mb-1"><u><i class="bi bi-chevron-right ms-2 me-2"></i></u> Blockchain transaction
                         fee <strong>
                             &nbsp;0.02$</strong>.</p>
                     <p class="text-lg mb-1"><u><i class="bi bi-chevron-right ms-2 me-2"></i></u> First <strong>Biometric
-                            cold Wallet</strong> where you are the private key.</p>
+                            Cold Wallet</strong> where you are the private key.</p>
                 </div>
                 <div class="col-lg-6 col-xl-5 align-self-center order-1 order-lg-2">
                     <video id="background-video" autoplay loop muted poster="assets/img/wallet_hw.png"
@@ -183,7 +186,7 @@
                     <div class="bg-2 rounded-xl p-4 text-center">
                         <h5 class="op-08">Farming APR</h5>
                         <p class="hero2 mb-1 fw-bold farm-apr">
-                            ___%
+                            +400%
                         </p>
                         <a class="btn btn-outline-primary mt-1" href="https://dex.archethic.net/farmLock"
                         target="_blank">
@@ -477,7 +480,7 @@
         <div class="container mt-5">
             <h1 class="hero3 text-center fw-bold px-3 px-md-0 mb-3 mb-md-5 pt-md-5 text-shadow" data-aos="fade-up"
                 data-aos-delay="0">The <u>UCO</u> Token</h1>
-            <div class="rounded-xxl bg-2 p-3 p-md-5">
+            <div class="rounded-xxl bg-2 p-3 p-md-4 p-lg-5">
                 <div class="bg-4 py-4 pb-3 mb-5 rounded-xl">
                     <div class="row g-2 d-flex justify-content-center">
                         <div class="col-6 col-sm-4 col-xl-2">
@@ -514,8 +517,22 @@
                 </div>
                 <h2 class="text-xxl fw-bold mb-4">Where to <u>Buy</u> UCO ?</h2>
                 <div class="row mb-4 mb-md-5">
-                    <div class="col-xl-9">
-                        <p class="mb-0"><strong>DEX</strong><br /><span class="op-08">Decentralized exchanges</span></p>
+                    <div class="col-xl-3">
+                        <p class="mb-0 text-uppercase text-sm op-08">Centralized Exchanges</p>
+                        <p class="fw-bold mb-0">Buy with Fiats (€ or $):</span></p>
+                        <div class="row g-2">
+                            <div class="col-6 col-md-3 col-xl-12 mt-3 mb-3 pt-2">
+                                <a class="btn btn-dark w-100 p-3 bg-4 rounded-xl" target="_blank"
+                                    href="https://www.probit.com/app/exchange/UCO-USDT">
+                                    <img height="70" src="assets/img/exchanges/probit.svg" />
+                                    <div class="pt-2">ProBit Exchange</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 mt-3 mt-xl-0">
+                        <p class="mb-0 text-uppercase text-sm op-08">Decentralized exchanges</p>
+                        <p class="fw-bold mb-0">Buy with other Cryptos:</span></p>
                         <div class="row g-2">
                             <div class="col-6 col-md-3 mt-3 pt-2">
                                 <a class="btn btn-dark w-100 p-3 bg-4 rounded-xl" target="_blank"
@@ -547,18 +564,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 mt-3 mt-xl-0">
-                        <p class="mb-0"><strong>CEX</strong><br /><span class="op-08">Centralized exchanges</span></p>
-                        <div class="row g-2">
-                            <div class="col-6 col-md-3 col-xl-12 mt-3 mb-3 pt-2">
-                                <a class="btn btn-dark w-100 p-3 bg-4 rounded-xl" target="_blank"
-                                    href="https://www.probit.com/app/exchange/UCO-USDT">
-                                    <img height="70" src="assets/img/exchanges/probit.svg" />
-                                    <div class="pt-2">ProBit Exchange</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <h2 class="text-xxl fw-bold mb-4">What are the UCO <u>Applications</u>?</h2>
                 <p class="op-08">The UCO token is designed to serve 2 key functions within the Archethic ecosystem:</p>
@@ -574,7 +579,7 @@
                         <div class="bg-4 h-100 p-4 rounded-xl">
                             <h5 class="fw-bold text-lg"><u><i class="bi bi-2-circle me-2"></i></u> Governance and Voting
                             </h5>
-                            <p class="op-0 mb-0">Token holders will be able to lock UCO tokens to gain voting power in
+                            <p class="op-08 mb-0">Token holders will be able to lock UCO tokens to gain voting power in
                                 the DAO, participating in decision-making processes.</p>
                         </div>
                     </div>
@@ -997,7 +1002,7 @@
                 const response = await fetch("https://faas-lon1-917a94a7.doserverless.co/api/v1/web/fn-279bbae3-a757-4cef-ade7-a63bdaca36f7/mainnet/apr");
                 if (response.ok) {
                     const data = await response.json();
-                    const defaultAPR = parseFloat(data?.apr.toFixed(0)).toLocaleString('fr-FR') + ' %';
+                    const defaultAPR = parseFloat(data?.apr.toFixed(0)).toLocaleString('fr-FR') + '%';
                     const defaultAPRDuration = data?.level;
                     return { defaultAPR, defaultAPRDuration };
                 } else {
