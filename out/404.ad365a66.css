@@ -392,7 +392,7 @@ iframe.helix {
   position: relative;
 }
 
-@-webkit-keyframes move-animation {
+@keyframes move-animation {
   0% {
     top: 0;
   }
@@ -428,11 +428,7 @@ footer a:hover {
 }
 
 @media (width <= 575.98px) {
-  .hero1 {
-    font-size: 24px;
-  }
-
-  .hero3 {
+  .hero1, .hero3 {
     font-size: 40px;
   }
 
@@ -486,4 +482,4 @@ footer a:hover {
   margin-top: -50px;
   display: block;
 }
-/*# sourceMappingURL=404.d09d2258.css.map */
+/*# sourceMappingURL=404.ad365a66.css.map */

@@ -149,131 +149,209 @@ const $06183e2d96a0416b$export$700979bc83e7db82 = typeof window !== "undefined" 
 parcelRegister("7VJZY", function(module, exports) {
 
 $parcel$export(module.exports, "Canvas", () => $5c6189a56b54e135$export$8d01c972ee8b14a9);
-$parcel$export(module.exports, "extend", () => (parcelRequire("eygLV")).e);
+$parcel$export(module.exports, "extend", () => (parcelRequire("eJuTH")).e);
 
-var $eygLV = parcelRequire("eygLV");
+var $eJuTH = parcelRequire("eJuTH");
 
 var $d4J5n = parcelRequire("d4J5n");
 
 var $2Oa7c = parcelRequire("2Oa7c");
 
-var $ju8ld = parcelRequire("ju8ld");
+var $3LgSH = parcelRequire("3LgSH");
 
 var $hek7e = parcelRequire("hek7e");
 
 var $228IU = parcelRequire("228IU");
 parcelRequire("bKwLM");
 
+
 parcelRequire("dNuhV");
 parcelRequire("fw68E");
-
-const $5c6189a56b54e135$var$DOM_EVENTS = {
-    onClick: [
-        "click",
-        false
-    ],
-    onContextMenu: [
-        "contextmenu",
-        false
-    ],
-    onDoubleClick: [
-        "dblclick",
-        false
-    ],
-    onWheel: [
-        "wheel",
-        true
-    ],
-    onPointerDown: [
-        "pointerdown",
-        true
-    ],
-    onPointerUp: [
-        "pointerup",
-        true
-    ],
-    onPointerLeave: [
-        "pointerleave",
-        true
-    ],
-    onPointerMove: [
-        "pointermove",
-        true
-    ],
-    onPointerCancel: [
-        "pointercancel",
-        true
-    ],
-    onLostPointerCapture: [
-        "lostpointercapture",
-        true
-    ]
-};
-/** Default R3F event manager for web */ function $5c6189a56b54e135$export$4bf9923669ad6c63(store) {
-    const { handlePointer: handlePointer } = (0, $eygLV.c)(store);
-    return {
-        priority: 1,
-        enabled: true,
-        compute (event, state, previous) {
-            // https://github.com/pmndrs/react-three-fiber/pull/782
-            // Events trigger outside of canvas when moved, use offsetX/Y by default and allow overrides
-            state.pointer.set(event.offsetX / state.size.width * 2 - 1, -(event.offsetY / state.size.height) * 2 + 1);
-            state.raycaster.setFromCamera(state.pointer, state.camera);
-        },
-        connected: undefined,
-        handlers: Object.keys($5c6189a56b54e135$var$DOM_EVENTS).reduce((acc, key)=>({
-                ...acc,
-                [key]: handlePointer(key)
-            }), {}),
-        update: ()=>{
-            var _internal$lastEvent;
-            const { events: events, internal: internal } = store.getState();
-            if ((_internal$lastEvent = internal.lastEvent) != null && _internal$lastEvent.current && events.handlers) events.handlers.onPointerMove(internal.lastEvent.current);
-        },
-        connect: (target)=>{
-            var _events$handlers;
-            const { set: set, events: events } = store.getState();
-            events.disconnect == null || events.disconnect();
-            set((state)=>({
-                    events: {
-                        ...state.events,
-                        connected: target
-                    }
-                }));
-            Object.entries((_events$handlers = events.handlers) != null ? _events$handlers : []).forEach(([name, event])=>{
-                const [eventName, passive] = $5c6189a56b54e135$var$DOM_EVENTS[name];
-                target.addEventListener(eventName, event, {
-                    passive: passive
-                });
-            });
-        },
-        disconnect: ()=>{
-            const { set: set, events: events } = store.getState();
-            if (events.connected) {
-                var _events$handlers2;
-                Object.entries((_events$handlers2 = events.handlers) != null ? _events$handlers2 : []).forEach(([name, event])=>{
-                    if (events && events.connected instanceof HTMLElement) {
-                        const [eventName] = $5c6189a56b54e135$var$DOM_EVENTS[name];
-                        events.connected.removeEventListener(eventName, event);
-                    }
-                });
-                set((state)=>({
-                        events: {
-                            ...state.events,
-                            connected: undefined
-                        }
-                    }));
+/* eslint-disable react-hooks/rules-of-hooks */ function $5c6189a56b54e135$var$useMeasure({ debounce: debounce, scroll: scroll, polyfill: polyfill, offsetSize: offsetSize } = {
+    debounce: 0,
+    scroll: false,
+    offsetSize: false
+}) {
+    const ResizeObserver = polyfill || typeof window !== "undefined" && window.ResizeObserver;
+    const [bounds, set] = (0, $d4J5n.useState)({
+        left: 0,
+        top: 0,
+        width: 0,
+        height: 0,
+        bottom: 0,
+        right: 0,
+        x: 0,
+        y: 0
+    });
+    // In test mode
+    if (!ResizeObserver) {
+        // @ts-ignore
+        bounds.width = 1280;
+        // @ts-ignore
+        bounds.height = 800;
+        return [
+            ()=>{},
+            bounds,
+            ()=>{}
+        ];
+    }
+    // keep all state in a ref
+    const state = (0, $d4J5n.useRef)({
+        element: null,
+        scrollContainers: null,
+        resizeObserver: null,
+        lastBounds: bounds
+    });
+    // set actual debounce values early, so effects know if they should react accordingly
+    const scrollDebounce = debounce ? typeof debounce === "number" ? debounce : debounce.scroll : null;
+    const resizeDebounce = debounce ? typeof debounce === "number" ? debounce : debounce.resize : null;
+    // make sure to update state only as long as the component is truly mounted
+    const mounted = (0, $d4J5n.useRef)(false);
+    (0, $d4J5n.useEffect)(()=>{
+        mounted.current = true;
+        return ()=>void (mounted.current = false);
+    });
+    // memoize handlers, so event-listeners know when they should update
+    const [forceRefresh, resizeChange, scrollChange] = (0, $d4J5n.useMemo)(()=>{
+        const callback = ()=>{
+            if (!state.current.element) return;
+            const { left: left, top: top, width: width, height: height, bottom: bottom, right: right, x: x, y: y } = state.current.element.getBoundingClientRect();
+            const size = {
+                left: left,
+                top: top,
+                width: width,
+                height: height,
+                bottom: bottom,
+                right: right,
+                x: x,
+                y: y
+            };
+            if (state.current.element instanceof HTMLElement && offsetSize) {
+                size.height = state.current.element.offsetHeight;
+                size.width = state.current.element.offsetWidth;
             }
+            Object.freeze(size);
+            if (mounted.current && !$5c6189a56b54e135$var$areBoundsEqual(state.current.lastBounds, size)) set(state.current.lastBounds = size);
+        };
+        return [
+            callback,
+            resizeDebounce ? (0, (/*@__PURE__*/$parcel$interopDefault($3LgSH)))(callback, resizeDebounce) : callback,
+            scrollDebounce ? (0, (/*@__PURE__*/$parcel$interopDefault($3LgSH)))(callback, scrollDebounce) : callback
+        ];
+    }, [
+        set,
+        offsetSize,
+        scrollDebounce,
+        resizeDebounce
+    ]);
+    // cleanup current scroll-listeners / observers
+    function removeListeners() {
+        if (state.current.scrollContainers) {
+            state.current.scrollContainers.forEach((element)=>element.removeEventListener("scroll", scrollChange, true));
+            state.current.scrollContainers = null;
         }
+        if (state.current.resizeObserver) {
+            state.current.resizeObserver.disconnect();
+            state.current.resizeObserver = null;
+        }
+    }
+    // add scroll-listeners / observers
+    function addListeners() {
+        if (!state.current.element) return;
+        state.current.resizeObserver = new ResizeObserver(scrollChange);
+        state.current.resizeObserver.observe(state.current.element);
+        if (scroll && state.current.scrollContainers) state.current.scrollContainers.forEach((scrollContainer)=>scrollContainer.addEventListener("scroll", scrollChange, {
+                capture: true,
+                passive: true
+            }));
+    }
+    // the ref we expose to the user
+    const ref = (node)=>{
+        if (!node || node === state.current.element) return;
+        removeListeners();
+        state.current.element = node;
+        state.current.scrollContainers = $5c6189a56b54e135$var$findScrollContainers(node);
+        addListeners();
     };
+    // add general event listeners
+    $5c6189a56b54e135$var$useOnWindowScroll(scrollChange, Boolean(scroll));
+    $5c6189a56b54e135$var$useOnWindowResize(resizeChange);
+    // respond to changes that are relevant for the listeners
+    (0, $d4J5n.useEffect)(()=>{
+        removeListeners();
+        addListeners();
+    }, [
+        scroll,
+        scrollChange,
+        resizeChange
+    ]);
+    // remove all listeners when the components unmounts
+    (0, $d4J5n.useEffect)(()=>removeListeners, []);
+    return [
+        ref,
+        bounds,
+        forceRefresh
+    ];
 }
-const $5c6189a56b54e135$var$CanvasImpl = /*#__PURE__*/ $d4J5n.forwardRef(function Canvas({ children: children, fallback: fallback, resize: resize, style: style, gl: gl, events: events = $5c6189a56b54e135$export$4bf9923669ad6c63, eventSource: eventSource, eventPrefix: eventPrefix, shadows: shadows, linear: linear, flat: flat, legacy: legacy, orthographic: orthographic, frameloop: frameloop, dpr: dpr, performance: performance, raycaster: raycaster, camera: camera, scene: scene, onPointerMissed: onPointerMissed, onCreated: onCreated, ...props }, forwardedRef) {
+// Adds native resize listener to window
+function $5c6189a56b54e135$var$useOnWindowResize(onWindowResize) {
+    (0, $d4J5n.useEffect)(()=>{
+        const cb = onWindowResize;
+        window.addEventListener("resize", cb);
+        return ()=>void window.removeEventListener("resize", cb);
+    }, [
+        onWindowResize
+    ]);
+}
+function $5c6189a56b54e135$var$useOnWindowScroll(onScroll, enabled) {
+    (0, $d4J5n.useEffect)(()=>{
+        if (enabled) {
+            const cb = onScroll;
+            window.addEventListener("scroll", cb, {
+                capture: true,
+                passive: true
+            });
+            return ()=>void window.removeEventListener("scroll", cb, true);
+        }
+    }, [
+        onScroll,
+        enabled
+    ]);
+}
+// Returns a list of scroll offsets
+function $5c6189a56b54e135$var$findScrollContainers(element) {
+    const result = [];
+    if (!element || element === document.body) return result;
+    const { overflow: overflow, overflowX: overflowX, overflowY: overflowY } = window.getComputedStyle(element);
+    if ([
+        overflow,
+        overflowX,
+        overflowY
+    ].some((prop)=>prop === "auto" || prop === "scroll")) result.push(element);
+    return [
+        ...result,
+        ...$5c6189a56b54e135$var$findScrollContainers(element.parentElement)
+    ];
+}
+// Checks if element boundaries are equal
+const $5c6189a56b54e135$var$keys = [
+    "x",
+    "y",
+    "top",
+    "bottom",
+    "left",
+    "right",
+    "width",
+    "height"
+];
+const $5c6189a56b54e135$var$areBoundsEqual = (a, b)=>$5c6189a56b54e135$var$keys.every((key)=>a[key] === b[key]);
+const $5c6189a56b54e135$var$CanvasImpl = /*#__PURE__*/ $d4J5n.forwardRef(function Canvas({ children: children, fallback: fallback, resize: resize, style: style, gl: gl, events: events = (0, $eJuTH.c), eventSource: eventSource, eventPrefix: eventPrefix, shadows: shadows, linear: linear, flat: flat, legacy: legacy, orthographic: orthographic, frameloop: frameloop, dpr: dpr, performance: performance, raycaster: raycaster, camera: camera, scene: scene, onPointerMissed: onPointerMissed, onCreated: onCreated, ...props }, forwardedRef) {
     // Create a known catalogue of Threejs-native elements
     // This will include the entire THREE namespace by default, users can extend
     // their own elements by using the createRoot API instead
-    $d4J5n.useMemo(()=>(0, $eygLV.e)($2Oa7c), []);
+    $d4J5n.useMemo(()=>(0, $eJuTH.e)($2Oa7c), []);
     const Bridge = (0, $hek7e.useContextBridge)();
-    const [containerRef, containerRect] = (0, $ju8ld.default)({
+    const [containerRef, containerRect] = $5c6189a56b54e135$var$useMeasure({
         scroll: true,
         debounce: {
             scroll: 50,
@@ -284,7 +362,7 @@ const $5c6189a56b54e135$var$CanvasImpl = /*#__PURE__*/ $d4J5n.forwardRef(functio
     const canvasRef = $d4J5n.useRef(null);
     const divRef = $d4J5n.useRef(null);
     $d4J5n.useImperativeHandle(forwardedRef, ()=>canvasRef.current);
-    const handlePointerMissed = (0, $eygLV.u)(onPointerMissed);
+    const handlePointerMissed = (0, $eJuTH.u)(onPointerMissed);
     const [block, setBlock] = $d4J5n.useState(false);
     const [error, setError] = $d4J5n.useState(false);
     // Suspend this component if block is a promise (2nd run)
@@ -292,10 +370,10 @@ const $5c6189a56b54e135$var$CanvasImpl = /*#__PURE__*/ $d4J5n.forwardRef(functio
     // Throw exception outwards if anything within canvas throws
     if (error) throw error;
     const root = $d4J5n.useRef(null);
-    (0, $eygLV.a)(()=>{
+    (0, $eJuTH.a)(()=>{
         const canvas = canvasRef.current;
         if (containerRect.width > 0 && containerRect.height > 0 && canvas) {
-            if (!root.current) root.current = (0, $eygLV.b)(canvas);
+            if (!root.current) root.current = (0, $eJuTH.b)(canvas);
             root.current.configure({
                 gl: gl,
                 events: events,
@@ -315,7 +393,7 @@ const $5c6189a56b54e135$var$CanvasImpl = /*#__PURE__*/ $d4J5n.forwardRef(functio
                 onPointerMissed: (...args)=>handlePointerMissed.current == null ? void 0 : handlePointerMissed.current(...args),
                 onCreated: (state)=>{
                     // Connect to event source
-                    state.events.connect == null || state.events.connect(eventSource ? (0, $eygLV.i)(eventSource) ? eventSource.current : eventSource : divRef.current);
+                    state.events.connect == null || state.events.connect(eventSource ? (0, $eJuTH.i)(eventSource) ? eventSource.current : eventSource : divRef.current);
                     // Set up compute function
                     if (eventPrefix) state.setEvents({
                         compute: (event, state)=>{
@@ -330,10 +408,10 @@ const $5c6189a56b54e135$var$CanvasImpl = /*#__PURE__*/ $d4J5n.forwardRef(functio
                 }
             });
             root.current.render(/*#__PURE__*/ (0, $228IU.jsx)(Bridge, {
-                children: /*#__PURE__*/ (0, $228IU.jsx)((0, $eygLV.E), {
+                children: /*#__PURE__*/ (0, $228IU.jsx)((0, $eJuTH.E), {
                     set: setError,
                     children: /*#__PURE__*/ (0, $228IU.jsx)($d4J5n.Suspense, {
-                        fallback: /*#__PURE__*/ (0, $228IU.jsx)((0, $eygLV.B), {
+                        fallback: /*#__PURE__*/ (0, $228IU.jsx)((0, $eJuTH.B), {
                             set: setBlock
                         }),
                         children: children
@@ -344,7 +422,7 @@ const $5c6189a56b54e135$var$CanvasImpl = /*#__PURE__*/ $d4J5n.forwardRef(functio
     });
     $d4J5n.useEffect(()=>{
         const canvas = canvasRef.current;
-        if (canvas) return ()=>(0, $eygLV.d)(canvas);
+        if (canvas) return ()=>(0, $eJuTH.d)(canvas);
     }, []);
     // When the event source is not this div, we need to set pointer-events to none
     // Or else the canvas will block events from reaching the event source
@@ -389,20 +467,20 @@ const $5c6189a56b54e135$var$CanvasImpl = /*#__PURE__*/ $d4J5n.forwardRef(functio
 });
 
 });
-parcelRegister("eygLV", function(module, exports) {
+parcelRegister("eJuTH", function(module, exports) {
 
-$parcel$export(module.exports, "e", () => $a981403d17d544c9$export$f1e1789686576879);
-$parcel$export(module.exports, "i", () => $a981403d17d544c9$export$23f2a1d2818174ef);
-$parcel$export(module.exports, "a", () => $a981403d17d544c9$export$407448d2b89b1813);
-$parcel$export(module.exports, "u", () => $a981403d17d544c9$export$3b14a55fb2447963);
-$parcel$export(module.exports, "B", () => $a981403d17d544c9$export$ef35774e6d314e91);
-$parcel$export(module.exports, "E", () => $a981403d17d544c9$export$a9c23c6ac3fc3eca);
-$parcel$export(module.exports, "c", () => $a981403d17d544c9$export$db3b6bfb95261072);
-$parcel$export(module.exports, "A", () => $a981403d17d544c9$export$ebd11618f299a286);
-$parcel$export(module.exports, "C", () => $a981403d17d544c9$export$e7094788287c5e9b);
-$parcel$export(module.exports, "F", () => $a981403d17d544c9$export$d66501df72047452);
-$parcel$export(module.exports, "b", () => $a981403d17d544c9$export$8b22cf2602fb60ce);
-$parcel$export(module.exports, "d", () => $a981403d17d544c9$export$4368d992c4eafac0);
+$parcel$export(module.exports, "e", () => $ab9d3c3d42ae47c3$export$f1e1789686576879);
+$parcel$export(module.exports, "i", () => $ab9d3c3d42ae47c3$export$23f2a1d2818174ef);
+$parcel$export(module.exports, "a", () => $ab9d3c3d42ae47c3$export$407448d2b89b1813);
+$parcel$export(module.exports, "u", () => $ab9d3c3d42ae47c3$export$3b14a55fb2447963);
+$parcel$export(module.exports, "B", () => $ab9d3c3d42ae47c3$export$ef35774e6d314e91);
+$parcel$export(module.exports, "E", () => $ab9d3c3d42ae47c3$export$a9c23c6ac3fc3eca);
+$parcel$export(module.exports, "D", () => $ab9d3c3d42ae47c3$export$96f57966bedc81b4);
+$parcel$export(module.exports, "F", () => $ab9d3c3d42ae47c3$export$d66501df72047452);
+$parcel$export(module.exports, "H", () => $ab9d3c3d42ae47c3$export$7f8ddf7c7c20b3cd);
+$parcel$export(module.exports, "b", () => $ab9d3c3d42ae47c3$export$8b22cf2602fb60ce);
+$parcel$export(module.exports, "d", () => $ab9d3c3d42ae47c3$export$4368d992c4eafac0);
+$parcel$export(module.exports, "c", () => $ab9d3c3d42ae47c3$export$db3b6bfb95261072);
 
 var $2Oa7c = parcelRequire("2Oa7c");
 
@@ -412,41 +490,41 @@ var $bKwLM = parcelRequire("bKwLM");
 
 var $gTdEA = parcelRequire("gTdEA");
 
-var $dNuhV = parcelRequire("dNuhV");
-
-var $fw68E = parcelRequire("fw68E");
-
 var $jcAzR = parcelRequire("jcAzR");
 
 var $228IU = parcelRequire("228IU");
 
+var $dNuhV = parcelRequire("dNuhV");
+
+var $fw68E = parcelRequire("fw68E");
+
 var $4DZrq = parcelRequire("4DZrq");
-var $a981403d17d544c9$export$625550452a3fa3ec = /*#__PURE__*/ Object.freeze({
+var $ab9d3c3d42ae47c3$export$625550452a3fa3ec = /*#__PURE__*/ Object.freeze({
     __proto__: null
 });
-const $a981403d17d544c9$var$catalogue = {};
-const $a981403d17d544c9$export$f1e1789686576879 = (objects)=>void Object.assign($a981403d17d544c9$var$catalogue, objects);
-function $a981403d17d544c9$var$createRenderer(_roots, _getEventPriority) {
+const $ab9d3c3d42ae47c3$var$catalogue = {};
+const $ab9d3c3d42ae47c3$export$f1e1789686576879 = (objects)=>void Object.assign($ab9d3c3d42ae47c3$var$catalogue, objects);
+function $ab9d3c3d42ae47c3$var$createRenderer(_roots, _getEventPriority) {
     function createInstance(type, { args: args = [], attach: attach, ...props }, root) {
         let name = `${type[0].toUpperCase()}${type.slice(1)}`;
         let instance;
         if (type === "primitive") {
             if (props.object === undefined) throw new Error("R3F: Primitives without 'object' are invalid!");
             const object = props.object;
-            instance = $a981403d17d544c9$var$prepare(object, {
+            instance = $ab9d3c3d42ae47c3$var$prepare(object, {
                 type: type,
                 root: root,
                 attach: attach,
                 primitive: true
             });
         } else {
-            const target = $a981403d17d544c9$var$catalogue[name];
+            const target = $ab9d3c3d42ae47c3$var$catalogue[name];
             if (!target) throw new Error(`R3F: ${name} is not part of the THREE namespace! Did you forget to extend? See: https://docs.pmnd.rs/react-three-fiber/api/objects#using-3rd-party-objects-declaratively`);
             // Throw if an object or literal was passed for args
             if (!Array.isArray(args)) throw new Error("R3F: The args prop must be an array!");
             // Instanciate new object, link it to the root
             // Append memoized props with args so it's not forgotten
-            instance = $a981403d17d544c9$var$prepare(new target(...args), {
+            instance = $ab9d3c3d42ae47c3$var$prepare(new target(...args), {
                 type: type,
                 root: root,
                 attach: attach,
@@ -465,7 +543,7 @@ function $a981403d17d544c9$var$createRenderer(_roots, _getEventPriority) {
         // view yet. If the callback relies on references for instance, they won't be ready yet, this is
         // why it passes "true" here
         // There is no reason to apply props to injects
-        if (name !== "inject") $a981403d17d544c9$var$applyProps$1(instance, props);
+        if (name !== "inject") $ab9d3c3d42ae47c3$var$applyProps$1(instance, props);
         return instance;
     }
     function appendChild(parentInstance, child) {
@@ -473,7 +551,7 @@ function $a981403d17d544c9$var$createRenderer(_roots, _getEventPriority) {
         if (child) {
             var _child$__r3f, _parentInstance$__r3f;
             // The attach attribute implies that the object attaches itself on the parent
-            if ((_child$__r3f = child.__r3f) != null && _child$__r3f.attach) $a981403d17d544c9$var$attach(parentInstance, child, child.__r3f.attach);
+            if ((_child$__r3f = child.__r3f) != null && _child$__r3f.attach) $ab9d3c3d42ae47c3$var$attach(parentInstance, child, child.__r3f.attach);
             else if (child.isObject3D && parentInstance.isObject3D) {
                 // add in the usual parent-child way
                 parentInstance.add(child);
@@ -482,17 +560,17 @@ function $a981403d17d544c9$var$createRenderer(_roots, _getEventPriority) {
             // This is for anything that used attach, and for non-Object3Ds that don't get attached to props;
             // that is, anything that's a child in React but not a child in the scenegraph.
             if (!added) (_parentInstance$__r3f = parentInstance.__r3f) == null || _parentInstance$__r3f.objects.push(child);
-            if (!child.__r3f) $a981403d17d544c9$var$prepare(child, {});
+            if (!child.__r3f) $ab9d3c3d42ae47c3$var$prepare(child, {});
             child.__r3f.parent = parentInstance;
-            $a981403d17d544c9$var$updateInstance(child);
-            $a981403d17d544c9$var$invalidateInstance(child);
+            $ab9d3c3d42ae47c3$var$updateInstance(child);
+            $ab9d3c3d42ae47c3$var$invalidateInstance(child);
         }
     }
     function insertBefore(parentInstance, child, beforeChild) {
         let added = false;
         if (child) {
             var _child$__r3f2, _parentInstance$__r3f2;
-            if ((_child$__r3f2 = child.__r3f) != null && _child$__r3f2.attach) $a981403d17d544c9$var$attach(parentInstance, child, child.__r3f.attach);
+            if ((_child$__r3f2 = child.__r3f) != null && _child$__r3f2.attach) $ab9d3c3d42ae47c3$var$attach(parentInstance, child, child.__r3f.attach);
             else if (child.isObject3D && parentInstance.isObject3D) {
                 child.parent = parentInstance;
                 child.dispatchEvent({
@@ -512,10 +590,10 @@ function $a981403d17d544c9$var$createRenderer(_roots, _getEventPriority) {
                 added = true;
             }
             if (!added) (_parentInstance$__r3f2 = parentInstance.__r3f) == null || _parentInstance$__r3f2.objects.push(child);
-            if (!child.__r3f) $a981403d17d544c9$var$prepare(child, {});
+            if (!child.__r3f) $ab9d3c3d42ae47c3$var$prepare(child, {});
             child.__r3f.parent = parentInstance;
-            $a981403d17d544c9$var$updateInstance(child);
-            $a981403d17d544c9$var$invalidateInstance(child);
+            $ab9d3c3d42ae47c3$var$updateInstance(child);
+            $ab9d3c3d42ae47c3$var$invalidateInstance(child);
         }
     }
     function removeRecursive(array, parent, dispose = false) {
@@ -531,13 +609,13 @@ function $a981403d17d544c9$var$createRenderer(_roots, _getEventPriority) {
             // Remove child from the parents objects
             if ((_parentInstance$__r3f3 = parentInstance.__r3f) != null && _parentInstance$__r3f3.objects) parentInstance.__r3f.objects = parentInstance.__r3f.objects.filter((x)=>x !== child);
             // Remove attachment
-            if ((_child$__r3f3 = child.__r3f) != null && _child$__r3f3.attach) $a981403d17d544c9$var$detach(parentInstance, child, child.__r3f.attach);
+            if ((_child$__r3f3 = child.__r3f) != null && _child$__r3f3.attach) $ab9d3c3d42ae47c3$var$detach(parentInstance, child, child.__r3f.attach);
             else if (child.isObject3D && parentInstance.isObject3D) {
                 var _child$__r3f4;
                 parentInstance.remove(child);
                 // @ts-expect-error
                 // Remove interactivity on the initial root
-                if ((_child$__r3f4 = child.__r3f) != null && _child$__r3f4.root) $a981403d17d544c9$var$removeInteractivity($a981403d17d544c9$var$findInitialRoot(child), child);
+                if ((_child$__r3f4 = child.__r3f) != null && _child$__r3f4.root) $ab9d3c3d42ae47c3$var$removeInteractivity($ab9d3c3d42ae47c3$var$findInitialRoot(child), child);
             }
             // Allow objects to bail out of recursive dispose altogether by passing dispose={null}
             // Never dispose of primitives because their state may be kept outside of React!
@@ -571,7 +649,7 @@ function $a981403d17d544c9$var$createRenderer(_roots, _getEventPriority) {
                 if (typeof IS_REACT_ACT_ENVIRONMENT === "undefined") (0, $fw68E.unstable_scheduleCallback)((0, $fw68E.unstable_IdlePriority), callback);
                 else callback();
             }
-            $a981403d17d544c9$var$invalidateInstance(parentInstance);
+            $ab9d3c3d42ae47c3$var$invalidateInstance(parentInstance);
         }
     }
     function switchInstance(instance, type, newProps, fiber) {
@@ -593,7 +671,7 @@ function $a981403d17d544c9$var$createRenderer(_roots, _getEventPriority) {
         appendChild(parent, newInstance);
         // Re-bind event handlers on the initial root
         if (newInstance.raycast && newInstance.__r3f.eventCount) {
-            const rootState = $a981403d17d544c9$var$findInitialRoot(newInstance).getState();
+            const rootState = $ab9d3c3d42ae47c3$var$findInitialRoot(newInstance).getState();
             rootState.internal.interaction.push(newInstance);
         }
         [
@@ -669,7 +747,7 @@ function $a981403d17d544c9$var$createRenderer(_roots, _getEventPriority) {
                     true
                 ];
                 // Create a diff-set, flag if there are any changes
-                const diff = $a981403d17d544c9$var$diffProps(instance, restNew, restOld, true);
+                const diff = $ab9d3c3d42ae47c3$var$diffProps(instance, restNew, restOld, true);
                 if (diff.changes.length) return [
                     false,
                     diff
@@ -681,18 +759,18 @@ function $a981403d17d544c9$var$createRenderer(_roots, _getEventPriority) {
         commitUpdate (instance, [reconstruct, diff], type, _oldProps, newProps, fiber) {
             // Reconstruct when args or <primitive object={...} have changes
             if (reconstruct) switchInstance(instance, type, newProps, fiber);
-            else $a981403d17d544c9$var$applyProps$1(instance, diff);
+            else $ab9d3c3d42ae47c3$var$applyProps$1(instance, diff);
         },
         commitMount (instance, _type, _props, _int) {
             var _instance$__r3f4;
             // https://github.com/facebook/react/issues/20271
             // This will make sure events are only added once to the central container on the initial root
             const localState = (_instance$__r3f4 = instance.__r3f) != null ? _instance$__r3f4 : {};
-            if (instance.raycast && localState.handlers && localState.eventCount) $a981403d17d544c9$var$findInitialRoot(instance).getState().internal.interaction.push(instance);
+            if (instance.raycast && localState.handlers && localState.eventCount) $ab9d3c3d42ae47c3$var$findInitialRoot(instance).getState().internal.interaction.push(instance);
         },
         getPublicInstance: (instance)=>instance,
         prepareForCommit: ()=>null,
-        preparePortalMount: (container)=>$a981403d17d544c9$var$prepare(container.getState().scene),
+        preparePortalMount: (container)=>$ab9d3c3d42ae47c3$var$prepare(container.getState().scene),
         resetAfterCommit: ()=>{},
         shouldSetTextContent: ()=>false,
         clearContainer: ()=>false,
@@ -700,17 +778,17 @@ function $a981403d17d544c9$var$createRenderer(_roots, _getEventPriority) {
             var _instance$__r3f5;
             // Detach while the instance is hidden
             const { attach: type, parent: parent } = (_instance$__r3f5 = instance.__r3f) != null ? _instance$__r3f5 : {};
-            if (type && parent) $a981403d17d544c9$var$detach(parent, instance, type);
+            if (type && parent) $ab9d3c3d42ae47c3$var$detach(parent, instance, type);
             if (instance.isObject3D) instance.visible = false;
-            $a981403d17d544c9$var$invalidateInstance(instance);
+            $ab9d3c3d42ae47c3$var$invalidateInstance(instance);
         },
         unhideInstance (instance, props) {
             var _instance$__r3f6;
             // Re-attach when the instance is unhidden
             const { attach: type, parent: parent } = (_instance$__r3f6 = instance.__r3f) != null ? _instance$__r3f6 : {};
-            if (type && parent) $a981403d17d544c9$var$attach(parent, instance, type);
+            if (type && parent) $ab9d3c3d42ae47c3$var$attach(parent, instance, type);
             if (instance.isObject3D && props.visible == null || props.visible) instance.visible = true;
-            $a981403d17d544c9$var$invalidateInstance(instance);
+            $ab9d3c3d42ae47c3$var$invalidateInstance(instance);
         },
         createTextInstance: handleTextInstance,
         hideTextInstance: handleTextInstance,
@@ -721,28 +799,28 @@ function $a981403d17d544c9$var$createRenderer(_roots, _getEventPriority) {
         beforeActiveInstanceBlur: ()=>{},
         afterActiveInstanceBlur: ()=>{},
         detachDeletedInstance: ()=>{},
-        now: typeof performance !== "undefined" && $a981403d17d544c9$var$is.fun(performance.now) ? performance.now : $a981403d17d544c9$var$is.fun(Date.now) ? Date.now : ()=>0,
+        now: typeof performance !== "undefined" && $ab9d3c3d42ae47c3$var$is.fun(performance.now) ? performance.now : $ab9d3c3d42ae47c3$var$is.fun(Date.now) ? Date.now : ()=>0,
         // https://github.com/pmndrs/react-three-fiber/pull/2360#discussion_r920883503
-        scheduleTimeout: $a981403d17d544c9$var$is.fun(setTimeout) ? setTimeout : undefined,
-        cancelTimeout: $a981403d17d544c9$var$is.fun(clearTimeout) ? clearTimeout : undefined
+        scheduleTimeout: $ab9d3c3d42ae47c3$var$is.fun(setTimeout) ? setTimeout : undefined,
+        cancelTimeout: $ab9d3c3d42ae47c3$var$is.fun(clearTimeout) ? clearTimeout : undefined
     });
     return {
         reconciler: reconciler,
-        applyProps: $a981403d17d544c9$var$applyProps$1
+        applyProps: $ab9d3c3d42ae47c3$var$applyProps$1
     };
 }
-var $a981403d17d544c9$var$_window$document, $a981403d17d544c9$var$_window$navigator;
+var $ab9d3c3d42ae47c3$var$_window$document, $ab9d3c3d42ae47c3$var$_window$navigator;
 /**
  * Returns `true` with correct TS type inference if an object has a configurable color space (since r152).
- */ const $a981403d17d544c9$var$hasColorSpace = (object)=>"colorSpace" in object || "outputColorSpace" in object;
+ */ const $ab9d3c3d42ae47c3$var$hasColorSpace = (object)=>"colorSpace" in object || "outputColorSpace" in object;
 /**
  * The current THREE.ColorManagement instance, if present.
- */ const $a981403d17d544c9$var$getColorManagement = ()=>{
+ */ const $ab9d3c3d42ae47c3$var$getColorManagement = ()=>{
     var _ColorManagement;
-    return (_ColorManagement = $a981403d17d544c9$var$catalogue.ColorManagement) != null ? _ColorManagement : null;
+    return (_ColorManagement = $ab9d3c3d42ae47c3$var$catalogue.ColorManagement) != null ? _ColorManagement : null;
 };
-const $a981403d17d544c9$var$isOrthographicCamera = (def)=>def && def.isOrthographicCamera;
-const $a981403d17d544c9$export$23f2a1d2818174ef = (obj)=>obj && obj.hasOwnProperty("current");
+const $ab9d3c3d42ae47c3$var$isOrthographicCamera = (def)=>def && def.isOrthographicCamera;
+const $ab9d3c3d42ae47c3$export$23f2a1d2818174ef = (obj)=>obj && obj.hasOwnProperty("current");
 /**
  * An SSR-friendly useLayoutEffect.
  *
@@ -751,16 +829,16 @@ const $a981403d17d544c9$export$23f2a1d2818174ef = (obj)=>obj && obj.hasOwnProper
  * useLayoutEffect elsewhere.
  *
  * @see https://github.com/facebook/react/issues/14927
- */ const $a981403d17d544c9$export$407448d2b89b1813 = typeof window !== "undefined" && (($a981403d17d544c9$var$_window$document = window.document) != null && $a981403d17d544c9$var$_window$document.createElement || (($a981403d17d544c9$var$_window$navigator = window.navigator) == null ? void 0 : $a981403d17d544c9$var$_window$navigator.product) === "ReactNative") ? $d4J5n.useLayoutEffect : $d4J5n.useEffect;
-function $a981403d17d544c9$export$3b14a55fb2447963(fn) {
+ */ const $ab9d3c3d42ae47c3$export$407448d2b89b1813 = typeof window !== "undefined" && (($ab9d3c3d42ae47c3$var$_window$document = window.document) != null && $ab9d3c3d42ae47c3$var$_window$document.createElement || (($ab9d3c3d42ae47c3$var$_window$navigator = window.navigator) == null ? void 0 : $ab9d3c3d42ae47c3$var$_window$navigator.product) === "ReactNative") ? $d4J5n.useLayoutEffect : $d4J5n.useEffect;
+function $ab9d3c3d42ae47c3$export$3b14a55fb2447963(fn) {
     const ref = $d4J5n.useRef(fn);
-    $a981403d17d544c9$export$407448d2b89b1813(()=>void (ref.current = fn), [
+    $ab9d3c3d42ae47c3$export$407448d2b89b1813(()=>void (ref.current = fn), [
         fn
     ]);
     return ref;
 }
-function $a981403d17d544c9$export$ef35774e6d314e91({ set: set }) {
-    $a981403d17d544c9$export$407448d2b89b1813(()=>{
+function $ab9d3c3d42ae47c3$export$ef35774e6d314e91({ set: set }) {
+    $ab9d3c3d42ae47c3$export$407448d2b89b1813(()=>{
         set(new Promise(()=>null));
         return ()=>set(false);
     }, [
@@ -768,7 +846,7 @@ function $a981403d17d544c9$export$ef35774e6d314e91({ set: set }) {
     ]);
     return null;
 }
-class $a981403d17d544c9$export$a9c23c6ac3fc3eca extends $d4J5n.Component {
+class $ab9d3c3d42ae47c3$export$a9c23c6ac3fc3eca extends $d4J5n.Component {
     constructor(...args){
         super(...args);
         this.state = {
@@ -782,13 +860,13 @@ class $a981403d17d544c9$export$a9c23c6ac3fc3eca extends $d4J5n.Component {
         return this.state.error ? null : this.props.children;
     }
 }
-$a981403d17d544c9$export$a9c23c6ac3fc3eca.getDerivedStateFromError = ()=>({
+$ab9d3c3d42ae47c3$export$a9c23c6ac3fc3eca.getDerivedStateFromError = ()=>({
         error: true
     });
-const $a981403d17d544c9$var$DEFAULT = "__default";
-const $a981403d17d544c9$var$DEFAULTS = new Map();
-const $a981403d17d544c9$var$isDiffSet = (def)=>def && !!def.memoized && !!def.changes;
-function $a981403d17d544c9$var$calculateDpr(dpr) {
+const $ab9d3c3d42ae47c3$var$DEFAULT = "__default";
+const $ab9d3c3d42ae47c3$var$DEFAULTS = new Map();
+const $ab9d3c3d42ae47c3$var$isDiffSet = (def)=>def && !!def.memoized && !!def.changes;
+function $ab9d3c3d42ae47c3$var$calculateDpr(dpr) {
     var _window$devicePixelRa;
     // Err on the side of progress by assuming 2x dpr if we can't detect it
     // This will happen in workers where window is defined but dpr isn't.
@@ -797,20 +875,20 @@ function $a981403d17d544c9$var$calculateDpr(dpr) {
 }
 /**
  * Returns instance root state
- */ const $a981403d17d544c9$export$2408f22a0fab9ae5 = (obj)=>{
+ */ const $ab9d3c3d42ae47c3$export$efccba1c4a2ef57b = (obj)=>{
     var _r3f;
     return (_r3f = obj.__r3f) == null ? void 0 : _r3f.root.getState();
 };
 /**
  * Returns the instances initial (outmost) root
- */ function $a981403d17d544c9$var$findInitialRoot(child) {
+ */ function $ab9d3c3d42ae47c3$var$findInitialRoot(child) {
     let root = child.__r3f.root;
     while(root.getState().previousRoot)root = root.getState().previousRoot;
     return root;
 }
 // A collection of compare functions
-const $a981403d17d544c9$var$is = {
-    obj: (a)=>a === Object(a) && !$a981403d17d544c9$var$is.arr(a) && typeof a !== "function",
+const $ab9d3c3d42ae47c3$var$is = {
+    obj: (a)=>a === Object(a) && !$ab9d3c3d42ae47c3$var$is.arr(a) && typeof a !== "function",
     fun: (a)=>typeof a === "function",
     str: (a)=>typeof a === "string",
     num: (a)=>typeof a === "number",
@@ -821,10 +899,10 @@ const $a981403d17d544c9$var$is = {
         // Wrong type or one of the two undefined, doesn't match
         if (typeof a !== typeof b || !!a !== !!b) return false;
         // Atomic, just compare a against b
-        if ($a981403d17d544c9$var$is.str(a) || $a981403d17d544c9$var$is.num(a) || $a981403d17d544c9$var$is.boo(a)) return a === b;
-        const isObj = $a981403d17d544c9$var$is.obj(a);
+        if ($ab9d3c3d42ae47c3$var$is.str(a) || $ab9d3c3d42ae47c3$var$is.num(a) || $ab9d3c3d42ae47c3$var$is.boo(a)) return a === b;
+        const isObj = $ab9d3c3d42ae47c3$var$is.obj(a);
         if (isObj && objects === "reference") return a === b;
-        const isArr = $a981403d17d544c9$var$is.arr(a);
+        const isArr = $ab9d3c3d42ae47c3$var$is.arr(a);
         if (isArr && arrays === "reference") return a === b;
         // Array or Object, shallow compare first to see if it's a match
         if ((isArr || isObj) && a === b) return true;
@@ -834,7 +912,7 @@ const $a981403d17d544c9$var$is = {
         for(i in a)if (!(i in b)) return false;
         // Check if values between keys match
         if (isObj && arrays === "shallow" && objects === "shallow") {
-            for(i in strict ? b : a)if (!$a981403d17d544c9$var$is.equ(a[i], b[i], {
+            for(i in strict ? b : a)if (!$ab9d3c3d42ae47c3$var$is.equ(a[i], b[i], {
                 strict: strict,
                 objects: "reference"
             })) return false;
@@ -842,7 +920,7 @@ const $a981403d17d544c9$var$is = {
             for(i in strict ? b : a)if (a[i] !== b[i]) return false;
         }
         // If i is undefined
-        if ($a981403d17d544c9$var$is.und(i)) {
+        if ($ab9d3c3d42ae47c3$var$is.und(i)) {
             // If both arrays are empty we consider them equal
             if (isArr && a.length === 0 && b.length === 0) return true;
             // If both objects are empty we consider them equal
@@ -855,7 +933,7 @@ const $a981403d17d544c9$var$is = {
 };
 /**
  * Collects nodes and materials from a THREE.Object3D.
- */ function $a981403d17d544c9$export$efccba1c4a2ef57b(object) {
+ */ function $ab9d3c3d42ae47c3$export$4a5767248b18ef41(object) {
     const data = {
         nodes: {},
         materials: {}
@@ -867,7 +945,7 @@ const $a981403d17d544c9$var$is = {
     return data;
 }
 // Disposes an object and all its properties
-function $a981403d17d544c9$export$342063e11d6c3cad(obj) {
+function $ab9d3c3d42ae47c3$export$882b5998b3b9117c(obj) {
     if (obj.dispose && obj.type !== "Scene") obj.dispose();
     for(const p in obj){
         p.dispose == null || p.dispose();
@@ -875,7 +953,7 @@ function $a981403d17d544c9$export$342063e11d6c3cad(obj) {
     }
 }
 // Each object in the scene carries a small LocalState descriptor
-function $a981403d17d544c9$var$prepare(object, state) {
+function $ab9d3c3d42ae47c3$var$prepare(object, state) {
     const instance = object;
     instance.__r3f = {
         type: "",
@@ -890,7 +968,7 @@ function $a981403d17d544c9$var$prepare(object, state) {
     };
     return object;
 }
-function $a981403d17d544c9$var$resolve(instance, key) {
+function $ab9d3c3d42ae47c3$var$resolve(instance, key) {
     let target = instance;
     if (key.includes("-")) {
         const entries = key.split("-");
@@ -906,24 +984,24 @@ function $a981403d17d544c9$var$resolve(instance, key) {
     };
 }
 // Checks if a dash-cased string ends with an integer
-const $a981403d17d544c9$var$INDEX_REGEX = /-\d+$/;
-function $a981403d17d544c9$var$attach(parent, child, type) {
-    if ($a981403d17d544c9$var$is.str(type)) {
+const $ab9d3c3d42ae47c3$var$INDEX_REGEX = /-\d+$/;
+function $ab9d3c3d42ae47c3$var$attach(parent, child, type) {
+    if ($ab9d3c3d42ae47c3$var$is.str(type)) {
         // If attaching into an array (foo-0), create one
-        if ($a981403d17d544c9$var$INDEX_REGEX.test(type)) {
-            const root = type.replace($a981403d17d544c9$var$INDEX_REGEX, "");
-            const { target: target, key: key } = $a981403d17d544c9$var$resolve(parent, root);
+        if ($ab9d3c3d42ae47c3$var$INDEX_REGEX.test(type)) {
+            const root = type.replace($ab9d3c3d42ae47c3$var$INDEX_REGEX, "");
+            const { target: target, key: key } = $ab9d3c3d42ae47c3$var$resolve(parent, root);
             if (!Array.isArray(target[key])) target[key] = [];
         }
-        const { target: target, key: key } = $a981403d17d544c9$var$resolve(parent, type);
+        const { target: target, key: key } = $ab9d3c3d42ae47c3$var$resolve(parent, type);
         child.__r3f.previousAttach = target[key];
         target[key] = child;
     } else child.__r3f.previousAttach = type(parent, child);
 }
-function $a981403d17d544c9$var$detach(parent, child, type) {
+function $ab9d3c3d42ae47c3$var$detach(parent, child, type) {
     var _child$__r3f, _child$__r3f2;
-    if ($a981403d17d544c9$var$is.str(type)) {
-        const { target: target, key: key } = $a981403d17d544c9$var$resolve(parent, type);
+    if ($ab9d3c3d42ae47c3$var$is.str(type)) {
+        const { target: target, key: key } = $ab9d3c3d42ae47c3$var$resolve(parent, type);
         const previous = child.__r3f.previousAttach;
         // When the previous value was undefined, it means the value was never set to begin with
         if (previous === undefined) delete target[key];
@@ -932,7 +1010,7 @@ function $a981403d17d544c9$var$detach(parent, child, type) {
     (_child$__r3f2 = child.__r3f) == null || delete _child$__r3f2.previousAttach;
 }
 // This function prepares a set of changes to be applied to the instance
-function $a981403d17d544c9$var$diffProps(instance, { children: cN, key: kN, ref: rN, ...props }, { children: cP, key: kP, ref: rP, ...previous } = {}, remove = false) {
+function $ab9d3c3d42ae47c3$var$diffProps(instance, { children: cN, key: kN, ref: rN, ...props }, { children: cP, key: kP, ref: rP, ...previous } = {}, remove = false) {
     const localState = instance.__r3f;
     const entries = Object.entries(props);
     const changes = [];
@@ -941,7 +1019,7 @@ function $a981403d17d544c9$var$diffProps(instance, { children: cN, key: kN, ref:
         const previousKeys = Object.keys(previous);
         for(let i = 0; i < previousKeys.length; i++)if (!props.hasOwnProperty(previousKeys[i])) entries.unshift([
             previousKeys[i],
-            $a981403d17d544c9$var$DEFAULT + "remove"
+            $ab9d3c3d42ae47c3$var$DEFAULT + "remove"
         ]);
     }
     entries.forEach(([key, value])=>{
@@ -949,7 +1027,7 @@ function $a981403d17d544c9$var$diffProps(instance, { children: cN, key: kN, ref:
         // Bail out on primitive object
         if ((_instance$__r3f = instance.__r3f) != null && _instance$__r3f.primitive && key === "object") return;
         // When props match bail out
-        if ($a981403d17d544c9$var$is.equ(value, previous[key])) return;
+        if ($ab9d3c3d42ae47c3$var$is.equ(value, previous[key])) return;
         // Collect handlers and bail out
         if (/^on(Pointer|Click|DoubleClick|ContextMenu|Wheel)/.test(key)) return changes.push([
             key,
@@ -987,15 +1065,15 @@ function $a981403d17d544c9$var$diffProps(instance, { children: cN, key: kN, ref:
         changes: changes
     };
 }
-const $a981403d17d544c9$var$__DEV__ = typeof $4DZrq !== "undefined" && false;
+const $ab9d3c3d42ae47c3$var$__DEV__ = typeof $4DZrq !== "undefined" && false;
 // This function applies a set of changes to the instance
-function $a981403d17d544c9$var$applyProps$1(instance, data) {
+function $ab9d3c3d42ae47c3$var$applyProps$1(instance, data) {
     var _instance$__r3f2;
     // Filter equals, events and reserved props
     const localState = instance.__r3f;
     const root = localState == null ? void 0 : localState.root;
     const rootState = root == null ? void 0 : root.getState == null ? void 0 : root.getState();
-    const { memoized: memoized, changes: changes } = $a981403d17d544c9$var$isDiffSet(data) ? data : $a981403d17d544c9$var$diffProps(instance, data);
+    const { memoized: memoized, changes: changes } = $ab9d3c3d42ae47c3$var$isDiffSet(data) ? data : $ab9d3c3d42ae47c3$var$diffProps(instance, data);
     const prevHandlers = localState == null ? void 0 : localState.eventCount;
     // Prepare memoized props
     if (instance.__r3f) instance.__r3f.memoizedProps = memoized;
@@ -1003,7 +1081,7 @@ function $a981403d17d544c9$var$applyProps$1(instance, data) {
         let [key, value, isEvent, keys] = changes[i];
         // Alias (output)encoding => (output)colorSpace (since r152)
         // https://github.com/pmndrs/react-three-fiber/pull/2829
-        if ($a981403d17d544c9$var$hasColorSpace(instance)) {
+        if ($ab9d3c3d42ae47c3$var$hasColorSpace(instance)) {
             const sRGBEncoding = 3001;
             const SRGBColorSpace = "srgb";
             const LinearSRGBColorSpace = "srgb-linear";
@@ -1032,14 +1110,14 @@ function $a981403d17d544c9$var$applyProps$1(instance, data) {
         // has no means to do this. Hence we curate a small collection of value-classes
         // with their respective constructor/set arguments
         // For removed props, try to set default values, if possible
-        if (value === $a981403d17d544c9$var$DEFAULT + "remove") {
+        if (value === $ab9d3c3d42ae47c3$var$DEFAULT + "remove") {
             if (currentInstance.constructor) {
                 // create a blank slate of the instance and copy the particular parameter.
-                let ctor = $a981403d17d544c9$var$DEFAULTS.get(currentInstance.constructor);
+                let ctor = $ab9d3c3d42ae47c3$var$DEFAULTS.get(currentInstance.constructor);
                 if (!ctor) {
                     // @ts-expect-error
                     ctor = new currentInstance.constructor();
-                    $a981403d17d544c9$var$DEFAULTS.set(currentInstance.constructor, ctor);
+                    $ab9d3c3d42ae47c3$var$DEFAULTS.set(currentInstance.constructor, ctor);
                 }
                 value = ctor[key];
             } else // instance does not have constructor, just set it to 0
@@ -1059,7 +1137,7 @@ function $a981403d17d544c9$var$applyProps$1(instance, data) {
             // Loosen to unminified names, ignoring descendents.
             // https://github.com/pmndrs/react-three-fiber/issues/2856
             // TODO: fix upstream and remove in v9
-            ($a981403d17d544c9$var$__DEV__ ? targetProp.constructor.name === value.constructor.name : targetProp.constructor === value.constructor)) targetProp.copy(value);
+            ($ab9d3c3d42ae47c3$var$__DEV__ ? targetProp.constructor.name === value.constructor.name : targetProp.constructor === value.constructor)) targetProp.copy(value);
             else if (value !== undefined) {
                 const isColor = targetProp instanceof $2Oa7c.Color;
                 // Allow setting array scalars
@@ -1069,7 +1147,7 @@ function $a981403d17d544c9$var$applyProps$1(instance, data) {
                 // For versions of three which don't support THREE.ColorManagement,
                 // Auto-convert sRGB colors
                 // https://github.com/pmndrs/react-three-fiber/issues/344
-                if (!$a981403d17d544c9$var$getColorManagement() && rootState && !rootState.linear && isColor) targetProp.convertSRGBToLinear();
+                if (!$ab9d3c3d42ae47c3$var$getColorManagement() && rootState && !rootState.linear && isColor) targetProp.convertSRGBToLinear();
             }
         // Else, just overwrite the value
         } else {
@@ -1079,15 +1157,15 @@ function $a981403d17d544c9$var$applyProps$1(instance, data) {
             if (currentInstance[key] instanceof $2Oa7c.Texture && // sRGB textures must be RGBA8 since r137 https://github.com/mrdoob/three.js/pull/23129
             currentInstance[key].format === $2Oa7c.RGBAFormat && currentInstance[key].type === $2Oa7c.UnsignedByteType && rootState) {
                 const texture = currentInstance[key];
-                if ($a981403d17d544c9$var$hasColorSpace(texture) && $a981403d17d544c9$var$hasColorSpace(rootState.gl)) texture.colorSpace = rootState.gl.outputColorSpace;
+                if ($ab9d3c3d42ae47c3$var$hasColorSpace(texture) && $ab9d3c3d42ae47c3$var$hasColorSpace(rootState.gl)) texture.colorSpace = rootState.gl.outputColorSpace;
                 else texture.encoding = rootState.gl.outputEncoding;
             }
         }
-        $a981403d17d544c9$var$invalidateInstance(instance);
+        $ab9d3c3d42ae47c3$var$invalidateInstance(instance);
     }
     if (localState && localState.parent && instance.raycast && prevHandlers !== localState.eventCount) {
         // Get the initial root state's internals
-        const internal = $a981403d17d544c9$var$findInitialRoot(instance).getState().internal;
+        const internal = $ab9d3c3d42ae47c3$var$findInitialRoot(instance).getState().internal;
         // Pre-emptively remove the instance from the interaction manager
         const index = internal.interaction.indexOf(instance);
         if (index > -1) internal.interaction.splice(index, 1);
@@ -1097,22 +1175,22 @@ function $a981403d17d544c9$var$applyProps$1(instance, data) {
     // Call the update lifecycle when it is being updated, but only when it is part of the scene.
     // Skip updates to the `onUpdate` prop itself
     const isCircular = changes.length === 1 && changes[0][0] === "onUpdate";
-    if (!isCircular && changes.length && (_instance$__r3f2 = instance.__r3f) != null && _instance$__r3f2.parent) $a981403d17d544c9$var$updateInstance(instance);
+    if (!isCircular && changes.length && (_instance$__r3f2 = instance.__r3f) != null && _instance$__r3f2.parent) $ab9d3c3d42ae47c3$var$updateInstance(instance);
     return instance;
 }
-function $a981403d17d544c9$var$invalidateInstance(instance) {
+function $ab9d3c3d42ae47c3$var$invalidateInstance(instance) {
     var _instance$__r3f3, _instance$__r3f3$root;
     const state = (_instance$__r3f3 = instance.__r3f) == null ? void 0 : (_instance$__r3f3$root = _instance$__r3f3.root) == null ? void 0 : _instance$__r3f3$root.getState == null ? void 0 : _instance$__r3f3$root.getState();
     if (state && state.internal.frames === 0) state.invalidate();
 }
-function $a981403d17d544c9$var$updateInstance(instance) {
+function $ab9d3c3d42ae47c3$var$updateInstance(instance) {
     instance.onUpdate == null || instance.onUpdate(instance);
 }
-function $a981403d17d544c9$var$updateCamera(camera, size) {
+function $ab9d3c3d42ae47c3$var$updateCamera(camera, size) {
     // https://github.com/pmndrs/react-three-fiber/issues/92
     // Do not mess with the camera if it belongs to the user
     if (!camera.manual) {
-        if ($a981403d17d544c9$var$isOrthographicCamera(camera)) {
+        if ($ab9d3c3d42ae47c3$var$isOrthographicCamera(camera)) {
             camera.left = size.width / -2;
             camera.right = size.width / 2;
             camera.top = size.height / 2;
@@ -1124,12 +1202,12 @@ function $a981403d17d544c9$var$updateCamera(camera, size) {
         camera.updateMatrixWorld();
     }
 }
-function $a981403d17d544c9$var$makeId(event) {
+function $ab9d3c3d42ae47c3$var$makeId(event) {
     return (event.eventObject || event.object).uuid + "/" + event.index + event.instanceId;
 }
 // https://github.com/facebook/react/tree/main/packages/react-reconciler#getcurrenteventpriority
 // Gives React a clue as to how import the current interaction is
-function $a981403d17d544c9$var$getEventPriority() {
+function $ab9d3c3d42ae47c3$var$getEventPriority() {
     var _globalScope$event;
     // Get a handle to the current global scope in window and worker contexts if able
     // https://github.com/pmndrs/react-three-fiber/pull/2493
@@ -1158,7 +1236,7 @@ function $a981403d17d544c9$var$getEventPriority() {
 /**
  * Release pointer captures.
  * This is called by releasePointerCapture in the API, and when an object is removed.
- */ function $a981403d17d544c9$var$releaseInternalPointerCapture(capturedMap, obj, captures, pointerId) {
+ */ function $ab9d3c3d42ae47c3$var$releaseInternalPointerCapture(capturedMap, obj, captures, pointerId) {
     const captureData = captures.get(obj);
     if (captureData) {
         captures.delete(obj);
@@ -1169,7 +1247,7 @@ function $a981403d17d544c9$var$getEventPriority() {
         }
     }
 }
-function $a981403d17d544c9$var$removeInteractivity(store, object) {
+function $ab9d3c3d42ae47c3$var$removeInteractivity(store, object) {
     const { internal: internal } = store.getState();
     // Removes every trace of an object from the data store
     internal.interaction = internal.interaction.filter((o)=>o !== object);
@@ -1179,10 +1257,10 @@ function $a981403d17d544c9$var$removeInteractivity(store, object) {
         internal.hovered.delete(key);
     });
     internal.capturedMap.forEach((captures, pointerId)=>{
-        $a981403d17d544c9$var$releaseInternalPointerCapture(internal.capturedMap, object, captures, pointerId);
+        $ab9d3c3d42ae47c3$var$releaseInternalPointerCapture(internal.capturedMap, object, captures, pointerId);
     });
 }
-function $a981403d17d544c9$export$db3b6bfb95261072(store) {
+function $ab9d3c3d42ae47c3$export$2d1720544b23b823(store) {
     /** Calculates delta */ function calculateDistance(event) {
         const { internal: internal } = store.getState();
         const dx = event.offsetX - internal.initialClick[0];
@@ -1209,13 +1287,13 @@ function $a981403d17d544c9$export$db3b6bfb95261072(store) {
         const eventsObjects = filter ? filter(state.internal.interaction) : state.internal.interaction;
         // Reset all raycaster cameras to undefined
         for(let i = 0; i < eventsObjects.length; i++){
-            const state = $a981403d17d544c9$export$2408f22a0fab9ae5(eventsObjects[i]);
+            const state = $ab9d3c3d42ae47c3$export$efccba1c4a2ef57b(eventsObjects[i]);
             if (state) state.raycaster.camera = undefined;
         }
         if (!state.previousRoot) // Make sure root-level pointer and ray are set up
         state.events.compute == null || state.events.compute(event, state);
         function handleRaycast(obj) {
-            const state = $a981403d17d544c9$export$2408f22a0fab9ae5(obj);
+            const state = $ab9d3c3d42ae47c3$export$efccba1c4a2ef57b(obj);
             // Skip event handling when noEvents is set, or when the raycasters camera is null
             if (!state || !state.events.enabled || state.raycaster.camera === null) return [];
             // When the camera is undefined we have to call the event layers update function
@@ -1232,13 +1310,13 @@ function $a981403d17d544c9$export$db3b6bfb95261072(store) {
         let hits = eventsObjects// Intersect objects
         .flatMap(handleRaycast)// Sort by event priority and distance
         .sort((a, b)=>{
-            const aState = $a981403d17d544c9$export$2408f22a0fab9ae5(a.object);
-            const bState = $a981403d17d544c9$export$2408f22a0fab9ae5(b.object);
+            const aState = $ab9d3c3d42ae47c3$export$efccba1c4a2ef57b(a.object);
+            const bState = $ab9d3c3d42ae47c3$export$efccba1c4a2ef57b(b.object);
             if (!aState || !bState) return a.distance - b.distance;
             return bState.events.priority - aState.events.priority || a.distance - b.distance;
         })// Filter out duplicates
         .filter((item)=>{
-            const id = $a981403d17d544c9$var$makeId(item);
+            const id = $ab9d3c3d42ae47c3$var$makeId(item);
             if (duplicates.has(id)) return false;
             duplicates.add(id);
             return true;
@@ -1261,7 +1339,7 @@ function $a981403d17d544c9$export$db3b6bfb95261072(store) {
         }
         // If the interaction is captured, make all capturing targets part of the intersect.
         if ("pointerId" in event && state.internal.capturedMap.has(event.pointerId)) {
-            for (let captureData of state.internal.capturedMap.get(event.pointerId).values())if (!duplicates.has($a981403d17d544c9$var$makeId(captureData.intersection))) intersections.push(captureData.intersection);
+            for (let captureData of state.internal.capturedMap.get(event.pointerId).values())if (!duplicates.has($ab9d3c3d42ae47c3$var$makeId(captureData.intersection))) intersections.push(captureData.intersection);
         }
         return intersections;
     }
@@ -1273,7 +1351,7 @@ function $a981403d17d544c9$export$db3b6bfb95261072(store) {
                 stopped: false
             };
             for (const hit of intersections){
-                const state = $a981403d17d544c9$export$2408f22a0fab9ae5(hit.object) || rootState;
+                const state = $ab9d3c3d42ae47c3$export$efccba1c4a2ef57b(hit.object) || rootState;
                 const { raycaster: raycaster, pointer: pointer, camera: camera, internal: internal } = state;
                 const unprojectedPoint = new $2Oa7c.Vector3(pointer.x, pointer.y, 0).unproject(camera);
                 const hasPointerCapture = (id)=>{
@@ -1301,7 +1379,7 @@ function $a981403d17d544c9$export$db3b6bfb95261072(store) {
                 };
                 const releasePointerCapture = (id)=>{
                     const captures = internal.capturedMap.get(id);
-                    if (captures) $a981403d17d544c9$var$releaseInternalPointerCapture(internal.capturedMap, hit.eventObject, captures, id);
+                    if (captures) $ab9d3c3d42ae47c3$var$releaseInternalPointerCapture(internal.capturedMap, hit.eventObject, captures, id);
                 };
                 // Add native event props
                 let extractEventProps = {};
@@ -1373,7 +1451,7 @@ function $a981403d17d544c9$export$db3b6bfb95261072(store) {
             const eventObject = hoveredObj.eventObject;
             const instance = eventObject.__r3f;
             const handlers = instance == null ? void 0 : instance.handlers;
-            internal.hovered.delete($a981403d17d544c9$var$makeId(hoveredObj));
+            internal.hovered.delete($ab9d3c3d42ae47c3$var$makeId(hoveredObj));
             if (instance != null && instance.eventCount) {
                 // Clear out intersects, they are outdated by now
                 const data = {
@@ -1465,7 +1543,7 @@ function $a981403d17d544c9$export$db3b6bfb95261072(store) {
                     // Move event ...
                     if (handlers.onPointerOver || handlers.onPointerEnter || handlers.onPointerOut || handlers.onPointerLeave) {
                         // When enter or out is present take care of hover-state
-                        const id = $a981403d17d544c9$var$makeId(data);
+                        const id = $ab9d3c3d42ae47c3$var$makeId(data);
                         const hoveredItem = internal.hovered.get(id);
                         if (!hoveredItem) {
                             // If the object wasn't previously hovered, book it and call its handler
@@ -1501,7 +1579,7 @@ function $a981403d17d544c9$export$db3b6bfb95261072(store) {
     };
 }
 // Keys that shouldn't be copied between R3F stores
-const $a981403d17d544c9$var$privateKeys = [
+const $ab9d3c3d42ae47c3$var$privateKeys = [
     "set",
     "get",
     "setSize",
@@ -1513,9 +1591,9 @@ const $a981403d17d544c9$var$privateKeys = [
     "size",
     "viewport"
 ];
-const $a981403d17d544c9$var$isRenderer = (def)=>!!(def != null && def.render);
-const $a981403d17d544c9$export$2d1720544b23b823 = /*#__PURE__*/ $d4J5n.createContext(null);
-const $a981403d17d544c9$var$createStore = (invalidate, advance)=>{
+const $ab9d3c3d42ae47c3$var$isRenderer = (def)=>!!(def != null && def.render);
+const $ab9d3c3d42ae47c3$export$39b482c5e57630a8 = /*#__PURE__*/ $d4J5n.createContext(null);
+const $ab9d3c3d42ae47c3$var$createStore = (invalidate, advance)=>{
     const rootState = (0, (/*@__PURE__*/$parcel$interopDefault($gTdEA)))((set, get)=>{
         const position = new $2Oa7c.Vector3();
         const defaultTarget = new $2Oa7c.Vector3();
@@ -1526,7 +1604,7 @@ const $a981403d17d544c9$var$createStore = (invalidate, advance)=>{
             if (target instanceof $2Oa7c.Vector3) tempTarget.copy(target);
             else tempTarget.set(...target);
             const distance = camera.getWorldPosition(position).distanceTo(tempTarget);
-            if ($a981403d17d544c9$var$isOrthographicCamera(camera)) return {
+            if ($ab9d3c3d42ae47c3$var$isOrthographicCamera(camera)) return {
                 width: width / camera.zoom,
                 height: height / camera.zoom,
                 top: top,
@@ -1642,7 +1720,7 @@ const $a981403d17d544c9$var$createStore = (invalidate, advance)=>{
                     }));
             },
             setDpr: (dpr)=>set((state)=>{
-                    const resolved = $a981403d17d544c9$var$calculateDpr(dpr);
+                    const resolved = $ab9d3c3d42ae47c3$var$calculateDpr(dpr);
                     return {
                         viewport: {
                             ...state.viewport,
@@ -1720,7 +1798,7 @@ const $a981403d17d544c9$var$createStore = (invalidate, advance)=>{
             oldSize = size;
             oldDpr = viewport.dpr;
             // Update camera & renderer
-            $a981403d17d544c9$var$updateCamera(camera, size);
+            $ab9d3c3d42ae47c3$var$updateCamera(camera, size);
             gl.setPixelRatio(viewport.dpr);
             const updateStyle = (_size$updateStyle = size.updateStyle) != null ? _size$updateStyle : typeof HTMLCanvasElement !== "undefined" && gl.domElement instanceof HTMLCanvasElement;
             gl.setSize(size.width, size.height, updateStyle);
@@ -1742,46 +1820,46 @@ const $a981403d17d544c9$var$createStore = (invalidate, advance)=>{
     // Return root state
     return rootState;
 };
-function $a981403d17d544c9$var$createSubs(callback, subs) {
+function $ab9d3c3d42ae47c3$var$createSubs(callback, subs) {
     const sub = {
         callback: callback
     };
     subs.add(sub);
     return ()=>void subs.delete(sub);
 }
-let $a981403d17d544c9$var$i;
-let $a981403d17d544c9$var$globalEffects = new Set();
-let $a981403d17d544c9$var$globalAfterEffects = new Set();
-let $a981403d17d544c9$var$globalTailEffects = new Set();
+let $ab9d3c3d42ae47c3$var$i;
+let $ab9d3c3d42ae47c3$var$globalEffects = new Set();
+let $ab9d3c3d42ae47c3$var$globalAfterEffects = new Set();
+let $ab9d3c3d42ae47c3$var$globalTailEffects = new Set();
 /**
  * Adds a global render callback which is called each frame.
  * @see https://docs.pmnd.rs/react-three-fiber/api/additional-exports#addEffect
- */ const $a981403d17d544c9$export$7ccc53e8f1e7dfc5 = (callback)=>$a981403d17d544c9$var$createSubs(callback, $a981403d17d544c9$var$globalEffects);
+ */ const $ab9d3c3d42ae47c3$export$ae1af26003f05816 = (callback)=>$ab9d3c3d42ae47c3$var$createSubs(callback, $ab9d3c3d42ae47c3$var$globalEffects);
 /**
  * Adds a global after-render callback which is called each frame.
  * @see https://docs.pmnd.rs/react-three-fiber/api/additional-exports#addAfterEffect
- */ const $a981403d17d544c9$export$ae1af26003f05816 = (callback)=>$a981403d17d544c9$var$createSubs(callback, $a981403d17d544c9$var$globalAfterEffects);
+ */ const $ab9d3c3d42ae47c3$export$ffb5f4729a158638 = (callback)=>$ab9d3c3d42ae47c3$var$createSubs(callback, $ab9d3c3d42ae47c3$var$globalAfterEffects);
 /**
  * Adds a global callback which is called when rendering stops.
  * @see https://docs.pmnd.rs/react-three-fiber/api/additional-exports#addTail
- */ const $a981403d17d544c9$export$ffb5f4729a158638 = (callback)=>$a981403d17d544c9$var$createSubs(callback, $a981403d17d544c9$var$globalTailEffects);
-function $a981403d17d544c9$var$run(effects, timestamp) {
+ */ const $ab9d3c3d42ae47c3$export$9e5f44173e64f162 = (callback)=>$ab9d3c3d42ae47c3$var$createSubs(callback, $ab9d3c3d42ae47c3$var$globalTailEffects);
+function $ab9d3c3d42ae47c3$var$run(effects, timestamp) {
     if (!effects.size) return;
     for (const { callback: callback } of effects.values())callback(timestamp);
 }
-function $a981403d17d544c9$export$9e5f44173e64f162(type, timestamp) {
+function $ab9d3c3d42ae47c3$export$2408f22a0fab9ae5(type, timestamp) {
     switch(type){
         case "before":
-            return $a981403d17d544c9$var$run($a981403d17d544c9$var$globalEffects, timestamp);
+            return $ab9d3c3d42ae47c3$var$run($ab9d3c3d42ae47c3$var$globalEffects, timestamp);
         case "after":
-            return $a981403d17d544c9$var$run($a981403d17d544c9$var$globalAfterEffects, timestamp);
+            return $ab9d3c3d42ae47c3$var$run($ab9d3c3d42ae47c3$var$globalAfterEffects, timestamp);
         case "tail":
-            return $a981403d17d544c9$var$run($a981403d17d544c9$var$globalTailEffects, timestamp);
+            return $ab9d3c3d42ae47c3$var$run($ab9d3c3d42ae47c3$var$globalTailEffects, timestamp);
     }
 }
-let $a981403d17d544c9$var$subscribers;
-let $a981403d17d544c9$var$subscription;
-function $a981403d17d544c9$var$render$1(timestamp, state, frame) {
+let $ab9d3c3d42ae47c3$var$subscribers;
+let $ab9d3c3d42ae47c3$var$subscription;
+function $ab9d3c3d42ae47c3$var$render$1(timestamp, state, frame) {
     // Run local effects
     let delta = state.clock.getDelta();
     // In frameloop='never' mode, clock times are updated using the provided timestamp
@@ -1791,10 +1869,10 @@ function $a981403d17d544c9$var$render$1(timestamp, state, frame) {
         state.clock.elapsedTime = timestamp;
     }
     // Call subscribers (useFrame)
-    $a981403d17d544c9$var$subscribers = state.internal.subscribers;
-    for($a981403d17d544c9$var$i = 0; $a981403d17d544c9$var$i < $a981403d17d544c9$var$subscribers.length; $a981403d17d544c9$var$i++){
-        $a981403d17d544c9$var$subscription = $a981403d17d544c9$var$subscribers[$a981403d17d544c9$var$i];
-        $a981403d17d544c9$var$subscription.ref.current($a981403d17d544c9$var$subscription.store.getState(), delta, frame);
+    $ab9d3c3d42ae47c3$var$subscribers = state.internal.subscribers;
+    for($ab9d3c3d42ae47c3$var$i = 0; $ab9d3c3d42ae47c3$var$i < $ab9d3c3d42ae47c3$var$subscribers.length; $ab9d3c3d42ae47c3$var$i++){
+        $ab9d3c3d42ae47c3$var$subscription = $ab9d3c3d42ae47c3$var$subscribers[$ab9d3c3d42ae47c3$var$i];
+        $ab9d3c3d42ae47c3$var$subscription.ref.current($ab9d3c3d42ae47c3$var$subscription.store.getState(), delta, frame);
     }
     // Render content
     if (!state.internal.priority && state.gl.render) state.gl.render(state.scene, state.camera);
@@ -1802,7 +1880,7 @@ function $a981403d17d544c9$var$render$1(timestamp, state, frame) {
     state.internal.frames = Math.max(0, state.internal.frames - 1);
     return state.frameloop === "always" ? 1 : state.internal.frames;
 }
-function $a981403d17d544c9$var$createLoop(roots) {
+function $ab9d3c3d42ae47c3$var$createLoop(roots) {
     let running = false;
     let useFrameInProgress = false;
     let repeat;
@@ -1813,22 +1891,22 @@ function $a981403d17d544c9$var$createLoop(roots) {
         running = true;
         repeat = 0;
         // Run effects
-        $a981403d17d544c9$export$9e5f44173e64f162("before", timestamp);
+        $ab9d3c3d42ae47c3$export$2408f22a0fab9ae5("before", timestamp);
         // Render all roots
         useFrameInProgress = true;
         for (const root of roots.values()){
             var _state$gl$xr;
             state = root.store.getState();
             // If the frameloop is invalidated, do not run another frame
-            if (state.internal.active && (state.frameloop === "always" || state.internal.frames > 0) && !((_state$gl$xr = state.gl.xr) != null && _state$gl$xr.isPresenting)) repeat += $a981403d17d544c9$var$render$1(timestamp, state);
+            if (state.internal.active && (state.frameloop === "always" || state.internal.frames > 0) && !((_state$gl$xr = state.gl.xr) != null && _state$gl$xr.isPresenting)) repeat += $ab9d3c3d42ae47c3$var$render$1(timestamp, state);
         }
         useFrameInProgress = false;
         // Run after-effects
-        $a981403d17d544c9$export$9e5f44173e64f162("after", timestamp);
+        $ab9d3c3d42ae47c3$export$2408f22a0fab9ae5("after", timestamp);
         // Stop the loop if nothing invalidates it
         if (repeat === 0) {
             // Tail call effects, they are called when rendering stops
-            $a981403d17d544c9$export$9e5f44173e64f162("tail", timestamp);
+            $ab9d3c3d42ae47c3$export$2408f22a0fab9ae5("tail", timestamp);
             // Flag end of operation
             running = false;
             return cancelAnimationFrame(frame);
@@ -1852,10 +1930,10 @@ function $a981403d17d544c9$var$createLoop(roots) {
         }
     }
     function advance(timestamp, runGlobalEffects = true, state, frame) {
-        if (runGlobalEffects) $a981403d17d544c9$export$9e5f44173e64f162("before", timestamp);
-        if (!state) for (const root of roots.values())$a981403d17d544c9$var$render$1(timestamp, root.store.getState());
-        else $a981403d17d544c9$var$render$1(timestamp, state, frame);
-        if (runGlobalEffects) $a981403d17d544c9$export$9e5f44173e64f162("after", timestamp);
+        if (runGlobalEffects) $ab9d3c3d42ae47c3$export$2408f22a0fab9ae5("before", timestamp);
+        if (!state) for (const root of roots.values())$ab9d3c3d42ae47c3$var$render$1(timestamp, root.store.getState());
+        else $ab9d3c3d42ae47c3$var$render$1(timestamp, state, frame);
+        if (runGlobalEffects) $ab9d3c3d42ae47c3$export$2408f22a0fab9ae5("after", timestamp);
     }
     return {
         loop: loop,
@@ -1868,35 +1946,35 @@ function $a981403d17d544c9$var$createLoop(roots) {
  * @see https://docs.pmnd.rs/react-three-fiber/api/additional-exports#useInstanceHandle
  *
  * **Note**: this is an escape hatch to react-internal fields. Expect this to change significantly between versions.
- */ function $a981403d17d544c9$export$4a5767248b18ef41(ref) {
+ */ function $ab9d3c3d42ae47c3$export$ebd11618f299a286(ref) {
     const instance = $d4J5n.useRef(null);
-    $a981403d17d544c9$export$407448d2b89b1813(()=>void (instance.current = ref.current.__r3f), [
+    $ab9d3c3d42ae47c3$export$407448d2b89b1813(()=>void (instance.current = ref.current.__r3f), [
         ref
     ]);
     return instance;
 }
-function $a981403d17d544c9$export$df995fae86a55f06() {
-    const store = $d4J5n.useContext($a981403d17d544c9$export$2d1720544b23b823);
+function $ab9d3c3d42ae47c3$export$e7094788287c5e9b() {
+    const store = $d4J5n.useContext($ab9d3c3d42ae47c3$export$39b482c5e57630a8);
     if (!store) throw new Error("R3F: Hooks can only be used within the Canvas component!");
     return store;
 }
 /**
  * Accesses R3F's internal state, containing renderer, canvas, scene, etc.
  * @see https://docs.pmnd.rs/react-three-fiber/api/hooks#usethree
- */ function $a981403d17d544c9$export$ebd11618f299a286(selector = (state)=>state, equalityFn) {
-    return $a981403d17d544c9$export$df995fae86a55f06()(selector, equalityFn);
+ */ function $ab9d3c3d42ae47c3$export$96f57966bedc81b4(selector = (state)=>state, equalityFn) {
+    return $ab9d3c3d42ae47c3$export$e7094788287c5e9b()(selector, equalityFn);
 }
 /**
  * Executes a callback before render in a shared frame loop.
  * Can order effects with render priority or manually render with a positive priority.
  * @see https://docs.pmnd.rs/react-three-fiber/api/hooks#useframe
- */ function $a981403d17d544c9$export$e7094788287c5e9b(callback, renderPriority = 0) {
-    const store = $a981403d17d544c9$export$df995fae86a55f06();
+ */ function $ab9d3c3d42ae47c3$export$d66501df72047452(callback, renderPriority = 0) {
+    const store = $ab9d3c3d42ae47c3$export$e7094788287c5e9b();
     const subscribe = store.getState().internal.subscribe;
     // Memoize ref
-    const ref = $a981403d17d544c9$export$3b14a55fb2447963(callback);
+    const ref = $ab9d3c3d42ae47c3$export$3b14a55fb2447963(callback);
     // Subscribe on mount, unsubscribe on unmount
-    $a981403d17d544c9$export$407448d2b89b1813(()=>subscribe(ref, renderPriority, store), [
+    $ab9d3c3d42ae47c3$export$407448d2b89b1813(()=>subscribe(ref, renderPriority, store), [
         renderPriority,
         subscribe,
         store
@@ -1906,24 +1984,24 @@ function $a981403d17d544c9$export$df995fae86a55f06() {
 /**
  * Returns a node graph of an object with named nodes & materials.
  * @see https://docs.pmnd.rs/react-three-fiber/api/hooks#usegraph
- */ function $a981403d17d544c9$export$96f57966bedc81b4(object) {
-    return $d4J5n.useMemo(()=>$a981403d17d544c9$export$efccba1c4a2ef57b(object), [
+ */ function $ab9d3c3d42ae47c3$export$2329c99376c9d0a4(object) {
+    return $d4J5n.useMemo(()=>$ab9d3c3d42ae47c3$export$4a5767248b18ef41(object), [
         object
     ]);
 }
-const $a981403d17d544c9$var$memoizedLoaders = new WeakMap();
-function $a981403d17d544c9$var$loadingFn(extensions, onProgress) {
+const $ab9d3c3d42ae47c3$var$memoizedLoaders = new WeakMap();
+function $ab9d3c3d42ae47c3$var$loadingFn(extensions, onProgress) {
     return function(Proto, ...input) {
         // Construct new loader and run extensions
-        let loader = $a981403d17d544c9$var$memoizedLoaders.get(Proto);
+        let loader = $ab9d3c3d42ae47c3$var$memoizedLoaders.get(Proto);
         if (!loader) {
             loader = new Proto();
-            $a981403d17d544c9$var$memoizedLoaders.set(Proto, loader);
+            $ab9d3c3d42ae47c3$var$memoizedLoaders.set(Proto, loader);
         }
         if (extensions) extensions(loader);
         // Go through the urls and load them
         return Promise.all(input.map((input)=>new Promise((res, reject)=>loader.load(input, (data)=>{
-                    if (data.scene) Object.assign(data, $a981403d17d544c9$export$efccba1c4a2ef57b(data.scene));
+                    if (data.scene) Object.assign(data, $ab9d3c3d42ae47c3$export$4a5767248b18ef41(data.scene));
                     res(data);
                 }, onProgress, (error)=>reject(new Error(`Could not load ${input}: ${error == null ? void 0 : error.message}`))))));
     };
@@ -1933,34 +2011,34 @@ function $a981403d17d544c9$var$loadingFn(extensions, onProgress) {
  *
  * Note: this hook's caller must be wrapped with `React.Suspense`
  * @see https://docs.pmnd.rs/react-three-fiber/api/hooks#useloader
- */ function $a981403d17d544c9$export$d66501df72047452(Proto, input, extensions, onProgress) {
+ */ function $ab9d3c3d42ae47c3$export$7f8ddf7c7c20b3cd(Proto, input, extensions, onProgress) {
     // Use suspense to load async assets
     const keys = Array.isArray(input) ? input : [
         input
     ];
-    const results = (0, $jcAzR.suspend)($a981403d17d544c9$var$loadingFn(extensions, onProgress), [
+    const results = (0, $jcAzR.suspend)($ab9d3c3d42ae47c3$var$loadingFn(extensions, onProgress), [
         Proto,
         ...keys
     ], {
-        equal: $a981403d17d544c9$var$is.equ
+        equal: $ab9d3c3d42ae47c3$var$is.equ
     });
     // Return the object/s
     return Array.isArray(input) ? results : results[0];
 }
 /**
  * Preloads an asset into cache as a side-effect.
- */ $a981403d17d544c9$export$d66501df72047452.preload = function(Proto, input, extensions) {
+ */ $ab9d3c3d42ae47c3$export$7f8ddf7c7c20b3cd.preload = function(Proto, input, extensions) {
     const keys = Array.isArray(input) ? input : [
         input
     ];
-    return (0, $jcAzR.preload)($a981403d17d544c9$var$loadingFn(extensions), [
+    return (0, $jcAzR.preload)($ab9d3c3d42ae47c3$var$loadingFn(extensions), [
         Proto,
         ...keys
     ]);
 };
 /**
  * Removes a loaded asset from cache.
- */ $a981403d17d544c9$export$d66501df72047452.clear = function(Proto, input) {
+ */ $ab9d3c3d42ae47c3$export$7f8ddf7c7c20b3cd.clear = function(Proto, input) {
     const keys = Array.isArray(input) ? input : [
         input
     ];
@@ -1969,16 +2047,16 @@ function $a981403d17d544c9$var$loadingFn(extensions, onProgress) {
         ...keys
     ]);
 };
-const $a981403d17d544c9$export$d141bba7fdc215a3 = new Map();
-const { invalidate: $a981403d17d544c9$export$882b5998b3b9117c, advance: $a981403d17d544c9$export$953cecd6e717a553 } = $a981403d17d544c9$var$createLoop($a981403d17d544c9$export$d141bba7fdc215a3);
-const { reconciler: $a981403d17d544c9$export$dda1d9f60106f0e9, applyProps: $a981403d17d544c9$export$35e795649ee09318 } = $a981403d17d544c9$var$createRenderer($a981403d17d544c9$export$d141bba7fdc215a3, $a981403d17d544c9$var$getEventPriority);
-const $a981403d17d544c9$var$shallowLoose = {
+const $ab9d3c3d42ae47c3$export$df995fae86a55f06 = new Map();
+const { invalidate: $ab9d3c3d42ae47c3$export$953cecd6e717a553, advance: $ab9d3c3d42ae47c3$export$7ccc53e8f1e7dfc5 } = $ab9d3c3d42ae47c3$var$createLoop($ab9d3c3d42ae47c3$export$df995fae86a55f06);
+const { reconciler: $ab9d3c3d42ae47c3$export$35e795649ee09318, applyProps: $ab9d3c3d42ae47c3$export$342063e11d6c3cad } = $ab9d3c3d42ae47c3$var$createRenderer($ab9d3c3d42ae47c3$export$df995fae86a55f06, $ab9d3c3d42ae47c3$var$getEventPriority);
+const $ab9d3c3d42ae47c3$var$shallowLoose = {
     objects: "shallow",
     strict: false
 };
-const $a981403d17d544c9$var$createRendererInstance = (gl, canvas)=>{
+const $ab9d3c3d42ae47c3$var$createRendererInstance = (gl, canvas)=>{
     const customRenderer = typeof gl === "function" ? gl(canvas) : gl;
-    if ($a981403d17d544c9$var$isRenderer(customRenderer)) return customRenderer;
+    if ($ab9d3c3d42ae47c3$var$isRenderer(customRenderer)) return customRenderer;
     else return new $2Oa7c.WebGLRenderer({
         powerPreference: "high-performance",
         canvas: canvas,
@@ -1987,7 +2065,7 @@ const $a981403d17d544c9$var$createRendererInstance = (gl, canvas)=>{
         ...gl
     });
 };
-function $a981403d17d544c9$var$computeInitialSize(canvas, defaultSize) {
+function $ab9d3c3d42ae47c3$var$computeInitialSize(canvas, defaultSize) {
     const defaultStyle = typeof HTMLCanvasElement !== "undefined" && canvas instanceof HTMLCanvasElement;
     if (defaultSize) {
         const { width: width, height: height, top: top, left: left, updateStyle: updateStyle = defaultStyle } = defaultSize;
@@ -2021,9 +2099,9 @@ function $a981403d17d544c9$var$computeInitialSize(canvas, defaultSize) {
         left: 0
     };
 }
-function $a981403d17d544c9$export$8b22cf2602fb60ce(canvas) {
+function $ab9d3c3d42ae47c3$export$8b22cf2602fb60ce(canvas) {
     // Check against mistaken use of createRoot
-    const prevRoot = $a981403d17d544c9$export$d141bba7fdc215a3.get(canvas);
+    const prevRoot = $ab9d3c3d42ae47c3$export$df995fae86a55f06.get(canvas);
     const prevFiber = prevRoot == null ? void 0 : prevRoot.fiber;
     const prevStore = prevRoot == null ? void 0 : prevRoot.store;
     if (prevRoot) console.warn("R3F.createRoot should only be called once!");
@@ -2034,11 +2112,11 @@ function $a981403d17d544c9$export$8b22cf2602fb60ce(canvas) {
     reportError : // In older browsers and test environments, fallback to console.error.
     console.error;
     // Create store
-    const store = prevStore || $a981403d17d544c9$var$createStore($a981403d17d544c9$export$882b5998b3b9117c, $a981403d17d544c9$export$953cecd6e717a553);
+    const store = prevStore || $ab9d3c3d42ae47c3$var$createStore($ab9d3c3d42ae47c3$export$953cecd6e717a553, $ab9d3c3d42ae47c3$export$7ccc53e8f1e7dfc5);
     // Create renderer
-    const fiber = prevFiber || $a981403d17d544c9$export$dda1d9f60106f0e9.createContainer(store, (0, $bKwLM.ConcurrentRoot), null, false, null, "", logRecoverableError, null);
+    const fiber = prevFiber || $ab9d3c3d42ae47c3$export$35e795649ee09318.createContainer(store, (0, $bKwLM.ConcurrentRoot), null, false, null, "", logRecoverableError, null);
     // Map it
-    if (!prevRoot) $a981403d17d544c9$export$d141bba7fdc215a3.set(canvas, {
+    if (!prevRoot) $ab9d3c3d42ae47c3$export$df995fae86a55f06.set(canvas, {
         fiber: fiber,
         store: store
     });
@@ -2056,7 +2134,7 @@ function $a981403d17d544c9$export$8b22cf2602fb60ce(canvas) {
             // Set up renderer (one time only!)
             let gl = state.gl;
             if (!state.gl) state.set({
-                gl: gl = $a981403d17d544c9$var$createRendererInstance(glConfig, canvas)
+                gl: gl = $ab9d3c3d42ae47c3$var$createRendererInstance(glConfig, canvas)
             });
             // Set up raycaster (one time only!)
             let raycaster = state.raycaster;
@@ -2065,24 +2143,24 @@ function $a981403d17d544c9$export$8b22cf2602fb60ce(canvas) {
             });
             // Set raycaster options
             const { params: params, ...options } = raycastOptions || {};
-            if (!$a981403d17d544c9$var$is.equ(options, raycaster, $a981403d17d544c9$var$shallowLoose)) $a981403d17d544c9$export$35e795649ee09318(raycaster, {
+            if (!$ab9d3c3d42ae47c3$var$is.equ(options, raycaster, $ab9d3c3d42ae47c3$var$shallowLoose)) $ab9d3c3d42ae47c3$export$342063e11d6c3cad(raycaster, {
                 ...options
             });
-            if (!$a981403d17d544c9$var$is.equ(params, raycaster.params, $a981403d17d544c9$var$shallowLoose)) $a981403d17d544c9$export$35e795649ee09318(raycaster, {
+            if (!$ab9d3c3d42ae47c3$var$is.equ(params, raycaster.params, $ab9d3c3d42ae47c3$var$shallowLoose)) $ab9d3c3d42ae47c3$export$342063e11d6c3cad(raycaster, {
                 params: {
                     ...raycaster.params,
                     ...params
                 }
             });
             // Create default camera, don't overwrite any user-set state
-            if (!state.camera || state.camera === lastCamera && !$a981403d17d544c9$var$is.equ(lastCamera, cameraOptions, $a981403d17d544c9$var$shallowLoose)) {
+            if (!state.camera || state.camera === lastCamera && !$ab9d3c3d42ae47c3$var$is.equ(lastCamera, cameraOptions, $ab9d3c3d42ae47c3$var$shallowLoose)) {
                 lastCamera = cameraOptions;
                 const isCamera = cameraOptions instanceof $2Oa7c.Camera;
                 const camera = isCamera ? cameraOptions : orthographic ? new $2Oa7c.OrthographicCamera(0, 0, 0, 0, 0.1, 1000) : new $2Oa7c.PerspectiveCamera(75, 0, 0.1, 1000);
                 if (!isCamera) {
                     camera.position.z = 5;
                     if (cameraOptions) {
-                        $a981403d17d544c9$export$35e795649ee09318(camera, cameraOptions);
+                        $ab9d3c3d42ae47c3$export$342063e11d6c3cad(camera, cameraOptions);
                         // Preserve user-defined frustum if possible
                         // https://github.com/pmndrs/react-three-fiber/issues/3160
                         if ("aspect" in cameraOptions || "left" in cameraOptions || "right" in cameraOptions || "bottom" in cameraOptions || "top" in cameraOptions) {
@@ -2106,10 +2184,10 @@ function $a981403d17d544c9$export$8b22cf2602fb60ce(canvas) {
                 if (sceneOptions instanceof $2Oa7c.Scene) scene = sceneOptions;
                 else {
                     scene = new $2Oa7c.Scene();
-                    if (sceneOptions) $a981403d17d544c9$export$35e795649ee09318(scene, sceneOptions);
+                    if (sceneOptions) $ab9d3c3d42ae47c3$export$342063e11d6c3cad(scene, sceneOptions);
                 }
                 state.set({
-                    scene: $a981403d17d544c9$var$prepare(scene)
+                    scene: $ab9d3c3d42ae47c3$var$prepare(scene)
                 });
             }
             // Set up XR (one time only!)
@@ -2119,14 +2197,14 @@ function $a981403d17d544c9$export$8b22cf2602fb60ce(canvas) {
                 const handleXRFrame = (timestamp, frame)=>{
                     const state = store.getState();
                     if (state.frameloop === "never") return;
-                    $a981403d17d544c9$export$953cecd6e717a553(timestamp, true, state, frame);
+                    $ab9d3c3d42ae47c3$export$7ccc53e8f1e7dfc5(timestamp, true, state, frame);
                 };
                 // Toggle render switching on session
                 const handleSessionChange = ()=>{
                     const state = store.getState();
                     state.gl.xr.enabled = state.gl.xr.isPresenting;
                     state.gl.xr.setAnimationLoop(state.gl.xr.isPresenting ? handleXRFrame : null);
-                    if (!state.gl.xr.isPresenting) $a981403d17d544c9$export$882b5998b3b9117c(state);
+                    if (!state.gl.xr.isPresenting) $ab9d3c3d42ae47c3$export$953cecd6e717a553(state);
                 };
                 // WebXR session manager
                 const xr = {
@@ -2152,8 +2230,8 @@ function $a981403d17d544c9$export$8b22cf2602fb60ce(canvas) {
                 const oldEnabled = gl.shadowMap.enabled;
                 const oldType = gl.shadowMap.type;
                 gl.shadowMap.enabled = !!shadows;
-                if ($a981403d17d544c9$var$is.boo(shadows)) gl.shadowMap.type = $2Oa7c.PCFSoftShadowMap;
-                else if ($a981403d17d544c9$var$is.str(shadows)) {
+                if ($ab9d3c3d42ae47c3$var$is.boo(shadows)) gl.shadowMap.type = $2Oa7c.PCFSoftShadowMap;
+                else if ($ab9d3c3d42ae47c3$var$is.str(shadows)) {
                     var _types$shadows;
                     const types = {
                         basic: $2Oa7c.BasicShadowMap,
@@ -2162,12 +2240,12 @@ function $a981403d17d544c9$export$8b22cf2602fb60ce(canvas) {
                         variance: $2Oa7c.VSMShadowMap
                     };
                     gl.shadowMap.type = (_types$shadows = types[shadows]) != null ? _types$shadows : $2Oa7c.PCFSoftShadowMap;
-                } else if ($a981403d17d544c9$var$is.obj(shadows)) Object.assign(gl.shadowMap, shadows);
+                } else if ($ab9d3c3d42ae47c3$var$is.obj(shadows)) Object.assign(gl.shadowMap, shadows);
                 if (oldEnabled !== gl.shadowMap.enabled || oldType !== gl.shadowMap.type) gl.shadowMap.needsUpdate = true;
             }
             // Safely set color management if available.
             // Avoid accessing THREE.ColorManagement to play nice with older versions
-            const ColorManagement = $a981403d17d544c9$var$getColorManagement();
+            const ColorManagement = $ab9d3c3d42ae47c3$var$getColorManagement();
             if (ColorManagement) {
                 if ("enabled" in ColorManagement) ColorManagement.enabled = !legacy;
                 else if ("legacyMode" in ColorManagement) ColorManagement.legacyMode = legacy;
@@ -2176,7 +2254,7 @@ function $a981403d17d544c9$export$8b22cf2602fb60ce(canvas) {
                 // Set color space and tonemapping preferences, once
                 const LinearEncoding = 3000;
                 const sRGBEncoding = 3001;
-                $a981403d17d544c9$export$35e795649ee09318(gl, {
+                $ab9d3c3d42ae47c3$export$342063e11d6c3cad(gl, {
                     outputEncoding: linear ? LinearEncoding : sRGBEncoding,
                     toneMapping: flat ? $2Oa7c.NoToneMapping : $2Oa7c.ACESFilmicToneMapping
                 });
@@ -2192,16 +2270,16 @@ function $a981403d17d544c9$export$8b22cf2602fb60ce(canvas) {
                     flat: flat
                 }));
             // Set gl props
-            if (glConfig && !$a981403d17d544c9$var$is.fun(glConfig) && !$a981403d17d544c9$var$isRenderer(glConfig) && !$a981403d17d544c9$var$is.equ(glConfig, gl, $a981403d17d544c9$var$shallowLoose)) $a981403d17d544c9$export$35e795649ee09318(gl, glConfig);
+            if (glConfig && !$ab9d3c3d42ae47c3$var$is.fun(glConfig) && !$ab9d3c3d42ae47c3$var$isRenderer(glConfig) && !$ab9d3c3d42ae47c3$var$is.equ(glConfig, gl, $ab9d3c3d42ae47c3$var$shallowLoose)) $ab9d3c3d42ae47c3$export$342063e11d6c3cad(gl, glConfig);
             // Store events internally
             if (events && !state.events.handlers) state.set({
                 events: events(store)
             });
             // Check size, allow it to take on container bounds initially
-            const size = $a981403d17d544c9$var$computeInitialSize(canvas, propsSize);
-            if (!$a981403d17d544c9$var$is.equ(size, state.size, $a981403d17d544c9$var$shallowLoose)) state.setSize(size.width, size.height, size.updateStyle, size.top, size.left);
+            const size = $ab9d3c3d42ae47c3$var$computeInitialSize(canvas, propsSize);
+            if (!$ab9d3c3d42ae47c3$var$is.equ(size, state.size, $ab9d3c3d42ae47c3$var$shallowLoose)) state.setSize(size.width, size.height, size.updateStyle, size.top, size.left);
             // Check pixelratio
-            if (dpr && state.viewport.dpr !== $a981403d17d544c9$var$calculateDpr(dpr)) state.setDpr(dpr);
+            if (dpr && state.viewport.dpr !== $ab9d3c3d42ae47c3$var$calculateDpr(dpr)) state.setDpr(dpr);
             // Check frameloop
             if (state.frameloop !== frameloop) state.setFrameloop(frameloop);
             // Check pointer missed
@@ -2209,7 +2287,7 @@ function $a981403d17d544c9$export$8b22cf2602fb60ce(canvas) {
                 onPointerMissed: onPointerMissed
             });
             // Check performance
-            if (performance1 && !$a981403d17d544c9$var$is.equ(performance1, state.performance, $a981403d17d544c9$var$shallowLoose)) state.set((state)=>({
+            if (performance1 && !$ab9d3c3d42ae47c3$var$is.equ(performance1, state.performance, $ab9d3c3d42ae47c3$var$shallowLoose)) state.set((state)=>({
                     performance: {
                         ...state.performance,
                         ...performance1
@@ -2223,7 +2301,7 @@ function $a981403d17d544c9$export$8b22cf2602fb60ce(canvas) {
         render (children) {
             // The root has to be configured before it can be rendered
             if (!configured) this.configure();
-            $a981403d17d544c9$export$dda1d9f60106f0e9.updateContainer(/*#__PURE__*/ (0, $228IU.jsx)($a981403d17d544c9$var$Provider, {
+            $ab9d3c3d42ae47c3$export$35e795649ee09318.updateContainer(/*#__PURE__*/ (0, $228IU.jsx)($ab9d3c3d42ae47c3$var$Provider, {
                 store: store,
                 children: children,
                 onCreated: onCreated,
@@ -2232,18 +2310,18 @@ function $a981403d17d544c9$export$8b22cf2602fb60ce(canvas) {
             return store;
         },
         unmount () {
-            $a981403d17d544c9$export$4368d992c4eafac0(canvas);
+            $ab9d3c3d42ae47c3$export$4368d992c4eafac0(canvas);
         }
     };
 }
-function $a981403d17d544c9$export$43caf9889c228507(children, canvas, config) {
+function $ab9d3c3d42ae47c3$export$43caf9889c228507(children, canvas, config) {
     console.warn("R3F.render is no longer supported in React 18. Use createRoot instead!");
-    const root = $a981403d17d544c9$export$8b22cf2602fb60ce(canvas);
+    const root = $ab9d3c3d42ae47c3$export$8b22cf2602fb60ce(canvas);
     root.configure(config);
     return root.render(children);
 }
-function $a981403d17d544c9$var$Provider({ store: store, children: children, onCreated: onCreated, rootElement: rootElement }) {
-    $a981403d17d544c9$export$407448d2b89b1813(()=>{
+function $ab9d3c3d42ae47c3$var$Provider({ store: store, children: children, onCreated: onCreated, rootElement: rootElement }) {
+    $ab9d3c3d42ae47c3$export$407448d2b89b1813(()=>{
         const state = store.getState();
         // Flag the canvas active, rendering will now begin
         state.set((state)=>({
@@ -2259,18 +2337,18 @@ function $a981403d17d544c9$var$Provider({ store: store, children: children, onCr
         if (!store.getState().events.connected) state.events.connect == null || state.events.connect(rootElement);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-    return /*#__PURE__*/ (0, $228IU.jsx)($a981403d17d544c9$export$2d1720544b23b823.Provider, {
+    return /*#__PURE__*/ (0, $228IU.jsx)($ab9d3c3d42ae47c3$export$39b482c5e57630a8.Provider, {
         value: store,
         children: children
     });
 }
-function $a981403d17d544c9$export$4368d992c4eafac0(canvas, callback) {
-    const root = $a981403d17d544c9$export$d141bba7fdc215a3.get(canvas);
+function $ab9d3c3d42ae47c3$export$4368d992c4eafac0(canvas, callback) {
+    const root = $ab9d3c3d42ae47c3$export$df995fae86a55f06.get(canvas);
     const fiber = root == null ? void 0 : root.fiber;
     if (fiber) {
         const state = root == null ? void 0 : root.store.getState();
         if (state) state.internal.active = false;
-        $a981403d17d544c9$export$dda1d9f60106f0e9.updateContainer(null, fiber, null, ()=>{
+        $ab9d3c3d42ae47c3$export$35e795649ee09318.updateContainer(null, fiber, null, ()=>{
             if (state) setTimeout(()=>{
                 try {
                     var _state$gl, _state$gl$renderLists, _state$gl2, _state$gl3;
@@ -2278,8 +2356,8 @@ function $a981403d17d544c9$export$4368d992c4eafac0(canvas, callback) {
                     (_state$gl = state.gl) == null || (_state$gl$renderLists = _state$gl.renderLists) == null || _state$gl$renderLists.dispose == null || _state$gl$renderLists.dispose();
                     (_state$gl2 = state.gl) == null || _state$gl2.forceContextLoss == null || _state$gl2.forceContextLoss();
                     if ((_state$gl3 = state.gl) != null && _state$gl3.xr) state.xr.disconnect();
-                    $a981403d17d544c9$export$342063e11d6c3cad(state);
-                    $a981403d17d544c9$export$d141bba7fdc215a3.delete(canvas);
+                    $ab9d3c3d42ae47c3$export$882b5998b3b9117c(state);
+                    $ab9d3c3d42ae47c3$export$df995fae86a55f06.delete(canvas);
                     if (callback) callback(canvas);
                 } catch (e) {
                 /* ... */ }
@@ -2287,20 +2365,20 @@ function $a981403d17d544c9$export$4368d992c4eafac0(canvas, callback) {
         });
     }
 }
-function $a981403d17d544c9$export$39b482c5e57630a8(children, container, state) {
-    return /*#__PURE__*/ (0, $228IU.jsx)($a981403d17d544c9$var$Portal, {
+function $ab9d3c3d42ae47c3$export$dda1d9f60106f0e9(children, container, state) {
+    return /*#__PURE__*/ (0, $228IU.jsx)($ab9d3c3d42ae47c3$var$Portal, {
         children: children,
         container: container,
         state: state
     }, container.uuid);
 }
-function $a981403d17d544c9$var$Portal({ state: state = {}, children: children, container: container }) {
+function $ab9d3c3d42ae47c3$var$Portal({ state: state = {}, children: children, container: container }) {
     /** This has to be a component because it would not be able to call useThree/useStore otherwise since
    *  if this is our environment, then we are not in r3f's renderer but in react-dom, it would trigger
    *  the "R3F hooks can only be used within the Canvas component!" warning:
    *  <Canvas>
    *    {createPortal(...)} */ const { events: events, size: size, ...rest } = state;
-    const previousRoot = $a981403d17d544c9$export$df995fae86a55f06();
+    const previousRoot = $ab9d3c3d42ae47c3$export$e7094788287c5e9b();
     const [raycaster] = $d4J5n.useState(()=>new $2Oa7c.Raycaster());
     const [pointer] = $d4J5n.useState(()=>new $2Oa7c.Vector2());
     const inject = $d4J5n.useCallback((rootState, injectState)=>{
@@ -2312,7 +2390,7 @@ function $a981403d17d544c9$var$Portal({ state: state = {}, children: children, c
         // Otherwise filter out the props that are different and let the inject layer take precedence
         Object.keys(rootState).forEach((key)=>{
             if (// Some props should be off-limits
-            $a981403d17d544c9$var$privateKeys.includes(key) || // Otherwise filter out the props that are different and let the inject layer take precedence
+            $ab9d3c3d42ae47c3$var$privateKeys.includes(key) || // Otherwise filter out the props that are different and let the inject layer take precedence
             // Unless the inject layer props is undefined, then we keep the root layer
             rootState[key] !== injectState[key] && injectState[key]) delete intersect[key];
         });
@@ -2322,7 +2400,7 @@ function $a981403d17d544c9$var$Portal({ state: state = {}, children: children, c
             // Calculate the override viewport, if present
             viewport = rootState.viewport.getCurrentViewport(camera, new $2Oa7c.Vector3(), size);
             // Update the portal camera, if it differs from the previous layer
-            if (camera !== rootState.camera) $a981403d17d544c9$var$updateCamera(camera, size);
+            if (camera !== rootState.camera) $ab9d3c3d42ae47c3$var$updateCamera(camera, size);
         }
         return {
             // The intersect consists of the previous root state
@@ -2410,18 +2488,127 @@ function $a981403d17d544c9$var$Portal({ state: state = {}, children: children, c
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     return /*#__PURE__*/ (0, $228IU.jsx)((0, $228IU.Fragment), {
-        children: $a981403d17d544c9$export$dda1d9f60106f0e9.createPortal(/*#__PURE__*/ (0, $228IU.jsx)($a981403d17d544c9$export$2d1720544b23b823.Provider, {
+        children: $ab9d3c3d42ae47c3$export$35e795649ee09318.createPortal(/*#__PURE__*/ (0, $228IU.jsx)($ab9d3c3d42ae47c3$export$39b482c5e57630a8.Provider, {
             value: usePortalStore,
             children: children
         }), usePortalStore, null)
     });
 }
-$a981403d17d544c9$export$dda1d9f60106f0e9.injectIntoDevTools({
+/**
+ * Force React to flush any updates inside the provided callback synchronously and immediately.
+ * All the same caveats documented for react-dom's `flushSync` apply here (see https://react.dev/reference/react-dom/flushSync).
+ * Nevertheless, sometimes one needs to render synchronously, for example to keep DOM and 3D changes in lock-step without
+ * having to revert to a non-React solution.
+ */ function $ab9d3c3d42ae47c3$export$90a7f3efeed30595(fn) {
+    // `flushSync` implementation only takes one argument. I don't know what's up with the type declaration for it.
+    return $ab9d3c3d42ae47c3$export$35e795649ee09318.flushSync(fn, undefined);
+}
+$ab9d3c3d42ae47c3$export$35e795649ee09318.injectIntoDevTools({
     bundleType: 0,
     rendererPackageName: "@react-three/fiber",
     version: $d4J5n.version
 });
-const $a981403d17d544c9$export$90a7f3efeed30595 = $d4J5n.unstable_act;
+const $ab9d3c3d42ae47c3$export$d141bba7fdc215a3 = $d4J5n.unstable_act;
+const $ab9d3c3d42ae47c3$var$DOM_EVENTS = {
+    onClick: [
+        "click",
+        false
+    ],
+    onContextMenu: [
+        "contextmenu",
+        false
+    ],
+    onDoubleClick: [
+        "dblclick",
+        false
+    ],
+    onWheel: [
+        "wheel",
+        true
+    ],
+    onPointerDown: [
+        "pointerdown",
+        true
+    ],
+    onPointerUp: [
+        "pointerup",
+        true
+    ],
+    onPointerLeave: [
+        "pointerleave",
+        true
+    ],
+    onPointerMove: [
+        "pointermove",
+        true
+    ],
+    onPointerCancel: [
+        "pointercancel",
+        true
+    ],
+    onLostPointerCapture: [
+        "lostpointercapture",
+        true
+    ]
+};
+/** Default R3F event manager for web */ function $ab9d3c3d42ae47c3$export$db3b6bfb95261072(store) {
+    const { handlePointer: handlePointer } = $ab9d3c3d42ae47c3$export$2d1720544b23b823(store);
+    return {
+        priority: 1,
+        enabled: true,
+        compute (event, state, previous) {
+            // https://github.com/pmndrs/react-three-fiber/pull/782
+            // Events trigger outside of canvas when moved, use offsetX/Y by default and allow overrides
+            state.pointer.set(event.offsetX / state.size.width * 2 - 1, -(event.offsetY / state.size.height) * 2 + 1);
+            state.raycaster.setFromCamera(state.pointer, state.camera);
+        },
+        connected: undefined,
+        handlers: Object.keys($ab9d3c3d42ae47c3$var$DOM_EVENTS).reduce((acc, key)=>({
+                ...acc,
+                [key]: handlePointer(key)
+            }), {}),
+        update: ()=>{
+            var _internal$lastEvent;
+            const { events: events, internal: internal } = store.getState();
+            if ((_internal$lastEvent = internal.lastEvent) != null && _internal$lastEvent.current && events.handlers) events.handlers.onPointerMove(internal.lastEvent.current);
+        },
+        connect: (target)=>{
+            var _events$handlers;
+            const { set: set, events: events } = store.getState();
+            events.disconnect == null || events.disconnect();
+            set((state)=>({
+                    events: {
+                        ...state.events,
+                        connected: target
+                    }
+                }));
+            Object.entries((_events$handlers = events.handlers) != null ? _events$handlers : []).forEach(([name, event])=>{
+                const [eventName, passive] = $ab9d3c3d42ae47c3$var$DOM_EVENTS[name];
+                target.addEventListener(eventName, event, {
+                    passive: passive
+                });
+            });
+        },
+        disconnect: ()=>{
+            const { set: set, events: events } = store.getState();
+            if (events.connected) {
+                var _events$handlers2;
+                Object.entries((_events$handlers2 = events.handlers) != null ? _events$handlers2 : []).forEach(([name, event])=>{
+                    if (events && events.connected instanceof HTMLElement) {
+                        const [eventName] = $ab9d3c3d42ae47c3$var$DOM_EVENTS[name];
+                        events.connected.removeEventListener(eventName, event);
+                    }
+                });
+                set((state)=>({
+                        events: {
+                            ...state.events,
+                            connected: undefined
+                        }
+                    }));
+            }
+        }
+    };
+}
 
 });
 parcelRegister("2Oa7c", function(module, exports) {
@@ -32590,6 +32777,75 @@ module.exports["default"] = $c4bc5fb759fc84ab$var$create;
 
 });
 
+parcelRegister("jcAzR", function(module, exports) {
+
+$parcel$export(module.exports, "suspend", () => $dfab82d0cd0ed58e$export$a1428c8f7ba796e8);
+$parcel$export(module.exports, "preload", () => $dfab82d0cd0ed58e$export$513ccb98c53b8039);
+$parcel$export(module.exports, "clear", () => $dfab82d0cd0ed58e$export$42ffd38884aecdac);
+const $dfab82d0cd0ed58e$var$isPromise = (promise)=>typeof promise === "object" && typeof promise.then === "function";
+const $dfab82d0cd0ed58e$var$globalCache = [];
+function $dfab82d0cd0ed58e$var$shallowEqualArrays(arrA, arrB, equal = (a, b)=>a === b) {
+    if (arrA === arrB) return true;
+    if (!arrA || !arrB) return false;
+    const len = arrA.length;
+    if (arrB.length !== len) return false;
+    for(let i = 0; i < len; i++)if (!equal(arrA[i], arrB[i])) return false;
+    return true;
+}
+function $dfab82d0cd0ed58e$var$query(fn, keys = null, preload = false, config = {}) {
+    // If no keys were given, the function is the key
+    if (keys === null) keys = [
+        fn
+    ];
+    for (const entry of $dfab82d0cd0ed58e$var$globalCache)// Find a match
+    if ($dfab82d0cd0ed58e$var$shallowEqualArrays(keys, entry.keys, entry.equal)) {
+        // If we're pre-loading and the element is present, just return
+        if (preload) return undefined; // If an error occurred, throw
+        if (Object.prototype.hasOwnProperty.call(entry, "error")) throw entry.error; // If a response was successful, return
+        if (Object.prototype.hasOwnProperty.call(entry, "response")) {
+            if (config.lifespan && config.lifespan > 0) {
+                if (entry.timeout) clearTimeout(entry.timeout);
+                entry.timeout = setTimeout(entry.remove, config.lifespan);
+            }
+            return entry.response;
+        } // If the promise is still unresolved, throw
+        if (!preload) throw entry.promise;
+    }
+     // The request is new or has changed.
+    const entry = {
+        keys: keys,
+        equal: config.equal,
+        remove: ()=>{
+            const index = $dfab82d0cd0ed58e$var$globalCache.indexOf(entry);
+            if (index !== -1) $dfab82d0cd0ed58e$var$globalCache.splice(index, 1);
+        },
+        promise: ($dfab82d0cd0ed58e$var$isPromise(fn) ? fn : fn(...keys) // When it resolves, store its value
+        ).then((response)=>{
+            entry.response = response; // Remove the entry in time if a lifespan was given
+            if (config.lifespan && config.lifespan > 0) entry.timeout = setTimeout(entry.remove, config.lifespan);
+        }) // Store caught errors, they will be thrown in the render-phase to bubble into an error-bound
+        .catch((error)=>entry.error = error)
+    }; // Register the entry
+    $dfab82d0cd0ed58e$var$globalCache.push(entry); // And throw the promise, this yields control back to React
+    if (!preload) throw entry.promise;
+    return undefined;
+}
+const $dfab82d0cd0ed58e$export$a1428c8f7ba796e8 = (fn, keys, config)=>$dfab82d0cd0ed58e$var$query(fn, keys, false, config);
+const $dfab82d0cd0ed58e$export$513ccb98c53b8039 = (fn, keys, config)=>void $dfab82d0cd0ed58e$var$query(fn, keys, true, config);
+const $dfab82d0cd0ed58e$export$4d3fb11e950abb9e = (keys)=>{
+    var _globalCache$find;
+    return (_globalCache$find = $dfab82d0cd0ed58e$var$globalCache.find((entry)=>$dfab82d0cd0ed58e$var$shallowEqualArrays(keys, entry.keys, entry.equal))) == null ? void 0 : _globalCache$find.response;
+};
+const $dfab82d0cd0ed58e$export$42ffd38884aecdac = (keys)=>{
+    if (keys === undefined || keys.length === 0) $dfab82d0cd0ed58e$var$globalCache.splice(0, $dfab82d0cd0ed58e$var$globalCache.length);
+    else {
+        const entry = $dfab82d0cd0ed58e$var$globalCache.find((entry)=>$dfab82d0cd0ed58e$var$shallowEqualArrays(keys, entry.keys, entry.equal));
+        if (entry) entry.remove();
+    }
+};
+
+});
+
 parcelRegister("dNuhV", function(module, exports) {
 "use strict";
 
@@ -37962,75 +38218,6 @@ $97e0b4ea877737f9$export$cf845f2c119da08a = function(a) {
 
 
 
-parcelRegister("jcAzR", function(module, exports) {
-
-$parcel$export(module.exports, "suspend", () => $dfab82d0cd0ed58e$export$a1428c8f7ba796e8);
-$parcel$export(module.exports, "preload", () => $dfab82d0cd0ed58e$export$513ccb98c53b8039);
-$parcel$export(module.exports, "clear", () => $dfab82d0cd0ed58e$export$42ffd38884aecdac);
-const $dfab82d0cd0ed58e$var$isPromise = (promise)=>typeof promise === "object" && typeof promise.then === "function";
-const $dfab82d0cd0ed58e$var$globalCache = [];
-function $dfab82d0cd0ed58e$var$shallowEqualArrays(arrA, arrB, equal = (a, b)=>a === b) {
-    if (arrA === arrB) return true;
-    if (!arrA || !arrB) return false;
-    const len = arrA.length;
-    if (arrB.length !== len) return false;
-    for(let i = 0; i < len; i++)if (!equal(arrA[i], arrB[i])) return false;
-    return true;
-}
-function $dfab82d0cd0ed58e$var$query(fn, keys = null, preload = false, config = {}) {
-    // If no keys were given, the function is the key
-    if (keys === null) keys = [
-        fn
-    ];
-    for (const entry of $dfab82d0cd0ed58e$var$globalCache)// Find a match
-    if ($dfab82d0cd0ed58e$var$shallowEqualArrays(keys, entry.keys, entry.equal)) {
-        // If we're pre-loading and the element is present, just return
-        if (preload) return undefined; // If an error occurred, throw
-        if (Object.prototype.hasOwnProperty.call(entry, "error")) throw entry.error; // If a response was successful, return
-        if (Object.prototype.hasOwnProperty.call(entry, "response")) {
-            if (config.lifespan && config.lifespan > 0) {
-                if (entry.timeout) clearTimeout(entry.timeout);
-                entry.timeout = setTimeout(entry.remove, config.lifespan);
-            }
-            return entry.response;
-        } // If the promise is still unresolved, throw
-        if (!preload) throw entry.promise;
-    }
-     // The request is new or has changed.
-    const entry = {
-        keys: keys,
-        equal: config.equal,
-        remove: ()=>{
-            const index = $dfab82d0cd0ed58e$var$globalCache.indexOf(entry);
-            if (index !== -1) $dfab82d0cd0ed58e$var$globalCache.splice(index, 1);
-        },
-        promise: ($dfab82d0cd0ed58e$var$isPromise(fn) ? fn : fn(...keys) // When it resolves, store its value
-        ).then((response)=>{
-            entry.response = response; // Remove the entry in time if a lifespan was given
-            if (config.lifespan && config.lifespan > 0) entry.timeout = setTimeout(entry.remove, config.lifespan);
-        }) // Store caught errors, they will be thrown in the render-phase to bubble into an error-bound
-        .catch((error)=>entry.error = error)
-    }; // Register the entry
-    $dfab82d0cd0ed58e$var$globalCache.push(entry); // And throw the promise, this yields control back to React
-    if (!preload) throw entry.promise;
-    return undefined;
-}
-const $dfab82d0cd0ed58e$export$a1428c8f7ba796e8 = (fn, keys, config)=>$dfab82d0cd0ed58e$var$query(fn, keys, false, config);
-const $dfab82d0cd0ed58e$export$513ccb98c53b8039 = (fn, keys, config)=>void $dfab82d0cd0ed58e$var$query(fn, keys, true, config);
-const $dfab82d0cd0ed58e$export$4d3fb11e950abb9e = (keys)=>{
-    var _globalCache$find;
-    return (_globalCache$find = $dfab82d0cd0ed58e$var$globalCache.find((entry)=>$dfab82d0cd0ed58e$var$shallowEqualArrays(keys, entry.keys, entry.equal))) == null ? void 0 : _globalCache$find.response;
-};
-const $dfab82d0cd0ed58e$export$42ffd38884aecdac = (keys)=>{
-    if (keys === undefined || keys.length === 0) $dfab82d0cd0ed58e$var$globalCache.splice(0, $dfab82d0cd0ed58e$var$globalCache.length);
-    else {
-        const entry = $dfab82d0cd0ed58e$var$globalCache.find((entry)=>$dfab82d0cd0ed58e$var$shallowEqualArrays(keys, entry.keys, entry.equal));
-        if (entry) entry.remove();
-    }
-};
-
-});
-
 parcelRegister("4DZrq", function(module, exports) {
 // shim for using process in browser
 var $361a76e6ea33591f$var$process = module.exports = {};
@@ -38179,171 +38366,6 @@ $361a76e6ea33591f$var$process.umask = function() {
 });
 
 
-parcelRegister("ju8ld", function(module, exports) {
-
-$parcel$export(module.exports, "default", () => $e2f74a0a4376ecb3$export$2e2bcd8739ae039);
-
-var $d4J5n = parcelRequire("d4J5n");
-
-var $3LgSH = parcelRequire("3LgSH");
-function $e2f74a0a4376ecb3$export$2e2bcd8739ae039(_temp) {
-    let { debounce: debounce, scroll: scroll, polyfill: polyfill, offsetSize: offsetSize } = _temp === void 0 ? {
-        debounce: 0,
-        scroll: false,
-        offsetSize: false
-    } : _temp;
-    const ResizeObserver = polyfill || (typeof window === "undefined" ? class ResizeObserver {
-    } : window.ResizeObserver);
-    if (!ResizeObserver) throw new Error("This browser does not support ResizeObserver out of the box. See: https://github.com/react-spring/react-use-measure/#resize-observer-polyfills");
-    const [bounds, set] = (0, $d4J5n.useState)({
-        left: 0,
-        top: 0,
-        width: 0,
-        height: 0,
-        bottom: 0,
-        right: 0,
-        x: 0,
-        y: 0
-    }); // keep all state in a ref
-    const state = (0, $d4J5n.useRef)({
-        element: null,
-        scrollContainers: null,
-        resizeObserver: null,
-        lastBounds: bounds
-    }); // set actual debounce values early, so effects know if they should react accordingly
-    const scrollDebounce = debounce ? typeof debounce === "number" ? debounce : debounce.scroll : null;
-    const resizeDebounce = debounce ? typeof debounce === "number" ? debounce : debounce.resize : null; // make sure to update state only as long as the component is truly mounted
-    const mounted = (0, $d4J5n.useRef)(false);
-    (0, $d4J5n.useEffect)(()=>{
-        mounted.current = true;
-        return ()=>void (mounted.current = false);
-    }); // memoize handlers, so event-listeners know when they should update
-    const [forceRefresh, resizeChange, scrollChange] = (0, $d4J5n.useMemo)(()=>{
-        const callback = ()=>{
-            if (!state.current.element) return;
-            const { left: left, top: top, width: width, height: height, bottom: bottom, right: right, x: x, y: y } = state.current.element.getBoundingClientRect();
-            const size = {
-                left: left,
-                top: top,
-                width: width,
-                height: height,
-                bottom: bottom,
-                right: right,
-                x: x,
-                y: y
-            };
-            if (state.current.element instanceof HTMLElement && offsetSize) {
-                size.height = state.current.element.offsetHeight;
-                size.width = state.current.element.offsetWidth;
-            }
-            Object.freeze(size);
-            if (mounted.current && !$e2f74a0a4376ecb3$var$areBoundsEqual(state.current.lastBounds, size)) set(state.current.lastBounds = size);
-        };
-        return [
-            callback,
-            resizeDebounce ? (0, (/*@__PURE__*/$parcel$interopDefault($3LgSH)))(callback, resizeDebounce) : callback,
-            scrollDebounce ? (0, (/*@__PURE__*/$parcel$interopDefault($3LgSH)))(callback, scrollDebounce) : callback
-        ];
-    }, [
-        set,
-        offsetSize,
-        scrollDebounce,
-        resizeDebounce
-    ]); // cleanup current scroll-listeners / observers
-    function removeListeners() {
-        if (state.current.scrollContainers) {
-            state.current.scrollContainers.forEach((element)=>element.removeEventListener("scroll", scrollChange, true));
-            state.current.scrollContainers = null;
-        }
-        if (state.current.resizeObserver) {
-            state.current.resizeObserver.disconnect();
-            state.current.resizeObserver = null;
-        }
-    } // add scroll-listeners / observers
-    function addListeners() {
-        if (!state.current.element) return;
-        state.current.resizeObserver = new ResizeObserver(scrollChange);
-        state.current.resizeObserver.observe(state.current.element);
-        if (scroll && state.current.scrollContainers) state.current.scrollContainers.forEach((scrollContainer)=>scrollContainer.addEventListener("scroll", scrollChange, {
-                capture: true,
-                passive: true
-            }));
-    } // the ref we expose to the user
-    const ref = (node)=>{
-        if (!node || node === state.current.element) return;
-        removeListeners();
-        state.current.element = node;
-        state.current.scrollContainers = $e2f74a0a4376ecb3$var$findScrollContainers(node);
-        addListeners();
-    }; // add general event listeners
-    $e2f74a0a4376ecb3$var$useOnWindowScroll(scrollChange, Boolean(scroll));
-    $e2f74a0a4376ecb3$var$useOnWindowResize(resizeChange); // respond to changes that are relevant for the listeners
-    (0, $d4J5n.useEffect)(()=>{
-        removeListeners();
-        addListeners();
-    }, [
-        scroll,
-        scrollChange,
-        resizeChange
-    ]); // remove all listeners when the components unmounts
-    (0, $d4J5n.useEffect)(()=>removeListeners, []);
-    return [
-        ref,
-        bounds,
-        forceRefresh
-    ];
-} // Adds native resize listener to window
-function $e2f74a0a4376ecb3$var$useOnWindowResize(onWindowResize) {
-    (0, $d4J5n.useEffect)(()=>{
-        const cb = onWindowResize;
-        window.addEventListener("resize", cb);
-        return ()=>void window.removeEventListener("resize", cb);
-    }, [
-        onWindowResize
-    ]);
-}
-function $e2f74a0a4376ecb3$var$useOnWindowScroll(onScroll, enabled) {
-    (0, $d4J5n.useEffect)(()=>{
-        if (enabled) {
-            const cb = onScroll;
-            window.addEventListener("scroll", cb, {
-                capture: true,
-                passive: true
-            });
-            return ()=>void window.removeEventListener("scroll", cb, true);
-        }
-    }, [
-        onScroll,
-        enabled
-    ]);
-} // Returns a list of scroll offsets
-function $e2f74a0a4376ecb3$var$findScrollContainers(element) {
-    const result = [];
-    if (!element || element === document.body) return result;
-    const { overflow: overflow, overflowX: overflowX, overflowY: overflowY } = window.getComputedStyle(element);
-    if ([
-        overflow,
-        overflowX,
-        overflowY
-    ].some((prop)=>prop === "auto" || prop === "scroll")) result.push(element);
-    return [
-        ...result,
-        ...$e2f74a0a4376ecb3$var$findScrollContainers(element.parentElement)
-    ];
-} // Checks if element boundaries are equal
-const $e2f74a0a4376ecb3$var$keys = [
-    "x",
-    "y",
-    "top",
-    "bottom",
-    "left",
-    "right",
-    "width",
-    "height"
-];
-const $e2f74a0a4376ecb3$var$areBoundsEqual = (a, b)=>$e2f74a0a4376ecb3$var$keys.every((key)=>a[key] === b[key]);
-
-});
 parcelRegister("3LgSH", function(module, exports) {
 /**
  * Returns a function, that, as long as it continues to be invoked, will not
@@ -38405,7 +38427,6 @@ $2bd2db2940518db0$var$debounce.debounce = $2bd2db2940518db0$var$debounce;
 module.exports = $2bd2db2940518db0$var$debounce;
 
 });
-
 
 parcelRegister("hek7e", function(module, exports) {
 
@@ -38580,7 +38601,7 @@ var $ht7JT = parcelRequire("ht7JT");
 
 var $9EoZy = parcelRequire("9EoZy");
 
-var $eygLV = parcelRequire("eygLV");
+var $eJuTH = parcelRequire("eJuTH");
 
 var $49BFJ = parcelRequire("49BFJ");
 
@@ -38599,10 +38620,10 @@ const $4787c3c512e7ca7c$var$particleColors = [
 const $4787c3c512e7ca7c$var$circleTexture = new (0, $2Oa7c.TextureLoader)().load((0, (/*@__PURE__*/$parcel$interopDefault($mpdqF))));
 function $4787c3c512e7ca7c$export$ec4bceef241d2e36({ size: size = 300 }) {
     const ref = (0, $d4J5n.useRef)(null);
-    const { width: width, height: height } = (0, $eygLV.A)((state)=>state.viewport);
+    const { width: width, height: height } = (0, $eJuTH.D)((state)=>state.viewport);
     const scrollProgress = (0, $d4J5n.useRef)(0);
     const { isScreenSmall: isScreenSmall } = (0, $ht7JT.useBreakpoints)();
-    (0, $eygLV.C)((state, delta)=>{
+    (0, $eJuTH.F)((state, delta)=>{
         if (ref.current) ref.current.rotation.y -= delta / 110;
     });
     (0, $d4J5n.useEffect)(()=>{
@@ -38669,8 +38690,8 @@ var $2Oa7c = parcelRequire("2Oa7c");
 
 var $d4J5n = parcelRequire("d4J5n");
 parcelRequire("7VJZY");
-var $eygLV = parcelRequire("eygLV");
-var $eygLV = parcelRequire("eygLV");
+var $eJuTH = parcelRequire("eJuTH");
+var $eJuTH = parcelRequire("eJuTH");
 const $706b3c5abb879d6c$var$_inverseMatrix = /* @__PURE__ */ new $2Oa7c.Matrix4();
 const $706b3c5abb879d6c$var$_ray = /* @__PURE__ */ new $2Oa7c.Ray();
 const $706b3c5abb879d6c$var$_sphere = /* @__PURE__ */ new $2Oa7c.Sphere();
@@ -38747,7 +38768,7 @@ const $706b3c5abb879d6c$var$position = /* @__PURE__ */ new $2Oa7c.Vector3();
         // We might be a frame too late? 🤷‍♂️
         parentRef.current.geometry.attributes.position.needsUpdate = true;
     });
-    (0, $eygLV.C)(()=>{
+    (0, $eJuTH.F)(()=>{
         parentRef.current.updateMatrix();
         parentRef.current.updateMatrixWorld();
         $706b3c5abb879d6c$var$parentMatrix.copy(parentRef.current.matrixWorld).invert();
@@ -38806,7 +38827,7 @@ const $706b3c5abb879d6c$var$position = /* @__PURE__ */ new $2Oa7c.Vector3();
     }, children));
 });
 const $706b3c5abb879d6c$export$baf26146a414f24a = /* @__PURE__ */ $d4J5n.forwardRef(({ children: children, ...props }, ref)=>{
-    $d4J5n.useMemo(()=>(0, $eygLV.e)({
+    $d4J5n.useMemo(()=>(0, $eJuTH.e)({
             PositionPoint: $706b3c5abb879d6c$export$baf3bcdabead1de6
         }), []);
     const group = $d4J5n.useRef(null);
@@ -38824,7 +38845,7 @@ const $706b3c5abb879d6c$export$baf26146a414f24a = /* @__PURE__ */ $d4J5n.forward
  */ const $706b3c5abb879d6c$export$24d833d61e00414f = /* @__PURE__ */ $d4J5n.forwardRef(({ children: children, positions: positions, colors: colors, sizes: sizes, stride: stride = 3, ...props }, forwardedRef)=>{
     const pointsRef = $d4J5n.useRef(null);
     $d4J5n.useImperativeHandle(forwardedRef, ()=>pointsRef.current, []);
-    (0, $eygLV.C)(()=>{
+    (0, $eJuTH.F)(()=>{
         const attr = pointsRef.current.geometry.attributes;
         attr.position.needsUpdate = true;
         if (colors) attr.color.needsUpdate = true;
@@ -42857,7 +42878,7 @@ var $ht7JT = parcelRequire("ht7JT");
 
 var $39K2F = parcelRequire("39K2F");
 
-var $eygLV = parcelRequire("eygLV");
+var $eJuTH = parcelRequire("eJuTH");
 
 var $2Oa7c = parcelRequire("2Oa7c");
 
@@ -42901,7 +42922,7 @@ function $9e5cb746832db7d6$export$a6ad407a83d283ff(props) {
             value: new $2Oa7c.Vector4()
         }
     };
-    (0, $eygLV.C)(({ clock: clock })=>{
+    (0, $eJuTH.F)(({ clock: clock })=>{
         if (!meshRef.current) return;
         const elapsedTime = clock.getElapsedTime();
         const toSubtract = $9e5cb746832db7d6$var$CONTROLS.autoRotateSpeed;
@@ -42982,7 +43003,7 @@ var $dYte2 = parcelRequire("dYte2");
 var $cYCte = parcelRequire("cYCte");
 var $1dF3F = parcelRequire("1dF3F");
 
-var $eygLV = parcelRequire("eygLV");
+var $eJuTH = parcelRequire("eJuTH");
 let $24c5ed558894639c$var$dracoLoader = null;
 let $24c5ed558894639c$var$decoderPath = "https://www.gstatic.com/draco/versioned/decoders/1.5.5/";
 function $24c5ed558894639c$var$extensions(useDraco, useMeshopt, extendLoader) {
@@ -42997,10 +43018,10 @@ function $24c5ed558894639c$var$extensions(useDraco, useMeshopt, extendLoader) {
     };
 }
 function $24c5ed558894639c$export$cf1b4e938a4da41b(path, useDraco = true, useMeshOpt = true, extendLoader) {
-    return (0, $eygLV.F)((0, $cYCte.GLTFLoader), path, $24c5ed558894639c$var$extensions(useDraco, useMeshOpt, extendLoader));
+    return (0, $eJuTH.H)((0, $cYCte.GLTFLoader), path, $24c5ed558894639c$var$extensions(useDraco, useMeshOpt, extendLoader));
 }
-$24c5ed558894639c$export$cf1b4e938a4da41b.preload = (path, useDraco = true, useMeshOpt = true, extendLoader)=>(0, $eygLV.F).preload((0, $cYCte.GLTFLoader), path, $24c5ed558894639c$var$extensions(useDraco, useMeshOpt, extendLoader));
-$24c5ed558894639c$export$cf1b4e938a4da41b.clear = (input)=>(0, $eygLV.F).clear((0, $cYCte.GLTFLoader), input);
+$24c5ed558894639c$export$cf1b4e938a4da41b.preload = (path, useDraco = true, useMeshOpt = true, extendLoader)=>(0, $eJuTH.H).preload((0, $cYCte.GLTFLoader), path, $24c5ed558894639c$var$extensions(useDraco, useMeshOpt, extendLoader));
+$24c5ed558894639c$export$cf1b4e938a4da41b.clear = (input)=>(0, $eJuTH.H).clear((0, $cYCte.GLTFLoader), input);
 $24c5ed558894639c$export$cf1b4e938a4da41b.setDecoderPath = (path)=>{
     $24c5ed558894639c$var$decoderPath = path;
 };
@@ -46647,4 +46668,4 @@ module.exports = new URL("DnaModel.c12e4e7e.glb", import.meta.url).toString();
 
 
 
-//# sourceMappingURL=DNAScene.27cd8892.js.map
+//# sourceMappingURL=DNAScene.f1531504.js.map
