@@ -428,7 +428,11 @@ footer a:hover {
 }
 
 @media (width <= 575.98px) {
-  .hero1, .hero3 {
+  .hero1 {
+    font-size: 25px;
+  }
+
+  .hero3 {
     font-size: 40px;
   }
 
@@ -482,4 +486,4 @@ footer a:hover {
   margin-top: -50px;
   display: block;
 }
-/*# sourceMappingURL=404.ad365a66.css.map */
+/*# sourceMappingURL=404.5062a7f7.css.map */
