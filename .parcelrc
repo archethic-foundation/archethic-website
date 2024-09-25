@@ -9,9 +9,6 @@
         ],
         "*.crt": [
             "@parcel/transformer-raw"
-        ],
-        "*.png": [
-            "@parcel/transformer-raw"
         ]
     }
 }
